@@ -1,0 +1,7 @@
+		RNAfold	Ipknot	SPOT-RNA	Mxfold2	Ufold	SQUARNA1	SQUARNA2	SQUARNA3
+TS1reduced	Fscore	0.632							
+TS1reduced	Precision	0.706							
+TS1reduced	Recall	0.578							
+CoRToise	Fscore	0.748							
+CoRToise	Precision	0.783							
+CoRToise	Recall	0.77							
