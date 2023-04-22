@@ -145,11 +145,11 @@ def BPMatrix(seq, weights):
 
 
 def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
-
+    """Print matrix and sequence into tsv format"""
     print('',*list(seq),sep='\t')
 
-    Pairs1 = DBNToPairs(dbn1)
-    Pairs2 = DBNToPairs(dbn2)
+    Pairs1 = DBNToPairs(dbn1) # bps from dbn1 will be framed with []
+    Pairs2 = DBNToPairs(dbn2) # bps from dbn2 will be framed with <>
 
     for i in range(len(seq)):
         print(seq[i], end='\t')
@@ -159,15 +159,15 @@ def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
             if (i,j) in Pairs1:
                 x = '['+x+']'
             if (i,j) in Pairs2:
-                x = '('+x+')'
+                x = '<'+x+'>'
             line.append(x)
         print(*line, sep='\t')
 
 
 def ParseRestraints(restraints):
-
-    rbps = DBNToPairs(restraints)
-    rxs = [i for i in range(len(restraints)) if restraints[i]=='x']
+    """ Convert a dbn string into base pairs and unpaired bases"""
+    rbps = DBNToPairs(restraints) # Base pairs
+    rxs = [i for i in range(len(restraints)) if restraints[i]=='x'] # Unpaired bases
 
     return rbps, rxs
 
@@ -238,10 +238,14 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstembps):
     return stems
 
                     
-def Stems(seq, bpmatrix, rbps, rxs, rstembps):
+def OptimalStems(seq, bpmatrix, rbps, rxs, stems):
+
+    ## remove from rbps all bps that are in stems
 
     stems = AnnotateStems(bpmatrix, rbps, rxs, rstembps)
     #stems = ScoreStems(seq, stems, rstembps)
+
+    
 
     return stems
             
@@ -273,35 +277,55 @@ def SQUARNA(seq, bpweights, restraints = None, dbn = None):
     shortseq, shortrest = UnAlign2(seq, restraints)
     shortseq, shortdbn  = UnAlign2(seq, dbn)
 
-    # List of lists of stems (each stem list is a currently predicted secondary structure
-    curstemsets = []
-
     # Generate initial bp-matrix (with bp weights in cells)
     bpmatrix = BPMatrix(shortseq, bpweights)
-
+    
+    # Parse restraints into unpaired bases (rxs) and base pairs (rbps)
     rbps, rxs = ParseRestraints(shortrest.lower())
 
-    return 0
+    newstems = OptimalStems(shortseq, bpmatrix.copy(),
+                            rbps.copy(), rxs.copy(), [])
 
-    ### finalize the SQUARNA func
+    # List of lists of stems (each stem list is a currently predicted secondary structure
+    curstemsets = [[stem,] for stem in newstems]
+
+    # List of finalized stem lists
+    finstemsets = []
+
+    while curstemsets:
+
+        newcurstemsets = []
+    
+        for stems in curstemsets:
+    
+            newstems = OptimalStems(shortseq, bpmatrix.copy(),
+                                    rbps.copy(), rxs.copy(), stems):
+            if newstems:
+                for newstem in newstems:
+                    newcurstemsets.append(stems + [newstem,])
+            else:
+                finstemsets.append(stems)
+
+    dbns = []
+
+    for stems in finstemsets:
+
+        dbns.append({bp for stem in stems for bp in stem} | set(rbps),
+                    len(shortseq))
+
+    dbns = [ReAlign(x, seq) for x in dbns]
+
+    sorteddbns = SortDBNs(dbns) #Sort in decreasing order of structure "quality"
+    cons       = DBNsToConsensus(sorteddbns) #Consensus dbn
+
+    return cons, sorteddbns
+
+    ### finalize the SQUARNA func + comments!!
     ###parameters: subopt minlen minscore bracketweight distcoef
-
     ### comment PairsToDBN & DBNToPairs
     ### ReAlign & UnAlign2
     ###MaxSubarrays func
 
-    
-    
-
-    stems = Stems(shortseq, bpmatrix, rbps, rxs, rstembps)
-
-    ### add all bps from restraints (rbps) not yet in the structures
-
-    dbns = []
-
-    dbns = [ReAlign(x,seq) for x in dbns]
-
-    return dbns
 
 
 if __name__ == "__main__":
