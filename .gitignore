@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# temporary data
+temp.tsv
+
 # Distribution / packaging
 .Python
 build/

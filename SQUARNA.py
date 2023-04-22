@@ -1,7 +1,6 @@
 
 import numpy as np
 
-
 def PairsToDBN(newpairs, length):
     
     dbn = ['.']*length
@@ -52,6 +51,11 @@ def PairsToDBN(newpairs, length):
             dbn[p[1]] = levels[i][1]
             
     return ''.join(dbn)
+
+
+def StemsToDBN(stems, seq):
+    """Convert a list of stems (lists of bps) into a dbn string"""
+    return PairsToDBN([bp for stem in stems for bp in stem],len(seq))
 
 
 def DBNToPairs(dbn):
@@ -108,24 +112,33 @@ def UnAlign2(seq, dbn):
 
 
 def BPMatrix(seq, weights):
+    """Return a matrix with bp-weights in cells"""
 
+    # Set of different symbols in seq
     bases = set(seq)
 
+    # Dictionary of all possible bp weights
     bps = {}
 
+    # for (x,y) from weights add bps[(x,y)] & bps[(y,x)]
     for bp in weights:
         bps[bp] = weights[bp]
         bps[bp[1]+bp[0]] = weights[bp]
 
+    # add 0 values for all possible base pairs
+    # not yet in bps dictionary
     for b1 in bases:
         for b2 in bases:
             if b1+b2 not in bps:
                 bps[b1+b2] = 0
 
+    # Initialize the matrix
     mat = np.zeros((len(seq),len(seq)),dtype=int)
 
+    # Fill the upper triangle of the matrix with bp weights
+    # Ignore the bps that would form a hairpin of len < 3
     for i in range(len(seq)-1):
-        for j in range(i+1,len(seq)):
+        for j in range(i+4,len(seq)):
             mat[i,j] = bps[seq[i]+seq[j]]
 
     return mat
@@ -238,35 +251,51 @@ def Stems(seq, bpmatrix, rbps, rxs, rstembps):
     
 
 
-def SQUARNA(seq, restraints, dbn, bpweights):
+def SQUARNA(seq, bpweights, restraints = None, dbn = None):
+    """seq == sequence (possibly with gaps or any other non-ACGU symbols
+    bpweights == dictionary with canonical bps as keys and their weights as values
+    restraints == string in dbn format; x symbols are forced to be unpaired
+    dbn == known secondary structure in dbn format
 
-    seq = seq.upper()
+    SQUARNA returns a list of alternative predicted secondary structures in dbn format"""
+
+    # turn seq into UPPERCASE & replace T with U
+    seq = seq.upper().replace("T","U")
+
+    # if not restraints - generate a string of dots
     if not restraints:
         restraints = '.'*len(seq)
+    # if not known dbn - generate a string of dots
     if not dbn:
         dbn = '.'*len(seq)
 
+    # Unalign seq, dbn, and restraints strings
     shortseq, shortrest = UnAlign2(seq, restraints)
     shortseq, shortdbn  = UnAlign2(seq, dbn)
 
-    dbns = []
-    rstembps = []
-    predstems = []
+    # List of lists of stems (each stem list is a currently predicted secondary structure
+    curstemsets = []
 
+    # Generate initial bp-matrix (with bp weights in cells)
     bpmatrix = BPMatrix(shortseq, bpweights)
-    
+
     rbps, rxs = ParseRestraints(shortrest.lower())
+
+    return 0
+
+    ### finalize the SQUARNA func
+    ###parameters: subopt minlen minscore bracketweight distcoef
+
+    ### comment PairsToDBN & DBNToPairs
+    ### ReAlign & UnAlign2
+    ###MaxSubarrays func
+
+    
+    
 
     stems = Stems(shortseq, bpmatrix, rbps, rxs, rstembps)
 
-    #PrintMatrix(shortseq, bpmatrix, dbn)
-    #PrintMatrix(shortseq, stems, dbn)
-
-    #curstems = PredictStem(stems, stemmatrix)
-
-    #while curstems:
-
-    #    pass 
+    ### add all bps from restraints (rbps) not yet in the structures
 
     dbns = []
 
@@ -286,11 +315,11 @@ if __name__ == "__main__":
     #Twister ribozyme
     seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
     dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
-    rst = "((((xxx....................xxxxxx..............................))))"
+    rst = "(.((xxx....xx..............,,,,,,..............................)).)"
 
     bpweights = {'GU':-1,'AU':2,'GC':4}
 
-    dbns = SQUARNA(seq, rst, dbn, bpweights)
+    dbns = SQUARNA(seq, bpweights, rst, dbn)
 
 
 
