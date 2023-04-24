@@ -197,68 +197,75 @@ def ParseRestraints(restraints):
     return rbps, rxs
 
 
-def AnnotateStems(bpmatrix, rbps, rxs, rstembps):
+def AnnotateStems(bpmatrix, rbps, rxs, rstems):
 
+    # copy the bpmatrix
     matrix = bpmatrix.copy()
+    # obtain the matrix length
     N = bpmatrix.shape[0]
+    # initialize result
     stems = []
 
-    for v,w in rbps:
+    # apply bp-restraints - zero out the entire row and column except the cell for each bp
+    for v, w in rbps:
+        matrix[v, :] *= 0
+        matrix[:, v] *= 0
+        matrix[w, :] *= 0
+        matrix[:, w] *= 0
+        matrix[v, w]  = bpmatrix[v, w]
 
-        matrix[v,:] *= 0
-        matrix[:,v] *= 0
-        matrix[w,:] *= 0
-        matrix[:,w] *= 0
-        matrix[v,w] = bpmatrix[v,w]
+    # apply stem-restraints - zero out the entire rows and columns for each stem
+    for stem in rstems:
+        for v, w in stem:
+            matrix[v, :] *= 0
+            matrix[:, v] *= 0
+            matrix[w, :] *= 0
+            matrix[:, w] *= 0
 
-    for stem in rstembps:
-        for v,w in stem:
-            matrix[v,:] *= 0
-            matrix[:,v] *= 0
-            matrix[w,:] *= 0
-            matrix[:,w] *= 0
-
+    # apply unpaired-restraints - zero out the entire row and column for each x
     for i in rxs:
         matrix[i,:] *= 0
         matrix[:,i] *= 0
 
-    diagstarts  = [(0, x)   for x in range(1, N)]
-    diagstarts += [(y, N-1) for y in range(1,N-1)]
+    # start cells of all the diagonals, except the ones producing hairpins of len < 3
+    diagstarts  = [(0, x)   for x in range(4, N)]
+    diagstarts += [(y, N-1) for y in range(1, N-4)]
 
     for x, y in diagstarts:
 
+        curstem  = []
+        curscore = 0
+
         i, j = x, y
         
-        diag = [[],[]]
-        
-        while i < j:
-            diag[0].append(i)
-            diag[1].append(j)
+        while i <= j - 4:
+            
+            val = matrix[i, j]
+
+            if val > 0:                         
+                curstem.append((i, j))
+                lastpositive = len(curstem)
+                curscore = curscore + val
+
+            elif val < 0:
+                if curstem:
+                    curscore = curscore + val
+                    if curscore <= 0:
+                        stems.append(curstem[:lastpositive])
+                        curstem = []
+                        curscore = 0
+                    else:
+                        curstem.append((i,j))
+            elif curstem:
+                stems.append(curstem[:lastpositive])
+                curstem = []
+                curscore = 0
+            
             i += 1
             j -= 1
 
-        arr = matrix[diag]
-
-        candarrs = []
-
-        instem = False
-        for k in range(arr.shape[0]):
-            if arr[k] != 0:
-                if not instem:
-                    instem = True
-                    candarrs.append([k,])
-            elif instem:
-                candarrs[-1].append(k)
-                instem = False
-        if instem:
-            candarrs[-1].append(arr.shape[0])
-
-        print(arr)
-        print(candarrs,[arr[x[0]:x[1]] for x in candarrs])
-
-        for s,t in candarrs:
-            for v,w in MaxSubarrays(arr[s:t]):
-                stems.append([(diag[0][z], diag[1][z]) for z in range(s + v, s + w)])
+        if curstem:
+            stems.append(curstem[:lastpositive])
 
     return stems
 
@@ -267,26 +274,58 @@ def DistFactor(distance, coef):
     """Multiplication factor for a stem score based on the confining distance"""
     return (1/(1+abs(distance-4)))**coef
 
+
+def ScoreStems(seq, stems, rstems, bracketweight, distcoef):
+    """Adjust the scores based on the stem distances"""
+    pass
+
+
+def ChooseStems(allstems, subopt, minlen, minscore):
+    """Choose the optimal stems from the stem set"""
+    pass
+
  
-def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), stems = [],
+def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
                  subopt = 1.0, minlen = 2, minscore = 6,
                  bracketweight = 1.0, distcoef = 0.1):
+    """Return the top stems"""
 
-    ## remove from rbps all bps that are in stems
+    # Remove already predicted bps from bp-restraints
+    rbps = set(rbps) - {bp for stem in rstems for bp in stem}
 
-    stems = AnnotateStems(bpmatrix, rbps, rxs, rstembps)
-    #stems = ScoreStems(seq, stems, rstembps)
+    allstems = AnnotateStems(bpmatrix, rbps, rxs, rstems)
+
+    #######################
+    # let AnnotateStems return stems with initial scores!! 
+    # Finalize comments in AnnotateStems!!!
+
+    # TEMPORARY PRINTING
+    for stem in allstems:
+        print(seq)
+        print(StemsToDBN([stem,],seq))
+        print(stem)
+    return 0
+    
+    allstems = ScoreStems(seq, allstems, rstems, bracketweight, distcoef)
+
+    # TEMPORARY PRINTING
+    for stem in allstems:
+        print(seq)
+        print(StemsToDBN([stem,],seq))
+        print(stem)
+
+    return ChooseStems(allstems, subopt, minlen, minscore)
+
+
+
+def SortDBNs(dbns):
+    pass
+
+
+def DBNsToConsensus(dbns):
+    pass
 
     
-
-    return stems
-            
-
-        
-
-    
-
-
 def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
                subopt = 1.0, minlen = 2, minscore = 6,
                bracketweight = 1.0, distcoef = 0.1):
@@ -330,6 +369,10 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # List of lists of stems (each stem list is a currently predicted secondary structure
     curstemsets = [[stem,] for stem in newstems]
 
+
+    return 0 ## TEMPORARY BREAK
+
+
     # List of finalized stem lists
     finstemsets = []
 
@@ -345,7 +388,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
             newstems = OptimalStems(shortseq, bpmatrix.copy(),
                                     rbps.copy(), rxs.copy(), stems,
                                     subopt, minlen, minscore,
-                                    bracketweight, distcoef):
+                                    bracketweight, distcoef)
             # append new intermediate stem lists
             if newstems:
                 for newstem in newstems:
@@ -372,9 +415,6 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
 
     return cons, sorteddbns
 
-    ### Finalize the OptimalStems func
-    ###MaxSubarrays func
-
 
 if __name__ == "__main__":
 
@@ -387,8 +427,10 @@ if __name__ == "__main__":
     #Twister ribozyme
     seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
     dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
-    rst = "(.((xxx....xx..............,,,,,,..............................)).)"
+    #rst = "(.((xxx....xx..............,,,,,,..............................)).)"
+    rst = "..................................................................." 
 
+    
     bpweights = {'GU':-1,'AU':2,'GC':4}
 
     subopt = 1.0
