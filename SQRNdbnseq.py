@@ -62,7 +62,7 @@ def PairsToDBN(newpairs, length):
 
 def StemsToDBN(stems, seq):
     """Convert a list of stems (lists of bps) into a dbn string"""
-    return PairsToDBN([bp for stem in stems for bp in stem],len(seq))
+    return PairsToDBN([bp for stem in stems for bp in stem[0]],len(seq))
 
 
 def DBNToPairs(dbn):
@@ -197,7 +197,7 @@ def ParseRestraints(restraints):
     return rbps, rxs
 
 
-def AnnotateStems(bpmatrix, rbps, rxs, rstems):
+def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
 
     # copy the bpmatrix
     matrix = bpmatrix.copy()
@@ -235,6 +235,7 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems):
 
         curstem  = []
         curscore = 0
+        bestscore = 0
 
         i, j = x, y
         
@@ -246,18 +247,21 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems):
                 curstem.append((i, j))
                 lastpositive = len(curstem)
                 curscore = curscore + val
+                bestscore = curscore
 
             elif val < 0:
                 if curstem:
                     curscore = curscore + val
                     if curscore <= 0:
-                        stems.append(curstem[:lastpositive])
+                        if lastpositive >= minlen and bestscore >= minscore:
+                            stems.append([curstem[:lastpositive], lastpositive, bestscore])
                         curstem = []
                         curscore = 0
                     else:
                         curstem.append((i,j))
             elif curstem:
-                stems.append(curstem[:lastpositive])
+                if lastpositive >= minlen and bestscore >= minscore:
+                    stems.append([curstem[:lastpositive], lastpositive, bestscore])
                 curstem = []
                 curscore = 0
             
@@ -265,8 +269,9 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems):
             j -= 1
 
         if curstem:
-            stems.append(curstem[:lastpositive])
-
+            if lastpositive >= minlen and bestscore >= minscore:
+                stems.append([curstem[:lastpositive], lastpositive, bestscore])
+    print(len(stems))
     return stems
 
 
@@ -275,46 +280,51 @@ def DistFactor(distance, coef):
     return (1/(1+abs(distance-4)))**coef
 
 
-def ScoreStems(seq, stems, rstems, bracketweight, distcoef):
-    """Adjust the scores based on the stem distances"""
-    pass
+def ScoreStems(seq, stems, rstems, bracketweight,
+               distcoef, orderpenalty, fiveprime):
+    """Adjust the scores based on the stem distance, distance from 5'-end, and pseudoknot level"""
+
+    # bp partners
+    # pseudoknot levels
+
+    for stem in stems:
+        descr = "len={},bps={}".format(stem[1],stem[2])
+        pass
+
+    return stems
 
 
-def ChooseStems(allstems, subopt, minlen, minscore):
+def ChooseStems(allstems, subopt):
     """Choose the optimal stems from the stem set"""
     pass
 
  
 def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
                  subopt = 1.0, minlen = 2, minscore = 6,
-                 bracketweight = 1.0, distcoef = 0.1):
+                 bracketweight = 1.0, distcoef = 0.1,
+                 orderpenalty = 0.0, fiveprime = 0.0):
     """Return the top stems"""
 
     # Remove already predicted bps from bp-restraints
     rbps = set(rbps) - {bp for stem in rstems for bp in stem}
 
-    allstems = AnnotateStems(bpmatrix, rbps, rxs, rstems)
+    allstems = AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore)
 
-    #######################
-    # let AnnotateStems return stems with initial scores!! 
+    ####################### 
     # Finalize comments in AnnotateStems!!!
+    
+    allstems = ScoreStems(seq, allstems, rstems, bracketweight,
+                          distcoef, orderpenalty, fiveprime)
 
     # TEMPORARY PRINTING
     for stem in allstems:
         print(seq)
+        print(StemsToDBN(rstems, seq))
         print(StemsToDBN([stem,],seq))
         print(stem)
     return 0
-    
-    allstems = ScoreStems(seq, allstems, rstems, bracketweight, distcoef)
 
-    # TEMPORARY PRINTING
-    for stem in allstems:
-        print(seq)
-        print(StemsToDBN([stem,],seq))
-        print(stem)
-
-    return ChooseStems(allstems, subopt, minlen, minscore)
+    return ChooseStems(allstems, subopt)
 
 
 
@@ -328,7 +338,9 @@ def DBNsToConsensus(dbns):
     
 def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
                subopt = 1.0, minlen = 2, minscore = 6,
-               bracketweight = 1.0, distcoef = 0.1):
+               bracketweight = 1.0, distcoef = 0.1,
+               orderpenalty = 0.0, fiveprime = 0.0,
+               maxstemnum = 10**6):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     bpweights == dictionary with canonical bps as keys and their weights as values
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -338,8 +350,14 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     minscore == minimum stem bp-score to predict
     bracketweight == mult factor for pseudoknotted brackets in the stem distance calculation
     distcoef == how much the stem distance affects the stem score (0 == no effect)
+    orderpenalty == how much we prioritize lower pseudoknot levels
+    fiveprime == how much we prioritize 5'-close stems
+    maxstemnum == how many stems we allow in a single predicted structure
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
+
+    if not maxstemnum:
+        return '.'*len(seq), ['.'*len(seq),]
 
     # turn seq into UPPERCASE & replace T with U
     seq = seq.upper().replace("T", "U")
@@ -364,7 +382,8 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     newstems = OptimalStems(shortseq, bpmatrix.copy(),
                             rbps.copy(), rxs.copy(), [],
                             subopt, minlen, minscore,
-                            bracketweight, distcoef)
+                            bracketweight, distcoef,
+                            orderpenalty, fiveprime)
 
     # List of lists of stems (each stem list is a currently predicted secondary structure
     curstemsets = [[stem,] for stem in newstems]
@@ -384,6 +403,10 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
 
         for stems in curstemsets:
 
+            if len(stems) == maxstemnum:
+                finstemsets.append(stems)
+                continue
+
             # new optimal stems based on the current stem list    
             newstems = OptimalStems(shortseq, bpmatrix.copy(),
                                     rbps.copy(), rxs.copy(), stems,
@@ -396,6 +419,9 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
             # if no newstems returned - the stem list is considered final
             else:
                 finstemsets.append(stems)
+
+        # update the current stem lists
+        curstemsets = newcurstemsets
 
     # list of dbn strings
     dbns = []
@@ -438,10 +464,15 @@ if __name__ == "__main__":
     minscore = 6
     bracketweight = 1.0
     distcoef = 0.1
+    orderpenalty = 0.0
+    fiveprime = 0.0
+    maxstemnum = 10**6
 
     dbns = SQRNdbnseq(seq, bpweights, rst, dbn,
                       subopt, minlen, minscore,
-                      bracketweight, distcoef)
+                      bracketweight, distcoef,
+                      orderpenalty, fiveprime,
+                      maxstemnum)
 
 
 
