@@ -158,7 +158,7 @@ def BPMatrix(seq, weights):
                 bps[b1+b2] = 0
 
     # Initialize the matrix
-    mat = np.zeros((len(seq),len(seq)),dtype=int)
+    mat = np.zeros((len(seq), len(seq)), dtype = float)
 
     # Fill the upper triangle of the matrix with bp weights
     # Ignore the bps that would form a hairpin of len < 3
@@ -216,7 +216,7 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
 
     # apply stem-restraints - zero out the entire rows and columns for each stem
     for stem in rstems:
-        for v, w in stem:
+        for v, w in stem[0]:
             matrix[v, :] *= 0
             matrix[:, v] *= 0
             matrix[w, :] *= 0
@@ -231,6 +231,8 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
     diagstarts  = [(0, x)   for x in range(4, N)]
     diagstarts += [(y, N-1) for y in range(1, N-4)]
 
+    # for each diagonal select the stems
+    # as maximal score sub-arrays
     for x, y in diagstarts:
 
         curstem  = []
@@ -239,27 +241,27 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
 
         i, j = x, y
         
-        while i <= j - 4:
+        while i <= j - 4: # this is to forbid hairpins of len < 3
             
             val = matrix[i, j]
 
-            if val > 0:                         
+            if val > 0: # if bp has positive score - add it to the current stem                  
                 curstem.append((i, j))
                 lastpositive = len(curstem)
                 curscore = curscore + val
                 bestscore = curscore
 
-            elif val < 0:
+            elif val < 0: # if bp has negative score
                 if curstem:
                     curscore = curscore + val
-                    if curscore <= 0:
+                    if curscore <= 0: # if it is better to stop the stem before the last negatives
                         if lastpositive >= minlen and bestscore >= minscore:
                             stems.append([curstem[:lastpositive], lastpositive, bestscore])
                         curstem = []
                         curscore = 0
-                    else:
+                    else: # otherwise - growing the stem
                         curstem.append((i,j))
-            elif curstem:
+            elif curstem: # if no bp but we had the stem before
                 if lastpositive >= minlen and bestscore >= minscore:
                     stems.append([curstem[:lastpositive], lastpositive, bestscore])
                 curstem = []
@@ -268,16 +270,12 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
             i += 1
             j -= 1
 
+        # in case we stopped at a positive value
         if curstem:
             if lastpositive >= minlen and bestscore >= minscore:
                 stems.append([curstem[:lastpositive], lastpositive, bestscore])
-    print(len(stems))
+
     return stems
-
-
-def DistFactor(distance, coef):
-    """Multiplication factor for a stem score based on the confining distance"""
-    return (1/(1+abs(distance-4)))**coef
 
 
 def ScoreStems(seq, stems, rstems, bracketweight,
@@ -288,15 +286,44 @@ def ScoreStems(seq, stems, rstems, bracketweight,
     # pseudoknot levels
 
     for stem in stems:
-        descr = "len={},bps={}".format(stem[1],stem[2])
-        pass
+
+        bps = stem[0]
+        descr = "len={},bps={}".format(stem[1], stem[2])
+        levelset = set()
+
+        dots = 0
+        brackets = 0
+
+        stemdist = dots + bracketweight*brackets
+        stemdistfactor = (1/(1+abs(stemdist-4)))**distcoef
+
+        order = len(levelset)
+        orderfactor = (1/(1+order))**orderpenalty
+
+        fiveprimedist   = (bps[0][0]-0)/len(seq)
+        fiveprimefactor = (1-fiveprimedist)**fiveprime
+
+        initscore  = stem[2]
+        finalscore = initscore * stemdistfactor * orderfactor * fiveprimefactor
+        
+        descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
+                                                    round(stemdist,2),
+                                                    round(stemdistfactor,2))
+        descr += ",or={},orf={}".format(order,
+                                        round(orderfactor,2))
+        descr += ",fpd={},fpf={}".format(round(fiveprimedist,2),
+                                         round(fiveprimefactor,2))
+
+        stem.append(finalscore)
+        stem.append(descr)
 
     return stems
 
 
 def ChooseStems(allstems, subopt):
     """Choose the optimal stems from the stem set"""
-    pass
+    # TEMPORARY
+    return sorted(allstems, key = lambda x: x[3], reverse = True)[:1]
 
  
 def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
@@ -306,34 +333,36 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
     """Return the top stems"""
 
     # Remove already predicted bps from bp-restraints
-    rbps = set(rbps) - {bp for stem in rstems for bp in stem}
+    rbps = set(rbps) - {bp for stem in rstems for bp in stem[0]}
 
     allstems = AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore)
 
-    ####################### 
-    # Finalize comments in AnnotateStems!!!
-    
     allstems = ScoreStems(seq, allstems, rstems, bracketweight,
                           distcoef, orderpenalty, fiveprime)
 
     # TEMPORARY PRINTING
-    for stem in allstems:
+    print('##################################################')
+    for stem in sorted(allstems, key = lambda x: x[3], reverse = True):
         print(seq)
         print(StemsToDBN(rstems, seq))
         print(StemsToDBN([stem,],seq))
-        print(stem)
-    return 0
+        print(stem[1:])
+    
+    # FINALIZE ScoreStems + Comments
+    # FINALIZE ChooseStems + Comments
 
     return ChooseStems(allstems, subopt)
 
 
 
 def SortDBNs(dbns):
-    pass
+
+    return dbns # TEMPORARY
 
 
 def DBNsToConsensus(dbns):
-    pass
+
+    return dbns[0] # TEMPORARY
 
     
 def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
@@ -388,10 +417,6 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # List of lists of stems (each stem list is a currently predicted secondary structure
     curstemsets = [[stem,] for stem in newstems]
 
-
-    return 0 ## TEMPORARY BREAK
-
-
     # List of finalized stem lists
     finstemsets = []
 
@@ -430,14 +455,17 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # and not forget about non-predicted bps from restraints
     for stems in finstemsets:
 
-        dbns.append({bp for stem in stems for bp in stem} | set(rbps),
-                    len(shortseq))
+        dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | set(rbps),
+                    len(shortseq)))
 
     # ReAlign the dbn strings accoring to seq
     dbns = [ReAlign(x, seq) for x in dbns]
 
     sorteddbns = SortDBNs(dbns) #Sort in decreasing order of structure "quality"
     cons       = DBNsToConsensus(sorteddbns) #Consensus dbn
+
+    # FINALIZE SortDBNs + comments
+    # FINALIZE DBNsToConsensus + comments
 
     return cons, sorteddbns
 
@@ -457,25 +485,32 @@ if __name__ == "__main__":
     rst = "..................................................................." 
 
     
-    bpweights = {'GU':-1,'AU':2,'GC':4}
+    bpweights = {
+                 'GU' : -1,
+                 'AU' :  2,
+                 'GC' :  4,
+                 }
 
     subopt = 1.0
     minlen = 2
     minscore = 6
-    bracketweight = 1.0
+    bracketweight = 2.0
     distcoef = 0.1
-    orderpenalty = 0.0
+    orderpenalty = 0.1
     fiveprime = 0.0
     maxstemnum = 10**6
 
-    dbns = SQRNdbnseq(seq, bpweights, rst, dbn,
-                      subopt, minlen, minscore,
-                      bracketweight, distcoef,
-                      orderpenalty, fiveprime,
-                      maxstemnum)
-
-
-
+    preds = SQRNdbnseq(seq, bpweights, rst, dbn,
+                       subopt, minlen, minscore,
+                       bracketweight, distcoef,
+                       orderpenalty, fiveprime,
+                       maxstemnum)
+    print('==========')
+    print('PREDICTION')
+    print('==========')
+    print(seq)
+    for pred in preds[1]:
+        print(pred)
 
 
 
