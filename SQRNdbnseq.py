@@ -372,10 +372,37 @@ def ScoreStems(seq, stems, rstems, minscore,
     return [stem for stem in stems if stem[3] >= minscore]
 
 
-def ChooseStems(allstems, subopt):
+def ChooseStems(allstems, subopt = 1.0):
     """Choose the optimal stems from the stem set"""
-    # TEMPORARY
-    return sorted(allstems, key = lambda x: x[3], reverse = True)[:1]
+
+    # sort in decreasing order of the adjusted score
+    sortedstems = sorted(allstems, key = lambda x: x[3], reverse = True)
+
+    resultstems = sortedstems[:1] # start with the top ranked stem
+
+    # if no stems
+    if not resultstems:
+        return []
+
+    # the adjusted score of the top ranked stem
+    bestscore = resultstems[0][3]
+
+    # add all stems with the subopt range that are
+    # in conflict with all the better stems
+    for stem in sortedstems[1:]:
+
+        bps = stem[0]
+        finscore = stem[3]
+
+        # in conflict == the intersection of their sets
+        # of the paired bases is not empty
+        if all({p for bp1 in bps
+                for p in bp1} & {p for bp2 in betterstem[0]
+                                 for p in bp2}
+               for betterstem in resultstems) and finscore >= subopt * bestscore:
+            resultstems.append(stem)
+
+    return resultstems
 
  
 def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
@@ -403,8 +430,9 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
         print(stem[1:])
     """
     
-    reultstems = ChooseStems(allstems, subopt)
+    resultstems = ChooseStems(allstems, subopt)
 
+    """
     # TEMPORARY PRINTING
     print('##################################################')
     for stem in resultstems:
@@ -412,21 +440,25 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
         print(StemsToDBN(rstems, seq))
         print(StemsToDBN([stem,],seq))
         print(stem[1:])
-
-    # FINALIZE ChooseStems + Comments
+    """
 
     return resultstems
 
 
+def ConsensusStemSet(stemsets):
+    """Returns the set of bps present in all the stemsets"""
+    
+    if not stemsets:
+        return set()
 
-def SortDBNs(dbns):
+    # start with bps of the first stemset
+    bps = {bp for stem in stemsets[0] for bp in stem[0]}
 
-    return dbns # TEMPORARY
+    # and intersect with all the other stemsets
+    for stemset in stemsets[1:]:
+        bps &= {bp for stem in stemset for bp in stem[0]}
 
-
-def DBNsToConsensus(dbns):
-
-    return dbns[0] # TEMPORARY
+    return bps
 
     
 def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
@@ -458,13 +490,15 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # if not restraints - generate a string of dots
     if not restraints:
         restraints = '.'*len(seq)
-    # if not known dbn - generate a string of dots
-    if not dbn:
-        dbn = '.'*len(seq)
 
+    assert len(seq) == len(restraints)
+    
     # Unalign seq, dbn, and restraints strings
     shortseq, shortrest = UnAlign2(seq, restraints)
-    shortseq, shortdbn  = UnAlign2(seq, dbn)
+
+    if dbn:
+        assert len(seq) == len(dbn)
+        shortseq, shortdbn  = UnAlign2(seq, dbn)
 
     # Generate initial bp-matrix (with bp weights in cells)
     bpmatrix = BPMatrix(shortseq, bpweights)
@@ -511,23 +545,21 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # list of dbn strings
     dbns = []
 
-    # convert all final stem lists into dbn strings
+    # sort the final stem lists in descresing order of their total bp-score
+    # and convert all final stem lists into dbn strings
     # and not forget about non-predicted bps from restraints
-    for stems in finstemsets:
+    for stems in sorted(finstemsets, key = lambda x: sum(y[2] for y in x), reverse = True):
 
         dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | set(rbps),
                     len(shortseq)))
 
+    cons = ConsensusStemSet(finstemsets)
+
     # ReAlign the dbn strings accoring to seq
     dbns = [ReAlign(x, seq) for x in dbns]
+    cons = ReAlign(PairsToDBN(cons, len(shortseq)), seq)
 
-    sorteddbns = SortDBNs(dbns) #Sort in decreasing order of structure "quality"
-    cons       = DBNsToConsensus(sorteddbns) #Consensus dbn
-
-    # FINALIZE SortDBNs + comments
-    # FINALIZE DBNsToConsensus + comments
-
-    return cons, sorteddbns
+    return cons, dbns
 
 
 if __name__ == "__main__":
@@ -547,15 +579,15 @@ if __name__ == "__main__":
     
     bpweights = {
                  'GU' : -1,
-                 'AU' :  1.5,
+                 'AU' :  2,
                  'GC' :  4,
                  }
 
-    subopt = 1.0
+    subopt = 0.9
     minlen = 2
-    minbpscore = 5.5
+    minbpscore = 6
     minfinscorefactor = 0.5
-    bracketweight = 1.2
+    bracketweight = 1.1
     distcoef = 0.1
     orderpenalty = 0.1
     fiveprime = 0.01
@@ -570,6 +602,8 @@ if __name__ == "__main__":
     print('PREDICTION')
     print('==========')
     print(seq)
+    print(preds[0])
+    print('_'*len(seq))
     for pred in preds[1]:
         print(pred)
 
