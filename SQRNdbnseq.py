@@ -1,7 +1,7 @@
 
 import numpy as np
 
-def PairsToDBN(newpairs, length):
+def PairsToDBN(newpairs, length = 0, returnlevels = False):
     """Convert a list of base pairs into a dbn string of the given length"""
 
     # Initialize the dbn string
@@ -15,6 +15,7 @@ def PairsToDBN(newpairs, length):
     # groups of non-conflicting base pairs
     groups = [[],]
 
+    # normalize the pairs (i.e. ensure v < w)
     pairs = set((min(v, w), max(v, w)) for v, w in newpairs)
     
     for pair in sorted(pairs):
@@ -49,6 +50,13 @@ def PairsToDBN(newpairs, length):
                 groups[i]   = [p for p in groups[i]
                                if p not in conflicting] + groups[i+1]
                 groups[i+1] = conflicting
+
+    if returnlevels:
+        levels = {}
+        for lev, group in enumerate(groups):
+            for bp in group:
+                levels[bp] = lev + 1
+        return levels
 
     # add all the pairs to the dbn string
     # according to their levels
@@ -282,17 +290,26 @@ def ScoreStems(seq, stems, rstems, bracketweight,
                distcoef, orderpenalty, fiveprime):
     """Adjust the scores based on the stem distance, distance from 5'-end, and pseudoknot level"""
 
-    # bp partners
-    # pseudoknot levels
+    bppartners = [-1 for _ in range(len(seq))]
+    
+    rbps = set()
+
+    for stem in rstems:
+        for bp in stem[0]:
+            rbps.add(bp)
+            bppartners[bp[0]] = bp[1]
+            bppartners[bp[1]] = bp[0]
+
+    bplevels = PairsToDBN(rbps, returnlevels = True)
 
     for stem in stems:
 
         bps = stem[0]
         descr = "len={},bps={}".format(stem[1], stem[2])
-        levelset = set()
 
-        dots = 0
-        brackets = 0
+        levelset = set()#################
+        dots = 0###################
+        brackets = 0###############
 
         stemdist = dots + bracketweight*brackets
         stemdistfactor = (1/(1+abs(stemdist-4)))**distcoef
