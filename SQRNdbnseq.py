@@ -291,8 +291,10 @@ def ScoreStems(seq, stems, rstems, minscore,
                orderpenalty, fiveprime):
     """Adjust the scores based on the stem distance, distance from 5'-end, and pseudoknot level"""
 
+    # values == indices of the bp partners or -1 for unpaired bases
     bppartners = [-1 for _ in range(len(seq))]
-    
+
+    # set of restraint-bps
     rbps = set()
 
     for stem in rstems:
@@ -301,27 +303,58 @@ def ScoreStems(seq, stems, rstems, minscore,
             bppartners[bp[0]] = bp[1]
             bppartners[bp[1]] = bp[0]
 
+    # keys = bps, values = their pseudoknot level (starting with 1)
     bplevels = PairsToDBN(rbps, returnlevels = True)
 
+    # calculating adjusted scores for each stem
     for stem in stems:
 
         bps = stem[0]
-        descr = "len={},bps={}".format(stem[1], stem[2])
+        descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
 
-        levelset = set()#################
-        dots = 0###################
-        brackets = 0###############
+        levelset = set() # with base pairs of how many pseudoknot levels the stem is in conflict
+        dots = 0 # number of confined unpaired bases
+        brackets = 0 # number of bases belonging to the pseudoknotted wings (see URS defs)
 
-        stemdist = dots + bracketweight*brackets
-        stemdistfactor = (1/(1+abs(stemdist-4)))**distcoef
+        # confined region
+        stemstart, stemend = bps[-1]
 
-        order = len(levelset)
-        orderfactor = (1/(1+order))**orderpenalty
+        # if we are inside the sub-ECR - where it will end
+        inblockend = -1
 
-        fiveprimedist   = (bps[0][0]-0)/len(seq)
-        fiveprimefactor = (1-fiveprimedist)**fiveprime
+        for pos in range(stemstart+1, stemend):
 
-        initscore  = stem[2]
+            partner = bppartners[pos]
+
+            # if dot and not inside sub-ECR - increment dots
+            if partner == -1:
+
+                if pos > inblockend:
+                    dots += 1
+
+            # if the pseudoknotted wing and not inside sub-ECR - increment brackets
+            elif partner < stemstart or partner > stemend:
+
+                if pos > inblockend:
+                    brackets += 1
+                    levelset.add(bplevels[(min(pos, partner),
+                                           max(pos, partner))])
+
+            # if sub-ECR face - increase inblockend
+            elif pos < partner:
+                inblockend = partner
+        
+
+        stemdist = dots + bracketweight*brackets # stem distance
+        stemdistfactor = (1/(1 + abs(stemdist - 4)))**distcoef
+
+        order = len(levelset) # number of conflicting pseudoknot levels
+        orderfactor = (1/(1 + order))**orderpenalty
+
+        fiveprimedist   = (bps[0][0] - 0)/len(seq) #how far from 5'-end 
+        fiveprimefactor = (1 - fiveprimedist)**fiveprime
+
+        initscore  = stem[2] # initial bp score
         finalscore = initscore * stemdistfactor * orderfactor * fiveprimefactor
         
         descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
@@ -335,6 +368,7 @@ def ScoreStems(seq, stems, rstems, minscore,
         stem.append(finalscore)
         stem.append(descr)
 
+    # remove all stems with finscore < minfinscore
     return [stem for stem in stems if stem[3] >= minscore]
 
 
@@ -359,7 +393,7 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
     allstems = ScoreStems(seq, allstems, rstems, minfinscore,
                           bracketweight, distcoef,
                           orderpenalty, fiveprime)
-
+    """
     # TEMPORARY PRINTING
     print('##################################################')
     for stem in sorted(allstems, key = lambda x: x[3], reverse = True):
@@ -367,11 +401,21 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
         print(StemsToDBN(rstems, seq))
         print(StemsToDBN([stem,],seq))
         print(stem[1:])
+    """
     
-    # FINALIZE ScoreStems + Comments
+    reultstems = ChooseStems(allstems, subopt)
+
+    # TEMPORARY PRINTING
+    print('##################################################')
+    for stem in resultstems:
+        print(seq)
+        print(StemsToDBN(rstems, seq))
+        print(StemsToDBN([stem,],seq))
+        print(stem[1:])
+
     # FINALIZE ChooseStems + Comments
 
-    return ChooseStems(allstems, subopt)
+    return resultstems
 
 
 
@@ -406,9 +450,6 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
 
-    if not maxstemnum:
-        return '.'*len(seq), ['.'*len(seq),]
-
     # turn seq into UPPERCASE & replace T with U
     seq = seq.upper().replace("T", "U")
 
@@ -431,15 +472,8 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # Parse restraints into unpaired bases (rxs) and base pairs (rbps)
     rbps, rxs = ParseRestraints(shortrest.lower())
 
-    newstems = OptimalStems(shortseq, bpmatrix.copy(),
-                            rbps.copy(), rxs.copy(), [],
-                            subopt, minlen, minbpscore,
-                            minfinscore, bracketweight,
-                            distcoef, orderpenalty,
-                            fiveprime)
-
     # List of lists of stems (each stem list is a currently predicted secondary structure
-    curstemsets = [[stem,] for stem in newstems]
+    curstemsets = [[],]
 
     # List of finalized stem lists
     finstemsets = []
@@ -507,24 +541,24 @@ if __name__ == "__main__":
     #Twister ribozyme
     seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
     dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
-    #rst = "(.((xxx....xx..............,,,,,,..............................)).)"
+    #rst = "(x((xxx....xx..............,,,,,,..............................)).)"
     rst = "..................................................................." 
 
     
     bpweights = {
                  'GU' : -1,
-                 'AU' :  2,
+                 'AU' :  1.5,
                  'GC' :  4,
                  }
 
     subopt = 1.0
     minlen = 2
-    minbpscore = 6
-    minfinscorefactor = 0.0
-    bracketweight = 2.0
+    minbpscore = 5.5
+    minfinscorefactor = 0.5
+    bracketweight = 1.2
     distcoef = 0.1
     orderpenalty = 0.1
-    fiveprime = 0.0
+    fiveprime = 0.01
     maxstemnum = 10**6
 
     preds = SQRNdbnseq(seq, bpweights, rst, dbn,
