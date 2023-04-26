@@ -548,34 +548,72 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # sort the final stem lists in descresing order of their total bp-score
     # and convert all final stem lists into dbn strings
     # and not forget about non-predicted bps from restraints
-    for stems in sorted(finstemsets, key = lambda x: sum(y[2] for y in x), reverse = True):
-
+    finstemsets = sorted(finstemsets, key = lambda x: sum(y[2] for y in x), reverse = True)
+    for stems in finstemsets:
         dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | set(rbps),
                     len(shortseq)))
 
-    cons = ConsensusStemSet(finstemsets)
+    consbps = ConsensusStemSet(finstemsets)
 
     # ReAlign the dbn strings accoring to seq
     dbns = [ReAlign(x, seq) for x in dbns]
-    cons = ReAlign(PairsToDBN(cons, len(shortseq)), seq)
+    cons = ReAlign(PairsToDBN(consbps, len(shortseq)), seq)
 
-    return cons, dbns
+    # if input dbn is known - calculate the quality metrics
+    if dbn:
+        knownbps = set(DBNToPairs(shortdbn))
+
+        constp = len(consbps & knownbps)
+        consfp = len(consbps - knownbps)
+        consfn = len(knownbps - consbps)
+
+        consprc = round(constp / (constp + consfp), 3)
+        consrcl = round(constp / (constp + consfn), 3)
+        consfsc = round(2*constp / (2*constp + consfp + consfn), 3)
+
+        consresult = [constp, consfp, consfn, consfsc, consprc, consrcl]
+
+        bestfsc = 0.0
+        result = []
+
+        for rank, stemset in enumerate(finstemsets):
+
+            setbps = {bp for stem in stemset for bp in stem[0]}
+
+            tp = len(setbps & knownbps)
+            fp = len(setbps - knownbps)
+            fn = len(knownbps - setbps)
+
+            prc = round(tp / (tp + fp), 3)
+            rcl = round(tp / (tp + fn), 3)
+            fsc = round(2*tp / (2*tp + fp + fn), 3)
+
+            if fsc > bestfsc:
+                bestfsc = fsc 
+                result  = [tp, fp, fn, fsc, prc, rcl, rank + 1]
+
+        return cons, dbns, consresult, result
+    return cons, dbns, [], []
 
 
 if __name__ == "__main__":
 
+    rst = None
+
     #SAM riboswitch
-    #seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
-    #dbn = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
+    seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
+    dbn = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
     #TRNA
     #seq = "GGGCGGCUAGCUCAGCGGAAGAGCGCUCGCCUCACACGCGAGAGGUCGUAGGUUCAAGUCCUACGCCGCCCACCA"
     #dbn = "(((((((..((((....[..)))).(((((.......))))).....(((((..]....))))))))))))...."
     #Twister ribozyme
-    seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
-    dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
+    #seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
+    #dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
     #rst = "(x((xxx....xx..............,,,,,,..............................)).)"
-    rst = "..................................................................." 
+    #rst = "..................................................................." 
 
+    if not rst:
+        rst = '.'*len(seq)
     
     bpweights = {
                  'GU' : -1,
@@ -583,29 +621,34 @@ if __name__ == "__main__":
                  'GC' :  4,
                  }
 
-    subopt = 0.9
+    subopt = 0.95
     minlen = 2
     minbpscore = 6
     minfinscorefactor = 0.5
     bracketweight = 1.1
-    distcoef = 0.1
-    orderpenalty = 0.1
+    distcoef = 0.05
+    orderpenalty = 0.05
     fiveprime = 0.01
     maxstemnum = 10**6
 
-    preds = SQRNdbnseq(seq, bpweights, rst, dbn,
-                       subopt, minlen, minbpscore,
-                       minfinscorefactor, bracketweight,
-                       distcoef, orderpenalty, fiveprime,
-                       maxstemnum)
-    print('==========')
-    print('PREDICTION')
-    print('==========')
+    result = SQRNdbnseq(seq, bpweights, rst, dbn,
+                        subopt, minlen, minbpscore,
+                        minfinscorefactor, bracketweight,
+                        distcoef, orderpenalty, fiveprime,
+                        maxstemnum)
+
+    preds = result[:2]
+
     print(seq)
-    print(preds[0])
+    print(dbn)
     print('_'*len(seq))
-    for pred in preds[1]:
-        print(pred)
+    print(preds[0],result[2])
+    print('_'*len(seq))
+    for rank, pred in enumerate(preds[1]):
+        if rank == result[3][-1]-1:
+            print(pred, result[3])
+        else:
+            print(pred)
 
 
 
