@@ -642,15 +642,15 @@ if __name__ == "__main__":
         for minlen in (2, 3, 4):
             for minbpscore in (4, 6, 8):
                 for minfinscorefactor in (0.0, 0.5, 1.0):
-                    for bracketweight in (-1.0, -0.5, 0.5, 1.0, 2.0):
-                        for distcoef in (0.0, 0.1, 0.5, 1.0):
-                            for orderpenalty in (0.0, 0.5, 1.0, 1.5):
-                                for fiveprime in (0.0, 0.1, 0.5, 1.0):
-                                    for maxstemnum in (2, 5, 10**6):
+                    for bracketweight in (-1.0, 0.0, 1.0, 2.0):
+                        for distcoef in (-0.1, 0.0, 0.1, 0.5):
+                            for orderpenalty in (-0.5, 0.0, 0.5, 1.0, 1.5):
+                                for fiveprime in (-0.1, 0.0, 0.1, 0.5, 1.0):
+                                    for maxstemnum in (10**6, ):
 
-                                        for GU in (-4, -2, -1, 1, 2, 4):
-                                            for AU in (-4, -2, -1, 1, 2, 4):
-                                                for GC in (-4, -2, -1, 1, 2, 4):
+                                        for GU in (-1,):
+                                            for AU in (2,):
+                                                for GC in (4, ):
 
                                                     bpweights = {
                                                                  'GU' : GU,
