@@ -553,7 +553,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
         dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | set(rbps),
                     len(shortseq)))
 
-    consbps = ConsensusStemSet(finstemsets)
+    consbps = ConsensusStemSet(finstemsets[:5]) # Consensus of the Top-5
 
     # ReAlign the dbn strings accoring to seq
     dbns = [ReAlign(x, seq) for x in dbns]
@@ -591,6 +591,10 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
             if fsc > bestfsc:
                 bestfsc = fsc 
                 result  = [tp, fp, fn, fsc, prc, rcl, rank + 1]
+
+            # Top5 only
+            if rank + 1 >= 5:
+                break
 
         return cons, dbns, consresult, result
     return cons, dbns, [], []
@@ -630,8 +634,76 @@ if __name__ == "__main__":
     #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]
 
+    print('\t'.join("subopt minlen minbpscore minfinscorefactor bracketweight distcoef orderpenalty fiveprime maxstemnum GU AU GC tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split()))
+
+    ######################################
+                
+    for subopt in (0.9, 0.95, 1.0):
+        for minlen in (2, 3, 4):
+            for minbpscore in (4, 6, 8):
+                for minfinscorefactor in (0.0, 0.5, 1.0):
+                    for bracketweight in (-1.0, -0.5, 0.5, 1.0, 2.0):
+                        for distcoef in (0.0, 0.1, 0.5, 1.0):
+                            for orderpenalty in (0.0, 0.5, 1.0, 1.5):
+                                for fiveprime in (0.0, 0.1, 0.5, 1.0):
+                                    for maxstemnum in (2, 5, 10**6):
+
+                                        for GU in (-4, -2, -1, 1, 2, 4):
+                                            for AU in (-4, -2, -1, 1, 2, 4):
+                                                for GC in (-4, -2, -1, 1, 2, 4):
+
+                                                    bpweights = {
+                                                                 'GU' : GU,
+                                                                 'AU' : AU,
+                                                                 'GC' : GC,
+                                                                 }
+
+                                                    print(subopt, minlen, minbpscore, minfinscorefactor,
+                                                          bracketweight, distcoef, orderpenalty, fiveprime,
+                                                          maxstemnum, GU, AU, GC, sep='\t', end='\t')
+
+                                                    resultsB = []
+                                                    resultsC = []
+
+                                                    for obj in queue:
+
+                                                        name, seq, dbn, rst = obj
+
+                                                        result = SQRNdbnseq(seq, bpweights, rst, dbn,
+                                                                            subopt, minlen, minbpscore,
+                                                                            minfinscorefactor, bracketweight,
+                                                                            distcoef, orderpenalty, fiveprime,
+                                                                            maxstemnum)
+
+                                                        resultsC.append(result[2])
+                                                        resultsB.append(result[3])
+
+                                                    tpC = sum(x[0] for x in resultsC)
+                                                    fpC = sum(x[1] for x in resultsC)
+                                                    fnC = sum(x[2] for x in resultsC)
+                                                    fsC = [x[3] for x in resultsC]
+                                                    prC = [x[4] for x in resultsC]
+                                                    rcC = [x[5] for x in resultsC]
+
+                                                    print(tpC, fpC, fnC, round(2*tpC / (2*tpC + fpC + fnC), 3), round(np.mean(fsC), 3),
+                                                          round(np.mean(prC), 3), round(np.mean(rcC), 3), sep='\t', end='\t')
+
+                                                    tpB = sum(x[0] for x in resultsB)
+                                                    fpB = sum(x[1] for x in resultsB)
+                                                    fnB = sum(x[2] for x in resultsB)
+                                                    fsB = [x[3] for x in resultsB]
+                                                    prB = [x[4] for x in resultsB]
+                                                    rcB = [x[5] for x in resultsB]
+                                                    rkB = [x[6] for x in resultsB]
+                                                    
+                                                    print(tpB, fpB, fnB, round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
+                                                          round(np.mean(prB), 3), round(np.mean(rcB), 3), sep = '\t')
+
+    ##########################################################
+
+    """
     bpweights = {
-                 'GU' : -1,
+                 'GU' : -1.0,
                  'AU' :  2,
                  'GC' :  4,
                  }
@@ -695,7 +767,7 @@ if __name__ == "__main__":
     
     print(round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
           round(np.mean(prB), 3), round(np.mean(rcB), 3))
-    print(Counter(rkB))
+    print(Counter(rkB))"""
 
 
 
