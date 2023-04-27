@@ -616,7 +616,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise.fas") as file:
+    with open("TS1reduced.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -636,15 +636,15 @@ if __name__ == "__main__":
                  'GC' :  4,
                  }
 
-    subopt = 0.95
+    subopt = 0.9
     minlen = 2
-    minbpscore = 6
+    minbpscore = 8
     minfinscorefactor = 0.5
     bracketweight = 1.1
-    distcoef = 0.05
-    orderpenalty = 0.05
+    distcoef = 0.1
+    orderpenalty = 0.1
     fiveprime = 0.01
-    maxstemnum = 1
+    maxstemnum = 10**6
 
     resultsB = []
     resultsC = []
