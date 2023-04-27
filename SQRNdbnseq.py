@@ -573,7 +573,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
 
         consresult = [constp, consfp, consfn, consfsc, consprc, consrcl]
 
-        bestfsc = 0.0
+        bestfsc = -1
         result = []
 
         for rank, stemset in enumerate(finstemsets):
