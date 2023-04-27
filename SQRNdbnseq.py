@@ -640,10 +640,10 @@ if __name__ == "__main__":
     minlen = 2
     minbpscore = 8
     minfinscorefactor = 0.5
-    bracketweight = 1.1
-    distcoef = 0.1
-    orderpenalty = 0.1
-    fiveprime = 0.01
+    bracketweight = 0.5
+    distcoef = 0.09
+    orderpenalty = 1.5
+    fiveprime = 0.1
     maxstemnum = 10**6
 
     resultsB = []
