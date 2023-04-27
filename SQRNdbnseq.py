@@ -1,5 +1,6 @@
 
 import numpy as np
+from multiprocessing import Pool
 
 def PairsToDBN(newpairs, length = 0, returnlevels = False):
     """Convert a list of base pairs into a dbn string of the given length"""
@@ -310,7 +311,7 @@ def ScoreStems(seq, stems, rstems, minscore,
     for stem in stems:
 
         bps = stem[0]
-        descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
+        #descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
 
         levelset = set() # with base pairs of how many pseudoknot levels the stem is in conflict
         dots = 0 # number of confined unpaired bases
@@ -357,13 +358,13 @@ def ScoreStems(seq, stems, rstems, minscore,
         initscore  = stem[2] # initial bp score
         finalscore = initscore * stemdistfactor * orderfactor * fiveprimefactor
         
-        descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
-                                                    round(stemdist,2),
-                                                    round(stemdistfactor,2))
-        descr += ",or={},orf={}".format(order,
-                                        round(orderfactor,2))
-        descr += ",fpd={},fpf={}".format(round(fiveprimedist,2),
-                                         round(fiveprimefactor,2))
+        #descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
+        #                                            round(stemdist,2),
+        #                                            round(stemdistfactor,2))
+        #descr += ",or={},orf={}".format(order,
+        #                                round(orderfactor,2))
+        #descr += ",fpd={},fpf={}".format(round(fiveprimedist,2),
+        #                                 round(fiveprimefactor,2))
 
         stem.append(finalscore)
         stem.append(descr)
@@ -445,6 +446,13 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
     return resultstems
 
 
+def mpOptimalStems(args):
+    """OptimalStems version with a single input parameter for mp.pool.imap"""
+    rstems   = args[4] # current stem set
+    newstems = OptimalStems(*args)
+    return newstems, rstems
+
+
 def ConsensusStemSet(stemsets):
     """Returns the set of bps present in all the stemsets"""
     
@@ -465,7 +473,8 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
                subopt = 1.0, minlen = 2, minbpscore = 6,
                minfinscorefactor = 0.0, bracketweight = 1.0,
                distcoef = 0.1, orderpenalty = 0.0,
-               fiveprime = 0.0, maxstemnum = 10**6):
+               fiveprime = 0.0, maxstemnum = 10**6,
+               threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     bpweights == dictionary with canonical bps as keys and their weights as values
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -479,6 +488,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     orderpenalty == how much we prioritize lower pseudoknot levels
     fiveprime == how much we prioritize 5'-close stems
     maxstemnum == how many stems we allow in a single predicted structure
+    threads == number of CPUs to use
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
 
@@ -512,35 +522,43 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # List of finalized stem lists
     finstemsets = []
 
-    # while list of intermediate stem lists is not empty
-    while curstemsets:
+    with Pool(threads) as pool:
 
-        # new iteration
-        newcurstemsets = []
+        # while list of intermediate stem lists is not empty
+        while curstemsets:
 
-        for stems in curstemsets:
+            # filtering by len(stems) == maxstemnum
+            newcurstemsets = []
+            for stems in curstemsets:
+                if len(stems) == maxstemnum:
+                    finstemsets.append(stems)
+                else:
+                    newcurstemsets.append(stems)
+            curstemsets = newcurstemsets
 
-            if len(stems) == maxstemnum:
-                finstemsets.append(stems)
-                continue
+            # new iteration
+            newcurstemsets = []
 
-            # new optimal stems based on the current stem list    
-            newstems = OptimalStems(shortseq, bpmatrix.copy(),
-                                    rbps.copy(), rxs.copy(), stems,
-                                    subopt, minlen, minbpscore,
-                                    minfinscore, bracketweight,
-                                    distcoef, orderpenalty,
-                                    fiveprime)
-            # append new intermediate stem lists
-            if newstems:
-                for newstem in newstems:
-                    newcurstemsets.append(stems + [newstem,])
-            # if no newstems returned - the stem list is considered final
-            else:
-                finstemsets.append(stems)
+            inputs = [(shortseq, bpmatrix.copy(),
+                     rbps.copy(), rxs.copy(), stems,
+                     subopt, minlen, minbpscore,
+                     minfinscore, bracketweight,
+                     distcoef, orderpenalty,
+                     fiveprime) for stems in curstemsets]
 
-        # update the current stem lists
-        curstemsets = newcurstemsets
+            # new optimal stems based on the current stem list 
+            for newstems, stems in pool.imap(mpOptimalStems, inputs):
+
+                # append new intermediate stem lists
+                if newstems:
+                    for newstem in newstems:
+                        newcurstemsets.append(stems + [newstem,])
+                # if no newstems returned - the stem list is considered final
+                else:
+                    finstemsets.append(stems)
+
+            # update the current stem lists
+            curstemsets = newcurstemsets
 
     # list of dbn strings
     dbns = []
@@ -605,6 +623,8 @@ if __name__ == "__main__":
     from collections import Counter
 
     rst = None
+
+    threads = 6
 
     #SAM riboswitch
     seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
@@ -678,7 +698,7 @@ if __name__ == "__main__":
                                                                             subopt, minlen, minbpscore,
                                                                             minfinscorefactor, bracketweight,
                                                                             distcoef, orderpenalty, fiveprime,
-                                                                            maxstemnum)
+                                                                            maxstemnum, threads)
 
                                                         '''print(name)
                                                         print(seq)
