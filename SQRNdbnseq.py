@@ -644,7 +644,7 @@ if __name__ == "__main__":
                 for minfinscorefactor in (0.0, 0.5, 1.0):
                     for bracketweight in (-1.0, 0.0, 1.0, 2.0):
                         for distcoef in (-0.1, 0.0, 0.1, 0.5):
-                            for orderpenalty in (-0.5, 0.0, 0.5, 1.0, 1.5):
+                            for orderpenalty in (-0.1, 0.0, 0.5, 1.0, 1.5):
                                 for fiveprime in (-0.1, 0.0, 0.1, 0.5, 1.0):
                                     for maxstemnum in (10**6, ):
 
@@ -674,6 +674,19 @@ if __name__ == "__main__":
                                                                             minfinscorefactor, bracketweight,
                                                                             distcoef, orderpenalty, fiveprime,
                                                                             maxstemnum)
+
+                                                        '''print(name)
+                                                        print(seq)
+                                                        print(dbn)
+                                                        print('_'*len(seq))
+                                                        print(result[0],result[2])
+                                                        print('_'*len(seq))
+                                                        for rank, pred in enumerate(result[1]):
+                                                            if rank == result[3][-1]-1:
+                                                                print(pred, result[3])
+                                                            else:
+                                                                print(pred)
+                                                        print("#"*len(seq))'''
 
                                                         resultsC.append(result[2])
                                                         resultsB.append(result[3])
