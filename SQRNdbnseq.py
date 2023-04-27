@@ -598,6 +598,8 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
 
 if __name__ == "__main__":
 
+    from collections import Counter
+
     rst = None
 
     #SAM riboswitch
@@ -611,10 +613,23 @@ if __name__ == "__main__":
     #dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
     #rst = "(x((xxx....xx..............,,,,,,..............................)).)"
     #rst = "..................................................................." 
-
-    if not rst:
-        rst = '.'*len(seq)
     
+    queue = []
+
+    with open("CoRToise.fas") as file:
+        lines = file.readlines()
+
+        for ii in range(0,len(lines)-2,3):
+
+            nm = lines[ii].strip()[1:]
+            sq = lines[ii+1].strip()
+            db = lines[ii+2].strip()
+
+            queue.append([nm, sq, db, rst])
+
+    #queue  = [["default", seq, dbn, rst],]
+    #queue += [["default", seq, dbn, rst],]
+
     bpweights = {
                  'GU' : -1,
                  'AU' :  2,
@@ -629,30 +644,61 @@ if __name__ == "__main__":
     distcoef = 0.05
     orderpenalty = 0.05
     fiveprime = 0.01
-    maxstemnum = 10**6
+    maxstemnum = 1
 
-    result = SQRNdbnseq(seq, bpweights, rst, dbn,
-                        subopt, minlen, minbpscore,
-                        minfinscorefactor, bracketweight,
-                        distcoef, orderpenalty, fiveprime,
-                        maxstemnum)
+    resultsB = []
+    resultsC = []
 
-    preds = result[:2]
+    for obj in queue:
 
-    print(seq)
-    print(dbn)
-    print('_'*len(seq))
-    print(preds[0],result[2])
-    print('_'*len(seq))
-    for rank, pred in enumerate(preds[1]):
-        if rank == result[3][-1]-1:
-            print(pred, result[3])
-        else:
-            print(pred)
+        name, seq, dbn, rst = obj
 
+        result = SQRNdbnseq(seq, bpweights, rst, dbn,
+                            subopt, minlen, minbpscore,
+                            minfinscorefactor, bracketweight,
+                            distcoef, orderpenalty, fiveprime,
+                            maxstemnum)
 
+        print(name)
+        print(seq)
+        print(dbn)
+        print('_'*len(seq))
+        print(result[0],result[2])
+        print('_'*len(seq))
+        for rank, pred in enumerate(result[1]):
+            if rank == result[3][-1]-1:
+                print(pred, result[3])
+            else:
+                print(pred)
+        print("#"*len(seq))
 
+        resultsC.append(result[2])
+        resultsB.append(result[3])
 
+    print(resultsC)
+    print(resultsB)
+
+    tpC = sum(x[0] for x in resultsC)
+    fpC = sum(x[1] for x in resultsC)
+    fnC = sum(x[2] for x in resultsC)
+    fsC = [x[3] for x in resultsC]
+    prC = [x[4] for x in resultsC]
+    rcC = [x[5] for x in resultsC]
+
+    print(round(2*tpC / (2*tpC + fpC + fnC), 3), round(np.mean(fsC), 3),
+          round(np.mean(prC), 3), round(np.mean(rcC), 3))
+
+    tpB = sum(x[0] for x in resultsB)
+    fpB = sum(x[1] for x in resultsB)
+    fnB = sum(x[2] for x in resultsB)
+    fsB = [x[3] for x in resultsB]
+    prB = [x[4] for x in resultsB]
+    rcB = [x[5] for x in resultsB]
+    rkB = [x[6] for x in resultsB]
+    
+    print(round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
+          round(np.mean(prB), 3), round(np.mean(rcB), 3))
+    print(Counter(rkB))
 
 
 
