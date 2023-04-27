@@ -634,7 +634,12 @@ if __name__ == "__main__":
     #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]
 
-    print('\t'.join("subopt minlen minbpscore minfinscorefactor bracketweight distcoef orderpenalty fiveprime maxstemnum GU AU GC tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split()))
+    outp = open('temp.tsv','w')
+
+    title = '\t'.join("subopt minlen minbpscore minfinscorefactor bracketweight distcoef orderpenalty fiveprime maxstemnum GU AU GC tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
+    print(title)
+    outp.write(title+'\n')
+    outp.close()
 
     ######################################
                 
@@ -711,6 +716,24 @@ if __name__ == "__main__":
                                                     
                                                     print(tpB, fpB, fnB, round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
                                                           round(np.mean(prB), 3), round(np.mean(rcB), 3), sep = '\t')
+
+                                                    outp = open('temp.tsv','a')
+                                                    toprint = '\t'.join([str(xx) for xx in [subopt, minlen, minbpscore,
+                                                                                            minfinscorefactor,bracketweight,
+                                                                                            distcoef, orderpenalty, fiveprime,
+                                                                                            maxstemnum, GU, AU, GC,
+                                                                                            tpC, fpC, fnC,
+                                                                                            round(2*tpC / (2*tpC + fpC + fnC), 3),
+                                                                                            round(np.mean(fsC), 3),
+                                                                                            round(np.mean(prC), 3),
+                                                                                            round(np.mean(rcC), 3),
+                                                                                            tpB, fpB, fnB,
+                                                                                            round(2*tpB / (2*tpB + fpB + fnB), 3),
+                                                                                            round(np.mean(fsB), 3),
+                                                                                            round(np.mean(prB), 3),
+                                                                                            round(np.mean(rcB), 3)]])
+                                                    outp.write(toprint+'\n')
+                                                    outp.close()
 
     ##########################################################
 
