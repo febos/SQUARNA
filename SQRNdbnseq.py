@@ -675,9 +675,6 @@ if __name__ == "__main__":
         resultsC.append(result[2])
         resultsB.append(result[3])
 
-    print(resultsC)
-    print(resultsB)
-
     tpC = sum(x[0] for x in resultsC)
     fpC = sum(x[1] for x in resultsC)
     fnC = sum(x[2] for x in resultsC)
