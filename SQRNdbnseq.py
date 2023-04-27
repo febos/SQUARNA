@@ -567,9 +567,9 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
         consfp = len(consbps - knownbps)
         consfn = len(knownbps - consbps)
 
-        consprc = round(constp / (constp + consfp), 3)
-        consrcl = round(constp / (constp + consfn), 3)
-        consfsc = round(2*constp / (2*constp + consfp + consfn), 3)
+        consprc = (round(constp / (constp + consfp), 3)) if (constp + consfp) else 0
+        consrcl = (round(constp / (constp + consfn), 3)) if (constp + consfn) else 0
+        consfsc = (round(2*constp / (2*constp + consfp + consfn), 3)) if (2*constp + consfp + consfn) else 0
 
         consresult = [constp, consfp, consfn, consfsc, consprc, consrcl]
 
@@ -584,9 +584,9 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
             fp = len(setbps - knownbps)
             fn = len(knownbps - setbps)
 
-            prc = round(tp / (tp + fp), 3)
-            rcl = round(tp / (tp + fn), 3)
-            fsc = round(2*tp / (2*tp + fp + fn), 3)
+            prc = (round(tp / (tp + fp), 3)) if (tp + fp) else 0
+            rcl = (round(tp / (tp + fn), 3)) if (tp + fn) else 0
+            fsc = (round(2*tp / (2*tp + fp + fn), 3)) if (2*tp + fp + fn) else 0
 
             if fsc > bestfsc:
                 bestfsc = fsc 
