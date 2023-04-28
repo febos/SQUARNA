@@ -289,7 +289,8 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
 
 def ScoreStems(seq, stems, rstems, minscore,
                bracketweight, distcoef,
-               orderpenalty, fiveprime):
+               orderpenalty, fiveprime,
+               gupen):
     """Adjust the scores based on the stem distance, distance from 5'-end, and pseudoknot level"""
 
     # values == indices of the bp partners or -1 for unpaired bases
@@ -313,7 +314,15 @@ def ScoreStems(seq, stems, rstems, minscore,
         descr = ''
         bps = stem[0]
 
-        #descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
+        GUs = 0
+
+        for v,w in bps:
+            if seq[v]+seq[w] in {'GU','UG'}:
+                GUs += 1
+
+        gufactor = max(1-GUs*gupen, 0)
+
+        descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
 
         levelset = set() # with base pairs of how many pseudoknot levels the stem is in conflict
         dots = 0 # number of confined unpaired bases
@@ -360,13 +369,13 @@ def ScoreStems(seq, stems, rstems, minscore,
         initscore  = stem[2] # initial bp score
         finalscore = initscore * stemdistfactor * orderfactor * fiveprimefactor
         
-        #descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
-        #                                            round(stemdist,2),
-        #                                            round(stemdistfactor,2))
-        #descr += ",or={},orf={}".format(order,
-        #                                round(orderfactor,2))
-        #descr += ",fpd={},fpf={}".format(round(fiveprimedist,2),
-        #                                 round(fiveprimefactor,2))
+        descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
+                                                    round(stemdist,2),
+                                                    round(stemdistfactor,2))
+        descr += ",or={},orf={}".format(order,
+                                        round(orderfactor,2))
+        descr += ",fpd={},fpf={},gu={},guf={}".format(round(fiveprimedist,2),
+                                         round(fiveprimefactor,2),GUs,gufactor)
 
         stem.append(finalscore)
         stem.append(descr)
@@ -412,7 +421,8 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
                  subopt = 1.0, minlen = 2,
                  minbpscore = 6, minfinscore = 0,
                  bracketweight = 1.0, distcoef = 0.1,
-                 orderpenalty = 0.0, fiveprime = 0.0):
+                 orderpenalty = 0.0, fiveprime = 0.0,
+                 gupen = 0.0):
     """Return the top stems"""
 
     # Remove already predicted bps from bp-restraints
@@ -422,7 +432,8 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
 
     allstems = ScoreStems(seq, allstems, rstems, minfinscore,
                           bracketweight, distcoef,
-                          orderpenalty, fiveprime)
+                          orderpenalty, fiveprime,
+                          gupen)
     """
     # TEMPORARY PRINTING
     print('##################################################')
@@ -476,7 +487,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
                minfinscorefactor = 0.0, bracketweight = 1.0,
                distcoef = 0.1, orderpenalty = 0.0,
                fiveprime = 0.0, maxstemnum = 10**6,
-               threads = 1):
+               gupen = 0.0, threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     bpweights == dictionary with canonical bps as keys and their weights as values
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -490,6 +501,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     orderpenalty == how much we prioritize lower pseudoknot levels
     fiveprime == how much we prioritize 5'-close stems
     maxstemnum == how many stems we allow in a single predicted structure
+    gupen == Penalty for Wobble GU bps in percents
     threads == number of CPUs to use
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
@@ -546,7 +558,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
                      subopt, minlen, minbpscore,
                      minfinscore, bracketweight,
                      distcoef, orderpenalty,
-                     fiveprime) for stems in curstemsets]
+                     fiveprime, gupen) for stems in curstemsets]
 
             # new optimal stems based on the current stem list 
             for newstems, stems in pool.imap(mpOptimalStems, inputs):
@@ -617,7 +629,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
                 break
 
         return cons, dbns, consresult, result
-    return cons, dbns, [], []
+    return cons, dbns, [np.nan]*6, [np.nan]*7
 
 
 if __name__ == "__main__":
