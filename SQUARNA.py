@@ -52,8 +52,11 @@ if __name__ == "__main__":
                  'GC' :  4.25,
                  }
 
+
     subopt = 0.85
-    gupen  = 0.0
+    toplim  = 5
+    conslim = toplim
+    
     minlen = 2
     minbpscore = 8
     minfinscorefactor = 0.75
@@ -61,7 +64,7 @@ if __name__ == "__main__":
     bracketweight = 19.0
     orderpenalty = -0.08
     fiveprime = 0.215
-
+    gupen  = 0.0
     maxstemnum = 10**6
     
 
@@ -76,7 +79,8 @@ if __name__ == "__main__":
                             subopt, minlen, minbpscore,
                             minfinscorefactor, bracketweight,
                             distcoef, orderpenalty, fiveprime,
-                            maxstemnum, gupen, threads)
+                            maxstemnum, gupen, conslim, toplim,
+                            threads)
 
         print(name)
         print(seq)

@@ -487,7 +487,8 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
                minfinscorefactor = 0.0, bracketweight = 1.0,
                distcoef = 0.1, orderpenalty = 0.0,
                fiveprime = 0.0, maxstemnum = 10**6,
-               gupen = 0.0, threads = 1):
+               gupen = 0.0, conslim = 5, toplim = 5,
+               threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     bpweights == dictionary with canonical bps as keys and their weights as values
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -502,6 +503,8 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     fiveprime == how much we prioritize 5'-close stems
     maxstemnum == how many stems we allow in a single predicted structure
     gupen == Penalty for Wobble GU bps in percents
+    conslim == how many alternative structures are used to derive the consensus
+    toplim == how many top ranked structures are used to measrue the performance
     threads == number of CPUs to use
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
@@ -585,7 +588,7 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
         dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | set(rbps),
                     len(shortseq)))
 
-    consbps = ConsensusStemSet(finstemsets[:5]) # Consensus of the Top-5
+    consbps = ConsensusStemSet(finstemsets[:conslim]) # Consensus of the Top-ranked
 
     # ReAlign the dbn strings accoring to seq
     dbns = [ReAlign(x, seq) for x in dbns]
@@ -624,8 +627,8 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
                 bestfsc = fsc 
                 result  = [tp, fp, fn, fsc, prc, rcl, rank + 1]
 
-            # Top5 only
-            if rank + 1 >= 5:
+            # TopN only (N == toplim)
+            if rank + 1 >= toplim:
                 break
 
         return cons, dbns, consresult, result
