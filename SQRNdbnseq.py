@@ -310,7 +310,9 @@ def ScoreStems(seq, stems, rstems, minscore,
     # calculating adjusted scores for each stem
     for stem in stems:
 
+        descr = ''
         bps = stem[0]
+
         #descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
 
         levelset = set() # with base pairs of how many pseudoknot levels the stem is in conflict
@@ -624,7 +626,7 @@ if __name__ == "__main__":
 
     rst = None
 
-    threads = 6
+    threads = 8
 
     #SAM riboswitch
     seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
