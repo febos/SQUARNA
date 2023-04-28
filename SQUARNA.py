@@ -53,9 +53,9 @@ if __name__ == "__main__":
                  }
 
 
-    subopt = 0.85
+    subopt = 0.9
     toplim  = 5
-    conslim = toplim
+    conslim = 1
     
     minlen = 2
     minbpscore = 8
