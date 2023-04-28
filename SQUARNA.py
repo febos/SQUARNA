@@ -42,7 +42,7 @@ if __name__ == "__main__":
     seq = "GGUAAAGAAUGAAAAAACACGAUUCGGUUGGUAGUCCGGAUGCAUGAUUGAGAAUGUCAGUAACCUUCCCCUCCUCGGGAUGUCCAUCAUUCUUUAAUAUCUUUUAUGAGGAGGGAA"
     dbn = None
     
-    queue  = [["Bs_yjdf_GGARBS", seq, dbn, rst],]
+    #queue  = [["Bs_yjdf_GGARBS", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]
 
     
@@ -53,9 +53,9 @@ if __name__ == "__main__":
                  }
 
     subopt = 0.85
-    gupen  = -0.02
-    minlen = 3
-    minbpscore = 8.0
+    gupen  = 0.0
+    minlen = 2
+    minbpscore = 8
     minfinscorefactor = 0.75
     distcoef = 0.18
     bracketweight = 19.0
@@ -102,8 +102,11 @@ if __name__ == "__main__":
     prC = [x[4] for x in resultsC]
     rcC = [x[5] for x in resultsC]
 
-    print(round(2*tpC / (2*tpC + fpC + fnC), 3), round(np.mean(fsC), 3),
-          round(np.mean(prC), 3), round(np.mean(rcC), 3))
+    m1 = round(2*tpC / (2*tpC + fpC + fnC), 3)
+    m2 = round(np.mean(fsC), 3)
+
+    print(round(2*m1*m2/(m1+m2),3), round(2*tpC / (2*tpC + fpC + fnC), 3),
+          round(np.mean(fsC), 3), round(np.mean(prC), 3), round(np.mean(rcC), 3))
 
     tpB = sum(x[0] for x in resultsB)
     fpB = sum(x[1] for x in resultsB)
@@ -112,9 +115,14 @@ if __name__ == "__main__":
     prB = [x[4] for x in resultsB]
     rcB = [x[5] for x in resultsB]
     rkB = [x[6] for x in resultsB]
+
+    m1 = round(2*tpB / (2*tpB + fpB + fnB), 3)
+    m2 = round(np.mean(fsB), 3)
+
     
-    print(round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
-          round(np.mean(prB), 3), round(np.mean(rcB), 3))
+    
+    print(round(2*m1*m2/(m1+m2),3), round(2*tpB / (2*tpB + fpB + fnB), 3),
+          round(np.mean(fsB), 3), round(np.mean(prB), 3), round(np.mean(rcB), 3))
     print(Counter(rkB))
 
 
