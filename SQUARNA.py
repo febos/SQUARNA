@@ -45,7 +45,7 @@ if __name__ == "__main__":
     #queue  = [["Bs_yjdf_GGARBS", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]
 
-    
+    """ TOP FROM FIRST MANUAL TUNING
     bpweights = {
                  'GU' : -1.95,
                  'AU' :  1.5,
@@ -64,6 +64,28 @@ if __name__ == "__main__":
     bracketweight = 19.0
     orderpenalty = -0.08
     fiveprime = 0.215
+    gupen  = 0.0
+    maxstemnum = 10**6"""
+
+    """ Grid best on 230429 """
+    bpweights = {
+                 'GU' : -1,
+                 'AU' :  2,
+                 'GC' :  4,
+                 }
+
+
+    subopt = 0.85
+    toplim  = 5
+    conslim = 1
+    
+    minlen = 2
+    minbpscore = 6
+    minfinscorefactor = 1
+    distcoef = 0.1
+    bracketweight = -1
+    orderpenalty = 1
+    fiveprime = 0.0
     gupen  = 0.0
     maxstemnum = 10**6
     
