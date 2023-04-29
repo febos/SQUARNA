@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise.fas") as file:
+    with open("TS1reduced.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -45,51 +45,41 @@ if __name__ == "__main__":
     #queue  = [["Bs_yjdf_GGARBS", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]
 
-    """ TOP FROM FIRST MANUAL TUNING
-    bpweights = {
-                 'GU' : -1.95,
-                 'AU' :  1.5,
-                 'GC' :  4.25,
-                 }
-
-
-    subopt = 0.9
-    toplim  = 5
-    conslim = 1
-    
-    minlen = 2
-    minbpscore = 8
-    minfinscorefactor = 0.75
-    distcoef = 0.18
-    bracketweight = 19.0
-    orderpenalty = -0.08
-    fiveprime = 0.215
-    gupen  = 0.0
-    maxstemnum = 10**6"""
+    paramsets = []
 
     """ Grid best on 230429 """
-    bpweights = {
-                 'GU' : -1,
-                 'AU' :  2,
-                 'GC' :  4,
-                 }
+    paramsets.append({"bpweights" : {'GU' : -1,
+                                     'AU' :  2,
+                                     'GC' :  4,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 6,
+                      "minfinscorefactor" : 1,
+                      "distcoef" : 0.1,
+                      "bracketweight" : -1,
+                      "orderpenalty" : 1,
+                      "fiveprime" : 0.0,
+                      "gupen"  : 0.0,
+                      "maxstemnum" : 10**6,})
 
-
-    subopt = 0.85
+    """ TOP FROM FIRST MANUAL TUNING 230428 """
+    paramsets.append({"bpweights" : {'GU' : -1.95,
+                                     'AU' :  1.5,
+                                     'GC' :  4.25,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 8,
+                      "minfinscorefactor" : 0.75,
+                      "distcoef" : 0.18,
+                      "bracketweight" : 19.0,
+                      "orderpenalty" : -0.08,
+                      "fiveprime" : 0.215,
+                      "gupen"  : 0.0,
+                      "maxstemnum" : 10**6,})
+    
     toplim  = 5
     conslim = 1
     
-    minlen = 2
-    minbpscore = 6
-    minfinscorefactor = 1
-    distcoef = 0.1
-    bracketweight = -1
-    orderpenalty = 1
-    fiveprime = 0.0
-    gupen  = 0.0
-    maxstemnum = 10**6
-    
-
     resultsB = []
     resultsC = []
 
@@ -97,11 +87,8 @@ if __name__ == "__main__":
 
         name, seq, dbn, rst = obj
 
-        result = SQRNdbnseq(seq, bpweights, rst, dbn,
-                            subopt, minlen, minbpscore,
-                            minfinscorefactor, bracketweight,
-                            distcoef, orderpenalty, fiveprime,
-                            maxstemnum, gupen, conslim, toplim,
+        result = SQRNdbnseq(seq, rst, dbn,
+                            paramsets, conslim, toplim,
                             threads)
 
         print(name)

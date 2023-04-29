@@ -482,12 +482,8 @@ def ConsensusStemSet(stemsets):
     return bps
 
     
-def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
-               subopt = 1.0, minlen = 2, minbpscore = 6,
-               minfinscorefactor = 0.0, bracketweight = 1.0,
-               distcoef = 0.1, orderpenalty = 0.0,
-               fiveprime = 0.0, maxstemnum = 10**6,
-               gupen = 0.0, conslim = 5, toplim = 5,
+def SQRNdbnseq(seq, restraints = None, dbn = None,
+               paramsets = [], conslim = 5, toplim = 5,
                threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     bpweights == dictionary with canonical bps as keys and their weights as values
@@ -512,8 +508,6 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     # turn seq into UPPERCASE & replace T with U
     seq = seq.upper().replace("T", "U")
 
-    minfinscore = minbpscore * minfinscorefactor
-
     # if not restraints - generate a string of dots
     if not restraints:
         restraints = '.'*len(seq)
@@ -526,64 +520,93 @@ def SQRNdbnseq(seq, bpweights, restraints = None, dbn = None,
     if dbn:
         assert len(seq) == len(dbn)
         shortseq, shortdbn  = UnAlign2(seq, dbn)
-
-    # Generate initial bp-matrix (with bp weights in cells)
-    bpmatrix = BPMatrix(shortseq, bpweights)
     
     # Parse restraints into unpaired bases (rxs) and base pairs (rbps)
     rbps, rxs = ParseRestraints(shortrest.lower())
 
-    # List of lists of stems (each stem list is a currently predicted secondary structure
-    curstemsets = [[],]
+    # final stem sets among all the parameter sets
+    finfinstemsets = []
+    seen_structures = set() # set of bp-sets (to avoid repeats in finfinstemsets)
 
-    # List of finalized stem lists
-    finstemsets = []
+    for paramset in paramsets:
 
-    with Pool(threads) as pool:
+        bpweights         = paramset["bpweights"]
+        subopt            = paramset["subopt"]
+        minlen            = paramset["minlen"]
+        minbpscore        = paramset["minbpscore"]
+        minfinscorefactor = paramset["minfinscorefactor"]
+        bracketweight     = paramset["bracketweight"]
+        distcoef          = paramset["distcoef"]
+        orderpenalty      = paramset["orderpenalty"]
+        fiveprime         = paramset["fiveprime"]
+        maxstemnum        = paramset["maxstemnum"]
+        gupen             = paramset["gupen"]
 
-        # while list of intermediate stem lists is not empty
-        while curstemsets:
+        minfinscore = minbpscore * minfinscorefactor
 
-            # filtering by len(stems) == maxstemnum
-            newcurstemsets = []
-            for stems in curstemsets:
-                if len(stems) == maxstemnum:
-                    finstemsets.append(stems)
-                else:
-                    newcurstemsets.append(stems)
-            curstemsets = newcurstemsets
+        # Generate initial bp-matrix (with bp weights in cells)
+        bpmatrix = BPMatrix(shortseq, bpweights)
 
-            # new iteration
-            newcurstemsets = []
+        # List of lists of stems (each stem list is a currently predicted secondary structure
+        curstemsets = [[],]
 
-            inputs = [(shortseq, bpmatrix.copy(),
-                     rbps.copy(), rxs.copy(), stems,
-                     subopt, minlen, minbpscore,
-                     minfinscore, bracketweight,
-                     distcoef, orderpenalty,
-                     fiveprime, gupen) for stems in curstemsets]
+        # List of finalized stem lists
+        finstemsets = []
 
-            # new optimal stems based on the current stem list 
-            for newstems, stems in pool.imap(mpOptimalStems, inputs):
+        with Pool(threads) as pool:
 
-                # append new intermediate stem lists
-                if newstems:
-                    for newstem in newstems:
-                        newcurstemsets.append(stems + [newstem,])
-                # if no newstems returned - the stem list is considered final
-                else:
-                    finstemsets.append(stems)
+            # while list of intermediate stem lists is not empty
+            while curstemsets:
 
-            # update the current stem lists
-            curstemsets = newcurstemsets
+                # filtering by len(stems) == maxstemnum
+                newcurstemsets = []
+                for stems in curstemsets:
+                    if len(stems) == maxstemnum:
+                        finstemsets.append(stems)
+                    else:
+                        newcurstemsets.append(stems)
+                curstemsets = newcurstemsets
+
+                # new iteration
+                newcurstemsets = []
+
+                inputs = [(shortseq, bpmatrix.copy(),
+                         rbps.copy(), rxs.copy(), stems,
+                         subopt, minlen, minbpscore,
+                         minfinscore, bracketweight,
+                         distcoef, orderpenalty,
+                         fiveprime, gupen) for stems in curstemsets]
+
+                # new optimal stems based on the current stem list 
+                for newstems, stems in pool.imap(mpOptimalStems, inputs):
+
+                    # append new intermediate stem lists
+                    if newstems:
+                        for newstem in newstems:
+                            newcurstemsets.append(stems + [newstem,])
+                    # if no newstems returned - the stem list is considered final
+                    else:
+                        finstemsets.append(stems)
+
+                # update the current stem lists
+                curstemsets = newcurstemsets
+
+        for finstemset in finstemsets:
+
+            bpsset = tuple(sorted([bp for stem in finstemset for bp in stem[0]]))
+
+            if bpsset not in seen_structures:
+
+                finfinstemsets.append(finstemset)
+                seen_structures.add(bpsset)
 
     # list of dbn strings
     dbns = []
 
-    # sort the final stem lists in descresing order of their total bp-score
+    # sort the final stem lists in descreasing order of their total bp-score
     # and convert all final stem lists into dbn strings
     # and not forget about non-predicted bps from restraints
-    finstemsets = sorted(finstemsets, key = lambda x: sum(y[2] for y in x), reverse = True)
+    finstemsets = sorted(finfinstemsets, key = lambda x: sum(y[2] for y in x), reverse = True)
     for stems in finstemsets:
         dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | set(rbps),
                     len(shortseq)))
