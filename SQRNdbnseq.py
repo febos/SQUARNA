@@ -399,19 +399,24 @@ def ChooseStems(allstems, subopt = 1.0):
     # the adjusted score of the top ranked stem
     bestscore = resultstems[0][3]
 
-    # add all stems with the subopt range that are
+    suboptrange = subopt * bestscore
+
+    # add all stems within the subopt range that are
     # in conflict with all the better stems
     for stem in sortedstems[1:]:
 
         bps = stem[0]
         finscore = stem[3]
 
+        if finscore < suboptrange:
+            return resultstems
+
         # in conflict == the intersection of their sets
         # of the paired bases is not empty
         if all({p for bp1 in bps
                 for p in bp1} & {p for bp2 in betterstem[0]
                                  for p in bp2}
-               for betterstem in resultstems) and finscore >= subopt * bestscore:
+               for betterstem in resultstems):
             resultstems.append(stem)
 
     return resultstems

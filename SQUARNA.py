@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("TS1reduced.fas") as file:
+    with open("CoRToise.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -47,21 +47,6 @@ if __name__ == "__main__":
 
     paramsets = []
 
-    """ Grid best on 230429 """
-    paramsets.append({"bpweights" : {'GU' : -1,
-                                     'AU' :  2,
-                                     'GC' :  4,},
-                      "subopt" : 0.9,                  
-                      "minlen" : 2,
-                      "minbpscore" : 6,
-                      "minfinscorefactor" : 1,
-                      "distcoef" : 0.1,
-                      "bracketweight" : -1,
-                      "orderpenalty" : 1,
-                      "fiveprime" : 0.0,
-                      "gupen"  : 0.0,
-                      "maxstemnum" : 10**6,})
-
     """ TOP FROM FIRST MANUAL TUNING 230428 """
     paramsets.append({"bpweights" : {'GU' : -1.95,
                                      'AU' :  1.5,
@@ -74,6 +59,23 @@ if __name__ == "__main__":
                       "bracketweight" : 19.0,
                       "orderpenalty" : -0.08,
                       "fiveprime" : 0.215,
+                      "gupen"  : 0.0,
+                      "maxstemnum" : 10**6,})
+
+    paramsets = []
+
+    """ Grid best on 230429 """
+    paramsets.append({"bpweights" : {'GU' : -1,
+                                     'AU' :  2,
+                                     'GC' :  4,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 6,
+                      "minfinscorefactor" : 1,
+                      "distcoef" : 0.1,
+                      "bracketweight" : -1,
+                      "orderpenalty" : 1,
+                      "fiveprime" : 0.0,
                       "gupen"  : 0.0,
                       "maxstemnum" : 10**6,})
     
