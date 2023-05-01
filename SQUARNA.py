@@ -62,7 +62,7 @@ if __name__ == "__main__":
                       "gupen"  : 0.0,
                       "maxstemnum" : 10**6,})
 
-    paramsets = []
+    #paramsets = []
 
     """ Grid best on 230429 """
     paramsets.append({"bpweights" : {'GU' : -1,
@@ -139,6 +139,9 @@ if __name__ == "__main__":
     print(round(2*m1*m2/(m1+m2),3), round(2*tpB / (2*tpB + fpB + fnB), 3),
           round(np.mean(fsB), 3), round(np.mean(prB), 3), round(np.mean(rcB), 3))
     print(Counter(rkB))
+
+    for x in fsB:
+        print(x)
 
 
 
