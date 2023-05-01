@@ -214,6 +214,49 @@ def ParseRestraints(restraints):
     return rbps, rxs
 
 
+def StemsFromDiagTheFirstVersion(diag):
+
+    stems = []
+    
+    curstem  = []
+    curscore = 0
+    bestscore = 0
+
+    for isbp, val, bp in diag:
+
+        if isbp:
+            if val >= 0: # if bp has non-negative score - add it to the current stem                  
+                curstem.append(bp)
+                lastpositive = len(curstem)
+                curscore = curscore + val
+                bestscore = curscore
+
+            elif val < 0: # if bp has negative score
+                if curstem:
+                    curscore = curscore + val
+                    if curscore <= 0: # if it is better to stop the stem before the last negatives
+                        stems.append([curstem[:lastpositive], lastpositive, bestscore])
+                        curstem = []
+                        curscore = 0
+                    else: # otherwise - growing the stem
+                        curstem.append(bp)
+        elif curstem: # if no bp but we had the stem before
+            stems.append([curstem[:lastpositive], lastpositive, bestscore])
+            curstem = []
+            curscore = 0
+
+    # in case we stopped at a positive value
+    if curstem:
+        stems.append([curstem[:lastpositive], lastpositive, bestscore])
+
+    return stems
+
+
+def StemsFromDiag(diag):
+
+    return StemsFromDiagTheFirstVersion(diag)
+
+
 def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs, rstems, minlen, minscore):
 
     # copy the bpboolmatrix
@@ -252,47 +295,18 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs, rstems, minlen, minsco
     # as maximal score sub-arrays
     for x, y in diagstarts:
 
-        curstem  = []
-        curscore = 0
-        bestscore = 0
+        diag = []
 
         i, j = x, y
         
         while i <= j - 4: # this is to forbid hairpins of len < 3
-            
-            val  = bpscorematrix[i, j]
-            isbp = matrix[i, j]
-
-            if isbp:
-                if val >= 0: # if bp has non-negative score - add it to the current stem                  
-                    curstem.append((i, j))
-                    lastpositive = len(curstem)
-                    curscore = curscore + val
-                    bestscore = curscore
-
-                elif val < 0: # if bp has negative score
-                    if curstem:
-                        curscore = curscore + val
-                        if curscore <= 0: # if it is better to stop the stem before the last negatives
-                            if lastpositive >= minlen and bestscore >= minscore:
-                                stems.append([curstem[:lastpositive], lastpositive, bestscore])
-                            curstem = []
-                            curscore = 0
-                        else: # otherwise - growing the stem
-                            curstem.append((i,j))
-            elif curstem: # if no bp but we had the stem before
-                if lastpositive >= minlen and bestscore >= minscore:
-                    stems.append([curstem[:lastpositive], lastpositive, bestscore])
-                curstem = []
-                curscore = 0
-            
+            diag.append([matrix[i, j], bpscorematrix[i, j], (i, j)])
             i += 1
             j -= 1
 
-        # in case we stopped at a positive value
-        if curstem:
-            if lastpositive >= minlen and bestscore >= minscore:
-                stems.append([curstem[:lastpositive], lastpositive, bestscore])
+        for stem in StemsFromDiag(diag):
+            if stem[1] >= minlen and stem[2] >= minscore:
+                stems.append(stem)
 
     return stems
 
