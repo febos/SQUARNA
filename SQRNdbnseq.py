@@ -159,6 +159,14 @@ def BPMatrix(seq, weights):
         bps[bp] = weights[bp]
         bps[bp[1]+bp[0]] = weights[bp]
 
+    boolmat = np.zeros((len(seq), len(seq)), dtype = float)
+
+    # Fill the upper triangle of the boolmatrix with ones for bps
+    # Ignore the bps that would form a hairpin of len < 3
+    for i in range(len(seq)-1):
+        for j in range(i+4,len(seq)):
+            boolmat[i,j] = int(seq[i]+seq[j] in bps)
+
     # add 0 values for all possible base pairs
     # not yet in bps dictionary
     for b1 in bases:
@@ -166,16 +174,16 @@ def BPMatrix(seq, weights):
             if b1+b2 not in bps:
                 bps[b1+b2] = 0
 
-    # Initialize the matrix
-    mat = np.zeros((len(seq), len(seq)), dtype = float)
+    # Initialize the bp-score matrix
+    scoremat = np.zeros((len(seq), len(seq)), dtype = float)
 
     # Fill the upper triangle of the matrix with bp weights
     # Ignore the bps that would form a hairpin of len < 3
     for i in range(len(seq)-1):
         for j in range(i+4,len(seq)):
-            mat[i,j] = bps[seq[i]+seq[j]]
+            scoremat[i,j] = bps[seq[i]+seq[j]]
 
-    return mat
+    return boolmat, scoremat
 
 
 def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
@@ -206,12 +214,12 @@ def ParseRestraints(restraints):
     return rbps, rxs
 
 
-def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
+def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs, rstems, minlen, minscore):
 
-    # copy the bpmatrix
-    matrix = bpmatrix.copy()
+    # copy the bpboolmatrix
+    matrix = bpboolmatrix.copy()
     # obtain the matrix length
-    N = bpmatrix.shape[0]
+    N = bpboolmatrix.shape[0]
     # initialize result
     stems = []
 
@@ -221,7 +229,7 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
         matrix[:, v] *= 0
         matrix[w, :] *= 0
         matrix[:, w] *= 0
-        matrix[v, w]  = bpmatrix[v, w]
+        matrix[v, w]  = bpboolmatrix[v, w]
 
     # apply stem-restraints - zero out the entire rows and columns for each stem
     for stem in rstems:
@@ -252,24 +260,26 @@ def AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minscore):
         
         while i <= j - 4: # this is to forbid hairpins of len < 3
             
-            val = matrix[i, j]
+            val  = bpscorematrix[i, j]
+            isbp = matrix[i, j]
 
-            if val > 0: # if bp has positive score - add it to the current stem                  
-                curstem.append((i, j))
-                lastpositive = len(curstem)
-                curscore = curscore + val
-                bestscore = curscore
-
-            elif val < 0: # if bp has negative score
-                if curstem:
+            if isbp:
+                if val >= 0: # if bp has non-negative score - add it to the current stem                  
+                    curstem.append((i, j))
+                    lastpositive = len(curstem)
                     curscore = curscore + val
-                    if curscore <= 0: # if it is better to stop the stem before the last negatives
-                        if lastpositive >= minlen and bestscore >= minscore:
-                            stems.append([curstem[:lastpositive], lastpositive, bestscore])
-                        curstem = []
-                        curscore = 0
-                    else: # otherwise - growing the stem
-                        curstem.append((i,j))
+                    bestscore = curscore
+
+                elif val < 0: # if bp has negative score
+                    if curstem:
+                        curscore = curscore + val
+                        if curscore <= 0: # if it is better to stop the stem before the last negatives
+                            if lastpositive >= minlen and bestscore >= minscore:
+                                stems.append([curstem[:lastpositive], lastpositive, bestscore])
+                            curstem = []
+                            curscore = 0
+                        else: # otherwise - growing the stem
+                            curstem.append((i,j))
             elif curstem: # if no bp but we had the stem before
                 if lastpositive >= minlen and bestscore >= minscore:
                     stems.append([curstem[:lastpositive], lastpositive, bestscore])
@@ -422,7 +432,8 @@ def ChooseStems(allstems, subopt = 1.0):
     return resultstems
 
  
-def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
+def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
+                 rbps = set(), rxs = set(),
                  subopt = 1.0, minlen = 2,
                  minbpscore = 6, minfinscore = 0,
                  bracketweight = 1.0, distcoef = 0.1,
@@ -433,7 +444,7 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
     # Remove already predicted bps from bp-restraints
     rbps = set(rbps) - {bp for stem in rstems for bp in stem[0]}
 
-    allstems = AnnotateStems(bpmatrix, rbps, rxs, rstems, minlen, minbpscore)
+    allstems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs, rstems, minlen, minbpscore)
 
     allstems = ScoreStems(seq, allstems, rstems, minfinscore,
                           bracketweight, distcoef,
@@ -466,7 +477,7 @@ def OptimalStems(seq, bpmatrix, rbps = set(), rxs = set(), rstems = [],
 
 def mpOptimalStems(args):
     """OptimalStems version with a single input parameter for mp.pool.imap"""
-    rstems   = args[4] # current stem set
+    rstems   = args[1] # current stem set
     newstems = OptimalStems(*args)
     return newstems, rstems
 
@@ -550,7 +561,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         minfinscore = minbpscore * minfinscorefactor
 
         # Generate initial bp-matrix (with bp weights in cells)
-        bpmatrix = BPMatrix(shortseq, bpweights)
+        bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights)
 
         # List of lists of stems (each stem list is a currently predicted secondary structure
         curstemsets = [[],]
@@ -575,12 +586,13 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
                 # new iteration
                 newcurstemsets = []
 
-                inputs = [(shortseq, bpmatrix.copy(),
-                         rbps.copy(), rxs.copy(), stems,
-                         subopt, minlen, minbpscore,
-                         minfinscore, bracketweight,
-                         distcoef, orderpenalty,
-                         fiveprime, gupen) for stems in curstemsets]
+                inputs = [(shortseq, stems,
+                           bpboolmatrix.copy(), bpscorematrix,
+                           rbps.copy(), rxs.copy(), 
+                           subopt, minlen, minbpscore,
+                           minfinscore, bracketweight,
+                           distcoef, orderpenalty,
+                           fiveprime, gupen) for stems in curstemsets]
 
                 # new optimal stems based on the current stem list 
                 for newstems, stems in pool.imap(mpOptimalStems, inputs):
