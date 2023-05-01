@@ -140,9 +140,6 @@ if __name__ == "__main__":
           round(np.mean(fsB), 3), round(np.mean(prB), 3), round(np.mean(rcB), 3))
     print(Counter(rkB))
 
-    for x in fsB:
-        print(x)
-
 
 
 
