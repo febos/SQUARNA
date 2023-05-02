@@ -600,13 +600,13 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
                 # new iteration
                 newcurstemsets = []
 
-                inputs = [(shortseq, stems,
+                inputs = ((shortseq, stems,
                            bpboolmatrix.copy(), bpscorematrix,
                            rbps.copy(), rxs.copy(), 
                            subopt, minlen, minbpscore,
                            minfinscore, bracketweight,
                            distcoef, orderpenalty,
-                           fiveprime, gupen) for stems in curstemsets]
+                           fiveprime, gupen) for stems in curstemsets)
 
                 # new optimal stems based on the current stem list 
                 for newstems, stems in pool.imap(mpOptimalStems, inputs):

@@ -62,7 +62,7 @@ if __name__ == "__main__":
                       "gupen"  : 0.0,
                       "maxstemnum" : 10**6,})
 
-    #paramsets = []
+    paramsets = []
 
     """ Grid best on 230429 """
     paramsets.append({"bpweights" : {'GU' : -1,
