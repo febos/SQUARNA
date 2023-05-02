@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("TS1reduced.fas") as file:
+    with open("CoRToise.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -41,8 +41,11 @@ if __name__ == "__main__":
 
     seq = "GGUAAAGAAUGAAAAAACACGAUUCGGUUGGUAGUCCGGAUGCAUGAUUGAGAAUGUCAGUAACCUUCCCCUCCUCGGGAUGUCCAUCAUUCUUUAAUAUCUUUUAUGAGGAGGGAA"
     dbn = None
+
+    seq = "AAGGCCAGGCUGAAGGUCUUGCCGG"
+    dbn = "..(((.((((.....)))).))).."
     
-    #queue  = [["Bs_yjdf_GGARBS", seq, dbn, rst],]
+    #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]
 
     paramsets = []
