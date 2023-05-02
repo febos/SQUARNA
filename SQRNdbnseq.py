@@ -391,7 +391,7 @@ def ScoreStems(seq, stems, rstems, minscore,
         fiveprimefactor = (1 - fiveprimedist)**fiveprime
 
         initscore  = stem[2] # initial bp score
-        finalscore = initscore * stemdistfactor * orderfactor * fiveprimefactor
+        finalscore = initscore * stemdistfactor * orderfactor * fiveprimefactor * gufactor
         
         descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
                                                     round(stemdist,2),

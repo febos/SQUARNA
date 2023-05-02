@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise.fas") as file:
+    with open("TS1reduced.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -81,7 +81,8 @@ if __name__ == "__main__":
 
     #paramsets = []
 
-    """ Grid best on 230429 but with GU==1 """
+    """ Grid best on 230429 but with GU==1
+        and minfinscorefactor==0.87 and bracketweight==-15"""
     paramsets.append({"bpweights" : {'GU' :  1,
                                      'AU' :  2,
                                      'GC' :  4,},
@@ -90,7 +91,7 @@ if __name__ == "__main__":
                       "minbpscore" : 6,
                       "minfinscorefactor" : 0.87,
                       "distcoef" : 0.1,
-                      "bracketweight" : -1,
+                      "bracketweight" : -15,
                       "orderpenalty" : 1,
                       "fiveprime" : 0.0,
                       "gupen"  : 0.0,
