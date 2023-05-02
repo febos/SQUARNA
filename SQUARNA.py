@@ -62,10 +62,27 @@ if __name__ == "__main__":
                       "gupen"  : 0.0,
                       "maxstemnum" : 10**6,})
 
-    paramsets = []
+    #paramsets = []
 
-    """ Grid best on 230429 """
+    """ Grid best on 230429 
     paramsets.append({"bpweights" : {'GU' : -1,
+                                     'AU' :  2,
+                                     'GC' :  4,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 6,
+                      "minfinscorefactor" : 1,
+                      "distcoef" : 0.1,
+                      "bracketweight" : -1,
+                      "orderpenalty" : 1,
+                      "fiveprime" : 0.0,
+                      "gupen"  : 0.0,
+                      "maxstemnum" : 10**6,})"""
+
+    #paramsets = []
+
+    """ Grid best on 230429 but with GU==1 """
+    paramsets.append({"bpweights" : {'GU' :  1,
                                      'AU' :  2,
                                      'GC' :  4,},
                       "subopt" : 0.9,                  
@@ -139,6 +156,9 @@ if __name__ == "__main__":
     print(round(2*m1*m2/(m1+m2),3), round(2*tpB / (2*tpB + fpB + fnB), 3),
           round(np.mean(fsB), 3), round(np.mean(prB), 3), round(np.mean(rcB), 3))
     print(Counter(rkB))
+
+    #for x in fsB:
+    #    print(x)
 
 
 
