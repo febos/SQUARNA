@@ -88,7 +88,7 @@ if __name__ == "__main__":
                       "subopt" : 0.9,                  
                       "minlen" : 2,
                       "minbpscore" : 6,
-                      "minfinscorefactor" : 1,
+                      "minfinscorefactor" : 0.87,
                       "distcoef" : 0.1,
                       "bracketweight" : -1,
                       "orderpenalty" : 1,
