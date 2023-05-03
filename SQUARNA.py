@@ -18,9 +18,9 @@ if __name__ == "__main__":
     #seq = "GGGCGGCUAGCUCAGCGGAAGAGCGCUCGCCUCACACGCGAGAGGUCGUAGGUUCAAGUCCUACGCCGCCCACCA"
     #dbn = "(((((((..((((....[..)))).(((((.......))))).....(((((..]....))))))))))))...."
     #Twister ribozyme
-    #seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
-    #dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
-    #rst = "(x((xxx....xx..............,,,,,,..............................)).)"
+    seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
+    dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
+    #rst = "X_XX___....__..............,,,,,,.........................xx......x"
     #rst = "..................................................................." 
     
     queue = []
@@ -39,11 +39,11 @@ if __name__ == "__main__":
     #seq = "AAACCACGAGGAAGAGAGGUAGCGUUUUCUCCUGAGCGUGAAGCCGGCUUUCUGGCGUUGCUUGGCUGCAACUGCCGUCAGCCAUUGAUGAUCGUUCUUCUCUCCGUAUUGGGGAGUGAGAGGGAGAGAACGCGGUCUGAGUGGU"
     #dbn = "..(((((......(.......((((((((((((....(...(...((((..(.((((((((......))))).))))..))))..)......)..((((((((((.....)))))).))))))))))))))))...)...)))))"
 
-    seq = "GGUAAAGAAUGAAAAAACACGAUUCGGUUGGUAGUCCGGAUGCAUGAUUGAGAAUGUCAGUAACCUUCCCCUCCUCGGGAUGUCCAUCAUUCUUUAAUAUCUUUUAUGAGGAGGGAA"
-    dbn = None
+    #seq = "GGUAAAGAAUGAAAAAACACGAUUCGGUUGGUAGUCCGGAUGCAUGAUUGAGAAUGUCAGUAACCUUCCCCUCCUCGGGAUGUCCAUCAUUCUUUAAUAUCUUUUAUGAGGAGGGAA"
+    #dbn = None
 
-    seq = "AAGGCCAGGCUGAAGGUCUUGCCGG"
-    dbn = "..(((.((((.....)))).))).."
+    #seq = "AAGGCCAGGCUGAAGGUCUUGCCGG"
+    #dbn = "..(((.((((.....)))).))).."
     
     #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]

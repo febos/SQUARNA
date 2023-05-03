@@ -209,8 +209,7 @@ def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
 def ParseRestraints(restraints):
     """ Convert a dbn string into base pairs and unpaired bases"""
     rbps = DBNToPairs(restraints) # Base pairs
-    rxs = [i for i in range(len(restraints)) if restraints[i]=='x'] # Unpaired bases
-
+    rxs = [i for i in range(len(restraints)) if restraints[i]=='_'] # Unpaired bases
     return rbps, rxs
 
 
@@ -552,7 +551,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         shortseq, shortdbn  = UnAlign2(seq, dbn)
     
     # Parse restraints into unpaired bases (rxs) and base pairs (rbps)
-    rbps, rxs = ParseRestraints(shortrest.lower())
+    rbps, rxs = ParseRestraints(shortrest)
 
     # final stem sets among all the parameter sets
     finfinstemsets = []
