@@ -42,10 +42,10 @@ if __name__ == "__main__":
     #seq = "GGUAAAGAAUGAAAAAACACGAUUCGGUUGGUAGUCCGGAUGCAUGAUUGAGAAUGUCAGUAACCUUCCCCUCCUCGGGAUGUCCAUCAUUCUUUAAUAUCUUUUAUGAGGAGGGAA"
     #dbn = None
 
-    #seq = "AAGGCCAGGCUGAAGGUCUUGCCGG"
-    #dbn = "..(((.((((.....)))).))).."
+    seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
+    dbn = "((((((..((((.......))))))))))."
     
-    #queue  = [["default", seq, dbn, rst],]
+    queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]
 
     paramsets = []
@@ -63,7 +63,27 @@ if __name__ == "__main__":
                       "orderpenalty" : -0.08,
                       "fiveprime" : 0.215,
                       "gupen"  : 0.0,
-                      "maxstemnum" : 10**6,})
+                      "maxstemnum" : 10**6,
+                      "mode": "ver1rev",})
+
+    #paramsets = []
+
+    """ Grid best on 230429 but with GU==1
+        and minfinscorefactor==0.87 and bracketweight==-15 
+    paramsets.append({"bpweights" : {'GU' :  1,
+                                     'AU' :  2,
+                                     'GC' :  4,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 6,
+                      "minfinscorefactor" : 0.87,
+                      "distcoef" : 0.1,
+                      "bracketweight" : -15,
+                      "orderpenalty" : 1,
+                      "fiveprime" : 0.0,
+                      "gupen"  : 0.0,
+                      "maxstemnum" : 10**6,
+                      "mode": "ver1",})""" 
 
     #paramsets = []
 
@@ -80,25 +100,8 @@ if __name__ == "__main__":
                       "orderpenalty" : 1,
                       "fiveprime" : 0.0,
                       "gupen"  : 0.0,
-                      "maxstemnum" : 10**6,})"""
-
-    #paramsets = []
-
-    """ Grid best on 230429 but with GU==1
-        and minfinscorefactor==0.87 and bracketweight==-15"""
-    paramsets.append({"bpweights" : {'GU' :  1,
-                                     'AU' :  2,
-                                     'GC' :  4,},
-                      "subopt" : 0.9,                  
-                      "minlen" : 2,
-                      "minbpscore" : 6,
-                      "minfinscorefactor" : 0.87,
-                      "distcoef" : 0.1,
-                      "bracketweight" : -15,
-                      "orderpenalty" : 1,
-                      "fiveprime" : 0.0,
-                      "gupen"  : 0.0,
-                      "maxstemnum" : 10**6,})
+                      "maxstemnum" : 10**6,
+                      "mode": "ver1",})"""
     
     toplim  = 5
     conslim = 1

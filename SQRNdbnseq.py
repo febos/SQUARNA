@@ -214,7 +214,7 @@ def ParseRestraints(restraints):
 
 
 def StemsFromDiagTheFirstVersion(diag):
-
+    """going from the outer pairs to the inner ones"""
     stems = []
     
     curstem  = []
@@ -251,12 +251,97 @@ def StemsFromDiagTheFirstVersion(diag):
     return stems
 
 
-def StemsFromDiag(diag):
+def StemsFromDiagTheFirstVersionReversed(diag):
+    """going from the inner pairs to the outer pairs"""
+    stems = []
+    
+    curstem  = []
+    curscore = 0
+    bestscore = 0
 
-    return StemsFromDiagTheFirstVersion(diag)
+    for isbp, val, bp in diag[::-1]:
+
+        if isbp:
+            if val >= 0: # if bp has non-negative score - add it to the current stem                  
+                curstem.insert(0, bp)
+                lastpositive = len(curstem)
+                curscore = curscore + val
+                bestscore = curscore
+
+            elif val < 0: # if bp has negative score
+                if curstem:
+                    curscore = curscore + val
+                    if curscore <= 0: # if it is better to stop the stem before the last negatives
+                        stems.append([curstem[-lastpositive:], lastpositive, bestscore])
+                        curstem = []
+                        curscore = 0
+                    else: # otherwise - growing the stem
+                        curstem.insert(0, bp)
+        elif curstem: # if no bp but we had the stem before
+            stems.append([curstem[-lastpositive:], lastpositive, bestscore])
+            curstem = []
+            curscore = 0
+
+    # in case we stopped at a positive value
+    if curstem:
+        stems.append([curstem[-lastpositive:], lastpositive, bestscore])
+
+    return stems
 
 
-def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs, rstems, minlen, minscore):
+def PreStemsFromDiag(diag):
+    "Return longest sequences of consecutive bps"""
+    prestems = []
+    
+    firstbp = -1
+
+    for i, pos in enumerate(diag):
+
+        isbp, val, bp = pos
+
+        # if first bp of the stem
+        if isbp and firstbp < 0:
+            firstbp = i
+
+        # if first non-bp after the stem
+        if not isbp and firstbp >= 0:
+            prestems.append(diag[firstbp:i])
+            firstbp = -1
+
+    #if the diagonal ends with a stem
+    if firstbp >= 0:
+        prestems.append(diag[firstbp:])
+
+    return prestems
+
+
+def StemsFromPreStemsMaxlen(prestems):
+    """Define stems as the longest sequence of consecutive bps"""
+    stems = []
+    for prestem in prestems:
+        bps = [x[2] for x in prestem]
+        score = sum(x[1] for x in prestem)
+        stems.append([bps, len(bps), score])
+    return stems
+
+
+def StemsFromDiag(diag, mode):
+    """Annotate stems at the given diagonal"""
+    if mode == "ver1": # My first bugged version of the max-subarray stems
+        return StemsFromDiagTheFirstVersion(diag)
+    if mode == "ver1rev": # The reversed first bugged version of the max-subarray stems
+        return StemsFromDiagTheFirstVersionReversed(diag)
+    if mode in {"all", "maxlen", "topscore"}:
+        prestems = PreStemsFromDiag(diag)
+        if mode == "maxlen": # Stems as longest sequences of consecutive bps
+            return StemsFromPreStemsMaxlen(prestems)
+
+
+    return StemsFromDiagTheFirstVersion(diag) ### TEMPORARY
+
+
+def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
+                  rstems, minlen, minscore, mode):
 
     # copy the bpboolmatrix
     matrix = bpboolmatrix.copy()
@@ -303,7 +388,7 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs, rstems, minlen, minsco
             i += 1
             j -= 1
 
-        for stem in StemsFromDiag(diag):
+        for stem in StemsFromDiag(diag, mode):
             if stem[1] >= minlen and stem[2] >= minscore:
                 stems.append(stem)
 
@@ -451,13 +536,14 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
                  minbpscore = 6, minfinscore = 0,
                  bracketweight = 1.0, distcoef = 0.1,
                  orderpenalty = 0.0, fiveprime = 0.0,
-                 gupen = 0.0):
+                 gupen = 0.0, mode = "ver1"):
     """Return the top stems"""
 
     # Remove already predicted bps from bp-restraints
     rbps = set(rbps) - {bp for stem in rstems for bp in stem[0]}
 
-    allstems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs, rstems, minlen, minbpscore)
+    allstems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
+                             rstems, minlen, minbpscore, mode)
 
     allstems = ScoreStems(seq, allstems, rstems, minfinscore,
                           bracketweight, distcoef,
@@ -528,6 +614,8 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     fiveprime == how much we prioritize 5'-close stems
     maxstemnum == how many stems we allow in a single predicted structure
     gupen == Penalty for Wobble GU bps in percents
+    mode == how we define the stem edges (where the stems begin and end)
+         == maxlen/topscore/all/ver1/ver1rev
     conslim == how many alternative structures are used to derive the consensus
     toplim == how many top ranked structures are used to measrue the performance
     threads == number of CPUs to use
@@ -570,6 +658,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         fiveprime         = paramset["fiveprime"]
         maxstemnum        = paramset["maxstemnum"]
         gupen             = paramset["gupen"]
+        mode              = paramset["mode"]
 
         minfinscore = minbpscore * minfinscorefactor
 
@@ -605,7 +694,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
                            subopt, minlen, minbpscore,
                            minfinscore, bracketweight,
                            distcoef, orderpenalty,
-                           fiveprime, gupen) for stems in curstemsets)
+                           fiveprime, gupen, mode) for stems in curstemsets)
 
                 # new optimal stems based on the current stem list 
                 for newstems, stems in pool.imap(mpOptimalStems, inputs):
