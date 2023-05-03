@@ -315,12 +315,41 @@ def PreStemsFromDiag(diag):
     return prestems
 
 
-def StemsFromPreStemsMaxlen(prestems):
+def StemsFromPreStemsMaxLen(prestems):
     """Define stems as the longest sequence of consecutive bps"""
     stems = []
     for prestem in prestems:
         bps = [x[2] for x in prestem]
         score = sum(x[1] for x in prestem)
+        stems.append([bps, len(bps), score])
+    return stems
+
+
+def StemsFromPreStemsTopScore(prestems):
+    """Define stems as the top-scored sub-sequence of consecutive bps"""
+    stems = []
+    for prestem in prestems:
+
+        cursum  = -10**6
+        bestsum = -10**6
+
+        begin    = -1
+        curbegin = -1 
+        end      = -1
+
+        # define max-subarray
+        for i, pos in enumerate(prestem):
+            val = pos[1]
+            if val >= cursum + val:
+                curbegin = i
+            cursum = max(val, cursum + val)
+            if cursum > bestsum:
+                begin = curbegin
+                end = i
+                bestsum = cursum
+        
+        bps = [x[2] for x in prestem[begin:end+1]]
+        score = sum(x[1] for x in prestem[begin:end+1])
         stems.append([bps, len(bps), score])
     return stems
 
@@ -334,7 +363,9 @@ def StemsFromDiag(diag, mode):
     if mode in {"all", "maxlen", "topscore"}:
         prestems = PreStemsFromDiag(diag)
         if mode == "maxlen": # Stems as longest sequences of consecutive bps
-            return StemsFromPreStemsMaxlen(prestems)
+            return StemsFromPreStemsMaxLen(prestems)
+        if mode == "topscore":
+            return StemsFromPreStemsTopScore(prestems)
 
 
     return StemsFromDiagTheFirstVersion(diag) ### TEMPORARY
