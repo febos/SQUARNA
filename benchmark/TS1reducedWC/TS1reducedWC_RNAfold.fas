@@ -1,0 +1,310 @@
+>1f1t-1-A
+GGAUCCCGACUGGCGAGAGCCAGGUAACGAAUGGAUCC
+((((((((.(((((....)))))....))...))))))
+((((((((.(((((....)))))....))...))))))
+LEN=38 TP=13 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
+>1kxk-1-A
+GUCUACCUAUCGGGCUAAGGAGCCGUAUGCGAUGAAAGUCGCACGUACGGUUCUAUGCCCGGGGGAAAAC
+...(.(((..((((((..(((((((((((((((....)))))..))))))))))).)))))))).)....
+.....(((.((((((...(((((((((((((((....))))))..)))))))))..))))))))).....
+LEN=70 TP=19 FP=5 FN=6 PRC=0.792 RCL=0.76 FS=0.776
+>1s03-1-A
+GGACGAUGGCGAAACUGCAUGAGGCAAUUCAUGCAAGUCCCUCGUCC
+((((((.((.((..((((((((......)))))).))))))))))))
+((((((.((.((...((((((((....))))))))..))))))))))
+LEN=47 TP=16 FP=2 FN=2 PRC=0.889 RCL=0.889 FS=0.889
+>1u9s-1-A
+GGUGCCAGGUAACGCCUGGGCGGGGUAACCCGACGGAAAGUGCCACAGAGAAGAGACCGCCAGCGGCCGGGGCCCCGGUGCGGGCAAGGGUGAAACGGCGGGGUAAGAGCCCACCGCCUGGCCUGGCAACAGGCCGGGGCACGGCAAACCCCACC
+(((((((((.....)))))(((((....)))).)((...(.(((..............(((..(((((((....))))).))))).....(...).(..(((.......)))..)((((((((((....))))))))).)..)))...)))))))
+((((((((((...)))))).((((....))))..((....((((...........((((((.(((.((((....))))))).)))...)))....(((.(((.......))).)))(((((((((....)))))))))....))))...))))))
+LEN=155 TP=38 FP=10 FN=7 PRC=0.792 RCL=0.844 FS=0.817
+>1xjr-1-A
+GGAGUUCACCGAGGCCACGCGGAGUACGAUCGAGGGUACAGUGAAUU
+..(((((((...((((.(..(.....)....)..))).).)))))))
+..(((((((.(..(((.((((.....))..))..))).).)))))))
+LEN=47 TP=12 FP=3 FN=1 PRC=0.8 RCL=0.923 FS=0.857
+>1zho-1-B
+GGGAGUGAAGGAGGCUUCGGCCGCGAAACUUCACUCCC
+((((((((((..(((....)))......))))))))))
+((((((((((..(((....)))......))))))))))
+LEN=38 TP=13 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
+>2deu-1-C
+GUCCCCUUCGUCUAGAGGCCCAGGACACCGCCCUUUCACGGCGGUAACAGGGGUUCGAAUCCCCUAGGGGACGCA
+...((.([{((.(](.[<.)..)}))((((((.......))))))...)(((((]>.)..))))..)).......
+(((((((..((((.........))))((((((.......))))))...(((((.......))))))))))))...
+LEN=75 TP=13 FP=9 FN=9 PRC=0.591 RCL=0.591 FS=0.591
+>2ozb-1-C
+AUCGUAGCCAAUGAGGUUUAUCCGAGGCGCGAU
+(((((.(((.....((.....))..))))))))
+(((((.(((.....((.....))..))))))))
+LEN=33 TP=10 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
+>2zjq-1-Y
+CACCCCCGUGCCCAUAGCACUGUGGAACCACCCCACCCCAUGCCGAACUGGGUCGUGAAACACAGCAGCGCCAAUGAUACUCGGACCGCAGGGUCCCGGAAAAGUCGGUCAGCGCGGGGGUU
+.((((((((((.....((.(((((....((.((((...(.[...)]..))))...))...)))))..)).((.((..(.((.(((((....))))).)).)..)).))...)))))))))).
+.((((((((((.....((.(((((....(((...((((...........)))).)))...)))))..))(((.((....((.(((((....))))).))....)).)))..)))))))))).
+LEN=122 TP=30 FP=6 FN=7 PRC=0.833 RCL=0.811 FS=0.822
+>2zzm-1-B
+GCAGGGGUCGCCAAGCCUGGCCAAAGGCGCUGGGCCUAGGACCCAGUCCCGUAGGGGUUCCAGGGUUCAAAUCCCUGCCCCUGC
+..(.((([.(((.](...[{.){[.)))((((((.......))))))(((....)))}].(.((((]}.)..))).)))).)..
+(((((((.......((((......))))(((((((....).))))))(((....)))...(((((.......))))))))))))
+LEN=84 TP=17 FP=9 FN=10 PRC=0.654 RCL=0.63 FS=0.642
+>3a3a-1-A
+GCCCGGAUGAUCCUCAGUGGUCUGGGGUGCAGGCUUCAAACCUGUAGCUGUCUAGCGACAGAGUGGUUCAAUUCCACCUUUCGGGC
+(((((((.(..((((((.[..))))))((((((.......)))))).(((((....))))).(((((]..)..))))).)))))))
+(((((((.(..((((((....))))))((((((.......)))))).(((((....))))).((((.......))))).)))))))
+LEN=86 TP=29 FP=0 FN=2 PRC=1.0 RCL=0.935 FS=0.967
+>3akz-1-F
+UGGGAGGUCGUCUAACGGUAGGACGGCGGACUCUGGAUCCGCUGGUGGAGGUUCGAGUCCUCCCCUCCCAGCCA
+((((((([{((.(][.<...)}))((((((.......))))))..]((((((>..)..))))))))))))....
+(((((((((((((.......)))))))((((((.(((((..(....)..)))))))))))....))))))....
+LEN=74 TP=9 FP=16 FN=17 PRC=0.36 RCL=0.346 FS=0.353
+>3cul-1-C
+GGAUGGCGAAAGCCAUUUCCGCAGGCCCCAUUGCACUCCGGGGUAUUGGCGUUAGGUGGUGGUACGAGGUUCGAAUCCUCGUACCGCAGCCA
+(((((((....)))))).)(((.((((((..........)))))..).)))...(((.(.(((((((((.......))))))))).).))).
+.((((((....))))))..(((..(((((..........)))))....)))...(((.(((((((((((.......))))))))))).))).
+LEN=92 TP=27 FP=1 FN=2 PRC=0.964 RCL=0.931 FS=0.947
+>3dig-1-X
+GGCCGACGGAGGCGCGCCCGAGAUGAGUAGGCUGUCCCAUCAGGGGAGGAAUCGGGGACGGCUGAAAGGCGAGGGCGCCGAAGGGUGCAGAGUUCCUCCCGCUCUGCAUGCCUGGGGGUAUGGGGAAUACCCAUACCACUGUCACGGAGGUCUCUCCGUGGAGAGCCGUCGGUC
+(((((((((..(.((((((..(.[.....(((((((((.....[[[[[[.....)))))))))......)..)))))))..((((((((((((.]]]]]]))))))))).)))((.((((((((.]...)))))))).)).((((((((....))))))))....)))))))))
+(((((((((....((((((..(.......(((((((((................)))))))))......)..))))))(..((((((((((((.......))))))))).)))..)((((((((.....)))))))).((.((((((((....)))))).)).)))))))))))
+LEN=174 TP=51 FP=5 FN=12 PRC=0.911 RCL=0.81 FS=0.857
+>3egz-1-B
+GAGGGAGAGGUGAAGAAUACGACCACCUAGGUACCAUUGCACUCCGGUACCUAAAACAUACCCUC
+(((((.(.((((........[..))))((((((((..........))))))))...].).)))))
+(((((..(((((...........)))))(((((((..........)))))))........)))))
+LEN=65 TP=16 FP=1 FN=3 PRC=0.941 RCL=0.842 FS=0.889
+>3eph-1-E
+CUCGUAUGGCGCAGUGGUAGCGCAGCAGAUUGCAAAUCUGUUGGUCCUUAGUUCGAUCCUGAGUGCGAG
+(((((([{((.(][.<A..)}))(((((((.....)))))))...]((((((>a.)..)))))))))))
+(((((((.((((.......))))((((((((...))))))))((((........))))....)))))))
+LEN=69 TP=16 FP=7 FN=11 PRC=0.696 RCL=0.593 FS=0.64
+>3hhn-1-C
+UCCAGUAGGAACACUAUACUACUGGAUAAUCAAAGACAAAUCUGCCCGAAGGGCUUGAGAACAUACCCAUUGCACUCCGGGUAUGCAGAGGUGGCAGCCUCCGGUGGGUUAAAACCCAACGUUCUCAACAAUAGUGA
+((((((((...[[[[[[.))))))))...........(...((((((...)...[[[[[[[(((((((..........))))))).....[.)))))].).((.((((......)))).))]]]]]]]..]]]]]].
+((((((((..........)))))))).................((((...))))((((((((((((((..........)))))))..(((((....)))))((.(((((....))))).))))))))).........
+LEN=137 TP=30 FP=8 FN=12 PRC=0.789 RCL=0.714 FS=0.75
+>3npq-1-A
+GGACGAGGAGCGCUGCAAGCGAGAGCCCAGGCUCGUCCGAAACGGCGCUCAA
+...[[[[(((((((....((....))..)(.]]]].......).))))))..
+.......((((((((...(.((((((....)))).)))....))))))))..
+LEN=52 TP=6 FP=9 FN=8 PRC=0.4 RCL=0.429 FS=0.414
+>3vrs-1-A
+GGGCGAUGAGGCCCGCCCAAACUGCCCUGAAAAGGGCUGAUGGCCUCUACUG
+.[[[[{.((((((]]]]......(((((....)))))}.[.))))))]....
+((((......))))(((......(((((....)))))....)))........
+LEN=52 TP=5 FP=7 FN=12 PRC=0.417 RCL=0.294 FS=0.345
+>3zjv-1-B
+GCCCGGAUGGUGGAAUCGGUAGACACAAGGGAUUAAAUCCCUCGGCGUUCGCGCUGUGCGGGUUCAAGUCCCGCUCCGGGUACCA
+((((((((.[[..)(..{<.....]].((((((...)))))).((((....)))).)((((((}>.)..))))))))))))....
+(((((((..(((...........))).((((((...))))))(((((....))))).(((((.......))))))))))))....
+LEN=85 TP=24 FP=2 FN=5 PRC=0.923 RCL=0.828 FS=0.873
+>4ato-1-G
+AAAUUGGUGUAACCUUACCGUAGUAGGUGCUAAA
+.....[[[...(((((]]]...).))))......
+...(((((...((((.((....))))))))))).
+LEN=34 TP=4 FP=7 FN=4 PRC=0.364 RCL=0.5 FS=0.421
+>4c4w-1-D
+GAGCAAGAGCCAUUGCACUCCGGUUUGAUGACCUC
+(((...(((((..........)))))......)))
+..((((......)))).....((((....))))..
+LEN=35 TP=0 FP=8 FN=8 PRC=0.0 RCL=0.0 FS=0.0
+>4frn-1-A
+GGGCUAAAAGCAUGGUGGGAAAGUGACGUGUAAUUCGUCCACAUUACUUGAUACGGUUAUACUCCGAAUGCCACCUAGCCCAAAGUAGAGCAAGGAGACUCA
+((((((..({<.)(((((....(.(((((...)..)))))(.(([.[[[[)).[[[(...).)]]]..}>)))))))))))......(((]]]]...]))).
+((((((.......(((((.(..(.((.(((((((.(((...((.....))..)))))))))))))...).)))))))))))......(((........))).
+LEN=102 TP=14 FP=16 FN=21 PRC=0.467 RCL=0.4 FS=0.431
+>4jf2-1-A
+GGAACCGCGAAAGCGGUUCCACGACGAUACUUAUUUCCUUUGAUCGUCGUUAUUACUGGCUUCGGCCACAAAGGAGAG
+((((((((....))))))))((((((((.[{<..[[[[....))))))))......((((....))))..}>]]]].]
+((((((((....))))))))((((((((.(...........)))))))))......((((....))))..........
+LEN=78 TP=20 FP=1 FN=7 PRC=0.952 RCL=0.741 FS=0.833
+>4kqy-1-A
+GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA
+(((((((((....(((((...(((.[[[[)))......)))))(.(....(((...(((((....))))).))).....).)....]]]](((((.......)))))...))))))))).
+(((((((((....(((((...(((.....)))......)))))((((.((...((.(((((....))))).))...))))))........((((((.....))))))...))))))))).
+LEN=120 TP=29 FP=7 FN=7 PRC=0.806 RCL=0.806 FS=0.806
+>4oog-1-D
+CAUGUCAUGUCAUGAGUCCAUGGCAUGGCAUGGC
+((((((((((((((....))))))))))))))..
+((((((((((((((....))))))))))))))..
+LEN=34 TP=14 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
+>4p95-1-A
+CAUCCGGUAUCCCAAGACAAUCUCGGGUUGGGUUGGGAAGUAUCAUGGCUAAUCACCAUGAUGCAAUCGGGUUGAACACUUAAUUGGGUUAAAACGGUGGGGGACGAUCCCGUAACAUCCGUCCUAACGGCGACAGACUGCACGGCCCUGCCUCAGGUGUGUCCAAUGAACAGUCGUUCCGAAAGGAAG
+..[[[[[(..(((((..(((((...)))))..)))))..(((((((((...{{{.)))))))))..]]]]((((.((((......(((((]..(((.(.(((...}}}))).....)..))).............[[[[[...))))).(.......))))).)))).).]]]]].((((....)))).
+..(((....((((((..(((((...)))))..)))))).(((((((((.......)))))))))..(((((.(((.......(((((((((..((((((.((((...)))).))....))))..))))....(((.(((....(((...)))...))).))))))))......))).)))))..)))..
+LEN=189 TP=22 FP=37 FN=36 PRC=0.373 RCL=0.379 FS=0.376
+>4pkd-1-V
+GGAUCCAUUGCACUCCGGAUCCAGGAGAUACCAUGAUCACGAAGGUGGUUUUCCU
+((((((..........))))))((((((..((((..........)))).))))))
+((((((..........))))))((((((.(((((..........)))))))))))
+LEN=55 TP=16 FP=1 FN=0 PRC=0.941 RCL=1.0 FS=0.97
+>4qln-1-A
+GAUCGCUGAACCCGAAGGGGCGGGGGACCCAGGGGGCGAAUCUCUUCCGAAAGGAAGAGUAGGGUUACUCCUUCGACCCGAGCCCGUCAGCUAACCUCGCAAGCGUCCGAAGGAGAAAA
+....(((...(((...)))(.((((.(..(...((((....(((((((....)))))))...((((.[[[[[[[))))...))))....).)..)))).).)))....]]]]]]]....
+((.((((...(((...)))((((((......(.((((....(((((((....)))))))..(((((........)))))..)))).).......)))))).))))))............
+LEN=119 TP=26 FP=6 FN=9 PRC=0.812 RCL=0.743 FS=0.776
+>4r8i-1-B
+GCACGUCCCUCACCGGUGCAAGUGAAGCCGUGGCUCUGCG
+((.[...((....((((...)].....))).))....)).
+((((...........))))..(((.(((....))).))).
+LEN=40 TP=0 FP=10 FN=9 PRC=0.0 RCL=0.0 FS=0.0
+>4rum-1-A
+GGGAACUGAGCAGGCAAUGACCAGAGCGGUCAUGCAGCCGGGCUGCGAAAGCGGCAACAGAUGAUACACGCACAUCUGUGGGACAGUUCCCA
+((((((((..(.(((.((((((.....)))))))...))..(((((....))))).(((((((.(....)..)))))))..).)))))))).
+((((((((..(.(((.((((((.....))))))...)))..(((((....))))).(((((((.........))))))).)..)))))))).
+LEN=92 TP=28 FP=2 FN=3 PRC=0.933 RCL=0.903 FS=0.918
+>4tvx-1-L
+AUAAACCGACGGUAUUGUUCAGAUCCUGGCUUGCCAACAGGAGUUCCCCGCGCCAGCGGGG
+.............................................((((((....))))))
+....(((...)))..........(((((.........)))))...((((((....))))))
+LEN=61 TP=6 FP=8 FN=0 PRC=0.429 RCL=1.0 FS=0.6
+>4v84-1-AV
+GGUUAUUCAGAUUAGGUAGUCGAAUGACCUACCU
+((((((((.(((.[[[[[)))))))))))]]]]]
+((((((((.((((....)))))))))))).....
+LEN=34 TP=11 FP=1 FN=5 PRC=0.917 RCL=0.688 FS=0.786
+>4v8d-1-AD
+GGUGGGGUUCCCGAGCGGCCAAAGGGAGCAGACUGUAAAUCUGCCGUCAUCGACUUCGAAGGUUCGAAUCCUUCCCCCACCACCA
+((((((((.[[[.)(.{<..({.]]].(((((.......))))).(((...))))})((((((}>.)..))))))))))))....
+(((((((.((((...........))))(((((.......))))).(((...)))...(((((.......))))))))))))....
+LEN=85 TP=23 FP=1 FN=7 PRC=0.958 RCL=0.767 FS=0.852
+>4v8n-1-AW
+GGGCCCUUAGCUUAGUCUGGUUAAAGCGAUCGGCUCAUAACCGAUUGGGCGCUGGUUCGAAUCCGGCAGGGCCCACCA
+(((.((.(..[.[)(...{.....]]..((((.........))))....)((((((}..)..))))).).).)).)..
+(((((((..((((((((.(((((.(((.....)))..)))))))))))))(((((.......))))))))))))....
+LEN=78 TP=6 FP=22 FN=14 PRC=0.214 RCL=0.3 FS=0.25
+>4v9k-1-AW
+GGCUACGUAGCUCAGUUGGUUAGAGCACAUCACUCAUAAUGAUGGGGUCACAGGUUCGAAUCCCGUCGUAGCCACCA
+((((((([.((.(][..{<A..).)).(((((.......)))))....]((.(((}>.)a.)).)))))))))....
+((((((((.((((.........))))))............(((((((((........).))))))))))))))....
+LEN=77 TP=9 FP=12 FN=16 PRC=0.429 RCL=0.36 FS=0.391
+>4wj4-1-B
+UCCGCGAUAGCUCAGUCGGUAGAGCAAAUGACUGUUAAUCAUUGGGUCCCUGGUUCGAGUCCAGGUCGCGGAGCCA
+((((((([.((.(][..{...).)).(((((.......)))))....]((((((}..)..))))))))))))....
+(((((((..(((((((.(((..((((......)))).)))))))))).(((((.......))))))))))))....
+LEN=76 TP=12 FP=14 FN=12 PRC=0.462 RCL=0.5 FS=0.48
+>4x4v-1-B
+GGCGCUGCGGGGUUCGAGUCCCCGCAGGCCACCGG
+(((.((((((((([{.)..)))))))))))...]}
+(((.((((((((.......))))))))))).....
+LEN=35 TP=11 FP=0 FN=3 PRC=1.0 RCL=0.786 FS=0.88
+>4xw7-1-A
+GGGUCGUGACUGGCGAACAGGUGGGAAACCACCGGGGAGCGACCCUUGCCGCCCGCCUGGGCAA
+(((((((..((........(((((....))))).))..)))))))(((((.........)))))
+(((((((..((........(((((....))))).))..))))))).....((((....))))..
+LEN=64 TP=14 FP=4 FN=5 PRC=0.778 RCL=0.737 FS=0.757
+>4yaz-1-R
+GGUACACGACAAUACUAAACCAUCCGCGAGGAUGGGGCGGAAAGCCUAAGGGUCUCCCUGAGACAGCCGGGCUGCCGAAAUAUCA
+((((..(.....(.((...((((((..[.))))))...)))(.((((..(.(((](...).)))...))))))...)...)))).
+((((........))))...((((((....))))))..(((..(((((....(((((...)))))....))))).)))........
+LEN=85 TP=14 FP=9 FN=11 PRC=0.609 RCL=0.56 FS=0.583
+>4ybb-1-DB
+UGCCUGGCGGCCGUAGCGCGGUGGUCCCACCUGACCCCAUGCCGAACUCAGAAGUGAAACGCCGUAGCGCCGAUGGUAGUGUGGGGUCUCCCCAUGCGAGAGUAGGGAACUGCCAGGCAU
+((((((((((......(((((((....((.((((...(.[...)]..))))...))...)))))).)..((.((..(.((((((((...)))))))).)..)).))...)))))))))).
+((((((((((((((...)))).(((...))).((((((((((...((.((...(((..((...))..)))...)))).))))))))))..(((.(((....))))))..)))))))))).
+LEN=120 TP=10 FP=32 FN=28 PRC=0.238 RCL=0.263 FS=0.25
+>5ah5-1-D
+GCCCGCAUGGUGAAAUCGGUAAACACAUCGCACUAAUGCGCCGCCUCUGGCUUGCCGGUUCAAGUCCGGCUGCGGGCACCA
+((((((((.[[..)(..{<.....]]..((((....))))..(((...))).)((((((}>.)..))))))))))))....
+((((((((((((....((((......)))))))))....(((......)))..(((((.......))))))))))))....
+LEN=81 TP=12 FP=12 FN=14 PRC=0.5 RCL=0.462 FS=0.48
+>5b63-1-D
+GCGCUCGUAGCUCAAUUGGAUAGAGCAUUCAGAAGGUUAGGGGUUCGAAUCCUCUCGAGCGCGC
+((((((([.((.(][...{...).)).(....)....]((((((.}.)..))))))))))))..
+(((((((..((((.........))))............(((((.......))))))))))))..
+LEN=64 TP=15 FP=1 FN=5 PRC=0.938 RCL=0.75 FS=0.833
+>5d6g-1-0
+GCCUAAGACAGCGGGGAGGUUGGCUUAGAAGCAGCCAUCCUUUAAAGAGUGCGUAACAGCUCACCCGUCGAGGC
+(((.......((((..((([.((((.......))))..)))(...)(].............)..))))...)))
+((((......(((((((((.(((((.......))))).))))....((((........)))).)))))..))))
+LEN=74 TP=15 FP=7 FN=2 PRC=0.682 RCL=0.882 FS=0.769
+>5ddp-1-A
+CGUUGACCCAGGAAACUGGGCGGAAGUAAGGUCCAUUGCACUCCGGGCCUGAAGCAACGCG
+(.(((.(((((....)))))..[.....((((((..........))))))....))).)].
+(((((.(((((....)))))........((((((..........))))))....)))))..
+LEN=61 TP=15 FP=1 FN=1 PRC=0.938 RCL=0.938 FS=0.938
+>5lyu-1-A
+GGGGAUCUGUCACCCCAUUGAUCGCCUUCGGGCUGAUCUGGCUGGCUAGGCGGGUCCC
+.(((((((.((.(((.(..[.(((((....)))]))..).)..))...)).)))))))
+.((((((((((.(((((..(((((((....))).)))))))..))...))))))))))
+LEN=58 TP=18 FP=4 FN=1 PRC=0.818 RCL=0.947 FS=0.878
+>5m0h-1-A
+GAUAACUGAAUCGCUAAGGAUGAAAGUCUAUGCGACAUUAUC
+(((((.((..(((((..((((....))))).)))))))))))
+(((((.((..((((...((((....))))..)))))))))))
+LEN=42 TP=15 FP=0 FN=1 PRC=1.0 RCL=0.938 FS=0.968
+>5m73-1-A
+GGGUGUCCGCACUAAGUUCGGCAUCAAUAUGGUGACCUCCCGGGAGCGGGGGACCACCAGGUUGCCUAAGGAGGGGUGAACCGGCCCAGGUCGGAAACGGAGCAGGUCAAAACUCCCGUGCUGAUCAGUAGUGGGAUCGCGCCUA
+((((((((.(((((.(.(((((.(((((.(((((..((((((....))))))..)))))).))).(...)(.((((.......(((....((......))....))).....)))))).))))).)..)))))))...)))))).
+((((((((.(((((...(((((((((((.(((((..((((((....))))))..))))).)))).....((((...(((.((.((((.(........))).)).)))))...)))).)))))))....)))))))).))).))..
+LEN=145 TP=27 FP=22 FN=19 PRC=0.551 RCL=0.587 FS=0.568
+>5ml7-1-A
+GGGUCGCCGAUGUGCAGCAUAGGUAGGAGACACUACACAGGUACCCGCGCUAGCGGGCCACCGAGUCAACAGUGAAAUACUACCCGUCGGUGACC
+.((((((((((({.....[[.(((((..(((.....[(.(<].((((....}])))).).>.).)))..........].))))))))))))))))
+.(((((((((((.........(((((....((((..((.(((.(((((....)))))..)))..))....)))).....))))))))))))))))
+LEN=95 TP=21 FP=9 FN=9 PRC=0.7 RCL=0.7 FS=0.7
+>5nwq-1-A
+CCGGACGAGGUGCGCCGUACCCGGUCAGGACAAGACGGCGC
+((((....((.[[.))...[))))....]..........]]
+((......)).(((((((..((.....)).....)))))))
+LEN=41 TP=2 FP=9 FN=7 PRC=0.182 RCL=0.222 FS=0.2
+>5o7h-1-A
+CUUAGAAAGCAAACCUAUAACCGUUCACCGCCGCACAGGCGG
+...........................(((((.....)))))
+...........................(((((.....)))))
+LEN=42 TP=5 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
+>5ob3-1-A
+GGGAGUACGGUGAGGGUCGGGUCCAGUAGGUACGCCUACUGUUGAGUAGAGUGUGGGCUCCGUACUCCC
+((((((((((.(.........(((((((((....)))))))..))............).))))))))))
+(((((((((((.(.(.((.(.(((((((((....)))))))..)).).)).).).)...))))))))))
+LEN=69 TP=19 FP=6 FN=1 PRC=0.76 RCL=0.95 FS=0.844
+>5t83-1-A
+AAGUUUGCUAGGGUUCCGCGUCAAGGUGGUCUGGUCCAAGAGCAAACGGCUUUCACAAAGCCACACGGAAGGAUAAAAGCCUGGGAGAU
+..(((((((.((....([(((....)))).]....)).)..)))))).((((.....))))..(.[...(((.......))).)..]..
+..((((.(((((.((((...((...(((((...((...(((((.....))))).))...)))))...)).)))....).))))).))))
+LEN=89 TP=0 FP=27 FN=23 PRC=0.0 RCL=0.0 FS=0.0
+>5wlh-1-B
+GAAGAUAGCCCAAGAAAGAGGGCAAUAACCAGAUAUAGCCUG
+......(((((........))))..)................
+.......((((........))))...................
+LEN=42 TP=4 FP=0 FN=1 PRC=1.0 RCL=0.8 FS=0.889
+>5wtk-1-B
+CACCCCAAUAUCGAAGGGGACUAAAACGACAAUCAAACUC
+.(((((.........))))..)..................
+..((((.........)))).....................
+LEN=40 TP=4 FP=0 FN=1 PRC=1.0 RCL=0.8 FS=0.889
+>5ztm-1-C
+GCUUUAGAGAUCGUUUCGAAUGAUAAUCGUUCGAAACGUUCUCCGAAGC
+(((((.((((.((((((((((.......)))))))))).)))).)))))
+(((((.((((.((((((((((((...)))))))))))).)))).)))))
+LEN=49 TP=19 FP=2 FN=0 PRC=0.905 RCL=1.0 FS=0.95
+>6aay-1-B
+AAAAAGGAAAUGAAAGUUGGAACUGCUCUCAUUUUGGAGGGUAAUCACAACA
+...............((((....(((((((......)))))))....)))).
+...............((((..(.(((((((......))))))).)..)))).
+LEN=52 TP=11 FP=1 FN=0 PRC=0.917 RCL=1.0 FS=0.957
+>6ck4-1-B
+GUGAAAGUGUACCUAGGGUUCCAGCCUAUUUGUAGGUGUUCGGACCGAGCGGUACAGGUAUAUUAUAUACCACACCUUAGGGACAAAAGCCCGAGAGGAUGGUUUCACG
+((((((.(((((((.((....([(((((....)))))).]....)).)..))))))((((((...)))))).(.((((.(((.......)))..))))..).)))))).
+((((((.((((((...(((((..(((((....)))))....)))))....))))))((((((...)))))).((((((.(((.(....))))..)))).)).)))))).
+LEN=109 TP=31 FP=7 FN=5 PRC=0.816 RCL=0.861 FS=0.838
+>6dcb-1-B
+GGAUGUGAGGCUUCGGCCUCACCGCUCCAUGUGCGA
+(((((((((((....))))))).).)))........
+(((.(((((((....)))))))...)))........
+LEN=36 TP=10 FP=0 FN=1 PRC=1.0 RCL=0.909 FS=0.952
+>6dlq-1-A
+GGAAAGUGUGUCUAGGGUUCCGCGUGCUUCGGCACGGACUGGUCCAAGUGACACAGACGCAUUCGUGCGUUACACCGGAGGGAUAGAAGCCCAGGCGGGUAGGUUUC
+.((((.(((((((.((....[((((((....)))))].)....)).)..))))))((((((....)))))).[.(((..(((.......))).].))).....))))
+......((((((...((..((((((((....)))))...))).))....))))))((((((....))))))((.(((..(((.......)))...))))).......
+LEN=107 TP=23 FP=7 FN=10 PRC=0.767 RCL=0.697 FS=0.73
+>6dmc-1-A
+GGAAGUGUACCUAGGGAUCCACCUCGAGAGAGGAAGGACCAAGCGGUACAGGCCUACUUCGGUAGGUUACACCGUGGGGAUAAAAGACCCGUGGCAAGUUUCG
+((((.(((((((.((...((.((((....))))..)).)).)..))))))(((((((....)))))))...(((((((.........)))))))....)))).
+((((.((((((...((.(((.((((....))))..)))))....))))).(((((((....)))))))...(((((((.........)))))))..).)))).
+LEN=103 TP=29 FP=4 FN=4 PRC=0.879 RCL=0.879 FS=0.879
+>6fz0-1-A
+AGGCGCAUUUGAACUGUAUUGUACGCCUUGCAGCAAAAGUACUAAAAAA
+((((....[{(...<.).....[[))))((...))...]]...]}.>..
+.((.((.((((..(((((..........))))))))).)).))......
+LEN=49 TP=0 FP=13 FN=12 PRC=0.0 RCL=0.0 FS=0.0
