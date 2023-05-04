@@ -45,44 +45,7 @@ if __name__ == "__main__":
     dbn = "((((((..((((.......))))))))))."
     
     #queue  = [["default", seq, dbn, rst],]
-    #queue += [["default", seq, dbn, rst],]
-
-    paramsets = []
-
-    """ TOP FROM FIRST MANUAL TUNING 230428 """
-    paramsets.append({"bpweights" : {'GU' : -1.95,
-                                     'AU' :  1.5,
-                                     'GC' :  4.25,},
-                      "subopt" : 0.9,                  
-                      "minlen" : 2,
-                      "minbpscore" : 8,
-                      "minfinscorefactor" : 0.75,
-                      "distcoef" : 0.18,
-                      "bracketweight" : 19.0,
-                      "orderpenalty" : -0.08,
-                      "fiveprime" : 0.215,
-                      "gupen"  : 0.0,
-                      "maxstemnum" : 10**6,
-                      "mode": "topscore",})
-
-    #paramsets = []
-
-    """ Grid best on 230429 but with GU==1
-        and minfinscorefactor==0.87 and bracketweight==-15 """
-    paramsets.append({"bpweights" : {'GU' :  1,
-                                     'AU' :  2,
-                                     'GC' :  4,},
-                      "subopt" : 0.9,                  
-                      "minlen" : 2,
-                      "minbpscore" : 6,
-                      "minfinscorefactor" : 0.87,
-                      "distcoef" : 0.1,
-                      "bracketweight" : -15,
-                      "orderpenalty" : 1,
-                      "fiveprime" : 0.0,
-                      "gupen"  : 0.0,
-                      "maxstemnum" : 10**6,
-                      "mode": "topscore",})   
+    #queue += [["default", seq, dbn, rst],]  
 
     #paramsets = []
 
@@ -101,6 +64,79 @@ if __name__ == "__main__":
                       "gupen"  : 0.0,
                       "maxstemnum" : 10**6,
                       "mode": "ver1",})"""
+
+    paramsets = []
+
+    """ Best Fscore 230504 
+    paramsets.append({"bpweights" : {'GU' : -2,
+                                     'AU' :  1.5,
+                                     'GC' :  4.5,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 8,
+                      "minfinscorefactor" : 0.75,
+                      "distcoef" : 0.1,
+                      "bracketweight" : -1,
+                      "orderpenalty" : 1.25,
+                      "fiveprime" : 0.2,
+                      "gupen"  : 0.0,
+                      "maxstemnum" : 10**6,
+                      "mode": "ver1rev",})""" 
+
+    #paramsets = []
+
+    """ Best Fscore 230504 
+    paramsets.append({"bpweights" : {'GU' :  1,
+                                     'AU' :  1.5,
+                                     'GC' :  4.5,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 6,
+                      "minfinscorefactor" : 0.87,
+                      "distcoef" : 0.1,
+                      "bracketweight" : -15,
+                      "orderpenalty" : 1,
+                      "fiveprime" : 0.2,
+                      "gupen"  : 0.0,
+                      "maxstemnum" : 10**6,
+                      "mode": "ver1rev",})""" 
+
+    paramsets = []
+
+    """ TOP FROM FIRST MANUAL TUNING 230504 """
+    paramsets.append({"bpweights" : {'GU' : -2,
+                                     'AU' :  1.5,
+                                     'GC' :  4.25,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 8,
+                      "minfinscorefactor" : 0.74,
+                      "distcoef" : 0.18,
+                      "bracketweight" : 19.0,
+                      "orderpenalty" : -0.08,
+                      "fiveprime" : 0.35,
+                      "gupen"  : 0.06,
+                      "maxstemnum" : 10**6,
+                      "mode": "ver1rev",})
+
+    #paramsets = []
+
+    """ Grid best on 230429 but with GU==1
+        and minfinscorefactor==0.87 and bracketweight==-15 """ 
+    paramsets.append({"bpweights" : {'GU' :  1,
+                                     'AU' :  2,
+                                     'GC' :  4,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 6,
+                      "minfinscorefactor" : 0.87,
+                      "distcoef" : 0.1,
+                      "bracketweight" : -15,
+                      "orderpenalty" : 1,
+                      "fiveprime" : 0.0,
+                      "gupen"  : 0.0,
+                      "maxstemnum" : 10**6,
+                      "mode": "topscore",}) 
     
     toplim  = 5
     conslim = 1
