@@ -327,8 +327,11 @@ def StemsFromPreStemsMaxLen(prestems):
 
 def StemsFromPreStemsTopScore(prestems):
     """Define stems as the top-scored sub-sequence of consecutive bps"""
-    stems = []
-    for prestem in prestems:
+
+    def MaxSubArrays(prestem):
+        """split into max-subarrays"""
+        if not prestem:
+            return []
 
         cursum  = -10**6
         bestsum = -10**6
@@ -336,8 +339,7 @@ def StemsFromPreStemsTopScore(prestems):
         begin    = -1
         curbegin = -1 
         end      = -1
-
-        # define max-subarray
+        
         for i, pos in enumerate(prestem):
             val = pos[1]
             if val >= cursum + val:
@@ -347,10 +349,15 @@ def StemsFromPreStemsTopScore(prestems):
                 begin = curbegin
                 end = i
                 bestsum = cursum
-        
-        bps = [x[2] for x in prestem[begin:end+1]]
-        score = sum(x[1] for x in prestem[begin:end+1])
-        stems.append([bps, len(bps), score])
+
+        return MaxSubArrays(prestem[:begin]) + [prestem[begin : end + 1],] + MaxSubArrays(prestem[end + 1:])
+
+    stems = []
+    for prestem in prestems:
+        for substem in MaxSubArrays(prestem):
+            bps = [x[2] for x in substem]
+            score = sum(x[1] for x in substem)
+            stems.append([bps, len(bps), score])
     return stems
 
 

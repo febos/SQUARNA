@@ -64,12 +64,12 @@ if __name__ == "__main__":
                       "fiveprime" : 0.215,
                       "gupen"  : 0.0,
                       "maxstemnum" : 10**6,
-                      "mode": "ver1rev",})
+                      "mode": "topscore",})
 
     #paramsets = []
 
     """ Grid best on 230429 but with GU==1
-        and minfinscorefactor==0.87 and bracketweight==-15 """  
+        and minfinscorefactor==0.87 and bracketweight==-15 """
     paramsets.append({"bpweights" : {'GU' :  1,
                                      'AU' :  2,
                                      'GC' :  4,},
@@ -83,7 +83,7 @@ if __name__ == "__main__":
                       "fiveprime" : 0.0,
                       "gupen"  : 0.0,
                       "maxstemnum" : 10**6,
-                      "mode": "topscore",}) 
+                      "mode": "topscore",})   
 
     #paramsets = []
 
