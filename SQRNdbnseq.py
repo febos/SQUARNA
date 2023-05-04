@@ -837,7 +837,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise.fas") as file:
+    with open("CoRToise150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -845,44 +845,55 @@ if __name__ == "__main__":
             nm = lines[ii].strip()[1:]
             sq = lines[ii+1].strip()
             db = lines[ii+2].strip()
-            if len(sq) < 150:
-                queue.append([nm, sq, db, rst])
+            queue.append([nm, sq, db, rst])
 
     #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]
 
     outp = open('temp.tsv','w')
 
-    title = '\t'.join("subopt minlen minbpscore minfinscorefactor bracketweight distcoef orderpenalty fiveprime maxstemnum GU AU GC tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
+    title = '\t'.join("gupen subopt minlen minbpscore minfinscorefactor bracketweight distcoef orderpenalty fiveprime maxstemnum mode GU AU GC tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
     print(title)
     outp.write(title+'\n')
     outp.close()
 
     ######################################
+
+    subopt = 0.9
+    maxstemnum = 10**6
                 
-    for subopt in (0.9, 0.95, 1.0):
-        for minlen in (2, 3, 4):
-            for minbpscore in (4, 6, 8):
-                for minfinscorefactor in (0.0, 0.5, 1.0):
-                    for bracketweight in (-1.0, 0.0, 1.0, 2.0):
-                        for distcoef in (-0.1, 0.0, 0.1, 0.5):
-                            for orderpenalty in (-0.1, 0.0, 0.5, 1.0, 1.5):
-                                for fiveprime in (-0.1, 0.0, 0.1, 0.5, 1.0):
-                                    for maxstemnum in (10**6, ):
+    for gupen in (0.0, -0.05, 0.05):
+        for minlen in (2,):
+            for minbpscore in (6, 5, 4):
+                for minfinscorefactor in (0.75, 1.0, 0.5):
+                    for bracketweight in (-1, -10, 10):
+                        for distcoef in (0.1, 0.0, 0.2):
+                            for orderpenalty in (1.0, 0.75, 1.25):
+                                for fiveprime in (0.0, 0.1, 0.2):
+                                    for mode in ("ver1", "ver1rev", "topscore"):
+                                        for GU in (-2, -1.5, -1, -0.5):
+                                            for AU in (1, 1.5, 2, 2.5):
+                                                for GC in (3, 3.5, 4, 4.5):
 
-                                        for GU in (-1,):
-                                            for AU in (2,):
-                                                for GC in (4, ):
-
-                                                    bpweights = {
-                                                                 'GU' : GU,
-                                                                 'AU' : AU,
-                                                                 'GC' : GC,
-                                                                 }
-
-                                                    print(subopt, minlen, minbpscore, minfinscorefactor,
+                                                    print(gupen, subopt, minlen, minbpscore, minfinscorefactor,
                                                           bracketweight, distcoef, orderpenalty, fiveprime,
-                                                          maxstemnum, GU, AU, GC, sep='\t', end='\t')
+                                                          maxstemnum, mode, GU, AU, GC, sep='\t', end='\t')
+
+                                                    paramsets = []
+                                                    paramsets.append({"bpweights" : {'GU' :  GU,
+                                                                                     'AU' :  AU,
+                                                                                     'GC' :  GC,},
+                                                                      "subopt" : subopt,                  
+                                                                      "minlen" : minlen,
+                                                                      "minbpscore" : minbpscore,
+                                                                      "minfinscorefactor" : minfinscorefactor,
+                                                                      "distcoef" : distcoef,
+                                                                      "bracketweight" : bracketweight,
+                                                                      "orderpenalty" : orderpenalty,
+                                                                      "fiveprime" : fiveprime,
+                                                                      "gupen"  : gupen,
+                                                                      "maxstemnum" : maxstemnum,
+                                                                      "mode": mode,})
 
                                                     resultsB = []
                                                     resultsC = []
@@ -891,11 +902,9 @@ if __name__ == "__main__":
 
                                                         name, seq, dbn, rst = obj
 
-                                                        result = SQRNdbnseq(seq, bpweights, rst, dbn,
-                                                                            subopt, minlen, minbpscore,
-                                                                            minfinscorefactor, bracketweight,
-                                                                            distcoef, orderpenalty, fiveprime,
-                                                                            maxstemnum, threads)
+                                                        result = SQRNdbnseq(seq, rst, dbn,
+                                                                            paramsets, conslim, toplim,
+                                                                            threads)
 
                                                         '''print(name)
                                                         print(seq)

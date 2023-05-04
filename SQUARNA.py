@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise.fas") as file:
+    with open("CoRToise150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -33,8 +33,7 @@ if __name__ == "__main__":
             nm = lines[ii].strip()[1:]
             sq = lines[ii+1].strip()
             db = lines[ii+2].strip()
-            if len(sq) < 150:
-                queue.append([nm, sq, db, rst])
+            queue.append([nm, sq, db, rst])
 
     #seq = "AAACCACGAGGAAGAGAGGUAGCGUUUUCUCCUGAGCGUGAAGCCGGCUUUCUGGCGUUGCUUGGCUGCAACUGCCGUCAGCCAUUGAUGAUCGUUCUUCUCUCCGUAUUGGGGAGUGAGAGGGAGAGAACGCGGUCUGAGUGGU"
     #dbn = "..(((((......(.......((((((((((((....(...(...((((..(.((((((((......))))).))))..))))..)......)..((((((((((.....)))))).))))))))))))))))...)...)))))"
