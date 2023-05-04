@@ -859,6 +859,9 @@ if __name__ == "__main__":
 
     ######################################
 
+    conslim = 1
+    toplim  = 5
+
     subopt = 0.9
     maxstemnum = 10**6
                 
@@ -944,10 +947,9 @@ if __name__ == "__main__":
                                                           round(np.mean(prB), 3), round(np.mean(rcB), 3), sep = '\t')
 
                                                     outp = open('temp.tsv','a')
-                                                    toprint = '\t'.join([str(xx) for xx in [subopt, minlen, minbpscore,
-                                                                                            minfinscorefactor,bracketweight,
-                                                                                            distcoef, orderpenalty, fiveprime,
-                                                                                            maxstemnum, GU, AU, GC,
+                                                    toprint = '\t'.join([str(xx) for xx in [gupen, subopt, minlen, minbpscore, minfinscorefactor,
+                                                                                            bracketweight, distcoef, orderpenalty, fiveprime,
+                                                                                            maxstemnum, mode, GU, AU, GC,
                                                                                             tpC, fpC, fnC,
                                                                                             round(2*tpC / (2*tpC + fpC + fnC), 3),
                                                                                             round(np.mean(fsC), 3),
