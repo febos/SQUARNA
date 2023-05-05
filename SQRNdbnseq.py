@@ -634,6 +634,25 @@ def ConsensusStemSet(stemsets):
 
     return bps
 
+
+def ScoreStruct(seq, stemset):
+    """ Return the overall structure score based on the stemset"""
+    bpscores = {"GU": -0.25,
+                "AU": 1.5,
+                "GC": 4.0,
+               }
+    for bp in sorted(bpscores.keys()): # CG for GC, etc.
+        bpscores[bp[::-1]] = bpscores[bp]
+
+    power = 1.75 # we will sum up these powers of the stem scores
+    thescore = 0
+
+    for stem in stemset:
+        bpsum = sum(bpscores[seq[bp[0]]+seq[bp[1]]] for bp in stem[0])
+        if bpsum >= 0:
+            thescore += bpsum**power if bpsum >= 0 else -(abs(bpsum)**power)
+    return round(thescore, 3)
+
     
 def SQRNdbnseq(seq, restraints = None, dbn = None,
                paramsets = [], conslim = 5, toplim = 5,
@@ -683,7 +702,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     finfinstemsets = []
     seen_structures = set() # set of bp-sets (to avoid repeats in finfinstemsets)
 
-    for paramset in paramsets:
+    for psi, paramset in enumerate(paramsets):
 
         bpweights         = paramset["bpweights"]
         subopt            = paramset["subopt"]
@@ -753,8 +772,10 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
             bpsset = tuple(sorted([bp for stem in finstemset for bp in stem[0]]))
 
             if bpsset not in seen_structures:
-
-                finfinstemsets.append(finstemset)
+                # append [stemset, structscore, paramsetind]
+                finfinstemsets.append([finstemset,
+                                       ScoreStruct(shortseq, finstemset),
+                                       psi])
                 seen_structures.add(bpsset)
 
     # list of dbn strings
@@ -763,12 +784,12 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     # sort the final stem lists in descreasing order of their total bp-score
     # and convert all final stem lists into dbn strings
     # and not forget about non-predicted bps from restraints
-    finstemsets = sorted(finfinstemsets, key = lambda x: sum(y[2] for y in x), reverse = True)
-    for stems in finstemsets:
+    finstemsets = sorted(finfinstemsets, key = lambda x: x[1], reverse = True)
+    for stems, structscore, paramsetind in finstemsets:
         dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | set(rbps),
                     len(shortseq)))
 
-    consbps = ConsensusStemSet(finstemsets[:conslim]) # Consensus of the Top-ranked
+    consbps = ConsensusStemSet([xx[0] for xx in finstemsets[:conslim]]) # Consensus of the Top-ranked
 
     # ReAlign the dbn strings accoring to seq
     dbns = [ReAlign(x, seq) for x in dbns]
@@ -793,7 +814,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
 
         for rank, stemset in enumerate(finstemsets):
 
-            setbps = {bp for stem in stemset for bp in stem[0]}
+            setbps = {bp for stem in stemset[0] for bp in stem[0]}
 
             tp = len(setbps & knownbps)
             fp = len(setbps - knownbps)
@@ -811,8 +832,8 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
             if rank + 1 >= toplim:
                 break
 
-        return cons, dbns, consresult, result
-    return cons, dbns, [np.nan]*6, [np.nan]*7
+        return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], consresult, result
+    return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], [np.nan]*6, [np.nan]*7
 
 
 if __name__ == "__main__":

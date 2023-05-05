@@ -18,14 +18,14 @@ if __name__ == "__main__":
     #seq = "GGGCGGCUAGCUCAGCGGAAGAGCGCUCGCCUCACACGCGAGAGGUCGUAGGUUCAAGUCCUACGCCGCCCACCA"
     #dbn = "(((((((..((((....[..)))).(((((.......))))).....(((((..]....))))))))))))...."
     #Twister ribozyme
-    seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
-    dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
+    #seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
+    #dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
     #rst = "X_XX___....__..............,,,,,,.........................xx......x"
     #rst = "..................................................................." 
     
     queue = []
 
-    with open("CoRToise150.fas") as file:
+    with open("TS1reducedWC.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -41,8 +41,8 @@ if __name__ == "__main__":
     #seq = "GGUAAAGAAUGAAAAAACACGAUUCGGUUGGUAGUCCGGAUGCAUGAUUGAGAAUGUCAGUAACCUUCCCCUCCUCGGGAUGUCCAUCAUUCUUUAAUAUCUUUUAUGAGGAGGGAA"
     #dbn = None
 
-    seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
-    dbn = "((((((..((((.......))))))))))."
+    #seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
+    #dbn = "((((((..((((.......))))))))))."
     
     #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
@@ -156,14 +156,14 @@ if __name__ == "__main__":
         print(seq)
         if dbn:
             print(dbn)
-        print('='*len(seq))
-        print(result[0],result[2])
         print('_'*len(seq))
+        print(result[0],result[2])
+        print('='*len(seq))
         for rank, pred in enumerate(result[1]):
             if rank == result[3][-1]-1:
-                print(pred, result[3])
+                print(' '.join([str(gg) for gg in pred]), result[3])
             else:
-                print(pred)
+                print(' '.join([str(gg) for gg in pred]))
         print("#"*len(seq))
 
         resultsC.append(result[2])
