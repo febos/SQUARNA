@@ -41,8 +41,8 @@ if __name__ == "__main__":
     #seq = "GGUAAAGAAUGAAAAAACACGAUUCGGUUGGUAGUCCGGAUGCAUGAUUGAGAAUGUCAGUAACCUUCCCCUCCUCGGGAUGUCCAUCAUUCUUUAAUAUCUUUUAUGAGGAGGGAA"
     #dbn = None
 
-    #seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
-    #dbn = "((((((..((((.......))))))))))."
+    seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
+    dbn = "((((((..((((.......))))))))))."
     
     #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
@@ -117,7 +117,7 @@ if __name__ == "__main__":
                       "fiveprime" : 0.35,
                       "gupen"  : 0.06,
                       "maxstemnum" : 10**6,
-                      "mode": "ver1rev",})
+                      "mode": "topscore",})
 
     #paramsets = []
 

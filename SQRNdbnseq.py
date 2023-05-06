@@ -655,6 +655,36 @@ def ScoreStruct(seq, stemset):
             thescore += bpsum**power if bpsum >= 0 else -(abs(bpsum)**power)
     return round(thescore, 3)
 
+
+def ExtendStems(seq, bpweights, stemset):
+    """ Extend the inner flanking bps of the stems if possible"""
+    for bp in sorted(bpweights.keys()):
+        bpweights[bp[::-1]] = bpweights[bp]
+
+    seen = {nt for stem in stemset for bp in stem[0] for nt in bp}
+    extended = False
+
+    # Yield the original stemset
+    yield [[[bp for bp in stem[0]], *stem[1:]]
+           for stem in stemset]
+
+    # Extend the inner parts of the stems
+    for stem in stemset:
+        bpN = stem[0][-1]
+        v, w = bpN
+        while (w - 1) - (v + 1) >= 4\
+              and seq[v + 1] + seq[w - 1] in bpweights\
+              and v + 1 not in seen and w - 1 not in seen:
+            stem[0].append((v + 1, w - 1))
+            extended = True
+            seen.add(v + 1)
+            seen.add(w - 1)
+            v, w = v + 1, w - 1
+    # Yield the extended stemset if we extended anything
+    if extended:
+        yield [[[bp for bp in stem[0]], *stem[1:]]
+               for stem in stemset]
+
     
 def SQRNdbnseq(seq, restraints = None, dbn = None,
                paramsets = [], conslim = 5, toplim = 5,
@@ -775,9 +805,10 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
 
             if bpsset not in seen_structures:
                 # append [stemset, structscore, paramsetind]
-                finfinstemsets.append([finstemset,
-                                       ScoreStruct(shortseq, finstemset),
-                                       psi])
+                for modified_stemset in ExtendStems(shortseq, bpweights, finstemset):
+                    finfinstemsets.append([modified_stemset,
+                                           ScoreStruct(shortseq, modified_stemset),
+                                           psi])
                 seen_structures.add(bpsset)
 
     # list of dbn strings
