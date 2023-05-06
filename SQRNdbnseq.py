@@ -501,10 +501,12 @@ def ScoreStems(seq, stems, rstems, minscore,
             # if sub-ECR face - increase inblockend
             elif pos < partner:
                 inblockend = partner
-        
+
+        # 4 for everything
+        idealdist = 4
 
         stemdist = dots + bracketweight*brackets # stem distance
-        stemdistfactor = (1/(1 + abs(stemdist - 4)))**distcoef
+        stemdistfactor = (1/(1 + abs(stemdist - idealdist)))**distcoef
 
         order = len(levelset) # number of conflicting pseudoknot levels
         orderfactor = (1/(1 + order))**orderpenalty

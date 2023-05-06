@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("TS1reducedWC.fas") as file:
+    with open("CoRToise150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
