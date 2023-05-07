@@ -118,7 +118,7 @@ if __name__ == "__main__":
     #paramsets = []
 
     """ Grid best on 230429 but with GU==1
-        and minfinscorefactor==0.87 and bracketweight==-15 """ 
+        and minfinscorefactor==0.87 and bracketweight==-15""" 
     paramsets.append({"bpweights" : {'GU' :  1,
                                      'AU' :  2,
                                      'GC' :  4,},
@@ -131,7 +131,7 @@ if __name__ == "__main__":
                       "orderpenalty" : 1,
                       "fiveprime" : 0.0,
                       "maxstemnum" : 10**6,
-                      "mode": "topscore",}) 
+                      "mode": "topscore",})  
     
     toplim  = 5
     conslim = 1

@@ -361,6 +361,19 @@ def StemsFromPreStemsTopScore(prestems):
     return stems
 
 
+def StemsFromPreStemsAll(prestems):
+    """Define stems as any sub-sequence of consecutive bps"""
+    stems = []
+    for prestem in prestems:
+        for i in range(len(prestem)):
+            for j in range(i + 1, len(prestem) + 1):
+                substem = prestem[i:j]
+                bps = [x[2] for x in substem]
+                score = sum(x[1] for x in substem)
+                stems.append([bps, len(bps), score])
+    return stems
+
+
 def StemsFromDiag(diag, mode):
     """Annotate stems at the given diagonal"""
     if mode == "ver1": # My first bugged version of the max-subarray stems
@@ -373,9 +386,11 @@ def StemsFromDiag(diag, mode):
             return StemsFromPreStemsMaxLen(prestems)
         if mode == "topscore":
             return StemsFromPreStemsTopScore(prestems)
+        if mode == "all":
+            return StemsFromPreStemsAll(prestems)
 
 
-    return StemsFromDiagTheFirstVersion(diag) ### TEMPORARY
+    assert True == False, "check your mode value" ### SHOULD NEVER HAPPEN
 
 
 def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
