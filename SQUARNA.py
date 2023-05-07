@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("TS1reducedWC.fas") as file:
+    with open("CoRToise150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -61,7 +61,6 @@ if __name__ == "__main__":
                       "bracketweight" : -1,
                       "orderpenalty" : 1,
                       "fiveprime" : 0.0,
-                      "gupen"  : 0.0,
                       "maxstemnum" : 10**6,
                       "mode": "ver1",})"""
 
@@ -79,7 +78,6 @@ if __name__ == "__main__":
                       "bracketweight" : -1,
                       "orderpenalty" : 1.25,
                       "fiveprime" : 0.2,
-                      "gupen"  : 0.0,
                       "maxstemnum" : 10**6,
                       "mode": "ver1rev",})""" 
 
@@ -97,14 +95,13 @@ if __name__ == "__main__":
                       "bracketweight" : -15,
                       "orderpenalty" : 1,
                       "fiveprime" : 0.2,
-                      "gupen"  : 0.0,
                       "maxstemnum" : 10**6,
                       "mode": "ver1rev",})""" 
 
     paramsets = []
 
     """ TOP FROM FIRST MANUAL TUNING 230504 """
-    paramsets.append({"bpweights" : {'GU' : -2,
+    paramsets.append({"bpweights" : {'GU' : -2.5,
                                      'AU' :  1.5,
                                      'GC' :  4.25,},
                       "subopt" : 0.9,                  
@@ -115,7 +112,6 @@ if __name__ == "__main__":
                       "bracketweight" : 19.0,
                       "orderpenalty" : -0.08,
                       "fiveprime" : 0.35,
-                      "gupen"  : 0.06,
                       "maxstemnum" : 10**6,
                       "mode": "ver1rev",})
 
@@ -134,7 +130,6 @@ if __name__ == "__main__":
                       "bracketweight" : -15,
                       "orderpenalty" : 1,
                       "fiveprime" : 0.0,
-                      "gupen"  : 0.0,
                       "maxstemnum" : 10**6,
                       "mode": "topscore",}) 
     
