@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise150.fas") as file:
+    with open("TS1reducedWC.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -117,7 +117,7 @@ if __name__ == "__main__":
                       "fiveprime" : 0.35,
                       "gupen"  : 0.06,
                       "maxstemnum" : 10**6,
-                      "mode": "topscore",})
+                      "mode": "ver1rev",})
 
     #paramsets = []
 
