@@ -49,25 +49,55 @@ if __name__ == "__main__":
 
     paramsets = []
 
-    paramsets.append({"bpweights" : {'GU' : -1,
-                                     'AU' :  2,
+    NN = 265
+
+    queue = queue[NN:NN+1]
+
+    """ TOP ONE 
+    #
+    #
+    #
+    paramsets.append({"bpweights" : {'GU' :  0,
+                                     'AU' :  1,
                                      'GC' :  4,},
                       "subopt" : 0.9,                  
                       "minlen" : 2,
-                      "minbpscore" : 6,
+                      "orderpenalty"  : 2.25,
+                      "distcoef" : 0.45,
+                      "minbpscore" : 5,
                       "minfinscorefactor" : 1.0,
-                      "distcoef" : 0.75,
-                      "bracketweight" : 1.0,
-                      "orderpenalty"  : 4.0,
+                      "bracketweight" :  2.0,
                       "fiveprimeleft"  : 0.0,
                       "fiveprimeright" : 0.0,
                       "maxstemnum" : 10**6,
-                      "mode": "ver1rev",
+                      "mode": "all",
                       "idealdist1" : 4,
                       "idealdist2" : 4,
+                      }) """
+
+    """ TOP TWO """
+    #
+    #
+    #
+    paramsets.append({"bpweights" : {'GU' :  -1,
+                                     'AU' :   2,
+                                     'GC' :   4,},
+                      "subopt" : 0.85,                  
+                      "minlen" : 3,
+                      "orderpenalty"  : 2.0,
+                      "distcoef" : 3.0,
+                      "minbpscore" : 5,
+                      "minfinscorefactor" : 1.0,
+                      "bracketweight" :  2.0,
+                      "fiveprimeleft"  : 0.0,
+                      "fiveprimeright" : 0.0,
+                      "maxstemnum" : 10**6,
+                      "mode": "topscore",
+                      "idealdist1" : 4,
+                      "idealdist2" : 0,
                       }) 
     
-    toplim  = 5
+    toplim  = 5**10
     conslim = 1
     
     resultsB = []
