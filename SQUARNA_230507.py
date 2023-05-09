@@ -100,11 +100,38 @@ if __name__ == "__main__":
 
     paramsets = []
 
+    """# testing 
+    paramsets.append({"bpweights" : {'GU' :  -1,
+                                     'AU' :   2,
+                                     'GC' :   4,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "minbpscore" : 6,
+                      "minfinscorefactor" : 1,
+                      "distcoef" : 0.1,
+                      "bracketweight" : -1,
+                      "orderpenalty" :  1,
+                      "fiveprimeleft" : 0.0,
+                      "maxstemnum" : 10**6,
+                      "mode": "all",
+                      "fiveprimeright" : 0.00,
+                      "idealdist1" : 4,
+                      "idealdist2" : 4,
+                      "sdnumer" : 1,
+                      "sddenom" : 1,
+                      "ornumer" : 1,
+                      "ordenom" : 1,
+                      "fplnumer" : 1,
+                      "fpldenom" : 1,
+                      "fprnumer" : 1,
+                      "fprdenom" : 1,
+                      })"""
+
     """ TOP FROM FIRST MANUAL TUNING 230504 """
     paramsets.append({"bpweights" : {'GU' : -2.5,
                                      'AU' :  1.5,
                                      'GC' :  4.25,},
-                      "subopt" : 0.9,                  
+                      "subopt" : 0.8,                  
                       "minlen" : 2,
                       "minbpscore" : 8,
                       "minfinscorefactor" : 0.74,
@@ -130,11 +157,11 @@ if __name__ == "__main__":
     #paramsets = []
 
     """ Grid best on 230429 but with GU==1
-        and minfinscorefactor==0.87 and bracketweight==-15""" 
+        and minfinscorefactor==0.87 and bracketweight==-15 """ 
     paramsets.append({"bpweights" : {'GU' :  1,
                                      'AU' :  2,
                                      'GC' :  4,},
-                      "subopt" : 0.9,                  
+                      "subopt" : 0.8,                  
                       "minlen" : 2,
                       "minbpscore" : 6,
                       "minfinscorefactor" : 0.87,
@@ -154,9 +181,9 @@ if __name__ == "__main__":
                       "fplnumer" : 2,
                       "fpldenom" : 2,
                       "fprnumer" : 1,
-                      "fprdenom" : 1,})  
+                      "fprdenom" : 1,}) 
     
-    toplim  = 5
+    toplim  = 5**10
     conslim = 1
     
     resultsB = []

@@ -18,8 +18,8 @@ if __name__ == "__main__":
     #seq = "GGGCGGCUAGCUCAGCGGAAGAGCGCUCGCCUCACACGCGAGAGGUCGUAGGUUCAAGUCCUACGCCGCCCACCA"
     #dbn = "(((((((..((((....[..)))).(((((.......))))).....(((((..]....))))))))))))...."
     #Twister ribozyme
-    seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
-    dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
+    #seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
+    #dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
     #rst = "X_XX___....__..............,,,,,,.........................xx......x"
     #rst = "..................................................................." 
     
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     #seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
     #dbn = "((((((..((((.......))))))))))."
     
-    #queue  = [["default", seq, dbn, rst],]
+    queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
 
     paramsets = []
