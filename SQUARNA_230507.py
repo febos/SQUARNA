@@ -131,7 +131,7 @@ if __name__ == "__main__":
     paramsets.append({"bpweights" : {'GU' : -2.5,
                                      'AU' :  1.5,
                                      'GC' :  4.25,},
-                      "subopt" : 0.8,                  
+                      "subopt" : 0.9,                  
                       "minlen" : 2,
                       "minbpscore" : 8,
                       "minfinscorefactor" : 0.74,
@@ -161,7 +161,7 @@ if __name__ == "__main__":
     paramsets.append({"bpweights" : {'GU' :  1,
                                      'AU' :  2,
                                      'GC' :  4,},
-                      "subopt" : 0.8,                  
+                      "subopt" : 0.9,                  
                       "minlen" : 2,
                       "minbpscore" : 6,
                       "minfinscorefactor" : 0.87,
@@ -170,7 +170,7 @@ if __name__ == "__main__":
                       "orderpenalty" : 1,
                       "fiveprimeleft" : 0.0,
                       "maxstemnum" : 10**6,
-                      "mode": "topscore",
+                      "mode": "maxlen",
                       "fiveprimeright" : 0.00,
                       "idealdist1" : 4,
                       "idealdist2" : 4,
@@ -183,7 +183,7 @@ if __name__ == "__main__":
                       "fprnumer" : 1,
                       "fprdenom" : 1,}) 
     
-    toplim  = 5**10
+    toplim  = 5
     conslim = 1
     
     resultsB = []

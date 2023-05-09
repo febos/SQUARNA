@@ -919,7 +919,7 @@ if __name__ == "__main__":
 
     outp = open('temp.tsv','w')
 
-    title = '\t'.join("subopt minlen minbpscore minfinscorefactor bracketweight distcoef orderpenalty fiveprimeleft fiveprimeright maxstemnum mode GU AU GC idealdist1 idealdist2 tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
+    title = '\t'.join("subopt loopbonus minlen minbpscore minfinscorefactor bracketweight distcoef orderpenalty fiveprimeleft fiveprimeright maxstemnum mode GU AU GC idealdist1 idealdist2 tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
     print(title)
     outp.write(title+'\n')
     outp.close()
@@ -932,24 +932,25 @@ if __name__ == "__main__":
     toplim  = 5
 
     subopt = 0.9
+    minlen = 2
     maxstemnum = 10**6
     
     for bracketweight in (1, 0, 2):            
-        for minlen in (2,):
-            for fiveprimeright in (0.0, 0.35, 0.7):
-                for fiveprimeleft in (0.0, 0.35, 0.7):
+        for fiveprimeright in (0.0, 0.1, 0.3):
+            for fiveprimeleft in (0.0, 0.1, 0.3):
+                for loopbonus in (0, 0.1 , 0.2):
                     for minfinscorefactor in (1.0, 0.75, 0.5):
-                        for distcoef in (0.35, 0.7, 1.0):
-                            for orderpenalty in (0.5, 1.0, 2.0):
-                                for mode in ("maxlen", "ver1", "ver1rev", "topscore", "all"):
-                                    for GU in (-2, -1, -0.5, 0.0, 0.5, 1.0):
-                                        for AU in (0.5, 1.0, 1.5, 2):
+                        for distcoef in (0.35, 0.4, 0.6, 0.8, 1.0):
+                            for orderpenalty in (2.0, 2.5, 3.0, 4.0):
+                                for mode in ("maxlen", "ver1", "ver1rev", "topscore"):
+                                    for GU in (-2, ):
+                                        for AU in (2, ):
                                             for GC in (4.0, 4.5, 5.0):
-                                                for minbpscore in (GC+AU, GC+GC):
+                                                for minbpscore in (GC, GC+AU, GC+GC):
                                                     for idealdist1 in (4,):
-                                                        for idealdist2 in (0, 4, 8):
+                                                        for idealdist2 in (4,):
                                                             ####################################################
-                                                            print(subopt, minlen, minbpscore, minfinscorefactor, bracketweight, distcoef,
+                                                            print(subopt, loopbonus, minlen, minbpscore, minfinscorefactor, bracketweight, distcoef,
                                                                   orderpenalty, fiveprimeleft, fiveprimeright, maxstemnum, mode,
                                                                   GU, AU, GC, idealdist1, idealdist2, sep='\t', end='\t')
 
@@ -969,7 +970,8 @@ if __name__ == "__main__":
                                                                               "maxstemnum" : maxstemnum,
                                                                               "mode": mode,
                                                                               "idealdist1" : idealdist1,
-                                                                              "idealdist2" : idealdist2})
+                                                                              "idealdist2" : idealdist2,
+                                                                              "loopbonus" : loopbonus})
 
                                                             resultsB = []
                                                             resultsC = []
@@ -1020,7 +1022,7 @@ if __name__ == "__main__":
                                                                   round(np.mean(prB), 3), round(np.mean(rcB), 3), sep = '\t')
 
                                                             outp = open('temp.tsv','a')
-                                                            toprint = '\t'.join([str(xx) for xx in [subopt, minlen, minbpscore, minfinscorefactor, bracketweight, distcoef,
+                                                            toprint = '\t'.join([str(xx) for xx in [subopt, loopbonus, minlen, minbpscore, minfinscorefactor, bracketweight, distcoef,
                                                                                                     orderpenalty, fiveprimeleft, fiveprimeright, maxstemnum, mode,
                                                                                                     GU, AU, GC, idealdist1, idealdist2,
                                                                                                     tpC, fpC, fnC,
