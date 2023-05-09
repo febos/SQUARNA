@@ -49,12 +49,11 @@ if __name__ == "__main__":
 
     paramsets = []
 
-    NN = 265
+    #NN = 260
+    #queue = queue[NN:NN+1]
 
-    queue = queue[NN:NN+1]
-
-    """ TOP ONE 
-    #
+    """ TOP ONE """
+    # 264 263 262 261
     #
     #
     paramsets.append({"bpweights" : {'GU' :  0,
@@ -70,13 +69,14 @@ if __name__ == "__main__":
                       "fiveprimeleft"  : 0.0,
                       "fiveprimeright" : 0.0,
                       "maxstemnum" : 10**6,
+                      "loopbonus": 0.1,
                       "mode": "all",
                       "idealdist1" : 4,
                       "idealdist2" : 4,
-                      }) """
+                      }) 
 
     """ TOP TWO """
-    #
+    # 265
     #
     #
     paramsets.append({"bpweights" : {'GU' :  -1,
@@ -86,7 +86,7 @@ if __name__ == "__main__":
                       "minlen" : 3,
                       "orderpenalty"  : 2.0,
                       "distcoef" : 3.0,
-                      "minbpscore" : 5,
+                      "minbpscore" : 6,
                       "minfinscorefactor" : 1.0,
                       "bracketweight" :  2.0,
                       "fiveprimeleft"  : 0.0,
@@ -95,6 +95,30 @@ if __name__ == "__main__":
                       "mode": "topscore",
                       "idealdist1" : 4,
                       "idealdist2" : 0,
+                      "loopbonus"  : 1.0,
+                      })
+
+    """ TOP THREE """
+    # 260
+    #
+    #
+    paramsets.append({"bpweights" : {'GU' :  -10,
+                                     'AU' :   4,
+                                     'GC' :   10,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 1,
+                      "orderpenalty"  : 2.0,
+                      "distcoef" : 10.0,
+                      "minbpscore" : 10,
+                      "minfinscorefactor" : 0.75,
+                      "bracketweight" :  2.0,
+                      "fiveprimeleft"  : 0.0,
+                      "fiveprimeright" : 0.0,
+                      "maxstemnum" : 10**6,
+                      "mode": "topscore",
+                      "idealdist1" : 4,
+                      "idealdist2" : 0,
+                      "loopbonus"  : 2.0,
                       }) 
     
     toplim  = 5**10

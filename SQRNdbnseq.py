@@ -452,8 +452,19 @@ def ScoreStems(seq, stems, rstems, minscore,
                bracketweight, distcoef,
                orderpenalty, fiveprimeleft,
                fiveprimeright,
-               idealdist1, idealdist2):
+               idealdist1, idealdist2,
+               loopbonus):
     """Adjust the scores based on the stem distance, distance from 5'-end, and pseudoknot level"""
+
+    # short near-symmetric internal loops
+    goodloops = {(0, 0), (0, 1), (1, 0),
+                 (1, 1), (1, 2), (2, 1),
+                 (2, 2), (2, 3), (3, 2),
+                 (3, 3), (3, 4), (4, 3),
+                 (4, 4), (4, 2), (2, 4),
+                 (3, 1), (1, 3),
+                 (0, 2), (2, 0),
+                 (5, 5)}
 
     # values == indices of the bp partners or -1 for unpaired bases
     bppartners = [-1 for _ in range(len(seq))]
@@ -485,6 +496,8 @@ def ScoreStems(seq, stems, rstems, minscore,
         # confined region
         stemstart, stemend = bps[-1]
 
+        block_edges = []
+
         # if we are inside the sub-ECR - where it will end
         inblockend = -1
 
@@ -507,8 +520,17 @@ def ScoreStems(seq, stems, rstems, minscore,
                                            max(pos, partner))])
 
             # if sub-ECR face - increase inblockend
-            elif pos < partner:
+            elif pos < partner and partner > inblockend:
                 inblockend = partner
+                block_edges.append((pos, partner))
+
+        # to prioritize short near-symmetric internal loops
+        goodloop = False
+        if len(block_edges) == 1:
+            if (block_edges[0][0] - stemstart - 1,
+                stemend - block_edges[0][1] - 1) in goodloops:
+                goodloop = True
+        loopfactor = 1 + loopbonus*goodloop
 
         # idealdist1 for hairpins, idealdist2 for everything else
         idealdist = idealdist1 if inblockend == -1 else idealdist2
@@ -526,7 +548,7 @@ def ScoreStems(seq, stems, rstems, minscore,
         fiveprimerightfactor = 1 / (1 + fiveprimeright*fiveprimerightdist)
 
         initscore  = stem[2] # initial bp score
-        finalscore = initscore * stemdistfactor * orderfactor * fiveprimeleftfactor * fiveprimerightfactor
+        finalscore = initscore * stemdistfactor * orderfactor * fiveprimeleftfactor * fiveprimerightfactor * loopfactor
         
         descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
                                                     round(stemdist,2),
@@ -535,8 +557,9 @@ def ScoreStems(seq, stems, rstems, minscore,
                                         round(orderfactor,2))
         descr += ",fpld={},fplf={}".format(round(fiveprimeleftdist,2),
                                            round(fiveprimeleftfactor,2))
-        descr += ",fprd={},fprf={}".format(round(fiveprimerightdist,2),
-                                           round(fiveprimerightfactor,2))
+        descr += ",fprd={},fprf={},lf={}".format(round(fiveprimerightdist,2),
+                                                 round(fiveprimerightfactor,2),
+                                                 round(loopfactor,2))
 
         stem.append(finalscore)
         stem.append(descr)
@@ -590,7 +613,8 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
                  bracketweight = 1.0, distcoef = 0.1,
                  orderpenalty = 0.0, fiveprimeleft = 0.0,
                  fiveprimeright = 0.0, mode = "ver1",
-                 idealdist1 = 4, idealdist2 = 4):
+                 idealdist1 = 4, idealdist2 = 4,
+                 loopbonus = 0.0,):
     """Return the top stems"""
 
     # Remove already predicted bps from bp-restraints
@@ -604,6 +628,7 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
                           orderpenalty, fiveprimeleft,
                           fiveprimeright,
                           idealdist1, idealdist2,
+                          loopbonus,
                           )
     """ 
     # TEMPORARY PRINTING
@@ -735,6 +760,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         mode              = paramset["mode"]
         idealdist1        = paramset["idealdist1"]
         idealdist2        = paramset["idealdist2"]
+        loopbonus         = paramset["loopbonus"]
 
         minfinscore = minbpscore * minfinscorefactor
 
@@ -772,7 +798,8 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
                            distcoef, orderpenalty,
                            fiveprimeleft, fiveprimeright,
                            mode, idealdist1,
-                           idealdist2,) for stems in curstemsets)
+                           idealdist2, loopbonus,
+                           ) for stems in curstemsets)
 
                 # new optimal stems based on the current stem list 
                 for newstems, stems in pool.imap(mpOptimalStems, inputs):
