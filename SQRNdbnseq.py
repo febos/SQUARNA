@@ -536,7 +536,7 @@ def ScoreStems(seq, stems, rstems, minscore,
         idealdist = idealdist1 if inblockend == -1 else idealdist2
 
         stemdist = dots + bracketweight*brackets # stem distance
-        stemdistfactor = 1 / (1 + distcoef*abs(stemdist - idealdist)/len(seq))
+        stemdistfactor = (1 / (1 + abs(stemdist - idealdist)))**distcoef
 
         order = len(levelset) # number of conflicting pseudoknot levels
         orderfactor = 1 / (1 + orderpenalty*order/3)
@@ -544,8 +544,8 @@ def ScoreStems(seq, stems, rstems, minscore,
         fiveprimeleftdist  = (bps[0][0]   - 0)/len(seq) #how far the left wing is from the 5'-end
         fiveprimerightdist = (bps[-1][-1] - 0)/len(seq) #how far the right wing is from the 5'-end
 
-        fiveprimeleftfactor  = 1 / (1 + fiveprimeleft*fiveprimeleftdist)
-        fiveprimerightfactor = 1 / (1 + fiveprimeright*fiveprimerightdist)
+        fiveprimeleftfactor  = (1 / (1 + fiveprimeleftdist))**fiveprimeleft
+        fiveprimerightfactor = (1 / (1 + fiveprimerightdist))**fiveprimeright
 
         initscore  = stem[2] # initial bp score
         finalscore = initscore * stemdistfactor * orderfactor * fiveprimeleftfactor * fiveprimerightfactor * loopfactor
