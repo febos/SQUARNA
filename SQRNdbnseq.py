@@ -539,7 +539,7 @@ def ScoreStems(seq, stems, rstems, minscore,
         stemdistfactor = (1 / (1 + abs(stemdist - idealdist)))**distcoef
 
         order = len(levelset) # number of conflicting pseudoknot levels
-        orderfactor = 1 / (1 + orderpenalty*order/3)
+        orderfactor = (1 / (1 + order))**orderpenalty
 
         fiveprimeleftdist  = (bps[0][0]   - 0)/len(seq) #how far the left wing is from the 5'-end
         fiveprimerightdist = (bps[-1][-1] - 0)/len(seq) #how far the right wing is from the 5'-end

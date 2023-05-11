@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise150.fas") as file:
+    with open("TS1reducedWC.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -49,16 +49,16 @@ if __name__ == "__main__":
 
     paramsets = []
 
-    #NN = 263
+    #NN = 216
     #queue = queue[NN:NN+1]
 
-    """ DOUBLE ONE """
+    """ QUADRO 0"""
     paramsets.append({"bpweights" : {'GU' : -3,
                                      'AU' :  2,
                                      'GC' :  4,},
                       "subopt" : 0.9,                  
                       "minlen" : 2,
-                      "orderpenalty"  : 2.25,
+                      "orderpenalty"  : 1.05,
                       "distcoef" : 0.2,
                       "minbpscore" : 6,
                       "minfinscorefactor" : 1.0,
@@ -72,13 +72,33 @@ if __name__ == "__main__":
                       "idealdist2" : 2,
                       })
 
-    """ DOUBLE TWO """
+    """ QUADRO 1"""
+    paramsets.append({"bpweights" : {'GU' : -3,
+                                     'AU' :  2,
+                                     'GC' :  4,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "orderpenalty"  : 1.05,
+                      "distcoef" : 0.1,
+                      "minbpscore" : 6,
+                      "minfinscorefactor" : 1.0,
+                      "bracketweight" :  -1.0,
+                      "fiveprimeleft"  : 0.0,
+                      "fiveprimeright" : 0.0,
+                      "maxstemnum" : 10**6,
+                      "loopbonus": 0.5,
+                      "mode": "ver1rev",
+                      "idealdist1" : 4,
+                      "idealdist2" : 2,
+                      })
+
+    """ QUADRO 2"""
     paramsets.append({"bpweights" : {'GU' :  2,
                                      'AU' :  1.5,
                                      'GC' :  4,},
                       "subopt" : 0.9,                  
                       "minlen" : 2,
-                      "orderpenalty"  : 2.25,
+                      "orderpenalty"  : 1.05,
                       "distcoef" : 0.04,
                       "minbpscore" : 8,
                       "minfinscorefactor" : 0.9,
@@ -90,7 +110,27 @@ if __name__ == "__main__":
                       "mode": "maxlen",
                       "idealdist1" : 4,
                       "idealdist2" : 2,
-                      }) 
+                      })
+
+    """ QUADRO 3"""
+    paramsets.append({"bpweights" : {'GU' : -2.5,
+                                     'AU' : -2.5,
+                                     'GC' :  4,},
+                      "subopt" : 0.9,                  
+                      "minlen" : 2,
+                      "orderpenalty"  : 1.0,
+                      "distcoef" : 0.0,
+                      "minbpscore" : 9,
+                      "minfinscorefactor" : 1.0,
+                      "bracketweight" :  -1.0,
+                      "fiveprimeleft"  : 0.0,
+                      "fiveprimeright" : 0.0,
+                      "maxstemnum" : 10**6,
+                      "loopbonus": 0.0,
+                      "mode": "topscore",
+                      "idealdist1" : 4,
+                      "idealdist2" : 2,
+                      })
     
     toplim  = 5
     conslim = 1
