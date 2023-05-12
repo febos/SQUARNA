@@ -762,6 +762,8 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         idealdist2        = paramset["idealdist2"]
         loopbonus         = paramset["loopbonus"]
 
+        cursubopt = 0.7 ########## TEMP
+
         minfinscore = minbpscore * minfinscorefactor
 
         # Generate initial bp-matrix (with bp weights in cells)
@@ -773,10 +775,16 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         # List of finalized stem lists
         finstemsets = []
 
+        cursize = len(curstemsets)
+
         with Pool(threads) as pool:
 
             # while list of intermediate stem lists is not empty
             while curstemsets:
+
+                if len(curstemsets) > cursize and cursubopt < subopt:
+                    cursize = len(curstemsets)
+                    cursubopt += 0.1
 
                 # filtering by len(stems) == maxstemnum
                 newcurstemsets = []
@@ -793,7 +801,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
                 inputs = ((shortseq, stems,
                            bpboolmatrix.copy(), bpscorematrix,
                            rbps.copy(), rxs.copy(), 
-                           subopt, minlen, minbpscore,
+                           cursubopt, minlen, minbpscore, ############################## TEMP
                            minfinscore, bracketweight,
                            distcoef, orderpenalty,
                            fiveprimeleft, fiveprimeright,
