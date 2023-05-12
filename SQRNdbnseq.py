@@ -834,7 +834,10 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     # and not forget about non-predicted bps from restraints
     finstemsets = sorted(finfinstemsets, key = lambda x: x[1], reverse = True)
     for stems, structscore, paramsetind in finstemsets:
-        dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | set(rbps),
+        dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} |
+                               {(v,w) for v,w in rbps
+                                if shortseq[v]+shortseq[w] in bpweights or
+                                   shortseq[w]+shortseq[v] in bpweights},
                     len(shortseq)))
 
     consbps = ConsensusStemSet([xx[0] for xx in finstemsets[:conslim]]) # Consensus of the Top-ranked

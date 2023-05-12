@@ -53,23 +53,23 @@ if __name__ == "__main__":
     #queue = queue[NN:NN+1]
 
     """ TOP ONE """
-    paramsets.append({"bpweights" : {'GU' : -2,
+    paramsets.append({"bpweights" : {'GU' : -3,
                                      'AU' :  2,
                                      'GC' :  4,},
                       "subopt" : 0.9,                  
                       "minlen" : 2,
-                      "orderpenalty"  : 3.4,
-                      "distcoef" : 0.8,
+                      "orderpenalty"  : 1.05,
+                      "distcoef" : 0.2,
                       "minbpscore" : 6,
                       "minfinscorefactor" : 1.0,
                       "bracketweight" :  -1.0,
                       "fiveprimeleft"  : 0.0,
                       "fiveprimeright" : 0.0,
                       "maxstemnum" : 10**6,
-                      "loopbonus": 0.21,
+                      "loopbonus": 0.5,
                       "mode": "ver1rev",
                       "idealdist1" : 4,
-                      "idealdist2" : 4,
+                      "idealdist2" : 2,
                       }) 
     
     toplim  = 5
