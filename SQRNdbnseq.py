@@ -762,7 +762,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         idealdist2        = paramset["idealdist2"]
         loopbonus         = paramset["loopbonus"]
 
-        cursubopt = 0.7 ########## TEMP
+        cursubopt = 0.65 ########## TEMP
 
         minfinscore = minbpscore * minfinscorefactor
 
@@ -784,7 +784,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
 
                 if len(curstemsets) > cursize and cursubopt < subopt:
                     cursize = len(curstemsets)
-                    cursubopt += 0.1
+                    cursubopt += 0.05
 
                 # filtering by len(stems) == maxstemnum
                 newcurstemsets = []
