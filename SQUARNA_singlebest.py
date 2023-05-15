@@ -44,6 +44,10 @@ if __name__ == "__main__":
     #seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
     #dbn = "((((((..((((.......))))))))))."
     
+
+    seq = "GGUCUCCGUAGUGCUGGAAAAGGCGAAAGCUAUGGAUUAUAGGCCGAUAGGGAGUCUAUAAUCCUACGGUGCUGCCUCCGAAAGGAAAGGAGACCA"
+    dbn = None
+    
     #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
 
@@ -56,20 +60,18 @@ if __name__ == "__main__":
     paramsets.append({"bpweights" : {'GU' : -2,
                                      'AU' :  2,
                                      'GC' :  4,},
-                      "subopt" : 0.9,                  
+                      "suboptmax" : 0.9,
+                      "suboptmin" : 0.65,
+                      "suboptsteps": 5,
                       "minlen" : 2,
                       "orderpenalty"  : 1.0,
                       "distcoef" : 0.09,
                       "minbpscore" : 6,
                       "minfinscorefactor" : 1.0,
                       "bracketweight" :  -1.0,
-                      "fiveprimeleft"  : 0.0,
-                      "fiveprimeright" : 0.0,
                       "maxstemnum" : 10**6,
                       "loopbonus": 0.125,
                       "mode": "topscore",
-                      "idealdist1" : 4,
-                      "idealdist2" : 2,
                       }) 
     
     toplim  = 5

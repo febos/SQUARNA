@@ -450,11 +450,8 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
 
 def ScoreStems(seq, stems, rstems, minscore,
                bracketweight, distcoef,
-               orderpenalty, fiveprimeleft,
-               fiveprimeright,
-               idealdist1, idealdist2,
-               loopbonus):
-    """Adjust the scores based on the stem distance, distance from 5'-end, and pseudoknot level"""
+               orderpenalty, loopbonus):
+    """Adjust the scores based on the stem distance and pseudoknot level"""
 
     # short near-symmetric internal loops
     goodloops = {(0, 0), (0, 1), (1, 0),
@@ -532,8 +529,8 @@ def ScoreStems(seq, stems, rstems, minscore,
                 goodloop = True
         loopfactor = 1 + loopbonus*goodloop
 
-        # idealdist1 for hairpins, idealdist2 for everything else
-        idealdist = idealdist1 if inblockend == -1 else idealdist2
+        # 4 for hairpins, 2 for everything else
+        idealdist = 4 if inblockend == -1 else 2
 
         stemdist = dots + bracketweight*brackets # stem distance
         stemdistfactor = (1 / (1 + abs(stemdist - idealdist)))**distcoef
@@ -541,25 +538,15 @@ def ScoreStems(seq, stems, rstems, minscore,
         order = len(levelset) # number of conflicting pseudoknot levels
         orderfactor = (1 / (1 + order))**orderpenalty
 
-        fiveprimeleftdist  = (bps[0][0]   - 0)/len(seq) #how far the left wing is from the 5'-end
-        fiveprimerightdist = (bps[-1][-1] - 0)/len(seq) #how far the right wing is from the 5'-end
-
-        fiveprimeleftfactor  = (1 / (1 + fiveprimeleftdist))**fiveprimeleft
-        fiveprimerightfactor = (1 / (1 + fiveprimerightdist))**fiveprimeright
-
         initscore  = stem[2] # initial bp score
-        finalscore = initscore * stemdistfactor * orderfactor * fiveprimeleftfactor * fiveprimerightfactor * loopfactor
+        finalscore = initscore * stemdistfactor * orderfactor * loopfactor
         
         descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
                                                     round(stemdist,2),
                                                     round(stemdistfactor,2))
         descr += ",or={},orf={}".format(order,
                                         round(orderfactor,2))
-        descr += ",fpld={},fplf={}".format(round(fiveprimeleftdist,2),
-                                           round(fiveprimeleftfactor,2))
-        descr += ",fprd={},fprf={},lf={}".format(round(fiveprimerightdist,2),
-                                                 round(fiveprimerightfactor,2),
-                                                 round(loopfactor,2))
+        descr += ",lf={}".format(round(loopfactor,2))
 
         stem.append(finalscore)
         stem.append(descr)
@@ -611,9 +598,7 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
                  subopt = 1.0, minlen = 2,
                  minbpscore = 6, minfinscore = 0,
                  bracketweight = 1.0, distcoef = 0.1,
-                 orderpenalty = 0.0, fiveprimeleft = 0.0,
-                 fiveprimeright = 0.0, mode = "ver1",
-                 idealdist1 = 4, idealdist2 = 4,
+                 orderpenalty = 0.0, mode = "ver1",
                  loopbonus = 0.0,):
     """Return the top stems"""
 
@@ -625,10 +610,7 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
 
     allstems = ScoreStems(seq, allstems, rstems, minfinscore,
                           bracketweight, distcoef,
-                          orderpenalty, fiveprimeleft,
-                          fiveprimeright,
-                          idealdist1, idealdist2,
-                          loopbonus,
+                          orderpenalty, loopbonus,
                           )
     """ 
     # TEMPORARY PRINTING
@@ -747,22 +729,21 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     for psi, paramset in enumerate(paramsets):
 
         bpweights         = paramset["bpweights"]
-        subopt            = paramset["subopt"]
+        suboptmax         = paramset["suboptmax"]
+        suboptmin         = paramset["suboptmin"]
+        suboptsteps       = paramset["suboptsteps"]
         minlen            = paramset["minlen"]
         minbpscore        = paramset["minbpscore"]
         minfinscorefactor = paramset["minfinscorefactor"]
         bracketweight     = paramset["bracketweight"]
         distcoef          = paramset["distcoef"]
         orderpenalty      = paramset["orderpenalty"]
-        fiveprimeleft     = paramset["fiveprimeleft"]
-        fiveprimeright    = paramset["fiveprimeright"]
         maxstemnum        = paramset["maxstemnum"]
         mode              = paramset["mode"]
-        idealdist1        = paramset["idealdist1"]
-        idealdist2        = paramset["idealdist2"]
         loopbonus         = paramset["loopbonus"]
 
-        cursubopt = 0.65 ########## TEMP
+        cursubopt = suboptmin
+        suboptinc = (suboptmax - suboptmin)/suboptsteps
 
         minfinscore = minbpscore * minfinscorefactor
 
@@ -775,6 +756,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         # List of finalized stem lists
         finstemsets = []
 
+        # Starting with a single empty structure
         cursize = len(curstemsets)
 
         with Pool(threads) as pool:
@@ -782,9 +764,10 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
             # while list of intermediate stem lists is not empty
             while curstemsets:
 
-                if len(curstemsets) > cursize and cursubopt < subopt:
+                # Each time we diverge - cursubopt is increased by suboptinc
+                if len(curstemsets) > cursize and cursubopt < suboptmax:
                     cursize = len(curstemsets)
-                    cursubopt += 0.05
+                    cursubopt += suboptinc
 
                 # filtering by len(stems) == maxstemnum
                 newcurstemsets = []
@@ -804,9 +787,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
                            cursubopt, minlen, minbpscore, ############################## TEMP
                            minfinscore, bracketweight,
                            distcoef, orderpenalty,
-                           fiveprimeleft, fiveprimeright,
-                           mode, idealdist1,
-                           idealdist2, loopbonus,
+                           mode, loopbonus,
                            ) for stems in curstemsets)
 
                 # new optimal stems based on the current stem list 
