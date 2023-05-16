@@ -45,10 +45,11 @@ if __name__ == "__main__":
     #dbn = "((((((..((((.......))))))))))."
     
 
-    seq = "GGUCUCCGUAGUGCUGGAAAAGGCGAAAGCUAUGGAUUAUAGGCCGAUAGGGAGUCUAUAAUCCUACGGUGCUGCCUCCGAAAGGAAAGGAGACCA"
+    seq = "GGGACCAGUUGAACCUGAACAGGGUAAUGCCUGCGCAGGGAGGGUGCUUGUUCACAGGCUGAGAAAGUCCCUGUGUC"
     dbn = None
+    rst = "(..........................................................................)."
     
-    #queue  = [["default", seq, dbn, rst],]
+    queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
 
     paramsets = []
@@ -57,26 +58,12 @@ if __name__ == "__main__":
     #queue = queue[NN:NN+1]
 
     """ TOP ONE """
-    paramsets.append({"bpweights" : {'GU' : -2,
-                                     'AU' :  2,
-                                     'GC' :  4,},
-                      "suboptmax" : 0.9,
-                      "suboptmin" : 0.65,
-                      "suboptsteps": 5,
-                      "minlen" : 2,
-                      "orderpenalty"  : 1.0,
-                      "distcoef" : 0.09,
-                      "minbpscore" : 6,
-                      "minfinscorefactor" : 1.0,
-                      "bracketweight" :  -1.0,
-                      "maxstemnum" : 10**6,
-                      "loopbonus": 0.125,
-                      "mode": "topscore",
-                      }) 
+    paramsets.append({"suboptmin" : 0.65,
+                      "suboptsteps": 5}) 
     
     toplim  = 5
     conslim = 1
-    hardrest = False
+    hardrest = True
     
     resultsB = []
     resultsC = []

@@ -2,6 +2,25 @@
 import numpy as np
 from multiprocessing import Pool
 
+def DefaultParamSet():
+    return {"bpweights" : {'GU' : -2,
+                           'AU' :  2,
+                           'GC' :  4,},
+            "suboptmax" : 0.9,
+            "suboptmin" : 0.9,
+            "suboptsteps": 1,
+            "minlen" : 2,
+            "minbpscore" : 6,
+            "minfinscorefactor" : 1.0,
+            "distcoef" : 0.09,
+            "bracketweight" :  -1.0,
+            "orderpenalty"  : 1.0,
+            "loopbonus": 0.125,
+            "maxstemnum" : 10**6,
+            "mode": "topscore",
+           }
+
+
 def PairsToDBN(newpairs, length = 0, returnlevels = False):
     """Convert a list of base pairs into a dbn string of the given length"""
 
@@ -680,7 +699,7 @@ def ScoreStruct(seq, stemset):
 
    
 def SQRNdbnseq(seq, restraints = None, dbn = None,
-               paramsets = [], conslim = 5, toplim = 5,
+               paramsets = [], conslim = 5, toplim = 5, hardrest = False,
                threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     bpweights == dictionary with canonical bps as keys and their weights as values
@@ -699,6 +718,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
          == maxlen/topscore/all/ver1/ver1rev
     conslim == how many alternative structures are used to derive the consensus
     toplim == how many top ranked structures are used to measrue the performance
+    hardrest == force restraint base pairs to be present in the predicted dbns or not
     threads == number of CPUs to use
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
@@ -726,7 +746,10 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     finfinstemsets = []
     seen_structures = set() # set of bp-sets (to avoid repeats in finfinstemsets)
 
-    for psi, paramset in enumerate(paramsets):
+    for psi, currentparamset in enumerate(paramsets):
+
+        paramset = DefaultParamSet()
+        paramset.update(currentparamset)
 
         bpweights         = paramset["bpweights"]
         suboptmax         = paramset["suboptmax"]
@@ -822,14 +845,16 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     # and convert all final stem lists into dbn strings
     # and not forget about non-predicted bps from restraints
     finstemsets = sorted(finfinstemsets, key = lambda x: x[1], reverse = True)
+
+    forcedbps = {(v,w) for v,w in rbps
+                 if shortseq[v]+shortseq[w] in bpweights or
+                    shortseq[w]+shortseq[v] in bpweights} if hardrest else set()
+    
     for stems, structscore, paramsetind in finstemsets:
-        dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} |
-                               {(v,w) for v,w in rbps
-                                if shortseq[v]+shortseq[w] in bpweights or
-                                   shortseq[w]+shortseq[v] in bpweights},
+        dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | forcedbps,
                     len(shortseq)))
 
-    consbps = ConsensusStemSet([xx[0] for xx in finstemsets[:conslim]]) # Consensus of the Top-ranked
+    consbps = ConsensusStemSet([xx[0] for xx in finstemsets[:conslim]]) | forcedbps # Consensus of the Top-ranked
 
     # ReAlign the dbn strings accoring to seq
     dbns = [ReAlign(x, seq) for x in dbns]

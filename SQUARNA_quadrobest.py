@@ -126,6 +126,7 @@ if __name__ == "__main__":
     
     toplim  = 5
     conslim = 1
+    hardrest = False
     
     resultsB = []
     resultsC = []
@@ -135,7 +136,7 @@ if __name__ == "__main__":
         name, seq, dbn, rst = obj
 
         result = SQRNdbnseq(seq, rst, dbn,
-                            paramsets, conslim, toplim,
+                            paramsets, conslim, toplim, hardrest,
                             threads)
 
         print(name)
