@@ -62,7 +62,7 @@ if __name__ == "__main__":
                                      'GC' :  4,},
                       "suboptmax" : 0.9,
                       "suboptmin" : 0.65,
-                      "suboptsteps": 5,
+                      "suboptsteps": 3,
                       "minlen" : 2,
                       "orderpenalty"  : 1.0,
                       "distcoef" : 0.09,

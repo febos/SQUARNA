@@ -474,13 +474,13 @@ def ScoreStems(seq, stems, rstems, minscore,
 
     # short near-symmetric internal loops
     goodloops = {(0, 0), (0, 1), (1, 0),
-                 (1, 1), (1, 2), (2, 1),
-                 (2, 2), (2, 3), (3, 2),
+                 (1, 1), (0, 2), (2, 0),
+                 (2, 2), (1, 2), (2, 1),
+                 (3, 1), (1, 3),
+                 (2, 3), (3, 2),
                  (3, 3), (3, 4), (4, 3),
                  (4, 4), (4, 2), (2, 4),
-                 (3, 1), (1, 3),
-                 (0, 2), (2, 0),
-                 (5, 5)}
+                }
 
     # values == indices of the bp partners or -1 for unpaired bases
     bppartners = [-1 for _ in range(len(seq))]
@@ -879,7 +879,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
 
         for rank, stemset in enumerate(finstemsets):
 
-            setbps = {bp for stem in stemset[0] for bp in stem[0]}
+            setbps = {bp for stem in stemset[0] for bp in stem[0]} | forcedbps
 
             tp = len(setbps & knownbps)
             fp = len(setbps - knownbps)

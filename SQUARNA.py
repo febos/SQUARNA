@@ -49,7 +49,7 @@ if __name__ == "__main__":
     dbn = None
     rst = "(..........................................................................)."
     
-    queue  = [["default", seq, dbn, rst],]
+    #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
 
     paramsets = []
@@ -59,7 +59,7 @@ if __name__ == "__main__":
 
     """ TOP ONE """
     paramsets.append({"suboptmin" : 0.65,
-                      "suboptsteps": 5}) 
+                      "suboptsteps": 3}) 
     
     toplim  = 5
     conslim = 1
