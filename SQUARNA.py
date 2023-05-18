@@ -1,6 +1,6 @@
 import numpy as np
 
-from SQRNdbnseq import SQRNdbnseq
+from SQRNdbnseq import SQRNdbnseq, BPMatrix, DBNToPairs, AnnotateStems
 
 
 if __name__ == "__main__":
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise150.fas") as file:
+    with open("CoRToise.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -34,6 +34,48 @@ if __name__ == "__main__":
             sq = lines[ii+1].strip()
             db = lines[ii+2].strip()
             queue.append([nm, sq, db, rst])
+
+
+    cases = []
+
+    for obj in queue:
+
+        name, seq, dbn, rst = obj
+
+        rbps = set()
+        rxs = set()
+        rstems = []
+        realbps = DBNToPairs(dbn)
+
+        bpboolmatrix, bpscorematrix = BPMatrix(seq, {'GC':1,'GU':1,'AU':1})
+
+        stems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
+                              rstems, 1, 0, "maxlen")
+
+        print(name)
+        print(seq)
+        print(dbn)
+        for stem in stems:
+            bps = stem[0]
+            if any(x in realbps for x in bps):
+
+                left, right = '', ''
+
+                for v,w in bps:
+                    if (v,w) in realbps:
+                        left  = left + seq[v]
+                        right = seq[w] + right
+                    else:
+                        left  = left + seq[v].lower()
+                        right = seq[w].lower() + right
+                if not left==left.upper():
+                    cases.append((left,right))
+    cases = Counter(cases)
+
+    for x in cases:
+        print(x, cases[x])
+
+    queue = []
 
     #seq = "AAACCACGAGGAAGAGAGGUAGCGUUUUCUCCUGAGCGUGAAGCCGGCUUUCUGGCGUUGCUUGGCUGCAACUGCCGUCAGCCAUUGAUGAUCGUUCUUCUCUCCGUAUUGGGGAGUGAGAGGGAGAGAACGCGGUCUGAGUGGU"
     #dbn = "..(((((......(.......((((((((((((....(...(...((((..(.((((((((......))))).))))..))))..)......)..((((((((((.....)))))).))))))))))))))))...)...)))))"
