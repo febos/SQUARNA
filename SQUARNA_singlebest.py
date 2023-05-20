@@ -62,7 +62,7 @@ if __name__ == "__main__":
                                      'GC' :  4,},
                       "suboptmax" : 0.9,
                       "suboptmin" : 0.65,
-                      "suboptsteps": 3,
+                      "suboptsteps": 1,
                       "minlen" : 2,
                       "orderpenalty"  : 1.0,
                       "distcoef" : 0.09,
@@ -71,7 +71,7 @@ if __name__ == "__main__":
                       "bracketweight" :  -1.0,
                       "maxstemnum" : 10**6,
                       "loopbonus": 0.125,
-                      "mode": "topscore",
+                      "mode": "diffedge",
                       }) 
     
     toplim  = 5

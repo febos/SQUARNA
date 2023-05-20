@@ -7,7 +7,7 @@ def DefaultParamSet():
                            'AU' :  2,
                            'GC' :  4,},
             "suboptmax" : 0.9,
-            "suboptmin" : 0.9,
+            "suboptmin" : 0.65,
             "suboptsteps": 1,
             "minlen" : 2,
             "minbpscore" : 6,
@@ -17,7 +17,7 @@ def DefaultParamSet():
             "orderpenalty"  : 1.0,
             "loopbonus": 0.125,
             "maxstemnum" : 10**6,
-            "mode": "topscore",
+            "mode": "diffedge",
            }
 
 
@@ -393,13 +393,28 @@ def StemsFromPreStemsAll(prestems):
     return stems
 
 
+def StemsFromPreStemsDiffEdge(prestems, diff = 1):
+    """Define stems as maximum sub-sequence of consecutive bps with up to
+    <diff> trimmed base pairs from either of the edges"""
+    stems = []
+    for prestem in prestems:
+        for i in range(diff + 1):
+            for j in range(len(prestem) - diff, len(prestem) + 1):
+                if j > i:
+                    substem = prestem[i:j]
+                    bps = [x[2] for x in substem]
+                    score = sum(x[1] for x in substem)
+                    stems.append([bps, len(bps), score])
+    return stems
+
+
 def StemsFromDiag(diag, mode):
     """Annotate stems at the given diagonal"""
     if mode == "ver1": # My first bugged version of the max-subarray stems
         return StemsFromDiagTheFirstVersion(diag)
     if mode == "ver1rev": # The reversed first bugged version of the max-subarray stems
         return StemsFromDiagTheFirstVersionReversed(diag)
-    if mode in {"all", "maxlen", "topscore"}:
+    if mode in {"all", "maxlen", "topscore", "diffedge"}:
         prestems = PreStemsFromDiag(diag)
         if mode == "maxlen": # Stems as longest sequences of consecutive bps
             return StemsFromPreStemsMaxLen(prestems)
@@ -407,7 +422,8 @@ def StemsFromDiag(diag, mode):
             return StemsFromPreStemsTopScore(prestems)
         if mode == "all":
             return StemsFromPreStemsAll(prestems)
-
+        if mode == "diffedge":
+            return StemsFromPreStemsDiffEdge(prestems)
 
     assert True == False, "check your mode value" ### SHOULD NEVER HAPPEN
 

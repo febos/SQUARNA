@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise.fas") as file:
+    with open("CoRToise150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -35,47 +35,6 @@ if __name__ == "__main__":
             db = lines[ii+2].strip()
             queue.append([nm, sq, db, rst])
 
-
-    cases = []
-
-    for obj in queue:
-
-        name, seq, dbn, rst = obj
-
-        rbps = set()
-        rxs = set()
-        rstems = []
-        realbps = DBNToPairs(dbn)
-
-        bpboolmatrix, bpscorematrix = BPMatrix(seq, {'GC':1,'GU':1,'AU':1})
-
-        stems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
-                              rstems, 1, 0, "maxlen")
-
-        print(name)
-        print(seq)
-        print(dbn)
-        for stem in stems:
-            bps = stem[0]
-            if any(x in realbps for x in bps):
-
-                left, right = '', ''
-
-                for v,w in bps:
-                    if (v,w) in realbps:
-                        left  = left + seq[v]
-                        right = seq[w] + right
-                    else:
-                        left  = left + seq[v].lower()
-                        right = seq[w].lower() + right
-                if not left==left.upper():
-                    cases.append((left,right))
-    cases = Counter(cases)
-
-    for x in cases:
-        print(x, cases[x])
-
-    queue = []
 
     #seq = "AAACCACGAGGAAGAGAGGUAGCGUUUUCUCCUGAGCGUGAAGCCGGCUUUCUGGCGUUGCUUGGCUGCAACUGCCGUCAGCCAUUGAUGAUCGUUCUUCUCUCCGUAUUGGGGAGUGAGAGGGAGAGAACGCGGUCUGAGUGGU"
     #dbn = "..(((((......(.......((((((((((((....(...(...((((..(.((((((((......))))).))))..))))..)......)..((((((((((.....)))))).))))))))))))))))...)...)))))"
@@ -100,8 +59,12 @@ if __name__ == "__main__":
     #queue = queue[NN:NN+1]
 
     """ TOP ONE """
-    paramsets.append({"suboptmin" : 0.65,
-                      "suboptsteps": 3}) 
+    paramsets.append({"bpweights" : {'GU' :  -2,
+                                     'AU' :  2,
+                                     'GC' :  4,},
+                      "suboptmin" : 0.65,
+                      "suboptsteps": 1,
+                      "mode": "diffedge"}) 
     
     toplim  = 5
     conslim = 1
