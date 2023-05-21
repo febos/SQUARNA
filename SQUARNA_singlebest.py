@@ -77,6 +77,7 @@ if __name__ == "__main__":
     toplim  = 5
     conslim = 1
     hardrest = False
+    rankbydiff = False
     
     resultsB = []
     resultsC = []
@@ -86,7 +87,8 @@ if __name__ == "__main__":
         name, seq, dbn, rst = obj
 
         result = SQRNdbnseq(seq, rst, dbn,
-                            paramsets, conslim, toplim, hardrest,
+                            paramsets, conslim, toplim,
+                            hardrest, rankbydiff,
                             threads)
 
         print(name)

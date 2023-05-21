@@ -713,9 +713,42 @@ def ScoreStruct(seq, stemset):
             thescore += bpsum**power if bpsum >= 0 else -(abs(bpsum)**power)
     return round(thescore, 3)
 
+
+def RankStructs(stemsets, rankbydiff = False):
+    """Rank the predicted structures"""
+    finstemsets = sorted(stemsets, key = lambda x: x[1], reverse = True)
+
+    if not rankbydiff or len(finstemsets) < 3:
+        return finstemsets
+
+    allbps = set()
+
+    for stemset in finstemsets:
+        bps = {bp for stem in stemset[0] for bp in stem[0]}
+        stemset.append(bps)
+        allbps |= bps
+
+    seenbps = {bp for bp in finstemsets[0][-1]}
+    curind  = 1
+
+    while seenbps != allbps and curind < len(finstemsets) - 1:
+
+        finstemsets = finstemsets[:curind] + sorted(finstemsets[curind:],
+                                                    key = lambda x: (len(x[-1] - seenbps),
+                                                                     x[1]),
+                                                    reverse = True)
+        seenbps |= finstemsets[curind][-1]
+        curind += 1
+
+    finstemsets = finstemsets[:curind] + sorted(finstemsets[curind:],
+                                                key = lambda x: x[1],
+                                                reverse = True)
+    return [x[:-1] for x in finstemsets]
+
    
 def SQRNdbnseq(seq, restraints = None, dbn = None,
-               paramsets = [], conslim = 5, toplim = 5, hardrest = False,
+               paramsets = [], conslim = 5, toplim = 5,
+               hardrest = False, rankbydiff = True,
                threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     bpweights == dictionary with canonical bps as keys and their weights as values
@@ -735,6 +768,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     conslim == how many alternative structures are used to derive the consensus
     toplim == how many top ranked structures are used to measrue the performance
     hardrest == force restraint base pairs to be present in the predicted dbns or not
+    rankbydiff == TODO
     threads == number of CPUs to use
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
@@ -857,15 +891,16 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     # list of dbn strings
     dbns = []
 
-    # sort the final stem lists in descreasing order of their total bp-score
-    # and convert all final stem lists into dbn strings
-    # and not forget about non-predicted bps from restraints
-    finstemsets = sorted(finfinstemsets, key = lambda x: x[1], reverse = True)
+    # sort the final stem lists in descreasing order of their total bp-score by default
+    # and if rankbydiff - prioritize the most diverged structures
+    finstemsets = RankStructs(finfinstemsets, rankbydiff)
 
     forcedbps = {(v,w) for v,w in rbps
                  if shortseq[v]+shortseq[w] in bpweights or
                     shortseq[w]+shortseq[v] in bpweights} if hardrest else set()
-    
+
+    # convert all final stem lists into dbn strings
+    # and not forget about non-predicted bps from restraints
     for stems, structscore, paramsetind in finstemsets:
         dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | forcedbps,
                     len(shortseq)))
