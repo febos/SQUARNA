@@ -1015,12 +1015,12 @@ if __name__ == "__main__":
     maxstemnum = 10**6
 
     for mode in ("diffedge",):
-        for bracketweight in (-1, 0, 1):            
-            for minfinscorefactor in (1.0, 0.5, 1.5):
-                for loopbonus in (0.125, 0.05, 0.20):
-                    for distcoef in (0.09, 0.05, 0.20):
-                        for orderpenalty in (1.0, 0.5, 1.5, 2.0):
-                            for suboptsteps in (1, 2):
+        for suboptsteps in (1, 2):
+            for bracketweight in (-1, 0, 1):            
+                for minfinscorefactor in (1.0, 0.5, 1.5):
+                    for loopbonus in (0.125, 0.05, 0.20):
+                        for distcoef in (0.09, 0.05, 0.20):
+                            for orderpenalty in (1.0, 0.5, 1.5, 2.0):
                                 for GU in (-2, -1.0, 0.0, 1.0):
                                     for AU in (-1.0, 0.0, 1.0, 2.0):
                                         for GC in (3.0, 4.0, 5.0):
