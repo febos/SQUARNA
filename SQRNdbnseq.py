@@ -1006,7 +1006,7 @@ if __name__ == "__main__":
 
     ######################################
 
-    threads = 24
+    threads = 32
 
     conslim = 1
     toplim  = 5
