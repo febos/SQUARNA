@@ -999,7 +999,7 @@ if __name__ == "__main__":
 
     outp = open('temp.tsv','w')
 
-    title = '\t'.join("subopt loopbonus minlen minbpscore minfinscorefactor bracketweight distcoef orderpenalty fiveprimeleft fiveprimeright maxstemnum mode GU AU GC idealdist1 idealdist2 tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
+    title = '\t'.join("mode bracketweight loopbonus minfinscorefactor distcoef orderpenalty GU AU GC minbpscore suboptmax suboptmin suboptsteps rankbydiff tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
     print(title)
     outp.write(title+'\n')
     outp.close()
@@ -1010,48 +1010,46 @@ if __name__ == "__main__":
 
     conslim = 1
     toplim  = 5
-
-    subopt = 0.9
     minlen = 2
     maxstemnum = 10**6
-    
-    for bracketweight in (1, 0, 2):            
-        for fiveprimeright in (0.0, 0.1, 0.3):
-            for fiveprimeleft in (0.0, 0.1, 0.3):
-                for loopbonus in (0, 0.1 , 0.2):
-                    for minfinscorefactor in (1.0, 0.75, 0.5):
-                        for distcoef in (0.35, 0.4, 0.6, 0.8, 1.0):
-                            for orderpenalty in (2.0, 2.5, 3.0, 4.0):
-                                for mode in ("maxlen", "ver1", "ver1rev", "topscore"):
-                                    for GU in (-2, ):
-                                        for AU in (2, ):
-                                            for GC in (4.0, 4.5, 5.0):
-                                                for minbpscore in (GC, GC+AU, GC+GC):
-                                                    for idealdist1 in (4,):
-                                                        for idealdist2 in (4,):
+
+    for mode in ("diffedge",):
+        for bracketweight in (-1, 0, 1):            
+            for minfinscorefactor in (1.0, 0.5, 1.5):
+                for loopbonus in (0.125, 0.05, 0.20):
+                    for distcoef in (0.09, 0.05, 0.20):
+                        for orderpenalty in (1.0, 0.5, 1.5, 2.0):
+                            for GU in (-2, -1.0, 0.0, 1.0):
+                                for AU in (-1.0, 0.0, 1.0, 2.0):
+                                    for GC in (3.0, 4.0, 5.0):
+                                        for minbpscore in (GC+AU,):
+                                            for suboptmax in (0.9, 0.95, 1.0):
+                                                for suboptmin in (0.6, 0.7, 0.8, 0.9):
+                                                    for suboptsteps in (1, 2):
+                                                        for rankbydiff in (False, True):
+                                                            
                                                             ####################################################
-                                                            print(subopt, loopbonus, minlen, minbpscore, minfinscorefactor, bracketweight, distcoef,
-                                                                  orderpenalty, fiveprimeleft, fiveprimeright, maxstemnum, mode,
-                                                                  GU, AU, GC, idealdist1, idealdist2, sep='\t', end='\t')
+                                                            print(mode, bracketweight, loopbonus, minfinscorefactor,
+                                                                  distcoef, orderpenalty, GU, AU, GC, minbpscore, suboptmax,
+                                                                  suboptmin, suboptsteps, rankbydiff, sep='\t', end='\t')
 
                                                             paramsets = []
-                                                            paramsets.append({"bpweights" : {'GU' :  GU,
-                                                                                             'AU' :  AU,
-                                                                                             'GC' :  GC,},
-                                                                              "subopt" : subopt,                  
+                                                            paramsets.append({"bpweights" : {'GU' : GU,
+                                                                                             'AU' : AU,
+                                                                                             'GC' : GC,},
+                                                                              "suboptmax" : suboptmax,
+                                                                              "suboptmin" : suboptmin,
+                                                                              "suboptsteps": suboptsteps,
                                                                               "minlen" : minlen,
                                                                               "minbpscore" : minbpscore,
                                                                               "minfinscorefactor" : minfinscorefactor,
                                                                               "distcoef" : distcoef,
-                                                                              "bracketweight" : bracketweight,
-                                                                              "orderpenalty" : orderpenalty,
-                                                                              "fiveprimeleft" : fiveprimeleft,
-                                                                              "fiveprimeright" : fiveprimeright,
+                                                                              "bracketweight" :  bracketweight,
+                                                                              "orderpenalty"  : orderpenalty,
+                                                                              "loopbonus": loopbonus,
                                                                               "maxstemnum" : maxstemnum,
                                                                               "mode": mode,
-                                                                              "idealdist1" : idealdist1,
-                                                                              "idealdist2" : idealdist2,
-                                                                              "loopbonus" : loopbonus})
+                                                                              })
 
                                                             resultsB = []
                                                             resultsC = []
@@ -1102,9 +1100,9 @@ if __name__ == "__main__":
                                                                   round(np.mean(prB), 3), round(np.mean(rcB), 3), sep = '\t')
 
                                                             outp = open('temp.tsv','a')
-                                                            toprint = '\t'.join([str(xx) for xx in [subopt, loopbonus, minlen, minbpscore, minfinscorefactor, bracketweight, distcoef,
-                                                                                                    orderpenalty, fiveprimeleft, fiveprimeright, maxstemnum, mode,
-                                                                                                    GU, AU, GC, idealdist1, idealdist2,
+                                                            toprint = '\t'.join([str(xx) for xx in [mode, bracketweight, loopbonus, minfinscorefactor,
+                                                                                                    distcoef, orderpenalty, GU, AU, GC, minbpscore, suboptmax,
+                                                                                                    suboptmin, suboptsteps, rankbydiff,
                                                                                                     tpC, fpC, fnC,
                                                                                                     round(2*tpC / (2*tpC + fpC + fnC), 3),
                                                                                                     round(np.mean(fsC), 3),
