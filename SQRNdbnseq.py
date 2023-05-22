@@ -1011,6 +1011,7 @@ if __name__ == "__main__":
     conslim = 1
     toplim  = 5
     minlen = 2
+    hardrest = False
     maxstemnum = 10**6
 
     for mode in ("diffedge",):
@@ -1019,13 +1020,13 @@ if __name__ == "__main__":
                 for loopbonus in (0.125, 0.05, 0.20):
                     for distcoef in (0.09, 0.05, 0.20):
                         for orderpenalty in (1.0, 0.5, 1.5, 2.0):
-                            for GU in (-2, -1.0, 0.0, 1.0):
-                                for AU in (-1.0, 0.0, 1.0, 2.0):
-                                    for GC in (3.0, 4.0, 5.0):
-                                        for minbpscore in (GC+AU,):
-                                            for suboptmax in (0.9, 0.95, 1.0):
-                                                for suboptmin in (0.6, 0.7, 0.8, 0.9):
-                                                    for suboptsteps in (1, 2):
+                            for suboptsteps in (1, 2):
+                                for GU in (-2, -1.0, 0.0, 1.0):
+                                    for AU in (-1.0, 0.0, 1.0, 2.0):
+                                        for GC in (3.0, 4.0, 5.0):
+                                            for minbpscore in (GC+AU,):
+                                                for suboptmax in (0.9, 0.95, 1.0):
+                                                    for suboptmin in (0.6, 0.7, 0.8, 0.9):
                                                         for rankbydiff in (False, True):
                                                             
                                                             ####################################################
@@ -1060,6 +1061,7 @@ if __name__ == "__main__":
 
                                                                 result = SQRNdbnseq(seq, rst, dbn,
                                                                                     paramsets, conslim, toplim,
+                                                                                    hardrest, rankbydiff,
                                                                                     threads)
 
                                                                 '''print(name)
