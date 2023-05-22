@@ -556,13 +556,25 @@ def ScoreStems(seq, stems, rstems, minscore,
                 inblockend = partner
                 block_edges.append((pos, partner))
 
-        # to prioritize short near-symmetric internal loops
+        # to prioritize short near-symmetric internal loops inside
         goodloop = False
         if len(block_edges) == 1:
             if (block_edges[0][0] - stemstart - 1,
                 stemend - block_edges[0][1] - 1) in goodloops:
                 goodloop = True
-        loopfactor = 1 + loopbonus*goodloop
+        # to prioritize short near-symmetric internal loops outside
+        goodloopout = False
+        outerstart, outerend = bps[0]
+        vv,ww = outerstart - 1, outerend + 1
+        while vv >= 0 and outerstart - vv - 1 < 5 and bppartners[vv] == -1:
+            vv -= 1
+        while ww < len(seq) and ww - outerend - 1 < 5 and bppartners[ww] == -1:
+            ww += 1
+        if bppartners[vv] == ww and bppartners[ww] == vv and\
+           (outerstart - vv - 1, ww - outerend - 1) in goodloops:
+            goodloopout = True
+
+        loopfactor = 1 + loopbonus*goodloop + loopbonus*goodloopout
 
         # 4 for hairpins, 2 for everything else
         idealdist = 4 if inblockend == -1 else 2
@@ -581,7 +593,7 @@ def ScoreStems(seq, stems, rstems, minscore,
                                                     round(stemdistfactor,2))
         descr += ",or={},orf={}".format(order,
                                         round(orderfactor,2))
-        descr += ",lf={}".format(round(loopfactor,2))
+        descr += ",lf={},{},{}".format(round(loopfactor,2),(stemstart,stemend),(vv,ww))
 
         stem.append(finalscore)
         stem.append(descr)

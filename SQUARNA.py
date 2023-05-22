@@ -9,8 +9,6 @@ if __name__ == "__main__":
 
     rst = None
 
-    threads = 1
-
     #SAM riboswitch
     seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
     dbn = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
@@ -55,7 +53,7 @@ if __name__ == "__main__":
 
     paramsets = []
 
-    #NN = 260
+    #NN = 264
     #queue = queue[NN:NN+1]
 
     """ TOP ONE """
@@ -65,6 +63,8 @@ if __name__ == "__main__":
                       "suboptmin" : 0.65,
                       "suboptsteps": 1,
                       "mode": "diffedge"}) 
+
+    threads = 2
     
     toplim     = 5
     conslim    = 1
