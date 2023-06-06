@@ -44,11 +44,11 @@ if __name__ == "__main__":
     #dbn = "((((((..((((.......))))))))))."
     
 
-    seq = "GGGACCAGUUGAACCUGAACAGGGUAAUGCCUGCGCAGGGAGGGUGCUUGUUCACAGGCUGAGAAAGUCCCUGUGUC"
-    dbn = None
-    rst = "(..........................................................................)."
+    #seq = "GGGACCAGUUGAACCUGAACAGGGUAAUGCCUGCGCAGGGAGGGUGCUUGUUCACAGGCUGAGAAAGUCCCUGUGUC"
+    #dbn = None
+    #rst = "(..........................................................................)."
     
-    #queue  = [["default", seq, dbn, rst],]
+    queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
 
     paramsets = []
@@ -57,12 +57,22 @@ if __name__ == "__main__":
     #queue = queue[NN:NN+1]
 
     """ TOP ONE """
-    paramsets.append({"bpweights" : {'GU' :  -2,
-                                     'AU' :  2,
-                                     'GC' :  4,},
-                      "suboptmin" : 0.65,
-                      "suboptsteps": 1,
-                      "mode": "diffedge"}) 
+    paramsets.append({"bpweights" : {'GU' : -1,
+                           'AU' :  1,
+                           'GC' :  3,},
+            "suboptmax" : 0.9,
+            "suboptmin" : 0.65,
+            "suboptsteps": 1,
+            "minlen" : 2,
+            "minbpscore" : 4,
+            "minfinscorefactor" : 1.0,
+            "distcoef" : 0.07,
+            "bracketweight" :  -1.0,
+            "orderpenalty"  : 1.25,
+            "loopbonus": 0.15,
+            "maxstemnum" : 10**6,
+            "mode": "diffedge",
+           }) 
 
     threads = 2
     
