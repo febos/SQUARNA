@@ -57,19 +57,19 @@ if __name__ == "__main__":
     #queue = queue[NN:NN+1]
 
     """ TOP ONE """
-    paramsets.append({"bpweights" : {'GU' : -1,
-                           'AU' :  1,
+    paramsets.append({"bpweights" : {'GU' : -1.5,
+                           'AU' :  1.5,
                            'GC' :  3,},
             "suboptmax" : 0.9,
             "suboptmin" : 0.65,
             "suboptsteps": 1,
             "minlen" : 2,
-            "minbpscore" : 4,
+            "minbpscore" : 4.5,
             "minfinscorefactor" : 1.0,
-            "distcoef" : 0.07,
+            "distcoef" : 0.09,
             "bracketweight" :  -1.0,
-            "orderpenalty"  : 1.25,
-            "loopbonus": 0.15,
+            "orderpenalty"  : 1.2,
+            "loopbonus": 0.175,
             "maxstemnum" : 10**6,
             "mode": "diffedge",
            }) 

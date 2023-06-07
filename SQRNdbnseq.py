@@ -3,19 +3,19 @@ import numpy as np
 from multiprocessing import Pool
 
 def DefaultParamSet():
-    return {"bpweights" : {'GU' : -1,
-                           'AU' :  1,
+    return {"bpweights" : {'GU' : -1.5,
+                           'AU' :  1.5,
                            'GC' :  3,},
             "suboptmax" : 0.9,
             "suboptmin" : 0.65,
             "suboptsteps": 1,
             "minlen" : 2,
-            "minbpscore" : 4,
+            "minbpscore" : 4.5,
             "minfinscorefactor" : 1.0,
-            "distcoef" : 0.07,
+            "distcoef" : 0.09,
             "bracketweight" :  -1.0,
-            "orderpenalty"  : 1.25,
-            "loopbonus": 0.15,
+            "orderpenalty"  : 1.2,
+            "loopbonus": 0.175,
             "maxstemnum" : 10**6,
             "mode": "diffedge",
            }
@@ -1015,18 +1015,18 @@ if __name__ == "__main__":
     maxstemnum = 10**6
 
     for mode in ("diffedge",):
-        for suboptsteps in (1, 2, 3):
-            for bracketweight in (-1, 0, 1):            
-                for minfinscorefactor in (1.0, 0.5, 1.5):
-                    for loopbonus in (0.15, 0.175, 0.125):
-                        for distcoef in (0.07, 0.05, 0.09,):
-                            for orderpenalty in (1.25, 1.2):
-                                for GU in (-1.0, -1.5, -0.5):
-                                    for AU in (1.0, 0.5, 1.5):
-                                        for GC in (3.0, 3.5):
+        for suboptsteps in (1, 2):
+            for bracketweight in (-1, -2,):            
+                for minfinscorefactor in (1.0, ):
+                    for loopbonus in (0.125, 0.15, 0.175, 0.2):
+                        for distcoef in (0.07, 0.09, 0.11):
+                            for orderpenalty in (1.25, 1.2, 1.1, 1.0):
+                                for GU in (-1.75, -1.5, -1.25):
+                                    for AU in (1.25, 1.5, 1.75):
+                                        for GC in (2.75, 3.0, 3.25):
                                             for minbpscore in (GC+AU,):
                                                 for suboptmax in (0.9,):
-                                                    for suboptmin in (0.65, 0.75):
+                                                    for suboptmin in (0.65,):
                                                         for rankbydiff in (False,):
                                                             
                                                             ####################################################
