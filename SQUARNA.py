@@ -23,7 +23,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise150.fas") as file:
+    with open("TS1reduced.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -48,30 +48,52 @@ if __name__ == "__main__":
     #dbn = None
     #rst = "(..........................................................................)."
     
-    queue  = [["default", seq, dbn, rst],]
+    #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
+
+    poor = {6, 28, 54, 55, 61, 73, 81, 90, 129, 133, 144, 150, 155, 158, 160, 161, 162, 163, 165, 168, 173, 174, 175, 177, 179, 182, 187, 191, 200, 202, 203, 204, 205, 206, 209, 211, 215, 223, 224, 226, 228, 232, 238, 239, 244, 245, 247, 252, 254, 258, 259, 260, 265}
+
+    #queue = [queue[i] for i in range(len(queue)) if i in poor]
 
     paramsets = []
 
     #NN = 264
     #queue = queue[NN:NN+1]
 
-    """ TOP ONE """
-    paramsets.append({"bpweights" : {'GU' : -1.5,
-                           'AU' :  1.5,
-                           'GC' :  3,},
+    """ TOP ONE """  
+    paramsets.append({"bpweights" : {'GU' : -1.25,
+                           'AU' :  1.25,
+                           'GC' :  3.25,},
             "suboptmax" : 0.9,
             "suboptmin" : 0.65,
             "suboptsteps": 1,
             "minlen" : 2,
             "minbpscore" : 4.5,
-            "minfinscorefactor" : 1.0,
+            "minfinscorefactor" : 1.25,
             "distcoef" : 0.09,
-            "bracketweight" :  -1.0,
-            "orderpenalty"  : 1.2,
-            "loopbonus": 0.175,
+            "bracketweight" :  -1.0,##
+            "orderpenalty"  : 1.1,
+            "loopbonus": 0.125,
             "maxstemnum" : 10**6,
-            "mode": "diffedge",
+            "mode": "diffedge", ##
+           }) 
+
+    """ TOP TWO """  
+    paramsets.append({"bpweights" : {'GU' : 1,
+                           'AU' :  1,
+                           'GC' :  2,},
+            "suboptmax" : 0.9,
+            "suboptmin" : 0.65,
+            "suboptsteps": 1,
+            "minlen" : 2,
+            "minbpscore" : 3,
+            "minfinscorefactor" : 0.95,
+            "distcoef" : 0.09,
+            "bracketweight" :  -1.0,##
+            "orderpenalty"  : 1.1,
+            "loopbonus": 0.125,
+            "maxstemnum" : 10**6,
+            "mode": "diffedge",##
            }) 
 
     threads = 2
@@ -130,6 +152,8 @@ if __name__ == "__main__":
     prB = [x[4] for x in resultsB]
     rcB = [x[5] for x in resultsB]
     rkB = [x[6] for x in resultsB]
+
+    #print([i for i in range(len(fsB)) if fsB[i]<0.7]) # poorly predicted sequences
 
     m1 = round(2*tpB / (2*tpB + fpB + fnB), 3)
     m2 = round(np.mean(fsB), 3)
