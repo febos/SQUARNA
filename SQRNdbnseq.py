@@ -709,20 +709,21 @@ def ConsensusStemSet(stemsets):
 
 def ScoreStruct(seq, stemset):
     """ Return the overall structure score based on the stemset"""
-    bpscores = {"GU": -0.25,
+    bpscores = {"GU": -1.0,
                 "AU": 1.5,
                 "GC": 4.0,
                }
     for bp in sorted(bpscores.keys()): # CG for GC, etc.
         bpscores[bp[::-1]] = bpscores[bp]
 
-    power = 1.75 # we will sum up these powers of the stem scores
+    power = 1.7 # we will sum up these powers of the stem scores
     thescore = 0
 
     for stem in stemset:
         bpsum = sum(bpscores[seq[bp[0]]+seq[bp[1]]] for bp in stem[0])
-        if bpsum >= 0:
-            thescore += bpsum**power if bpsum >= 0 else -(abs(bpsum)**power)
+        if bpsum > 0:
+            thescore += bpsum**power
+
     return round(thescore, 3)
 
 

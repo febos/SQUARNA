@@ -71,14 +71,14 @@ if __name__ == "__main__":
             "minbpscore" : 4.5,
             "minfinscorefactor" : 1.25,
             "distcoef" : 0.09,
-            "bracketweight" :  -1.0,##
-            "orderpenalty"  : 1.1,
+            "bracketweight" :  -2.0,##
+            "orderpenalty"  : 1.0,
             "loopbonus": 0.125,
             "maxstemnum" : 10**6,
             "mode": "diffedge", ##
-           }) 
+           })
 
-    """ TOP TWO """  
+    """ TOP TWO """ 
     paramsets.append({"bpweights" : {'GU' : 1,
                            'AU' :  1,
                            'GC' :  2,},
@@ -89,14 +89,14 @@ if __name__ == "__main__":
             "minbpscore" : 3,
             "minfinscorefactor" : 0.95,
             "distcoef" : 0.09,
-            "bracketweight" :  -1.0,##
-            "orderpenalty"  : 1.1,
+            "bracketweight" :  -2.0,##
+            "orderpenalty"  : 1.0,
             "loopbonus": 0.125,
             "maxstemnum" : 10**6,
             "mode": "diffedge",##
-           }) 
+           })   
 
-    threads = 2
+    threads = 4
     
     toplim     = 5
     conslim    = 1
