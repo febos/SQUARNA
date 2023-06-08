@@ -23,7 +23,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("TS1reduced.fas") as file:
+    with open("SRtrain150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     #dbn = None
     #rst = "(..........................................................................)."
     
-    #queue  = [["default", seq, dbn, rst],]
+    queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
 
     poor = {6, 28, 54, 55, 61, 73, 81, 90, 129, 133, 144, 150, 155, 158, 160, 161, 162, 163, 165, 168, 173, 174, 175, 177, 179, 182, 187, 191, 200, 202, 203, 204, 205, 206, 209, 211, 215, 223, 224, 226, 228, 232, 238, 239, 244, 245, 247, 252, 254, 258, 259, 260, 265}
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     #NN = 264
     #queue = queue[NN:NN+1]
 
-    """ TOP ONE """  
+    """ TOP ONE """ 
     paramsets.append({"bpweights" : {'GU' : -1.25,
                            'AU' :  1.25,
                            'GC' :  3.25,},
@@ -72,11 +72,12 @@ if __name__ == "__main__":
             "minfinscorefactor" : 1.25,
             "distcoef" : 0.09,
             "bracketweight" :  -2.0,##
-            "orderpenalty"  : 1.0,
+            "orderpenalty"  : 0.65,
             "loopbonus": 0.125,
             "maxstemnum" : 10**6,
             "mode": "diffedge", ##
-           })
+           })  
+    
 
     """ TOP TWO """ 
     paramsets.append({"bpweights" : {'GU' : 1,
