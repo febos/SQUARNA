@@ -1,6 +1,6 @@
 import numpy as np
 
-from SQRNdbnseq import SQRNdbnseq
+from SQRNdbnseq import SQRNdbnseq, BPMatrix, DBNToPairs, AnnotateStems
 
 
 if __name__ == "__main__":
@@ -8,8 +8,6 @@ if __name__ == "__main__":
     from collections import Counter
 
     rst = None
-
-    threads = 1
 
     #SAM riboswitch
     seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
@@ -25,7 +23,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("CoRToise150.fas") as file:
+    with open("SRtrain150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -34,6 +32,7 @@ if __name__ == "__main__":
             sq = lines[ii+1].strip()
             db = lines[ii+2].strip()
             queue.append([nm, sq, db, rst])
+
 
     #seq = "AAACCACGAGGAAGAGAGGUAGCGUUUUCUCCUGAGCGUGAAGCCGGCUUUCUGGCGUUGCUUGGCUGCAACUGCCGUCAGCCAUUGAUGAUCGUUCUUCUCUCCGUAUUGGGGAGUGAGAGGGAGAGAACGCGGUCUGAGUGGU"
     #dbn = "..(((((......(.......((((((((((((....(...(...((((..(.((((((((......))))).))))..))))..)......)..((((((((((.....)))))).))))))))))))))))...)...)))))"
@@ -44,89 +43,85 @@ if __name__ == "__main__":
     #seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
     #dbn = "((((((..((((.......))))))))))."
     
+    #seq  = "CGGUGUAAGUGCAGCCCGUCUUACACCGUGCGGCACAGCGGAAACGCUGAUGUCGUAUACAGGGCU"
+    #dbn  = "(((((((((...[[[[[..)))))))))((((((((((((....))))).)))))))....]]]]]"
+    
+    #seq = "GGGACCAGUUGAACCUGAACAGGGUAAUGCCUGCGCAGGGAGGGUGCUUGUUCACAGGCUGAGAAAGUCCCUGUGUC"
+    #dbn = None
+    #rst = "(..........................................................................)."
+    
     #queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
 
+    poor = {6, 28, 54, 55, 61, 73, 81, 90, 129, 133, 144, 150, 155, 158, 160, 161, 162, 163, 165, 168, 173, 174, 175, 177, 179, 182, 187, 191, 200, 202, 203, 204, 205, 206, 209, 211, 215, 223, 224, 226, 228, 232, 238, 239, 244, 245, 247, 252, 254, 258, 259, 260, 265}
+
+    #queue = [queue[i] for i in range(len(queue)) if i in poor]
+
     paramsets = []
 
-    #NN = 216
+    #NN = 264
     #queue = queue[NN:NN+1]
 
-    """ QUADRO 0"""
-    paramsets.append({"bpweights" : {'GU' : -3,
-                                     'AU' :  2,
-                                     'GC' :  4,},
-                      "suboptmax" : 0.9,            
-                      "suboptmin" : 0.9,            
-                      "suboptsteps" : 1,                  
-                      "minlen" : 2,
-                      "orderpenalty"  : 1.05,
-                      "distcoef" : 0.2,
-                      "minbpscore" : 6,
-                      "minfinscorefactor" : 1.0,
-                      "bracketweight" :  -1.0,
-                      "maxstemnum" : 10**6,
-                      "loopbonus": 0.5,
-                      "mode": "ver1rev",
-                      })
+    """ TOP SINGLE 
+    paramsets.append({"bpweights" : {'GU' : -1.25,
+                           'AU' :  1.25,
+                           'GC' :  3.25,},
+            "suboptmax" : 0.9,
+            "suboptmin" : 0.65,
+            "suboptsteps": 1,
+            "minlen" : 2,
+            "minbpscore" : 4.5,
+            "minfinscorefactor" : 1.0,
+            "distcoef" : 0.09,
+            "bracketweight" :  -2.0,##
+            "orderpenalty"  : 1.00,
+            "loopbonus": 0.125,
+            "maxstemnum" : 10**6,
+            "mode": "diffedge",##
+           })  """ 
 
-    """ QUADRO 1"""
-    paramsets.append({"bpweights" : {'GU' : -3,
-                                     'AU' :  2,
-                                     'GC' :  4,},
-                      "suboptmax" : 0.9,            
-                      "suboptmin" : 0.9,            
-                      "suboptsteps" : 1,      
-                      "minlen" : 2,
-                      "orderpenalty"  : 1.05,
-                      "distcoef" : 0.1,
-                      "minbpscore" : 6,
-                      "minfinscorefactor" : 1.0,
-                      "bracketweight" :  -1.0,
-                      "maxstemnum" : 10**6,
-                      "loopbonus": 0.5,
-                      "mode": "ver1rev",
-                      })
-
-    """ QUADRO 2"""
-    paramsets.append({"bpweights" : {'GU' :  2,
-                                     'AU' :  1.5,
-                                     'GC' :  4,},
-                      "suboptmax" : 0.9,            
-                      "suboptmin" : 0.9,            
-                      "suboptsteps" : 1,               
-                      "minlen" : 2,
-                      "orderpenalty"  : 1.05,
-                      "distcoef" : 0.04,
-                      "minbpscore" : 8,
-                      "minfinscorefactor" : 0.9,
-                      "bracketweight" :  1.0,
-                      "maxstemnum" : 10**6,
-                      "loopbonus": 0.4,
-                      "mode": "maxlen",
-                      })
-
-    """ QUADRO 3"""
-    paramsets.append({"bpweights" : {'GU' : -2.5,
-                                     'AU' : -2.5,
-                                     'GC' :  4,},
-                      "suboptmax" : 0.9,            
-                      "suboptmin" : 0.9,            
-                      "suboptsteps" : 1,               
-                      "minlen" : 2,
-                      "orderpenalty"  : 1.0,
-                      "distcoef" : 0.0,
-                      "minbpscore" : 9,
-                      "minfinscorefactor" : 1.0,
-                      "bracketweight" :  -1.0,
-                      "maxstemnum" : 10**6,
-                      "loopbonus": 0.0,
-                      "mode": "topscore",
-                      })
+    """ TOP ONE  """
+    paramsets.append({"bpweights" : {'GU' : -1.25,
+                           'AU' :  1.25,
+                           'GC' :  3.25,},
+            "suboptmax" : 0.9,
+            "suboptmin" : 0.65,
+            "suboptsteps": 1,
+            "minlen" : 2,
+            "minbpscore" : 4.5,
+            "minfinscorefactor" : 1.25,
+            "distcoef" : 0.09,
+            "bracketweight" :  -2.0,##
+            "orderpenalty"  : 1.00,
+            "loopbonus": 0.125,
+            "maxstemnum" : 10**6,
+            "mode": "diffedge",##
+           })  
     
-    toplim  = 5
-    conslim = 1
-    hardrest = False
+
+    """ TOP TWO """
+    paramsets.append({"bpweights" : {'GU' : 1,
+                           'AU' :  1,
+                           'GC' :  2,},
+            "suboptmax" : 0.9,
+            "suboptmin" : 0.65,
+            "suboptsteps": 1,
+            "minlen" : 2,
+            "minbpscore" : 3,
+            "minfinscorefactor" : 0.99,
+            "distcoef" : 0.1,
+            "bracketweight" :  -2.0,##
+            "orderpenalty"  : 1.35,
+            "loopbonus": 0.125,
+            "maxstemnum" : 10**6,
+            "mode": "diffedge",##
+           })    
+
+    threads = 4
+    
+    toplim     = 5
+    conslim    = 1
+    hardrest   = False
     rankbydiff = False
     
     resultsB = []
@@ -148,7 +143,7 @@ if __name__ == "__main__":
         print('_'*len(seq))
         print(result[0],result[2])
         print('='*len(seq))
-        for rank, pred in enumerate(result[1]):
+        for rank, pred in enumerate(result[1][:toplim]):
             if rank == result[3][-1]-1:
                 print(' '.join([str(gg) for gg in pred]), result[3])
             else:
@@ -178,6 +173,8 @@ if __name__ == "__main__":
     prB = [x[4] for x in resultsB]
     rcB = [x[5] for x in resultsB]
     rkB = [x[6] for x in resultsB]
+
+    #print([i for i in range(len(fsB)) if fsB[i]<0.7]) # poorly predicted sequences
 
     m1 = round(2*tpB / (2*tpB + fpB + fnB), 3)
     m2 = round(np.mean(fsB), 3)
