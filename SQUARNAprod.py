@@ -1,6 +1,5 @@
-import numpy as np
 
-from SQRNdbnseq import SQRNdbnseq, BPMatrix, DBNToPairs, AnnotateStems
+from SQRNdbnseq import SQRNdbnseq
 
 
 if __name__ == "__main__":

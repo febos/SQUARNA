@@ -1,0 +1,25 @@
+>testcase
+CGAAGUCCUUUACGUA
+>testcase with reactivities
+CGAAGUCCUUUACGUA
+1.0 1.0 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+>7QR4 [69],1.B.G.1.:1.B.U.69. with reference
+GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
+
+
+[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))
+>7QR4 [69],1.B.G.1.:1.B.U.69. with restraints
+GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
+
+[[[[[[........................]]]]]].................................
+>5UD5 [70],1.C.G.1.:1.C.C.7.,1.C.U.9.:1.C.U.15.,1.C.G.18.:1.C.G.47.,1.C.C.49.:1.C.C.74. with reference
+GGAAACCUGAUCAUGUAGAUCGAAUGGACUCUAAAUCCGUUCAGCCGGGUUAGAUUCCCGGGGUUUCCGC
+
+
+(((((((.((((...[.))))(((((((.......)))))))..(((((..]....))))))))))))..
+>SAM riboswitch with reference
+GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA
+
+
+(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..)))))))))).
+

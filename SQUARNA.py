@@ -23,7 +23,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("SRtrain150.fas") as file:
+    with open("datasets/SRtrain150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -45,12 +45,16 @@ if __name__ == "__main__":
     
     #seq  = "CGGUGUAAGUGCAGCCCGUCUUACACCGUGCGGCACAGCGGAAACGCUGAUGUCGUAUACAGGGCU"
     #dbn  = "(((((((((...[[[[[..)))))))))((((((((((((....))))).)))))))....]]]]]"
+
+    seq = "GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU"
+    dbn = "[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))"
+    rst = "[[[[[[........................]]]]]]................................."
     
     #seq = "GGGACCAGUUGAACCUGAACAGGGUAAUGCCUGCGCAGGGAGGGUGCUUGUUCACAGGCUGAGAAAGUCCCUGUGUC"
     #dbn = None
     #rst = "(..........................................................................)."
     
-    #queue  = [["default", seq, dbn, rst],]
+    queue  = [["default", seq, dbn, rst],]
     #queue += [["default", seq, dbn, rst],]  
 
     poor = {6, 28, 54, 55, 61, 73, 81, 90, 129, 133, 144, 150, 155, 158, 160, 161, 162, 163, 165, 168, 173, 174, 175, 177, 179, 182, 187, 191, 200, 202, 203, 204, 205, 206, 209, 211, 215, 223, 224, 226, 228, 232, 238, 239, 244, 245, 247, 252, 254, 258, 259, 260, 265}
