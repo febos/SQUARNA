@@ -164,8 +164,18 @@ def UnAlign2(seq, dbn):
     return newseq, newdbn
 
 
-def BPMatrix(seq, weights):
+def BPMatrix(seq, weights, interchainonly = False):
     """Return a matrix with bp-weights in cells"""
+
+    # list of ordinal numbers of chains
+    chains = [0 for _ in range(len(seq))]
+    if interchainonly:
+        curr   =  0
+        for i in range(len(seq)):
+            if seq[i] in {';', '&'}:
+                curr += 1
+            else:
+                chains[i] = curr
 
     # Set of different symbols in seq
     bases = set(seq)
@@ -182,9 +192,9 @@ def BPMatrix(seq, weights):
 
     # Fill the upper triangle of the boolmatrix with ones for bps
     # Ignore the bps that would form a hairpin of len < 3
-    for i in range(len(seq)-1):
-        for j in range(i+4,len(seq)):
-            boolmat[i,j] = int(seq[i]+seq[j] in bps)
+    for i in range(len(seq) - 1):
+        for j in range(i + 4, len(seq)):
+            boolmat[i, j] = int(seq[i] + seq[j] in bps) * (not interchainonly or chains[i] != chains[j])
 
     # add 0 values for all possible base pairs
     # not yet in bps dictionary
@@ -198,9 +208,9 @@ def BPMatrix(seq, weights):
 
     # Fill the upper triangle of the matrix with bp weights
     # Ignore the bps that would form a hairpin of len < 3
-    for i in range(len(seq)-1):
-        for j in range(i+4,len(seq)):
-            scoremat[i,j] = bps[seq[i]+seq[j]]
+    for i in range(len(seq) - 1):
+        for j in range(i + 4, len(seq)):
+            scoremat[i, j] = bps[seq[i] + seq[j]] * boolmat[i, j]
 
     return boolmat, scoremat
 
@@ -759,11 +769,13 @@ def RankStructs(stemsets, rankbydiff = False):
     return [x[:-1] for x in finstemsets]
 
    
-def SQRNdbnseq(seq, restraints = None, dbn = None,
+def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                paramsets = [], conslim = 5, toplim = 5,
                hardrest = False, rankbydiff = True,
+               interchainonly = False,
                threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
+    reacts == list of reactivities (values from 0 to 1)
     bpweights == dictionary with canonical bps as keys and their weights as values
     restraints == string in dbn format; x symbols are forced to be unpaired
     dbn == known secondary structure in dbn format
@@ -782,6 +794,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     toplim == how many top ranked structures are used to measrue the performance
     hardrest == force restraint base pairs to be present in the predicted dbns or not
     rankbydiff == TODO
+    interchainonly = allow only bps between different chains
     threads == number of CPUs to use
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
@@ -834,7 +847,7 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
         minfinscore = minbpscore * minfinscorefactor
 
         # Generate initial bp-matrix (with bp weights in cells)
-        bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights)
+        bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, interchainonly)
 
         # List of lists of stems (each stem list is a currently predicted secondary structure
         curstemsets = [[],]
@@ -923,6 +936,12 @@ def SQRNdbnseq(seq, restraints = None, dbn = None,
     # ReAlign the dbn strings accoring to seq
     dbns = [ReAlign(x, seq) for x in dbns]
     cons = ReAlign(PairsToDBN(consbps, len(shortseq)), seq)
+
+    # Introducing chain separators into the predicted structures
+    dbns = [''.join([_[i] if seq[i]!=';' and seq[i]!='&' else seq[i]
+                     for i in range(len(seq))]) for _ in dbns]
+    cons = ''.join([cons[i] if seq[i]!=';' and seq[i]!='&' else seq[i]
+                    for i in range(len(seq))])
 
     # if input dbn is known - calculate the quality metrics
     if dbn:
