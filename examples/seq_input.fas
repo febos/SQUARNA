@@ -5,6 +5,14 @@ CGAAGUCCUUUACGUA
 1.0 1.0 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
 >multiple chains (separated by ; or &)
 GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
+>multiple chains with bp-to-the-right restraints
+GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
+
+........./////.....................
+>multiple chains with bp-to-the-left and unpaired restraints
+GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
+
+.........\\\\\......._____.........
 >7QR4 [69],1.B.G.1.:1.B.U.69. with reference
 GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
 

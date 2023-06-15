@@ -164,7 +164,7 @@ def UnAlign2(seq, dbn):
     return newseq, newdbn
 
 
-def BPMatrix(seq, weights, interchainonly = False):
+def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False):
     """Return a matrix with bp-weights in cells"""
 
     # list of ordinal numbers of chains
@@ -194,7 +194,11 @@ def BPMatrix(seq, weights, interchainonly = False):
     # Ignore the bps that would form a hairpin of len < 3
     for i in range(len(seq) - 1):
         for j in range(i + 4, len(seq)):
-            boolmat[i, j] = int(seq[i] + seq[j] in bps) * (not interchainonly or chains[i] != chains[j])
+            boolmat[i, j] = int(seq[i] + seq[j] in bps) * \
+                            (not interchainonly or chains[i] != chains[j]) * \
+                            (i not in rxs and j not in rxs) * \
+                            (j not in rlefts) * \
+                            (i not in rrights)
 
     # add 0 values for all possible base pairs
     # not yet in bps dictionary
@@ -238,8 +242,10 @@ def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
 def ParseRestraints(restraints):
     """ Convert a dbn string into base pairs and unpaired bases"""
     rbps = DBNToPairs(restraints) # Base pairs
-    rxs = [i for i in range(len(restraints)) if restraints[i]=='_'] # Unpaired bases
-    return rbps, rxs
+    rxs     = {i for i in range(len(restraints)) if restraints[i]=='_'} # Unpaired bases
+    rlefts  = {i for i in range(len(restraints)) if restraints[i]=='/'}  # 5'-ends of bps
+    rrights = {i for i in range(len(restraints)) if restraints[i]=='\\'} # 3'-ends of bps
+    return rbps, rxs, rlefts, rrights
 
 
 def StemsFromDiagTheFirstVersion(diag):
@@ -438,7 +444,7 @@ def StemsFromDiag(diag, mode):
     assert True == False, "check your mode value" ### SHOULD NEVER HAPPEN
 
 
-def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
+def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
                   rstems, minlen, minscore, mode):
 
     # copy the bpboolmatrix
@@ -463,11 +469,6 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
             matrix[:, v] *= 0
             matrix[w, :] *= 0
             matrix[:, w] *= 0
-
-    # apply unpaired-restraints - zero out the entire row and column for each x
-    for i in rxs:
-        matrix[i,:] *= 0
-        matrix[:,i] *= 0
 
     # start cells of all the diagonals, except the ones producing hairpins of len < 3
     diagstarts  = [(0, x)   for x in range(4, N)]
@@ -651,7 +652,7 @@ def ChooseStems(allstems, subopt = 1.0):
 
  
 def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
-                 rbps = set(), rxs = set(),
+                 rbps = set(),
                  subopt = 1.0, minlen = 2,
                  minbpscore = 6, minfinscore = 0,
                  bracketweight = 1.0, distcoef = 0.1,
@@ -662,7 +663,7 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
     # Remove already predicted bps from bp-restraints
     rbps = set(rbps) - {bp for stem in rstems for bp in stem[0]}
 
-    allstems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps, rxs,
+    allstems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
                              rstems, minlen, minbpscore, mode)
 
     allstems = ScoreStems(seq, allstems, rstems, minfinscore,
@@ -816,7 +817,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         shortseq, shortdbn  = UnAlign2(seq, dbn)
     
     # Parse restraints into unpaired bases (rxs) and base pairs (rbps)
-    rbps, rxs = ParseRestraints(shortrest)
+    rbps, rxs, rlefts, rrights = ParseRestraints(shortrest)
 
     # final stem sets among all the parameter sets
     finfinstemsets = []
@@ -847,7 +848,9 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         minfinscore = minbpscore * minfinscorefactor
 
         # Generate initial bp-matrix (with bp weights in cells)
-        bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, interchainonly)
+        bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, rxs,
+                                               rlefts, rrights,
+                                               interchainonly)
 
         # List of lists of stems (each stem list is a currently predicted secondary structure
         curstemsets = [[],]
@@ -882,7 +885,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
                 inputs = ((shortseq, stems,
                            bpboolmatrix.copy(), bpscorematrix,
-                           rbps.copy(), rxs.copy(), 
+                           rbps.copy(),
                            cursubopt, minlen, minbpscore, ############################## TEMP
                            minfinscore, bracketweight,
                            distcoef, orderpenalty,

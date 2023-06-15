@@ -55,8 +55,9 @@ if __name__ == "__main__":
     #dbn = "((((((((((..(((((((..((((((.((.(((((...(.(.(.((((((((........))))))..)).).).)..)))))......)))(((((((((....((.(((((..(((((.(.(.((((....))))).).)))))..)))))....))..)))))))[))(((((.]..........))))).))).)).)))))))..))))).)))))"
 
 
-    seq = "GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC"
-    dbn = None
+    #seq = "GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC"
+    #dbn = None
+    #rst = "........./////....................."
     
     #queue  = [["default", seq, dbn, rst, react],]
     #queue += [["default", seq, dbn, rst, react],]  
