@@ -5,6 +5,9 @@ CGAAGUCCUUUACGUA
 1.0 1.0 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
 >multiple chains (separated by ; or &)
 GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
+>multiple chains with reactivities (with separators included but ignored)
+GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
++++++++++++++++++++++++++++++++++++
 >multiple chains with bp-to-the-right restraints
 GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
 
@@ -18,6 +21,11 @@ GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
 
 
 [[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))
+>7QR4 [69],1.B.G.1.:1.B.U.69. with reference and reactivities
+GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
+______++++++++++++++++++++++++++++++++++++++++####+++++++++++++++++++
+.....................................................................
+[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))
 >7QR4 [69],1.B.G.1.:1.B.U.69. with restraints
 GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
 
@@ -30,6 +38,11 @@ GGAAACCUGAUCAUGUAGAUCGAAUGGACUCUAAAUCCGUUCAGCCGGGUUAGAUUCCCGGGGUUUCCGC
 >SAM riboswitch with reference
 GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA
 
+
+(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..)))))))))).
+>SAM riboswitch with reference and reactivities
+GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA
+555555555555555555555333822223335555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
 
 (((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..)))))))))).
 

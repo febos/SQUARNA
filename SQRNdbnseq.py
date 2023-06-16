@@ -2,6 +2,24 @@
 import numpy as np
 from multiprocessing import Pool
 
+GAPS = {'-', '.', '~'}
+SEPS = {';', '&'}
+
+ReactDict = {"_" : 0.00,  "+" : 0.50,  "#" : 1.00,
+             "0" : 0.00,  "1" : 0.10,  "2" : 0.20,
+             "3" : 0.30,  "4" : 0.40,  "5" : 0.50,
+             "6" : 0.60,  "7" : 0.70,  "8" : 0.80,
+             "9" : 0.90,  "X" : 1.00,  "a" : 0.00,
+             "b" : 0.04,  "c" : 0.08,  "d" : 0.12,
+             "e" : 0.16,  "f" : 0.20,  "g" : 0.24,
+             "h" : 0.28,  "i" : 0.32,  "j" : 0.36,
+             "k" : 0.40,  "l" : 0.44,  "m" : 0.48,
+             "n" : 0.52,  "o" : 0.56,  "p" : 0.60,
+             "q" : 0.64,  "r" : 0.68,  "s" : 0.72,
+             "t" : 0.76,  "u" : 0.80,  "v" : 0.84,
+             "w" : 0.88,  "x" : 0.92,  "y" : 0.96,
+             "z" : 1.00,}
+
 def DefaultParamSet():
     return {"bpweights" : {'GU' : -1.5,
                            'AU' :  1.5,
@@ -132,14 +150,14 @@ def ReAlign(shortdbn, longseq, seqmode=False):
     # convert shortdbn into a list
     dbn = [x for x in shortdbn]
 
-    assert len(shortdbn) + longseq.count('.') + longseq.count('-') == len(longseq),\
+    assert len(shortdbn) + sum(longseq.count(GAP) for GAP in GAPS) == len(longseq),\
     "Cannot ReAlign dbn string - wrong number of gaps:\n{}\n{}".format(longseq,shortdbn)
 
     # initialize the returning string
     newdbn = []
 
     for x in longseq:
-        if x in ('.','-','~'): # if gap (hyphen/dot/tilda) -> add gap
+        if x in GAPS: # if gap (hyphen/dot/tilda) -> add gap
             if seqmode:
                 newdbn.append('-')
             else:
@@ -157,9 +175,9 @@ def UnAlign2(seq, dbn):
 
     # Unalign the dbn based on the seq string first
     newdbn = ''.join([dbn[i] for i in range(len(seq))
-                      if seq[i] not in ('-','.','~')])
+                      if seq[i] not in GAPS])
     # Then unalign the seq string itself
-    newseq = ''.join([x for x in seq if x not in ('-','.','~')])
+    newseq = ''.join([x for x in seq if x not in GAPS])
     # return the unaligned seq & dbn strings
     return newseq, newdbn
 
@@ -172,7 +190,7 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False):
     if interchainonly:
         curr   =  0
         for i in range(len(seq)):
-            if seq[i] in {';', '&'}:
+            if seq[i] in SEPS:
                 curr += 1
             else:
                 chains[i] = curr
@@ -494,7 +512,8 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
     return stems
 
 
-def ScoreStems(seq, stems, rstems, minscore,
+def ScoreStems(seq, stems, rstems,
+               reacts, minscore,
                bracketweight, distcoef,
                orderpenalty, loopbonus):
     """Adjust the scores based on the stem distance and pseudoknot level"""
@@ -529,6 +548,8 @@ def ScoreStems(seq, stems, rstems, minscore,
 
         descr = ''
         bps = stem[0]
+
+        reactfactor = sum(1 - reacts[pos] for bp in bps for pos in bp) / len(bps)
 
         descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
 
@@ -597,14 +618,15 @@ def ScoreStems(seq, stems, rstems, minscore,
         orderfactor = (1 / (1 + order))**orderpenalty
 
         initscore  = stem[2] # initial bp score
-        finalscore = initscore * stemdistfactor * orderfactor * loopfactor
+        finalscore = initscore * stemdistfactor * orderfactor * loopfactor * reactfactor
         
         descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
                                                     round(stemdist,2),
                                                     round(stemdistfactor,2))
         descr += ",or={},orf={}".format(order,
                                         round(orderfactor,2))
-        descr += ",lf={},{},{}".format(round(loopfactor,2),(stemstart,stemend),(vv,ww))
+        descr += ",lf={},rf={}".format(round(loopfactor,2),
+                                       round(reactfactor,2))
 
         stem.append(finalscore)
         stem.append(descr)
@@ -652,7 +674,7 @@ def ChooseStems(allstems, subopt = 1.0):
 
  
 def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
-                 rbps = set(),
+                 reacts, rbps = set(), 
                  subopt = 1.0, minlen = 2,
                  minbpscore = 6, minfinscore = 0,
                  bracketweight = 1.0, distcoef = 0.1,
@@ -666,7 +688,8 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
     allstems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
                              rstems, minlen, minbpscore, mode)
 
-    allstems = ScoreStems(seq, allstems, rstems, minfinscore,
+    allstems = ScoreStems(seq, allstems, rstems, reacts,
+                          minfinscore,
                           bracketweight, distcoef,
                           orderpenalty, loopbonus,
                           )
@@ -718,7 +741,7 @@ def ConsensusStemSet(stemsets):
     return bps
 
 
-def ScoreStruct(seq, stemset):
+def ScoreStruct(seq, stemset, reacts):
     """ Return the overall structure score based on the stemset"""
     bpscores = {"GU": -1.0,
                 "AU": 1.5,
@@ -730,17 +753,28 @@ def ScoreStruct(seq, stemset):
     power = 1.7 # we will sum up these powers of the stem scores
     thescore = 0
 
+    paired = set()
+
     for stem in stemset:
-        bpsum = sum(bpscores[seq[bp[0]]+seq[bp[1]]] for bp in stem[0])
+        bpsum = 0
+        for v,w in stem[0]:
+            bpsum += bpscores[seq[v]+seq[w]]
+            paired.add(v)
+            paired.add(w)
         if bpsum > 0:
             thescore += bpsum**power
 
-    return round(thescore, 3)
+    sepnum = sum(1 for _ in seq if _ in SEPS)
+
+    reactfactor = 1 - sum(reacts[i] if i in paired else 1 - reacts[i]
+                      for i in range(len(seq)) if seq[i] not in SEPS) / (len(seq) - sepnum)
+
+    return round(thescore * reactfactor, 3), round(thescore, 3), round(reactfactor, 3)
 
 
 def RankStructs(stemsets, rankbydiff = False):
     """Rank the predicted structures"""
-    finstemsets = sorted(stemsets, key = lambda x: x[1], reverse = True)
+    finstemsets = sorted(stemsets, key = lambda x: x[1][0], reverse = True)
 
     if not rankbydiff or len(finstemsets) < 3:
         return finstemsets
@@ -759,13 +793,13 @@ def RankStructs(stemsets, rankbydiff = False):
 
         finstemsets = finstemsets[:curind] + sorted(finstemsets[curind:],
                                                     key = lambda x: (len(x[-1] - seenbps),
-                                                                     x[1]),
+                                                                     x[1][0]),
                                                     reverse = True)
         seenbps |= finstemsets[curind][-1]
         curind += 1
 
     finstemsets = finstemsets[:curind] + sorted(finstemsets[curind:],
-                                                key = lambda x: x[1],
+                                                key = lambda x: x[1][0],
                                                 reverse = True)
     return [x[:-1] for x in finstemsets]
 
@@ -808,9 +842,18 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         restraints = '.'*len(seq)
 
     assert len(seq) == len(restraints)
+
+    if not reacts:
+        reacts = [0.5 for i in range(len(seq))]
+
+    assert len(reacts) == len(seq)
+
+    if type(reacts) == str:
+        reacts = [ReactDict[ch] for ch in reacts]
     
-    # Unalign seq, dbn, and restraints strings
-    shortseq, shortrest = UnAlign2(seq, restraints)
+    # Unalign seq, dbn, reacts, and restraints strings
+    shortseq, shortrest   = UnAlign2(seq, restraints)
+    shortreacts = [reacts[i] for i in range(len(seq)) if seq[i] not in GAPS]
 
     if dbn:
         assert len(seq) == len(dbn)
@@ -885,7 +928,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
                 inputs = ((shortseq, stems,
                            bpboolmatrix.copy(), bpscorematrix,
-                           rbps.copy(),
+                           shortreacts, rbps.copy(), 
                            cursubopt, minlen, minbpscore, ############################## TEMP
                            minfinscore, bracketweight,
                            distcoef, orderpenalty,
@@ -913,7 +956,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
             if bpsset not in seen_structures:
                 # append [stemset, structscore, paramsetind]
                 finfinstemsets.append([finstemset,
-                                       ScoreStruct(shortseq, finstemset),
+                                       ScoreStruct(shortseq, finstemset, shortreacts),
                                        psi])
                 seen_structures.add(bpsset)
 
@@ -941,9 +984,9 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     cons = ReAlign(PairsToDBN(consbps, len(shortseq)), seq)
 
     # Introducing chain separators into the predicted structures
-    dbns = [''.join([_[i] if seq[i]!=';' and seq[i]!='&' else seq[i]
+    dbns = [''.join([_[i] if seq[i] not in SEPS else seq[i]
                      for i in range(len(seq))]) for _ in dbns]
-    cons = ''.join([cons[i] if seq[i]!=';' and seq[i]!='&' else seq[i]
+    cons = ''.join([cons[i] if seq[i] not in SEPS else seq[i]
                     for i in range(len(seq))])
 
     # if input dbn is known - calculate the quality metrics

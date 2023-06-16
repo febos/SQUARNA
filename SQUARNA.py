@@ -11,8 +11,9 @@ if __name__ == "__main__":
     react = None
 
     #SAM riboswitch
-    seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
-    dbn = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
+    seq   = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
+    dbn   = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
+    react = "+++++++++++++++++++++33382222333++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
     #TRNA
     #seq = "GGGCGGCUAGCUCAGCGGAAGAGCGCUCGCCUCACACGCGAGAGGUCGUAGGUUCAAGUCCUACGCCGCCCACCA"
     #dbn = "(((((((..((((....[..)))).(((((.......))))).....(((((..]....))))))))))))...."
@@ -47,8 +48,9 @@ if __name__ == "__main__":
     #seq  = "CGGUGUAAGUGCAGCCCGUCUUACACCGUGCGGCACAGCGGAAACGCUGAUGUCGUAUACAGGGCU"
     #dbn  = "(((((((((...[[[[[..)))))))))((((((((((((....))))).)))))))....]]]]]"
 
-    #seq = "GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU"
-    #dbn = "[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))"
+    #seq   = "GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU"
+    #dbn   = "[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))"
+    #react = "______++++++++++++++++++++++++++++++++++++++++####+++++++++++++++++++"
     #rst = "[[[[[[........................]]]]]]................................."
     
     #seq = "UUCUGCUGUUAACAGCUUUCAGCCAGGGACGUGUUGUAUCCUAGGCAGUGGCCCUCCCAAAGGUCACAAUGUCGAAGAUCAACAAAUACGGUCUCGAACUACACUGGGCUCCAGAAUUUCCAUGGAUGUUUGAGGACGCAGAGGAGAAGUUGGACAACCCUAGUAGUUCAGAGGUGGAUAUGAUUUGCUCCACCACUGCGCAAAAGCUGGAAACAGACGGAA"
@@ -59,7 +61,7 @@ if __name__ == "__main__":
     #dbn = None
     #rst = "........./////....................."
     
-    #queue  = [["default", seq, dbn, rst, react],]
+    queue  = [["default", seq, dbn, rst, react],]
     #queue += [["default", seq, dbn, rst, react],]  
 
     poor = {6, 28, 54, 55, 61, 73, 81, 90, 129, 133, 144, 150, 155, 158, 160, 161, 162, 163, 165, 168, 173, 174, 175, 177, 179, 182, 187, 191, 200, 202, 203, 204, 205, 206, 209, 211, 215, 223, 224, 226, 228, 232, 238, 239, 244, 245, 247, 252, 254, 258, 259, 260, 265}
@@ -87,9 +89,9 @@ if __name__ == "__main__":
             "loopbonus": 0.125,
             "maxstemnum" : 10**6,
             "mode": "diffedge",##
-           })  """ 
+           })  """  
 
-    """ TOP ONE  """
+    """ TOP ONE """  
     paramsets.append({"bpweights" : {'GU' : -1.25,
                            'AU' :  1.25,
                            'GC' :  3.25,},
