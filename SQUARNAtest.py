@@ -1,5 +1,6 @@
+import numpy as np
 
-from SQRNdbnseq import SQRNdbnseq
+from SQRNdbnseq import SQRNdbnseq, BPMatrix, DBNToPairs, AnnotateStems
 
 
 if __name__ == "__main__":
@@ -7,10 +8,12 @@ if __name__ == "__main__":
     from collections import Counter
 
     rst = None
+    react = None
 
     #SAM riboswitch
-    seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
-    dbn = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
+    seq   = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
+    dbn   = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
+    #react = "+++++++++++++++++++++33382222333++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
     #TRNA
     #seq = "GGGCGGCUAGCUCAGCGGAAGAGCGCUCGCCUCACACGCGAGAGGUCGUAGGUUCAAGUCCUACGCCGCCCACCA"
     #dbn = "(((((((..((((....[..)))).(((((.......))))).....(((((..]....))))))))))))...."
@@ -22,7 +25,7 @@ if __name__ == "__main__":
     
     queue = []
 
-    with open("SRtrain150.fas") as file:
+    with open("datasets/SRtrain150.fas") as file:
         lines = file.readlines()
 
         for ii in range(0,len(lines)-2,3):
@@ -30,7 +33,7 @@ if __name__ == "__main__":
             nm = lines[ii].strip()[1:]
             sq = lines[ii+1].strip()
             db = lines[ii+2].strip()
-            queue.append([nm, sq, db, rst])
+            queue.append([nm, sq, db, rst, react])
 
 
     #seq = "AAACCACGAGGAAGAGAGGUAGCGUUUUCUCCUGAGCGUGAAGCCGGCUUUCUGGCGUUGCUUGGCUGCAACUGCCGUCAGCCAUUGAUGAUCGUUCUUCUCUCCGUAUUGGGGAGUGAGAGGGAGAGAACGCGGUCUGAGUGGU"
@@ -44,13 +47,22 @@ if __name__ == "__main__":
     
     #seq  = "CGGUGUAAGUGCAGCCCGUCUUACACCGUGCGGCACAGCGGAAACGCUGAUGUCGUAUACAGGGCU"
     #dbn  = "(((((((((...[[[[[..)))))))))((((((((((((....))))).)))))))....]]]]]"
+
+    #seq   = "GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU"
+    #dbn   = "[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))"
+    #react = "______++++++++++++++++++++++++++++++++++++++++####+++++++++++++++++++"
+    #rst = "[[[[[[........................]]]]]]................................."
     
-    #seq = "GGGACCAGUUGAACCUGAACAGGGUAAUGCCUGCGCAGGGAGGGUGCUUGUUCACAGGCUGAGAAAGUCCCUGUGUC"
+    #seq = "UUCUGCUGUUAACAGCUUUCAGCCAGGGACGUGUUGUAUCCUAGGCAGUGGCCCUCCCAAAGGUCACAAUGUCGAAGAUCAACAAAUACGGUCUCGAACUACACUGGGCUCCAGAAUUUCCAUGGAUGUUUGAGGACGCAGAGGAGAAGUUGGACAACCCUAGUAGUUCAGAGGUGGAUAUGAUUUGCUCCACCACUGCGCAAAAGCUGGAAACAGACGGAA"
+    #dbn = "((((((((((..(((((((..((((((.((.(((((...(.(.(.((((((((........))))))..)).).).)..)))))......)))(((((((((....((.(((((..(((((.(.(.((((....))))).).)))))..)))))....))..)))))))[))(((((.]..........))))).))).)).)))))))..))))).)))))"
+
+
+    #seq = "GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC"
     #dbn = None
-    #rst = "(..........................................................................)."
+    #rst = "........./////....................."
     
-    #queue  = [["default", seq, dbn, rst],]
-    #queue += [["default", seq, dbn, rst],]  
+    #queue  = [["default", seq, dbn, rst, react],]
+    #queue += [["default", seq, dbn, rst, react],]  
 
     poor = {6, 28, 54, 55, 61, 73, 81, 90, 129, 133, 144, 150, 155, 158, 160, 161, 162, 163, 165, 168, 173, 174, 175, 177, 179, 182, 187, 191, 200, 202, 203, 204, 205, 206, 209, 211, 215, 223, 224, 226, 228, 232, 238, 239, 244, 245, 247, 252, 254, 258, 259, 260, 265}
 
@@ -77,9 +89,9 @@ if __name__ == "__main__":
             "loopbonus": 0.125,
             "maxstemnum" : 10**6,
             "mode": "diffedge",##
-           })  """ 
+           })  """  
 
-    """ TOP ONE  """
+    """ TOP ONE """  
     paramsets.append({"bpweights" : {'GU' : -1.25,
                            'AU' :  1.25,
                            'GC' :  3.25,},
@@ -118,21 +130,23 @@ if __name__ == "__main__":
 
     threads = 4
     
-    toplim     = 5
-    conslim    = 1
-    hardrest   = False
-    rankbydiff = False
+    toplim         = 5
+    conslim        = 1
+    hardrest       = False
+    rankbydiff     = False
+    interchainonly = False
     
     resultsB = []
     resultsC = []
 
     for obj in queue:
 
-        name, seq, dbn, rst = obj
+        name, seq, dbn, rst, react = obj
 
-        result = SQRNdbnseq(seq, rst, dbn,
+        result = SQRNdbnseq(seq, react, rst, dbn,
                             paramsets, conslim, toplim,
                             hardrest, rankbydiff,
+                            interchainonly,
                             threads)
 
         print(name)
