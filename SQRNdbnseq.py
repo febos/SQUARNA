@@ -772,9 +772,11 @@ def ScoreStruct(seq, stemset, reacts):
     return round(thescore * reactfactor, 3), round(thescore, 3), round(reactfactor, 3)
 
 
-def RankStructs(stemsets, rankbydiff = False):
+def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
     """Rank the predicted structures"""
-    finstemsets = sorted(stemsets, key = lambda x: x[1][0], reverse = True)
+    finstemsets = sorted(stemsets,
+                         key = lambda x: [x[1][rb] for rb in rankby],
+                         reverse = True)
 
     if not rankbydiff or len(finstemsets) < 3:
         return finstemsets
@@ -793,13 +795,13 @@ def RankStructs(stemsets, rankbydiff = False):
 
         finstemsets = finstemsets[:curind] + sorted(finstemsets[curind:],
                                                     key = lambda x: (len(x[-1] - seenbps),
-                                                                     x[1][0]),
+                                                                     [x[1][rb] for rb in rankby]),
                                                     reverse = True)
         seenbps |= finstemsets[curind][-1]
         curind += 1
 
     finstemsets = finstemsets[:curind] + sorted(finstemsets[curind:],
-                                                key = lambda x: x[1][0],
+                                                key = lambda x: [x[1][rb] for rb in rankby],
                                                 reverse = True)
     return [x[:-1] for x in finstemsets]
 
@@ -807,7 +809,7 @@ def RankStructs(stemsets, rankbydiff = False):
 def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                paramsets = [], conslim = 5, toplim = 5,
                hardrest = False, rankbydiff = True,
-               interchainonly = False,
+               rankby = (0, 2, 1), interchainonly = False,
                threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     reacts == list of reactivities (values from 0 to 1)
@@ -829,10 +831,13 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     toplim == how many top ranked structures are used to measrue the performance
     hardrest == force restraint base pairs to be present in the predicted dbns or not
     rankbydiff == TODO
+    rankby == indices of the scores used for ranking
     interchainonly = allow only bps between different chains
     threads == number of CPUs to use
     
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
+
+    assert set(rankby) == {0, 1, 2} and len(rankby) == 3, "Invalid ranking indices"
 
     # turn seq into UPPERCASE & replace T with U
     seq = seq.upper().replace("T", "U")
@@ -841,12 +846,12 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     if not restraints:
         restraints = '.'*len(seq)
 
-    assert len(seq) == len(restraints)
+    assert len(seq) == len(restraints), "Invalid restraints given"
 
     if not reacts:
         reacts = [0.5 for i in range(len(seq))]
 
-    assert len(reacts) == len(seq)
+    assert len(reacts) == len(seq), "Invalid reactivities given"
 
     if type(reacts) == str:
         reacts = [ReactDict[ch] for ch in reacts]
@@ -965,7 +970,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
     # sort the final stem lists in descreasing order of their total bp-score by default
     # and if rankbydiff - prioritize the most diverged structures
-    finstemsets = RankStructs(finfinstemsets, rankbydiff)
+    finstemsets = RankStructs(finfinstemsets, rankbydiff, rankby)
 
     forcedbps = {(v,w) for v,w in rbps
                  if shortseq[v]+shortseq[w] in bpweights or
