@@ -5,6 +5,57 @@ import sys
 from SQRNdbnseq import SQRNdbnseq, ReactDict
 
 
+def ParseConfig(configfile):
+
+    params = {"bpweights",
+              "suboptmax",
+              "suboptmin",
+              "suboptsteps",
+              "minlen",
+              "minbpscore",
+              "minfinscorefactor",
+              "distcoef",
+              "bracketweight",
+              "orderpenalty",
+              "loopbonus",
+              "maxstemnum"}
+
+    paramsets = []
+    names = []
+    cnt = 0
+
+    with open(configfile) as file:
+        for line in file:
+            cleanline = line.split('#', 1)[0].strip()
+            if cleanline:
+                if cleanline.startswith('>'):
+                    names.append(cleanline[1:])
+                    cnt += 1
+                    if cnt == 1:
+                        paramset = {}
+                    else:  
+                        paramsets.append(paramset)
+                        paramset = {k:v for k, v in paramsets[0].items()}
+                else:
+                    key, val = cleanline.split(maxsplit = 1)
+                    if key == "bpweights":
+                        paramset[key] = {}
+                        for kv in val.split(','):
+                            k, v = kv.strip().split('=')
+                            paramset[key][k] = float(v)
+                    else:
+                        paramset[key] = float(val)
+    paramsets.append(paramset)
+
+    if not all([_ in paramsets[0] for _ in params]):
+        raise ValueError("Missing some of the parameters in"+\
+                         " the first parameter set"+\
+                         " of the config file: {}"\
+                         .format(', '.join([_ for _ in params
+                                            if _ not in paramset])))
+    return names, paramsets
+
+
 if __name__ == "__main__":
 
     def PrintUsage():
@@ -79,7 +130,7 @@ if __name__ == "__main__":
         elif arg.lower().startswith("msn=") or\
              arg.lower().startswith("maxstemnum="):
             try:
-                maxstemnum = int(arg.split('=', 1)[1])
+                maxstemnum = int(float(arg.split('=', 1)[1]))
                 assert maxstemnum >= 0
                 maxstemnumset = True
             except:
@@ -142,7 +193,7 @@ if __name__ == "__main__":
             assert reactformat in {"3", "10", "26"},\
                    "Inappropriate reactformat value (3/10/26): {}"\
                    .format(arg.split('=', 1)[1])
-            reactformat = int(reactformat)
+            reactformat = int(float(reactformat))
 
     # Process rankby
     if "d" in rankby:
@@ -154,7 +205,18 @@ if __name__ == "__main__":
     elif "s"  in rankby:
         rankby = (1, 2, 0)
 
-    # Parse the config
+    # Parse config
+    paramsetnames, paramsets = ParseConfig(configfile)
+
+    # Overwrite maxstemnum
+    if maxstemnumset:
+        for i in range(len(paramsets)):
+            paramsets[i]['maxstemnum'] = maxstemnum
+
+
+    for paramset in paramsets:
+        print(paramset)
+    
 
     # Parse the input
 

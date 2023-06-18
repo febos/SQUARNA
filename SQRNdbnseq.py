@@ -20,24 +20,6 @@ ReactDict = {"_" : 0.00,  "+" : 0.50,  "#" : 1.00,
              "w" : 0.88,  "x" : 0.92,  "y" : 0.96,
              "z" : 1.00,}
 
-def DefaultParamSet():
-    return {"bpweights" : {'GU' : -1.5,
-                           'AU' :  1.5,
-                           'GC' :  3,},
-            "suboptmax" : 0.9,
-            "suboptmin" : 0.65,
-            "suboptsteps": 1,
-            "minlen" : 2,
-            "minbpscore" : 4.5,
-            "minfinscorefactor" : 1.0,
-            "distcoef" : 0.09,
-            "bracketweight" :  -1.0,
-            "orderpenalty"  : 1.2,
-            "loopbonus": 0.175,
-            "maxstemnum" : 10**6,
-            "mode": "diffedge",
-           }
-
 
 def PairsToDBN(newpairs, length = 0, returnlevels = False):
     """Convert a list of base pairs into a dbn string of the given length"""
@@ -169,7 +151,7 @@ def ReAlign(shortdbn, longseq, seqmode=False):
     return ''.join(newdbn)
 
 
-def UnAlign2(seq, dbn):
+def UnAlign(seq, dbn):
     """Removes gaps from a pair of seq & dbn strings
     hyphens, dots, and tildas are treated as gaps"""
 
@@ -237,26 +219,6 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False):
     return boolmat, scoremat
 
 
-def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
-    """Print matrix and sequence into tsv format"""
-    print('',*list(seq),sep='\t')
-
-    Pairs1 = DBNToPairs(dbn1) # bps from dbn1 will be framed with []
-    Pairs2 = DBNToPairs(dbn2) # bps from dbn2 will be framed with <>
-
-    for i in range(len(seq)):
-        print(seq[i], end='\t')
-        line = []
-        for j in range(len(seq)):
-            x = str(matrix[i][j])
-            if (i,j) in Pairs1:
-                x = '['+x+']'
-            if (i,j) in Pairs2:
-                x = '<'+x+'>'
-            line.append(x)
-        print(*line, sep='\t')
-
-
 def ParseRestraints(restraints):
     """ Convert a dbn string into base pairs and unpaired bases"""
     rbps = DBNToPairs(restraints) # Base pairs
@@ -264,82 +226,6 @@ def ParseRestraints(restraints):
     rlefts  = {i for i in range(len(restraints)) if restraints[i]=='/'}  # 5'-ends of bps
     rrights = {i for i in range(len(restraints)) if restraints[i]=='\\'} # 3'-ends of bps
     return rbps, rxs, rlefts, rrights
-
-
-def StemsFromDiagTheFirstVersion(diag):
-    """going from the outer pairs to the inner ones"""
-    stems = []
-    
-    curstem  = []
-    curscore = 0
-    bestscore = 0
-
-    for isbp, val, bp in diag:
-
-        if isbp:
-            if val >= 0: # if bp has non-negative score - add it to the current stem                  
-                curstem.append(bp)
-                lastpositive = len(curstem)
-                curscore = curscore + val
-                bestscore = curscore
-
-            elif val < 0: # if bp has negative score
-                if curstem:
-                    curscore = curscore + val
-                    if curscore <= 0: # if it is better to stop the stem before the last negatives
-                        stems.append([curstem[:lastpositive], lastpositive, bestscore])
-                        curstem = []
-                        curscore = 0
-                    else: # otherwise - growing the stem
-                        curstem.append(bp)
-        elif curstem: # if no bp but we had the stem before
-            stems.append([curstem[:lastpositive], lastpositive, bestscore])
-            curstem = []
-            curscore = 0
-
-    # in case we stopped at a positive value
-    if curstem:
-        stems.append([curstem[:lastpositive], lastpositive, bestscore])
-
-    return stems
-
-
-def StemsFromDiagTheFirstVersionReversed(diag):
-    """going from the inner pairs to the outer pairs"""
-    stems = []
-    
-    curstem  = []
-    curscore = 0
-    bestscore = 0
-
-    for isbp, val, bp in diag[::-1]:
-
-        if isbp:
-            if val >= 0: # if bp has non-negative score - add it to the current stem                  
-                curstem.insert(0, bp)
-                lastpositive = len(curstem)
-                curscore = curscore + val
-                bestscore = curscore
-
-            elif val < 0: # if bp has negative score
-                if curstem:
-                    curscore = curscore + val
-                    if curscore <= 0: # if it is better to stop the stem before the last negatives
-                        stems.append([curstem[-lastpositive:], lastpositive, bestscore])
-                        curstem = []
-                        curscore = 0
-                    else: # otherwise - growing the stem
-                        curstem.insert(0, bp)
-        elif curstem: # if no bp but we had the stem before
-            stems.append([curstem[-lastpositive:], lastpositive, bestscore])
-            curstem = []
-            curscore = 0
-
-    # in case we stopped at a positive value
-    if curstem:
-        stems.append([curstem[-lastpositive:], lastpositive, bestscore])
-
-    return stems
 
 
 def PreStemsFromDiag(diag):
@@ -368,65 +254,6 @@ def PreStemsFromDiag(diag):
     return prestems
 
 
-def StemsFromPreStemsMaxLen(prestems):
-    """Define stems as the longest sequence of consecutive bps"""
-    stems = []
-    for prestem in prestems:
-        bps = [x[2] for x in prestem]
-        score = sum(x[1] for x in prestem)
-        stems.append([bps, len(bps), score])
-    return stems
-
-
-def StemsFromPreStemsTopScore(prestems):
-    """Define stems as the top-scored sub-sequence of consecutive bps"""
-
-    def MaxSubArrays(prestem):
-        """split into max-subarrays"""
-        if not prestem:
-            return []
-
-        cursum  = -10**6
-        bestsum = -10**6
-
-        begin    = -1
-        curbegin = -1 
-        end      = -1
-        
-        for i, pos in enumerate(prestem):
-            val = pos[1]
-            if val >= cursum + val:
-                curbegin = i
-            cursum = max(val, cursum + val)
-            if cursum > bestsum:
-                begin = curbegin
-                end = i
-                bestsum = cursum
-
-        return MaxSubArrays(prestem[:begin]) + [prestem[begin : end + 1],] + MaxSubArrays(prestem[end + 1:])
-
-    stems = []
-    for prestem in prestems:
-        for substem in MaxSubArrays(prestem):
-            bps = [x[2] for x in substem]
-            score = sum(x[1] for x in substem)
-            stems.append([bps, len(bps), score])
-    return stems
-
-
-def StemsFromPreStemsAll(prestems):
-    """Define stems as any sub-sequence of consecutive bps"""
-    stems = []
-    for prestem in prestems:
-        for i in range(len(prestem)):
-            for j in range(i + 1, len(prestem) + 1):
-                substem = prestem[i:j]
-                bps = [x[2] for x in substem]
-                score = sum(x[1] for x in substem)
-                stems.append([bps, len(bps), score])
-    return stems
-
-
 def StemsFromPreStemsDiffEdge(prestems, diff = 1):
     """Define stems as maximum sub-sequence of consecutive bps with up to
     <diff> trimmed base pairs from either of the edges"""
@@ -442,28 +269,15 @@ def StemsFromPreStemsDiffEdge(prestems, diff = 1):
     return stems
 
 
-def StemsFromDiag(diag, mode):
+def StemsFromDiag(diag):
     """Annotate stems at the given diagonal"""
-    if mode == "ver1": # My first bugged version of the max-subarray stems
-        return StemsFromDiagTheFirstVersion(diag)
-    if mode == "ver1rev": # The reversed first bugged version of the max-subarray stems
-        return StemsFromDiagTheFirstVersionReversed(diag)
-    if mode in {"all", "maxlen", "topscore", "diffedge"}:
-        prestems = PreStemsFromDiag(diag)
-        if mode == "maxlen": # Stems as longest sequences of consecutive bps
-            return StemsFromPreStemsMaxLen(prestems)
-        if mode == "topscore":
-            return StemsFromPreStemsTopScore(prestems)
-        if mode == "all":
-            return StemsFromPreStemsAll(prestems)
-        if mode == "diffedge":
-            return StemsFromPreStemsDiffEdge(prestems)
 
-    assert True == False, "check your mode value" ### SHOULD NEVER HAPPEN
+    prestems = PreStemsFromDiag(diag)
+    return StemsFromPreStemsDiffEdge(prestems)
 
 
 def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
-                  rstems, minlen, minscore, mode):
+                  rstems, minlen, minscore):
 
     # copy the bpboolmatrix
     matrix = bpboolmatrix.copy()
@@ -505,7 +319,7 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
             i += 1
             j -= 1
 
-        for stem in StemsFromDiag(diag, mode):
+        for stem in StemsFromDiag(diag):
             if stem[1] >= minlen and stem[2] >= minscore:
                 stems.append(stem)
 
@@ -678,15 +492,14 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
                  subopt = 1.0, minlen = 2,
                  minbpscore = 6, minfinscore = 0,
                  bracketweight = 1.0, distcoef = 0.1,
-                 orderpenalty = 0.0, mode = "ver1",
-                 loopbonus = 0.0,):
+                 orderpenalty = 0.0, loopbonus = 0.0,):
     """Return the top stems"""
 
     # Remove already predicted bps from bp-restraints
     rbps = set(rbps) - {bp for stem in rstems for bp in stem[0]}
 
     allstems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
-                             rstems, minlen, minbpscore, mode)
+                             rstems, minlen, minbpscore)
 
     allstems = ScoreStems(seq, allstems, rstems, reacts,
                           minfinscore,
@@ -857,12 +670,12 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         reacts = [ReactDict[ch] for ch in reacts]
     
     # Unalign seq, dbn, reacts, and restraints strings
-    shortseq, shortrest   = UnAlign2(seq, restraints)
+    shortseq, shortrest   = UnAlign(seq, restraints)
     shortreacts = [reacts[i] for i in range(len(seq)) if seq[i] not in GAPS]
 
     if dbn:
         assert len(seq) == len(dbn)
-        shortseq, shortdbn  = UnAlign2(seq, dbn)
+        shortseq, shortdbn  = UnAlign(seq, dbn)
     
     # Parse restraints into unpaired bases (rxs) and base pairs (rbps)
     rbps, rxs, rlefts, rrights = ParseRestraints(shortrest)
@@ -871,10 +684,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     finfinstemsets = []
     seen_structures = set() # set of bp-sets (to avoid repeats in finfinstemsets)
 
-    for psi, currentparamset in enumerate(paramsets):
-
-        paramset = DefaultParamSet()
-        paramset.update(currentparamset)
+    for psi, paramset in enumerate(paramsets):
 
         bpweights         = paramset["bpweights"]
         suboptmax         = paramset["suboptmax"]
@@ -887,7 +697,6 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         distcoef          = paramset["distcoef"]
         orderpenalty      = paramset["orderpenalty"]
         maxstemnum        = paramset["maxstemnum"]
-        mode              = paramset["mode"]
         loopbonus         = paramset["loopbonus"]
 
         cursubopt = suboptmin
@@ -934,10 +743,10 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                 inputs = ((shortseq, stems,
                            bpboolmatrix.copy(), bpscorematrix,
                            shortreacts, rbps.copy(), 
-                           cursubopt, minlen, minbpscore, ############################## TEMP
+                           cursubopt, minlen, minbpscore, 
                            minfinscore, bracketweight,
                            distcoef, orderpenalty,
-                           mode, loopbonus,
+                           loopbonus,
                            ) for stems in curstemsets)
 
                 # new optimal stems based on the current stem list 
@@ -1034,235 +843,3 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], consresult, result
     return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], [np.nan]*6, [np.nan]*7
 
-
-if __name__ == "__main__":
-
-    from collections import Counter
-
-    rst = None
-
-    #SAM riboswitch
-    seq = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
-    dbn = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
-    #TRNA
-    #seq = "GGGCGGCUAGCUCAGCGGAAGAGCGCUCGCCUCACACGCGAGAGGUCGUAGGUUCAAGUCCUACGCCGCCCACCA"
-    #dbn = "(((((((..((((....[..)))).(((((.......))))).....(((((..]....))))))))))))...."
-    #Twister ribozyme
-    #seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
-    #dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
-    #rst = "(x((xxx....xx..............,,,,,,..............................)).)"
-    #rst = "..................................................................." 
-    
-    queue = []
-
-    with open("CoRToise150.fas") as file:
-        lines = file.readlines()
-
-        for ii in range(0,len(lines)-2,3):
-
-            nm = lines[ii].strip()[1:]
-            sq = lines[ii+1].strip()
-            db = lines[ii+2].strip()
-            queue.append([nm, sq, db, rst])
-
-    #queue  = [["default", seq, dbn, rst],]
-    #queue += [["default", seq, dbn, rst],]
-
-    outp = open('temp.tsv','w')
-
-    title = '\t'.join("mode bracketweight loopbonus minfinscorefactor distcoef orderpenalty GU AU GC minbpscore suboptmax suboptmin suboptsteps rankbydiff tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
-    print(title)
-    outp.write(title+'\n')
-    outp.close()
-
-    ######################################
-
-    threads = 32
-
-    conslim = 1
-    toplim  = 5
-    minlen = 2
-    hardrest = False
-    maxstemnum = 10**6
-
-    for mode in ("diffedge",):
-        for suboptsteps in (1, 2):
-            for bracketweight in (-1, -2,):            
-                for minfinscorefactor in (1.0, ):
-                    for loopbonus in (0.125, 0.15, 0.175, 0.2):
-                        for distcoef in (0.07, 0.09, 0.11):
-                            for orderpenalty in (1.25, 1.2, 1.1, 1.0):
-                                for GU in (-1.75, -1.5, -1.25):
-                                    for AU in (1.25, 1.5, 1.75):
-                                        for GC in (2.75, 3.0, 3.25):
-                                            for minbpscore in (GC+AU,):
-                                                for suboptmax in (0.9,):
-                                                    for suboptmin in (0.65,):
-                                                        for rankbydiff in (False,):
-                                                            
-                                                            ####################################################
-                                                            print(mode, bracketweight, loopbonus, minfinscorefactor,
-                                                                  distcoef, orderpenalty, GU, AU, GC, minbpscore, suboptmax,
-                                                                  suboptmin, suboptsteps, rankbydiff, sep='\t', end='\t')
-
-                                                            paramsets = []
-                                                            paramsets.append({"bpweights" : {'GU' : GU,
-                                                                                             'AU' : AU,
-                                                                                             'GC' : GC,},
-                                                                              "suboptmax" : suboptmax,
-                                                                              "suboptmin" : suboptmin,
-                                                                              "suboptsteps": suboptsteps,
-                                                                              "minlen" : minlen,
-                                                                              "minbpscore" : minbpscore,
-                                                                              "minfinscorefactor" : minfinscorefactor,
-                                                                              "distcoef" : distcoef,
-                                                                              "bracketweight" :  bracketweight,
-                                                                              "orderpenalty"  : orderpenalty,
-                                                                              "loopbonus": loopbonus,
-                                                                              "maxstemnum" : maxstemnum,
-                                                                              "mode": mode,
-                                                                              })
-
-                                                            resultsB = []
-                                                            resultsC = []
-
-                                                            for obj in queue:
-
-                                                                name, seq, dbn, rst = obj
-
-                                                                result = SQRNdbnseq(seq, rst, dbn,
-                                                                                    paramsets, conslim, toplim,
-                                                                                    hardrest, rankbydiff,
-                                                                                    threads)
-
-                                                                '''print(name)
-                                                                print(seq)
-                                                                print(dbn)
-                                                                print('_'*len(seq))
-                                                                print(result[0],result[2])
-                                                                print('_'*len(seq))
-                                                                for rank, pred in enumerate(result[1]):
-                                                                    if rank == result[3][-1]-1:
-                                                                        print(pred, result[3])
-                                                                    else:
-                                                                        print(pred)
-                                                                print("#"*len(seq))'''
-
-                                                                resultsC.append(result[2])
-                                                                resultsB.append(result[3])
-
-                                                            tpC = sum(x[0] for x in resultsC)
-                                                            fpC = sum(x[1] for x in resultsC)
-                                                            fnC = sum(x[2] for x in resultsC)
-                                                            fsC = [x[3] for x in resultsC]
-                                                            prC = [x[4] for x in resultsC]
-                                                            rcC = [x[5] for x in resultsC]
-
-                                                            print(tpC, fpC, fnC, round(2*tpC / (2*tpC + fpC + fnC), 3), round(np.mean(fsC), 3),
-                                                                  round(np.mean(prC), 3), round(np.mean(rcC), 3), sep='\t', end='\t')
-
-                                                            tpB = sum(x[0] for x in resultsB)
-                                                            fpB = sum(x[1] for x in resultsB)
-                                                            fnB = sum(x[2] for x in resultsB)
-                                                            fsB = [x[3] for x in resultsB]
-                                                            prB = [x[4] for x in resultsB]
-                                                            rcB = [x[5] for x in resultsB]
-                                                            rkB = [x[6] for x in resultsB]
-                                                            
-                                                            print(tpB, fpB, fnB, round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
-                                                                  round(np.mean(prB), 3), round(np.mean(rcB), 3), sep = '\t')
-
-                                                            outp = open('temp.tsv','a')
-                                                            toprint = '\t'.join([str(xx) for xx in [mode, bracketweight, loopbonus, minfinscorefactor,
-                                                                                                    distcoef, orderpenalty, GU, AU, GC, minbpscore, suboptmax,
-                                                                                                    suboptmin, suboptsteps, rankbydiff,
-                                                                                                    tpC, fpC, fnC,
-                                                                                                    round(2*tpC / (2*tpC + fpC + fnC), 3),
-                                                                                                    round(np.mean(fsC), 3),
-                                                                                                    round(np.mean(prC), 3),
-                                                                                                    round(np.mean(rcC), 3),
-                                                                                                    tpB, fpB, fnB,
-                                                                                                    round(2*tpB / (2*tpB + fpB + fnB), 3),
-                                                                                                    round(np.mean(fsB), 3),
-                                                                                                    round(np.mean(prB), 3),
-                                                                                                    round(np.mean(rcB), 3)]])
-                                                            outp.write(toprint+'\n')
-                                                            outp.close()
-
-    ##########################################################
-
-    """
-    bpweights = {
-                 'GU' : -1.0,
-                 'AU' :  2,
-                 'GC' :  4,
-                 }
-
-    subopt = 0.9
-    minlen = 2
-    minbpscore = 8
-    minfinscorefactor = 0.5
-    bracketweight = 0.5
-    distcoef = 0.09
-    orderpenalty = 1.5
-    fiveprime = 0.1
-    maxstemnum = 10**6
-
-    resultsB = []
-    resultsC = []
-
-    for obj in queue:
-
-        name, seq, dbn, rst = obj
-
-        result = SQRNdbnseq(seq, bpweights, rst, dbn,
-                            subopt, minlen, minbpscore,
-                            minfinscorefactor, bracketweight,
-                            distcoef, orderpenalty, fiveprime,
-                            maxstemnum)
-
-        print(name)
-        print(seq)
-        print(dbn)
-        print('_'*len(seq))
-        print(result[0],result[2])
-        print('_'*len(seq))
-        for rank, pred in enumerate(result[1]):
-            if rank == result[3][-1]-1:
-                print(pred, result[3])
-            else:
-                print(pred)
-        print("#"*len(seq))
-
-        resultsC.append(result[2])
-        resultsB.append(result[3])
-
-    tpC = sum(x[0] for x in resultsC)
-    fpC = sum(x[1] for x in resultsC)
-    fnC = sum(x[2] for x in resultsC)
-    fsC = [x[3] for x in resultsC]
-    prC = [x[4] for x in resultsC]
-    rcC = [x[5] for x in resultsC]
-
-    print(round(2*tpC / (2*tpC + fpC + fnC), 3), round(np.mean(fsC), 3),
-          round(np.mean(prC), 3), round(np.mean(rcC), 3))
-
-    tpB = sum(x[0] for x in resultsB)
-    fpB = sum(x[1] for x in resultsB)
-    fnB = sum(x[2] for x in resultsB)
-    fsB = [x[3] for x in resultsB]
-    prB = [x[4] for x in resultsB]
-    rcB = [x[5] for x in resultsB]
-    rkB = [x[6] for x in resultsB]
-    
-    print(round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
-          round(np.mean(prB), 3), round(np.mean(rcB), 3))
-    print(Counter(rkB))"""
-
-
-
-
-
-
-
-    
