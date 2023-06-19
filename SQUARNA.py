@@ -2,7 +2,7 @@ import os
 import sys
 
 
-from SQRNdbnseq import SQRNdbnseq, ReactDict
+from SQRNdbnseq import SQRNdbnseq, ReactDict, SEPS
 
 
 def ParseConfig(configfile):
@@ -56,6 +56,108 @@ def ParseConfig(configfile):
     return names, paramsets
 
 
+def EncodedReactivities(seq, reacts, reactformat):
+
+    if reactformat == 3:
+        reactline = ''.join(["_+##"[int(x * 3)]
+                             for x in reacts])
+    elif reactformat == 10:
+        reactline = ''.join(['0123456789XX'[int(x * 11)]
+                             for x in reacts])
+    else:
+        reactline = ''.join(['abcdefghijklmnopqrstuvwxyzz'[int(x * 26)]
+                             for x in reacts])
+
+    # Introduce the chain separators
+    reactline = ''.join([reactline[i] if seq[i] not in SEPS else seq[i]
+                         for i in range(len(seq))])
+    return reactline
+
+
+def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
+                  paramsets, threads, rankbydiff, rankby,
+                  hardrest, interchainonly, toplim, outplim,
+                  conslim, reactformat):
+
+    while len(data) < len(inputformat):
+        data.append(None)
+
+    sequence     = data[inputformat.index('q')]
+    reactivities = data[inputformat.index('t')] if 't' in inputformat else None
+    restraints   = data[inputformat.index('r')] if 'r' in inputformat else None
+    reference    = data[inputformat.index('f')] if 'f' in inputformat else None
+
+    try:
+        if reactivities:
+            if len(reactivities) != len(sequence):
+                reactivities = list(map(float, reactivities.split()))
+            else:
+                reactivities = [ReactDict[char] for char in reactivities]
+
+        assert not reactivities or len(reactivities) == len(sequence)
+    except:
+        raise ValueError('Inappropriate reactivities line for entry "{}":\n {}'\
+                         .format(name[1:], data[inputformat.index('t')]))
+
+    assert not restraints or len(restraints) == len(sequence),\
+           'Inappropriate restraints line for entry "{}":\n {}'\
+           .format(name[1:], data[inputformat.index('r')])
+
+    assert not reference or len(reference) == len(sequence),\
+           'Inappropriate reference line for entry "{}":\n {}'\
+           .format(name[1:], data[inputformat.index('f')])
+
+    prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
+                            paramsets, conslim, toplim, hardrest,
+                            rankbydiff, rankby, interchainonly, threads)
+
+    consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
+
+    print(name)
+    print(sequence)
+    #########################################################################
+    if reactivities:
+        print(EncodedReactivities(sequence,
+                                  reactivities,
+                                  reactformat),
+              "reactivities", sep = '\t')
+    if restraints:
+        print(restraints,
+              "restraints", sep = '\t')
+    if reference:
+        print(reference,
+              "reference", sep = '\t')
+
+    print('_'*len(sequence))
+
+    if reference:
+        print(consensus,
+              "top-{}_consensus".format(conslim),
+              "TP={},FP={},FN={},FS={},PR={},RC={}".format(*consensus_metrics),
+              sep = '\t')
+    else:
+        print(consensus,
+              "top-{}_consensus".format(conslim), sep = '\t')
+
+    print('='*len(sequence))
+
+    for i, pred in enumerate(predicted_structures[:outplim]):
+        
+        struct, scores, paramsetind = pred
+        totalscore, structscore, reactscore = scores
+
+        if reference and i + 1 == topN_metrics[-1]:
+            print(struct, "#{}".format(i+1), totalscore,
+                  structscore, reactscore,
+                  paramsetnames[paramsetind],
+                  "TP={},FP={},FN={},FS={},PR={},RC={},RK={}".format(*topN_metrics),
+                  sep='\t')
+        else:
+            print(struct, "#{}".format(i+1), totalscore,
+                  structscore, reactscore,
+                  paramsetnames[paramsetind], sep='\t')
+
+
 if __name__ == "__main__":
 
     def PrintUsage():
@@ -84,7 +186,6 @@ if __name__ == "__main__":
         exit(0)
 
     # DEFAULTS
-
     inputfile  = os.path.join(HOME_DIR, "examples", "seq_input.fas")
     configfile = os.path.join(HOME_DIR, "def.conf")
 
@@ -213,18 +314,26 @@ if __name__ == "__main__":
         for i in range(len(paramsets)):
             paramsets[i]['maxstemnum'] = maxstemnum
 
+    # Reading + Running + Writing
+    name = None
+    data = []
+    with open(inputfile) as file:
+        for line in file:
+            if line.startswith('>'):
+                if name:
+                    RunSQRNdbnseq(name, data, inputformat, paramsetnames,
+                                  paramsets, threads, rankbydiff, rankby,
+                                  hardrest, interchainonly, toplim, outplim,
+                                  conslim, reactformat)
+                name = line.strip()
+                data = []
+            else:
+                data.append(line.strip())
 
-    for paramset in paramsets:
-        print(paramset)
-    
-
-    # Parse the input
-
-    # Format output (check presence for each line type)
-
-
-
-
+    RunSQRNdbnseq(name, data, inputformat, paramsetnames,
+                  paramsets, threads, rankbydiff, rankby,
+                  hardrest, interchainonly, toplim, outplim,
+                  conslim, reactformat)
 
 
     

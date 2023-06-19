@@ -843,3 +843,17 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], consresult, result
     return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], [np.nan]*6, [np.nan]*7
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
