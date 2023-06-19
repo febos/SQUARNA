@@ -2,9 +2,12 @@
 import numpy as np
 from multiprocessing import Pool
 
+# Gapped values
 GAPS = {'-', '.', '~'}
+# Separator values (~chain breaks)
 SEPS = {';', '&'}
 
+# Reactivities encoding
 ReactDict = {"_" : 0.00,  "+" : 0.50,  "#" : 1.00,
              "0" : 0.00,  "1" : 0.10,  "2" : 0.20,
              "3" : 0.30,  "4" : 0.40,  "5" : 0.50,
@@ -89,8 +92,9 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False):
 
 
 def StemsToDBN(stems, seq):
-    """Convert a list of stems (lists of bps) into a dbn string"""
-    return PairsToDBN([bp for stem in stems for bp in stem[0]],len(seq))
+    """Convert a list of stems (having lists
+    of bps as the first elements) into a dbn string"""
+    return PairsToDBN([bp for stem in stems for bp in stem[0]], len(seq))
 
 
 def DBNToPairs(dbn):
@@ -192,6 +196,7 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False):
 
     # Fill the upper triangle of the boolmatrix with ones for bps
     # Ignore the bps that would form a hairpin of len < 3
+    # And satisfy the restraints
     for i in range(len(seq) - 1):
         for j in range(i + 4, len(seq)):
             boolmat[i, j] = int(seq[i] + seq[j] in bps) * \
@@ -271,7 +276,6 @@ def StemsFromPreStemsDiffEdge(prestems, diff = 1):
 
 def StemsFromDiag(diag):
     """Annotate stems at the given diagonal"""
-
     prestems = PreStemsFromDiag(diag)
     return StemsFromPreStemsDiffEdge(prestems)
 
@@ -311,7 +315,6 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
     for x, y in diagstarts:
 
         diag = []
-
         i, j = x, y
         
         while i <= j - 4: # this is to forbid hairpins of len < 3
@@ -330,7 +333,8 @@ def ScoreStems(seq, stems, rstems,
                reacts, minscore,
                bracketweight, distcoef,
                orderpenalty, loopbonus):
-    """Adjust the scores based on the stem distance and pseudoknot level"""
+    """Adjust the scores based on the stem distance, pseudoknot level, and
+       possibly loop bonus"""
 
     # short near-symmetric internal loops
     goodloops = {(0, 0), (0, 1), (1, 0),
@@ -348,6 +352,7 @@ def ScoreStems(seq, stems, rstems,
     # set of restraint-bps
     rbps = set()
 
+    # Fill the bppartners list
     for stem in rstems:
         for bp in stem[0]:
             rbps.add(bp)
@@ -577,25 +582,40 @@ def ScoreStruct(seq, stemset, reacts):
         if bpsum > 0:
             thescore += bpsum**power
 
+    # seq length without the separator positions
     sepnum = sum(1 for _ in seq if _ in SEPS)
 
-    reactfactor = 1 - sum(reacts[i] if i in paired else 1 - reacts[i]
-                      for i in range(len(seq)) if seq[i] not in SEPS) / (len(seq) - sepnum)
+    # reactscore - sum of "errors" for each position
+    # treating paired positions as predicted to be 0
+    # and unpaired positions as predicted to be 1
+    # then for each paired position the error is the
+    # reactivity, and for unpaired = 1-reactivity
+    reactscore = 1 - sum(reacts[i] if i in paired else 1 - reacts[i]
+                         for i in range(len(seq))
+                         if seq[i] not in SEPS) / (len(seq) - sepnum)
 
-    return round(thescore * reactfactor, 3), round(thescore, 3), round(reactfactor, 3)
+    # Return three scores - totalscore, structscore, reactscore
+    return round(thescore * reactscore, 3), round(thescore, 3), round(reactscore, 3)
 
 
 def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
     """Rank the predicted structures"""
+
+    # First sort according to the rankby order of scores
     finstemsets = sorted(stemsets,
                          key = lambda x: [x[1][rb] for rb in rankby],
                          reverse = True)
 
+    # if not rankbydiff - that is all
     if not rankbydiff or len(finstemsets) < 3:
         return finstemsets
 
+    # Otherwise - iteratively select the furthest from the
+    # already selected structures breaking ties by the scores
     allbps = set()
 
+    # Compile the entire set of observed bps among all
+    # the structures
     for stemset in finstemsets:
         bps = {bp for stem in stemset[0] for bp in stem[0]}
         stemset.append(bps)
@@ -604,18 +624,26 @@ def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
     seenbps = {bp for bp in finstemsets[0][-1]}
     curind  = 1
 
+    # While the pre-selected subset of structures
+    # does not include all the observed bps
+    # or until the last but one structure
     while seenbps != allbps and curind < len(finstemsets) - 1:
 
-        finstemsets = finstemsets[:curind] + sorted(finstemsets[curind:],
-                                                    key = lambda x: (len(x[-1] - seenbps),
-                                                                     [x[1][rb] for rb in rankby]),
-                                                    reverse = True)
+        finstemsets = finstemsets[:curind] +\
+                      sorted(finstemsets[curind:],
+                             key = lambda x: (len(x[-1] - seenbps),
+                                              [x[1][rb] for rb in rankby]),
+                             reverse = True)
         seenbps |= finstemsets[curind][-1]
         curind += 1
 
-    finstemsets = finstemsets[:curind] + sorted(finstemsets[curind:],
-                                                key = lambda x: [x[1][rb] for rb in rankby],
-                                                reverse = True)
+    # Sort the remaining tail according to the rankby
+    # order of the scores
+    finstemsets = finstemsets[:curind] +\
+                  sorted(finstemsets[curind:],
+                         key = lambda x: [x[1][rb] for rb in rankby],
+                         reverse = True)
+    # Remove the appended bps sets and return
     return [x[:-1] for x in finstemsets]
 
    
@@ -626,25 +654,13 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                threads = 1):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     reacts == list of reactivities (values from 0 to 1)
-    bpweights == dictionary with canonical bps as keys and their weights as values
     restraints == string in dbn format; x symbols are forced to be unpaired
     dbn == known secondary structure in dbn format
-    subopt == what share of the top stem score will be searched for alternative stems
-    minlen == minimum stem length to predict
-    minbpscore == minimum stem bp-score to predict
-    minfinscorefactor == the percentage of minbpscore that will serve as the adjusted score threshold
-    bracketweight == mult factor for pseudoknotted brackets in the stem distance calculation
-    distcoef == how much the stem distance affects the stem score (0 == no effect)
-    orderpenalty == how much we prioritize lower pseudoknot levels
-    fiveprime == how much we prioritize 5'-close stems
-    maxstemnum == how many stems we allow in a single predicted structure
-    mode == how we define the stem edges (where the stems begin and end)
-         == maxlen/topscore/all/ver1/ver1rev
     conslim == how many alternative structures are used to derive the consensus
-    toplim == how many top ranked structures are used to measrue the performance
+    toplim == how many top ranked structures are used to measure the performance
     hardrest == force restraint base pairs to be present in the predicted dbns or not
-    rankbydiff == TODO
-    rankby == indices of the scores used for ranking
+    rankbydiff == Rank the most different structures on top
+    rankby == indices of the scores used for rankings
     interchainonly = allow only bps between different chains
     threads == number of CPUs to use
     
@@ -661,11 +677,13 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
     assert len(seq) == len(restraints), "Invalid restraints given"
 
+    # default reacts == list of 0.5 values
     if not reacts:
         reacts = [0.5 for i in range(len(seq))]
 
     assert len(reacts) == len(seq), "Invalid reactivities given"
 
+    # if we need to decode the reactivities from a string
     if type(reacts) == str:
         reacts = [ReactDict[ch] for ch in reacts]
     
@@ -699,7 +717,9 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         maxstemnum        = paramset["maxstemnum"]
         loopbonus         = paramset["loopbonus"]
 
+        # starting subopt value
         cursubopt = suboptmin
+        # increment for the subopt value
         suboptinc = (suboptmax - suboptmin)/suboptsteps
 
         minfinscore = minbpscore * minfinscorefactor
@@ -824,9 +844,9 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
             setbps = {bp for stem in stemset[0] for bp in stem[0]} | forcedbps
 
-            tp = len(setbps & knownbps)
-            fp = len(setbps - knownbps)
-            fn = len(knownbps - setbps)
+            tp = len(setbps & knownbps) # Correctly predicted bps
+            fp = len(setbps - knownbps) # Wrongly predicted bps
+            fn = len(knownbps - setbps) # Missed bps
 
             prc = (round(tp / (tp + fp), 3)) if (tp + fp) else 0
             rcl = (round(tp / (tp + fn), 3)) if (tp + fn) else 0

@@ -7,6 +7,7 @@ from SQRNdbnseq import SQRNdbnseq, ReactDict, SEPS
 
 def ParseConfig(configfile):
 
+    # Set of mandatory parameters
     params = {"bpweights",
               "suboptmax",
               "suboptmin",
@@ -26,27 +27,37 @@ def ParseConfig(configfile):
 
     with open(configfile) as file:
         for line in file:
+            # Ignore everythin after # symbol
             cleanline = line.split('#', 1)[0].strip()
+            # If non-empty line
             if cleanline:
+                # If paramset name
                 if cleanline.startswith('>'):
                     names.append(cleanline[1:])
                     cnt += 1
+                    # If this is the first param set
                     if cnt == 1:
                         paramset = {}
+                    # Otherwise 
                     else:  
                         paramsets.append(paramset)
+                        # Init all the following sets with the first set values
                         paramset = {k:v for k, v in paramsets[0].items()}
                 else:
                     key, val = cleanline.split(maxsplit = 1)
+                    # bpweights require parsing values like GC=3,AU=2,GU=1
                     if key == "bpweights":
                         paramset[key] = {}
                         for kv in val.split(','):
                             k, v = kv.strip().split('=')
                             paramset[key][k] = float(v)
+                    # all the other params are simply float values
                     else:
                         paramset[key] = float(val)
+    # don't forget the last one
     paramsets.append(paramset)
 
+    # Confirm the first param set contains all the params
     if not all([_ in paramsets[0] for _ in params]):
         raise ValueError("Missing some of the parameters in"+\
                          " the first parameter set"+\
@@ -57,7 +68,7 @@ def ParseConfig(configfile):
 
 
 def EncodedReactivities(seq, reacts, reactformat):
-
+    """Takes a list of floats, returns a string"""
     if reactformat == 3:
         reactline = ''.join(["_+##"[int(x * 3)]
                              for x in reacts])
@@ -79,6 +90,7 @@ def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
                   hardrest, interchainonly, toplim, outplim,
                   conslim, reactformat):
 
+    # e.g. if we expect qtrf but got only qt -> add two None values
     while len(data) < len(inputformat):
         data.append(None)
 
@@ -87,6 +99,9 @@ def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
     restraints   = data[inputformat.index('r')] if 'r' in inputformat else None
     reference    = data[inputformat.index('f')] if 'f' in inputformat else None
 
+    # Check the reactivities are either a string equal in length to
+    # the sequence, or a list of floats, again equal in length to
+    # the sequence, or empty line / None
     try:
         if reactivities:
             if len(reactivities) != len(sequence):
@@ -99,6 +114,8 @@ def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
         raise ValueError('Inappropriate reactivities line for entry "{}":\n {}'\
                          .format(name[1:], data[inputformat.index('t')]))
 
+    # Assert restraints and reference are of the consistent length
+    # or empty line / None
     assert not restraints or len(restraints) == len(sequence),\
            'Inappropriate restraints line for entry "{}":\n {}'\
            .format(name[1:], data[inputformat.index('r')])
@@ -107,15 +124,18 @@ def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
            'Inappropriate reference line for entry "{}":\n {}'\
            .format(name[1:], data[inputformat.index('f')])
 
+    # Run prediction
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
                             paramsets, conslim, toplim, hardrest,
                             rankbydiff, rankby, interchainonly, threads)
 
+    # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
 
     print(name)
     print(sequence)
 
+    # Printing everything observed in the input
     if reactivities:
         print(EncodedReactivities(sequence,
                                   reactivities,
@@ -128,8 +148,11 @@ def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
         print(reference,
               "reference", sep = '\t')
 
+    # Separator line 1
     print('_'*len(sequence))
 
+    # Printing consensus
+    # along with its metrics if reference is present
     if reference:
         print(consensus,
               "top-{}_consensus".format(conslim),
@@ -139,8 +162,12 @@ def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
         print(consensus,
               "top-{}_consensus".format(conslim), sep = '\t')
 
+    # Separator line 2
     print('='*len(sequence))
 
+    # Printing up to outplim predicted structures
+    # along with their scores and
+    # metrics of the best one if reference is present
     for i, pred in enumerate(predicted_structures[:outplim]):
         
         struct, scores, paramsetind = pred
@@ -176,8 +203,11 @@ if __name__ == "__main__":
     
     args = sys.argv[1:]
 
+    # If no arguments - print the short usage
     if not args:
         PrintUsage()
+
+    # If asking for help message
     if "--help" in args or "-help" in args or "help" in args or\
        "--h" in args or "-h" in args or "h" in args or\
        "--H" in args or "-H" in args or "H" in args:
@@ -320,6 +350,7 @@ if __name__ == "__main__":
     with open(inputfile) as file:
         for line in file:
             if line.startswith('>'):
+                # If not the first entry - process the previous one
                 if name:
                     RunSQRNdbnseq(name, data, inputformat, paramsetnames,
                                   paramsets, threads, rankbydiff, rankby,
@@ -329,7 +360,7 @@ if __name__ == "__main__":
                 data = []
             else:
                 data.append(line.strip())
-
+    # Don't forget the last one
     RunSQRNdbnseq(name, data, inputformat, paramsetnames,
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
