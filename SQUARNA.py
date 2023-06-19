@@ -115,7 +115,7 @@ def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
 
     print(name)
     print(sequence)
-    #########################################################################
+
     if reactivities:
         print(EncodedReactivities(sequence,
                                   reactivities,
