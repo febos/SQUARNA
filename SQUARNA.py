@@ -73,7 +73,7 @@ def EncodedReactivities(seq, reacts, reactformat):
         reactline = ''.join(["_+##"[int(x * 3)]
                              for x in reacts])
     elif reactformat == 10:
-        reactline = ''.join(['0123456789X'[int(x * 10 + 0.5)]
+        reactline = ''.join(['01234567899'[int(x * 10)]
                              for x in reacts])
     else:
         reactline = ''.join(['abcdefghijklmnopqrstuvwxyz'[int(x * 25) + 0.5]

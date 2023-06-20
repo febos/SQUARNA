@@ -38,9 +38,12 @@ a (hopefully) arbitrary version of NumPy library.
         Path to an input file in fasta-like format, 
         see "Input format" section for details.
 
+	c=FILENAME / config=FILENAME [DEFAULT: c=./def.conf]
+    
+        Path to a config file, see files "def.conf" 
+        and "alt.conf" for the format details.
 
 
-    configfile = os.path.join(HOME_DIR, "def.conf")
 
     inputformat = "qtrf"               # Input line order, q=seQuence,t=reacTivities,r=Restraints,f=reFerence
 
