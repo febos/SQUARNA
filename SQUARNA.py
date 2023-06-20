@@ -142,10 +142,16 @@ def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
                                   reactformat),
               "reactivities", sep = '\t')
     if restraints:
-        print(restraints,
+        print(''.join([restraints[i]
+                       if sequence[i] not in SEPS
+                       else sequence[i]
+                       for i in range(len(sequence))]),
               "restraints", sep = '\t')
     if reference:
-        print(reference,
+        print(''.join([reference[i]
+                       if sequence[i] not in SEPS
+                       else sequence[i]
+                       for i in range(len(sequence))]),
               "reference", sep = '\t')
 
     # Separator line 1
@@ -232,6 +238,7 @@ if __name__ == "__main__":
     interchainonly = False             # Forbid intra-chain base pairs
 
     toplim        = 5                  # Top-N to print
+    outplimset    = False              # if the user specified the outplim value 
     outplim       = toplim             # Top-N structs used for metrics calculations if reference
     conslim       = 1                  # Top-N structs used for consensus
 
@@ -296,6 +303,8 @@ if __name__ == "__main__":
             try:
                 toplim = int(float(arg.split('=', 1)[1]))
                 assert toplim > 0
+                if not outplimset:
+                    outplim = toplim
             except:
                 raise ValueError("Inappropriate toplim value (positive integer): {}"\
                                  .format(arg.split('=', 1)[1]))
@@ -305,6 +314,7 @@ if __name__ == "__main__":
             try:
                 outplim = int(float(arg.split('=', 1)[1]))
                 assert outplim > 0
+                outplimset = True
             except:
                 raise ValueError("Inappropriate outplim value (positive integer): {}"\
                                  .format(arg.split('=', 1)[1]))
@@ -365,6 +375,3 @@ if __name__ == "__main__":
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
                   conslim, reactformat)
-
-
-    
