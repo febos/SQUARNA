@@ -61,11 +61,11 @@ if __name__ == "__main__":
     #dbn = None
     #rst = "........./////....................."
 
-    seq = "CGAAGUCCUUUACGUA"
-    dbn = None
-    react = [1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+    seq = "GCGGGUGUUUACCAGGUCAGGUCCGAAAGGAAGCAGCCAAGGCACUU"
+    dbn = "..((((((((....(((....(((....)))....))).))))))))"
+    react = None#[1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
     
-    queue  = [["default", seq, dbn, rst, react],]
+    #queue  = [["default", seq, dbn, rst, react],]
     #queue += [["default", seq, dbn, rst, react],]  
 
     poor = {6, 28, 54, 55, 61, 73, 81, 90, 129, 133, 144, 150, 155, 158, 160, 161, 162, 163, 165, 168, 173, 174, 175, 177, 179, 182, 187, 191, 200, 202, 203, 204, 205, 206, 209, 211, 215, 223, 224, 226, 228, 232, 238, 239, 244, 245, 247, 252, 254, 258, 259, 260, 265}
@@ -93,9 +93,9 @@ if __name__ == "__main__":
             "loopbonus": 0.125,
             "maxstemnum" : 10**6,
             "mode": "diffedge",##
-           })  """  
+           })   """ 
 
-    """ TOP ONE """  
+    """ TOP ONE  """
     paramsets.append({"bpweights" : {'GU' : -1.25,
                            'AU' :  1.25,
                            'GC' :  3.25,},
@@ -111,7 +111,7 @@ if __name__ == "__main__":
             "loopbonus": 0.125,
             "maxstemnum" : 10**6,
             "mode": "diffedge",##
-           })  
+           })   
     
 
     """ TOP TWO """
@@ -132,7 +132,7 @@ if __name__ == "__main__":
             "mode": "diffedge",##
            })    
 
-    threads = 4
+    threads = 16
     
     toplim         = 5
     conslim        = 1

@@ -329,6 +329,14 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
     return stems
 
 
+def IsGNRA(seq):
+    if len(seq) != 4:
+        return False
+    if seq[0] == 'G' and seq[2] in ('G','A') and seq[3] == 'A':
+        return True
+    return False
+
+
 def ScoreStems(seq, stems, rstems,
                reacts, minscore,
                bracketweight, distcoef,
@@ -342,7 +350,7 @@ def ScoreStems(seq, stems, rstems,
                  (2, 2), (1, 2), (2, 1),
                  (3, 1), (1, 3),
                  (2, 3), (3, 2),
-                 (3, 3), (3, 4), (4, 3),
+                 (3, 3), (3, 4), (4, 3), 
                  (4, 4), (4, 2), (2, 4),
                 }
 
@@ -409,12 +417,15 @@ def ScoreStems(seq, stems, rstems,
 
         # to prioritize short near-symmetric internal loops inside
         goodloop = False
+        diff1 = 0
         if len(block_edges) == 1:
             if (block_edges[0][0] - stemstart - 1,
                 stemend - block_edges[0][1] - 1) in goodloops:
                 goodloop = True
+                diff1 = abs((block_edges[0][0] - stemstart - 1) - (stemend - block_edges[0][1] - 1))
         # to prioritize short near-symmetric internal loops outside
         goodloopout = False
+        diff2 = 0
         outerstart, outerend = bps[0]
         vv,ww = outerstart - 1, outerend + 1
         while vv >= 0 and outerstart - vv - 1 < 5 and bppartners[vv] == -1:
@@ -424,8 +435,11 @@ def ScoreStems(seq, stems, rstems,
         if bppartners[vv] == ww and bppartners[ww] == vv and\
            (outerstart - vv - 1, ww - outerend - 1) in goodloops:
             goodloopout = True
+            diff2 = abs((outerstart - vv - 1) - (ww - outerend - 1))
 
-        loopfactor = 1 + loopbonus*goodloop + loopbonus*goodloopout
+        # Double bonus for symmetric loops, 1.5-bonus for (x-1,x) loops
+        # and a single bonus for (x-2,x) loops
+        loopfactor = 1 + loopbonus*goodloop*(2-diff1/2) + loopbonus*goodloopout*(2-diff2/2)
 
         # 4 for hairpins, 2 for everything else
         idealdist = 4 if inblockend == -1 else 2
@@ -437,7 +451,7 @@ def ScoreStems(seq, stems, rstems,
         orderfactor = (1 / (1 + order))**orderpenalty
 
         initscore  = stem[2] # initial bp score
-        finalscore = initscore * stemdistfactor * orderfactor * loopfactor * reactfactor
+        finalscore = initscore * stemdistfactor * orderfactor * loopfactor * reactfactor * (1+0.25*IsGNRA(seq[stemstart+1:stemend]))
         
         descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
                                                     round(stemdist,2),
