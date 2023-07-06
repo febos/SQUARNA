@@ -441,6 +441,9 @@ def ScoreStems(seq, stems, rstems,
         # and a single bonus for (x-2,x) loops
         loopfactor = 1 + loopbonus*goodloop*(2-diff1/2) + loopbonus*goodloopout*(2-diff2/2)
 
+        # Bonus for tetraloops
+        tetrafactor = 1+0.25*IsGNRA(seq[stemstart+1:stemend])
+
         # 4 for hairpins, 2 for everything else
         idealdist = 4 if inblockend == -1 else 2
 
@@ -451,7 +454,7 @@ def ScoreStems(seq, stems, rstems,
         orderfactor = (1 / (1 + order))**orderpenalty
 
         initscore  = stem[2] # initial bp score
-        finalscore = initscore * stemdistfactor * orderfactor * loopfactor * reactfactor * (1+0.25*IsGNRA(seq[stemstart+1:stemend]))
+        finalscore = initscore * stemdistfactor * orderfactor * loopfactor * reactfactor * tetrafactor
         
         descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
                                                     round(stemdist,2),
@@ -576,25 +579,27 @@ def ConsensusStemSet(stemsets):
 def ScoreStruct(seq, stemset, reacts):
     """ Return the overall structure score based on the stemset"""
     bpscores = {"GU": -1.0,
-                "AU": 1.5,
-                "GC": 4.0,
+                "AU":  1.5,
+                "GC":  4.0,
                }
     for bp in sorted(bpscores.keys()): # CG for GC, etc.
         bpscores[bp[::-1]] = bpscores[bp]
 
     power = 1.7 # we will sum up these powers of the stem scores
     thescore = 0
-
+    
     paired = set()
 
     for stem in stemset:
+        
         bpsum = 0
         for v,w in stem[0]:
             bpsum += bpscores[seq[v]+seq[w]]
             paired.add(v)
             paired.add(w)
+            
         if bpsum > 0:
-            thescore += bpsum**power
+            thescore += bpsum**power 
 
     # seq length without the separator positions
     sepnum = sum(1 for _ in seq if _ in SEPS)
