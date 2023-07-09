@@ -274,14 +274,14 @@ def StemsFromPreStemsDiffEdge(prestems, diff = 1):
     return stems
 
 
-def StemsFromDiag(diag):
+def StemsFromDiag(diag, diff = 1):
     """Annotate stems at the given diagonal"""
     prestems = PreStemsFromDiag(diag)
-    return StemsFromPreStemsDiffEdge(prestems)
+    return StemsFromPreStemsDiffEdge(prestems, diff)
 
 
 def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
-                  rstems, minlen, minscore):
+                  rstems, minlen, minscore, diff = 1):
 
     # copy the bpboolmatrix
     matrix = bpboolmatrix.copy()
@@ -322,10 +322,10 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
             i += 1
             j -= 1
 
-        for stem in StemsFromDiag(diag):
+        for stem in StemsFromDiag(diag, diff):
             if stem[1] >= minlen and stem[2] >= minscore:
                 stems.append(stem)
-
+    
     return stems
 
 
