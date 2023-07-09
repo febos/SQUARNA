@@ -213,7 +213,10 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1):
         inp.write(">seq"+'\n')
         inp.write(seq+'\n')
 
-    os.system("python3 SQUARNA.py i=inp.tmp c={} > outp.tmp".format(conf))
+    if len(seq) > 500:
+        conf = "long.conf"
+
+    os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} > outp.tmp".format(conf,top))
 
     cnt = 0
     flag = False
@@ -235,19 +238,34 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1):
 def PredictSQUARNA5(seq):
     return PredictSQUARNA(seq, top = 5)
 
+def PredictSQUARNAN(seq):
+    return PredictSQUARNA(seq, top = 10**6)
+
 def PredictSQUARNAalt(seq):
     return PredictSQUARNA(seq, conf = "alt.conf")
 
 def PredictSQUARNAalt5(seq):
     return PredictSQUARNA(seq, conf = "alt.conf", top = 5)
 
+def PredictSQUARNAaltN(seq):
+    return PredictSQUARNA(seq, conf = "alt.conf", top = 10**6)
+
+def PredictSQUARNAlong(seq):
+    return PredictSQUARNA(seq, conf = "long.conf")
+
+def PredictSQUARNAlong5(seq):
+    return PredictSQUARNA(seq, conf = "long.conf", top = 5)
+
+def PredictSQUARNAlongN(seq):
+    return PredictSQUARNA(seq, conf = "long.conf", top = 10**6)
+
      
 
 if __name__ == "__main__":
 
     dataset = "SRtrain"
-    tool    = "SQUARNAalt5"
-    NL      =  False
+    tool    = "SQUARNAN"
+    NL      =  True
 
     if NL:
         dataset += "NL"
@@ -276,8 +294,13 @@ if __name__ == "__main__":
                        "SPOT-RNA":PredictSPOTRNA,
                        "SQUARNA": PredictSQUARNA,
                        "SQUARNA5": PredictSQUARNA5,
+                       "SQUARNAN": PredictSQUARNAN,
                        "SQUARNAalt": PredictSQUARNAalt,
                        "SQUARNAalt5": PredictSQUARNAalt5,
+                       "SQUARNAaltN": PredictSQUARNAaltN,
+                       "SQUARNAlong": PredictSQUARNAlong,
+                       "SQUARNAlong5": PredictSQUARNAlong5,
+                       "SQUARNAlongN": PredictSQUARNAlongN,
                        }[tool](seq)
 
             t1 = time.time()-t0
