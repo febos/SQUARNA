@@ -85,6 +85,45 @@ def YieldStems(seq, restraints = None, dbn = None,
         yield [[(radict[v],radict[w]) for v,w in stem[0]], stem[-1]]
 
 
+def Alt(mat, score, depth):
+
+    N = mat.shape[0]
+
+    thr = score*depth
+    
+    dct   = dict(enumerate(mat.flatten()))
+    cells = sorted(dct.items(), key = lambda x: x[1], reverse = True)
+
+    res = [[[],set()],]
+
+    for cell in cells:
+
+        bp = np.unravel_index(cell[0],mat.shape)
+
+        if cell[1] < thr:
+            break
+
+        if not bp[1]-bp[0] >= 4:
+            continue
+
+        added = False
+
+        for struct in res:
+            if bp[0] not in struct[1] and bp[1] not in struct[1]:
+                struct[0].append(bp)
+                struct[1].add(bp[0])
+                struct[1].add(bp[1])
+                added = True
+                break
+        if not added:
+            res.append([[bp,],set(bp)])
+
+    for struct in res[:1]:
+        print(PairsToDBN(struct[0],N))
+
+    return [PairsToDBN(struct[0],N) for struct in res[:1]]
+    
+
 def SQRNdbnali(objs, consrest = None, ref = None,
                bpweights = {}, interchainonly = False,
                minlen=2, minscore=0, limitscore = 0):
@@ -116,6 +155,9 @@ def SQRNdbnali(objs, consrest = None, ref = None,
                     stemmatrix[w, v] += stem[-1]
 
         predbps = DBNToPairs(dbn)
+
+        ####
+        return Alt(stemmatrix, limitscore, len(objs))
 
         for v,w in predbps:
             stemmatrix[v, w] = 0
@@ -184,17 +226,16 @@ if __name__ == "__main__":
     bpweights = {'GU' :  -1.25,
                  'AU' :  1.25,
                  'GC' :  3.25,}
-    minlen   = 2
-    minscore = 0
+    minlen     = 2
+    minscore   = bpweights['GC']+bpweights['AU']
     limitscore = bpweights['GC']+bpweights['AU']
     threads = 1
 
     interchainonly = False
 
-
     queue = []
 
-    with open("rfam10/RF00001.afa") as file:
+    with open("rfam10/RF00177.afa") as file:
         lines = file.readlines()
 
         ref = lines[0].strip()
@@ -205,17 +246,36 @@ if __name__ == "__main__":
             sq = lines[ii+1].strip()
             queue.append([nm, sq, None])
 
-    pred, ls, bfscore, fscore = SQRNdbnali(queue, consrest = None, ref = ref,
-                                           bpweights = bpweights, interchainonly = interchainonly,
-                                           minlen=minlen, minscore=minscore,
-                                           limitscore = limitscore)
-    print(ls, bfscore, fscore)
+    preds = SQRNdbnali(queue, consrest = None, ref = ref,
+                       bpweights = bpweights, interchainonly = interchainonly,
+                       minlen=minlen, minscore=minscore,
+                       limitscore = limitscore)
+
+    rb = set(DBNToPairs(ref))
+    pb = set(DBNToPairs(preds[0]))
+
+    TP = len(pb & rb)
+    FP = len(pb - rb)
+    FN = len(rb - pb)
+
+    FS = 2*TP / (2*TP + FP + FN)
+    print(round(FS,3))
+
+    prev_fs = FS
+
+    #pred, ls, bfscore, fscore = SQRNdbnali(queue, consrest = None, ref = ref,
+    #                                       bpweights = bpweights, interchainonly = interchainonly,
+    #                                       minlen=minlen, minscore=minscore,
+    #                                       limitscore = limitscore)
+    #print(ls, bfscore, fscore)
+
+    pred = preds[0]
     
     paramset  = {"bpweights" :  {'GU' :  -1.25,
                  'AU' :  1.25,
                  'GC' :  3.25,},
-              "suboptmax": 0.9,
-              "suboptmin": 0.65,
+              "suboptmax": 0.99,
+              "suboptmin": 0.99,
               "suboptsteps": 1,
               "minlen": 2,
               "minbpscore": 4.5,
@@ -252,8 +312,8 @@ if __name__ == "__main__":
 
     FS = 2*TP / (2*TP + FP + FN)
 
-    print(pred, ls, bfscore, fscore)
-    print(consensus, round(FS,3))
+    #print(pred, ls, bfscore, fscore)
+    print(consensus, round(FS,3), round(prev_fs,3))
 
     
 
