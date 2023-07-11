@@ -31,7 +31,7 @@ def DBNToPairs(dbn):
     return sorted(pairs)
 
 
-with open("CentroidAlifold.txt") as inp:
+with open("Rscape.txt") as inp:
     lines = inp.readlines()
 
     for i in range(0,len(lines)-2,3):
