@@ -235,7 +235,7 @@ if __name__ == "__main__":
 
     queue = []
 
-    with open("rfam10/RF00177.afa") as file:
+    with open("rfam10/afa/RF01854.afa") as file:
         lines = file.readlines()
 
         ref = lines[0].strip()
