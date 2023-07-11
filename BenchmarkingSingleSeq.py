@@ -263,9 +263,9 @@ def PredictSQUARNAlongN(seq):
 
 if __name__ == "__main__":
 
-    dataset = "SRtrain"
-    tool    = "SPOT-RNA"
-    NL      =  False
+    dataset = "SRtrain150"
+    tool    = "SQUARNA"
+    NL      =  True
 
     if NL:
         dataset += "NL"

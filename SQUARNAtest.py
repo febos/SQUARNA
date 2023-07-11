@@ -1,6 +1,6 @@
 import numpy as np
 
-from SQRNdbnseq import SQRNdbnseq, BPMatrix, DBNToPairs, AnnotateStems
+from SQRNdbnseq import SQRNdbnseq
 
 
 if __name__ == "__main__":
@@ -10,19 +10,7 @@ if __name__ == "__main__":
     rst = None
     react = None
 
-    #SAM riboswitch
-    #seq   = "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA"
-    #dbn   = "(((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..))))))))))." 
-    #react = "+++++++++++++++++++++33382222333++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-    #TRNA
-    #seq = "GGGCGGCUAGCUCAGCGGAAGAGCGCUCGCCUCACACGCGAGAGGUCGUAGGUUCAAGUCCUACGCCGCCCACCA"
-    #dbn = "(((((((..((((....[..)))).(((((.......))))).....(((((..]....))))))))))))...."
-    #Twister ribozyme
-    #seq = "GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC"
-    #dbn = "((((...(((({{((((((........))))))(((..[[[..}}.))).....))))..]]]))))"
-    #rst = "X_XX___....__..............,,,,,,.........................xx......x"
-    #rst = "..................................................................." 
-    
+   
     queue = []
 
     with open("datasets/SRtrain150.fas") as file:
@@ -36,44 +24,9 @@ if __name__ == "__main__":
             queue.append([nm, sq, db, rst, react])
 
 
-    #seq = "AAACCACGAGGAAGAGAGGUAGCGUUUUCUCCUGAGCGUGAAGCCGGCUUUCUGGCGUUGCUUGGCUGCAACUGCCGUCAGCCAUUGAUGAUCGUUCUUCUCUCCGUAUUGGGGAGUGAGAGGGAGAGAACGCGGUCUGAGUGGU"
-    #dbn = "..(((((......(.......((((((((((((....(...(...((((..(.((((((((......))))).))))..))))..)......)..((((((((((.....)))))).))))))))))))))))...)...)))))"
-
-    #seq = "GGUAAAGAAUGAAAAAACACGAUUCGGUUGGUAGUCCGGAUGCAUGAUUGAGAAUGUCAGUAACCUUCCCCUCCUCGGGAUGUCCAUCAUUCUUUAAUAUCUUUUAUGAGGAGGGAA"
-    #dbn = None
-
-    #seq = "GGACUUAUAGAUGGCUAAAAUCUGAGUCCA"
-    #dbn = "((((((..((((.......))))))))))."
-    
-    #seq  = "CGGUGUAAGUGCAGCCCGUCUUACACCGUGCGGCACAGCGGAAACGCUGAUGUCGUAUACAGGGCU"
-    #dbn  = "(((((((((...[[[[[..)))))))))((((((((((((....))))).)))))))....]]]]]"
-
-    #seq   = "GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU"
-    #dbn   = "[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))"
-    #react = "______++++++++++++++++++++++++++++++++++++++++####+++++++++++++++++++"
-    #rst = "[[[[[[........................]]]]]]................................."
-    
-    #seq = "UUCUGCUGUUAACAGCUUUCAGCCAGGGACGUGUUGUAUCCUAGGCAGUGGCCCUCCCAAAGGUCACAAUGUCGAAGAUCAACAAAUACGGUCUCGAACUACACUGGGCUCCAGAAUUUCCAUGGAUGUUUGAGGACGCAGAGGAGAAGUUGGACAACCCUAGUAGUUCAGAGGUGGAUAUGAUUUGCUCCACCACUGCGCAAAAGCUGGAAACAGACGGAA"
-    #dbn = "((((((((((..(((((((..((((((.((.(((((...(.(.(.((((((((........))))))..)).).).)..)))))......)))(((((((((....((.(((((..(((((.(.(.((((....))))).).)))))..)))))....))..)))))))[))(((((.]..........))))).))).)).)))))))..))))).)))))"
-
-
-    #seq = "GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC"
-    #dbn = None
-    #rst = "........./////....................."
-
-    seq = "AAACCACGAGGAAGAGAGGUAGCGUUUUCUCCUGAGCGUGAAGCCGGCUUUCUGGCGUUGCUUGGCUGCAACUGCCGUCAGCCAUUGAUGAUCGUUCUUCUCUCCGUAUUGGGGAGUGAGAGGGAGAGAACGCGGUCUGAGUGGU"
-    dbn = "..(((((......(.......((((((((((((....(...(...((((..(.((((((((......))))).))))..))))..)......)..((((((((((.....)))))).))))))))))))))))...)...)))))"
-    react = None#[1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
-
-    seq = "UCGGCGGUGGGGGAGCAUCUCCUGUAGGGGAGAUGUAACCCCCUUUACCUGCCGAACCCCGCCAGGCCCGGAAGGGAGCAACGGUAGGCAGGACGUC"
-    dbn = None
     
     #queue  = [["default", seq, dbn, rst, react],]
     #queue += [["default", seq, dbn, rst, react],]  
-
-    poor = {6, 28, 54, 55, 61, 73, 81, 90, 129, 133, 144, 150, 155, 158, 160, 161, 162, 163, 165, 168, 173, 174, 175, 177, 179, 182, 187, 191, 200, 202, 203, 204, 205, 206, 209, 211, 215, 223, 224, 226, 228, 232, 238, 239, 244, 245, 247, 252, 254, 258, 259, 260, 265}
-
-    #queue = [queue[i] for i in range(len(queue)) if i in poor]
 
     paramsets = []
 

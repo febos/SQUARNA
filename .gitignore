@@ -10,7 +10,7 @@ __pycache__/
 temp.tsv
 inp.tmp
 outp.tmp
-tmp
+tmp/*
 
 # Distribution / packaging
 .Python
