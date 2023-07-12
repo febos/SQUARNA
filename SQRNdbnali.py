@@ -235,7 +235,7 @@ if __name__ == "__main__":
 
     queue = []
 
-    with open("rfam10/afa/RF00177.afa") as file:
+    with open("rfam10/afa/RF00001.afa") as file:
         lines = file.readlines()
 
         ref = lines[0].strip()
@@ -293,7 +293,7 @@ if __name__ == "__main__":
         print(cons)
         structs.append(cons)
 
-    print("Consensus")
+    print("Consensus")                    
 
     consensus = Consensus(pred, structs)
 
@@ -308,6 +308,7 @@ if __name__ == "__main__":
 
     #print(pred, ls, bfscore, fscore)
     print(consensus, round(FS,3), round(prev_fs,3))
+    #print(altbps)
 
     
 
