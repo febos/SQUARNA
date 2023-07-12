@@ -30,10 +30,13 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False):
     # Initialize the dbn string
     dbn = ['.']*length
 
-    # Define "brackets" for 30 pseudoknot levels
+    # Define "brackets" for 30 pseudoknot levels (and 19 more encoded with cyrillic letters)
+    # Higher levels will be simply ignored
     levels = ['()','[]','{}','<>','Aa','Bb','Cc','Dd','Ee','Ff','Gg',
               'Hh','Ii','Jj','Kk','Ll','Mm','Nn','Oo','Pp','Qq','Rr',
-              'Ss','Tt','Uu','Vv','Ww','Xx','Yy','Zz']
+              'Ss','Tt','Uu','Vv','Ww','Xx','Yy','Zz',
+              'Бб','Гг','Дд','Ёё','Жж','Йй','Лл','Пп',
+              'Фф','Цц','Чч','Шш','Щщ','Ьь','Ыы','Ъъ','Ээ','Юю','Яя']
 
     # groups of non-conflicting base pairs
     groups = [[],]
@@ -52,6 +55,8 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False):
             level += 1
             if level == len(groups):
                 groups.append([])
+            if level == len(levels):
+                levels.append('..')
 
         # add the pair to the determined level
         groups[level].append(pair)

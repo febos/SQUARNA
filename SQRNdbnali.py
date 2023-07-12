@@ -118,10 +118,10 @@ def Alt(mat, score, depth):
         if not added:
             res.append([[bp,],set(bp)])
 
-    for struct in res[:1]:
+    for struct in res:
         print(PairsToDBN(struct[0],N))
 
-    return [PairsToDBN(struct[0],N) for struct in res[:1]]
+    return [PairsToDBN(struct[0],N) for struct in res]
     
 
 def SQRNdbnali(objs, consrest = None, ref = None,
@@ -235,7 +235,7 @@ if __name__ == "__main__":
 
     queue = []
 
-    with open("rfam10/afa/RF03160.afa") as file:
+    with open("rfam10/afa/RF00177.afa") as file:
         lines = file.readlines()
 
         ref = lines[0].strip()
@@ -262,12 +262,6 @@ if __name__ == "__main__":
     print(round(FS,3))
 
     prev_fs = FS
-
-    #pred, ls, bfscore, fscore = SQRNdbnali(queue, consrest = None, ref = ref,
-    #                                       bpweights = bpweights, interchainonly = interchainonly,
-    #                                       minlen=minlen, minscore=minscore,
-    #                                       limitscore = limitscore)
-    #print(ls, bfscore, fscore)
 
     pred = preds[0]
     
