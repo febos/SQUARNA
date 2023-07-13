@@ -164,8 +164,16 @@ def UnAlign(seq, dbn):
     """Removes gaps from a pair of seq & dbn strings
     hyphens, dots, and tildas are treated as gaps"""
 
+    # Remove base pairs of gap columns
+    cleandbn = list(dbn)
+    pairs = DBNToPairs(dbn)
+    for v,w in pairs:
+        if seq[v] in GAPS or seq[w] in GAPS:
+            cleandbn[v] = '.'
+            cleandbn[w] = '.'
+
     # Unalign the dbn based on the seq string first
-    newdbn = ''.join([dbn[i] for i in range(len(seq))
+    newdbn = ''.join([cleandbn[i] for i in range(len(seq))
                       if seq[i] not in GAPS])
     # Then unalign the seq string itself
     newseq = ''.join([x for x in seq if x not in GAPS])
