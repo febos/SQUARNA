@@ -79,11 +79,9 @@ def YieldStems(seq, restraints = None, dbn = None,
     stems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps + predbps,
                           rstems=[], minlen=minlen, minscore=minscore, diff=0)
 
-
     radict = ReAlignDict(shortseq, seq)
 
-    for stem in stems:
-        yield [[(radict[v],radict[w]) for v,w in stem[0]], stem[-1]]
+    return [[[(radict[v],radict[w]) for v,w in stem[0]], stem[-1]] for stem in stems]
 
 
 def Alt(mat, score, depth):
@@ -119,15 +117,28 @@ def Alt(mat, score, depth):
         if not added:
             res.append([[bp,],set(bp)])
 
-    for struct in res:
-        print(PairsToDBN(struct[0],N))
+    #for struct in res:
+    #    print(PairsToDBN(struct[0],N))
 
     return [PairsToDBN(struct[0],N) for struct in res]
-    
+
+
+def mpYieldStems(args):
+
+    name, seq, rst, consrest, dbn, bpweights,interchainonly,minlen,minscore = args
+
+    return YieldStems(seq, restraints = rst if rst else consrest,
+                      dbn = dbn,
+                      bpweights=bpweights,
+                      interchainonly=interchainonly,
+                      minlen=minlen,
+                      minscore=minscore)
+
 
 def SQRNdbnali(objs, consrest = None, ref = None,
                bpweights = {}, interchainonly = False,
-               minlen=2, minscore=0, limitscore = 0):
+               minlen=2, minscore=0, limitscore = 0,
+               iterative = False, threads = 1):
 
     dbn = '.'*len(objs[0][1])
 
@@ -136,29 +147,51 @@ def SQRNdbnali(objs, consrest = None, ref = None,
 
     rb = set(DBNToPairs(ref))
 
+    seen_preds = set()
+
+    first = True
+
     while True:
 
         stemmatrix = np.zeros((len(queue[0][1]),len(queue[0][1])))
 
-        for obj in objs:
+        with Pool(24) as pool:
 
-            name, seq, rst = obj
-
-            for stem in YieldStems(seq, restraints = rst if rst else consrest,
-                                   dbn = dbn,
-                                   bpweights=bpweights,
-                                   interchainonly=interchainonly,
-                                   minlen=minlen,
-                                   minscore=minscore):
-
-                for v,w in stem[0]:
-                    stemmatrix[v, w] += stem[-1]
-                    stemmatrix[w, v] += stem[-1]
+            inputs = [(obj[0],obj[1],obj[2],consrest,dbn,bpweights,interchainonly,minlen,minscore) for obj in queue]
+                    
+            for stems in pool.imap(mpYieldStems,inputs):
+                for stem in stems:
+                    for v,w in stem[0]:
+                        stemmatrix[v, w] += stem[-1]
+                        stemmatrix[w, v] += stem[-1]
 
         predbps = DBNToPairs(dbn)
 
-        ####
         return Alt(stemmatrix, limitscore, len(objs))
+
+        #########################
+        if iterative:
+
+            preds = Alt(stemmatrix, limitscore, len(objs))
+
+            if preds[0] == consrest or preds[0] in seen_preds:
+                print('last')
+                return preds
+            else:
+                pb = set(DBNToPairs(preds[0]))
+                TP = len(pb & rb)
+                FP = len(pb - rb)
+                FN = len(rb - pb)
+                FS = 2*TP / (2*TP + FP + FN)
+                print('next', round(FS,3), preds[0])
+                seen_preds.add(preds[0])
+                consrest = preds[0]
+                if first:
+                    first = False
+                    continue
+                else:
+                    return preds
+        #######################
 
         for v,w in predbps:
             stemmatrix[v, w] = 0
@@ -198,7 +231,7 @@ def SQRNdbnali(objs, consrest = None, ref = None,
     return dbn, round(best_ls,3), round(best_fscore,3), round(FS,3)
 
 
-def Consensus(rst, structs, thr = 0.0):
+def Consensus(rst, structs, thr = 0.0, truncate = True):
 
     bps = {}
 
@@ -220,8 +253,9 @@ def Consensus(rst, structs, thr = 0.0):
             seen.add(bp[0])
             seen.add(bp[1])
             resbps.append(bp)
-        
-    #return PairsToDBN(list(set(resbps) & set(DBNToPairs(rst))), len(structs[0]))
+
+    if truncate:
+        return PairsToDBN(list(set(resbps) & set(DBNToPairs(rst))), len(structs[0]))
     return PairsToDBN(list(set(resbps)), len(structs[0]))
 
 def mpSQRNdbnseq(args):
@@ -238,16 +272,16 @@ if __name__ == "__main__":
     bpweights = {'GU' :  -1.25,
                  'AU' :  1.25,
                  'GC' :  3.25,}
-    minlen     = 2
-    minscore   = bpweights['GC']+bpweights['AU']
-    limitscore = bpweights['GC']+bpweights['AU']
+    
     threads = 1
+
+    threads1 = 32
 
     interchainonly = False
 
     queue = []
 
-    with open("rfam10/afa/RF00094.afa") as file:
+    with open("rfam10/afa/RF00177.afa") as file:
         lines = file.readlines()
 
         ref = lines[0].strip()
@@ -258,69 +292,82 @@ if __name__ == "__main__":
             sq = lines[ii+1].strip()
             queue.append([nm, sq, None])
 
-    preds = SQRNdbnali(queue, consrest = None, ref = ref,
-                       bpweights = bpweights, interchainonly = interchainonly,
-                       minlen=minlen, minscore=minscore,
-                       limitscore = limitscore)
+    iters = True
 
-    rb = set(DBNToPairs(ref))
-    pb = set(DBNToPairs(preds[0]))
+    for bpweights in ({'GU' :  -1.25,'AU' :  1.25,'GC' :  3.25,},):
 
-    TP = len(pb & rb)
-    FP = len(pb - rb)
-    FN = len(rb - pb)
+        minlen     = 2
+        minscore   = bpweights['GC']+bpweights['AU']
+        limitscore = bpweights['GC']+bpweights['AU']
 
-    FS = 2*TP / (2*TP + FP + FN)
-    print(round(FS,3))
+        preds = SQRNdbnali(queue, consrest = None, ref = ref,
+                           bpweights = bpweights, interchainonly = interchainonly,
+                           minlen=minlen, minscore=minscore,
+                           limitscore = limitscore, iterative = iters, threads = threads1)
+        if iters:
+            preds = SQRNdbnali(queue, consrest = preds[0], ref = ref,
+                               bpweights = bpweights, interchainonly = interchainonly,
+                               minlen=minlen, minscore=minscore,
+                               limitscore = limitscore, iterative = iters, threads = threads1)
 
-    prev_fs = FS
+        rb = set(DBNToPairs(ref))
+        pb = set(DBNToPairs(preds[0]))
 
-    pred = preds[0]
+        TP = len(pb & rb)
+        FP = len(pb - rb)
+        FN = len(rb - pb)
 
-    for thr in (0.0,0.1,0.25,0.5):
-        for orderpen,bracketw in ((0.0,1),(0.5,-2),(1.0,-2)):
-    
-            paramset  = {"bpweights" :  {'GU' :  -1.25,
-                         'AU' :  1.25,
-                         'GC' :  3.25,},
-                      "suboptmax": 0.99,
-                      "suboptmin": 0.99,
-                      "suboptsteps": 1,
-                      "minlen": 2,
-                      "minbpscore": 4.5,
-                      "minfinscorefactor": 1.0,
-                      "distcoef" : 0.09,
-                      "bracketweight": bracketw,
-                      "orderpenalty": orderpen,
-                      "loopbonus": 0.125,
-                      "maxstemnum": 10**6}
+        FS = 2*TP / (2*TP + FP + FN)
+        #print(round(FS,3))
+
+        prev_fs = FS
+
+        pred = preds[0]
+
+        for orderpen in (0.25, 0.5, 0.75):
+        
+            paramset  = {"bpweights" :  bpweights,
+                        "suboptmax": 0.99,
+                        "suboptmin": 0.99,
+                        "suboptsteps": 1,
+                        "minlen": minlen,
+                        "minbpscore": minscore,
+                        "minfinscorefactor": 1.0,
+                        "distcoef" : 0.09,
+                        "bracketweight": -2,
+                        "orderpenalty": orderpen,
+                        "loopbonus": 0.125,
+                        "maxstemnum": 10**6}
 
             structs = []
 
-            with Pool(24) as pool:
+            with Pool(threads1) as pool:
 
-                inputs = [(obj[0],obj[1],obj[2],pred,paramset,threads,interchainonly)for obj in queue]
-                
+                inputs = [(obj[0],obj[1],obj[2],pred,paramset,threads,interchainonly) for obj in queue]
+                    
                 for cons in pool.imap(mpSQRNdbnseq,inputs):
 
                     structs.append(cons)
 
-            #print("Consensus")                    
+            #print("Consensus")
 
-            consensus = Consensus(pred, structs, thr)
+                for thr in (0.3,1/3,0.35):
+                    for truncate in (False, True):
 
-            rb = set(DBNToPairs(ref))
-            pb = set(DBNToPairs(consensus))
+                        consensus = Consensus(pred, structs, thr, truncate)
 
-            TP = len(pb & rb)
-            FP = len(pb - rb)
-            FN = len(rb - pb)
+                        rb = set(DBNToPairs(ref))
+                        pb = set(DBNToPairs(consensus))
 
-            FS = 2*TP / (2*TP + FP + FN)
+                        TP = len(pb & rb)
+                        FP = len(pb - rb)
+                        FN = len(rb - pb)
 
-            #print(pred, ls, bfscore, fscore)
-            print(consensus, thr, orderpen, round(FS,3),sep='\t')# round(prev_fs,3))
-            #print(altbps)
+                        FS = 2*TP / (2*TP + FP + FN)
+
+                        #print(pred, ls, bfscore, fscore)
+                        print(consensus, bpweights['GU'], orderpen, round(thr,3), truncate, round(prev_fs,3), round(FS,3),sep='\t')# )
+                        #print(altbps)
 
     
 
