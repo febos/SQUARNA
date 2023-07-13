@@ -1,7 +1,8 @@
 
 import numpy as np
 
-from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints, BPMatrix, AnnotateStems, SQRNdbnseq
+from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints, BPMatrix, AnnotateStems, nonmpSQRNdbnseq
+from multiprocessing import Pool
 
 
 def ReAlignDict(shortseq, longseq):
@@ -197,9 +198,11 @@ def SQRNdbnali(objs, consrest = None, ref = None,
     return dbn, round(best_ls,3), round(best_fscore,3), round(FS,3)
 
 
-def Consensus(rst, structs):
+def Consensus(rst, structs, thr = 0.0):
 
     bps = {}
+
+    thr *= len(structs)
 
     for struct in structs:
         for bp in DBNToPairs(struct):
@@ -213,14 +216,23 @@ def Consensus(rst, structs):
 
     for bp in sorted(bps.keys(),key = lambda x: bps[x], reverse = True):
 
-        if bp[0] not in seen and bp[1] not in seen:
+        if bps[bp] >= thr and bp[0] not in seen and bp[1] not in seen:
             seen.add(bp[0])
             seen.add(bp[1])
             resbps.append(bp)
         
-    return PairsToDBN(list(set(resbps) & set(DBNToPairs(rst))), len(structs[0]))
+    #return PairsToDBN(list(set(resbps) & set(DBNToPairs(rst))), len(structs[0]))
+    return PairsToDBN(list(set(resbps)), len(structs[0]))
 
+def mpSQRNdbnseq(args):
 
+    name, seq, rst,pred,paramset,threads,interchainonly = args
+    cons, dbns, nums1, nums2 = nonmpSQRNdbnseq(seq, reacts = None, restraints = pred, dbn = None,
+                                              paramsets = [paramset,], conslim = 1,
+                                              rankbydiff = False, interchainonly = interchainonly,
+                                              threads = threads)
+    return cons
+    
 if __name__ == "__main__":
 
     bpweights = {'GU' :  -1.25,
@@ -235,7 +247,7 @@ if __name__ == "__main__":
 
     queue = []
 
-    with open("rfam10/afa/RF00001.afa") as file:
+    with open("rfam10/afa/RF00094.afa") as file:
         lines = file.readlines()
 
         ref = lines[0].strip()
@@ -264,51 +276,53 @@ if __name__ == "__main__":
     prev_fs = FS
 
     pred = preds[0]
+
+    for thr in (0.0,0.1,0.25,0.5):
+        for orderpen,bracketw in ((0.0,1),(0.5,-2),(1.0,-2)):
     
-    paramset  = {"bpweights" :  {'GU' :  -1.25,
-                 'AU' :  1.25,
-                 'GC' :  3.25,},
-              "suboptmax": 0.99,
-              "suboptmin": 0.99,
-              "suboptsteps": 1,
-              "minlen": 2,
-              "minbpscore": 4.5,
-              "minfinscorefactor": 1.0,
-              "distcoef" : 0.09,
-              "bracketweight": -2,
-              "orderpenalty": 1.0,
-              "loopbonus": 0.125,
-              "maxstemnum": 10**6}
+            paramset  = {"bpweights" :  {'GU' :  -1.25,
+                         'AU' :  1.25,
+                         'GC' :  3.25,},
+                      "suboptmax": 0.99,
+                      "suboptmin": 0.99,
+                      "suboptsteps": 1,
+                      "minlen": 2,
+                      "minbpscore": 4.5,
+                      "minfinscorefactor": 1.0,
+                      "distcoef" : 0.09,
+                      "bracketweight": bracketw,
+                      "orderpenalty": orderpen,
+                      "loopbonus": 0.125,
+                      "maxstemnum": 10**6}
 
-    structs = []
+            structs = []
 
-    for obj in queue:
+            with Pool(24) as pool:
 
-        name, seq, rst = obj
-        print(seq)
-        cons, dbns, nums1, nums2 = SQRNdbnseq(seq, reacts = None, restraints = pred, dbn = None,
-                                              paramsets = [paramset,], conslim = 1,
-                                              rankbydiff = False, interchainonly = interchainonly,
-                                              threads = threads)
-        print(cons)
-        structs.append(cons)
+                inputs = [(obj[0],obj[1],obj[2],pred,paramset,threads,interchainonly)for obj in queue]
+                
+                for cons in pool.imap(mpSQRNdbnseq,inputs):
 
-    print("Consensus")                    
+                    structs.append(cons)
 
-    consensus = Consensus(pred, structs)
+            #print("Consensus")                    
 
-    rb = set(DBNToPairs(ref))
-    pb = set(DBNToPairs(consensus))
+            consensus = Consensus(pred, structs, thr)
 
-    TP = len(pb & rb)
-    FP = len(pb - rb)
-    FN = len(rb - pb)
+            rb = set(DBNToPairs(ref))
+            pb = set(DBNToPairs(consensus))
 
-    FS = 2*TP / (2*TP + FP + FN)
+            TP = len(pb & rb)
+            FP = len(pb - rb)
+            FN = len(rb - pb)
 
-    #print(pred, ls, bfscore, fscore)
-    print(consensus, round(FS,3), round(prev_fs,3))
-    #print(altbps)
+            FS = 2*TP / (2*TP + FP + FN)
+
+            #print(pred, ls, bfscore, fscore)
+            print(consensus, thr, orderpen, round(FS,3),sep='\t')# round(prev_fs,3))
+            #print(altbps)
+
+    
 
     
 

@@ -568,8 +568,10 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
 
 def mpOptimalStems(args):
     """OptimalStems version with a single input parameter for mp.pool.imap"""
+
     rstems   = args[1] # current stem set
     newstems = OptimalStems(*args)
+
     return newstems, rstems
 
 
@@ -896,12 +898,221 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], [np.nan]*6, [np.nan]*7
 
 
+def nonmpSQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
+                    paramsets = [], conslim = 5, toplim = 5,
+                    hardrest = False, rankbydiff = True,
+                    rankby = (0, 2, 1), interchainonly = False,
+                    threads = 1):
+    """seq == sequence (possibly with gaps or any other non-ACGU symbols
+    reacts == list of reactivities (values from 0 to 1)
+    restraints == string in dbn format; x symbols are forced to be unpaired
+    dbn == known secondary structure in dbn format
+    conslim == how many alternative structures are used to derive the consensus
+    toplim == how many top ranked structures are used to measure the performance
+    hardrest == force restraint base pairs to be present in the predicted dbns or not
+    rankbydiff == Rank the most different structures on top
+    rankby == indices of the scores used for rankings
+    interchainonly = allow only bps between different chains
+    threads == number of CPUs to use
+    
+    SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
 
+    assert set(rankby) == {0, 1, 2} and len(rankby) == 3, "Invalid ranking indices"
 
+    # turn seq into UPPERCASE & replace T with U
+    seq = seq.upper().replace("T", "U")
 
+    # if not restraints - generate a string of dots
+    if not restraints:
+        restraints = '.'*len(seq)
 
+    assert len(seq) == len(restraints), "Invalid restraints given"
 
+    # default reacts == list of 0.5 values
+    if not reacts:
+        reacts = [0.5 for i in range(len(seq))]
 
+    assert len(reacts) == len(seq), "Invalid reactivities given"
+
+    # if we need to decode the reactivities from a string
+    if type(reacts) == str:
+        reacts = [ReactDict[ch] for ch in reacts]
+    
+    # Unalign seq, dbn, reacts, and restraints strings
+    shortseq, shortrest   = UnAlign(seq, restraints)
+    shortreacts = [reacts[i] for i in range(len(seq)) if seq[i] not in GAPS]
+
+    if dbn:
+        assert len(seq) == len(dbn)
+        shortseq, shortdbn  = UnAlign(seq, dbn)
+    
+    # Parse restraints into unpaired bases (rxs) and base pairs (rbps)
+    rbps, rxs, rlefts, rrights = ParseRestraints(shortrest)
+
+    # final stem sets among all the parameter sets
+    finfinstemsets = []
+    seen_structures = set() # set of bp-sets (to avoid repeats in finfinstemsets)
+
+    for psi, paramset in enumerate(paramsets):
+
+        bpweights         = paramset["bpweights"]
+        suboptmax         = paramset["suboptmax"]
+        suboptmin         = paramset["suboptmin"]
+        suboptsteps       = paramset["suboptsteps"]
+        minlen            = paramset["minlen"]
+        minbpscore        = paramset["minbpscore"]
+        minfinscorefactor = paramset["minfinscorefactor"]
+        bracketweight     = paramset["bracketweight"]
+        distcoef          = paramset["distcoef"]
+        orderpenalty      = paramset["orderpenalty"]
+        maxstemnum        = paramset["maxstemnum"]
+        loopbonus         = paramset["loopbonus"]
+
+        # starting subopt value
+        cursubopt = suboptmin
+        # increment for the subopt value
+        suboptinc = (suboptmax - suboptmin)/suboptsteps
+
+        minfinscore = minbpscore * minfinscorefactor
+
+        # Generate initial bp-matrix (with bp weights in cells)
+        bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, rxs,
+                                               rlefts, rrights,
+                                               interchainonly)
+
+        # List of lists of stems (each stem list is a currently predicted secondary structure
+        curstemsets = [[],]
+
+        # List of finalized stem lists
+        finstemsets = []
+
+        # Starting with a single empty structure
+        cursize = len(curstemsets)
+
+        # while list of intermediate stem lists is not empty
+        while curstemsets:
+
+            # Each time we diverge - cursubopt is increased by suboptinc
+            if len(curstemsets) > cursize and cursubopt < suboptmax:
+                cursize = len(curstemsets)
+                cursubopt += suboptinc
+
+            # filtering by len(stems) == maxstemnum
+            newcurstemsets = []
+            for stems in curstemsets:
+                if len(stems) == maxstemnum:
+                    finstemsets.append(stems)
+                else:
+                    newcurstemsets.append(stems)
+            curstemsets = newcurstemsets
+
+            # new iteration
+            newcurstemsets = []
+
+            inputs = ((shortseq, stems,
+                        bpboolmatrix.copy(), bpscorematrix,
+                        shortreacts, rbps.copy(), 
+                        cursubopt, minlen, minbpscore, 
+                        minfinscore, bracketweight,
+                        distcoef, orderpenalty,
+                        loopbonus,
+                        ) for stems in curstemsets)
+
+            for args in inputs:
+
+                # new optimal stems based on the current stem list 
+                newstems, stems = mpOptimalStems(args)
+
+                # append new intermediate stem lists
+                if newstems:
+                    for newstem in newstems:
+                        newcurstemsets.append(stems + [newstem,])
+                # if no newstems returned - the stem list is considered final
+                else:
+                    finstemsets.append(stems)
+
+            # update the current stem lists
+            curstemsets = newcurstemsets
+
+    for finstemset in finstemsets:
+
+        bpsset = tuple(sorted([bp for stem in finstemset for bp in stem[0]]))
+
+        if bpsset not in seen_structures:
+            # append [stemset, structscore, paramsetind]
+            finfinstemsets.append([finstemset,
+                                    ScoreStruct(shortseq, finstemset, shortreacts),
+                                    psi])
+            seen_structures.add(bpsset)
+
+    # list of dbn strings
+    dbns = []
+
+    # sort the final stem lists in descreasing order of their total bp-score by default
+    # and if rankbydiff - prioritize the most diverged structures
+    finstemsets = RankStructs(finfinstemsets, rankbydiff, rankby)
+
+    forcedbps = {(v,w) for v,w in rbps
+                 if shortseq[v]+shortseq[w] in bpweights or
+                    shortseq[w]+shortseq[v] in bpweights} if hardrest else set()
+
+    # convert all final stem lists into dbn strings
+    # and not forget about non-predicted bps from restraints
+    for stems, structscore, paramsetind in finstemsets:
+        dbns.append(PairsToDBN({bp for stem in stems for bp in stem[0]} | forcedbps,
+                    len(shortseq)))
+
+    consbps = ConsensusStemSet([xx[0] for xx in finstemsets[:conslim]]) | forcedbps # Consensus of the Top-ranked
+
+    # ReAlign the dbn strings accoring to seq
+    dbns = [ReAlign(x, seq) for x in dbns]
+    cons = ReAlign(PairsToDBN(consbps, len(shortseq)), seq)
+
+    # Introducing chain separators into the predicted structures
+    dbns = [''.join([_[i] if seq[i] not in SEPS else seq[i]
+                     for i in range(len(seq))]) for _ in dbns]
+    cons = ''.join([cons[i] if seq[i] not in SEPS else seq[i]
+                    for i in range(len(seq))])
+
+    # if input dbn is known - calculate the quality metrics
+    if dbn:
+        knownbps = set(DBNToPairs(shortdbn))
+
+        constp = len(consbps & knownbps)
+        consfp = len(consbps - knownbps)
+        consfn = len(knownbps - consbps)
+
+        consprc = (round(constp / (constp + consfp), 3)) if (constp + consfp) else 0
+        consrcl = (round(constp / (constp + consfn), 3)) if (constp + consfn) else 0
+        consfsc = (round(2*constp / (2*constp + consfp + consfn), 3)) if (2*constp + consfp + consfn) else 0
+
+        consresult = [constp, consfp, consfn, consfsc, consprc, consrcl]
+
+        bestfsc = -1
+        result = []
+
+        for rank, stemset in enumerate(finstemsets):
+
+            setbps = {bp for stem in stemset[0] for bp in stem[0]} | forcedbps
+
+            tp = len(setbps & knownbps) # Correctly predicted bps
+            fp = len(setbps - knownbps) # Wrongly predicted bps
+            fn = len(knownbps - setbps) # Missed bps
+
+            prc = (round(tp / (tp + fp), 3)) if (tp + fp) else 0
+            rcl = (round(tp / (tp + fn), 3)) if (tp + fn) else 0
+            fsc = (round(2*tp / (2*tp + fp + fn), 3)) if (2*tp + fp + fn) else 0
+
+            if fsc > bestfsc:
+                bestfsc = fsc 
+                result  = [tp, fp, fn, fsc, prc, rcl, rank + 1]
+
+            # TopN only (N == toplim)
+            if rank + 1 >= toplim:
+                break
+
+        return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], consresult, result
+    return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], [np.nan]*6, [np.nan]*7
 
 
 
