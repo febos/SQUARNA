@@ -281,7 +281,7 @@ if __name__ == "__main__":
 
     queue = []
 
-    with open("rfam10/afa/RF00177.afa") as file:
+    with open("rfam10/afa/RF00023.afa") as file:
         lines = file.readlines()
 
         ref = lines[0].strip()
@@ -310,7 +310,7 @@ if __name__ == "__main__":
                                minlen=minlen, minscore=minscore,
                                limitscore = limitscore, iterative = iters, threads = threads1)
         
-        preds[0] = PairsToDBN(DBNToPairs(preds[0]),len(ref),limitlevel=3)####
+        preds[0] = PairsToDBN(DBNToPairs(preds[0]),len(ref),limitlevel=3 - int(len(ref)>500))####
 
         rb = set(DBNToPairs(ref))
         pb = set(DBNToPairs(preds[0]))
@@ -376,23 +376,14 @@ if __name__ == "__main__":
                         FP2 = len(predpairs - rb)
                         FN2 = len(rb - predpairs)
                         FS2 = 2*TP2 / (2*TP2 + FP2 + FN2)
-                        oldbps = predpairs
-                        predpairs = set(DBNToPairs(consensus))
-                        seenpos = set(x for bp in predpairs for x in bp)
-                        for bp in DBNToPairs(pred):
-                            if bp[0] not in seenpos and bp[1] not in seenpos:
-                                predpairs.add(bp)
-                        TP3 = len(predpairs & rb)
-                        FP3 = len(predpairs - rb)
-                        FN3 = len(rb - predpairs)
-                        FS3 = 2*TP3 / (2*TP3 + FP3 + FN3)
-                        print(oldbps == predpairs)
+
+                        res = PairsToDBN(sorted(predpairs),len(ref))
 
                         #print(pred, ls, bfscore, fscore)
                         print(consensus, bpweights['GU'], orderpen, round(thr,3), truncate, round(prev_fs,3),
-                              round(FS,3), round(FS2,3),round(FS3,3), sep='\t')# )
+                              round(FS,3), round(FS2,3), sep='\t')# )
                         #print(altbps)
-
+                        print(res)
     
 
     
