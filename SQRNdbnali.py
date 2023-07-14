@@ -309,6 +309,8 @@ if __name__ == "__main__":
                                bpweights = bpweights, interchainonly = interchainonly,
                                minlen=minlen, minscore=minscore,
                                limitscore = limitscore, iterative = iters, threads = threads1)
+        
+        preds[0] = PairsToDBN(DBNToPairs(preds[0]),len(ref),limitlevel=3)####
 
         rb = set(DBNToPairs(ref))
         pb = set(DBNToPairs(preds[0]))
@@ -318,13 +320,13 @@ if __name__ == "__main__":
         FN = len(rb - pb)
 
         FS = 2*TP / (2*TP + FP + FN)
-        #print(round(FS,3))
+        print(preds[0],round(FS,3))
 
         prev_fs = FS
 
         pred = preds[0]
 
-        for orderpen in (0.25, 0.5, 0.75):
+        for orderpen in (0.75,):
         
             paramset  = {"bpweights" :  bpweights,
                         "suboptmax": 0.99,
@@ -351,8 +353,8 @@ if __name__ == "__main__":
 
             #print("Consensus")
 
-                for thr in (0.3,1/3,0.35):
-                    for truncate in (False, True):
+                for thr in (0.35,):
+                    for truncate in (False,):
 
                         consensus = Consensus(pred, structs, thr, truncate)
 
@@ -365,8 +367,30 @@ if __name__ == "__main__":
 
                         FS = 2*TP / (2*TP + FP + FN)
 
+                        predpairs = set(DBNToPairs(pred))
+                        seenpos = set(x for bp in predpairs for x in bp)
+                        for bp in DBNToPairs(consensus):
+                            if bp[0] not in seenpos and bp[1] not in seenpos:
+                                predpairs.add(bp)
+                        TP2 = len(predpairs & rb)
+                        FP2 = len(predpairs - rb)
+                        FN2 = len(rb - predpairs)
+                        FS2 = 2*TP2 / (2*TP2 + FP2 + FN2)
+                        oldbps = predpairs
+                        predpairs = set(DBNToPairs(consensus))
+                        seenpos = set(x for bp in predpairs for x in bp)
+                        for bp in DBNToPairs(pred):
+                            if bp[0] not in seenpos and bp[1] not in seenpos:
+                                predpairs.add(bp)
+                        TP3 = len(predpairs & rb)
+                        FP3 = len(predpairs - rb)
+                        FN3 = len(rb - predpairs)
+                        FS3 = 2*TP3 / (2*TP3 + FP3 + FN3)
+                        print(oldbps == predpairs)
+
                         #print(pred, ls, bfscore, fscore)
-                        print(consensus, bpweights['GU'], orderpen, round(thr,3), truncate, round(prev_fs,3), round(FS,3),sep='\t')# )
+                        print(consensus, bpweights['GU'], orderpen, round(thr,3), truncate, round(prev_fs,3),
+                              round(FS,3), round(FS2,3),round(FS3,3), sep='\t')# )
                         #print(altbps)
 
     

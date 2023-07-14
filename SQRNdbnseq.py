@@ -24,7 +24,7 @@ ReactDict = {"_" : 0.00,  "+" : 0.50,  "#" : 1.00,
              }
 
 
-def PairsToDBN(newpairs, length = 0, returnlevels = False):
+def PairsToDBN(newpairs, length = 0, returnlevels = False, limitlevel = -1):
     """Convert a list of base pairs into a dbn string of the given length"""
 
     # Initialize the dbn string
@@ -86,8 +86,12 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False):
                 levels[bp] = lev + 1
         return levels
 
+    # remove all levels higher than limitlevel (if specified)
+    if limitlevel >= 0:
+        groups = groups[:limitlevel]
+
     # add all the pairs to the dbn string
-    # according to their levels
+    # according to their levels  
     for i, group in enumerate(groups):
         for pair in group:
             dbn[pair[0]] = levels[i][0]
