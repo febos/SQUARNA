@@ -85,23 +85,74 @@ def EncodedReactivities(seq, reacts, reactformat):
     return reactline
 
 
-def RunSQRNdbnseq(name, data, inputformat, paramsetnames,
+def ParseDefaultInput(inputname, inputformat):
+    """Returns object lists of format [sequence,reactivities,restraints,reference]"""
+
+    def ProcessIndividual(data):
+
+        while len(data) < len(inputformat):
+            data.append(None)
+
+        sequence     = data[q_ind]
+        reactivities = data[t_ind] if t_ind > 0 else None
+        restraints   = data[r_ind] if r_ind > 0 else None
+        reference    = data[f_ind] if f_ind > 0 else None
+
+        N = len(sequence)
+
+        # Fill features with default values if applicable
+        if not reactivities and defT and (len(defT) == N or len(defT.split()) == N):
+            reactivities = defT
+        if not restraints and defR and len(defR) == N:
+            restraints   = defR
+        if not reference and defF and len(defF) == N:
+            reference    = defF
+
+        return sequence, reactivities, restraints, reference
+
+    name = None
+    defT = None
+    defR = None
+    defF = None
+    data = []
+
+    q_ind = inputformat.index('q')
+    t_ind = inputformat.find('t')
+    r_ind = inputformat.find('r')
+    f_ind = inputformat.find('f')
+    
+    with open(inputfile) as file:
+        for line in file:
+            if line.startswith('>'):
+                # If not the first entry - process the previous one
+                if name:
+                    yield name, ProcessIndividual(data)
+                else:
+                    # Default TRF lines
+                    defdata = data
+                    while len(defdata) < len(inputformat) - 1:
+                        defdata.append(None)
+                    defdata.insert(q_ind, None)
+                    defT = defdata[t_ind] if t_ind > 0 else None
+                    defR = defdata[r_ind] if r_ind > 0 else None
+                    defF = defdata[f_ind] if f_ind > 0 else None
+                        
+                name = line.strip()
+                data = []
+            else:
+                data.append(line.strip())
+
+    if name:
+        yield name, ProcessIndividual(data)    
+
+
+def RunSQRNdbnseq(name, data, paramsetnames,
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
                   conslim, reactformat):
 
-    # e.g. if we expect qtrf but got only qt -> add two None values
-    while len(data) < len(inputformat):
-        data.append(None)
+    sequence, reactivities, restraints, reference = data
 
-    sequence     = data[inputformat.index('q')]
-    reactivities = data[inputformat.index('t')] if 't' in inputformat else None
-    restraints   = data[inputformat.index('r')] if 'r' in inputformat else None
-    reference    = data[inputformat.index('f')] if 'f' in inputformat else None
-
-    # Check the reactivities are either a string equal in length to
-    # the sequence, or a list of floats, again equal in length to
-    # the sequence, or empty line / None
     try:
         if reactivities:
             if len(reactivities) != len(sequence):
@@ -354,24 +405,10 @@ if __name__ == "__main__":
         for i in range(len(paramsets)):
             paramsets[i]['maxstemnum'] = maxstemnum
 
-    # Reading + Running + Writing
-    name = None
-    data = []
-    with open(inputfile) as file:
-        for line in file:
-            if line.startswith('>'):
-                # If not the first entry - process the previous one
-                if name:
-                    RunSQRNdbnseq(name, data, inputformat, paramsetnames,
-                                  paramsets, threads, rankbydiff, rankby,
-                                  hardrest, interchainonly, toplim, outplim,
-                                  conslim, reactformat)
-                name = line.strip()
-                data = []
-            else:
-                data.append(line.strip())
-    # Don't forget the last one
-    RunSQRNdbnseq(name, data, inputformat, paramsetnames,
-                  paramsets, threads, rankbydiff, rankby,
-                  hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat)
+    # Running single-sequence SQUARNA
+    for name, obj in ParseDefaultInput(inputfile, inputformat):
+        RunSQRNdbnseq(name, obj, paramsetnames,
+                      paramsets, threads, rankbydiff, rankby,
+                      hardrest, interchainonly, toplim, outplim,
+                      conslim, reactformat)
+
