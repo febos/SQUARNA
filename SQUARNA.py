@@ -2,7 +2,7 @@ import os
 import sys
 
 
-from SQRNdbnseq import SQRNdbnseq, ReactDict, SEPS
+from SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS
 
 
 def ParseConfig(configfile):
@@ -65,24 +65,6 @@ def ParseConfig(configfile):
                          .format(', '.join([_ for _ in params
                                             if _ not in paramset])))
     return names, paramsets
-
-
-def EncodedReactivities(seq, reacts, reactformat):
-    """Takes a list of floats, returns a string"""
-    if reactformat == 3:
-        reactline = ''.join(["_+##"[int(x * 3)]
-                             for x in reacts])
-    elif reactformat == 10:
-        reactline = ''.join(['01234567899'[int(x * 10)]
-                             for x in reacts])
-    else:
-        reactline = ''.join(['abcdefghijklmnopqrstuvwxyz'[int(x * 25) + 0.5]
-                             for x in reacts])
-
-    # Introduce the chain separators
-    reactline = ''.join([reactline[i] if seq[i] not in SEPS else seq[i]
-                         for i in range(len(seq))])
-    return reactline
 
 
 def ParseDefaultInput(inputname, inputformat):
@@ -166,80 +148,6 @@ def ParseDefaultInput(inputname, inputformat):
 
     if name:
         yield name, ProcessIndividual(data)    
-
-
-def RunSQRNdbnseq(name, data, paramsetnames,
-                  paramsets, threads, rankbydiff, rankby,
-                  hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat):
-
-    sequence, reactivities, restraints, reference = data
-
-    # Run prediction
-    prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
-                            paramsets, conslim, toplim, hardrest,
-                            rankbydiff, rankby, interchainonly, threads)
-
-    # Unpack the results
-    consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
-
-    print(name)
-    print(sequence)
-
-    # Printing everything observed in the input
-    if reactivities:
-        print(EncodedReactivities(sequence,
-                                  reactivities,
-                                  reactformat),
-              "reactivities", sep = '\t')
-    if restraints:
-        print(''.join([restraints[i]
-                       if sequence[i] not in SEPS
-                       else sequence[i]
-                       for i in range(len(sequence))]),
-              "restraints", sep = '\t')
-    if reference:
-        print(''.join([reference[i]
-                       if sequence[i] not in SEPS
-                       else sequence[i]
-                       for i in range(len(sequence))]),
-              "reference", sep = '\t')
-
-    # Separator line 1
-    print('_'*len(sequence))
-
-    # Printing consensus
-    # along with its metrics if reference is present
-    if reference:
-        print(consensus,
-              "top-{}_consensus".format(conslim),
-              "TP={},FP={},FN={},FS={},PR={},RC={}".format(*consensus_metrics),
-              sep = '\t')
-    else:
-        print(consensus,
-              "top-{}_consensus".format(conslim), sep = '\t')
-
-    # Separator line 2
-    print('='*len(sequence))
-
-    # Printing up to outplim predicted structures
-    # along with their scores and
-    # metrics of the best one if reference is present
-    for i, pred in enumerate(predicted_structures[:outplim]):
-        
-        struct, scores, paramsetind = pred
-        totalscore, structscore, reactscore = scores
-
-        if reference and i + 1 == topN_metrics[-1]:
-            print(struct, "#{}".format(i+1), totalscore,
-                  structscore, reactscore,
-                  paramsetnames[paramsetind],
-                  "TP={},FP={},FN={},FS={},PR={},RC={},RK={}".format(*topN_metrics),
-                  sep='\t')
-        else:
-            print(struct, "#{}".format(i+1), totalscore,
-                  structscore, reactscore,
-                  paramsetnames[paramsetind], sep='\t')
 
 
 if __name__ == "__main__":
