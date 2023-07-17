@@ -1,7 +1,7 @@
 
 import numpy as np
 
-from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints, BPMatrix, AnnotateStems, nonmpSQRNdbnseq
+from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints, BPMatrix, AnnotateStems, SQRNdbnseq
 from multiprocessing import Pool
 
 
@@ -261,10 +261,10 @@ def Consensus(rst, structs, thr = 0.0, truncate = True):
 def mpSQRNdbnseq(args):
 
     name, seq, rst,pred,paramset,threads,interchainonly = args
-    cons, dbns, nums1, nums2 = nonmpSQRNdbnseq(seq, reacts = None, restraints = pred, dbn = None,
-                                              paramsets = [paramset,], conslim = 1,
-                                              rankbydiff = False, interchainonly = interchainonly,
-                                              threads = threads)
+    cons, dbns, nums1, nums2 = SQRNdbnseq(seq, reacts = None, restraints = pred, dbn = None,
+                                          paramsets = [paramset,], conslim = 1,
+                                          rankbydiff = False, interchainonly = interchainonly,
+                                          threads = threads, mp=False)
     return cons
     
 if __name__ == "__main__":
