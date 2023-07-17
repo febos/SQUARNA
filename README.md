@@ -26,11 +26,17 @@ a (hopefully) arbitrary version of NumPy library.
     2) python3 SQUARNA.py i=datasets/SRtrain150.fas if=qf 
     
     An example reproducing the benchmarks.
+    
+    3) python3 SQUARNA.py i=examples/ali_input.afa if=q
+    
+    An example of running single-sequence predictions for a set
+    of aligned sequences. "if=q" tells SQUARNA to ignore all the
+    input lines except the sequence itself.
 
 # Input format
 
     For input SQUARNA uses a fasta-like format with the "name" lines
-    starting with ">" sign and the following lines treated as the data
+    starting with ">" symbol and the following lines treated as the data
     lines. The order of lines in which SQUARNA will read the data 
     is defined by the inputformat (if) parameter, see below. By default,
     the order is "qtrf", meaning the first line will be read as the
@@ -39,9 +45,16 @@ a (hopefully) arbitrary version of NumPy library.
     line, and all the following lines will be ignored until the new 
     "name" line. 
     
+    The starting lines in the input file faced before the first ">"
+    symbol will be treated as default reactivities/restraints/reference
+    lines according to the inputformat value. The default lines will be 
+    used for the individual sequences of appropriate length if the 
+    matching individual line is empty or absent. See ali_input.afa file
+    in the examples sub-folder for an example of default lines. 
+    
     Sequence is the only mandatory field. Symbols "AaCcGgUu" will be 
     treated as the four types of RNA bases in the case-insensitive
-    manner. Symbols "Tt" will be replaced with U. Symbols ";&" will be
+    manner. Symbols "Tt" will be replaced with "U". Symbols ";&" will be
     treated as the separators of different RNA chains. Symbols ".-~"
     will be treated as gaps and ignored accordingly (the sequence along 
     with the other data lines will be unaligned for the prediction and 
