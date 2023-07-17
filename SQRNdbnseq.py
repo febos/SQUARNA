@@ -919,7 +919,7 @@ def nonmpSQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     interchainonly = allow only bps between different chains
     threads == number of CPUs to use
     
-    SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
+    nonmpSQRNdbnseq is identical to SQRNdbnseq but does not use multiprocessing"""
 
     assert set(rankby) == {0, 1, 2} and len(rankby) == 3, "Invalid ranking indices"
 
@@ -1013,19 +1013,15 @@ def nonmpSQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
             # new iteration
             newcurstemsets = []
 
-            inputs = ((shortseq, stems,
-                        bpboolmatrix.copy(), bpscorematrix,
-                        shortreacts, rbps.copy(), 
-                        cursubopt, minlen, minbpscore, 
-                        minfinscore, bracketweight,
-                        distcoef, orderpenalty,
-                        loopbonus,
-                        ) for stems in curstemsets)
+            for stems in curstemsets:
 
-            for args in inputs:
-
-                # new optimal stems based on the current stem list 
-                newstems, stems = mpOptimalStems(args)
+                # new optimal stems based on the current stem list
+                newstems = OptimalStems(shortseq, stems, bpboolmatrix.copy(),
+                                        bpscorematrix, shortreacts, rbps.copy(),
+                                        cursubopt, minlen, minbpscore, 
+                                        minfinscore, bracketweight,
+                                        distcoef, orderpenalty,
+                                        loopbonus)
 
                 # append new intermediate stem lists
                 if newstems:
