@@ -127,7 +127,7 @@ def mpYieldStems(args):
 
     name, seq, rst, consrest, dbn, bpweights,interchainonly,minlen,minscore = args
 
-    return YieldStems(seq, restraints = rst if rst else consrest,
+    return YieldStems(seq, restraints = rst if rst else consrest,## CHANGE THE ORDER!
                       dbn = dbn,
                       bpweights=bpweights,
                       interchainonly=interchainonly,
