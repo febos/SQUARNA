@@ -108,6 +108,28 @@ def ParseDefaultInput(inputname, inputformat):
         if not reference and defF and len(defF) == N:
             reference    = defF
 
+        # Check reactivities for consistency and resolve them if needed
+        try:
+            if reactivities:
+                if len(reactivities) != len(sequence):
+                    reactivities = list(map(float, reactivities.split()))
+                else:
+                    reactivities = [ReactDict[char] for char in reactivities]
+
+            assert not reactivities or len(reactivities) == len(sequence)
+        except:
+            raise ValueError('Inappropriate reactivities line for entry "{}":\n {}'\
+                             .format(name[1:], reactivities))
+
+        # Assert restraints and reference are of the consistent length
+        # or empty line / None
+        assert not restraints or len(restraints) == len(sequence),\
+               'Inappropriate restraints line for entry "{}":\n {}'\
+               .format(name[1:], restraints)
+        assert not reference or len(reference) == len(sequence),\
+               'Inappropriate reference line for entry "{}":\n {}'\
+               .format(name[1:], reference)
+
         return sequence, reactivities, restraints, reference
 
     name = None
@@ -152,28 +174,6 @@ def RunSQRNdbnseq(name, data, paramsetnames,
                   conslim, reactformat):
 
     sequence, reactivities, restraints, reference = data
-
-    try:
-        if reactivities:
-            if len(reactivities) != len(sequence):
-                reactivities = list(map(float, reactivities.split()))
-            else:
-                reactivities = [ReactDict[char] for char in reactivities]
-
-        assert not reactivities or len(reactivities) == len(sequence)
-    except:
-        raise ValueError('Inappropriate reactivities line for entry "{}":\n {}'\
-                         .format(name[1:], data[inputformat.index('t')]))
-
-    # Assert restraints and reference are of the consistent length
-    # or empty line / None
-    assert not restraints or len(restraints) == len(sequence),\
-           'Inappropriate restraints line for entry "{}":\n {}'\
-           .format(name[1:], data[inputformat.index('r')])
-
-    assert not reference or len(reference) == len(sequence),\
-           'Inappropriate reference line for entry "{}":\n {}'\
-           .format(name[1:], data[inputformat.index('f')])
 
     # Run prediction
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
