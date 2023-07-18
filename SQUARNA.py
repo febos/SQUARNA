@@ -3,6 +3,7 @@ import sys
 
 
 from SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS
+from SQRNdbnali import RunSQRNdbnali
 
 
 def ParseConfig(configfile):
@@ -67,8 +68,8 @@ def ParseConfig(configfile):
     return names, paramsets
 
 
-def ParseDefaultInput(inputname, inputformat):
-    """Returns object lists of format [sequence,reactivities,restraints,reference]"""
+def ParseDefaultInput(inputname, inputformat, returndefaults = False):
+    """Returns object lists of format [name,sequence,reactivities,restraints,reference]"""
 
     def ProcessIndividual(data):
 
@@ -124,13 +125,15 @@ def ParseDefaultInput(inputname, inputformat):
     t_ind = inputformat.find('t')
     r_ind = inputformat.find('r')
     f_ind = inputformat.find('f')
+
+    results = []
     
     with open(inputfile) as file:
         for line in file:
             if line.startswith('>'):
                 # If not the first entry - process the previous one
                 if name:
-                    yield name, ProcessIndividual(data)
+                    results.append((name, *ProcessIndividual(data)))
                 else:
                     # Default TRF lines
                     defdata = data
@@ -140,6 +143,9 @@ def ParseDefaultInput(inputname, inputformat):
                     defT = defdata[t_ind] if t_ind > 0 else None
                     defR = defdata[r_ind] if r_ind > 0 else None
                     defF = defdata[f_ind] if f_ind > 0 else None
+
+                    if returndefaults:
+                        return (defT, defR, defF)
                         
                 name = line.strip()
                 data = []
@@ -147,7 +153,15 @@ def ParseDefaultInput(inputname, inputformat):
                 data.append(line.strip())
 
     if name:
-        yield name, ProcessIndividual(data)    
+        results.append((name, *ProcessIndividual(data)))
+
+    return results
+
+
+def ParseInput(inputname, inputformat, returndefaults = False, fmt = "default"):
+
+    if fmt == "default":
+        return ParseDefaultInput(inputname, inputformat, returndefaults), fmt
 
 
 if __name__ == "__main__":
@@ -181,8 +195,9 @@ if __name__ == "__main__":
         exit(0)
 
     # DEFAULTS
-    inputfile  = os.path.join(HOME_DIR, "examples", "seq_input.fas")
-    configfile = os.path.join(HOME_DIR, "def.conf")
+    inputfile     = os.path.join(HOME_DIR, "examples", "seq_input.fas")
+    configfile    = os.path.join(HOME_DIR, "def.conf")
+    configfileset = False              # Whether the user defined the config file
 
     inputformat = "qtrf"               # Input line order, q=seQuence,t=reacTivities,r=Restraints,f=reFerence
 
@@ -203,6 +218,14 @@ if __name__ == "__main__":
 
     reactformat   = 3                  # 3 / 10 / 26
 
+    alignment   = False                # Alignment mode
+    levellimit  = None                 # Pseudoknot level threshold
+    freqlimit   = 0.35                 # The percentage of sequences required to have the base pair
+                                       # to include it into the step-2 result (alignment mode)
+    verbose     = False                # Print the intermediate output or not
+    step3       = "u"                  # i(intersection)/u(union)/1(step1)/2(step2) - what should be the
+                                       # step-3 result dbn (alignment mode)
+
     # Parsing arguments
     for arg in args:
         # inputfile
@@ -214,6 +237,7 @@ if __name__ == "__main__":
         elif arg.lower().startswith("c=") or\
            arg.lower().startswith("config="):
             configfile = arg.split('=', 1)[1]
+            configfileset = True
             assert os.path.exists(configfile), "Config file does not exist."
         # inputformat
         elif arg.lower().startswith("if=") or\
@@ -294,6 +318,44 @@ if __name__ == "__main__":
                    "Inappropriate reactformat value (3/10/26): {}"\
                    .format(arg.split('=', 1)[1])
             reactformat = int(float(reactformat))
+        # alignment
+        elif arg.lower() in {"a", "ali", "alignment"}:
+            alignment = True
+        # levellimit
+        elif arg.lower().startswith("ll=") or\
+             arg.lower().startswith("levlim=") or\
+             arg.lower().startswith("levellim=") or\
+             arg.lower().startswith("levlimit=") or\
+             arg.lower().startswith("levellimit="):
+            try:
+                levellimit = int(float(arg.split('=', 1)[1]))
+            except:
+                raise ValueError("Inappropriate levellimit value (integer): {}"\
+                                 .format(arg.split('=', 1)[1]))
+        # freqlimit
+        elif arg.lower().startswith("fl=") or\
+             arg.lower().startswith("freqlim=") or\
+             arg.lower().startswith("freqlimit=") or\
+             arg.lower().startswith("frequencylim=") or\
+             arg.lower().startswith("frequencylimit="):
+            try:
+                freqlimit = float(arg.split('=', 1)[1])
+                assert 0 <= freqlimit <= 1
+            except:
+                raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
+                                 .format(arg.split('=', 1)[1]))
+        # verbose
+        elif arg.lower() in {"v", "verbose"}:
+            verbose = True
+        # step3
+        elif arg.lower().startswith("s3=") or\
+             arg.lower().startswith("step3="):
+            try:
+                step3 = arg.split('=', 1)[1].lower()
+                assert step3 in {'u', 'i', '1', '2'}
+            except:
+                raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
+                                 .format(arg.split('=', 1)[1]))
 
     # Process rankby
     if "d" in rankby:
@@ -305,6 +367,10 @@ if __name__ == "__main__":
     elif "s"  in rankby:
         rankby = (1, 2, 0)
 
+    # If alignment mode - use ali.conf by default
+    if alignment and not configfileset:
+        configfile = os.path.join(HOME_DIR, "ali.conf")
+
     # Parse config
     paramsetnames, paramsets = ParseConfig(configfile)
 
@@ -314,9 +380,86 @@ if __name__ == "__main__":
             paramsets[i]['maxstemnum'] = maxstemnum
 
     # Running single-sequence SQUARNA
-    for name, obj in ParseDefaultInput(inputfile, inputformat):
-        RunSQRNdbnseq(name, obj, paramsetnames,
-                      paramsets, threads, rankbydiff, rankby,
+    if not alignment:
+        for name, seq, reacts, restrs, ref in ParseInput(inputfile, inputformat)[0]:
+            RunSQRNdbnseq(name, seq, reacts, restrs, ref, paramsetnames,
+                          paramsets, threads, rankbydiff, rankby,
+                          hardrest, interchainonly, toplim, outplim,
+                          conslim, reactformat)
+
+    else: # Running alignment-based SQUARNA
+        # Only the first paramset is used in alignment mode
+        paramsetnames, paramsets = paramsetnames[:1], paramsets[:1]
+
+        objs, fmt = ParseInput(inputfile, inputformat)
+
+        defReactivities, defRestraints, defReference = ParseInput(inputfile, inputformat,
+                                                                  returndefaults = True,
+                                                                  fmt = fmt)[0]
+        # Length checks
+        N = len(objs[0][1])
+        assert all(len(obj[1]) == N for obj in objs),\
+               'The sequences are not aligned'
+
+        # Check reactivities for consistency and resolve them if needed
+        try:
+            if defReactivities:
+                if len(defReactivities) != N:
+                    defReactivities = list(map(float, defReactivities.split()))
+                else:
+                    defReactivities = [ReactDict[char] for char in defReactivities]
+
+            assert not defReactivities or len(defReactivities) == N
+        except:
+            raise ValueError('Inappropriate default reactivities line:\n {}'\
+                             .format(defReactivities))
+
+        # Assert restraints and reference are of the consistent length
+        # or empty line / None
+        assert not defRestraints or len(defRestraints) == N,\
+               'Inappropriate default restraints line:\n {}'\
+               .format(defRestraints)
+        assert not defReference or len(defReference) == N,\
+               'Inappropriate default reference line:\n {}'\
+               .format(defReference)
+
+        # default levellimit
+        if levellimit is None:
+            levellimit = 3 - int(N > 500)
+
+        RunSQRNdbnali(objs, defReactivities, defRestraints, defReference,
+                      levellimit, freqlimit, verbose, step3,
+                      paramsetnames, paramsets, threads, rankbydiff, rankby,
                       hardrest, interchainonly, toplim, outplim,
                       conslim, reactformat)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            

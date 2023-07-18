@@ -964,12 +964,11 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     return cons, [(dbns[jj],*finstemsets[jj][1:]) for jj in range(len(dbns))], [np.nan]*6, [np.nan]*7
 
 
-def RunSQRNdbnseq(name, data, paramsetnames,
+def RunSQRNdbnseq(name, sequence, reactivities, restraints,
+                  reference, paramsetnames,
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat, mp = True):
-
-    sequence, reactivities, restraints, reference = data
+                  conslim, reactformat, mp = True, silent = False):
 
     # Run prediction
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
@@ -979,22 +978,23 @@ def RunSQRNdbnseq(name, data, paramsetnames,
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
 
-    print(name)
-    print(sequence)
+    if not silent:
+        print(name)
+        print(sequence)
 
     # Printing everything observed in the input
-    if reactivities:
+    if reactivities and not silent:
         print(EncodedReactivities(sequence,
                                   reactivities,
                                   reactformat),
               "reactivities", sep = '\t')
-    if restraints:
+    if restraints and not silent:
         print(''.join([restraints[i]
                        if sequence[i] not in SEPS
                        else sequence[i]
                        for i in range(len(sequence))]),
               "restraints", sep = '\t')
-    if reference:
+    if reference and not silent:
         print(''.join([reference[i]
                        if sequence[i] not in SEPS
                        else sequence[i]
@@ -1002,21 +1002,23 @@ def RunSQRNdbnseq(name, data, paramsetnames,
               "reference", sep = '\t')
 
     # Separator line 1
-    print('_'*len(sequence))
+    if not silent:
+        print('_'*len(sequence))
 
     # Printing consensus
     # along with its metrics if reference is present
-    if reference:
+    if reference and not silent:
         print(consensus,
               "top-{}_consensus".format(conslim),
               "TP={},FP={},FN={},FS={},PR={},RC={}".format(*consensus_metrics),
               sep = '\t')
-    else:
+    elif not silent:
         print(consensus,
               "top-{}_consensus".format(conslim), sep = '\t')
 
     # Separator line 2
-    print('='*len(sequence))
+    if not silent:
+        print('='*len(sequence))
 
     # Printing up to outplim predicted structures
     # along with their scores and
@@ -1026,13 +1028,13 @@ def RunSQRNdbnseq(name, data, paramsetnames,
         struct, scores, paramsetind = pred
         totalscore, structscore, reactscore = scores
 
-        if reference and i + 1 == topN_metrics[-1]:
+        if reference and i + 1 == topN_metrics[-1] and not silent:
             print(struct, "#{}".format(i+1), totalscore,
                   structscore, reactscore,
                   paramsetnames[paramsetind],
                   "TP={},FP={},FN={},FS={},PR={},RC={},RK={}".format(*topN_metrics),
                   sep='\t')
-        else:
+        elif not silent:
             print(struct, "#{}".format(i+1), totalscore,
                   structscore, reactscore,
                   paramsetnames[paramsetind], sep='\t')

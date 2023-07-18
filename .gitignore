@@ -11,6 +11,7 @@ temp.tsv
 inp.tmp
 outp.tmp
 tmp/*
+*test.py
 
 # Distribution / packaging
 .Python

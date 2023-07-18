@@ -265,7 +265,7 @@ if __name__ == "__main__":
 
     dataset = "SRtrain150"
     tool    = "SQUARNA"
-    NL      =  True
+    NL      =  False
 
     if NL:
         dataset += "NL"
