@@ -1,6 +1,7 @@
 
 import numpy as np
 from multiprocessing import Pool
+import sys
 
 # Gapped values
 GAPS = {'-', '.', '~'}
@@ -42,7 +43,7 @@ def EncodedReactivities(seq, reacts, reactformat):
     return reactline
 
 
-def PairsToDBN(newpairs, length = 0, returnlevels = False, limitlevel = -1):
+def PairsToDBN(newpairs, length = 0, returnlevels = False, levellimit = -1):
     """Convert a list of base pairs into a dbn string of the given length"""
 
     # Initialize the dbn string
@@ -105,8 +106,8 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False, limitlevel = -1):
         return levels
 
     # remove all levels higher than limitlevel (if specified)
-    if limitlevel >= 0:
-        groups = groups[:limitlevel]
+    if levellimit >= 0:
+        groups = groups[:levellimit]
 
     # add all the pairs to the dbn string
     # according to their levels  
@@ -968,7 +969,8 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   reference, paramsetnames,
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat, mp = True, silent = False):
+                  conslim, reactformat, mp = True,
+                  sink = sys.stdout):
 
     # Run prediction
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
@@ -978,47 +980,44 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
 
-    if not silent:
-        print(name)
-        print(sequence)
+    print(name, file = sink)
+    print(sequence, file = sink)
 
     # Printing everything observed in the input
-    if reactivities and not silent:
+    if reactivities:
         print(EncodedReactivities(sequence,
                                   reactivities,
                                   reactformat),
-              "reactivities", sep = '\t')
-    if restraints and not silent:
+              "reactivities", sep = '\t', file = sink)
+    if restraints:
         print(''.join([restraints[i]
                        if sequence[i] not in SEPS
                        else sequence[i]
                        for i in range(len(sequence))]),
-              "restraints", sep = '\t')
-    if reference and not silent:
+              "restraints", sep = '\t', file = sink)
+    if reference:
         print(''.join([reference[i]
                        if sequence[i] not in SEPS
                        else sequence[i]
                        for i in range(len(sequence))]),
-              "reference", sep = '\t')
+              "reference", sep = '\t', file = sink)
 
     # Separator line 1
-    if not silent:
-        print('_'*len(sequence))
+    print('_'*len(sequence), file = sink)
 
     # Printing consensus
     # along with its metrics if reference is present
-    if reference and not silent:
+    if reference:
         print(consensus,
               "top-{}_consensus".format(conslim),
               "TP={},FP={},FN={},FS={},PR={},RC={}".format(*consensus_metrics),
-              sep = '\t')
-    elif not silent:
+              sep = '\t', file = sink)
+    else:
         print(consensus,
-              "top-{}_consensus".format(conslim), sep = '\t')
+              "top-{}_consensus".format(conslim), sep = '\t', file = sink)
 
     # Separator line 2
-    if not silent:
-        print('='*len(sequence))
+    print('='*len(sequence), file = sink)
 
     # Printing up to outplim predicted structures
     # along with their scores and
@@ -1028,16 +1027,16 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
         struct, scores, paramsetind = pred
         totalscore, structscore, reactscore = scores
 
-        if reference and i + 1 == topN_metrics[-1] and not silent:
+        if reference and i + 1 == topN_metrics[-1]:
             print(struct, "#{}".format(i+1), totalscore,
                   structscore, reactscore,
                   paramsetnames[paramsetind],
                   "TP={},FP={},FN={},FS={},PR={},RC={},RK={}".format(*topN_metrics),
-                  sep='\t')
-        elif not silent:
+                  sep='\t', file = sink)
+        else:
             print(struct, "#{}".format(i+1), totalscore,
                   structscore, reactscore,
-                  paramsetnames[paramsetind], sep='\t')
+                  paramsetnames[paramsetind], sep='\t', file = sink)
 
     return consensus, predicted_structures, consensus_metrics, topN_metrics
 
