@@ -105,7 +105,7 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False, levellimit = -1):
                 levels[bp] = lev + 1
         return levels
 
-    # remove all levels higher than limitlevel (if specified)
+    # remove all levels higher than levellimit (if specified)
     if levellimit >= 0:
         groups = groups[:levellimit]
 
@@ -133,13 +133,19 @@ def DBNToPairs(dbn):
     closing = {'>':'<',']':'[',')':'(','}':'{','a':'A','b':'B','c':'C','d':'D',
                'e':'E','f':'F','g':'G','h':'H','i':'I','j':'J','k':'K','l':'L',
                'm':'M','n':'N','o':'O','p':'P','q':'Q','r':'R','s':'S','t':'T',
-               'u':'U','v':'V','w':'W','x':'X','y':'Y','z':'Z',}
-    # 30 bp stacks for 30 allowed pseudoknot levels
+               'u':'U','v':'V','w':'W','x':'X','y':'Y','z':'Z',
+               'б':'Б','г':'Г','д':'Д','ё':'Ё','ж':'Ж','й':'Й','л':'Л','п':'П',
+               'ф':'Ф','ц':'Ц','ч':'Ч','ш':'Ш','щ':'Щ','ь':'Ь','ы':'Ы','ъ':'Ъ',
+               'э':'Э','ю':'Ю','я':'Я',}
+    # 30+19 bp stacks for 30+19 allowed pseudoknot levels
     stack = {'<':[],'(':[],'{':[],'[':[],'A':[],'B':[],'C':[],'D':[],'E':[],
              'F':[],'G':[],'H':[],'I':[],'J':[],'K':[],'L':[],'M':[],'N':[],
              'O':[],'P':[],'Q':[],'R':[],'S':[],'T':[],'U':[],'V':[],'W':[],
-             'X':[],'Y':[],'Z':[],}
-
+             'X':[],'Y':[],'Z':[],
+             'Б':[],'Г':[],'Д':[],'Ё':[],'Ж':[],'Й':[],'Л':[],'П':[],'Ф':[],
+             'Ц':[],'Ч':[],'Ш':[],'Щ':[],'Ь':[],'Ы':[],'Ъ':[],'Э':[],'Ю':[],
+             'Я':[],}
+              
     for i,v in enumerate(dbn):
         # if we observe an opening bracket
         # then add its index into the matching stack
@@ -187,7 +193,8 @@ def UnAlign(seq, dbn):
     """Removes gaps from a pair of seq & dbn strings
     hyphens, dots, and tildas are treated as gaps"""
 
-    # Remove base pairs of gap columns
+    # First, remove base pairs of gap columns
+    # to avoid any shifts
     cleandbn = list(dbn)
     pairs = DBNToPairs(dbn)
     for v,w in pairs:
@@ -195,7 +202,7 @@ def UnAlign(seq, dbn):
             cleandbn[v] = '.'
             cleandbn[w] = '.'
 
-    # Unalign the dbn based on the seq string first
+    # Unalign the dbn based on the seq string
     newdbn = ''.join([cleandbn[i] for i in range(len(seq))
                       if seq[i] not in GAPS])
     # Then unalign the seq string itself
@@ -366,6 +373,7 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
 
 
 def IsGNRA(seq):
+    """Whether the input sequence is of GNRA pattern"""
     if len(seq) != 4:
         return False
     if seq[0] == 'G' and seq[2] in ('G','A') and seq[3] == 'A':
@@ -971,6 +979,9 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   hardrest, interchainonly, toplim, outplim,
                   conslim, reactformat, mp = True,
                   sink = sys.stdout):
+    """Main-like function;
+       sink param is standard system output by default,
+       we need it to use the buffer in alignment-mode parallelizations"""
 
     # Run prediction
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,

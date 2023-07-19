@@ -7,7 +7,7 @@ from SQRNdbnali import RunSQRNdbnali
 
 
 def ParseConfig(configfile):
-
+    """Parses the config file"""
     # Set of mandatory parameters
     params = {"bpweights",
               "suboptmax",
@@ -69,9 +69,12 @@ def ParseConfig(configfile):
 
 
 def ParseDefaultInput(inputname, inputformat, returndefaults = False):
-    """Returns object lists of format [name,sequence,reactivities,restraints,reference]"""
+    """Returns object lists of format [name,sequence,reactivities,restraints,reference]
+       or the list [default-reactivities, default-restraints, default reference] if
+       returndefaults param is True"""
 
     def ProcessIndividual(data):
+        """Returns a single [seq,reacts,rests,ref] list"""
 
         while len(data) < len(inputformat):
             data.append(None)
@@ -159,12 +162,13 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
 
 
 def GuessFormat(inp):
-
+    """Identify the input file format: default / fasta / stockholm / clustal"""
     with open(inp) as file:
         lines = file.readlines()
 
         if lines[0].startswith('#') and "STOCKHOLM" in lines[0]:
             return "stockholm"
+        
         if lines[0].startswith("CLUSTAL"):
             return "clustal"
 
@@ -204,20 +208,23 @@ def ParseFasta(inp, returndefaults = False):
 
 
 def ReadStockholm(stkfile):
+    """Parses Stockholm format into three lists and two dicts"""
 
-    seqnames = []
-    seqdict  = {}
-    gcnames  = []
-    gcdict   = {}
-    headers  = []
+    seqnames = [] # Sequence names
+    seqdict  = {} # Sequence dict with name keys and sequence values
+    gcnames  = [] # Structure names
+    gcdict   = {} # Structure dict with name keys and structure values
+    headers  = [] # Headers list
 
     try:
         file = open(stkfile)
     except:
-        file = open(stkfile,encoding="iso8859-15")
+        # Non-standard encoding found in some
+        # of the Rfam families
+        file = open(stkfile, encoding="iso8859-15")
 
     for line in file:
-        if line.startswith('#=GC '):
+        if line.startswith('#=GC '): # Structure lines
 
             linesplit = line.strip().split()
             seq = linesplit[-1]
@@ -230,7 +237,7 @@ def ReadStockholm(stkfile):
                 gcdict[name] += seq
 
         elif line.startswith('#'):
-
+            # Header lines
             headers.append(line)
 
         elif line.startswith('//'):
@@ -238,7 +245,7 @@ def ReadStockholm(stkfile):
         elif not line.strip():
             pass
         else:
-
+            # Sequence lines
             linesplit = line.strip().split()
             seq = linesplit[-1]
             name = ' '.join(linesplit[:-1])
@@ -251,16 +258,16 @@ def ReadStockholm(stkfile):
 
     file.close()
 
+    # Put #=GF lines to the end of the headers
     headers1 = [x for x in headers if not x.startswith("#=GF SQ")]
     headers2 = [x for x in headers if x.startswith("#=GF SQ")]
-
     headers = headers1 + headers2
 
     return headers, seqnames, seqdict, gcnames, gcdict
 
 
 def ParseStockholm(inp, returndefaults = False):
-
+    """Treats SS_cons dbn as default reference"""
     headers, seqnames, seqdict, gcnames, gcdict = ReadStockholm(inp)
 
     if returndefaults:
@@ -282,7 +289,6 @@ def ParseClustal(inp, returndefaults = False):
     with open(inp) as file:
         for line in file:
             if line.strip() and not line.startswith("CLUSTAL") and not line.startswith(' '):
-
                 name, seq = line.strip().split()
                 if name not in objs:
                     names.append(name)
@@ -293,7 +299,8 @@ def ParseClustal(inp, returndefaults = False):
 
 
 def ParseInput(inputname, inputformat, returndefaults = False, fmt = "unknown"):
-
+    """Parser selector"""
+    
     if fmt == "unknown":
         fmt = GuessFormat(inputname)
         if fmt != "default":
@@ -538,8 +545,10 @@ if __name__ == "__main__":
         # Only the first paramset is used in alignment mode
         paramsetnames, paramsets = paramsetnames[:1], paramsets[:1]
 
+        # Get the processed sequences
         objs, fmt = ParseInput(inputfile, inputformat)
 
+        # Get the default input lines
         defReactivities, defRestraints, defReference = ParseInput(inputfile, inputformat,
                                                                   returndefaults = True,
                                                                   fmt = fmt)[0]
@@ -574,6 +583,7 @@ if __name__ == "__main__":
         if levellimit is None:
             levellimit = 3 - int(N > 500)
 
+        # Run the alignment-based predictions
         RunSQRNdbnali(objs, defReactivities, defRestraints, defReference,
                       levellimit, freqlimit, verbose, step3,
                       paramsetnames, paramsets, threads, rankbydiff, rankby,
