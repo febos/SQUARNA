@@ -501,6 +501,8 @@ if __name__ == "__main__":
             except:
                 raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
                                  .format(arg.split('=', 1)[1]))
+        else:
+            print("Unrecognized option: {}".format(arg))
 
     # Process rankby
     if "d" in rankby:

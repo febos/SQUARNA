@@ -130,75 +130,78 @@ def PredictRscapeTotal(dataset, fam):
 if __name__ == "__main__":
 
     dataset = "Rfam14.9" # RNAStralignExt / Rfam14.9
-    tool    = "IPknot"
+    #tool    = "IPknot"
 
-    outname = "{}_{}".format(dataset,tool)
-    title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
-    outp1 = open(outname+'.fas','w')
-    outp2 = open(outname+'.tsv','w')
-    outp2.write(title+'\n')
-
-    t0 = time.time()
-
-    famfiles = glob.glob("datasets/{}/sto/*".format(dataset))
-    fams = []
-
-    for famfile in famfiles:
-        fam = os.path.basename(famfile).split('.')[0]
-        headers, seqnames, seqdict, gcnames, gcdict = ReadStockholm(famfile)
-        LEN    = len(gcdict['SS_cons'])
-        DEPTH  = len(seqnames)
-        refdbn = PairsToDBN(DBNToPairs(gcdict['SS_cons']), LEN)
-        fams.append((LEN, DEPTH, fam, refdbn))
-    fams.sort()
-
-        
-    for LEN, DEPTH, fam, refdbn in fams:
-
-        name = '>'+fam
-        print(name,end='')
-
-        preddbn = {"SQUARNAs1":PredictSQUARNAs1,
-                   "SQUARNAs2":PredictSQUARNAs2,
-                   "SQUARNAs3i":PredictSQUARNAs3i,
-                   "SQUARNAs3u":PredictSQUARNAs3u,
-                   "RNAalifold":PredictRNAalifold,
-                   "CentroidAlifold":PredictCentroidAlifold,
-                   "IPknot": PredictIPknot,
-                   "RscapeNested": PredictRscapeNested,
-                   "RscapeTotal" : PredictRscapeTotal,
-                   }[tool](dataset, fam)
-
-        t1 = time.time()-t0
-
-        print("...COMPLETE ({}sec)".format(round(t1,3)))
-
-        pairsr = set(DBNToPairs(refdbn))
-        pairsq = set(DBNToPairs(preddbn))
-
-        TP = len(pairsr & pairsq)
-        FP = len(pairsq - pairsr)
-        FN = len(pairsr - pairsq)
+    for tool in ("SQUARNAs1", "RscapeNested", "RscapeTotal", "SQUARNAs2", "IPknot",
+                 "CentroidAlifold", "SQUARNAs3u", "SQUARNAs3i"):
             
-        FS = 2*TP / (2*TP + FN + FP) if (TP + FN + FP) else 1
-        PRC = (TP / (TP + FP)) if (TP+FP) else 1
-        RCL = (TP / (TP + FN)) if (TP+FN) else 1
+        outname = "{}_{}".format(dataset,tool)
+        title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
+        outp1 = open(outname+'.fas','w')
+        outp2 = open(outname+'.tsv','w')
+        outp2.write(title+'\n')
 
-        outp1.write(name+'\n')
-        outp1.write(refdbn+'\n')
-        outp1.write(preddbn+'\n')
-        outp1.write("LEN={} DEPTH={}, TIME={}sec TP={} FP={} FN={} PRC={} RCL={} FS={}\n"\
-                    .format(LEN, DEPTH,round(t1,3),
-                            TP,FP,FN,
-                            round(PRC,3),
-                            round(RCL,3),
-                            round(FS,3)))
-        res = [name[1:], LEN, DEPTH, round(t1,3), TP, FP, FN,
-                round(PRC,3), round(RCL,3), round(FS,3),
-                refdbn,preddbn]
-        outp2.write('\t'.join([str(g) for g in res])+'\n')
+        t0 = time.time()
 
-    outp1.close()
-    outp2.close()
+        famfiles = glob.glob("datasets/{}/sto/*".format(dataset))
+        fams = []
+
+        for famfile in famfiles:
+            fam = os.path.basename(famfile).split('.')[0]
+            headers, seqnames, seqdict, gcnames, gcdict = ReadStockholm(famfile)
+            LEN    = len(gcdict['SS_cons'])
+            DEPTH  = len(seqnames)
+            refdbn = PairsToDBN(DBNToPairs(gcdict['SS_cons']), LEN)
+            fams.append((LEN, DEPTH, fam, refdbn))
+        fams.sort()
+
+        cnt = 0  
+        for LEN, DEPTH, fam, refdbn in fams:
+            cnt += 1
+            name = '>'+fam
+            print(name,end='')
+
+            preddbn = {"SQUARNAs1":PredictSQUARNAs1,
+                       "SQUARNAs2":PredictSQUARNAs2,
+                       "SQUARNAs3i":PredictSQUARNAs3i,
+                       "SQUARNAs3u":PredictSQUARNAs3u,
+                       "RNAalifold":PredictRNAalifold,
+                       "CentroidAlifold":PredictCentroidAlifold,
+                       "IPknot": PredictIPknot,
+                       "RscapeNested": PredictRscapeNested,
+                       "RscapeTotal" : PredictRscapeTotal,
+                       }[tool](dataset, fam)
+
+            t1 = time.time()-t0
+
+            print("...COMPLETE ({}sec) == {}/4108".format(round(t1,3), cnt))
+
+            pairsr = set(DBNToPairs(refdbn))
+            pairsq = set(DBNToPairs(preddbn))
+
+            TP = len(pairsr & pairsq)
+            FP = len(pairsq - pairsr)
+            FN = len(pairsr - pairsq)
+                
+            FS = 2*TP / (2*TP + FN + FP) if (TP + FN + FP) else 1
+            PRC = (TP / (TP + FP)) if (TP+FP) else 1
+            RCL = (TP / (TP + FN)) if (TP+FN) else 1
+
+            outp1.write(name+'\n')
+            outp1.write(refdbn+'\n')
+            outp1.write(preddbn+'\n')
+            outp1.write("LEN={} DEPTH={}, TIME={}sec TP={} FP={} FN={} PRC={} RCL={} FS={}\n"\
+                        .format(LEN, DEPTH,round(t1,3),
+                                TP,FP,FN,
+                                round(PRC,3),
+                                round(RCL,3),
+                                round(FS,3)))
+            res = [name[1:], LEN, DEPTH, round(t1,3), TP, FP, FN,
+                    round(PRC,3), round(RCL,3), round(FS,3),
+                    refdbn,preddbn]
+            outp2.write('\t'.join([str(g) for g in res])+'\n')
+
+        outp1.close()
+        outp2.close()
 
 

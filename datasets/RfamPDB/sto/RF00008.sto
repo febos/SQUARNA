@@ -1,0 +1,161 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00008
+#=GF ID   Hammerhead_3
+#=GF PI   Hammerhead
+#=GF DE   Hammerhead ribozyme (type III)
+#=GF AU   Bateman A; 0000-0002-6982-4660
+#=GF AU   Ontiveros-Palacios N; 0000-0001-8457-4455
+#=GF SE   Bateman A
+#=GF SS   Published; PMID:7969422
+#=GF GA   41.80
+#=GF TC   41.80
+#=GF NC   41.70
+#=GF TP   Gene; ribozyme;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF CL   CL00010
+#=GF DR   SO; 0000380; hammerhead_ribozyme;
+#=GF RN   [1]
+#=GF RM   7969422
+#=GF RT   Three-dimensional structure of a hammerhead ribozyme.
+#=GF RA   Pley HW, Flaherty KM, McKay DB
+#=GF RL   Nature 1994;372:68-74.
+#=GF RN   [2]
+#=GF RM   9506521
+#=GF RT   The structural basis of hammerhead ribozyme self-cleavage.
+#=GF RA   Murray JB, Terwey DP, Maloney L, Karpeisky A, Usman N, Beigelman L, Scott
+#=GF RA   WG
+#=GF RL   Cell 1998;92:665-673.
+#=GF RN   [3]
+#=GF RM   10899150
+#=GF RT   Distribution of hammerhead and hammerhead-like RNA motifs through the
+#=GF RT   GenBank.
+#=GF RA   Ferbeyre G, Bourdeau V, Pageau M, Miramontes P, Cedergren R
+#=GF RL   Genome Res 2000;10:1011-1019.
+#=GF RN   [4]
+#=GF RM   18834200
+#=GF RT   Capturing hammerhead ribozyme structures in action by modulating general
+#=GF RT   base catalysis.
+#=GF RA   Chi YI, Martick M, Lares M, Kim R, Scott WG, Kim SH
+#=GF RL   PLoS Biol. 2008;6:e234.
+#=GF RN   [5]
+#=GF RM   26398724
+#=GF RT   Two Divalent Metal Ions and Conformational Changes Play Roles in the
+#=GF RT   Hammerhead Ribozyme Cleavage Reaction.
+#=GF RA   Mir A, Chen J, Robinson K, Lendy E, Goodman J, Neau D, Golden BL
+#=GF RL   Biochemistry. 2015;54:6369-6381.
+#=GF RN   [6]
+#=GF RM   26551631
+#=GF RT   Two Active Site Divalent Ions in the Crystal Structure of the Hammerhead
+#=GF RT   Ribozyme Bound to a Transition State Analogue.
+#=GF RA   Mir A, Golden BL
+#=GF RL   Biochemistry. 2016;55:633-636.
+#=GF CC   The hammerhead ribozyme is one of the smallest catalytic RNAs. These RNAs
+#=GF CC   have an endonuclease function, and most often are autocatalytic.
+#=GF CC   Structurally it is composed of three base paired helices, separated by
+#=GF CC   short linkers of conserved sequence. These helices are called I, II and
+#=GF CC   III. We have classified hammerhead ribozymes into three types based on
+#=GF CC   which helix the 5' and 3' ends of the sequence join. This family are the
+#=GF CC   type III hammerheads. The conserved uridine-turn links helix I to helix II
+#=GF CC   and usually has the sequence CUGA. Helix II and III are linked by a
+#=GF CC   sequence CGAAA. The cleavage reaction occurs between helix III and I, and
+#=GF CC   is usually a C. Hammerhead ribozymes are found in plant viroids and other
+#=GF CC   small replicating satellite RNA species. Hammerhead ribozymes have been
+#=GF CC   found in animals as well as plants. The structure of Hammerhead III
+#=GF CC   ribozyme was reported in PDBs 2QUS, 2QUW [4], 5DI2, 5DI4, 5DQK [5], 5EAO,
+#=GF CC   and 5EAQ [6].
+#=GF WK   Hammerhead_ribozyme
+#=GF SQ   85
+
+
+D00685.1/1-46                           ---------GCCAGACGU-GGACCCGGCCUGAUGAGUCCGAAA----------------------------GGACGAAACAGUA-
+AJ247116.1/133-53                       -UCCAGUC-GAGACCUGAAGUGGGUUUACUGAUGAGGCUGUGGAGAGAGCGAAA-GCUUUACUCCCACACAAGCCGAAACUGGA-
+Y14700.1/133-53                         -UCCAGUC-GAGACCUGAAGUGGGUUUCCUGAUGAGGCUGUGGAGAGAGCGAAA-GCUUUACUCCCACACAAGCCGAAACUGGA-
+AJ247123.1/132-52                       -UCCAGUC-GAGACCUGAAGUGGGUUUCCUGAUGAGGCUGUGGAGAGAGCGAAA-GCUUUACUCCCGCACAAGCCGAAACUGGA-
+AJ247121.1/133-53                       -UCCAGUC-GAGACCUGAAGUGGGUUUCCUGACGAGGCUGUGGAGAGAGCUUUC-GCUUUACUCCCGCACAAGCCGAAACUGGA-
+AJ247122.1/132-52                       -UCCAGUC-GAGACCUGAAGUGGGUUUCCUGACGAGGCUGUGGAGAGAGCUAUU-GCUUUACUCCCGCACAAGCCGAAACUGGA-
+AJ247113.1/134-53                       -UCCAGUC-GAGACCUGAAGUGGGUUUCCUGACGAGGCUGUGGAGAGAGCAAAUUGCUUUACUCCCGCACAAGCCGAAACUGGA-
+AJ536620.1/1-40                         ---------GGGUGGUGUGUG-CCACCCCUGAUGAGUCCGA----------------------------AAGGACGAA-------
+AJ536617.1/1-40                         ---------GGGUGGUGUGUA-CCACCCCUGAUGAGUCCGA----------------------------AAGGACGAA-------
+Y12833.1/339-285                        CCGCUAUA-UGGGGAUGUGUG-UCCCUACUGACGAGUUCAA----------------------------AAGAACGAAAUAGUUA
+J02386.1/42-95                          UGUCCGUA--GUGGAUGUGUA-UCCACUCUGAUGAGUCCAA----------------------------AAGGACGAAACGGAUG
+J02439.1/42-95                          UGUCCGUA--GUGGAUGUGUA-UCCACUCUGAUGAGUCCGA----------------------------AAGGACGAAACGGAUG
+M63666.1/246-192                        CCGGUGUC-UCAAGGUGCGUA-CCUUGACUGAUGAGUCCGA----------------------------AAGGACGAAACACCAG
+M33000.1/55-110                         ACGCUGUC-UGUACUUGUAUC-AGUACACUGACGAGUCCCU---------------------------AAAGGACGAAACAGCGC
+M33001.1/56-111                         ACGCUGUC-UGUACUUAUAUC-AGUACACUGACGAGUCCCU---------------------------AAAGGACGAAACAGCGC
+AJ550909.1/282-333                      GAAGAGUC--GCGCUU------AGCGCACUGAUGAGUCUCUGA-------------------------AUGAGACGAAACUCUUC
+AJ550907.1/281-333                      AAAGAGUC--GCGCUU------AGCGCACUGAUGAGUCUCUGA------------------------GAUGAGACGAAACUCUUC
+AJ550908.1/281-334                      GAAGAGUC-UGCGCUU------AGCGCACUCAUGAGUCUCUGA------------------------GAUGAGACGAAACUCUUC
+AJ550910.1/282-336                      GAAGAGUCCUGCGCUU------AGCGCACUGACGAGUCUCUGA------------------------GAUGAGACGAAACUCUUC
+AJ550901.1/282-334                      GAAGAGUC--GCGCUA------AGCGCACUGAUGAGUCUUUGA------------------------GAUAAGACGAAACUCUUC
+AJ550898.1/282-335                      GAAGAGUC-UGCGCUA------AGCGCACUGAUGAGUCUUUGA------------------------AAUAAGACGAAACUCUUC
+AJ241850.1/282-334                      UAAGAGUC--GUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAAGAGACGAAACUCUUU
+AJ005294.1/282-334                      UAAGAGUC--GUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUG
+AJ005321.1/281-333                      GAAGAGUC--GUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUG
+AJ241830.1/282-334                      AAAGAGUC--GUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUG
+AJ005320.1/281-333                      GAAGAGUC--GUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUU
+AJ241833.1/282-334                      AAAGAGUC--GUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUU
+AJ550903.1/281-333                      GAAGAGUC--GUGCUU------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUU
+AF170516.1/283-335                      GAAGAGUC--GUGCUU------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUC
+AJ550906.1/282-334                      GAAGAGUC--GUGCUU------AGCACACUGAUGAGUCUCUGA------------------------GAUGAGACGAAACUCUUC
+AJ005299.1/282-335                      UAAGAGUC-UGUGCUA------AGCACACUGAUGAAUCUCUGA------------------------AAUGAGACGAAACUCUUG
+AJ005300.1/282-335                      UAAGAGUC-UGUGGUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUG
+AJ241847.1/281-334                      GAAGAGUC-UGUGCUA------AGCACACUGAUGAGUUUCUGA------------------------AAUGAGACGAAACUCUUG
+AJ241831.1/281-334                      GAAGAGUC-UGUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCUUA
+AJ005302.1/281-334                      AAAGAGUC-UGUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AUUGAGACGAAACUCUUG
+AJ241823.1/282-335                      AAAGAGUC-UGUGCUA------AGCACACUGAUGAGUCUCUAA------------------------AAUGAGACGAAACUCUUU
+AJ005322.1/281-334                      GAAGAGUC-UGUGCUA------AGCACACUGACGAGUCUCUGA------------------------AAUGAGACGAAACUCUUU
+AJ005314.1/281-334                      AAAGAGUC-UGUGCUA------AGCACACUGACGAGUCUCUGA------------------------AAUGAGACGAAACUCUUU
+M83545.1/282-335                        GAAGAGUC-UGUGCUA------AGCACACUGACGAGUCUCUGA------------------------GAUGAGACGAAACUCUUC
+AJ550911.1/282-335                      GAAGAGUC-UGUGCUA------AGCACACUGACGAGUCUCUGA------------------------AAUGAGACGAAACUCUUC
+AJ241839.1/282-334                      GAUGAGUC--GUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCAUA
+AJ005312.1/282-335                      GAUGAGUC-UGUGCUA------AGCACACUGAUGAGUCUAUGA------------------------AAUGAGACGAAACUCAUA
+AJ241845.1/282-335                      GAUGAGUC-UGUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUCAUG
+AF170504.1/284-337                      GAUAAGUC-UGUGCUA------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUUAUC
+AF170520.1/282-335                      GAUAAGUC-UGUGCUU------AGCACACUGAUGAGUCUCUGA------------------------AAUGAGACGAAACUUAUC
+AF170503.1/280-333                      GAAAGGUC-UGUGCUU------AGCACACUGACGAGUUCCUGA------------------------AAUGGAACGAAACCUUUU
+AF170503.1/55-3                         CAUAAGUC-UGGGCUU------AG-CCACUGACGAGUCGCUGG------------------------GAUACGGCGAAACUUAUG
+AJ005305.1/56-3                         CAAAAGUC-UGGGCUA------AGCCCACUGACGAGCCGCUGG------------------------GAUACGGCGAAACUUUUG
+AF170519.1/55-3                         CAUAAGUC-UGGGCUU------AG-CCACUGAUGAGCCGUUGA------------------------GAUACGGCGAAACUUAUG
+AF170523.1/55-3                         CAAAAGUC-UGGGCUU------AG-CCACUGAUGAGCCGUUGA------------------------GAUACGGCGAAACUUUUG
+AF339740.1/56-3                         CAUAAGUC-UGGGCUU------AGCCCACUGAUGAGCCGUUGA------------------------GAUACGGCGGAACUUAUG
+AF170509.1/56-3                         CAUAAGUC-UAGGCUU------AGCCCACUGAUGAGCCGUUGA------------------------GAUACGGCGAAACUUAUG
+AF339739.1/56-3                         CAUAAGUC-UGGGCUU------AGCCCACUGAUGAGGCGUUGA------------------------GAUACGGCGAAACUUAUG
+AJ005318.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGUUGA------------------------GAUACGGUGAAACUUAUG
+AJ005319.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGUUGA------------------------GAUACGGCGAAACUUAUG
+AJ241828.1/56-3                         CAUAAGUC-UGGGUUA------AGCCCACUGAUGAGCCGUUGA------------------------GAUACGGCGAAACUUAUG
+AJ005322.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGACGAGCCGUUGA------------------------GAUACGGCGAAACUUAUG
+AJ241831.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGUUGA------------------------GAUACGGCGAAACUUCUG
+AJ005298.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGUUGA------------------------GAUACGGCGAAACUUUUG
+AJ241819.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGUUGA------------------------AAUACGGCGAAACUUUUG
+AJ005303.1/56-3                         CAAAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGUUGA------------------------GAUACGGCGAAACUUUUG
+AJ550900.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGCCUUUGC------------------------GACAAGGCGAAACUUAUG
+AJ550899.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGCCUUUGC------------------------GAUAAGGCGAAACUUAUG
+AJ241838.1/56-3                         CAAAAGUC-UGGGCUA------AGCCCACUGAUGAGCUGCUGA------------------------AAUGCGGCAAAACUUUUG
+AJ005312.1/56-3                         CAAAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGCUGA------------------------AAUGCGGCUAAACUUUUG
+AF170499.1/56-3                         CAAAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGCUGA------------------------AAUGCGGCGAAACUUUUG
+AJ005310.1/56-3                         CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGCUGA------------------------AAUGCGGCGAAACUUUUG
+AJ241840.1/56-3                         CAGAAGUC-UGGGCUA------AGCCCACUGAUGAGCCGCUGA------------------------AAUGCGGCGAAACUUUUG
+AJ241841.1/57-3                         CAAAAGUU-UGGGCUAA-----AGCCCACUGAUGAGCCGCUGA------------------------AAUGCGGCGAAACUUUUG
+AJ241843.1/56-3                         CAUAAGUC-UGGGCUU------AGCCCACUGAUGAGCCACUGA------------------------AAUGCGGCGAAACUUUUG
+AJ550912.1/56-3                         CAAAAGUC-UGGGCUA------AGCCCACUGAUGAGUUGCUGA------------------------GAUGCGACGAAACUUUUG
+AJ550911.1/56-3                         CAAAAGUC-UGGGCUA------AGCCCACUGAUGAGUUGCUGA------------------------AACGCAACGAAACUUUUG
+AJ550907.1/56-3                         CAUAAGUC-UGGGCUU------AGCCUACUGAUGAGUCGCUGC------------------------GAUGCGACGAAACUUAUG
+AJ550906.1/56-3                         CAUAAGUC-UGGGCUU------AGCCCACUGAUGAGUCGCUGC------------------------GAUGCGACGAAACUUAUG
+AJ550909.1/56-3                         CAUAAGUC-UGGGCUU------AGCCCACUGAUGAGUUGCUGC------------------------GAUGCAACGAAACUUAUG
+M83545.1/56-3                           CAUAAGUC-UGGGCUA------AGCCCACUGAUGAGUCGCUGA------------------------AAUGCGACGAAACUUAUG
+AJ536615.1/1-44                         ---------GGGUGGUG-UGUACCAUCCCUGAUGAGUCCAA----------------------------AAGGACGAAAUGG---
+M17439.1/1-48                           ---------ACCGGAUGUGCUUUCCGGUCUGAUGAGUCCGU----------------------------GAGGACGAAACAGGAC
+AJ536614.1/206-152                      UCACCGUC-GGAAAGUG-UGCGCUUUCCCUGAUGAGCCCAA----------------------------AAGGGCGAAACGGUAC
+AJ536612.1/206-152                      UCACCGUC-GGAAAGUG-UGCGCUUUCCCUGAUGAGCCCGA----------------------------AAGGGCGAAACGGUAC
+AJ536620.1/206-152                      CCACCGUC-GGAAAGUG-UGCGCUUUCCCUGAUGAGCCCAA----------------------------AAGGGCGAAACGGUAC
+AJ536619.1/206-152                      CCACCGUC-GGAAAGUG-UGUACUUUCCCUGAUGAGUCCGA----------------------------AAGGACGAAACGGUAC
+URS000080DE02_32630/5-60                GCCCUGUC-ACCGGAUGUGCUUUCCGGUCUGAUGAGUCCGU----------------------------GAGGACAAAACAGGGC
+URS000080DFDA_32630/1-48                ---------ACCGGAUGUGCUUUCCGGUCUGAUGAGUCCGU----------------------------GAGGACAAAACAGGGC
+URS0000868531_32630/1-48                ----------GGGUAC---UUAAGCCCACUGAUGAGUCGCUGG------------------------GAUGCGACGAAACGCCCA
+#=GC SS_cons                            (((((((,.<<<<<______.__>>>>><____>,<<<<____........................____>>>>,,,)))))))
+#=GC RF                                 caagAGUC.uGgGcuU......agCcCaCUGAUGAGuCccUGA........................aAuAgGaCGAAACUcuug
+#=GC RNA_structural_elements            [=SL3=]==[=======SL1=======]=======[=================SL2==================]===[=SL3=]
+//

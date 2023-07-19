@@ -1,0 +1,57 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00254
+#=GF ID   mir-16
+#=GF DE   mir-16 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; PFOLD
+#=GF GA   44.00
+#=GF TC   44.10
+#=GF NC   43.90
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF CL   CL00085
+#=GF DR   MIPF; MIPF0000006;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF RN   [1]
+#=GF RM   12434020
+#=GF RT   Frequent deletions and down-regulation of micro- RNA genes miR15 and miR16
+#=GF RT   at 13q14 in chronic lymphocytic leukemia.
+#=GF RA   Calin GA, Dumitru CD, Shimizu M, Bichi R, Zupo S, Noch E, Aldler H, Rattan
+#=GF RA   S, Keating M, Rai K, Rassenti L, Kipps T, Negrini M, Bullrich F, Croce CM
+#=GF RL   Proc Natl Acad Sci U S A 2002;99:15524-15529.
+#=GF CC   miR-16, miR-15, mir-195 and miR-457 are related miRNA precursor sequences
+#=GF CC   (MIPF:MIPF000006). This miRNA family appears to be vertebrate specific and
+#=GF CC   members of this family have been predicted or experimentally validated in
+#=GF CC   a wide range of vertebrate species (MIPF:MIPF0000006). miR-16 and miR-15a
+#=GF CC   are clustered within 0.5 kb at 13q14 in human, a region shown to be
+#=GF CC   deleted or down-regulated in more than half of B cell chronic lymphocytic
+#=GF CC   leukaemias (CLL) [1]. The hairpin precursors (represented here) are
+#=GF CC   predicted based on base pairing and cross-species conservation -- their
+#=GF CC   extents are not known. In this case the mature sequence is excised from
+#=GF CC   the 5' arm of the hairpin.
+#=GF WK   mir-16_microRNA_precursor_family
+#=GF SQ   12
+
+
+AL669869.10/100495-100571 UCCUGGCUCUAGCAGCACAGAAAUAUUGGCAUGGGGAAGUGAGUCUG-----CCAAUAUUGGCUGUGCUGCUCCAGGCAGGG
+AY865955.1/411-487        CCUGGGCUCUAGCAGCACAGAAAUAUUGGCACAGGGAAGCGAGUCUG-----CCAAUAUUGGCUGUGCUGCUCCAGGCAGGG
+AL606727.3/61372-61292    GCCUGGCUGUAGCAGCACGUAAAUAUUGGAGUCAAAGCACUUGCGAAUC-CUCCAGUAUUGACCGUGCUGCUGGAGUUAGGC
+CR478286.10/109802-109722 UCCUCGCUUUAGCAGCACGUAAAUAUUGGUGUGUUAUAGUCAAGGCCAA-CCCCAAUAUUAUGUGUGCUGCUUCAGUAAGGC
+AC154660.2/77731-77651    GCGGUGCCUUAGCAGCACGUAAAUAUUGGCGUUAAGAUUCUGAAAUUAC-CUCCAGUAUUGACUGUGCUGCUGAAGUAAGGU
+AY866308.1/534-614        GCAGUGCCUUAGCAGCACGUAAAUAUUGGCGCUAAGAUUCUAAAAUUAU-CUCCAGUAUUAACUGUGCUGCUGAAGUAAGGU
+AF480551.1/1-81           GCAGUGCCUUAGCAGCACGUAAAUAUUGGCGUUAAGAUUCUAAAAUUAU-CUCCAGUAUUAACUGUGCUGCUGAAGUAAGGU
+AY865836.1/531-611        GUUCCACUCUAGCAGCACGUAAAUAUUGGCGUAGUGAAAUAUGUAUUAAACACCAAUAUU-ACUGUGCUGCUUCAGUGUGAC
+AY865833.1/553-633        GUUCCACUCUAGCAGCACGUAAAUAUUGGCGUAGUGAAAUAUAUGUUAAACACCAAUAUU-ACUGUGCUGCUUUAGUGUGAC
+AY865835.1/569-649        GUUCCACUCUAGCAGCACGUAAAUAUUGGCGUAGUGAUAUAUAUAUUAAACACCAAUAUU-ACUGUGCUGCUUUAGUGUGAC
+AF480552.1/1-81           GUUCCACUCUAGCAGCACGUAAAUAUUGGCGUAGUGAAAUAUAUAUUAAACACCAAUAUU-ACUGUGCUGCUUUAGUGUGAC
+AC119847.12/19552-19632   GUUCCACUCUAGCAGCACGUAAAUAUUGGCGUAGUGAAAUAAAUAUUAAACACCAAUAUU-AUUGUGCUGCUUUAGUGUGAC
+#=GC SS_cons              ::::<<<---<<<<<<<<---<<<<<<<<____________________.__>>>>>>>>---->>>>>>>>--->>>::::
+#=GC RF                   gcuucaCUcUAGCAGCACGUAAAUAuUGGcGUaguGAaauuaauaUuAa.CuCCAaUAUUgaCUGUGCUGCUuuAGugaGgc
+//

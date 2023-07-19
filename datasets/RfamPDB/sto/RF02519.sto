@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02519
+#=GF ID   ToxI
+#=GF DE   ToxI antitoxin
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Published; PMID:23267117
+#=GF SS   Published; PMID:23267117
+#=GF GA   50.00
+#=GF TC   54.70
+#=GF NC   35.20
+#=GF TP   Gene; antitoxin;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000644; antisense_RNA;
+#=GF DR   GO; 0017148; negative regulation of translation;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF RN   [1]
+#=GF RM   23267117
+#=GF RT   Selectivity and self-assembly in the control of a bacterial toxin by an
+#=GF RT   antitoxic noncoding RNA pseudoknot.
+#=GF RA   Short FL, Pei XY, Blower TR, Ong SL, Fineran PC, Luisi BF, Salmond GP
+#=GF RL   Proc Natl Acad Sci U S A. 2013;110:E241-E249.
+#=GF WK   Toxin-antitoxin_system
+#=GF SQ   5
+
+
+CP000905.1/47243-47276                    AAAUUGGUGUAGCCUUACCGUAGUAGGCACAAAA
+ACNL01000295.1/1429-1396                  AAAUUGGUGUAUCCUUACCCUAGUAGGAACAAAA
+AAEP01000052.1/71937-71904                AAAUUGGUGUAGCCUUACCGUAGUAGGCAUUCAU
+DQ025752.1/63481-63448                    AAAUUGGUGUAGCCUUACCGUAGUAGGCGCUAAA
+URS000080E03C_1428/1-34                   AAAUUGGUGUAACCUUACCGUAGUAGGUGCUAAA
+#=GC SS_cons                              :::::AAA:::<<<<_aaa_____>>>>::::::
+#=GC RF                                   AAAUUGGUGUAgCCUUACCGUAGUAGGcACuAAA
+//

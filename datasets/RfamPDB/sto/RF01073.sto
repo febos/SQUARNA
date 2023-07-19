@@ -1,0 +1,50 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01073
+#=GF ID   GP_knot1
+#=GF DE   Gag/pol translational readthrough site
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   67.70
+#=GF TC   67.70
+#=GF NC   67.60
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   PKBASE; PKB00047;
+#=GF DR   PKBASE; PKB00078;
+#=GF DR   PKBASE; PKB00079;
+#=GF DR   PKBASE; PKB00088;
+#=GF DR   PKBASE; PKB00098;
+#=GF DR   PKBASE; PKB00099;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0039705; viral translational readthrough;
+#=GF RN   [1]
+#=GF RM   2402881
+#=GF RT   RNA pseudoknots: translational frameshifting and readthrough on viral
+#=GF RT   RNAs.
+#=GF RA   ten Dam EB, Pleij CW, Bosch L
+#=GF RL   Virus Genes. 1990;4:121-136.
+#=GF RN   [2]
+#=GF RM   8076609
+#=GF RT   Pseudoknot-dependent read-through of retroviral gag termination codons:
+#=GF RT   importance of sequences in the spacer and loop 2.
+#=GF RA   Wills NM, Gesteland RF, Atkins JF
+#=GF RL   EMBO J. 1994;13:4137-4144.
+#=GF WK   Gag/pol_translational_readthrough_site
+#=GF SQ   8
+
+
+M18247.1/2424-2485                      UAGGAGAGUCAGGGC-CAGGACCCCCCCCCUGAGCCCAGGAUAACCUUAAAAAUAGGGGGGCA----
+M77193.1/3206-3267                      UAGGGAGGUCAGGGC-CAGGAGCCCCCCCCUGAGCCCAGGAUAACUCUUGAAGUUGGGGGGCA----
+AF411814.1/2228-2289                    UAGGGGGGUCGGGGU-CAGGAGCCCCCCCCUGAACCCAGGAUAACCCUCAAAGUAGGGAGGCA----
+J02034.1/2580-2641                      UAGGGGUGUCAGGGCUCUGGAGCCCCCCCC-GAGCCCCGGCUAACUCUAUCUGUAGGGGGGCA----
+M26927.1/2191-2251                      UAGGGGAGUCAGGGU-UCGGACCCCCUCCCCGAACCUAGGGUAACACUGACUGUGGAGGGGA-----
+AY099324.1/2582-2643                    UAGGGGAGACGGGGU-UCGGACCCCCUCCCCGAGCCCAGGGUAACUUUGAAGGUGGAGGGGCA----
+AF053745.1/2288-2348                    UAGGGAAGUCGGGGC-UCAGACCCCCUCCCUGAGCCUAGGGUAACUUUGUCUGUGGAGGGGA-----
+URS0000A7636D_11801/1-63                ---GGAGGUCAGGGU-CAGGAGCCCCCCCCUGAACCCAGGAUAACCCUCAAAGUCGGGGGGCAACCC
+#=GC SS_cons                            :::::::<<<-<<<<.<<<<__AAAAAA>>>>->>>>-->>>:::::::::::::aaaaaa::....
+#=GC RF                                 UAGGGgaGuCAGGGc.caGGAgCCCCcCCCugAgCCCAGGaUAACucUaaaaGUaGgGGGGCA....
+//
