@@ -932,9 +932,9 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         consfp = len(consbps - knownbps)
         consfn = len(knownbps - consbps)
 
-        consprc = (round(constp / (constp + consfp), 3)) if (constp + consfp) else 0
-        consrcl = (round(constp / (constp + consfn), 3)) if (constp + consfn) else 0
-        consfsc = (round(2*constp / (2*constp + consfp + consfn), 3)) if (2*constp + consfp + consfn) else 0
+        consprc = (round(constp / (constp + consfp), 3)) if (constp + consfp) else 1
+        consrcl = (round(constp / (constp + consfn), 3)) if (constp + consfn) else 1
+        consfsc = (round(2*constp / (2*constp + consfp + consfn), 3)) if (2*constp + consfp + consfn) else 1
 
         consresult = [constp, consfp, consfn, consfsc, consprc, consrcl]
 
@@ -949,9 +949,9 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
             fp = len(setbps - knownbps) # Wrongly predicted bps
             fn = len(knownbps - setbps) # Missed bps
 
-            prc = (round(tp / (tp + fp), 3)) if (tp + fp) else 0
-            rcl = (round(tp / (tp + fn), 3)) if (tp + fn) else 0
-            fsc = (round(2*tp / (2*tp + fp + fn), 3)) if (2*tp + fp + fn) else 0
+            prc = (round(tp / (tp + fp), 3)) if (tp + fp) else 1
+            rcl = (round(tp / (tp + fn), 3)) if (tp + fn) else 1
+            fsc = (round(2*tp / (2*tp + fp + fn), 3)) if (2*tp + fp + fn) else 1
 
             if fsc > bestfsc:
                 bestfsc = fsc 

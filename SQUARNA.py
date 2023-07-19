@@ -266,7 +266,7 @@ def ParseStockholm(inp, returndefaults = False):
     if returndefaults:
         return None, None, gcdict["SS_cons"] if "SS_cons" in gcnames else None
 
-    return [(seqname, seqdict[seqname], None, None,
+    return [('>'+seqname, seqdict[seqname], None, None,
              gcdict["SS_cons"] if "SS_cons" in gcnames else None)
             for seqname in seqnames]
 
@@ -289,7 +289,7 @@ def ParseClustalw(inp, returndefaults = False):
                     objs[name] = ''
                 objs[name] += seq
 
-    return [(name, objs[name], None, None, None) for name in names]
+    return [('>'+name, objs[name], None, None, None) for name in names]
 
 
 def ParseInput(inputname, inputformat, returndefaults = False, fmt = "unknown"):

@@ -160,9 +160,9 @@ def Metrics(ref, pred):
     TP  = len(pb & rb)
     FP  = len(pb - rb)
     FN  = len(rb - pb)
-    PRC = (round(TP / (TP + FP), 3)) if (TP + FP) else 0
-    RCL = (round(TP / (TP + FN), 3)) if (TP + FN) else 0
-    FSC = (round(2*TP / (2*TP + FP + FN), 3)) if (2*TP + FP + FN) else 0
+    PRC = (round(TP / (TP + FP), 3)) if (TP + FP) else 1
+    RCL = (round(TP / (TP + FN), 3)) if (TP + FN) else 1
+    FSC = (round(2*TP / (2*TP + FP + FN), 3)) if (2*TP + FP + FN) else 1
     return [TP, FP, FN, FSC, PRC, RCL]
 
 
