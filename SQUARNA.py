@@ -166,7 +166,7 @@ def GuessFormat(inp):
         if lines[0].startswith('#') and "STOCKHOLM" in lines[0]:
             return "stockholm"
         if lines[0].startswith("CLUSTAL"):
-            return "clustalw"
+            return "clustal"
 
         entry_lines = 0
         seq_lines   = 0
@@ -271,7 +271,7 @@ def ParseStockholm(inp, returndefaults = False):
             for seqname in seqnames]
 
 
-def ParseClustalw(inp, returndefaults = False):
+def ParseClustal(inp, returndefaults = False):
 
     if returndefaults:
         return None, None, None
@@ -305,8 +305,8 @@ def ParseInput(inputname, inputformat, returndefaults = False, fmt = "unknown"):
         return ParseFasta(inputname, returndefaults), fmt
     elif fmt == "stockholm":
         return ParseStockholm(inputname, returndefaults), fmt
-    elif fmt == "clustalw":
-        return ParseClustalw(inputname, returndefaults), fmt
+    elif fmt == "clustal":
+        return ParseClustal(inputname, returndefaults), fmt
 
 
 if __name__ == "__main__":
@@ -577,6 +577,7 @@ if __name__ == "__main__":
                       paramsetnames, paramsets, threads, rankbydiff, rankby,
                       hardrest, interchainonly, toplim, outplim,
                       conslim, reactformat)
+        
 
 
 

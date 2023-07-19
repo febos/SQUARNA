@@ -89,7 +89,7 @@ def YieldStems(seq, reactivities = None, restraints = None,
                               for pos in bp) / len(stem[0])
             stem[-1] *= reactfactor
 
-    return [[[(radict[v],radict[w]) for v,w in stem[0]], stem[-1]]
+    return [[[(radict[v], radict[w]) for v, w in stem[0]], stem[-1]]
             for stem in stems if stem[-1] >= minbpscore]
 
 
@@ -182,7 +182,7 @@ def SQRNdbnali(objs, defrests = None, defreacts = None, defref = None,
                    interchainonly,
                    minlen,
                    minbpscore) for obj in objs]
-                    
+        
         for stems in pool.imap(mpYieldStems, inputs):
             for stem in stems:
                 for v,w in stem[0]:
