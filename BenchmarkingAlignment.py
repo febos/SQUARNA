@@ -71,8 +71,8 @@ def PredictIPknot(dataset, fam):
 
 def PredictRscapeNested(dataset, fam):
 
-    command = "cd tmp; ~/software/rscape/rscape_v1.6.1/bin/"+\
-              " --fold --covmin 4 --nofigures --rna {} > outp.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
+    command = "cd tmp; ~/software/rscape/rscape_v1.6.1/bin/R-scape"+\
+              " --fold --covmin 4 --nofigures --rna {} > outp.tmp".format("../datasets/{}/sto/{}.sto".format(dataset,fam))
     os.system(command)
     with open("tmp/outp.tmp") as file:
 
@@ -94,8 +94,8 @@ def PredictRscapeNested(dataset, fam):
 
 def PredictRscapeTotal(dataset, fam):
 
-    command = "cd tmp; ~/software/rscape/rscape_v1.6.1/bin/"+\
-              " --fold --covmin 4 --nofigures --rna {} > outp.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
+    command = "cd tmp; ~/software/rscape/rscape_v1.6.1/bin/R-scape"+\
+              " --fold --covmin 4 --nofigures --rna {} > outp.tmp".format("../datasets/{}/sto/{}.sto".format(dataset,fam))
     os.system(command)
     with open("tmp/outp.tmp") as file:
 
@@ -130,7 +130,7 @@ def PredictRscapeTotal(dataset, fam):
 if __name__ == "__main__":
 
     dataset = "RNAStralignExt" # RNAStralignExt / Rfam14.9
-    tool    = "CentroidAlifold"
+    tool    = "RscapeTotal"
 
     outname = "{}_{}".format(dataset,tool)
     title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
