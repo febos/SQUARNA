@@ -367,7 +367,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
         step3dbn = PairsToDBN(sorted(step1pairs), N)
 
     print(step3dbn,
-          "Step-3" +\
+          "Step-3({})".format(step3) +\
            ('\t'+str(round(ReactScore(defreacts, objs[0][1], step3dbn), 2))) * bool(defreacts),
           "TP={},FP={},FN={},FS={},PR={},RC={}".format(*Metrics(defref, step3dbn))*bool(defref),
           sep = '\t')

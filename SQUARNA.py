@@ -158,10 +158,155 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
     return results
 
 
-def ParseInput(inputname, inputformat, returndefaults = False, fmt = "default"):
+def GuessFormat(inp):
+
+    with open(inp) as file:
+        lines = file.readlines()
+
+        if lines[0].startswith('#') and "STOCKHOLM" in lines[0]:
+            return "stockholm"
+        if lines[0].startswith("CLUSTAL"):
+            return "clustalw"
+
+        entry_lines = 0
+        seq_lines   = 0
+
+        for line in lines:
+            if line.startswith(">"):
+                entry_lines += 1
+            else:
+                acgut = sum(1 for ch in line.upper() if ch in {'A','C','G','U','T'})
+                if acgut > len(line) / 2:
+                    seq_lines += 1
+
+        if seq_lines > entry_lines and entry_lines > 0:
+            return "fasta"
+
+    return "default"
+
+
+def ParseFasta(inp, returndefaults = False):
+
+    if returndefaults:
+        return None, None, None
+
+    names, seqs = [], []
+
+    with open(inp) as file:
+        for line in file:
+            if line.startswith('>'):
+                names.append(line.strip())
+                seqs.append('')
+            elif line.strip():
+                seqs[-1] += line.strip()
+
+    return [(names[i], seqs[i], None, None, None) for i in range(len(names))]
+
+
+def ReadStockholm(stkfile):
+
+    seqnames = []
+    seqdict  = {}
+    gcnames  = []
+    gcdict   = {}
+    headers  = []
+
+    try:
+        file = open(stkfile)
+    except:
+        file = open(stkfile,encoding="iso8859-15")
+
+    for line in file:
+        if line.startswith('#=GC '):
+
+            linesplit = line.strip().split()
+            seq = linesplit[-1]
+            name = ' '.join(linesplit[1:-1])
+
+            if name not in gcdict:
+                gcnames.append(name)
+                gcdict[name] = seq
+            else:
+                gcdict[name] += seq
+
+        elif line.startswith('#'):
+
+            headers.append(line)
+
+        elif line.startswith('//'):
+            pass
+        elif not line.strip():
+            pass
+        else:
+
+            linesplit = line.strip().split()
+            seq = linesplit[-1]
+            name = ' '.join(linesplit[:-1])
+
+            if name not in seqdict:
+                seqnames.append(name)
+                seqdict[name] = seq
+            else:
+                seqdict[name] += seq
+
+    file.close()
+
+    headers1 = [x for x in headers if not x.startswith("#=GF SQ")]
+    headers2 = [x for x in headers if x.startswith("#=GF SQ")]
+
+    headers = headers1 + headers2
+
+    return headers, seqnames, seqdict, gcnames, gcdict
+
+
+def ParseStockholm(inp, returndefaults = False):
+
+    headers, seqnames, seqdict, gcnames, gcdict = ReadStockholm(inp)
+
+    if returndefaults:
+        return None, None, gcdict["SS_cons"] if "SS_cons" in gcnames else None
+
+    return [(seqname, seqdict[seqname], None, None,
+             gcdict["SS_cons"] if "SS_cons" in gcnames else None)
+            for seqname in seqnames]
+
+
+def ParseClustalw(inp, returndefaults = False):
+
+    if returndefaults:
+        return None, None, None
+
+    objs = {}
+    names = []
+
+    with open(inp) as file:
+        for line in file:
+            if line.strip() and not line.startswith("CLUSTAL") and not line.startswith(' '):
+
+                name, seq = line.strip().split()
+                if name not in objs:
+                    names.append(name)
+                    objs[name] = ''
+                objs[name] += seq
+
+    return [(name, objs[name], None, None, None) for name in names]
+
+
+def ParseInput(inputname, inputformat, returndefaults = False, fmt = "unknown"):
+
+    if fmt == "unknown":
+        fmt = GuessFormat(inputname)
+        if fmt != "default":
+            print("Non-default input file format is recognized: {}".format(fmt.upper()))
 
     if fmt == "default":
         return ParseDefaultInput(inputname, inputformat, returndefaults), fmt
+    elif fmt == "fasta":
+        return ParseFasta(inputname, returndefaults), fmt
+    elif fmt == "stockholm":
+        return ParseStockholm(inputname, returndefaults), fmt
+    elif fmt == "clustalw":
+        return ParseClustalw(inputname, returndefaults), fmt
 
 
 if __name__ == "__main__":
