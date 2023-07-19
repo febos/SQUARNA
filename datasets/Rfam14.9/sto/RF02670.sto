@@ -1,0 +1,37 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02670
+#=GF ID   scaDm46E3
+#=GF DE   small Cajal body-specific RNA Dm46E3
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   61.00
+#=GF TC   61.10
+#=GF NC   31.90
+#=GF TP   Gene; snRNA; snoRNA; scaRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000275; snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0015030; Cajal body;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   19230845
+#=GF RT   A novel Drosophila antisense scaRNA with a predicted guide function.
+#=GF RA   Tortoriello G, Accardo MC, Scialo F, Angrisani A, Turano M, Furia M
+#=GF RL   Gene. 2009;436:56-65.
+#=GF CC   Targets U1b snRNA, a developmentally regulated isoform of the spliceosomal
+#=GF CC   U1 snRNA
+#=GF WK   Small_Cajal_body-specific_RNA
+#=GF SQ   2
+
+
+
+EU924798.1/1-137      GGCCCCAAAUGAUGAGGGUUACUUUGUACGAAUGUCAGUGAAAUUGAAUUAAACAACGAAAAAUGCUUCAUGGCUUAACGGAGAUUUAUGAGGAAAACCGAACUUGAGGCCCACGUCAGUGGCUGAAGCCAAUCAUU
+AASW01032585.1/151-15 GGCCCCUAAUGAUGAGGGUCACUUUGUACGGAUGUCAGUGAAAUUGAAUUAAACAACGAAAAAUGCUUCAUGGCUUAACGGAGAUUUAUGAGGAAAACCGAACUUGAGGCCCACGUCAGUGGCUGAAGCCAAUCAUU
+#=GC SS_cons          (((-(((--(((((-(((,,,,<<<<<-------<<<<<___>>>>>-------->>>>>,,,,,<<<<<<<<<<<____>>>-->>>>>>>>,,,,<<________>>)))-)))))-)))-----))):::::::
+#=GC RF               GGCCCCaAAuGacGAGGGUuACuucGuACGaAUGuCaguGAAacuGaAUUAAACAaCgaaAAAUGCcuCauggCucAACGgaGAUccauGagGAAAACCGAACUUGAGGCCCACguCaGuGGCUGAAGCCAAUCAUU
+//

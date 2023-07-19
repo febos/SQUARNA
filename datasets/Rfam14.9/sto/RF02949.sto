@@ -1,0 +1,37 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02949
+#=GF ID   Cupriavidus-1
+#=GF DE   Cupriavidus-1 RNA
+#=GF AU   Weinberg Z; 0000-0002-6681-3624
+#=GF SE   Weinberg Z
+#=GF SS   Published; PMID:28977401;
+#=GF GA   45.50
+#=GF TC   45.50
+#=GF NC   40.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 32.11 -Z 742849.287494 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   28977401
+#=GF RT   Detection of 224 candidate structured RNAs by comparative analysis of
+#=GF RT   specific subsets of intergenic regions.
+#=GF RA   Weinberg Z, Lunse CE, Corbino KA, Ames TD, Nelson JW, Roth A, Perkins KR,
+#=GF RA   Sherlock ME, Breaker RR
+#=GF RL   Nucleic Acids Res. 2017;45:10811-10823.
+#=GF CC   Betaproteobacteria. Lineage (Betaproteobacteria)
+#=GF WK   Cupriavidus-1_RNA_motif
+#=GF SQ   5
+
+
+URS0000D6AFF0_264198/1-77 AUGGCU----GCCGUGAGCGGCUAAGACGCCGUCGGCCAGGCGCUGCCUGUAACCG-CCA-UGU--GGCG-AA-UGCU-GCA----UGG-CGG
+URS0000D6BA0C_266264/1-80 CUUGCUCCAAGCGGUGACCGGUCAUGUGACCGAAGGCUAAGCAAGACGUGUACCGG-GAA-UC--GGCCG-AA--GGCG-GG----UUU-CCG
+URS0000D6D380_264198/1-79 CUUGCA--UGGCGGUGACCGGCCACAAGGCCGAAGGCAAUGCAAGACGCGUA-CCG-GCUGCC---CGCC-AA-UGCGA-GG---GGGC-CGG
+URS0000D6A9BC_381666/1-86 CUUGCA--UUGCGGUGACCGGCGAAUCCGCCGAAGGCAAUGCAAGUUGCGUACCGG-GC--GUUGGCCAGACAG-UGGCGGCGCGCGGC-CCG
+URS0000D6D3F5_977880/1-80 CUUGCA--UCGCGGUGACCGGCGAAUCCGCCGAAGGCAAUGCAAGACGCGUA-CCGGGUG-CU---GCGACAAUGCGC--GG----CGCGCGG
+#=GC SS_cons              ((((((..(-((<____><<<<<____>>>>>,,,)))-))))))--------<<<.<<<.<<...<<<_.__._>>>-.>>....>>>.>>>
+#=GC RF                   cuuGCa..uuGCgGUGAcCGGCgAauacGCCGAAGGCaAuGCaagaCgcGUAcCcG.gcg.cc...gccg.AA.uggca.gg....cgc.CgG
+//

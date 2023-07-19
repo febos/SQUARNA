@@ -1,0 +1,84 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01408
+#=GF ID   sraL
+#=GF PI   ryjA
+#=GF DE   sraL Hfq binding RNA
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF SE   Predicted; ClustalW; Infernal
+#=GF SS   Predicted; RNAalifold
+#=GF GA   39.00
+#=GF TC   39.50
+#=GF NC   37.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   GO; 0010629; negative regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   18725932
+#=GF RT   Deep sequencing analysis of small noncoding RNA and mRNA targets of the
+#=GF RT   global post-transcriptional regulator, Hfq.
+#=GF RA   Sittka A, Lucchini S, Papenfort K, Sharma CM, Rolle K, Binnewies TT,
+#=GF RA   Hinton JC, Vogel J
+#=GF RL   PLoS Genet. 2008;4:e1000163.
+#=GF RN   [2]
+#=GF RM   11448770
+#=GF RT   Novel small RNA-encoding genes in the intergenic regions of Escherichia
+#=GF RT   coli.
+#=GF RA   Argaman L, Hershberg R, Vogel J, Bejerano G, Wagner EG, Margalit H,
+#=GF RA   Altuvia S
+#=GF RL   Curr Biol. 2001;11:941-950.
+#=GF RN   [3]
+#=GF RM   11445539
+#=GF RT   Identification of novel small RNAs using comparative genomics and
+#=GF RT   microarrays.
+#=GF RA   Wassarman KM, Repoila F, Rosenow C, Storz G, Gottesman S
+#=GF RL   Genes Dev. 2001;15:1637-1651.
+#=GF RN   [4]
+#=GF RM   12762038
+#=GF RT   Small RNA regulators of translation: mechanisms of action and approaches
+#=GF RT   for identifying new small RNAs.
+#=GF RA   Gottesman S, Storz G, Rosenow C, Majdalani N, Repoila F, Wassarman KM
+#=GF RL   Cold Spring Harb Symp Quant Biol. 2001;66:353-362.
+#=GF RN   [5]
+#=GF RM   17982174
+#=GF RT   Characterization of the role of ribonucleases in Salmonella small RNA
+#=GF RT   decay.
+#=GF RA   Viegas SC, Pfeiffer V, Sittka A, Silva IJ, Vogel J, Arraiano CM
+#=GF RL   Nucleic Acids Res. 2007;35:7651-7664.
+#=GF RN   [6]
+#=GF RM   22336761
+#=GF RT   Dynamics of Salmonella small RNA expression in non-growing bacteria
+#=GF RT   located inside eukaryotic cells.
+#=GF RA   Ortega AD, Gonzalo-Asensio J, Garcia-del Portillo F
+#=GF RL   RNA Biol. 2012;9:469-488.
+#=GF RN   [7]
+#=GF RM   23893734
+#=GF RT   An RpoS-dependent sRNA regulates the expression of a chaperone involved in
+#=GF RT   protein folding.
+#=GF RA   Silva IJ, Ortega AD, Viegas SC, Garcia-Del Portillo F, Arraiano CM
+#=GF RL   RNA. 2013;19:1253-1265.
+#=GF CC   The SraL RNA ('sra' for small RNA), discovered in E. coli,[2][3] and later
+#=GF CC   in Salmonella Tiphimurium.[5][6] It is expressed only in stationary
+#=GF CC   phase.[2] It may possibly play a role in Salmonella virulence.[5] The
+#=GF CC   major stationary phase regulator RpoS is transcriptionally regulating SraL
+#=GF CC   and directly binds to the sraL gene promoter. SraL down-regulates the
+#=GF CC   expression of of the ribosome-associated chaperone Trigger Factor (TF),
+#=GF CC   which is involved in the folding of the newly synthesised cystolic
+#=GF CC   proteins.[7]
+#=GF WK   SraL_RNA
+#=GF SQ   6
+
+
+AE014075.1/4830625-4830485   AUCAACACCAACCGGAACCUCCACCACG----UGCUCGA-A-UGAGGUGUGUUGACGUCGGGGGAAA-CCCUCCU-GUGUACCAGCGGGAUAGAGAGAAAGACAAAGAC--------CGGAAAACAAACUAAAGCGCCCUU--GUGGCGCUUUA-GUUUU
+ABAO01000007.1/105121-104981 AUCAACACAAACCGGAACCUCCACCACG----UGCUCGAUA-UGAGGGGUGUUGACGUCGGGGGAAA-CCCUCCU-GUA-AUCAGCGGGAUAGAGCGAAAGACAAAGAC--------CGGAAA-CAAACUAAAGCGCCCUUA-GCGGCGCUUUA-GUUUU
+CP000653.1/314792-314651     GUCAGCACAAACCGGAACCUCC-CCAAC----UGCUCGACA-UGAGGGGUGUUGAUGUCGGGGGAAA-CCCUCCC-GUGAACCAGCGGGAUAGAGAGAAAGACAAAGAC--------CGGGAA-UAAACUAAAGCGCCUUAGUCUGGCGCUUUA-GUUUU
+CP000647.1/4886125-4885978   GUCGACGCAAACCGGAACCUCCAUCAACAGAUUGCGCAAUACUGAGGGACGUCGACGUCGGGGGAAA-CCCUCUC-GCGAACCAGCGAGAUAAUGCGAAAGACCAAGAC--------CGGAAAACAA-CUAAAGCGCCCAGUUGUGGCGCUUUA-GUUUU
+AE017220.1/4439627-4439487   AUCAACACAAACCGGAACCUCCACCACG----UGCUCGAUA-UGAGGGGUGUUGACGUCGGGGGAAA-CCCUCCU-GUA-AUCAGCGGGAUAGAGCGAAAGACAAAGAC--------CGGAAA-CAAACUAAAGCGCCCUUA-GCGGCGCUUUA-GUUUU
+X63534.1/2664-2530           GUUAGCACAAACCGGAA---CCUUGAAA----GA------G-----GGGUGCUGAUGCCGGGGGAAAACCCUCCUAGCCAGUGAGCAGGAUAA--CUAAAGGCCAGACCGAAAUUUUUGCAGU-AAAACAAAGGCGCCUAG----GGCGCUUUUUGUUUU
+#=GC SS_cons                 :(((((((,,,,,<<_____>>,,,,,,....,,<<<<___.>>>>,,))))))),(((,<<<____.>>><<<<.<<______>>>>>>,,,,,,,,,,))),,,,,,........,,,,,,.,<<<<<<<<<<<<<____.__>>>>>>>>>.>>>>:
+#=GC RF                      gucagCaCAAACCGGAACCUCCaucAaa....ugCuCgAua.cGaGGGGuGcugauGuCGGGGGAAA.CCCuCcc.GcaaaucAgCggGaUAaaGcgAAAGaCaAagaC........cGgAaa.caaaCuaaaGCGCCuuua.guGGCGCuuua.GuuuU
+//

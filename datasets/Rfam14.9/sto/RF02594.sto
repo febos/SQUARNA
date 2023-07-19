@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02594
+#=GF ID   NsiR9
+#=GF DE   Nitrogen stress-induced RNA 9
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAalifold
+#=GF GA   90.00
+#=GF TC   90.20
+#=GF NC   39.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0043158; heterocyst differentiation;
+#=GF RN   [1]
+#=GF RM   26870012
+#=GF RT   Identification of Conserved and Potentially Regulatory Small RNAs in
+#=GF RT   Heterocystous Cyanobacteria.
+#=GF RA   Brenes-Alvarez M, Olmedo-Verd E, Vioque A, Muro-Pastor AM
+#=GF RL   Front Microbiol. 2016;7:48.
+#=GF WK   Bacterial_small_RNA
+#=GF SQ   3
+
+
+
+CP000117.1/4487021-4486899 AUUCACGUUUGUGACUGUGAGUGUGGCUAAUCACUAACUAGCCACUGUUGCUGAUUGUUGGGAAGGUGUAGGGAUAACUAUUAAAAGUUUUCCCUGCAUGACGGGCAUCUAUUUUAGAUGCCC
+CP001037.1/6308955-6308834 UACUAUAUUCACGUCUGUGAGUGUGACUAAUACCUAAUUAGUCACUGUUGCUGAUUGUUGGGAAGGUGUAGGGACAACCCUUUAGGGUUU-UCCUGCAUGACGGGCAUCUCUUGUAGAUGCCC
+BA000019.2/4451847-4451969 AUUCACGUUUGUGACUGUGAGUGUGGCUAAUCACUAACUAGCCACUGUUGCUGAUUGUUGGGAAGGUGUAGGGAUAACUAUCAAAAGUUUUCCCUGCAUGACGGGCAUCUAUUUUAGAUGCCC
+#=GC SS_cons               :::::<-<<<-<<<<-<<-<<<<<<<<<<_________>>>>>>>---->>>->>->>>>->>>-><<<<<<<<-<<<<______>>>>->>>>>>>>,,,,<<<<<<<<<___>>>>>>>>>
+#=GC RF                    auuuAcguucgcgaCUguGaGcGuGgCuaAUaaCUAAuuaGcCaCUGUUgCuGacUGucgGgaaGguGcaGGgauaaCcaUuaAagGuuUucCCugCaUGACGGGCauCuaUUuuaGauGCCC
+//

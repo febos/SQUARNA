@@ -1,0 +1,49 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01404
+#=GF ID   PinT
+#=GF PI   STnc440;
+#=GF DE   PinT (STnc440) Hfq binding RNA
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF SE   Predicted; CMfinder; Infernal
+#=GF SS   Predicted; CMfinder
+#=GF GA   60.00
+#=GF TC   72.20
+#=GF NC   33.20
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   18725932
+#=GF RT   Deep sequencing analysis of small noncoding RNA and mRNA targets of the
+#=GF RT   global post-transcriptional regulator, Hfq.
+#=GF RA   Sittka A, Lucchini S, Papenfort K, Sharma CM, Rolle K, Binnewies TT,
+#=GF RA   Hinton JC, Vogel J
+#=GF RL   PLoS Genet. 2008;4:e1000163.
+#=GF RN   [2]
+#=GF RM   17971080
+#=GF RT   A small non-coding RNA of the invasion gene island (SPI-1) represses outer
+#=GF RT   membrane protein synthesis from the Salmonella core genome.
+#=GF RA   Pfeiffer V, Sittka A, Tomer R, Tedin K, Brinkmann V, Vogel J
+#=GF RL   Mol Microbiol. 2007;66:1174-1191.
+#=GF RN   [3]
+#=GF RM   26789254
+#=GF RT   Dual RNA-seq unveils noncoding RNA functions in host-pathogen
+#=GF RT   interactions.
+#=GF RA   Westermann AJ, Forstner KU, Amman F, Barquist L, Chao Y, Schulte LN,
+#=GF RA   Muller L, Reinhardt R, Stadler PF, Vogel J
+#=GF RL   Nature. 2016;529:496-501.
+#=GF WK   PinT_small_RNA
+#=GF SQ   4
+
+
+AE017220.1/4493746-4493821 AGUAACGGAUUACUUUGUGGUGUAGCGUAACGGUAAUUGUCCUCCUCAUAUUUGCGGCAGCGUAGUCUGCCGCUUU
+CP000026.1/4311107-4311182 AGUAACGGAUUGCUUUGUGGUGUAGCGUAACGGUAAUUGUCCUCCUCAUAUUUGCGGCAGCGUAGUCUGCCGCUUU
+CP000857.1/4489121-4489196 AGUAACGGAUUACUUUGUGGUGUAGCGUAACGGUAAUUGUCCUCCUCAUAUUUGCGGCAGCGUAGUCUGCCGCUUU
+CP001138.1/4481325-4481400 AGUAACGGAUUACUUUGUGGUGUAGCGUAACGGUAAUUGUCCUCCUCAUAUUUGCGGCAGCGUAGUCUGCCGCUUU
+#=GC SS_cons               ::::::<<<<<<<<_________________>>>>--->>>>-----------<<<<<<<______>>>>>>>:::
+#=GC RF                    AGUAACGGauuaCuUUGUGGUGUAGCGUAACgGuaAUUguCCUCCUCAUAUUUGCGGCaGCGUAGUCuGCCGCUUU
+//

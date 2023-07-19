@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01120
+#=GF ID   sR33
+#=GF DE   Small nucleolar RNA sR33
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Predicted; WAR; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   37.00
+#=GF TC   37.60
+#=GF NC   35.10
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 24.37 -Z 549862.597050 CM SEQDB
+#=GF DR   URL; http://lowelab.ucsc.edu/snoRNAdb/;
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   10736225
+#=GF RT   Archaeal homologs of eukaryotic methylation guide small nucleolar RNAs:
+#=GF RT   lessons from the Pyrococcus genomes.
+#=GF RA   Gaspin C, Cavaille J, Erauso G, Bachellerie JP
+#=GF RL   J Mol Biol. 2000;297:895-906.
+#=GF WK   Small_nucleolar_RNA
+#=GF SQ   3
+
+
+
+BA000023.2/582159-582106   UCGCAUGAUGUGGAAUCCGGGAACUGA--CUGUGAUGAAAUGCGCGAGCACUGAGU
+BA000001.2/1623026-1622971 UGACGUGAUGAGGAAUCGGGGAGCUGAAGCUAUGAUGAGAUCCGCCAACGCUGAUU
+AE009950.1/1754536-1754482 AUGUAUGAUGAGGAAUCGGGGAGCUGA-GAUGUGAUGAAAUCCAUCAGAGCUGACU
+#=GC SS_cons               :::::::::::::::::::::::::::.::::::::::::::::::::::::::::
+#=GC RF                    uuGcaUGAUGaGGAAUCgGGGAGCUGA.GcUGUGAUGAaAUcCGccAGcGCUGAuU
+//

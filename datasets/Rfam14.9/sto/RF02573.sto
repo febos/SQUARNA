@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02573
+#=GF ID   LLnc147
+#=GF DE   Lactococcus lactis non-coding RNA 147
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   127.00
+#=GF TC   127.60
+#=GF NC   37.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0015976; carbon utilization;
+#=GF RN   [1]
+#=GF RM   26950529
+#=GF RT   Transcriptome landscape of Lactococcus lactis reveals many novel RNAs
+#=GF RT   including a small regulatory RNA involved in carbon uptake and metabolism.
+#=GF RA   van der Meulen SB, de Jong A, Kok J
+#=GF RL   RNA Biol. 2016;13:353-366.
+#=GF CC   Hundreds of novel RNAs were identified by Meulen et al. LLnc147 was shown
+#=GF CC   to be involved in carbon uptake and metabolism. 
+#=GF WK   Lactococcus_lactis
+#=GF SQ   2
+
+
+
+CP002365.1/1778845-1778744 AUCCUUAUAGGAAAGCGUUUACCUAAAAGUCAUGGUUACGUAAAUAAGCUAUAGCGAGUAGCUUAAUUUCUUUCAAAUCCCUCCUAGUCAGGGGGAUUUUUU
+AM406671.1/1942946-1942845 AUCCUUAUAGGAAAACGUUUACCUUUAAGUCAUGGUUACGUUACUAAGCUAUAGCGAGUAGCUUAAUUUCUUUCAGAUCCCUCCUAGUCAGGGGGAUUUUUU
+#=GC SS_cons               :<<<<___>>>>,<<<<<--<<<__________>>>->>>>>,,<<<<<<<<_____>>>>>>>>,,,,,,,,,<<<<<<<-<<<____>>>>>>>>>>:::
+#=GC RF                    AuCCuUAUaGGaAagCGuUUaCCUaaAAGUCAUGGuUaCGcuAauaaGCuacAGCGAguaGCuuaAUUUCUUUCagauCCCUCCuAGUCaGGGGGaucuUUU
+//

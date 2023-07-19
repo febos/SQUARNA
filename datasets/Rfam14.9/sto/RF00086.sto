@@ -1,0 +1,55 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00086
+#=GF ID   SNORD27
+#=GF PI   U27
+#=GF DE   Small nucleolar RNA SNORD27
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Griffiths-Jones SR, Moxon SJ, Daub J
+#=GF SS   Predicted; Moxon SJ, Daub J
+#=GF GA   52.00
+#=GF TC   53.20
+#=GF NC   51.50
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 28.44 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300711;
+#=GF DR   snoopy; Oryctolagus_cuniculus300342;
+#=GF RN   [1]
+#=GF RM   8559254
+#=GF RT   A mammalian gene with introns instead of exons generating stable RNA
+#=GF RT   products.
+#=GF RA   Tycowski KT, Shu MD, Steitz JA
+#=GF RL   Nature 1996;379:464-466.
+#=GF RN   [2]
+#=GF RM   8962077
+#=GF RT   A small nucleolar RNA requirement for site-specific ribose methylation of
+#=GF RT   rRNA in Xenopus.
+#=GF RA   Tycowski KT, Smith CM, Shu MD, Steitz JA
+#=GF RL   Proc Natl Acad Sci U S A 1996;93:14480-14485.
+#=GF CC   U27 is a member of the C/D class of snoRNA which contain the C (UGAUGA)
+#=GF CC   and D (CUGA) box motifs. U27 is encoded within the U22 snoRNA host gene
+#=GF CC   (UHG) in mammals [1] and is thought to act as a 2'-O-ribose methylation
+#=GF CC   guide for ribosomal RNA. This family also contains several related snoRNAs
+#=GF CC   from yeast and plants.
+#=GF WK   Small_nucleolar_RNA_SNORD27
+#=GF SQ   8
+
+
+
+JN899102.1/2-75          ACUCCAUGAUG-AACGGU-AAA-AU-GACAAGCAUAUGCCUGAACUCAAAAAAGUG-A-U--GUCAUCUUAACU-ACUGAGA-A-
+FJ916003.1/1-69          ACUCCGUGAUG-AACAC--AAA-AU-GACAAGCAUAUGGCUGAACUU--AUAAGUG-A-U--GUCAUCUUACUA--CUGAGA---
+U72858.1/1-73            UGUCAAUGAUG-AAUAA--AAU-ACAGACAAGCAUAUGUCUGAAUCU---UAUGUG--UU--GCCAUCUUAAUUUUCUGAGA-AA
+U40580.1/1298-1369       ACUCCAUGAUG-AACAC--AAA-AU-GACAAGCAUAUGGCUGAACUU--UCAAGUG-A-U--GUCAUCUUACUA--CUGAGAAGU
+U72859.1/1-73            UGUCAAUGAUG-AAUAA--AAA-ACAGACAAGCAUAUGUCUGAAUAU---UAUGUG--UU--UCCAUCUUAAUUUUCUGAGA-AA
+AK095849.1/803-874       ACUCCAUGAUG-AACAC--AAA-AU-GACAAGCAUAUGGCUGAACUU--UCAAGUG-A-U--GUCAUCUUACUA--CUGAGAAGU
+U40654.1/1205-1271       --UUAAUGAUGAACAAUGUAAAU---GACAAGCAUAUGGCUGAGUUG--CAAUGAU------GUCAUCUUACUA--CUGAAA---
+CR382139.2/220781-220859 AAUAAAAGAUGAGCUUGAAAAA-AAAGACAAGCAUAUGUCUGAAUCU-UUAAUGAAGA-GAAACUUUUUCGUGU--CUGAUA-UU
+#=GC SS_cons             <<<<_______._____..___.__._____________________.._______._._..____________..____>>.>>
+#=GC RF                  acUcaAUGAUG.AAuaa..AAA.Au.GACAAGCAUAUGuCUGAAuuU..uaAuGug.A.U..guCAUCUUAauu..CUGAgA.gu
+//

@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02704
+#=GF ID   LcrF_thermometer
+#=GF DE   LcrF intergenic thermometer
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; PMID:22359501;
+#=GF GA   169.00
+#=GF TC   169.60
+#=GF NC   43.50
+#=GF TP   Cis-reg; thermoregulator;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 0 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0002168; RNA_thermometer;
+#=GF DR   GO; 0009266; response to temperature stimulus;
+#=GF DR   GO; 0006417; regulation of translation;
+#=GF RN   [1]
+#=GF RM   22359501
+#=GF RT   Concerted actions of a thermo-labile regulator and a unique intergenic RNA
+#=GF RT   thermosensor control Yersinia virulence.
+#=GF RA   Bohme K, Steinmann R, Kortmann J, Seekircher S, Heroven AK, Berger E,
+#=GF RA   Pisano F, Thiermann T, Wolf-Watz H, Narberhaus F, Dersch P
+#=GF RL   PLoS Pathog. 2012;8:e1002518.
+#=GF CC   Intergenic two hairpin RNA thermometer (usually RNAT are in the 5'UTR).
+#=GF CC   Together with the termo-labile YmoA protein it activates synthesis of the
+#=GF CC   most crucial virulence activator LcrF (VirF). The sequence is 100%
+#=GF CC   identical in all human pathogenic Yersinia species suggesting the
+#=GF CC   importance of this structure.
+#=GF WK   Intergenic_lcrF_RNA_thermometer
+#=GF SQ   2
+
+
+
+CP001049.1/68923-69055 GUGAUUUAUUAUAUUGGUUUUGGUUGCAUUAAUCGAUGGUUGUACAUCGCACGCAUAAUAACUCAAUACACCUCAUUAGAUAAAUAUAUACAAGUUUUAGAUUUUUAGGACAGUAUAACAUUUAUGGCAUCAC
+AL117189.1/35989-36121 GUGAUUUAUUAUAUUGGUUUUGGUUGCAUUAAUCGAUGGUUGUACAUCGCACGCAUAAUAACUCAAUACACCUCAUUAGAUAAAUAUAUACAAGUUUUAGAUUUUUAGGACAGUAUAACAUUUAUGGCAUCAC
+#=GC SS_cons           (((((,,,,,,<<<<<<<<-----<<<------<<<<<______>>>>>--->>>---->>>->>>>>,,,,,,,,,,,<<<<<<-<<<<<--<<<<<<<____>>>>>>>->>>>>-->>>>>>,,,)))))
+#=GC RF                GuGauUUAUUAuauuGGuuUUGGUuGCAUUAAUCGauGGUUGUACauCGCACGCaUAAUaaCUCaauaCACCUCAUUAGauaaauAuauaCAAGuccuagAUUUcuaggaCAGuauaACauuuauGGCauCaC
+//

@@ -1,0 +1,37 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00063
+#=GF ID   SscA
+#=GF DE   SscA RNA
+#=GF AU   Bateman A; 0000-0002-6982-4660
+#=GF SE   Bateman A
+#=GF SS   Predicted; PFOLD
+#=GF GA   60.00
+#=GF TC   64.80
+#=GF NC   37.10
+#=GF TP   Gene;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000233; mature_transcript;
+#=GF RN   [1]
+#=GF RM   12032319
+#=GF RT   Noncoding RNA genes identified in AT-rich hyperthermophiles.
+#=GF RA   Klein RJ, Misulovin Z, Eddy SR
+#=GF RL   Proc Natl Acad Sci U S A 2002;99:7542-7547.
+#=GF CC   The SscA ncRNA gene was identified computationally in AT-rich
+#=GF CC   hyperthermophiles using QRNA [1]. SscA stands for Secondary Structure
+#=GF CC   Conserved A. SscA is 97 nucleotides in length and is of unknown function.
+#=GF CC   This RNA is currently restricted to pyrococcal species.
+#=GF WK   SscA_RNA
+#=GF SQ   5
+
+
+AF468964.1/1-97            GAGCUCAAUGAAGCCCCCUCAACUAAAGGCGGGUUUCCCGCCUGAGGGGGCUGAUGUGCGAAAGCUUUAAAAAGUAAGUUCAAAAGUAGGGUUAGGC
+AJ248285.1/36503-36598     CGAGCAAAUGAGGCUUCCUCCUCUGU-GGCGGGUUUCCCGCCGGAGGGAGCCGAUGUCCGAAAAUUUUAAAAGGCUAUCCCAAAAGUAGGGUUAGGC
+X59857.1/513-608           GAGCUCAAUGAAGCCCCCUCAACUAAAGGCGGGUUUCCCGCCUGAGGGGGCU-AUGUGCGAAAGCUUUAAAAAGUAAGUUCAAAAGUAGGGUUAGGC
+BA000001.2/1327888-1327793 AGGGAAAAUGAGGCUUCCUUCAGUUU-GGCGGGUUUCCCGCCGAAGGAAGCCGAGAUCCGAAAGUUUUAAAAGAUCUCCUCAAAAGUAGGGUUAGGC
+AP006878.1/263953-263858   AGAACUCAUGAGGUCCCCCCGAAAAC-GGCGGGUUUCCCGCCCGAGGGGGCCGAGGUUCGAAAGAUUUAAAAAGCCAUCCUAGUCAACGAGACUAGA
+#=GC SS_cons               :::<-------<<<<<<<<<<-----.<<<<<<___>>>>>>>>>>>>>>>>----->:::::::::::::::::::::::::::::::::::::::
+#=GC RF                    agaguaaAUGAgGcccCCucgAauau.GGCGGGUUUCCCGCCcgaGGgggCcGAuGUcCGAAAGuUUUAAAAaGuaAucucAAaaguaGgGuUagGc
+//

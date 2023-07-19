@@ -1,0 +1,47 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00826
+#=GF ID   mir-55
+#=GF DE   microRNA mir-55
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   53.00
+#=GF TC   53.20
+#=GF NC   47.20
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000270;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   11679671
+#=GF RT   An abundant class of tiny RNAs with probable regulatory roles in
+#=GF RT   Caenorhabditis elegans.
+#=GF RA   Lau NC, Lim LP, Weinstein EG, Bartel DP
+#=GF RL   Science. 2001;294:858-862.
+#=GF RN   [2]
+#=GF RM   21307183
+#=GF RT   Improved annotation of C. elegans microRNAs by deep sequencing reveals
+#=GF RT   structures associated with processing by Drosha and Dicer.
+#=GF RA   Warf MB, Johnson WE, Bass BL
+#=GF RL   RNA. 2011;17:563-577.
+#=GF RN   [3]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   3
+
+
+URS000058CC12_6239/15-88  AUGGGACUCGGCAGAAACCUAUCGGUUAUACUUUUUGG--AUAUGCUAUACCCGUAUAAGUUUCUGCUGAGCCCCU
+URS0000D53A82_31234/24-97 AUGGGACUCGGCAGAAGCACUUGGGGUAUACUUCACAG--AGUAACUAUACCCGUAUUUGUUUCUGCUGAGCCCCU
+URS00003C369B_6238/20-95  GGGGGACUCGGCGGAAAAUAUGGUGGUAUACUACACAGUGAAUAGAUAUACCCGUAUAUUUUUCUGCCGAGCCCCU
+#=GC SS_cons              ::<<<-<<<<<<<<<<<<-----<<<<<<<<<<_____..__>>>->>>>>>>------>>>>>>>>>>>>>>>::
+#=GC RF                   auGGGACUCgGCaGAAacuuuuggGgUAUAcuucacaG..AaaagcUAUAcCcGUAUauguUUCuGCcGAGCCCCU
+//

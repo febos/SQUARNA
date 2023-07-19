@@ -1,0 +1,60 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01748
+#=GF ID   nuoG
+#=GF DE   nuoG RNA
+#=GF AU   Weinberg Z; 0000-0002-6681-3624
+#=GF SE   Published; PMID:20230605;
+#=GF SS   Published; PMID:20230605;
+#=GF GA   33.00
+#=GF TC   33.20
+#=GF NC   32.30
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 24.40 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF RN   [1]
+#=GF RM   20230605
+#=GF RT   Comparative genomics reveals 104 candidate structured RNAs from bacteria,
+#=GF RT   archaea and their metagenomes.
+#=GF RA   Weinberg Z, Wang JX, Bogue J, Yang J, Corbino K, Moy RH, Breaker RR
+#=GF RL   Genome Biol. 2010;11:R31.
+#=GF WK   NuoG_RNA_motif
+#=GF SQ   31
+
+
+BX950851.1/3380818-3380775     GAAUUUUUGAUUAGC-GCCUGUG-------------------GUAA-------------------------------------CACGGGCCAUUAUGGAAG
+CP000266.1/2400881-2400839     GAAUU-UCGAUUAAC-GCUCGGU-------------------CCCUG------------------------------------ACCGAGAAAA-CUGGAAG
+CP000822.1/489807-489849       -GUCAUUCGAUUAAC-GCUUAGU-------------------CCCUG------------------------------------ACUAAGCCAA-CUGGAAG
+L25055.1/3109-3151             GAAUU-UCGAUUAACGCUCAGUC-------------------UCU--------------------------------------GACUGAGAAAACUGGAAG
+AL590842.1/2865144-2865102     GAAUUUUUGAUUAAC-GCCUGCC-------------------GUAA-------------------------------------GGUGGGUCAU-UUGGAAG
+CP000653.1/3066128-3066087     GAAUU-UUGAUUAAC-GCUCGGA-------------------UUUA-------------------------------------UUCGAGCCAA-CUGGAAG
+ABXW01000062.1/94927-94967     GUAUUUAUGUUUAAC-GCCUGC--------------------UAAC--------------------------------------GCGGGCCUU-UGGGAAG
+ABJD02000101.1/1598670-1598628 GUAUUUUUGAUUAAC-GCCUGCU-------------------GUUG-------------------------------------AGCGGGCCUU-UGGGAAG
+CP001164.1/3167747-3167705     GAAUU-UCGAUUAACGCUCAGUC-------------------UCU--------------------------------------GACUGAGAAAACUGGAAG
+CP000034.1/2279970-2279928     GAAUU-UCGAUUAAC-UCUCAGU-------------------CUCUG------------------------------------ACUGAGAAAA-CUGGAAG
+U00096.2/2398237-2398195       GAAUU-UCGAUUAACGCUCAGUC-------------------UCU--------------------------------------GACUGAGAAAACUGGAAG
+CP000468.1/2505047-2505005     GAAUU-UCGAUUAACGCUCAGUC-------------------UCU--------------------------------------GACUGAGAAAACUGGAAG
+CP000247.1/2431502-2431460     GAAUU-UCGAUUAACGCUCAGUC-------------------UCU--------------------------------------GACUGAGAAAACUGGAAG
+BX936398.1/3056609-3056567     GAAUUUUUGAUUAAC-GCCUGCC-------------------GUAA-------------------------------------GGUGGGUCAU-UUGGAAG
+AM286415.1/1502345-1502387     GAAUUUUUGAUUAAC-GCUUGCC-------------------UUAU-------------------------------------GGCAAGCCAC-UUGGAAG
+ABVX01000005.1/121832-121789   GAAUUUUUGAUUAGC-GCUCGUG-------------------GUAA-------------------------------------CACGGGCCAUUAUGGAAG
+ABVY01000005.1/55699-55656     GAAUUUUUGAUUAGC-GCUCGUG-------------------GUAA-------------------------------------CACGGGCCAUUAUGGAAG
+CP000308.1/2292180-2292138     GAAUUUUUGAUUAAC-GCCUGCC-------------------GUAA-------------------------------------GGUGGGUCAU-UUGGAAG
+CP000970.1/2487091-2487049     GAAUU-UCGAUUAACGCUCAGUC-------------------UCU--------------------------------------GACUGAGAAAACUGGAAG
+CU928158.2/901378-901420       GAAUU-UCGAUUAACGCUCAGUC-------------------UCU--------------------------------------GACUGAGAAAACUGGAAG
+CP000783.1/903670-903711       GCAUU-UUGAUUAAC-GCCUGGC-------------------UCGC-------------------------------------GCCAGGCCAA-CUGGAAG
+CP000826.1/3658544-3658502     GAAUUUUUGAUUAAC-GCCUGCC-------------------GCAA-------------------------------------GGCAGGCCAC-UUGGAAG
+X68301.1/5226-5268             GAAUU-UCGAUUAACGCUCAGUC-------------------UCU--------------------------------------GACUGAGAAAACUGGAAG
+AP008232.1/2743668-2743627     GCAUUUUUGAUUAAC-GCCCGCC-------------------GUU--------------------------------------GGCGGGCCUC-ACCUGAG
+BX571869.1/128187-128145       GAAUUUUUGAUUAAC-ACUUGCU-------------------GAAA-------------------------------------AGCAGGUCAU-UUGGAAG
+ABXV02000040.1/97420-97380     GUAUUUAUGAUUAAC-GCCUGC--------------------UAAC--------------------------------------GCGGGCCUU-UGGGAAG
+CP001383.1/2447286-2447244     GAAUU-UCGAUUAAC-GCUCGGU-------------------CCCUG------------------------------------ACCGAGAAAA-CUGGAAG
+ABWM02000010.1/129715-129674   GAAUU-UUGAUUAAC-GCUCGAA-------------------GCAA-------------------------------------UUCGAGCCAA-CUGGAAG
+AALF02000033.1/35251-35166     GAUUUUUUGAUUAAC-GCUUGUAAACGAACCGUUUUAAGGUCGUCGUAACA-------------GACAAUAAACGUGUUCAAAUACAAGUCAC-UUGGAAG
+AALD02000035.1/8938-9024       GAAUUUUUGAUUAAC-GCUUGUAAAACGAAC-CGUUU-----CAAGGUCGCCGUAACAGCCAAU-----AAACGUGUUCAA-UUACAAGCCAC-UUGGAAG
+AALC02000034.1/31511-31427     GAAUUUUUGAUUAAC-GCUUGUAAAUGAACCGCCUUAAUGUCGUCGUGCA--------------GACAUUAAAUCGGCUUAUGCACAAGUCAC-UUGGAAG
+#=GC SS_cons                   :::::::::::::::.<<<<<<<..................._____....................................>>>>>>>:::.:::::::
+#=GC RF                        GAAUUUUUGAUUAAC.gCUuGUc...................guagG....................................gACaAGcCAc.UUGGAAG
+//

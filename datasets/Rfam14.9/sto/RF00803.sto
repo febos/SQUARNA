@@ -1,0 +1,106 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00803
+#=GF ID   mir-425
+#=GF DE   microRNA mir-425
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   60.00
+#=GF TC   70.70
+#=GF NC   48.10
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000242;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17965199
+#=GF RT   In vitro and in silico annotation of conserved and nonconserved microRNAs
+#=GF RT   in the genome of the marsupial Monodelphis domestica.
+#=GF RA   Devor EJ, Samollow PB
+#=GF RL   J Hered. 2008;99:66-72.
+#=GF RN   [2]
+#=GF RM   15538371
+#=GF RT   A pancreatic islet-specific microRNA regulates insulin secretion.
+#=GF RA   Poy MN, Eliasson L, Krutzfeldt J, Kuwajima S, Ma X, Macdonald PE, Pfeffer
+#=GF RA   S, Tuschl T, Rajewsky N, Rorsman P, Stoffel M
+#=GF RL   Nature. 2004;432:226-230.
+#=GF RN   [3]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [4]
+#=GF RM   20215419
+#=GF RT   MicroRNA transcriptome in the newborn mouse ovaries determined by massive
+#=GF RT   parallel sequencing.
+#=GF RA   Ahn HW, Morin RD, Zhao H, Harris RA, Coarfa C, Chen ZJ, Milosavljevic A,
+#=GF RA   Marra MA, Rajkovic A
+#=GF RL   Mol Hum Reprod. 2010;16:463-471.
+#=GF RN   [5]
+#=GF RM   20413612
+#=GF RT   Mammalian microRNAs: experimental evaluation of novel and previously
+#=GF RT   annotated genes.
+#=GF RA   Chiang HR, Schoenfeld LW, Ruby JG, Auyeung VC, Spies N, Baek D, Johnston
+#=GF RA   WK, Russ C, Luo S, Babiarz JE, Blelloch R, Schroth GP, Nusbaum C, Bartel
+#=GF RA   DP
+#=GF RL   Genes Dev. 2010;24:992-1009.
+#=GF RN   [6]
+#=GF RM   20360741
+#=GF RT   The genome of a songbird.
+#=GF RA   Warren WC, Clayton DF, Ellegren H, Arnold AP, Hillier LW, Kunstner A,
+#=GF RA   Searle S, White S, Vilella AJ, Fairley S, Heger A, Kong L, Ponting CP,
+#=GF RA   Jarvis ED, Mello CV, Minx P, Lovell P, Velho TA, Ferris M, Balakrishnan
+#=GF RA   CN, Sinha S, Blatti C, London SE, Li Y, Lin YC, George J, Sweedler J,
+#=GF RA   Southey B, Gunaratne P, Watson M, Nam K, Backstrom N, Smeds L, Nabholz B,
+#=GF RA   Itoh Y, Whitney O, Pfenning AR, Howard J, Volker M, Skinner BM, Griffin
+#=GF RA   DK, Ye L, McLaren WM, Flicek P, Quesada V, Velasco G, Lopez-Otin C, Puente
+#=GF RA   XS, Olender T, Lancet D, Smit AF, Hubley R, Konkel MK, Walker JA, Batzer
+#=GF RA   MA, Gu W, Pollock DD, Chen L, Cheng Z, Eichler EE, Stapley J, Slate J,
+#=GF RA   Ekblom R, Birkhead T, Burke T, Burt D, Scharff C, Adam I, Richard H,
+#=GF RA   Sultan M, Soldatov A, Lehrach H, Edwards SV, Yang SP, Li X, Graves T,
+#=GF RA   Fulton L, Nelson J, Chinwalla A, Hou S, Mardis ER, Wilson RK
+#=GF RL   Nature. 2010;464:757-762.
+#=GF RN   [7]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   Mir-425_microRNA_precursor_family
+#=GF SQ   19
+
+
+URS000075BCFB_9544/2-86   AAAGCGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCCCCCGAGAAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCUCUUU
+URS000075DDF1_9598/2-86   AAAGCGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCGAGAAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCUCUUU
+URS000075EE47_9606/2-86   AAAGCGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCGAGAAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCUCUUU
+URS000075EE47_9600/2-86   AAAGCGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCGAGAAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCUCUUU
+URS000075DE4F_9913/2-86   AAAGCGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCAAGAAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCUCUUU
+URS0000759D72_9823/1-80   -AAGUGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCAAGUAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCU----
+URS00007E4A2A_9925/1-85   AAAGUGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCAAGAAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCUCUUU
+URS00006EF746_10090/1-85  AAAGUGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCAAGAAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCUCUUU
+URS00007E49F0_9615/1-63   ------------AAUGACACGAUCACUCCCGUUGAGUGGGCACCCAAGAAGCCAUCGGGAAUGUCGUGUCCGCCC----------
+URS000075EA7F_10029/1-80  ---GUGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCAAGAAGCCAUCGGGAAUGUCGUGUCCGCCCAGUGCUCU--
+URS00007E35AE_246437/1-61 ------------AAUGACACGAUCACUCCCGUUGAGUGGGCACCCAAGAAGCCAUCGGGAAUGUCGUGUCCGC------------
+URS0000759906_10116/1-83  --AGUGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACCCAAGAAGCCAUCGGGAAUAUCGUGUCCGCCCAGUGCUCUUU
+URS00007E4CF3_9796/29-113 AAAGCGCUUUGGAAUGACACGAUCACUCCCGUUGAGUGGGCACACAAGAAGCCAUCGGGAAUAUCGUGUCCGCCCAGUGCUCUUU
+URS0000719F78_13616/1-85  AAAGUGCUUUGGAAUGACACGAUCACUCCCGUUGAGCGGACAGCCAAGAAGCCAUCGGGAAUAUCGUGUCCGUCCAAUGCUCUUU
+URS000075BCE4_9258/8-92   AAAUCGCUUUGGAAUGACACGAUCACUCCCGUUGAGCGGACAGCCAAGAAGCCAUCGGGAAUAUCGUGUCCGUCCAAAGCUCUUU
+URS000075C801_8364/1-77   -----GCCUUGGAAUGACACGAUCACUCCCGUUGAGCCGAAACUCACAGCGCCAUCGGGAAUAUCGUGUCGCUCCAAAGCUC---
+URS00007E48B1_28377/5-88  GAAUGGUUUUGGAAUGACACGAUCACUCCCGCUGAGCGAGCAGAGCCACGGCCA-CGGGGAUGUCGUGUCUGUCCAAAACUAUUU
+URS0000D527B8_8665/8-91   AAAUUGCCAAGGAAUGACACGAUCACUCCCGCUGAGCGAGUGGACACAGAGCCA-CGGGGCUGUCGUGUCUGUCCUGAGCUUUUU
+URS0000759C7F_59729/4-88  AGAUGGCUUUGGAAUGACACGAUCACUCCCGCUGAGCCAGCAGCCAGAGAGCCAUCGGGGAUGUCGUGUCUUUCCAAAGCUCUUU
+#=GC SS_cons              :::::<<-<<<<---<<<<<<<<---<<<<<-<<-<<_____________>>>>->>>>>-->>>>>>>>--->>>>->>:::::
+#=GC RF                   AAAguGCUcuGGAAUGACACGAuCACuCCCGUUGAGcGgGcAccCaagaAgCCAUCGGGaAUgUCGUGUCcguCCaguGCUcUUU
+//

@@ -1,0 +1,88 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00751
+#=GF ID   mir-12
+#=GF DE   microRNA mir-12
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   55.00
+#=GF TC   55.60
+#=GF NC   54.30
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000181;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   20075255
+#=GF RT   Functional and evolutionary insights from the genomes of three parasitoid
+#=GF RT   Nasonia species.
+#=GF RA   Werren JH, Richards S, Desjardins CA, Niehuis O, Gadau J, Colbourne JK,
+#=GF RA   Werren JH, Richards S, Desjardins CA, Niehuis O, Gadau J, Colbourne JK,
+#=GF RA   Beukeboom LW, Desplan C, Elsik CG, Grimmelikhuijzen CJ, Kitts P, Lynch JA,
+#=GF RA   Murphy T, Oliveira DC, Smith CD, van de Zande L, Worley KC, Zdobnov EM,
+#=GF RA   Aerts M, Albert S, Anaya VH, Anzola JM, Barchuk AR, Behura SK, Bera AN,
+#=GF RA   Berenbaum MR, Bertossa RC, Bitondi MM, Bordenstein SR, Bork P,
+#=GF RA   Bornberg-Bauer E, Brunain M, Cazzamali G, Chaboub L, Chacko J, Chavez D,
+#=GF RA   Childers CP, Choi JH, Clark ME, Claudianos C, Clinton RA, Cree AG,
+#=GF RA   Cristino AS, Dang PM, Darby AC, de Graaf DC, Devreese B, Dinh HH, Edwards
+#=GF RA   R, Elango N, Elhaik E, Ermolaeva O, Evans JD, Foret S, Fowler GR, Gerlach
+#=GF RA   D, Gibson JD, Gilbert DG, Graur D, Grunder S, Hagen DE, Han Y, Hauser F,
+#=GF RA   Hultmark D, Hunter HC 4th, Hurst GD, Jhangian SN, Jiang H, Johnson RM,
+#=GF RA   Jones AK, Junier T, Kadowaki T, Kamping A, Kapustin Y, Kechavarzi B, Kim
+#=GF RA   J, Kim J, Kiryutin B, Koevoets T, Kovar CL, Kriventseva EV, Kucharski R,
+#=GF RA   Lee H, Lee SL, Lees K, Lewis LR, Loehlin DW, Logsdon JM Jr, Lopez JA,
+#=GF RA   Lozado RJ, Maglott D, Maleszka R, Mayampurath A, Mazur DJ, McClure MA,
+#=GF RA   Moore AD, Morgan MB, Muller J, Munoz-Torres MC, Muzny DM, Nazareth LV,
+#=GF RA   Neupert S, Nguyen NB, Nunes FM, Oakeshott JG, Okwuonu GO, Pannebakker BA,
+#=GF RA   Pejaver VR, Peng Z, Pratt SC, Predel R, Pu LL, Ranson H, Raychoudhury R,
+#=GF RA   Rechtsteiner A, Reese JT, Reid JG, Riddle M, Robertson HM, Romero-Severson
+#=GF RA   J, Rosenberg M, Sackton TB, Sattelle DB, Schluns H, Schmitt T, Schneider
+#=GF RA   M, Schuler A, Schurko AM, Shuker DM, Simoes ZL, Sinha S, Smith Z, Solovyev
+#=GF RA   V, Souvorov A, Springauf A, Stafflinger E, Stage DE, Stanke M, Tanaka Y,
+#=GF RA   Telschow A, Trent C, Vattathil S, Verhulst EC, Viljakainen L, Wanner KW,
+#=GF RA   Waterhouse RM, Whitfield JB, Wilkes TE, Williamson M, Willis JH, Wolschin
+#=GF RA   F, Wyder S, Yamada T, Yi SV, Zecher CN, Zhang L, Gibbs RA
+#=GF RL   Science. 2010;327:343-348.
+#=GF RN   [2]
+#=GF RM   20817720
+#=GF RT   Functional shifts in insect microRNA evolution.
+#=GF RA   Marco A, Hui JH, Ronshaugen M, Griffiths-Jones S
+#=GF RL   Genome Biol Evol. 2010;2:686-696.
+#=GF RN   [3]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   MicroRNA
+#=GF SQ   21
+
+
+URS000075D076_7070/10-79   AGGGUU-UGAGUAUUACAUCAGGUACUGGUUCGGU---------------------------------------------------UUUGAAAAACCGGUCCCUG-AGUAACACUUA-CAUUCU
+URS0000D4F1E5_6945/15-84   UGGGAC-UGAGUAUUACAUCAGGUACUGGUCUGGU---------------------------------------------------UGCUGGGUACCAGUAUCUG-UGUGAUAUUCA-CCCCUC
+URS0000603AA2_7165/1-117   CCGGGG-UGAGUAUUACAUCAGGUACUGGUGUGUAAUUUAAACGACCAUCGGACAUGGGGGCUGCCCAACUCCUCUUCUGUCCCCGGUCAAGCUAUCAGUACUUG-UGUUAUACUCU-CC----
+URS0000D4F04E_7159/2-102   UCGGAC-UGAGUAUUACAUCAGGUACUGGUGUCGA------------------UAUUCGAAUCACCAACGAAUCGGGUUCC-UUUGAUUAACUUACCAGUACUUA-UGUUAUGCUCU-CUCCG-
+URS000075DAE6_7425/7-78    AGGGUG-UGAGUAUUACAUCAGGUACUGGUGUC-------------------------------------------------UUUUUUUCAGCGACCAGUACUUG-UGUUAUACUUG-CGUUCG
+URS0000D530BF_7427/1-64    -GGGUG-UGAGUAUUACAUCAGGUACUGGUGUC-------------------------------------------------UUUUUUUCAGCGACCAGUACUUG-UGUUAUACUU--------
+URS000075BA94_7460/7-77    UGGGUG-UGAGUAUUACAUCAGGUACUGGUGUG-------------------------------------------------AUAUUCAGA-CAACCAGUACUUG-UGUUAUACUUA-CGCUCA
+URS0000399293_7237/1-74    UACGGC-UGAGUAUUACAUCAGGUACUGGUGUGCU-----------------------------------------------UUAAAUCCAACAACCAGUACUUA-UGUUAUACUAC-GCCGUG
+URS0000399293_7234/1-74    UACGGC-UGAGUAUUACAUCAGGUACUGGUGUGCU-----------------------------------------------UUAAAUCCAACAACCAGUACUUA-UGUUAUACUAC-GCCGUG
+URS0000172932_7238/1-74    UACGGU-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------UGAAAUCCAACAACCAGUACUUG-UGUCAUACUAC-GCCGUG
+URS0000172932_7240/1-74    UACGGU-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------UGAAAUCCAACAACCAGUACUUG-UGUCAUACUAC-GCCGUG
+URS0000220FA8_7227/1-74    UACGGU-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------UUAAAUCCAACAACCAGUACUUA-UGUCAUACUAC-GCCGUG
+URS00005B1EA9_7230/1-74    UACGGU-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------AAUUAACUAACAACCAGUACUUA-UGUCAUACUAC-GCCGUG
+URS00002CF6AB_7244/1-74    UACGGU-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------AUUUAACUAACAACCAGUACUUA-UGUCAUACUAC-GCCGUG
+URS000052E6DD_7222/1-74    UACGGU-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------AUUUAACCAACAACCAGUACUUA-UGUCAUACUAC-GCCGUG
+URS0000472AA1_7220/1-74    UACGGU-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------UUAAAACCAACAACCAGUACUUA-UGUCAUACUAC-GCCGUG
+URS00002620B6_7217/1-74    UACGGC-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------UUUAAUCCAACAACCAGUACUUA-UGUCAUACUAC-GCCGUG
+URS000043E635_7260/1-74    UACGGU-UGAGUAUUACAUCAGGUACUGGUGUGCC-----------------------------------------------UUUAAUCCAACAACCAGUACUUA-UGUCAUACUAC-GCCGUG
+URS0000D4F3A4_32264/10-80  UGCCUG-UGAGUAUUACAUCAGGUACUGGUUGA-------------------------------------------------UUAGAUUUAAU--CCAGUACUUAAUGUGAGACUCA-UCGACA
+URS00007B3177_283909/14-85 CAGAGCCUGAGUAUUACAUCAGGUACUGA--GUAC--------------------------------------------------AAGCACGAAAUCAGGGCCUGCUGAAAUACUCGCUCUCUG
+URS0000D52E5B_6669/14-85   CCGUCCGUGAGUAUUACAUCAGGUACUGGUUGUAU--------------------------------------------------GUGCAUGAUACCAGUACC-AUUGUAACACUCU-CAACGG
+#=GC SS_cons               <<<<<<.--<<<<--<<<<--<<<<<<<<<_____...............................................____________>>>>>>>>>->.>>>-->>>>--.>>>>>>
+#=GC RF                    cggggg.UGAGUaUUACAuCAgGUACUGGUGUgua...............................................uuugaucaAacuACCAGUACuUa.UGUuAuACUcu.cccccg
+//

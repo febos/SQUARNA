@@ -1,0 +1,54 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01997
+#=GF ID   mir-969
+#=GF DE   microRNA mir-969
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   61.00
+#=GF TC   61.60
+#=GF NC   53.00
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   MIPF; MIPF0000879;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17989255
+#=GF RT   Systematic discovery and characterization of fly microRNAs using 12
+#=GF RT   Drosophila genomes
+#=GF RA   Stark A, Kheradpour P, Parts L, Brennecke J, Hodges E, Hannon GJ, Kellis M
+#=GF RL   Genome Res. 2007;17:1865-1879.
+#=GF RN   [2]
+#=GF RM   20037610
+#=GF RT   Evolutionary flux of canonical microRNAs and mirtrons in Drosophila
+#=GF RA   Berezikov E, Liu N, Flynt AS, Hodges E, Rooks M, Hannon GJ, Lai EC
+#=GF RL   Nat Genet. 2010;42:6-9.
+#=GF RN   [3]
+#=GF RM   17989254
+#=GF RT   Evolution, biogenesis, expression, and target predictions of a
+#=GF RT   substantially expanded set of Drosophila microRNAs
+#=GF RA   Ruby JG, Stark A, Johnston WK, Kellis M, Bartel DP, Lai EC
+#=GF RL   Genome Res. 2007;17:1850-1864.
+#=GF RN   [4]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+URS000022B43C_7227/6-91   CUGUCCUACGUCCGAGUUCCACUAAGCAAGUUUUGAGAUCGUUUUAAAAACAAAAACUUGACACGUUGAGCUCGUUCGUGGGAUGG
+URS0000D4FCB1_7240/15-100 CUGUCCUACGUCCGAGUUCCACUAAGCAAGUUUUGAGAUCGUUUUAAAAACAAAAACUUGACACGUUGAGCUCGUUCGUGGGAUGG
+URS0000D52B7F_7244/15-100 CUGCCCUACGCACGAGUUCCACUAAUCAAGUUUUGAGCGGAUUCGAAAGUCGAAAACUUGACACGUUGAGCUCGUCCGUGGGGCGG
+URS000053539D_7237/7-91   CUGUUCUACGUGCGAGUUCCACCAUGCAAGUUUUGAGCGUAUAUGAAU-CCAAAAACUUGACACGUUGAGCUCGUGCGUGGUGCAG
+#=GC SS_cons              <<<<<<<<<<-<<<<<<<<-<<----<<<<<<<<__________________>>>>>>>>---->>->>>>>>>>->>>>>>>>>>
+#=GC RF                   CcgccCuaCGuaCGaGuuCCaCuAagCaaGuuuuGAGauuaUuuuAAaaaCaaaaaCuuGACACGuUGagCuCGuuCGugGggcgG
+//

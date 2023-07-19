@@ -1,0 +1,43 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01393
+#=GF ID   isrJ
+#=GF DE   isrJ Hfq binding RNA
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF SE   Predicted; ClustalW; Infernal
+#=GF SS   Predicted; RNAalifold
+#=GF GA   37.00
+#=GF TC   37.40
+#=GF NC   36.30
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 26 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   18725932
+#=GF RT   Deep sequencing analysis of small noncoding RNA and mRNA targets of the
+#=GF RT   global post-transcriptional regulator, Hfq.
+#=GF RA   Sittka A, Lucchini S, Papenfort K, Sharma CM, Rolle K, Binnewies TT,
+#=GF RA   Hinton JC, Vogel J
+#=GF RL   PLoS Genet. 2008;4:e1000163.
+#=GF RN   [2]
+#=GF RM   18267966
+#=GF RT   Small RNAs encoded within genetic islands of Salmonella typhimurium show
+#=GF RT   host-induced expression and role in virulence.
+#=GF RA   Padalon-Brauch G, Hershberg R, Elgrably-Weiss M, Baruch K, Rosenshine I,
+#=GF RA   Margalit H, Altuvia S
+#=GF RL   Nucleic Acids Res. 2008;36:1913-1927.
+#=GF WK   Hfq_binding_sRNA
+#=GF SQ   5
+
+
+AE017220.1/1099138-1099216   UGUAAAUCUGAUAUCGUCGCCAUAGCUUCAAUCGUCGACCAAACAAAUUCAAGCCCUGCGGAUAACACCGCGGGGCUUU
+ABEJ01000005.1/3900-3826     AGUAAAUCUGAUAUCGUCGCCAUAGCUUCAAUCGUCGACCAAACAAAUUCAAGCCUCGCCAUCG----UGCGGGGCUUU
+ABAN01000002.1/901-979       UGUAAAUCUGAUAUCGUCGUCAUAGUUUCAAUCGUCGACCAAGCAAAUUCAAGCCCUGCGGAUAACACCGCGGGGCUUU
+AAYU01000001.1/398535-398601 ACAAUUACCGCCAACGGUAACAAACUGA-----GUUAUCCAA---AAUCUGAGCCUCGCCAUCG----UGCGGGGUUUU
+AE006468.1/2762031-2761957   UGUAAAUCUGAUAUCGUCGCCAUAGCUUCAAUCGUCGACCAAACAAAUUCAAGCCUCGCCAUCG----UGCGGGGUUUU
+#=GC SS_cons                 :::::::::::::::<<<<-<____________>->>>>-----------<<<<<<<<<<____....>>>>>>>>>>:
+#=GC RF                      ugUAAAUCUGAUAUCGucGcCAUAguuUCAAUCGUCgaCCAAACAAAUUcaAGCCccGCgaucg....cGCggGGCUuU
+//

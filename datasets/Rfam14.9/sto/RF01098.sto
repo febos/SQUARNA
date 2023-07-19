@@ -1,0 +1,51 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01098
+#=GF ID   RF_site9
+#=GF DE   Gag/pro ribosomal frameshift site
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   70.00
+#=GF TC   70.40
+#=GF NC   63.80
+#=GF TP   Cis-reg; frameshift_element;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 27 -Z 549862.597050 CM SEQDB
+#=GF DR   PKBASE; PKB00080;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0075523; viral translational frameshifting;
+#=GF RN   [1]
+#=GF RM   2402881
+#=GF RT   RNA pseudoknots: translational frameshifting and readthrough on viral
+#=GF RT   RNAs.
+#=GF RA   ten Dam EB, Pleij CW, Bosch L
+#=GF RL   Virus Genes. 1990;4:121-136.
+#=GF RN   [2]
+#=GF RM   1309954
+#=GF RT   An RNA pseudoknot and an optimal heptameric shift site are required for
+#=GF RT   highly efficient ribosomal frameshifting on a retroviral messenger RNA.
+#=GF RA   Chamorro M, Parkin N, Varmus HE
+#=GF RL   Proc Natl Acad Sci U S A. 1992;89:713-717.
+#=GF RN   [3]
+#=GF RM   7723043
+#=GF RT   The structure of an RNA pseudoknot that causes efficient frameshifting in
+#=GF RT   mouse mammary tumor virus.
+#=GF RA   Shen LX, Tinoco I Jr
+#=GF RL   J Mol Biol. 1995;247:963-978.
+#=GF RN   [4]
+#=GF RM   8759314
+#=GF RT   A characteristic bent conformation of RNA pseudoknots promotes -1
+#=GF RT   frameshifting during translation of retroviral RNA.
+#=GF RA   Chen X, Kang H, Shen LX, Chamorro M, Varmus HE, Tinoco I Jr
+#=GF RL   J Mol Biol. 1996;260:479-483.
+#=GF WK   Ribosomal_frameshift
+#=GF SQ   2
+
+
+M15122.1/3396-3444 AAAAAACUUGUAAAGGGGCAGUCCCCUAGCC-CCGCUCAAAAGGGGGAUG
+DQ917496.1/479-528 AAAAAACUGGUAAAGGGGCAGUCCCCUAGCCGCCACUCAAAAGGGGGGAG
+#=GC SS_cons       ::::::::::::::<<<<<_AAAAAAA_>>>->>::::::::aaaaaaa:
+#=GC RF            AAAAAACUuGUAAAGGGGCAGUCCCCUAGCCGCCaCUCAAAAGGGGGauG
+//

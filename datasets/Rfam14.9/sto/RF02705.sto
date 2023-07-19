@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02705
+#=GF ID   B_rapa_snoR775
+#=GF DE   Brassica rapa small nucleolar RNA 775
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; 26607788;
+#=GF GA   64.00
+#=GF TC   64.10
+#=GF NC   55.80
+#=GF TP   Gene; snRNA; snoRNA; HACA-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000594; H_ACA_box_snoRNA;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF RN   [1]
+#=GF RM   26607788
+#=GF RT   Promoter-based identification of novel non-coding RNAs reveals the
+#=GF RT   presence of dicistronic snoRNA-miRNA genes in Arabidopsis thaliana.
+#=GF RA   Qu G, Kruszka K, Plewka P, Yang SY, Chiou TJ, Jarmolowski A,
+#=GF RA   Szweykowska-Kulinska Z, Echeverria M, Karlowski WM
+#=GF RL   BMC Genomics. 2015;16:1009.
+#=GF CC   Name based on close proximity to miR775. Precursors of both are encoded by
+#=GF CC   a single gene sno-miR775. 
+#=GF WK   Small_nucleolar_RNA_775
+#=GF SQ   2
+
+
+
+CP002684.1/29422149-29422275 UCGUUUAAUCAUUGAUGAUAGACUAAGAAAAUUAGGGUUUUUUAUUUUUGGUUUUUGAUAAAGAGAAAGAUGCCUCUUCUUUCAGCAGCAAGAUUAUUCUUGUUAGCUUUGUUCUGGAGGCACAGAU
+AFNB01005743.1/2627-2753     UCGUUUAAUCAUUGAUGAUAGAUUAAGAAAUUAGGGUUUUUUUAUUUUUGGUUUUUGAUAAAGAGAAAGAUGCCUCUUCUUUCAGCAGCAAGAUUAUUCUUGUUAGCUUUGUUCUGGAGGCACAGAU
+#=GC SS_cons                 :::::::<<<<--<<<<<--<<<_____________>>>-->>>>>-->>>>------------------<<<<<<<------<<<<<<<<<<____>>>>>>>->>>------->>>>>>>:::::
+#=GC RF                      UCGUUUAauCaUUgaugaUAgacUAAGAAAaUaaGGguuUUuuauuUUuGguUUUUGAUAAAGAGAAAGAuGCCuCuUCUUUCaGCagCaaGaUUAUuCuuGuuAGCuUUGUUCUgGaGGCaCAGAU
+//

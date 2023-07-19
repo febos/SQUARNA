@@ -1,0 +1,67 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00921
+#=GF ID   mir-665
+#=GF DE   microRNA mir-665
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   52.00
+#=GF TC   52.20
+#=GF NC   45.40
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000404;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   16582102
+#=GF RT   The expression profile of microRNAs in mouse embryos.
+#=GF RA   Mineno J, Okamoto S, Ando T, Sato M, Chono H, Izu H, Takayama M, Asada K,
+#=GF RA   Mirochnitchenko O, Inouye M, Kato I
+#=GF RL   Nucleic Acids Res. 2006;34:1765-1771.
+#=GF RN   [2]
+#=GF RM   20215419
+#=GF RT   MicroRNA transcriptome in the newborn mouse ovaries determined by massive
+#=GF RT   parallel sequencing.
+#=GF RA   Ahn HW, Morin RD, Zhao H, Harris RA, Coarfa C, Chen ZJ, Milosavljevic A,
+#=GF RA   Marra MA, Rajkovic A
+#=GF RL   Mol Hum Reprod. 2010;16:463-471.
+#=GF RN   [3]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [4]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   9
+
+
+URS000069384A_10090/10-84 UCUCCUUGAGGGGCCUCUGCCUCUAUCCAGGAUUAUGUUUUUAUGACCAGGAGGCUGAGGUCCCUUACAGGCGGC
+URS00006424F3_10116/10-84 UCUCCUUGAGGGGCCUCUGCCUCUAUCCAGGAUUAUCUUUUUAUGACCAGGAGGCUGAGGUCCCUUACAGGCGGC
+URS000075CD82_9606/1-72   UCUCCUCGAGGGGUCUCUGCCUCUACCCAGGACU---CUUUCAUGACCAGGAGGCUGAGGCCCCUCACAGGCGGC
+URS000075CD82_9544/1-72   UCUCCUCGAGGGGUCUCUGCCUCUACCCAGGACU---CUUUCAUGACCAGGAGGCUGAGGCCCCUCACAGGCGGC
+URS000075CA63_9940/12-83  UCUCCUUGAGGGGUCUUGGCCUCUGCCCAGGACU---CUUUCAUGACCAGUAGGCCGAGGCCCCUCACAGGCGGC
+URS000017C018_9925/13-84  UCUCCUUGAGGGGUCUUGGCCUCUGCCCAGGACU---CUUUCAUGACCAGUAGGCCGAGGCCCCUCACAGGCGGC
+URS000075BD8F_9913/1-72   UCUCCUUGAGGGGUCUUGGCCUCUGCCCAGGACU---CUUUCAUGACCAGUAGGCCGAGGCCCCUCACAGGCGGC
+URS000075DE9D_9598/1-71   -CUCCUGGAGGGGUCUCCGCCUCUACCCAGGACU---CUUUCAUGACCAGGAGGCUGAGGCCCCUCACAGGCGGC
+URS00007E4B47_9615/1-66   -----UCCCGCGGCCUCAGCCUCCACCCGGGGCU---CUGUCCGGACCAGGAGGCUAAGGCCCCUCAC-GGCGGC
+#=GC SS_cons              <<-<<<-<<<<<<<<<<-<<<<<<---<<-<<__...___>>->>--->>->>>>->>>>>>>>>>-->>>->>:
+#=GC RF                   uCUCCUugaGGGGcCUcuGCCUCuAcCCaGGacU...cUUuCAuGACCaGgAGGCugAGgCCCCucACAGGCGgC
+//

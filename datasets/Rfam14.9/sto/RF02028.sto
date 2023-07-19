@@ -1,0 +1,50 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02028
+#=GF ID   mir-1827
+#=GF DE   microRNA mir-1827
+#=GF AU   Boursnell C; 0000-0002-3494-4451
+#=GF SE   Predicted; ClustalW2
+#=GF SS   Predicted; RNAalifold
+#=GF GA   60.00
+#=GF TC   68.20
+#=GF NC   52.30
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   MIPF; MIPF0000646;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   18760970
+#=GF RT   Computational identification of novel microRNA homologs in the chimpanzee
+#=GF RT   genome
+#=GF RA   Baev V, Daskalova E, Minkov I
+#=GF RL   Comput Biol Chem. 2009;33:62-70.
+#=GF RN   [2]
+#=GF RM   18392026
+#=GF RT   Discovering microRNAs from deep sequencing data using miRDeep
+#=GF RA   Friedlander MR, Chen W, Adamidi C, Maaskola J, Einspanier R, Knespel S,
+#=GF RA   Rajewsky N
+#=GF RL   Nat Biotechnol. 2008;26:407-415.
+#=GF RN   [3]
+#=GF RM   20214803
+#=GF RT   Genome-wide comparative analysis of microRNAs in three non-human primates
+#=GF RA   Brameier M
+#=GF RL   BMC Res Notes. 2010;3:64.
+#=GF WK   MicroRNA
+#=GF SQ   6
+
+
+AADA01308090.1/9228-9163   UCAGCAGCACAGCCUUCGGCCUAAAGCAAUGAGAAGCCUCUGAAAGGC-UGAGGCAGUAGAUUGAAU
+AADA01153194.1/18299-18363 -CAGCAGCACAGCCUUCAGGCUAAGGCAAUGAGAAGCCUCUGAAAGGC-UGAGGCAGUCGAUUGAAU
+AC010203.14/28663-28598    UCAGCAGCACAGCCUUCAGCCUAAAGCAAUGAGAAGCCUCUGAAAGGC-UGAGGCAGUAGAUUGAAU
+AAWR02000886.1/57387-57453 UUAGCGGCACAGCCUUCAGCCUAAAACAAUGAGAAGCCUCUGAAAGGCUUGAGGUAGUGGAAUGAAU
+ABRQ01651150.1/1997-2063   UAAGGAGCACAGCCUUCUGUCUAAGACAACAAGAAGCAUCUGAAAGGCUUGAGGUUGUGGAAUGAAC
+AAGU03052084.1/61465-61399 UAAGGAGCACAGGCUUCUGUCUAAGGCAACAAGAAGUCUCUGAAAGGCUUGAGGUAGUGGACUGAAU
+#=GC SS_cons               ::::<<<<<<-<<<<-<<<<<<----<<--<<<____>>>>>-->>>>->>>>>>->>->->>>:::
+#=GC RF                    UaAGcagCACAgCCUUCaGcCUAAagCAAuGAGAAGCCUCUGAAAGgCUuGAGGcAGUgGAcugAAU
+//

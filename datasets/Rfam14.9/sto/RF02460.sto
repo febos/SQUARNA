@@ -1,0 +1,31 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02460
+#=GF ID   Virus_CITE_5
+#=GF DE   Satellite tobacco necrosis virus cap-independent translation element
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Eberhardt R
+#=GF SS   Predicted; PMID:18031280
+#=GF GA   90.00
+#=GF TC   108.30
+#=GF NC   37.60
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF RN   [1]
+#=GF RM   18031280
+#=GF RT   The amazing diversity of cap-independent translation elements in the
+#=GF RT   3'-untranslated regions of plant viral RNAs.
+#=GF RA   Miller WA, Wang Z, Treder K
+#=GF RL   Biochem Soc Trans. 2007;35:1629-1633.
+#=GF WK   Cap-independent_translation_element
+#=GF SQ   2
+
+
+M64479.1/655-746 AGGACGCUGAAAGAUGCGUAGCUACCCUCC-UGGUGCACUUCCUGGUGCAAAGCAGA-ACCAAAGGGUACGGUGGUACGGCGGACAGUAGUCCU
+L06057.1/646-739 UGGGCGCUGAAAGAUGCGUAGCUACCCUUCUGGAGCCACUUCCUGGUGGUAAGCAGAAAUCCAAGGGUACGGUGGUACGGUGGAAAGCAGUCCC
+#=GC SS_cons     <<<<<<<<<-----<<<<<<<<<<<<<<---<<<<<<<<<____>>>>>--------->>>>->>>>>>-->>-->>>>->>-->>>>->>>>>
+#=GC RF          gGGgCgCugAAAGAcgCGuagCuaCCCuuCugGgugCaCcUCCUgGuGcaAAGCAGAAacCcAaGGGuaCGGcGGuaCGGcgGAcaGcAGcCCc
+//

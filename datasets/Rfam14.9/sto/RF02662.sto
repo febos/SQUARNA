@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02662
+#=GF ID   BLi_r0872
+#=GF DE   Bacillus asRNA 0872
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   61.00
+#=GF TC   61.10
+#=GF NC   53.00
+#=GF TP   Gene; antisense;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000077; antisense;
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   24079885
+#=GF RT   RNA-Seq of Bacillus licheniformis: active regulatory RNA features
+#=GF RT   expressed within a productive fermentation.
+#=GF RA   Wiegand S, Dietrich S, Hertel R, Bongaerts J, Evers S, Volland S, Daniel
+#=GF RA   R, Liesegang H
+#=GF RL   BMC Genomics. 2013;14:667.
+#=GF CC   Antisense RNA against 3' end of Subtilisin Carlsberg encoding mRNA,
+#=GF CC   discovered in an RNA-seq based study. It may have a putative impact on
+#=GF CC   protease production and serve as a target for strain improvement.
+#=GF WK   Bacillus_licheniformis
+#=GF SQ   2
+
+
+
+AE017333.1/1108968-1109111 AUUGAGCGGCAGCUUCGACAUUGAUCAGACCUUUUCCAUAGUAGAAGGAGCUUCCCAAAUAAGUCGCCGUACUGGAGAGACGGUUGCGGACUUGUGAAGCUGAAAGGUUCGGAUGUUUUGACAAGAUCAAAGCUGCUGCUCCCG
+X91262.1/1472-1329         AUUGAGCGGCAGCUUCGACAUUGAUCAGACCUUUCCCAUAGUAGAAGGAGCUUCCCAAAUAAGUCGCCGUGCUGGAGAGACGGUUGCGGACUUGUGAAGCUGAAAGGUUCGGAUGUUUUGACAAGAUCAAAGCUGCUGCUCCCG
+#=GC SS_cons               :::<<<<<<<<<<<<-<<--<<<-<<<<<<<<<<<-------------<<<<<<----<<<<<<<<<<<<-<<____>>>>>>>---->>>>>>>>>>>>>>>>>>>>>--------->>>>>>-->>->>>>>>>>>>>>:::
+#=GC RF                    AUUGaGCgGCaGCuucGacAuuGAuCagaCCuuucccAUAGUAGAAGGaGCuuCccAAacaaGuCgCCGuaCuGGAGaGaCGGcUGcGGaCuuguGaaGCugaaaGGuccGGAUGUUUuGaCaaGAuCAaaGCuGCcGCuCccG
+//

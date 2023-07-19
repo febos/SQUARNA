@@ -1,0 +1,58 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00359
+#=GF ID   snoZ102_R77
+#=GF DE   Small nucleolar RNA Z102/R77
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Moxon SJ, INFERNAL
+#=GF SS   Predicted; PFOLD; Moxon SJ
+#=GF GA   40.00
+#=GF TC   41.30
+#=GF NC   39.60
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00060
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   12736310
+#=GF RT   The high diversity of snoRNAs in plants: identification and comparative
+#=GF RT   study of 120 snoRNA genes from Oryza sativa.
+#=GF RA   Chen CL, Liang D, Zhou H, Zhuo M, Chen YQ, Qu LH
+#=GF RL   Nucleic Acids Res 2003;31:2601-2613.
+#=GF RN   [2]
+#=GF RM   12007400
+#=GF RT   Small nucleolar RNAs: an abundant group of noncoding RNAs with diverse
+#=GF RT   cellular functions.
+#=GF RA   Kiss T
+#=GF RL   Cell 2002;109:145-148.
+#=GF RN   [3]
+#=GF RM   11469857
+#=GF RT   Identification of 66 box C/D snoRNAs in Arabidopsis thaliana: extensive
+#=GF RT   gene duplications generated multiple isoforms predicting new ribosomal RNA
+#=GF RT   2'-O-methylation sites.
+#=GF RA   Barneche F, Gaspin C, Guyot R, Echeverria M
+#=GF RL   J Mol Biol 2001;311:57-73.
+#=GF CC   Z102 and R77 and are members of the C/D class of snoRNA which contain the
+#=GF CC   C (UGAUGA) and D (CUGA) box motifs. Most of the members of the box C/D
+#=GF CC   family function in directing site-specific 2'-O-methylation of substrate
+#=GF CC   RNAs [1,2,3].
+#=GF WK   R77
+#=GF SQ   9
+
+
+AF318005.1/1-85            AGA-GAUAUGAUGAUG-GAAUUAGAUUUCCCUAUUGGUUUGA--UCGCCGUUAUGAUGGCAUCUUA--CGUAUUAGCUCUAUCUGAUC-UCU
+AJ307915.1/1-86            -GAUGAUAUGAUGAUC-AAAUUUGAU-UCCCUAUUGGUUUGAU-UGGCCGCCAUGAUGGCCUCAAAU-UGUAUUAGCUCUAUCUGAUCAUC-
+AF318006.1/6-89            GAAUGAAGUGAUGAUUGAACUUUGUU-UCCCUAUUGGUUUGAU--CGCCGAUAUGAUGGCAUAC-----GUAUUAGCUCUAUCUGAUCAUUC
+AJ489946.1/1-87            GGAUGAUAUGAUGAUC-AAAUU-GUU-UCCCUAUUGGUUUGAU-UGGCCGCUAUGAUGGCCUCAAAU-UGUAUUAGCUCUAUCUGAUCAUCU
+AM440351.2/20146-20060     GAAUGAUAUGAUGAAU-GAAUUUGUU-UCCCUAUUGGUUUGAU--CGCCGGGAUGAUGGCGACAAAU-AGUAUUAGCUCUAUCUGAUCAUUC
+AASG02011106.1/5923-6010   GAAUGAUAUGAUGAUU-UAUUUUGUU-UUCCUAUUGGUUUGAU--UGCCGUGAUGAUGGCAUCAAUUGUGUAUUAGCUCUAUCUGAUCAUUC
+AARH01002859.1/41059-41142 GAAUGAAAUGAUGAUU-A---UUGUU-UCCCUAUUGGUUUGAUCUUGCCGCAAUGAUGGCAUCAUU---GUAUUAGCUCUAUCUGAUCAUUC
+AAAA02000994.1/12691-12604 UGAUGAUAUGAUGAUC-AAAUUUGAU-UCCCUAUUGGUUUGAU-UGGCCGCCAUGAUGGCCUCAAAU-UGUAUUAGCUCUAUCUGAUCAUCU
+AACV01014226.1/37896-37982 GGAUGAUAUGAUGAUC-AAAUU-GUU-UCCCUAUUGGUUUGAU-UGGCCGCUAUGAUGGCCUCAAAU-UGUAUUAGCUCUAUCUGAUCAUCU
+#=GC SS_cons               :<<<<-----------.---------.-------------<--.-<<<<________>>>>->----.------------------->>>>:
+#=GC RF                    ggAuGAuAUGAUGAUu.aAaUUUGuU.UCCCUAUUGGUUUGAU.UcGCCGuuAUGAUGGCgUCaaaU.uGUAUUAGCUCUAUCUGAUCaUcu
+//

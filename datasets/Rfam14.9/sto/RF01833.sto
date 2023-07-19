@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01833
+#=GF ID   astro_FSE
+#=GF DE   ribosomal frameshift site
+#=GF AU   Boursnell C; 0000-0002-3494-4451
+#=GF SE   Published; PMID:8248142
+#=GF SS   Published; PMID:8248142
+#=GF GA   70.00
+#=GF TC   76.30
+#=GF NC   44.60
+#=GF TP   Cis-reg; frameshift_element;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001427; cis_regulatory_frameshift_element;
+#=GF DR   URL; http://recode.ucc.ie/recode/r200202;
+#=GF DR   GO; 0075523; viral translational frameshifting;
+#=GF RN   [1]
+#=GF RM   8248142
+#=GF RT   RNA sequence of astrovirus: distinctive genomic organization and a
+#=GF RT   putative retrovirus-like ribosomal frameshifting signal that directs the
+#=GF RT   viral replicase synthesis.
+#=GF RA   Jiang B, Monroe SS, Koonin EV, Stine SE, Glass RI
+#=GF RL   Proc Natl Acad Sci U S A. 1993;90:10539-10543.
+#=GF WK   Astrovirus
+#=GF SQ   4
+
+
+FJ755404.1/2807-2861 GGGCCCCAGAAGACCAAGGGGCCCAAACCUACCACUCAUUAGAUGCAUGGAAAUC
+L23513.1/2807-2861   GGGCCCCAGAAGACCAAGGGGCCCAAAAUUACCACUCAUUAGAUGCGUGGAAAUU
+AF141381.1/2828-2882 GGGCCCCAGAAGACCAGGGGGCCCAAAACUACCACUCACUAGAUGCAUGGCAGCU
+L23508.1/159-213     GGGCCCCAGAAGACCAAGGGGCCCAAAAUUAUCACUCAUUAGAUGCAUGGAAAUC
+#=GC SS_cons         <<<<<<<_AA___AAA_>>>>>>>:::::::::::::::::::::::aaa:::aa
+#=GC RF              GGGCCCCAGAAGACCAAGGGGCCCAAAAuUACCACUCAUUAGAUGCAUGGAAAUu
+//

@@ -1,0 +1,63 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00322
+#=GF ID   SNORA31
+#=GF PI   snoMBI-161
+#=GF DE   Small nucleolar RNA SNORA31
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   Griffiths-Jones S
+#=GF SS   Predicted; RNAalifold
+#=GF GA   40.00
+#=GF TC   40.00
+#=GF NC   39.90
+#=GF TP   Gene; snRNA; snoRNA; HACA-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 20 -Z 549862.597050 CM SEQDB
+#=GF DR   snoRNABase; ACA31;
+#=GF DR   SO; 0000594; H_ACA_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300391;
+#=GF DR   snoopy; Gallus_gallus300029;
+#=GF RN   [1]
+#=GF RM   12007400
+#=GF RT   Small nucleolar RNAs: an abundant group of noncoding RNAs with diverse
+#=GF RT   cellular functions.
+#=GF RA   Kiss T
+#=GF RL   Cell 2002;109:145-148.
+#=GF RN   [2]
+#=GF RM   15199136
+#=GF RT   Human box H/ACA pseudouridylation guide RNA machinery.
+#=GF RA   Kiss AM, Jady BE, Bertrand E, Kiss T
+#=GF RL   Mol Cell Biol. 2004;24:5797-5807.
+#=GF RN   [3]
+#=GF RM   11387227
+#=GF RT   RNomics: an experimental approach that identifies 201 candidates for
+#=GF RT   novel, small, non-messenger RNAs in mouse.
+#=GF RA   Huttenhofer A, Kiefmann M, Meier-Ewert S, O'Brien J, Lehrach H,
+#=GF RA   Bachellerie JP, Brosius J
+#=GF RL   EMBO J 2001;20:2943-2953.
+#=GF RN   [4]
+#=GF RM   16381836
+#=GF RT   snoRNA-LBME-db, a comprehensive database of human H/ACA and C/D box
+#=GF RT   snoRNAs.
+#=GF RA   Lestrade L, Weber MJ
+#=GF RL   Nucleic Acids Res. 2006;34:D158-D162.
+#=GF CC   ACA31 (SNORA31) belongs to the H/ACA class of snoRNAs which are thought to
+#=GF CC   guide the sites of modification of uridines to pseudouridines [1]. ACA31
+#=GF CC   is predicted to guide the pseudouridylation of U3713 in 28S rRNA and U218
+#=GF CC   in 18S rRNA [4]. This family includes the mouse homologue snoMBI-161 [3].
+#=GF WK   Small_nucleolar_RNA_MBI-161
+#=GF SQ   5
+
+
+AF357400.1/1-112       ------------------CUCGAACAGUUUGUGGUUGUUCUUCUGGUUUGCACUAGGAUGCAAAAGGAAACUCUCCCUGCGCUUCCUGCCUGCCUUUGUGGCAGUUCAGAUUGAAUUAGGGAGUACAUCU
+AL845471.7/44715-44842 UUGCAUGCAUUGACAGCCCUUGACCAGUUUGUGGUUGUUCUUCUGGUCUGUACUAGGAUGCAAAAGAAAAG-CUCCCUGAGUGUUCUGCCUGCCUCUGUGGC-GUUUAGAUUGAAUUGGGAUAUACAUCU
+AJ609441.1/1-130       CUGCAUCCACUGAUAGACCUUGAACAAUUUACUGUUGUUCUUUUGGUUUGCACUAGGAUGCAAAAGAAAGAAAUCCCUGCGCUUUCUGUCUGUCUUUGUGGCGGCCCAGAUUGAAUUGGGGAAUACAUCU
+AJ225898.1/4306-4432   CUGCAUCCACUGAUAGACCUUGAACAGUCUGCUGUUGUUCUUUUGGUUUGCAAUAGGAUGCCAAAGGAAAA--UCCCUGCG-UUUCUGUCUGUCUUUGUGGCAGCCCAGAUUGAAUUGGGGGAUACAUUU
+AY186881.1/3825-3954   CUGCAUCCACUGAUAGACCUCGAACAGUUUGUGGUUGUUCUUCUGGUUUGCACUAGGAUGCAAAAGGAAACUCUCCCUGCGCUUCCUGCCUGCCUUUGUGGCAGUUCAGAUUGAAUUAGGGAGUACAUCU
+#=GC SS_cons           :<<<<<<<--<<-<<<<<<--<<<<<<<_____>>>>>>>---->>>>>>>>--->>>>>>>-----------<<<<<<--<--<<<<-<<<<<_____>>>>>-->>>>-->--->>>>>>::::::::
+#=GC RF                cuGCaucCAcuGAcagaCCUuGaaCaguUUgugguuGuuCUUuUGGucugCacUAGgauGCaAAAGaAAAaucuCCCcgcGcuUuCuGuCuGcCUuUGUGgCaGuuCaGaUUgAAUugGGGaaUACAUcU
+//

@@ -1,0 +1,65 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00147
+#=GF ID   SNORD34
+#=GF PI   U34
+#=GF DE   Small nucleolar RNA SNORD34
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; PFOLD, Griffiths-Jones SR
+#=GF GA   38.00
+#=GF TC   38.00
+#=GF NC   37.80
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 26.84 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00055
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300754;
+#=GF DR   snoopy; Loxodonta_africana300497;
+#=GF RN   [1]
+#=GF RM   12215523
+#=GF RT   Purified box C/D snoRNPs are able to reproduce site-specific
+#=GF RT   2'-O-methylation of target RNA in vitro.
+#=GF RA   Galardi S, Fatica A, Bachi A, Scaloni A, Presutti C, Bozzoni I
+#=GF RL   Mol Cell Biol 2002;22:6663-6668.
+#=GF RN   [2]
+#=GF RM   12736310
+#=GF RT   The high diversity of snoRNAs in plants: identification and comparative
+#=GF RT   study of 120 snoRNA genes from Oryza sativa.
+#=GF RA   Chen CL, Liang D, Zhou H, Zhuo M, Chen YQ, Qu LH
+#=GF RL   Nucleic Acids Res 2003;31:2601-2613.
+#=GF CC   snoRNA U34 is found in intron 5 of the ribosomal protein L13a gene in
+#=GF CC   humans. U34 is a member of the C/D class of snoRNA which contain C
+#=GF CC   (UGAUGA) and D (CUGA) box motifs, and functions in directing site-specific
+#=GF CC   2'-O-methylation of 25S rRNAs. Although the selection of the target
+#=GF CC   nucleotide requires the antisense element and the conserved box D or D' of
+#=GF CC   the snoRNA, the methyltransferase activity is thought to reside in one of
+#=GF CC   the protein components [1]. U34 snoRNA has homologues in mouse,
+#=GF CC   Arabidopsis (annotated as snoR4) and in several copies in rice
+#=GF CC   (alternatively named snoZ181) [2]. This family also contains a putative
+#=GF CC   homologue in Drosophila (Griffiths-Jones SR, pers. obs.).
+#=GF WK   Small_nucleolar_RNA_SNORD34
+#=GF SQ   14
+
+
+AJ490415.1/1-86      UGAUGCCUAUGAUGACUUGCAAGAU-UAUUGCCUACAUUGUUUGACAAGUAUCUUUGUGAUAUU-AAUUG--CAAGUA----CCUGAGGCUUGA
+X51528.1/3627-3692   ---CGUCUGUGAUGUUCUGC------UAUUACCUACAUUGUUUGAGCCUCAU----GAAAACC---------CCACUG----GCUGAGACGC--
+Z69624.1/1-66        ---CGUCUGUGAUGUUCUGC------UAUUACCUACAUUGUUUGAUGCUCAU----GAAAGAA---------CCACUG----GCUGAGACGC--
+AJ490417.1/3-83      UUUA-CCUAUGAUGAGUUGCGAAAUUUAUUGCCUACAUUGUUUGAUUAACCU----GUGAGAAA-AUUUG--CAACAU-----CUGAGGAUAAA
+AJ490418.1/3-83      UUUA-CCUAUGAUGAGUUGUGAAAUUUAUUGCCUACAUUGUUUGACUAACCU----GUGAGAAA-AUUUG--CAACAU-----CUGAGGAUAAA
+AJ490420.1/1-84      UUCUGCCAAUGAUGAGUUGCAACAU-UAUUGCCUACAUUGUUUGACAAACAAAUUCAUGAUAAA-AAA-G--CAACAA-----CUGAGGCUUAA
+AB028893.1/4087-4152 ---CGUCCAUGAUGUUCCGCAAC------UACCUACAUUGUUUGAUCCUCAU----GAAAGCA---------GCACUG----GCUGAGACGC--
+AJ490419.1/2-84      UUUAACCUAUGAUGAGUUGCAAAAUUUAUUGCCUACAUUGUUUGACUAACCU----GUGAGAAACAAUUG--CAACAU-----CUGAGGAUAAA
+AJ490416.1/2-87      CUCUGCUUAUGAUGAGUUGCAAUAUCUUUUGCCUACAUUGUCUGACAAAUGUUGUCAUGAUAAU-AUUUG--CAACCU-----CUGAGGCAUAA
+FM991913.1/3-63      -----UCUGUGAUGUUCUGC------UAUUACCUACAUUGUUUGAGCCUCAU----GAAAACC---------CCACUG----GCUGAGA-----
+X94600.1/100-170     UGGCGUCCAUGAUGUUCCGCAAC------UACCUACAUUGUUUGAUCCUCAU----GAAAGCA---------GCACUG----GCUGAGACGCCA
+AF317962.1/1-82      A-AGGCCUAUGAUGAUU--CAAA---UUUUGCCUACAUUGUUUGAUAAACCA----AUGAUAUA-ACUUGUACAAAAUGUUUUCUGAGGCCU-U
+JN899108.1/1-65      ---CGUCCGUGAUGUUCCGC------GAUUACCUACAUUGUUUGAUCCUCAU----GAAAACA---------GCACUG----GCUGAGACG---
+EU094083.1/1-74      AG-GGCCGAUGAUGCUGUUCAA------UUACCUACAUUGUUUGAUUUUCCU----GUGAGAAA-ACA-G--CUAUAU-----CUGAGGCCCCU
+#=GC SS_cons         <<-<<<<________________...__________________________....________._____..______...._____>>>>->>
+#=GC RF              uuucGCCuAUGAUGauuUGCAAa...UAUUgCCUACAUUGUUUGAuaaaCaU....GuGAuAaA.AuUUG..CaAcau....gCUGAGGCguaa
+//

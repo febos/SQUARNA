@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01585
+#=GF ID   snoR07
+#=GF DE   small nucleolar RNA snoR07
+#=GF AU   Osuch I
+#=GF SE   INFERNAL
+#=GF SS   Predicted; Osuch I
+#=GF GA   44.00
+#=GF TC   46.90
+#=GF NC   39.90
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 28 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   17901154
+#=GF RT   Structural RNAs of known and unknown function identified in malaria
+#=GF RT   parasites by comparative genomics and RNA analysis.
+#=GF RA   Chakrabarti K, Pearson M, Grate L, Sterne-Weiler T, Deans J, Donohue JP,
+#=GF RA   Ares M Jr
+#=GF RL   RNA. 2007;13:1923-1939.
+#=GF WK   Small_nucleolar_RNA
+#=GF SQ   4
+
+
+AANS01001575.1/3964-3877 UUAAAAUGAUGAAUAACUUUUGAGCGAUGGGCGGACUGAAAAAAGUGAGAGAACUUUU--AUUUGUAGAAAAUCGCAUAAUCUGAUAAGA
+AASM01001991.1/91-2      UUAAAAUGAUGAAUAACUUUUGAGCGAUGGGCGGACUGAAAAAAGUGAGAGACCCCCCCAACUUGUAGAAAAUCGCAUAAUCUGAUAAGA
+CAAJ01004367.1/269-353   UUAAAAUGAUGAAUAACUUUUGAGCGAUGGGCGGACUGAAUAAAAGUCGA-AACUUUA--AU--GUAGAAAAUCGCUGAAACUGAUAAGA
+CAAI01002062.1/861-777   UUAAAAUGAUGAAUAACUUUUGAGCGAUGGGCGGACUGAAUGAA---AGUCUAAACUU--GAAUGUAGAAAAUCGCUGAAACUGAUAAGA
+#=GC SS_cons             <<<_______________________________________________________.._________________________>>>::
+#=GC RF                  UUAAAAUGAUGAAUAACUUUUGAGCGAUGGGCGGACUGAAuAAAgugAGagaacuuUu..AuuUGUAGAAAAUCGCuuAAaCUGAUAAGA
+//

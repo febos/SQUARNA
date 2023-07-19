@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02626
+#=GF ID   WsnRNA59
+#=GF DE   Wolbachia sRNA 59
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; PMID:25512495
+#=GF GA   49.00
+#=GF TC   49.70
+#=GF NC   47.30
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   25512495
+#=GF RT   Wolbachia small noncoding RNAs and their role in cross-kingdom
+#=GF RT   communications.
+#=GF RA   Mayoral JG, Hussain M, Joubert DA, Iturbe-Ormaetxe I, O'Neill SL, Asgari S
+#=GF RL   Proc Natl Acad Sci U S A. 2014;111:18721-18726.
+#=GF WK   Wolbachia
+#=GF SQ   2
+
+
+
+AE017196.1/582231-582143 UACAUGCUAAGAAGGGGCACACAGGUAAAGCAUUCUUCUGCCUCACCACUUUAUAGUUGCUCUACCUGUGUUGUUAUGUUACAACGACU
+HQ906664.1/7742-7829     UACAUGCUAAGAAAGCGCAUGCCGGUAGAGUCUUUCUGUGCCUCACCAAUUUGUAAUUACUCUACCAGUA-UGUUAAGCUAUAGCGACU
+#=GC SS_cons             ::::<<-<<<-----<<<<<<<<<<<<-<<<<--<<__________________>>->>>>->>>>>>>>->>>>--->>>>>::::::
+#=GC RF                  UACAugCuaaGAAaGggCacaCcGGuaaaGcaUUcuUgUGCCUCACCAaUUUaUagUugCuCuaCCgGugUuGucAuGuuacaaCGACU
+//

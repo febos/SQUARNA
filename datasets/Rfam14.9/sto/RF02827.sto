@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02827
+#=GF ID   Scr6106
+#=GF DE   Streptomyces RNA 6106
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; 21521948
+#=GF GA   52.50
+#=GF TC   52.50
+#=GF NC   52.10
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   21521948
+#=GF RT   Deep sequencing-based identification of small non-coding RNAs in
+#=GF RT   Streptomyces coelicolor.
+#=GF RA   Vockenhuber MP, Sharma CM, Statt MG, Schmidt D, Xu Z, Dietrich S,
+#=GF RA   Liesegang H, Mathews DH, Suess B
+#=GF RL   RNA Biol. 2011;8:468-477.
+#=GF CC   Identified by deep sequencing of transcriptome at the end of exponential
+#=GF CC   growth phase. Appears smaller on northern blot than sequencing transcript.
+#=GF CC   This indicates processing step. Streptomyces specific. 
+#=GF WK   Streptomyces_coelicolor
+#=GF SQ   4
+
+
+
+HE971709.1/2496500-2496421 ACGCCGUCCCGAGCGGCGUUCGUGGCCUCGAACGGGCCUGCGA---GGGGGUGGUGCCGUGUCGGCGCAGCACCACCCCC--UCC
+CP010849.1/6249277-6249361 ACGCCGUCCUGAACGGCGUUCACGGCCUUGACCGGGCCCGUGAGGCGGGGGUGGUGCCGUGUCGGCGCAGCACCACCCCCGCAGC
+CP013743.1/2667557-2667473 ACGCCGUCCCGAGCGGCGUUCGCGGCCUCGACCGGGCCAGUGCGGCGGGGGUGGUGCCGUGUCGGCGCAGCACCACCCCCGCCUU
+AL645882.2/6706584-6706667 ACGCCGUCCCGAGCGGCGUACGCGGCCU-GAACGGGCCCGUGUGGCGGGGGUGGUGCCGUGUCGGCGCAGCACCACCCCCGCGCC
+#=GC SS_cons               <<<<<<<_____>>>>>>><<<<<<<<<_____>>>->>>>>>-<<<<<<<<<<<<<-<<<____>>>->>>>>>>>>>>>>:::
+#=GC RF                    aCGCCGcCCcGAgCGGCGugCgcgGCCcuGAaCgGGCCcgcGcGGcGGGGGuGGuGCCGcGUCGGCgCAGCaCCaCCCCCgCuuc
+//

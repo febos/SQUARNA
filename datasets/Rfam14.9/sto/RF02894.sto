@@ -1,0 +1,51 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02894
+#=GF ID   S35
+#=GF DE   Staphylococcus sRNA 35 (srn_0335)
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   69.00
+#=GF TC   69.60
+#=GF NC   67.00
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   27035918
+#=GF RT   Staphylococcus aureus Transcriptome Architecture: From Laboratory to
+#=GF RT   Infection-Mimicking Conditions.
+#=GF RA   Mader U, Nicolas P, Depke M, Pane-Farre J, Debarbouille M, van der
+#=GF RA   Kooi-Pol MM, Guerin C, Derozier S, Hiron A, Jarmer H, Leduc A, Michalik S,
+#=GF RA   Reilman E, Schaffer M, Schmidt F, Bessieres P, Noirot P, Hecker M, Msadek
+#=GF RA   T, Volker U, van Dijl JM
+#=GF RL   PLoS Genet. 2016;12:e1005962.
+#=GF RN   [2]
+#=GF RM   29515534
+#=GF RT   Assessment of Bona Fide sRNAs in Staphylococcus aureus.
+#=GF RA   Liu W, Rochat T, Toffano-Nioche C, Le Lam TN, Bouloc P, Morvan C
+#=GF RL   Front Microbiol. 2018;9:228.
+#=GF RN   [3]
+#=GF RM   26861020
+#=GF RT   Genome-wide Annotation, Identification, and Global Transcriptomic Analysis
+#=GF RT   of Regulatory or Small RNA Gene Expression in Staphylococcus aureus.
+#=GF RA   Carroll RK, Weiss A, Broach WH, Wiemels RE, Mogen AB, Rice KC, Shaw LN
+#=GF RL   MBio. 2016;7:e01990-e01915.
+#=GF CC   Other name: Srn_0335 [2], SAOUHSCs258 [3]. Northern blot transcript
+#=GF CC   confirmed in exponentially growing and stationary cells in three
+#=GF CC   cultivation media. Trans-encoded.[1]
+#=GF WK   Staphylococcus_aureus
+#=GF SQ   3
+
+
+
+CP000253.1/115518-115250 UAGAACCUU--UUCUGGGG---AGUGGGACAGAAAUGAUAUUUUCGCAAAAUUUAUUUCGCCGUCCCACCCCAACUUGCAUUGUCUGUAGAAAUUGGGAAUCCAAUUUCUCUUUGUUGGGGCCCCG--CCCCAACUCGCAUUGCCUGUAGAAUUUCUUUUCGAAAUUCUCUGUGUUGGGGCCC----------------CUGACUAGAAU----------UGAAAAAAGCUUAUUACAAGCGCAUUUUC-GUUCAGUCAAUUACUGCCAAUAUAACUUCGUAGAUCAUAGA-ACAUUGAUUUAU
+AP006716.1/437702-437423 -AAAAAAGC--GUAU-GAG---AGUGGGACAGAAAUAAUAUUUUCUCAAAAUUUAUUUCGUUGUAUCCC--CAGCUUGCUUAGCCUGUAGAAUUUCUUUA-GGAAAUCCUCUUUGCUGGG-CCCCGAACCCCAGCUUGCUUAGCUUGUAGAAUUUCUUUAGGAAAUUCUCUUUGCUGGGGCCCGGCCUACCAGGCAAGGAUGACUAGGUU----------UGAAAAAAGCUUGAUUCAAGUACAUUUUCAAAUCAGUCAAU---UACUAACAAAAUGAUAAAAUAGGCUGAGACAUUUUAUUUU
+CP000029.1/617843-618101 UUGAAUUUUUAUAAAUGGUUUCAGUGGGGCAUAAGUUAUAAGCGCGUUGUCUAAACAUA--CUCCGAACCCCAACUUGCCUUGUCUGUAGAAUUUCUGUU-UGAAAUUCUCUAUGUUGGGGCCCCGAACCCCAACUUGCCUUGUCUGUAGAAUUUCUGUUUGAAAUUCUCUAUGUUGGGGCCC----------------CGAACCCCAACUUGCUUUGUCUGUAGAAUUUUUGUUU-GAAAUUCUCUAU-GUUGGGGCCCCGAACCCCAACUUGCUUUGU------------------------
+#=GC SS_cons             <<<<<____..>>>>><<<...-<<<<<<<-<<<<<<<-<<<<<___>>>>>>>>>>>>--->>>>>>>>>>,((--(((-(((,,,,<<<<<<<<<____>>>>>>>>>,,,,<<<<<<<<___>-->>>>>>>,,)))-)))--))<<<<<<<<_____>>>>>>>>,<<<<<<<<-<---................-<<<<<-<<<<..........-<<<<<--<<<<_____>>>>--->>>>>.>>>>>>>>>----->->>>>>>>>,,,,,<<<<<<<<____.____>>>>>>>>
+#=GC RF                  cagaauuuu..uucugGGg...AGuggggcAgaagugaUauucuCgcagaauucacuucGucgccccaCcCCAaCUUGCcUgGcCUGUaGaauuucggua.cgaaauuCuCUuUGcuGGGGCCCCGAACCCCagCUugCcUgGCcUGuaGaauuuCUuUuuGaaauuCuCuguGuuGGGgCCC................cggaCcagaac..........UGaagaAagcuuguUuCaagcacaucuuC.guucgGuccauuAacaCCaaCacaauuuugcaguccguuGA.ACAUcggacugc
+//

@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00516
+#=GF ID   ylbH
+#=GF DE   ylbH leader
+#=GF AU   Barrick JE
+#=GF AU   Breaker RR; 0000-0002-2165-536X
+#=GF SE   Barrick JE
+#=GF SS   Predicted; Barrick JE
+#=GF GA   50.00
+#=GF TC   55.00
+#=GF NC   49.40
+#=GF TP   Cis-reg; leader;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0010468; regulation of gene expression;
+#=GF DR   GO; 0010468; regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   15096624
+#=GF RT   New RNA motifs suggest an expanded scope for riboswitches in bacterial
+#=GF RT   genetic control.
+#=GF RA   Barrick JE, Corbino KA, Winkler WC, Nahvi A, Mandal M, Collins J, Lee M,
+#=GF RA   Roth A, Sudarsan N, Jona I, Wickiser JK, Breaker RR
+#=GF RL   Proc Natl Acad Sci U S A. 2004;101:6421-6426.
+#=GF CC   This family is a putative regulatory RNA structure that is found upstream
+#=GF CC   of the ylbH gene in B. subtilis and related low GC Gram-positive bacteria.
+#=GF WK   ylbH_leader
+#=GF SQ   3
+
+
+AE017355.1/3773586-3773470 AGAAAAAAAACCCUGC---AAA----GCAGGG---------------CUCUUCUUAUACUAGCAUGUACUAGUAAGAAGGCAAAGGGAGAGGAGAAACCGGAGGAAGAACUUAUGGGGAAACGUAAGUCUUCUCCGCGG
+AE008691.1/1456779-1456662 AUAA------GGGAGGCCUAAAAAGGCUUCCCUUUUUAAAUUUUUAAUCCAG----GCAGG-AGUUCG-CCUGC--CUGGA-CUGGGAGAGGAGAAAUUGAAGGAAGAA-UU--GGGGAAAU--UUCUAUUC-CCGUUA
+AL009126.3/1569199-1569319 AUAAAAAAAUCCCCGCAGGCA--UCUGCGGGG---------------UCCUUCUAUUCCUUAAUAUGUUAAGGA-GAAGGCAAAGGGAGAGGAGAAACCGGAGGAAGAACUUAUGGGGAAACGUAAGUCUUCUCCGCGG
+#=GC SS_cons               ::::::::::<<<<<<<<<___.>>>>>>>>>...............<<<<<----<<<<<<______>>>>>>.------->>>>>-----------<<<<-<<<<-<<<<<__________>>>>>>>>>>>>>:::
+#=GC RF                    AuAAAAAAAaccccgcccuaAA.agggcgggg...............ccCugCUaagccgggaauuuacccggc.GaaGGaAcaGggAGAGGAGAAAucGgaGGaagAaCuuaUGGGGAAAuGuaaGucuuCucCgugg
+//

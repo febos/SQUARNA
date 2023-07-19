@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03838
+#=GF ID   MIR8032
+#=GF DE   MIR8032 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   78.00
+#=GF TC   78.00
+#=GF NC   77.60
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0001653;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor MIR8032 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+URS0000812175_4113/1-48 UGGUCGGCAUGACUCCCGAGGUUUUCAGUGUGAGUCGGUGUGAUUAGG
+URS00007E3E69_4113/1-48 UGGUCGGCAUGACUCCCGAGGUUUUCAGUGUGAGUUGGUGCGAUUAGG
+URS00008121B9_4113/1-48 UGGUCGGCAUGACUCCCGAGGUUUUCAGUGUGAGUCGGUGCGAUUAGG
+URS00007E4C86_4113/1-48 UGGUCGGCAUGACUCCCGAGGUUUUCAAUGUGAGUCUGUGCGAUUAGG
+#=GC SS_cons            <<<<<<-<<<<<<<<-<<__________>>->>>>>->>>>>>>>>::
+#=GC RF                 UGGUCGGCAUGACUCCCGAGGUUUUCAGUGUGAGUCGGUGCGAUUAGG
+//

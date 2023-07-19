@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00370
+#=GF ID   sroD
+#=GF DE   sroD RNA
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   PMID:14602901
+#=GF SS   Predicted; PFOLD
+#=GF GA   50.00
+#=GF TC   51.40
+#=GF NC   44.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000655; ncRNA;
+#=GF RN   [1]
+#=GF RM   14602901
+#=GF RT   RNomics in Escherichia coli detects new sRNA species and indicates
+#=GF RT   parallel transcriptional output in bacteria.
+#=GF RA   Vogel J, Bartels V, Tang TH, Churakov G, Slagter-Jager JG, Huttenhofer A,
+#=GF RA   Wagner EG
+#=GF RL   Nucleic Acids Res 2003;31:6435-6443.
+#=GF CC   This family consists of a number of bacterial sroD RNA genes of around 90
+#=GF CC   bases in length. sroD is found in several Enterobacterial species but its
+#=GF CC   function is unknown [1].
+#=GF WK   sroD_RNA
+#=GF SQ   5
+
+
+X07055.1/58-143              UUACGUGACGAAGCGCGCGGCAAAGUGGACAAUAAAGCCUGAGCGUUAAGUCAGU---CGUC---AGACGCCGGUUAAUCCGGCGUUUUUUU
+L02649.1/1951-2034           UUACGUGACGAAGCGC--GGCAAAGUGGACAAUAAAGCCUGAGCGUUAAGUCAGU---CGUC---AGACGCCGGUUAAUCCGGCGUUUUUUU
+ABEJ01000013.1/114065-113977 CUGCGUGACGAAGCCCGUGGCAAAGUAGACAAUAAAGCCUGAGCGUUAAGUCAGCUAACGAG---AGACGCCGGUUAAGCCGGCGUUUUUUU
+CP000653.1/2564343-2564255   UUACGUGACGAAGCGCGCGCCAAAGUGGACAAUAAAGCCUAAGCUUCGAGUAAGU---CGCCAUGAGACGCCGGUUUAGCCGGCGUUUUUUA
+CP000647.1/2543344-2543259   CUGCGUGACGAAGCGCGCGCUAAAGUGGACAAUAAAGGCUAAGUAACGAAUGAGU---CGCC---UGACGCCGGCUACGCCGGCGUUUUUUA
+#=GC SS_cons                 ::::::::::::::<<<-<<<_______________>>>----------------...>>->...-<<<<<<<<_____>>>>>>>>:::::
+#=GC RF                      uUaCGUGACGAAGCgCGcGgcAAAGUGGACAAUAAAgcCUgAGcguuaAGUcAGU...CGuc...AgaCGCCGGUUAAgCCGGCGuuUUUUu
+//

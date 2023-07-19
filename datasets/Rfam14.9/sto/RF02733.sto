@@ -1,0 +1,41 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02733
+#=GF ID   ToxT_thermometer
+#=GF DE   ToxT 5' UTR thermometer
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; PMID:25228776;
+#=GF GA   81.00
+#=GF TC   81.00
+#=GF NC   35.70
+#=GF TP   Cis-reg; thermoregulator;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000204; five_prime_UTR;
+#=GF DR   SO; 0002168; RNA_thermometer;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0009266; response to temperature stimulus;
+#=GF DR   GO; 0006417; regulation of translation;
+#=GF RN   [1]
+#=GF RM   25228776
+#=GF RT   RNA thermometer controls temperature-dependent virulence factor expression
+#=GF RT   in Vibrio cholerae.
+#=GF RA   Weber GG, Kortmann J, Narberhaus F, Klose KE
+#=GF RL   Proc Natl Acad Sci U S A. 2014;111:14241-14246.
+#=GF CC   Controls temperature-dependant translation of toxT, facilitating V.
+#=GF CC   cholerae virulance. At human body temperature, the thermometer structure
+#=GF CC   opens and to allow transcriptional activator protein ToxT translation. 
+#=GF WK   FourU_thermometer
+#=GF SQ   3
+
+
+
+L01623.1/1218-1288         UCGAUUUUAAGAUAACUUUACGUGGAUGGCUCUCUGCGUUUAUUUAUA-------UAUCUUCAGAGUAGAACGCAAUG
+ACYV01000002.1/98152-98229 UCGAUUUUAAGAUAACUUUACGUGGAUGGCUUUCUGCGUUUAUUUAUUAUUUAUAUAUCUUCAAAGUAGAACGCAAUG
+AAKI02000075.1/2726-2796   UCAAUUUUAAUACAACUUUACGUGGAUGGCUCUCUGCGUUUAUUUAUA-------UAUCUUCAGAGUAGAACGCAAUG
+#=GC SS_cons               <<-<<<<<<<<<<<-----<<<<<<<______>>>>>>>---------.......>>>>>>->>>>>->>::::::::
+#=GC RF                    UCgAuUuUAAgAuAACUUUACGugGAUGGCUcUCugCGUUUAUUUAUa.......UaUcUUCAaAgUAGAACGCAAUG
+//

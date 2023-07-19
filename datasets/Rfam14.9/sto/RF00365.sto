@@ -1,0 +1,44 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00365
+#=GF ID   mir-BHRF1-1
+#=GF DE   mir-BHRF1-1 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   95.00
+#=GF TC   95.90
+#=GF NC   41.10
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF RN   [1]
+#=GF RM   15118162
+#=GF RT   Identification of Virus-Encoded MicroRNAs.
+#=GF RA   Pfeffer S, Zavolan M, Grasser FA, Chien M, Russo JJ, Ju J, John B, Enright
+#=GF RA   AJ, Marks D, Sander C, Tuschl T
+#=GF RL   Science 2004;304:734-736.
+#=GF RN   [2]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the mir-BHRF1-1 microRNA precursor found in Human
+#=GF CC   herpesvirus 4 (Epstein-Barr virus) and Cercopithicine herpesvirus 15. In
+#=GF CC   Epstein-Barr virus mir-BHRF1-1 is found in the 5' UTR of the BHRF1 (Bam HI
+#=GF CC   fragment H rightward open reading frame 1) gene which is known to encode a
+#=GF CC   distant Bcl-2 homologue. The mature sequence is excised from the 5' arm of
+#=GF CC   the hairpin [1]. Imported from miRBase.
+#=GF WK   mir-BHRF1-1_microRNA_precursor_family
+#=GF SQ   2
+
+
+URS0000661F8D_10376/1-66  UAUUAACCUGAUCAGCCCCGGAGUUGCCUGUUUCAUCACUAACCCCGGGCCUGAAGAGGUUGACAA
+URS0000D54A42_45455/12-77 UAUUAACCUGAUCAGCCCCGGGGUUGCCUGUCUUAGCACUAACUCCGGGCCUGAAGAGGUUGACAA
+#=GC SS_cons              ::<<<<<<<--<<<<-<<<<<<<<<<--<<<____>>>->>>>>>>>>>->>>>-->>>>>>>:::
+#=GC RF                   UAUuAACCUGAUCAGCCCCGGgGUUgCCUGcuUuAgCACuAACcCCGGGCCUGAAGAGGUUgACAA
+//

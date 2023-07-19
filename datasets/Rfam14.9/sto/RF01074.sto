@@ -1,0 +1,49 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01074
+#=GF ID   RF_site1
+#=GF DE   Putative RNA-dependent RNA polymerase ribosomal frameshift site
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   40.00
+#=GF TC   42.00
+#=GF NC   38.70
+#=GF TP   Cis-reg; frameshift_element;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 27.93 -Z 742849.287494 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   PKBASE; PKB00240;
+#=GF DR   PKBASE; PKB00044;
+#=GF DR   PKBASE; PKB00046;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0075523; viral translational frameshifting;
+#=GF RN   [1]
+#=GF RM   12038685
+#=GF RT   Biological properties and molecular characterization of beet chlorosis
+#=GF RT   virus (BChV).
+#=GF RA   Hauser S, Stevens M, Beuve M, Lemaire O
+#=GF RL   Arch Virol. 2002;147:745-762.
+#=GF RN   [2]
+#=GF RM   8030201
+#=GF RT   Nucleotide sequence of cucurbit aphid-borne yellows luteovirus.
+#=GF RA   Guilley H, Wipf-Scheibel C, Richards K, Lecoq H, Jonard G
+#=GF RL   Virology. 1994;202:1012-1017.
+#=GF RN   [3]
+#=GF RM   1840612
+#=GF RT   Nucleotide sequence analysis and genomic organization of the NY-RPV
+#=GF RT   isolate of barley yellow dwarf virus.
+#=GF RA   Vincent JR, Lister RM, Larkins BA
+#=GF RL   J Gen Virol. 1991;72:2347-2355.
+#=GF WK   Ribosomal_frameshift
+#=GF SQ   4
+
+
+AF352024.1/1581-1620 GGGAAAUGGACUGAGCGGCGCCGACCGCCA-AACAACCGGC
+EF521839.1/1666-1705 GGGAAACGGGA-AGGCGGCGGCGUCCGCCGUAACAAACGCA
+X76931.1/1482-1521   GGGAAACGGGC-AGGCGGCGGCGACCGCCGAAACAACCGCA
+AF473561.1/1475-1514 GGGAAACGGGA-GAGCGGCAGCGCCCGCCGAAACAACCGCA
+#=GC SS_cons         :::::::::::.:<<<<<__AAA_>>>>>::::::::aaa:
+#=GC RF              GGGAAACGGGa.gGGCGGCGGCGaCCGCCGaAACAACCGCA
+//

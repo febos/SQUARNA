@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02046
+#=GF ID   Sphinx_1
+#=GF DE   Sphinx_ conserved region 1
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Predicted; CMfinder; Eberhardt R
+#=GF SS   Predicted; CMfinder;
+#=GF GA   34.00
+#=GF TC   34.00
+#=GF NC   33.90
+#=GF TP   Gene; lncRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 26.67 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001463; lincRNA;
+#=GF DR   GO; 0008049; male courtship behavior;
+#=GF DR   GO; 0010629; negative regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   11904380
+#=GF RT   Origin of sphinx, a young chimeric RNA gene in Drosophila melanogaster.
+#=GF RA   Wang W, Brunet FG, Nevo E, Long M
+#=GF RL   Proc Natl Acad Sci U S A. 2002;99:4448-4453.
+#=GF WK   Sphinx_(gene)
+#=GF SQ   3
+
+
+AC010838.12/46454-46565      ACGCGGUGUCAUUUGGUGACUAUCCAGGUGAGUACAACCCCAAGGUGCACGGGCCCUAAGACCCCGCUCGCUUCUACGGUAAAGCCUGGCUGGGACGCCGCAACAAGACGCC
+AAKO01003069.1/18326-18227   GCGCGAUGGCAUUCGGUGACUAUCCAGCUGAGUACAACCCCAAGGUGCACGGGCCCUACGACCCCGCUCGCUUCUACGGCAAAGGUGAGC--AGGUUACGUA----------
+AAEU02000402.1/220447-220348 GCGAGAUGGCAUUCGGUGACUAUCCAGCUGAGUACAACCCCAAGGUGCACGGGCCCUACGACCCCGCUCGCUUCUACGGCAAAGGUGAGC--AGAUUACGUA----------
+#=GC SS_cons                 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::..::::::::::..........
+#=GC RF                      gCGcGaUGgCAUUcGGUGACUAUCCAGcUGAGUACAACCCCAAGGUGCACGGGCCCUAcGACCCCGCUCGCUUCUACGGcAAAGgugaGC..aGauuaCGuA..........
+//

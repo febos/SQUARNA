@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03744
+#=GF ID   MIR3704
+#=GF DE   MIR3704 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   60.00
+#=GF TC   78.20
+#=GF NC   57.40
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0001425;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor MIR3704 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   3
+
+
+URS0000D554F6_190402/1-108 AAGGUCAUGGGUCUCGGUGGAGUUGGGAAGACUGUUACAGUGCAUAGAUGUCAUCAGAUCAUA----------AAUUACUGCGUAGGUAUUUCCAACCCACAGAGACCUGAUGGCCUU
+URS0000D55DB3_190402/1-108 AAGGUCAUGGGUCUCGAUGGAGUUGGGAAGACUGUUACAGUGCAUAGAUGUCAUCAGAUCAUA----------AAUUACUGCGUAGGUAUUUCCAACCCACAGAGACCUGAUGGCCUU
+URS0000D51C8A_3329/1-118   AAGGCAAUAGGUCUAGGUGGAGUUGGAAAAACUGUCACAAUGCCUAUAUCACAUCAGAUCAGAUGAAAUCAUGAGUGACUGCAUGGGUUUUUCCUCUCCUCCCAGACCCAGUGGCCUU
+#=GC SS_cons               <<<<<<<<<<<<<<<-<<<<-<<<<<<<<-<<<----<<<<<----<<<________>>>---..........--->>>>>---->>>->>>>>>>>>>>>->>>>>>>->>>>>>>>
+#=GC RF                    aaGGccaugGGuCucGguGGAguuGGgaagaCuGUuACagugCaUAgauguCAUCAGaucAuA..........AaUcacuGCgUagGuauucCCaacCCacagaGaCCcgauggCCuu
+//

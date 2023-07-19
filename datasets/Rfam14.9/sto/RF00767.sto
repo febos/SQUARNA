@@ -1,0 +1,106 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00767
+#=GF ID   mir-150
+#=GF DE   microRNA mir-150
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   55.00
+#=GF TC   55.60
+#=GF NC   54.00
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000197;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   18463306
+#=GF RT   Conservation of small RNA pathways in platypus.
+#=GF RA   Murchison EP, Kheradpour P, Sachidanandam R, Smith C, Hodges E, Xuan Z,
+#=GF RA   Kellis M, Grutzner F, Stark A, Hannon GJ
+#=GF RL   Genome Res. 2008;18:995-1004.
+#=GF RN   [2]
+#=GF RM   17105755
+#=GF RT   Discovery and profiling of bovine microRNAs from immune-related and
+#=GF RT   embryonic tissues.
+#=GF RA   Coutinho LL, Matukumalli LK, Sonstegard TS, Van Tassell CP, Gasbarre LC,
+#=GF RA   Capuco AV, Smith TP
+#=GF RL   Physiol Genomics. 2007;29:35-43.
+#=GF RN   [3]
+#=GF RM   15345052
+#=GF RT   Microarray analysis of microRNA expression in the developing mammalian
+#=GF RT   brain.
+#=GF RA   Miska EA, Alvarez-Saavedra E, Townsend M, Yoshii A, Sestan N, Rakic P,
+#=GF RA   Constantine-Paton M, Horvitz HR
+#=GF RL   Genome Biol. 2004;5:R68.
+#=GF RN   [4]
+#=GF RM   16766679
+#=GF RT   Identification and characterization of two novel classes of small RNAs in
+#=GF RT   the mouse germline: retrotransposon-derived siRNAs in oocytes and germline
+#=GF RT   small RNAs in testes.
+#=GF RA   Watanabe T, Takeda A, Tsukiyama T, Mise K, Okuno T, Sasaki H, Minami N,
+#=GF RA   Imai H
+#=GF RL   Genes Dev. 2006;20:1732-1743.
+#=GF RN   [5]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [6]
+#=GF RM   20403161
+#=GF RT   Small RNA expression and strain specificity in the rat.
+#=GF RA   Linsen SE, de Wit E, de Bruijn E, Cuppen E
+#=GF RL   BMC Genomics. 2010;11:249.
+#=GF RN   [7]
+#=GF RM   18392026
+#=GF RT   Discovering microRNAs from deep sequencing data using miRDeep.
+#=GF RA   Friedlander MR, Chen W, Adamidi C, Maaskola J, Einspanier R, Knespel S,
+#=GF RA   Rajewsky N
+#=GF RL   Nat Biotechnol. 2008;26:407-415.
+#=GF RN   [8]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   MiR-150
+#=GF SQ   22
+
+
+URS0000759E42_10090/1-65 --------CCCUGUCUCCCAACCCUUGUACCAGUGCUGUGCCUCAGACC----CUGGUACAGGCC-UGGGG-GA----UAGGG--------
+URS00006C2FD9_10116/3-83 UCUCAAGGCCCUGUCUCCCAACCCUUGUACCAGUGCUGUGCCUCAGACC----CUGGUACAGGCC-UGGGG-GA----CAGGGACUUGGGG
+URS00006B7D0F_9600/3-82  CCCCAUGGCCCUGUCUCCCAACCCUUGUACCAGUGCUGGGC-UCAGACC----CUGGUACAGGCC-UGGGG-GA----CAGGGACCUGGGG
+URS0000759C24_9593/8-87  CCCCAUGGCCCUGUCUCCCAACCCUUGUACCAGUGCUGGGC-UCAGACC----CUGGUACAGGCC-UGGGG-GA----CAGGGACCUGGGG
+URS00006B7D0F_9544/3-82  CCCCAUGGCCCUGUCUCCCAACCCUUGUACCAGUGCUGGGC-UCAGACC----CUGGUACAGGCC-UGGGG-GA----CAGGGACCUGGGG
+URS00006B7D0F_9606/3-82  CCCCAUGGCCCUGUCUCCCAACCCUUGUACCAGUGCUGGGC-UCAGACC----CUGGUACAGGCC-UGGGG-GA----CAGGGACCUGGGG
+URS000075BF20_9598/3-82  CCCCAUGGCCCUGUCUCCCAACCCUUGUACCAGUGCUGGGC-UCAGACC----CUGGUACAGGCC-UGGGG-GA----CAGGGACCUGGGG
+URS000075A2D2_9940/6-86  CCUCACGGCCCUGUCUCCCAACCCUUGUACCAGUG-UGUGUCUCGGUCC----CUGGUACAGGUA-CGGGGAGG----CAGGGACCUGGGG
+URS00007E49B2_9925/6-86  UCUCAUGGCCCUGUCUCCCAACCCUUGUACCAGUG-UGUGUCUUGGUCC----CUGGUACAGGUA-CGGGGAGG----CAGGGACCUGGGG
+URS000075CB03_9913/8-88  CCUCACGGCCCUGUCUCCCAACCCUUGUACCAGUG-UGUGUCUCAGACC----CUGGUACAGGUA-CGGGGAGG----CAGGGACCUGGGG
+URS000075B1F1_9796/1-65  --------CCCUGUCUCCCAACCCUUGUACCAGUGCUGUGCCUCGGUCC----CUGGUACAGGCA-UGGGG-GG----CAGGG--------
+URS00007E44EC_9615/1-57  -------------UCUCCCAACCCUUGUACCAGUGCUGUGCCUCAGUCC----CUGGUACAGGCA-UGGGG-GG----CA-----------
+URS00007E40A7_9823/1-77  ---CUCGGCCCUAUCUCCCAACCCUUGUACCAGUG-CGUGCCUCAGUCC----CUGGUACAGGAA-UGGGG-GG----CAGGGACCUGGGG
+URS00007E3B2F_28377/4-87 CUCUCUUUCCCUCUCUCCCAACCCUUGUACCAGUGCCAACUGUAGUCCUC--ACUGGUACAGAGG-AUGGAAGG----GUGGGCCUGCAGA
+URS0000D4F21F_8665/9-84  CUCUUCUUCUUUCUCUCCCAACCCUUGUACCAGUGUCAGUUGUAACACCU--ACUGGUACAGAGG-AUGGAAGG----GGAAG--------
+URS000075D4EF_8364/1-64  ----------CUCUCUCCCAACCCUUGUACCAGAGUGAUAAUGGGAACU----CUGGUACAGAGG-AUGGCUGA----AAGGA--------
+URS000075ADBC_7955/1-79  ---CAUCUCCGUCUCUCCCAAUCCUUGUACCAGUGUCUGAUUUACAGAUGACGCUGG-ACGGGGU-UUGGGGGGGGCUGAGGGA-------
+URS0000D514B3_7998/1-61  -------------UCUCCCAAUCCUUGUACCAGUGUCUGAUUUACAGAUGACGCUGG-ACGGGGU-UUGGGGGG----GG-----------
+URS000075D4DE_13616/1-67 -------------UCUCCCAACCCUUGUACCAGAGUCCAUCAG--AGAC----CCGGUACGGGCU-GUGGGGGA----CGGGGAGUCGGGG
+URS000075D8C4_9305/18-97 UCCCGGAGCCCCUUCUCCCAACCCUCGUACCAGAGUCCAUCCG--AGAC----CCGGUACGGGCU-GUGGGGGA----UGGGGAGUCGGGG
+URS000075D24E_9258/5-87  CCUCGGCGCCCCCUCUCCCAACCCUUGUACCAGAGCAUAAACUGAACCC----CUGGUACGGGGCCGUGGGAGA----GGGGGAGCCGGGG
+URS0000D520A6_29078/1-73 ---CAAGGCCCUGUCUCCCAACCCU-GUACCA-UGGUGUGC--CAGUCC----CUGGUACAGGCA-UGGGG-GG----CAGGGACCUGGG-
+#=GC SS_cons             :::::::::<<<-<<<<<---<<--<<<<<<<_________________...._>>>>>>>>>--.-->>>->>....->>>:::::::::
+#=GC RF                  cccCauggCCCuguCuCCCAAcCCUuGUACCAGUGuuguguuUaaaacC....CUGGUACaGggu.uuGGgaGa....caGGGAccuGGGG
+//

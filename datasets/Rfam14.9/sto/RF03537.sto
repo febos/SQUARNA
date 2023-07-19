@@ -1,0 +1,59 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03537
+#=GF ID   Flavi_TBFV_SL6
+#=GF DE   Tick-borne Flavivirus short stem-loop SL6
+#=GF AU   Lamkiewicz K; 0000-0002-6375-6441
+#=GF AU   Wolfinger MT; 0000-0003-0925-5205
+#=GF SE   Lamkiewicz K
+#=GF SS   Predicted; LocARNA 2.0.0RC8
+#=GF GA   38.30
+#=GF TC   38.30
+#=GF NC   38.00
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000205; three_prime_UTR;
+#=GF RN   [1]
+#=GF RM   17222695
+#=GF RT   Origin and evolution of 3'UTR of flaviviruses: long direct repeats as a
+#=GF RT   basis for the formation of secondary structures and their significance for
+#=GF RT   virus transmission.
+#=GF RA   Gritsun TS, Gould EA
+#=GF RL   Adv Virus Res. 2007;69:203-248.
+#=GF RN   [2]
+#=GF RM   24647143
+#=GF RT   Molecular archaeology of Flaviviridae untranslated regions: duplicated RNA
+#=GF RT   structures in the replication enhancer of flaviviruses and pestiviruses
+#=GF RT   emerged via convergent evolution.
+#=GF RA   Gritsun DJ, Jones IM, Gould EA, Gritsun TS
+#=GF RL   PLoS One. 2014;9:e92056.
+#=GF RN   [3]
+#=GF RM   30909641
+#=GF RT   Functional RNA Structures in the 3'UTR of Tick-Borne, Insect-Specific and
+#=GF RT   No-Known-Vector Flaviviruses.
+#=GF RA   Ochsenreiter R, Hofacker IL, Wolfinger MT
+#=GF RL   Viruses. 2019; [Epub ahead of print]
+#=GF CC   In different studies, a short stem-loop, named SL6 has been observed in at
+#=GF CC   least Tick-borne encephalitis virus, Langat virus and Omsk hemorrhagic
+#=GF CC   fever [1][2]. SL6 shows a high heterogeneity among different tick-borne
+#=GF CC   flaviviruses, but is structurally conserved supported by multiple
+#=GF CC   covariation [3].
+#=GF WK   Flavivirus_3_UTR
+#=GF SQ   10
+
+
+NC_001672.1/10910-10954 CCCCUGCAUCAUGAUAAGGC-CGAACAUGGUGCAUGAAAGGGGAGG
+NC_027709.1/10639-10683 CCCCCGCACCAUGACAAGGC-CGAACAUGGUGCACCAAAGGGGAGG
+NC_001809.1/10640-10683 CCCCCGCCCCAUGACAAGGC-CGAACAUGGAGCAUUAAAGGG-AGG
+NC_003690.1/10715-10756 CCCUUGCGUCCAGAGAAGGC-CGAACUGGGCGU---UAUAAGGAGG
+NC_005062.1/10557-10599 CCCCCGCACCAUG-GAAGGC-CAAACAUGGUGCAUG-AAGGGAAAG
+HM055369.1/10547-10586  CAAAACCUCCCAGAGAAGGC-CGAACUGGGAGGCC-----AUGAAG
+NC_004355.1/10531-10570 CAAAGCCUCCCAGAGAGGGC-CGAACUGGGAGGUU-----AUGAAG
+AF311056.1/10590-10635  CAAAAGGCCUCCUGGAAGGCUCACCAGGAGUUAGGCCAUUCUAGAG
+NC_003687.1/10609-10652 CAAAAGGCCUCCUGGAAGGCUCACCAGGAGUUAGGCCGUUU--AGG
+NC_006947.1/10506-10542 UGA---CCAUCCCUCAAGGCCGAGUGGGAUGCG------UAUGAAG
+#=GC SS_cons            <<<<-<<<<<<<<_______.____>>>>>>>>------>>>>:::
+#=GC RF                 CcccagCcCCCcgaGAAGGC.CaAAcgGGGgGcaucaAugggGAAG
+//

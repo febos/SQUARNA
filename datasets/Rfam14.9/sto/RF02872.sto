@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02872
+#=GF ID   SrbA
+#=GF DE   sRNA regulator of biofilms A
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; R-Scape;
+#=GF GA   69.00
+#=GF TC   69.70
+#=GF NC   44.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   28771593
+#=GF RT   A novel small RNA is important for biofilm formation and pathogenicity in
+#=GF RT   Pseudomonas aeruginosa.
+#=GF RA   Taylor PK, Van Kessel ATM, Colavita A, Hancock REW, Mah TF
+#=GF RL   PLoS One. 2017;12:e0182582.
+#=GF CC   Important for biofilm formation and pathogenicity. Bacterial strain with
+#=GF CC   deleted SrbA had reduced biofilm mass. As the ability to form biofilms can
+#=GF CC   contribute to the ability a pathogen to thrive within the host, the C.
+#=GF CC   elegans hosts infected with the srbA deleted strain displayed
+#=GF CC   significantly lower mortality rate than the wild-type strain. However, the
+#=GF CC   deletion of srbA had no effect on growth or antibiotic resistance in P.
+#=GF CC   aeruginosa.
+#=GF WK   SrbA_sRNA
+#=GF SQ   3
+
+
+
+AE004091.2/2977373-2977611         AUCAGGGGCUCUGAAACGAC--GAGCUCCCGGUGCCUGCGCCGAUACGCCC-UCGGCCUCCACCGUGUUGAUCU-GCCCACAAGGCGGCUUGACGAGAUUGCGACUGGAACGAAGUUGUCCUGAGGGACGGGGAAGCGUUU-ACGUAUCAGCCAGAU---CGAAAGACUCGACAGCGAGUCGCCCACCGGCAACCACGAGCCGAACGGCACUUGAUCCAGUCGAGAAGCA-CGGUCCGCGAACUGUUC
+HG322950.1/3570010-3570249         ACCAGGGGCCCUGAAU---A--GGGCCUCCGGAUCGAGCUCCGGCCCACUCGCCGAACUGAUCCGUGUUGUUACAGCCCACAAGGCGAAAUGACGAGGUUGCGACUGGCAAGAAGUUGUCCUGAGGGACGGGGAAGCAACC-ACGUAUCAGCAAGAUGGUCGAAUGCAGCCAUUCGCCCUCGCCCAACGGCAGCCACGAGCCGGCAAGCGAUCUCGAAUGCCACC--GCUGCGGUCAUCUACCUGUUC
+CP002727.1/2488479-2488251         AUCAGGGGUUCUGGAA---ACGGAACCUCCGGGUCAGUCUCCG-CUUACCGCAGGGAUCGAUUCGUGUUGUUAC-GCCCACAAGGCAGCUCGACGAGAUGGCGACUGGAACGAGGUUGUCCUGAGGGACGGGGAAGCGUUUCACGUAUCGAGUUGCA---CGGU-GCCA-----A--GGGCGUCCACGGGCCUGCACGCACCACCGCUCGCCUACCCGGCAGCGA--GCA-CACGAUGCGCUUCGUCC
+#=GC SS_cons                       :(,,<<<<<<<<____...>..>>>>>>>,,,<<<<---<<<-<<<____>>>->>>->>>>)((-(((((,,,,<<<_____>>>,<<--<<<<-------------------------<<_________>>--->>>>-.>>,,,,,,,,)))))...)),,,,,,,<<____>>,,,<<<<<<<<<<<________>>>>>>>>>>>,,,,,,,<<<-<<__..___._>>->>>::::::::::
+#=GC RF                            AcCAGgGGcuCuGaAa...a..GagCCcCCGGgucgagCucCGgcccaCcggccGgaccgacgCGUguuguUac.GCCCACAAGGCgGcuugacGAGaUuGCGACUGGaAcGAaGUUGUCCuGAGGGACGGgGAAGCgucu.gCGUAUCagcacgau...CGaauGccacgAuuacgagucGcccgccGGcaacCACGagCCggcgggCgcuuacuccgguccaa..GCa.CgguccgCgaucuGUuC
+//

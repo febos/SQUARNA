@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01343
+#=GF ID   CRISPR-DR33
+#=GF DE   CRISPR RNA direct repeat element
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Predicted; WAR; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   39.00
+#=GF TC   39.30
+#=GF NC   38.80
+#=GF TP   Gene; CRISPR;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   URL; http://crispr.u-psud.fr/crispr/CRISPRHomePage.php;
+#=GF DR   SO; 0001459; CRISPR;
+#=GF DR   GO; 0006952; defense response;
+#=GF RN   [1]
+#=GF RM   17521438
+#=GF RT   The CRISPRdb database and tools to display CRISPRs and to generate
+#=GF RT   dictionaries of spacers and repeats.
+#=GF RA   Grissa I, Vergnaud G, Pourcel C
+#=GF RL   BMC Bioinformatics. 2007;8:172.
+#=GF WK   CRISPR
+#=GF SQ   3
+
+
+BA000022.2/2610662-2610698 CGUUUCCAAACCAUUGAUGCCGUAAAGCGUUUGGCGC
+AE016823.1/1126696-1126660 ACUUACAAAAAUCGGGAUGCCGUUAGGCGUUGAGCAC
+CP001221.1/3162259-3162295 UCUGAAUAUAACUUUGAUGCCGUUAGGCGUUGAGCAC
+#=GC SS_cons               :::::::::::::::<<<<<<____>>>>>>::::::
+#=GC RF                    ucUuacuAAAACuuuGAUGCCGUuAGGCGUUgAGCAC
+//

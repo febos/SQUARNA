@@ -1,0 +1,37 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02651
+#=GF ID   SorY
+#=GF DE   Singlet oxygen resistance RNA Y
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   111.00
+#=GF TC   111.30
+#=GF NC   67.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0080183; response to photooxidative stress;
+#=GF RN   [1]
+#=GF RM   25833751
+#=GF RT   The sRNA SorY confers resistance during photooxidative stress by affecting
+#=GF RT   a metabolite transporter in Rhodobacter sphaeroides.
+#=GF RA   Adnan F, Weber L, Klug G
+#=GF RL   RNA Biol. 2015;12:569-577.
+#=GF CC   Singlet oxygen induced SorY is induced under several stress conditions and
+#=GF CC   conferrs resistance against singlet oxygen by affecting a metabolite
+#=GF CC   transporter.
+#=GF WK   Rhodobacter_sphaeroides
+#=GF SQ   2
+
+
+
+CP000143.1/1632704-1632786 AAGCGGGUGAUCGAGAGGGUUCUCUCGUCCGCUUCAUACCUCCCUGUUGGACUUGGGCCGAGCUUCUGCUCGGCCUUUUUUUU
+CP000661.1/913049-912968   AAGCGGGUGAUCGAGAGU-CUCUCUCGUCCGCUUCAUACCUCCCUGUUGGACUUGGGCCGAGCUUCUGCUCGGCCUUUUUUUU
+#=GC SS_cons               <<<<<<<----<<<<<<____>>>>>>>>>>>>>,,,,<<________>>,,,,<<<<<<<<<____>>>>>>>>>:::::::
+#=GC RF                    aaGCGGgUGAUCGaGaGuguUCuCuCGuCCGCuuCAUACCUCCCUGUUGGACUUgGGCCGaGCUUCUGCuCGGCCuUUUUUUU
+//

@@ -1,0 +1,63 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00093
+#=GF ID   SNORD18
+#=GF PI   U18
+#=GF DE   Small nucleolar RNA SNORD18
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; PFOLD; Griffiths-Jones SR
+#=GF GA   41.00
+#=GF TC   41.00
+#=GF NC   40.90
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 22 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00047
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300894;
+#=GF DR   snoopy; Homo_sapiens300399;
+#=GF RN   [1]
+#=GF RM   7507233
+#=GF RT   Two different snoRNAs are encoded in introns of amphibian and human L1
+#=GF RT   ribosomal protein genes.
+#=GF RA   Prislei S, Michienzi A, Presutti C, Fragapane P, Bozzoni I
+#=GF RL   Nucleic Acids Res 1993;21:5824-5830.
+#=GF RN   [2]
+#=GF RM   11726521
+#=GF RT   Release of U18 snoRNA from its host intron requires interaction of Nop1p
+#=GF RT   with the Rnt1p endonuclease.
+#=GF RA   Giorgi C, Fatica A, Nagel R, Bozzoni I
+#=GF RL   EMBO J 2001;20:6856-6865.
+#=GF CC   U18 is a member of the C/D class of snoRNA which contain the C (UGAUGA)
+#=GF CC   and D (CUGA) box motifs. It is encoded in introns of ribosomal protein L1
+#=GF CC   in Xenopus and human, and in introns of elongation factor 1 beta in yeast.
+#=GF CC   Related snoRNAs in Arabidopsis and rice have been named R63 and Z106
+#=GF CC   respectively. Factors involved in the processing of the intronic snoRNA
+#=GF CC   have recently been elucidated [2].
+#=GF WK   Small_nucleolar_RNA_SNORD18
+#=GF SQ   16
+
+
+AJ307927.1/2-83      GGAACAUGAUGAAGAACCAUU-----GGUCCGUGUUUCUGA---------UCAUCUCG-UGAUGAAACUA-CAA----UGAAGCACUCAUACUUCUGAUUCC
+Z75111.1/1-65        UGGCAGUGAUGAUCA-CA--------AAUCCGUGUUUCUGA---------CAAGCGAU-UGAC--GAUAGAAAA----------------CCGGCUGAGCCA
+AB061820.1/2178-2249 CAGUAGUGAUGAAAUUCCACUUCAUUGGUCCGUGUUUCUGA-----------ACCACA-UGAUUUUCUCG-GAU-----------------GUUCUGAUGCU
+X61926.1/688-775     AAGCUAUGAUGACCA-AAAUU-----GGUCCGUGUUACUGA--GCGGAUUAAGACCCC-AGCAAACGAAGAGAA-----ACCCAAUUUUUAAUUCUGAUUUU
+U12981.1/1-88        -GUGAAUGAUGAAUU-UAAUUCUUU-GGUCCGUGUUUAUGA-UGGGAAGUAAGACCCC-CGAUAUGAGUGACAA---------AAGAGAUGUGGUUGACUAU
+X06552.1/2863-2934   GCUUUAUGAUGAGCU-CCACUUCUAUGGUCCGUGUUUCUGA----------UGCAUCA-UGAUCUCUGUG-GAA-----------------GUUCUGAUCAG
+X96517.1/284-381     UUAAAAUGAUGAUCU-CAAUCUUU--GGUCCGUGUUUAUGAGGUGGCCUCAAGACCCA-CCGCAUGAGUGACAAAGAAGAUUUAAAUCUUAUAUCUGACAAU
+AB061820.1/3401-3472 UCAAAAUGAUGAGAUUCCACUUAAUUGGUCCGUGUUUCUGA-----------AACACA-UGAUAUUUGUG-GAA-----------------AUUCUGACUUG
+AB061820.1/4174-4242 UUGUUAUGAUGAGAU-UCCACUUAA-GGUCCGUGUUUCUGA-----------AACAAA-UGAU-UUUGUG-GAA-----------------GUUCUGAUUUA
+X06552.1/5485-5556   UGUUAAUGAUGAGUU-CCACUUCAUUGGUCCGUGUUUCUGA----------AACCUUA-UGAUCUAAGUG-GAA-----------------GUUCUGACUGA
+X75488.1/49-119      UGGAUAUGAUGAGCU-CCACUUCAU-GGUCCGUGUUUCUGA-----------ACCGAAGUGAUAUCAAUG-GAA-----------------GUUCUGAUUAC
+M15678.1/1373-1441   UGUUAAUGAUGAGCU-CCACUUCAU-GGUCCGUGUUUCUGA------------CCUUA-UGAUCUGAGUG-GAA-----------------GUUCUGAUAUA
+X06552.1/4707-4777   UAUACAUGAUGAUUU-CCACUUCUAUGGUCCGUGUUUCUGA-----------AACUCA-UGAUAUUUGUG-GAA-----------------GUUCUGAUUUA
+X06552.1/2182-2251   UCGAUAUGAUGAGUU-CCACUUCAU-GGUCCGUGUUUCUGA-----------ACCUAG-UGAUAUUAAUG-GAA-----------------GUUCUGAUUUC
+M15678.1/705-773     UAUACAUGAUGAUCU-CCACUUCU--GGUCCGUGUUUCUGA-----------AACUCA-UGAUCUUUGUG-GAA-----------------GUUCUGACUUA
+X75486.1/57-126      UGAAUAUGAUGAGUU-CCACUUCAU-GGUCCGUGUUUCUGA-----------ACCCAG-UGAUAAUAAUG-GAA-----------------GUUCUGAUUUA
+#=GC SS_cons         <<<<___________._________._______________.........________.___________.___................________>>>>
+#=GC RF              uuaaaAUGAUGAucU.CcAuUUcuU.GGUCCGUGUUUCUGA.........aAAaCuCa.UGAUaUuagUG.gAA................agUUCUGAuuaa
+//

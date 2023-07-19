@@ -1,0 +1,39 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02865
+#=GF ID   ncS01
+#=GF DE   Burkholderia sRNA 1
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   58.00
+#=GF TC   58.80
+#=GF NC   39.50
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0097311; bacterial biofilm matrix;
+#=GF RN   [1]
+#=GF RM   29142288
+#=GF RT   Identification of small RNAs abundant in Burkholderia cenocepacia biofilms
+#=GF RT   reveal putative regulators with a potential role in carbon and iron
+#=GF RT   metabolism.
+#=GF RA   Sass A, Kiekens S, Coenye T
+#=GF RL   Sci Rep. 2017;7:15665.
+#=GF CC   Identified by RNA-seq, RACE and Northern blot. Strongly expressed in
+#=GF CC   biofilm. 
+#=GF WK   Burkholderia_cenocepacia
+#=GF SQ   4
+
+
+
+AM747720.1/20581-20691     AGUUCUGAUGCACCGCGAAACGAA-UUUGCAGGUGGAGAACGAGGAGACAAUCGAGGCACAA-AGUGCCCGGACCCCAAAGCGCUGUUGGACGGAAUCCAACAGCGCUUUUUC
+CP001503.2/65212-65322     AGUUCUGAUGCACCGCGAAACAAAUUUUGCAGGUGGAGAACGAGGAGACAAUCGAGGCACAA-AGUGCCCGG-CCCCAAAGCGCUGUUGGACGGAAUCCAACAGCGCUUUUUC
+BX571965.1/4054471-4054362 AGUUCUGAUGCACCGCGAAACGAAAUUUGCAGGUGGAGAACGAGGAGACAUUCGAGGCACAG-AGUGCCCGA--UCGAAAGCGCUGUUGGAUUCGUUCCAACAGCGCUUUUUA
+CP001043.1/3421169-3421068 AGUUCUGAUGCACCGAUU-------UUUGCAGGUGGAGAACGAGGAGAC--AUGAGGCACAAAAGUGCCCAUA--CAAAAGCGCUGUUGGACUGGCUCCAGCAGCGCUUUUUA
+#=GC SS_cons               :<<<<---<-<<<<<<<<<_____.>>>>>->>>>->>>>>,,<<-<----<<<-<<<<<__._>>>>>>>>-->>><<<<<<<<<<<<<<_____>>>>>>>>>>>>>>:::
+#=GC RF                    AGuuCUGAuGCaCCGcgaaAcgAA.uucgCAGGuGGaGaaCGAgGAgAcAaccGAGGCaCAa.AGuGCCCggA.cCcaaaGCGCuGuuGGacugaauCCaaCaGCGCuuuUUa
+//

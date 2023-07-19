@@ -1,0 +1,55 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00137
+#=GF ID   SNORD83
+#=GF PI   U83
+#=GF DE   Small nucleolar RNA SNORD83
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; PFOLD
+#=GF GA   35.00
+#=GF TC   35.30
+#=GF NC   34.40
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   snoRNABase; U83;
+#=GF DR   snoRNABase; U84;
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300916;
+#=GF DR   snoopy; Oryzias_latipes300094;
+#=GF RN   [1]
+#=GF RM   10684929
+#=GF RT   Characterisation of the U83 and U84 small nucleolar RNAs: two novel
+#=GF RT   2'-O-ribose methylation guide RNAs that lack complementarities to
+#=GF RT   ribosomal RNAs.
+#=GF RA   Jady BE, Kiss T
+#=GF RL   Nucleic Acids Res 2000;28:1348-1354.
+#=GF RN   [2]
+#=GF RM   16381836
+#=GF RT   snoRNA-LBME-db, a comprehensive database of human H/ACA and C/D box
+#=GF RT   snoRNAs.
+#=GF RA   Lestrade L, Weber MJ
+#=GF RL   Nucleic Acids Res. 2006;34:D158-D162.
+#=GF CC   U83 (SNORD83) and U84 (SNORD84) are members of the C/D class of snoRNA
+#=GF CC   which contain the C (UGAUGA) and D (CUGA) box motifs. They act as guanine
+#=GF CC   methylation guides but lack complementarity to ribosomal RNA [1]. U83 and
+#=GF CC   U84 are spliced from introns 5 and 4 of the BAT1 gene in mammals.
+#=GF WK   Small_nucleolar_RNA_SNORD83
+#=GF SQ   7
+
+
+Z34846.1/492-568       GCCACAUGAUGUUUUCAUUUUGAAAAGUGAGAGCUUUGCGCA--GUGACGACUUUUAUC-AUCACCCUUGACUGAUGGCU
+AJ314857.1/13267-13341 GCCAAAUGAUGUGUG---UUUGAUAUAGGAGCACUGUGUGCA--AGGACGACCCUCAUCUAUCACCCAUGACUGAUGGCU
+AF387339.1/12156-12229 GC-AAAUGAUGUGUG---UUUGAUAUAGGAGCACUGUGUGCA--AGGACGACCCUCAUCUAUCACCCAUGACUGAUGGCU
+BC024859.1/809-885     GCCACAUGAUGUUUGCAUUUGGGAA-GUGAGCGCUCUGCGCA--GUGCUGACCCUUAUCUAUCACCCUUGACUGAUGGCU
+AJ243199.1/1-78        GCCAUAUGAUGUUUUCUUUUCGAAAGGUGAGCGCUUUGCGCA--GUGAUGACCCUCAUCUAUCACCCUUGACUGAUGGCU
+AJ314857.1/8059-8137   GCCACAUGAUGUUUGCAAUUGGGAA-GUGAGCGCUCUGCGCGCGGUGCUGACCCUUAUCUAUCACCCUUGACUGAUGGCU
+AJ251914.1/37947-38024 GCCACAUGAUGUUUUCAUUUUGAAAAGUGAGAGCUUUGCGCA--GUGACGACUUUUAUCUAUCACCCUUGACUGAUGGCU
+#=GC SS_cons           <<<<--------------------------<<<<___>>>>-..------------------------------->>>>:
+#=GC RF                GCCAcAUGAUGUuUgCAuUUuGAaAuguGAGcGCUuUGCgCA..guGauGACccUuAUCUAUCACCCuUGACUGAUGGCU
+//

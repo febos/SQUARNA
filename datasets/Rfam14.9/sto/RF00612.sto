@@ -1,0 +1,59 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00612
+#=GF ID   SNORD75
+#=GF DE   Small nucleolar RNA SNORD75
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   INFERNAL
+#=GF SS   Predicted; RNAalifold; Daub J
+#=GF GA   50.00
+#=GF TC   51.10
+#=GF NC   48.00
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 20 -Z 549862.597050 CM SEQDB
+#=GF DR   snoRNABase; U75;
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300796;
+#=GF DR   snoopy; Oryzias_latipes300025;
+#=GF RN   [1]
+#=GF RM   12215523
+#=GF RT   Purified box C/D snoRNPs are able to reproduce site-specific
+#=GF RT   2'-O-methylation of target RNA in vitro.
+#=GF RA   Galardi S, Fatica A, Bachi A, Scaloni A, Presutti C, Bozzoni I
+#=GF RL   Mol Cell Biol. 2002;22:6663-6668.
+#=GF RN   [2]
+#=GF RM   9819378
+#=GF RT   Classification of gas5 as a multi-small-nucleolar-RNA (snoRNA) host gene
+#=GF RT   and a member of the 5'-terminal oligopyrimidine gene family reveals common
+#=GF RT   features of snoRNA host genes.
+#=GF RA   Smith CM, Steitz JA
+#=GF RL   Mol Cell Biol. 1998;18:6897-6909.
+#=GF RN   [3]
+#=GF RM   16381836
+#=GF RT   snoRNA-LBME-db, a comprehensive database of human H/ACA and C/D box
+#=GF RT   snoRNAs.
+#=GF RA   Lestrade L, Weber MJ
+#=GF RL   Nucleic Acids Res. 2006;34:D158-D162.
+#=GF CC   U75 (SNORD75) belongs to the C/D class of snoRNAs which contain the C
+#=GF CC   (UGAUGA) and D (CUGA) box motifs. Most of the members of the box C/D
+#=GF CC   family function in directing site-specific 2'-O-methylation of substrate
+#=GF CC   RNAs [1]. This family includes the mouse orthologue Z19. U75 is predicted
+#=GF CC   to guide the 2'O-ribose methylation of 28S rRNA residue C4032 [3]. In
+#=GF CC   humans U75 shares the same non-protein coding host gene (gas5) with 9
+#=GF CC   other snoRNAs (U44, U47, U74, U76, U77, U78, U79, U80 and U81)[2].
+#=GF WK   Small_nucleolar_RNA_SNORD75
+#=GF SQ   5
+
+
+AC025750.10/4277-4336    AUUUCUAUGGA----------AAAGAGGUGAAGUGGACAGAAGGGAUGUCUGAAAUUC----UAUCCUGAGGCU
+CR759968.6/152594-152667 UGCCUUUGAUGAAUUAAAAAUGUAUAAGAGUAGUGGACAGAAGUGAUUUCUGAGAACAUUUUUAAUCUGAGGCA
+CR759968.6/152857-152927 UGCCUAUGAUGAAUAAAAAU-GUAUAAGAGUAGUGGACAGGAGUGAUUUCUGAUAAUUUU--UACUCUGAGGCA
+AJ224031.1/3-64          AGCCCAUGAUG----------GUAUGAGAGUAGUGGACAGAAGGGAUUUCUGAAAAACAC--UUUUCUGAGGCU
+AF141346.1/1052-1111     AGCCUGUGAUG----------CUUUAAGAGUAGUGGACAGAAGGGAUUUCUGAAAUUC----UAUUCUGAGGCU
+#=GC SS_cons             <<<<_______.........._______________________________________..________>>>>
+#=GC RF                  aGCCuuUGAUG..........gUAUAAGAGUAGUGGACAGAAGgGAUUUCUGAaAaucuU..UAuUCUGAGGCu
+//

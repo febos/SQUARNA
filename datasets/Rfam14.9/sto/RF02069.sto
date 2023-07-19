@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02069
+#=GF ID   STnc70
+#=GF DE   Enterobacterial sRNA STnc70
+#=GF AU   Burge SW; 0000-0002-2506-927X
+#=GF AU   Barquist LE; 0000-0003-4732-2667
+#=GF SE   Burge SW
+#=GF SS   Predicted; Pfold; Burge SW
+#=GF GA   40.00
+#=GF TC   40.20
+#=GF NC   39.50
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   18725932
+#=GF RT   Deep sequencing analysis of small noncoding RNA and mRNA targets of the
+#=GF RT   global post-transcriptional regulator, Hfq.
+#=GF RA   Sittka A, Lucchini S, Papenfort K, Sharma CM, Rolle K, Binnewies TT,
+#=GF RA   Hinton JC, Vogel J
+#=GF RL   PLoS Genet. 2008;4:e1000163.
+#=GF WK   Non-coding_RNA
+#=GF SQ   2
+
+
+AM933173.1/660477-660625   GAGCGCAACACUUAGCCAGCAUAUACGCUAUGGAUUUCGAGUUGCAGACAAUACGUCUGUAAUUUGCAAGACGAGUCGUACUGGCUCUGAAGUUACCUACGGGUAGUUCAGGUAAUGGGGCCGCCUGUCAGGCGGCCUUUUUACUUUAG
+CP000880.1/2252604-2252456 GAGCGCAACACUUAGCCAGCAUAUACUCUGUGCAUUUCGAGUUGCAGACAACGGGUCUGUAAUUUGAAAGAGGAGUUGUACUGGCUCUGAAGUUACCUACGGGUAGUUCAGGUAAUGGGGCCGCCUGUCAGGUGGCCUUUUUACUUUAG
+#=GC SS_cons               :::::::::::::<<<<<<---------------<<<<<<<<<<<<<<<_____>>>>>>>>>>>>>>>----------->>>>>>,,,,,,,,<<<____>>>,,,,,,,<<<--<<<<<<<<<<___>>>>>>>>>>-->>>:::::
+#=GC RF                    GAGCGCAACACUUaGCCaGCAUAUACuCUaUGgAuuuCgaguugCaGaCAAuagGuCuGuaauuuGaaaGAgGAGUuGUACuGGCuCUGAAGUUaCCUACGGGuAGUUCAGGuaAUggGGCCgCCuGUCaGGcGGCCuuUUuaCUUUAG
+//

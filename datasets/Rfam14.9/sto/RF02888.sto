@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02888
+#=GF ID   BtsR1
+#=GF DE   Bacillus sRNA 1
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; Rscape;
+#=GF GA   66.00
+#=GF TC   66.60
+#=GF NC   36.20
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0040033; sRNA-mediated gene silencing;
+#=GF DR   GO; 0003676; nucleic acid binding;
+#=GF RN   [1]
+#=GF RM   29069426
+#=GF RT   Small RNA-mediated Cry toxin silencing allows Bacillus thuringiensis to
+#=GF RT   evade Caenorhabditis elegans avoidance behavioral defenses.
+#=GF RA   Peng D, Luo X, Zhang N, Guo S, Zheng J, Chen L, Sun M
+#=GF RL   Nucleic Acids Res. 2018;46:159-173.
+#=GF CC   Allows avoidance of host behavioural defences by silencing the Cry toxin
+#=GF CC   when outside the host via direct base pairing to the RBS site of the
+#=GF CC   Cry5Ba toxin transcript and inhibiting its expression. The silencing
+#=GF CC   results in increased ingestion by C. elegans and is relieved inside the
+#=GF CC   host, resulting in host death.
+#=GF WK   Bacillus_thuringiensis
+#=GF SQ   3
+
+
+
+AAJM01000018.1/9079-9029           UGUGUUUCACUCCUUUUACAUGUAUUGUAAACCUUCACACUAAUGUGAAGG
+AE016877.1/5073644-5073594         UGCGUUUCACUCCUUCUACAUGUAUUGUAAACCUUCACACUAAUGUGAGGG
+CM000745.1/4393294-4393244         UGCAUUUCACUCCUUUCGUAUAUAUUGUAAACCUUCACACUAAUGUGAAGG
+#=GC SS_cons                       :::::::::::::<<<<-<<<<<___________________>>>>>>>>>
+#=GC RF                            UGcGUUUCACUCCUUuuACAUgUAUUGUAAACCUUCACACUAAuGUGaaGG
+//

@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01105
+#=GF ID   SBWMV2_UPD-PKl
+#=GF DE   Pseudoknot of upstream pseudoknot domain (UPD) of the 3'UTR
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   39.00
+#=GF TC   41.70
+#=GF NC   34.80
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 31.50 -Z 549862.597050 CM SEQDB
+#=GF DR   PKBASE; PKB00204;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 1904973; positive regulation of viral translation;
+#=GF DR   GO; 0046782; regulation of viral transcription;
+#=GF RN   [1]
+#=GF RM   10603167
+#=GF RT   Molecular characterization of a new furovirus mainly infecting rye.
+#=GF RA   Koenig R, Pleij CW, Huth W
+#=GF RL   Arch Virol. 1999;144:2125-2140.
+#=GF WK   UPSK_RNA
+#=GF SQ   2
+
+
+X81639.1/3336-3362 AGAGUUAUCAUACUCUAUAAACUAUGA
+L07938.1/3336-3362 AGAGUUAUCAUACUCUAUAAACUAUGA
+#=GC SS_cons       <<<<___AAAAA>>>>::::::aaaaa
+#=GC RF            AGAGUUAUCAUACUCUAUAAACUAUGA
+//

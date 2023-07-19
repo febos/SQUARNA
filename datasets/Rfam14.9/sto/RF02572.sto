@@ -1,0 +1,39 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02572
+#=GF ID   babR_5UTR
+#=GF DE   Brucella babR 5'UTR
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; PMID:22020650 
+#=GF GA   93.00
+#=GF TC   94.20
+#=GF NC   44.00
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   SO; 0000204; five_prime_UTR;
+#=GF RN   [1]
+#=GF RM   22020650
+#=GF RT   The RNA chaperone Hfq independently coordinates expression of the VirB
+#=GF RT   type IV secretion system and the LuxR-type regulator BabR in Brucella
+#=GF RT   abortus 2308.
+#=GF RA   Caswell CC, Gaines JM, Roop RM 2nd
+#=GF RL   J Bacteriol. 2012;194:3-14.
+#=GF CC   Hfq protein regulates virB operon which is required for full virulence of
+#=GF CC   the bacteria. It can bind to 5' untranslated region of virB
+#=GF CC   transcriptional regulator BabR and mediate its effects on babR expression.
+#=GF WK   Brucella_sRNA
+#=GF SQ   3
+
+
+
+ACOR01000001.1/198901-199034 UAAUCUUCGUAGAAGAAAUAUGAAAGAUAUGCUAGGAAUGUUUAGCGAUACAUUUUACCAAAAAUCGCUGCGAUUCCAAGAAUUCAUAUUUAUUUUGAAACGCUACUGGGAUGUCUGCAAUGAAAUGGGAAACA
+CP000911.1/197874-198007     UAAUCUUCGUAGAAGAAAUAUGAAAGAUAUGCUAGGAAUGUUUAGCGAUACAUUUUACCAAAAAUCGCUGCGAUUCCAAGAAUUCAUAUUUAUUUUGAAACGCUACUGGGAUCUCUGCAAUGAAAUGGGAAACA
+ACEI01000058.1/50197-50330   UAAUCUUCGUAGAAGAAAUAUGAAACAUAUGCUAGGAAUGUUUAGCGAUACAUUUUACCAAAAAUCGCUGCGAUUCCAAGAAUUCAUAUUUAUUUUGAAACGCUACUGGGAUGUCUGCAAUGAAAUGGGAAACA
+#=GC SS_cons                 :::<<<<<___>>>>>--(((---(((((((((((,,,,,,,,<<<<<<______________>>>>>><<<<<<<--<<<<<________>>>>>>>>>>>>,,)))))))))))---)))::::::::::::
+#=GC RF                      UAAuCuuCGUAGaaGaAAcauGAAagacaucCcaGGAAUGUUUaGCGauACAUUUUACCAAAAauCGCuGCGguuCCAagaauUCAUAUUUauucuGaacCGCUACugGgaugucuGCAaugAAAUGGGAAACA
+//

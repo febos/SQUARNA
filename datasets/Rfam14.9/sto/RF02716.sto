@@ -1,0 +1,39 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02716
+#=GF ID   sno_ncR3
+#=GF DE   Small nucleolar RNA ncR3
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   88.00
+#=GF TC   88.50
+#=GF NC   48.50
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 0 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000275; small nucleolar RNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   26607788
+#=GF RT   Promoter-based identification of novel non-coding RNAs reveals the
+#=GF RT   presence of dicistronic snoRNA-miRNA genes in Arabidopsis thaliana.
+#=GF RA   Qu G, Kruszka K, Plewka P, Yang SY, Chiou TJ, Jarmolowski A,
+#=GF RA   Szweykowska-Kulinska Z, Echeverria M, Karlowski WM
+#=GF RL   BMC Genomics. 2015;16:1009.
+#=GF CC   Type C/D. Target 18S.
+#=GF WK   TeloSII_ncRNAs
+#=GF SQ   5
+
+
+
+CP002684.1/14283975-14284049 AAAGCUUCCACGUUUUCAUGAAGUUGUUGUGACAAGGUGAUUUUUUCUUCUUUUGGCUGAUUCGGAGAUGCAUUG
+AFNC01014841.1/284-358       GAAGCUUCCACGAUCUGAUGAAGUUGCCGUGACAAAGUGAUUUUUCCUUUGUUUUGCUGAUUCAGAGAUGCGUUG
+CP002687.1/11116124-11116050 GAGGCUUCUACCGUCUUAUGAAGUUGCUGUGACAGAGUUUAUUUUUCUUCCUUUGGCUGAUUCGGAGAUGCAUUA
+CP002685.1/56814-56886       GAGGCUUCUACCGUCUUAUGAAGUUGCUGUGACA--GUGAAUUUUUCUUCCUUUGGCUGAUUCGGAGAUGCAUUA
+CP002686.1/14539697-14539771 GAAGCUUCCACGAUCUAGUGAAGUUGCUCUGACAAAGGGAUUUUUCCUUUGUUUUGCUGAUUCAGAGAGGCAAUG
+#=GC SS_cons                 ::::::::<<<-<<-<<<<<<_____>>>>>>->>->>>------<<<<<_____________>>>>>:::::::
+#=GC RF                      GAaGCUUCcaCguUCUcaugaAGUUGcugugACAaAGugAuUUUUuCUUcuUUUgGCUGAUUCgGAGaUGCAUUg
+//

@@ -1,0 +1,48 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02866
+#=GF ID   ncS16
+#=GF DE   Burkholderia sRNA 16 (Bc_KC_sr1)
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   48.00
+#=GF TC   48.50
+#=GF NC   39.70
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0097311; bacterial biofilm matrix;
+#=GF DR   SO; 0010039; response to iron ion;
+#=GF RN   [1]
+#=GF RM   29142288
+#=GF RT   Identification of small RNAs abundant in Burkholderia cenocepacia biofilms
+#=GF RT   reveal putative regulators with a potential role in carbon and iron
+#=GF RT   metabolism.
+#=GF RA   Sass A, Kiekens S, Coenye T
+#=GF RL   Sci Rep. 2017;7:15665.
+#=GF RN   [2]
+#=GF RM   29099689
+#=GF RT   Identification of novel small RNAs in Burkholderia cenocepacia KC-01
+#=GF RT   expressed under iron limitation and oxidative stress conditions.
+#=GF RA   Ghosh S, Dureja C, Khatri I, Subramanian S, Raychaudhuri S, Ghosh S
+#=GF RL   Microbiology. 2017; [Epub ahead of print]
+#=GF CC   Identified by RNA-seq, RACE and Northern blot. Strongly expressed in
+#=GF CC   biofilm [1]. Also know as Bc_KC_sr1 [2]. Upregulated in response to iron
+#=GF CC   ion depletion. Predicted targets include cysteine desulfurase and
+#=GF CC   isochorismatase desulfurase.[2] 
+#=GF WK   Burkholderia_cenocepacia
+#=GF SQ   4
+
+
+
+AM747720.1/2912201-2912283 GUACGCGGCUGGUGUUGCCGGCGCGUCACCAUUCUCCUCUUGUCGUUGUUGCUCCGGGGCCGUAUCCGCCCCGGUUUUUUUUU
+CP001043.1/2459324-2459404 GUACGUGUGCGGCGAUGCCGCCGCGUCACCAUUCUCCUCUUGUCGUUGUUGCUCCGGGGCCCA--UAGCCCCGGUUUUUUUUG
+CP000270.1/1083868-1083788 GUACGUGGCUGGCGAAGCCGCCGCGUCACCAUUCUCCUCUUGUCGUUGUUGCUCCGGGGU--UAAUAACCCCGGUUUUUUUUG
+FR687359.1/584945-584866   GUGCGUGG-CGGCGAUACCGUUACGUCACCAUUCUCCUCUUGUCGUUGUUGCUCCGGGGCUCGA--AGCCCCGGUUUUUUUUA
+#=GC SS_cons               <<<<<<<-<<<<<___>>>>>>>>>>->>------------------------<<<<<<<_______>>>>>>>:::::::::
+#=GC RF                    GuaCGcGggcGGcGaugCCgcCgCGuCaCCAUUCUCCUCUUGUCGUUGUUGCUCCGGGGcccuAauagCCCCGGUUUUUUUUg
+//

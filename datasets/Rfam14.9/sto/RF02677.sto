@@ -1,0 +1,43 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02677
+#=GF ID   NsiR4
+#=GF DE   Nitrogen stress-induced RNA 4
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAalifold;
+#=GF GA   40.00
+#=GF TC   40.60
+#=GF NC   32.90
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0010608; posttranscriptional regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   26494284
+#=GF RT   The sRNA NsiR4 is involved in nitrogen assimilation control in
+#=GF RT   cyanobacteria by targeting glutamine synthetase inactivating factor IF7.
+#=GF RA   Klahn S, Schaal C, Georg J, Baumgartner D, Knippen G, Hagemann M,
+#=GF RA   Muro-Pastor AM, Hess WR
+#=GF RL   Proc Natl Acad Sci U S A. 2015;112:E6243-E6252.
+#=GF CC   Former name SyR12, is a cyanobacterial non-coding RNA which plays role in
+#=GF CC   the regulation of Glutamine synthetase (GS), a key enzyme in biological
+#=GF CC   nitrogen assimilation. NsiR4 interacts with the 5'UTR of the mRNA of the
+#=GF CC   GS inactivating factor IF7 (gifA mRNA) and reduces its expression. NsiR4
+#=GF CC   expression is under positive control of the nitrogen control transcription
+#=GF CC   factor (NtcA). NsR4 is a first example of an sRNA controlling the
+#=GF CC   assimilation of a micronutrient.
+#=GF WK   NsiR4_small_RNA
+#=GF SQ   4
+
+
+CP000806.1/666566-666631   AAGACAUAAAGUCAAUUAUCACCCUCCGAUUGCUUAUUGCAACCGCCCACAC-UUCAGUGGCGGUUU
+BA000022.2/1289326-1289264 AAGACAUAAAGUCAA-UAUCACCCUCCGAUUGCUAG---AGGUCGCCCAUUGCUUCAGUGGCGGCUU
+CP002198.1/2006173-2006109 AAGACAUAAAGUCAA-UAUCACCCUCCGAUUGCUUAUCCAAGCCGCCCGUUG-UCUAGGGGCGGUUU
+CP001291.1/4248692-4248628 AAGACAUAAAGUCAA-UAUCACCCUCCGAUUGCUUAUCCAGGCCGCCCAUAG-UCUAGGGGCGGUUU
+#=GC SS_cons               ::<<<_____>>>--.-----------------------<<<<<<<<<____._____>>>>>>>>>
+#=GC RF                    AAGACAUAAAGUCAA.UAUCACCCUCCGAUUGCUUAUccaagCCGCCcAUug.UuuAGgGGCGGcuu
+//

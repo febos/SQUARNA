@@ -1,0 +1,49 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00326
+#=GF ID   snoZ155
+#=GF DE   Small nucleolar RNA Z155
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Griffiths-Jones S
+#=GF SS   Predicted; Griffiths-Jones S
+#=GF GA   43.00
+#=GF TC   43.20
+#=GF NC   42.10
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   12007400
+#=GF RT   Small nucleolar RNAs: an abundant group of noncoding RNAs with diverse
+#=GF RT   cellular functions.
+#=GF RA   Kiss T
+#=GF RL   Cell 2002;109:145-148.
+#=GF RN   [2]
+#=GF RM   12736310
+#=GF RT   The high diversity of snoRNAs in plants: identification and comparative
+#=GF RT   study of 120 snoRNA genes from Oryza sativa.
+#=GF RA   Chen CL, Liang D, Zhou H, Zhuo M, Chen YQ, Qu LH
+#=GF RL   Nucleic Acids Res 2003;31:2601-2613.
+#=GF CC   Z155 is a member of the C/D class of snoRNA which contain the C (UGAUGA)
+#=GF CC   and D (CUGA) box motifs. Most of the members of the box C/D family
+#=GF CC   function in directing site-specific 2'-O-methylation of substrate RNAs
+#=GF CC   [1].
+#=GF WK   Small_nucleolar_RNA_Z155
+#=GF SQ   8
+
+
+AF318010.1/1-76          ---UGGAAUGAUGAUAACGAUUUUUCGGAUAUAUUAAUUUAUUCUGUCGACC-AAAACUCAGACUACAAUUAUCUGACUA---
+AY707468.1/1-82          GGGUGGAAUGAUGAUAACGAUUUUUCGGAUAUAUUAAUUUAUUCUGUCGACC-AAAACUCAGACUACAAUUAUCUGACUAAUU
+AY664413.1/185186-185259 UGUUGAAGGGAUGAUAAG-CCUUG-CAGCAACUCG-----A-GUGUUAACAA-AAAAUUUAGCCUACAAUUAUCUGAUCAACU
+AJ490349.1/1-78          --UUGAUGUGAGGAUAAAACUUUCACAGAAACUCUUUUG-AUGUGUUGACCCUAAAAUUCAGACUACAAUUAUCUGAUCAG--
+AC104707.2/85787-85706   AGUUGAUGUGAGGAUAAAACUUUCACAGAAACUCUUUUG-AUGUGUUGACCCUAAAAUUCAGACUACAAUUAUCUGAUCAGCU
+AJ490347.1/1-76          AGUUGAUGGGAUGAUAAC-CUUUCACAGAAACUGU-----AUGUGUUGACCC-AAAAUUCAGACUACAAUUAUCUGAUCAACU
+AJ490345.1/1-76          AGUUGAUGGGAUGAUAAC-CUUUCACAGAAACUGU-----AUGUGUUGACCC-AAAAUUCAGACUACAAUUAUCUGAUCAACU
+AY220660.1/1-76          AGUUGAUGGGAUGAUAAC-CUUUCACAGAAACUGU-----AUGUGUUGACCC-AAAAUUCAGACUACAAUUAUCUGAUCAACU
+#=GC SS_cons             <<<<<<_________________________________.____________.________________________>>>>>>
+#=GC RF                  aGuUGauguGAUGAUAAcgcUUUcaCAGAaAcuuUaaUu.AUgUguUgAcCC.AAAAUUCAGACUACAAUUAUCUGAuCAaCu
+//

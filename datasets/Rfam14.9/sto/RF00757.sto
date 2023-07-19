@@ -1,0 +1,162 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00757
+#=GF ID   mir-275
+#=GF DE   microRNA mir-275
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   56.00
+#=GF TC   56.30
+#=GF NC   55.50
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000187;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17933784
+#=GF RT   Anopheles gambiae miRNAs as actors of defence reaction against Plasmodium
+#=GF RT   invasion.
+#=GF RA   Winter F, Edaye S, Huttenhofer A, Brunel C
+#=GF RL   Nucleic Acids Res. 2007;35:6953-6962.
+#=GF RN   [2]
+#=GF RM   20167119
+#=GF RT   Identification of microRNAs expressed in two mosquito vectors, Aedes
+#=GF RT   albopictus and Culex quinquefasciatus.
+#=GF RA   Skalsky RL, Vanlandingham DL, Scholle F, Higgs S, Cullen BR
+#=GF RL   BMC Genomics. 2010;11:119.
+#=GF RN   [3]
+#=GF RM   12844358
+#=GF RT   Computational identification of Drosophila microRNA genes.
+#=GF RA   Lai EC, Tomancak P, Williams RW, Rubin GM
+#=GF RL   Genome Biol. 2003;4:R42.
+#=GF RN   [4]
+#=GF RM   12919683
+#=GF RT   The small RNA profile during Drosophila melanogaster development.
+#=GF RA   Aravin AA, Lagos-Quintana M, Yalcin A, Zavolan M, Marks D, Snyder B,
+#=GF RA   Gaasterland T, Meyer J, Tuschl T
+#=GF RL   Dev Cell. 2003;5:337-350.
+#=GF RN   [5]
+#=GF RM   17989254
+#=GF RT   Evolution, biogenesis, expression, and target predictions of a
+#=GF RT   substantially expanded set of Drosophila microRNAs.
+#=GF RA   Ruby JG, Stark A, Johnston WK, Kellis M, Bartel DP, Lai EC
+#=GF RL   Genome Res. 2007;17:1850-1864.
+#=GF RN   [6]
+#=GF RM   17989255
+#=GF RT   Systematic discovery and characterization of fly microRNAs using 12
+#=GF RT   Drosophila genomes.
+#=GF RA   Stark A, Kheradpour P, Parts L, Brennecke J, Hodges E, Hannon GJ, Kellis M
+#=GF RL   Genome Res. 2007;17:1865-1879.
+#=GF RN   [7]
+#=GF RM   20075255
+#=GF RT   Functional and evolutionary insights from the genomes of three parasitoid
+#=GF RT   Nasonia species.
+#=GF RA   Werren JH, Richards S, Desjardins CA, Niehuis O, Gadau J, Colbourne JK,
+#=GF RA   Beukeboom LW, Desplan C, Elsik CG, Grimmelikhuijzen CJ, Kitts P, Lynch JA,
+#=GF RA   Murphy T, Oliveira DC, Smith CD, van de Zande L, Worley KC, Zdobnov EM,
+#=GF RA   Aerts M, Albert S, Anaya VH, Anzola JM, Barchuk AR, Behura SK, Bera AN,
+#=GF RA   Berenbaum MR, Bertossa RC, Bitondi MM, Bordenstein SR, Bork P,
+#=GF RA   Bornberg-Bauer E, Brunain M, Cazzamali G, Chaboub L, Chacko J, Chavez D,
+#=GF RA   Childers CP, Choi JH, Clark ME, Claudianos C, Clinton RA, Cree AG,
+#=GF RA   Cristino AS, Dang PM, Darby AC, de Graaf DC, Devreese B, Dinh HH, Edwards
+#=GF RA   R, Elango N, Elhaik E, Ermolaeva O, Evans JD, Foret S, Fowler GR, Gerlach
+#=GF RA   D, Gibson JD, Gilbert DG, Graur D, Grunder S, Hagen DE, Han Y, Hauser F,
+#=GF RA   Hultmark D, Hunter HC 4th, Hurst GD, Jhangian SN, Jiang H, Johnson RM,
+#=GF RA   Jones AK, Junier T, Kadowaki T, Kamping A, Kapustin Y, Kechavarzi B, Kim
+#=GF RA   J, Kim J, Kiryutin B, Koevoets T, Kovar CL, Kriventseva EV, Kucharski R,
+#=GF RA   Lee H, Lee SL, Lees K, Lewis LR, Loehlin DW, Logsdon JM Jr, Lopez JA,
+#=GF RA   Lozado RJ, Maglott D, Maleszka R, Mayampurath A, Mazur DJ, McClure MA,
+#=GF RA   Moore AD, Morgan MB, Muller J, Munoz-Torres MC, Muzny DM, Nazareth LV,
+#=GF RA   Neupert S, Nguyen NB, Nunes FM, Oakeshott JG, Okwuonu GO, Pannebakker BA,
+#=GF RA   Pejaver VR, Peng Z, Pratt SC, Predel R, Pu LL, Ranson H, Raychoudhury R,
+#=GF RA   Rechtsteiner A, Reese JT, Reid JG, Riddle M, Robertson HM, Romero-Severson
+#=GF RA   J, Rosenberg M, Sackton TB, Sattelle DB, Schluns H, Schmitt T, Schneider
+#=GF RA   M, Schuler A, Schurko AM, Shuker DM, Simoes ZL, Sinha S, Smith Z, Solovyev
+#=GF RA   V, Souvorov A, Springauf A, Stafflinger E, Stage DE, Stanke M, Tanaka Y,
+#=GF RA   Telschow A, Trent C, Vattathil S, Verhulst EC, Viljakainen L, Wanner KW,
+#=GF RA   Waterhouse RM, Whitfield JB, Wilkes TE, Williamson M, Willis JH, Wolschin
+#=GF RA   F, Wyder S, Yamada T, Yi SV, Zecher CN, Zhang L, Gibbs RA
+#=GF RL   Science. 2010;327:343-348.
+#=GF RN   [8]
+#=GF RM   18714353
+#=GF RT   The silkworm (Bombyx mori) microRNAs and their expressions in multiple
+#=GF RT   developmental stages.
+#=GF RA   Yu X, Zhou Q, Li SC, Luo Q, Cai Y, Lin WC, Chen H, Yang Y, Hu S, Yu J
+#=GF RL   PLoS One. 2008;3:e2997.
+#=GF RN   [9]
+#=GF RM   18977439
+#=GF RT   Identification of conserved microRNAs in Bombyx mori (silkworm) and
+#=GF RT   regulation of fibroin L chain production by microRNAs in heterologous
+#=GF RT   system.
+#=GF RA   Cao J, Tong C, Wu X, Lv J, Yang Z, Jin Y
+#=GF RL   Insect Biochem Mol Biol. 2008;38:1066-1071.
+#=GF RN   [10]
+#=GF RM   20199675
+#=GF RT   MicroRNAs of Bombyx mori identified by Solexa sequencing.
+#=GF RA   Liu S, Li D, Li Q, Zhao P, Xiang Z, Xia Q
+#=GF RL   BMC Genomics. 2010;11:148.
+#=GF RN   [11]
+#=GF RM   19699294
+#=GF RT   A discovery of novel microRNAs in the silkworm (Bombyx mori) genome.
+#=GF RA   Yu X, Zhou Q, Cai Y, Luo Q, Lin H, Hu S, Yu J
+#=GF RL   Genomics. 2009;94:438-444.
+#=GF RN   [12]
+#=GF RM   20229201
+#=GF RT   Novel microRNAs in silkworm (Bombyx mori).
+#=GF RA   Cai Y, Yu X, Zhou Q, Yu C, Hu H, Liu J, Lin H, Yang J, Zhang B, Cui P, Hu
+#=GF RA   S, Yu J
+#=GF RL   Funct Integr Genomics. 2010;10:405-415.
+#=GF RN   [13]
+#=GF RM   19961592
+#=GF RT   Direct sequencing and expression analysis of a large number of miRNAs in
+#=GF RT   Aedes aegypti and a multi-species survey of novel mosquito miRNAs.
+#=GF RA   Li S, Mead EA, Liang S, Tu Z
+#=GF RL   BMC Genomics. 2009;10:581.
+#=GF RN   [14]
+#=GF RM   20817720
+#=GF RT   Functional shifts in insect microRNA evolution.
+#=GF RA   Marco A, Hui JH, Ronshaugen M, Griffiths-Jones S
+#=GF RL   Genome Biol Evol. 2010;2:686-696.
+#=GF RN   [15]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   Mir-275_microRNA_precursor_family
+#=GF SQ   25
+
+
+URS000075A159_7091/1-86   CAGGCGGCAGCGCCGCGCGCUAC-UCCGGCGC-CAGGACUGUCC------UCACCG-----AGUCAGGUACCUGAAGUAGCGCGCGGUGUCUCCUCCUA
+URS0000D4F8C0_7130/7-92   CAGGCGGCGGCGCCGCGCGCUAC-UCCGGCGC-CGAGGCUGUCC------UCACCG-----AGUCAGGUACCUGAAGUAGCGCGCGCCGCCUCCCCCGA
+URS0000D5359E_7159/1-83   AUCCUUUCGAUUUCGCGCGCUAA-GCAGGAAC-CGAGACUUUGU---CAUUUGCUA---GCAGUCAGGUACCUGAAGUAGCGCGCGUGAUC--------
+URS0000D4FA45_7176/7-97   AUCCUUCCGAUAGCGCGCGCUAA-GCAGGAAC-CGGGACUUGGU---CAUUCGCUA---GCAGUCAGGUACCUGAAGUAGCGCGCGUGAUCGGAAGUGC
+URS00000A277D_7165/3-95   AGCCGUCUAAUGACACGCGCUAA-GCAGGAAC-CGGGACUUGGUACACAUUCGCUA---GCAGUCAGGUACCUGAAGUAGCGCGCGUUAUUCGGCUCA-
+URS000044FF0B_7237/2-90   AAGUCUCCUACCAUGCGCGCUAA-UCAGAGAC-CGGGGCUGGUUU---UUUCAC----UGCAGUCAGGUACCUGAAGUAGCGCGCGUGGUG-CUAGACA
+URS00003BA7F9_7234/1-89   AAGUCUCCUACCAUGCGCGCUAA-UCAGAGAC-CGGGGCUGGUUU---UUUCAC----UGCAGUCAGGUACCUGAAGUAGCGCGCGUGGUG-CUAGACA
+URS000059185F_7227/5-93   AAGUCUCCUACCUUGCGCGCUAA-UCAGUGAC-CGGGGCUGGUU----UUUUAU---AUACAGUCAGGUACCUGAAGUAGCGCGCGUGGUG-GCAGACA
+URS00004F90CA_7240/1-89   AAGUCUCCUACCUUGCGCGCUAA-UCAGUGAC-CGGGGCUGGUU----UUUUAU---AUACAGUCAGGUACCUGAAGUAGCGCGCGUGGUG-GCAGACA
+URS00004D1E75_7238/1-89   AAGUCUCCUACCUUGCGCGCUAA-UCAGUGAC-CGGGGCUUGUU----UUUUAU---AUACAGUCAGGUACCUGAAGUAGCGCGCGUGGUG-GCAGACA
+URS000036E337_7220/1-89   AAGUCUCCUACCUUGCGCGCUAA-UCAGUGAC-CGGGGCUGGUU----UUUUAU---AUACAGUCAGGUACCUGAAGUAGCGCGCGUGGUG-CCAGACA
+URS00005A6F28_7245/1-89   GAGUCUCCUACCUUGCGCGCUAA-UCAGUGAC-CGGGGCUGGUU----UUUUAU---AUACAGUCAGGUACCUGAAGUAGCGCGCGUGGUG-CCAGACA
+URS0000551056_7217/1-86   -AGUCUCCUACCUUGCGCGCUAA-UCAGUGAC-CGGGGCUGGUU----UUU-GC---A-ACAGUCAGGUACCUGAAGUAGCGCGCGUGGUG-GCAGACA
+URS000035D047_7260/1-92   --GUCUCUUACCUUGCGCGCUAA-UCAGUGAC-CAGGGCUGAGUA--AUUUUAUUCAAUACAGUCAGGUACCUGAAGUAGCGCGCGUGGUU-UUAGACC
+URS00003882E4_7222/1-91   --GUCGUUUACCGCGCGCGCUAA-UCAGUGAC-CGGGGCUGGUUU--UGAUUAUCC--CACAGUCAGGUACCUGAAGUAGCGCGCGUGGUGGCCAGACG
+URS000055F3C2_7244/1-91   --GUCUUUUACCGUGCGCGCUAA-UCAGUGAC-CGGGGCUGGUUU--UGGUUAUCC--CACAGUCAGGUACCUGAAGUAGCGCGCGUGGUGGCCAGACG
+URS00005D4068_7230/1-91   --GUCUUUUACCGUGCGCGCUAA-UCAGUGAC-CGGGGCUGGUUU--CGAUUAUCU--CACAGUCAGGUACCUGAAGUAGCGCGCGUGGUGGCUAGACG
+URS000075E9B1_7460/10-100 UUGUCGUGCGCAACGCGCGUUAC-UCGGGUACUUUAGGCUGUGCCAAUUUCGAAUC-----AGUCAGGUACCUGAAGUAGCGCGCGCUGCGGCGAAA--
+URS000075BD50_7070/1-71   ---------GCUACGCGUGUUAC-CUCAGUACCU-AGGCUGGGGUU-UUUCGAA-------AGUCAGGUACCUGAAGUAGCGCGCGCAGC---------
+URS000075BBE9_7425/9-94   AGCCAGUUUGCAACUCGCGCUAC-UCCGGUACUUACGACUGUGCA---UUCGAU-------AGUCAGGUACCUGAAGUAGCGCGCGCUGCGACUGGA--
+URS0000D51B26_7426/1-71   ---------GCAACUCGCGCUAC-UCCGGUACUUACGACUGUGCA---UUCGAU-------AGUCAGGUACCUGAAGUAGCGCGCGCUGCG--------
+URS0000D51B26_7427/1-71   ---------GCAACUCGCGCUAC-UCCGGUACUUACGACUGUGCA---UUCGAU-------AGUCAGGUACCUGAAGUAGCGCGCGCUGCG--------
+URS0000D54021_6945/8-96   CUCCCGUUGCCUCUACGUGCUGCAUCAGGUGCUUGUGACUACGCG---UUCGAA-------AGUCAGGUACCUGAAGUAGCGCGCGGAAGGCUUCGGGG
+URS0000D51EAF_6669/4-96   UUACUGGCCACUCCCCGUGCUGCGACAGGUGCUUCCGGCUGUGUUAAUAAUUGCGA------GUCAGGUACCUGAAGUAGCGCGCGGAGUGGCUCGGAA
+URS000075C4E9_7029/1-62   -----------------GGCUGCUACAGGCACUCUUAGACUCUUUAAUGUUGACGA-----AGUCAGGUACCUGAAGUAGCGCG---------------
+#=GC SS_cons              ::::::::<<<<-<-<<<<<<<-.------<<.<--<<<<_____.._________.....>>>>->>>-------->>>>>>>->->>>>.:::::::
+#=GC RF                   aagucuuccgCcacgCGcGCUAa.uCAGguAC.CggGgCUguuuu..uuUUuAuua.....AGuCAGGUACCUGAAGUAGCgCGCgugGcg.cuagaca
+//

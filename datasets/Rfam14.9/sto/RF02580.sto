@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02580
+#=GF ID   tsr31
+#=GF DE   S. aureus tsr31 small RNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   50.00
+#=GF TC   60.50
+#=GF NC   49.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   26861020
+#=GF RT   Genome-wide Annotation, Identification, and Global Transcriptomic Analysis
+#=GF RT   of Regulatory or Small RNA Gene Expression in Staphylococcus aureus.
+#=GF RA   Carroll RK, Weiss A, Broach WH, Wiemels RE, Mogen AB, Rice KC, Shaw LN
+#=GF RL   MBio. 2016;7:e01990-e01915.
+#=GF WK   Bacterial_small_RNA
+#=GF SQ   4
+
+
+
+ACJS01000063.1/24795-24726 UCCUUUAAAUAGGACACGUGUAUAAAAUUUAUACGCUCCCCUUACAAAAUUUGUGAGAGGGAGCGUUUUU
+ACPZ01000047.1/53336-53268 UCCUUUAAAUAGGACACGUGUAUAAAUGUUAUACGCUCCCCUUACA-AAUAUGUGAGAGGGAGCGUUUUU
+AP006716.1/914948-915016   UCCUUUAAAUAGGACACGUGUAUAAAUCAUAUACGCUCCCCUUACAGA-UAUGUGAGAGGGAGCGAUUUU
+CP000255.1/2245035-2244966 UCCUUUAAAUAGGACACGUGUAUAAAAUUUAUACGCUCCCCUUACAGAAUUUGUGAGAGGGAGCGUUUUU
+#=GC SS_cons               <<<<______>>>>------------------<<<<<<<<<<<<<<_____>>>>>>->>>>>>>>::::
+#=GC RF                    UCCUUUAAAUAGGACACGUGUAUAAAuuuUAUaCGCUCCCCUuACAgAAUaUGUgAGAGGGAGCGuUUUU
+//

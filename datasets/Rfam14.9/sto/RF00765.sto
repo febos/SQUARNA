@@ -1,0 +1,69 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00765
+#=GF ID   mir-337
+#=GF DE   mir-337 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   80.00
+#=GF TC   81.60
+#=GF NC   50.00
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000195;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF DR   GO; 0071333; cellular response to glucose stimulus;
+#=GF DR   GO; 0060291; long-term synaptic potentiation;
+#=GF RN   [1]
+#=GF RM   14691248
+#=GF RT   Identification of many microRNAs that copurify with polyribosomes in
+#=GF RT   mammalian neurons.
+#=GF RA   Kim J, Krichevsky A, Grad Y, Hayes GD, Kosik KS, Church GM, Ruvkun G
+#=GF RL   Proc Natl Acad Sci U S A. 2004;101:360-365.
+#=GF RN   [2]
+#=GF RM   20403161
+#=GF RT   Small RNA expression and strain specificity in the rat.
+#=GF RA   Linsen SE, de Wit E, de Bruijn E, Cuppen E
+#=GF RL   BMC Genomics. 2010;11:249.
+#=GF RN   [3]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [4]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-337 imported
+#=GF CC   from miRBase.
+#=GF WK   Mir-337_microRNA_precursor_family
+#=GF SQ   9
+
+
+URS000075BAF7_9598/1-92  -UAGUCAGUAGUUGGGGGGUGGGAACGGCUUCAUACAGGAGUUGAU-GCACAGUUAUCCAGCUCCUAUAUGAUGCCUUUCUUCAUCCCCUUCAA
+URS000075E41A_9593/1-91  --AGUCAGUAGUUGGGGGGUGGGAACGGCUUCAUACAGGAGUUGAU-GCACAGUUAUCCAGCUCCUAUAUGAUGCCUUUCUUCAUCCCCUUCAA
+URS000075B5CB_9796/1-92  GUAGUCAGUAGGUGGGGGGUGAGAACGGCUUCAUACAGGAGCUGAU-GCGCAGUUACCCAGCUCCUAUGAGAUGCCUUUCCUCA-CCCCUUCAC
+URS000075CFEA_9600/1-93  GUAGUCAGUAGUUGGGGGGUGGGAACGGCUUCAUACAGGAGUUGAU-GCACAGUUAUCCAGCUCCUAUAUGAUGCCUUUCUUCAUCCCCUUCAA
+URS000075CFEA_9544/1-93  GUAGUCAGUAGUUGGGGGGUGGGAACGGCUUCAUACAGGAGUUGAU-GCACAGUUAUCCAGCUCCUAUAUGAUGCCUUUCUUCAUCCCCUUCAA
+URS000075CFEA_9606/1-93  GUAGUCAGUAGUUGGGGGGUGGGAACGGCUUCAUACAGGAGUUGAU-GCACAGUUAUCCAGCUCCUAUAUGAUGCCUUUCUUCAUCCCCUUCAA
+URS00006BF3F4_10116/4-97 GUAGUGAGAAGUUGGGGGGUGGGAACGGCGUCAUGCAGGAGUUGAUUGCACAGCCAUUCAGCUCCUAUAUGAUGCCUUUCUUCACCCCCUUCAA
+URS000075BDED_10090/5-97 GUAGUGAGAAGUUGGGGGGUGGGAACGGCGUCAUGCAGGAGUUGAUUGCACAGCCAUUCAGCUCCUAUAUGAUGCCUUUCUUCACCCCCUUCA-
+URS0000D50399_29078/1-81 -----------GUGGGGGGUGAGAACGGCUUCAUCCAGGAGUUGAU-GCCCAGUUAUCCAGCGCCUAGAUGAUGCCUUUCUUCAUCCCCUUCA-
+#=GC SS_cons             :::::::::::::<<<<<<<<<<<<-<<<-<<<<<-<<<<<<<<<<.<______>>>->>>>>>>>->>>>>->>>->>>->>>>>>>>>::::
+#=GC RF                  GUAGUcAGuAGuUgGGGGguGgGaaCGGCuuCaugCaGGaGcuGau.gCaCAGucaucCagCuCCuAcauGaUGCCUuuCUcCacCCCCcUCAa
+//

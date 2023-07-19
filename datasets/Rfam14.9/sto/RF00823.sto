@@ -1,0 +1,48 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00823
+#=GF ID   lsy-6
+#=GF DE   lsy-6 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   60.00
+#=GF TC   61.90
+#=GF NC   56.60
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000265;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   15317971
+#=GF RT   Patterns of flanking sequence conservation and a characteristic upstream
+#=GF RT   motif for microRNA gene identification.
+#=GF RA   Ohler U, Yekta S, Lim LP, Bartel DP, Burge CB
+#=GF RL   RNA. 2004;10:1309-1322.
+#=GF RN   [2]
+#=GF RM   19460142
+#=GF RT   Dynamic expression of small non-coding RNAs, including novel microRNAs and
+#=GF RT   piRNAs/21U-RNAs, during Caenorhabditis elegans development.
+#=GF RA   Kato M, de Lencastre A, Pincus Z, Slack FJ
+#=GF RL   Genome Biol. 2009;10:R54.
+#=GF RN   [3]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor lsy-6 imported from
+#=GF CC   miRBase.
+#=GF WK   Lsy-6_microRNA
+#=GF SQ   2
+
+
+URS00003F8B2D_6239/1-73 CCAUCAAAUGCGUCUAGUAUCAAAAUCAUGU-AAAAACUGUAAAACAGAUUUUGUAUGAGACGCAUUUCGAUGA
+URS000066AF7E_6238/1-74 CCACAGAAUGCGUCCAGUAUCAAAAUCACAUCAAAGAGAAUACGGUGGAUUUUGUAUGAGACGCAUUCCGUGGC
+#=GC SS_cons            <<<<-<<<<<<<<<--<<<-<<<<<<<-<<<<___________>>>>>>>>>>>>>>-->>>>>>>>>->>>>:
+#=GC RF                 CcacagAAUGCGUCuAgUAUCAAAAUCAcguCAAAaAguaUAaGacgGAUUUUGUAuGAGACGCAUUcCgugGa
+//

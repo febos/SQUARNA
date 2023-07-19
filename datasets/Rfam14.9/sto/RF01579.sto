@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01579
+#=GF ID   RUF2
+#=GF DE   Plasmodium RNA of unknown function RUF2
+#=GF AU   Osuch I
+#=GF SE   INFERNAL
+#=GF SS   Predicted; WAR; Clustal_alifold;
+#=GF GA   90.00
+#=GF TC   110.70
+#=GF NC   52.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   17901154
+#=GF RT   Structural RNAs of known and unknown function identified in malaria
+#=GF RT   parasites by comparative genomics and RNA analysis.
+#=GF RA   Chakrabarti K, Pearson M, Grate L, Sterne-Weiler T, Deans J, Donohue JP,
+#=GF RA   Ares M Jr
+#=GF RL   RNA. 2007;13:1923-1939.
+#=GF WK   Plasmodium_RUF2_RNA
+#=GF SQ   3
+
+
+AABL01001458.1/5179-5331 UUAUUUAAAUAUUUAUUUAAGUAUUUAUU-UAAAUGUUUAUUUAAAUAUUUUUAAACA--------AAUAAUAACGUCAAACUUGUUCAUACAACAAAUGUAUAUACGGUGGCUUUUUAAAUU-UUGAUUUUAAAAGUGUCAAUCCAUAUAUAUCACAGACCU
+CAAJ01001233.1/1534-1687 UUCAUUGAACAUUUCGAAGGGCUAUUAUG-AAAAUAUUUAUUUAAAUAUUUUUAAACA--------AAUAAUAGCAUCAAAUUUGUUCAUAAAACAAAUGUAUAUACGGUGGCUUUUUAAAUUUUUAAUUUUAAAAGUGUCAAUCCAUAUAUAUCACAGCACC
+AM910986.1/47547-47704   ACCAUUGAACGAUUCGAAGAGUUAUUAUUGUGAAUAUUUUUUUC-----CAAAAAAUAUGUCCAAAAAUAUUAGCUUCAAAUCUGUUCAUAUAACAAAUGUAUAUACGGUGGCUUUUUAAAUUUUUAAUUUUAGAAAUGUCAAUCCAUAUAUAUCACAGAGAA
+#=GC SS_cons             :::::<<<<<<---------<<<<<<<<<.----<<<<<<____________>>>>>>........>>>>>>>>>-------->>>>>>----------<<<<<<<-<<<<<<<<<<<<<<________>>>>>>>>->>>>-->>->>>>>>>:::::::::
+#=GC RF                  uucaUugaacauUUcgaagaGcuauuauu.uaAAuguuuaUUUaAAUAUuuuuaaaca........aauaauagCuUCAAAuuuguucaUAuAACAAAUguauauaCGGuGgCcuuuuaaaUUUUUaAUuuuaaaagUGuCaAUCCAuauauauCACAGaacu
+//

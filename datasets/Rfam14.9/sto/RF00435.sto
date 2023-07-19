@@ -1,0 +1,59 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00435
+#=GF ID   ROSE
+#=GF DE   Repression of heat shock gene expression (ROSE) element
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF AU   Bateman A; 0000-0002-6982-4660
+#=GF SE   PMID:11726689
+#=GF SS   Published; PMID:11726689; Griffiths-Jones S
+#=GF GA   45.00
+#=GF TC   45.30
+#=GF NC   44.50
+#=GF TP   Cis-reg; thermoregulator;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 0 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000204; five_prime_UTR;
+#=GF DR   SO; 0002168; RNA_thermometer;
+#=GF DR   GO; 0009266; response to temperature stimulus;
+#=GF DR   GO; 0006417; regulation of translation;
+#=GF RN   [1]
+#=GF RM   11726689
+#=GF RT   A mRNA-based thermosensor controls expression of rhizobial heat shock
+#=GF RT   genes.
+#=GF RA   Nocker A, Hausherr T, Balsiger S, Krstulovic NP, Hennecke H, Narberhaus F
+#=GF RL   Nucleic Acids Res 2001;29:4800-4807.
+#=GF RN   [2]
+#=GF RM   15466035
+#=GF RT   Replicon-specific regulation of small heat shock genes in Agrobacterium
+#=GF RT   tumefaciens.
+#=GF RA   Balsiger S, Ragaz C, Baron C, Narberhaus F
+#=GF RL   J Bacteriol 2004;186:6824-6829.
+#=GF CC   This family represents a 5' UTR cis-regulatory element found in heat shock
+#=GF CC   mRNAs and is known as the ROSE (repression of heat shock gene expression)
+#=GF CC   element. The ROSE element is a negative regulator of heat shock gene
+#=GF CC   expression. The secondary structure is thought to be regulated by
+#=GF CC   temperature. This regulation blocks access to the ribosome binding site
+#=GF CC   under normal conditions. During heat shock however, the structure changes
+#=GF CC   freeing the ribosome binding site and allowing expression to occur [1,2].
+#=GF WK   Repression_of_heat_shock_gene_expression_(ROSE)_element
+#=GF SQ   13
+
+
+CP000009.1/1450710-1450627 ---------------------CCGGCCGCC--AAA--GGGGUCGGCA----------AACAGAACU----AUC----AGUUUUGAU----CUUGUG-UCCAUGUUGCUCAAAGGAGGAUAUGGCUAUGAGAG
+AY316747.1/256783-256687   ---------------------CCGACCGCCA-AAA-UGGCGUCAGCCUG---GUCAGGGAGCGCCGAG--CUU--CUUGGCGCUCC----CUCAUA-UCUAUGUUGCUCUACGGACGAUGUAGCUAUGAGAA
+BA000012.4/1943819-1943723 ---------------------UCGGUCGCC-GCAUAAGGGGCCGAUGU----GUCAGGGAGCGCCAUG--CUU--CUUGGCGUUCC----CUCGUA-UCUAUGUUGCUCCAAGGAGGAUGUAGUUAUGAGAA
+AY316747.1/197909-198003   ---------------------GCCGAUGCC--AAUU-GGGUCGGCAUG----GUCAGGGAGCGCCACG--CUU--CUUGGCGCUUC----CUCGUA-UCUAUGUUGCUCUACGGAGGAUGUAGCUAUGAGAA
+AP003017.1/94542-94451     ---------------------UCGGG-GC---UUCG--G-CCCGACA------GAUUGGGCGUCGCAG-AGACG-CUGCGACGCUG----CUUGUAACCCAUGUUGCUUUACGGAGGAUAUGGCUAUGAGAA
+AL591985.1/872145-872052   ---------------------AGAGCCGCCU-GUA-AGGGGCUCGCA----------GUCGAGGAG--CUCCGUU--CUCUUCGGCGCUCCUCAUCGUCCAUGUUGCUC-AAGGAGGAUAUGGCUAUGAGAA
+U55047.1/3106-3215         CGCCGC-GACAAGCGGU----CCGGGCGCC--CUAG-GGGCCCGGCG------GAGACGGGCGCCGGA--GGUG-UCCGACGCCUG----CUCGUA-CCCAUCUUGCUCCUUGGAGGAUUUGGCUAUGAGGA
+U55047.1/5180-5291         UGCCGC-GACAAGCGGU----CCGGGCGCCC-UUCGGGGGCCCGGCG------GAGACGGGCGCCGGA--GGUG-UCCGACGCCUG----CUCGUA-CCCAUCUUGCUCAGUGGAGGAUUUGGCUAUGAGGA
+AJ003064.1/2430-2312       CGCCGCCGCAGGGCGGCUCU-CCGGGCGCC--UGAC-GGGCUCGGCGAAUCCAGAGACGGGCACCGG--UCGUGU-CCGGUGCC-G----CUCGUA-ACCAUUUUGCUCCGUGGAGGAUCUGGCUAUGCGCA
+AJ010144.1/622-738         GCCGCC-GA-GAGGUGGCGUCCCCGACGCC--UCAU-GGGUCGGGAACGAC-UGAGACGGGCACCGG--UCGUGU-CCGGUGCC-G----CUCGUA-UCCAUUUUGCUCCUUGGAGGAUUUGGCUAUGCGCA
+AJ003064.1/2697-2806       GCCACGCGGGAGCGUGGCG--CCGGAUGCC--UCUC-GGGUCCGG--------CAGACG-CCAUCGGG-CAGAA-UCCGAUGU-UG----CUCCUA-UCCAUAUUGCUCAGAGGAGGAUGUGGUUAUGAGAA
+AE007872.2/51225-51317     ---------------------CCAGCCGCUG-ACGACGGGGCUGGACU----UGCUGGGAGCGCCG---CCUUU---CGGCGCUUC------CGUA-CCCAUGUUGCUUCAAGGAGGAUAUGGCUAUGGCAA
+AE007872.2/441983-442075   ---------------------CCAGCCGCUGAGGUCAGGGGCUGGCC----------UUGUUGGACG---CGC---CGUCUUUCAGCGCU-CCGUA-CCCAUGUUGCUUCAAGGAGGAUAUGGCUAUGGCAA
+#=GC SS_cons               .....................<<<<<<-<<..____.>>>>>>>>,,......,,,,<<<<<<<<<<_._____._>>>>>>>>>>....<<<<<<.-<<<<<<<-<<<____>>>>>>>>>>->>>>>>::
+#=GC RF                    .....................cCgGccGCC..uuau.GGggCcGgca......gaaaggggcgccggg..cuug.cccggcgcccc....CuCgUa.uCCAugUUGCUCuaaGGAGGAuaUGGCuAuGaGAA
+//

@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02903
+#=GF ID   AaHKsRNA96
+#=GF DE   Aggregatibacter sRNA 96
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   43.00
+#=GF TC   43.80
+#=GF NC   40.90
+#=GF TP   Gene; antisense;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   SO; 0000077; antisense;
+#=GF RN   [1]
+#=GF RM   29211829
+#=GF RT   Small RNA repertoires and their intraspecies variation in Aggregatibacter
+#=GF RT   actinomycetemcomitans.
+#=GF RA   Oogai Y, Gotoh Y, Ogura Y, Kawada-Matsuo M, Hayashi T, Komatsuzawa H
+#=GF RL   DNA Res. 2017 Dec 2. pii: 4675
+#=GF CC   Validated by RT-PCR. Antisense gene: HK1651_08600.
+#=GF WK   Aggregatibacter_actinomycetemcomitans
+#=GF SQ   3
+
+
+
+CP001733.2/1509891-1509775 AUCUGUUUUAGGACCUCUUCACCUUUUGCGCCGGUUUGUUUUAUAAAUUCGGCGUAGUAAGGUUUCAUAGCGUCUUUAAACGGUGUUAAAUCAGGAUGCGUAACGGUGACACCUUGU
+CP013830.1/581193-581077   AUUUCUUUUAAAGCUUCUUCACCUUUGCUACCGGUUUGUUUUACAAAGUCAUCAUAGAAAGGUUUCAUUGAGGCUUUGAACGGUGCAAGAUCAGGUUUGGUUACUGUGACACCUUGC
+L42023.1/162528-162412     AUUUGUUUUAAAGCUGAUUCACCUUUUUGACCAGUUUGUUUUACAAACUCAGCAUAAUACGGCUUCAUUGAUUCUUUAAAUGGAACAAGAUCAGGAUGUGUAAUUUUCACGCCUUGU
+#=GC SS_cons               ::::<<<<-<<<<<<<----<<<<<<<<<<<<<<<<<<<___>>>>>->>>>>>>>>->>>>>----->>->>>>>->>>><<<<<<<-----<____>------->>>>>>>::::
+#=GC RF                    AUuUguuuUaaggccgcUUCaCCuucuccgccGguuuGuUUUaCaaauuCggcggaguaaGGuUUCAUcgagccuuUaaacGGuGccagAUCAgGaUgcGUaAcuguggCaCCUUGu
+//

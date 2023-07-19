@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00898
+#=GF ID   mir-242
+#=GF DE   microRNA mir-242
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   miRBase; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   42.00
+#=GF TC   42.40
+#=GF NC   41.80
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000366;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   19755563
+#=GF RT   Repertoire and evolution of miRNA genes in four divergent nematode
+#=GF RT   species.
+#=GF RA   de Wit E, Linsen SE, Cuppen E, Berezikov E
+#=GF RL   Genome Res. 2009;19:2064-2074.
+#=GF WK   MicroRNA
+#=GF SQ   2
+
+
+AAGD02011159.1/4161-4091     AGAAUAUUGCGUAGGCCUUUGCUUCGAAAGA-AACACUUUACUGUUCGCAGCAAUCUCCUCCGCAAUAUUUU
+CAAC02000582.1/173061-172992 AGAAUAUUGCGUAGGCCUUUGUUUCGAAAGACCCAAAAAUU--GUUCGCAGCAAUCUCCUUCGCAAUAUUUU
+#=GC SS_cons                 <<<<<<<<<<<-<<<---<<<<<-<<<<___.____________>>>>->>>>>--->>>->>>>>>>>>>>
+#=GC RF                      AgAAUAUUGCGUAGGCCUUUGcUUCGAAAGA.aaaAauuUuCUGUUCGCAgCAAUCUCCUuCGCAAUAUUuU
+//

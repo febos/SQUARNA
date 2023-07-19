@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02686
+#=GF ID   RAGATH-6
+#=GF DE   RAGATH-6 RNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Weinberg Z
+#=GF SS   Published; PMID:26167874
+#=GF GA   170.00
+#=GF TC   177.40
+#=GF NC   40.90
+#=GF TP   Gene; ribozyme;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0003824; catalytic activity;
+#=GF RN   [1]
+#=GF RM   26167874
+#=GF RT   New classes of self-cleaving ribozymes revealed by comparative genomics
+#=GF RT   analysis.
+#=GF RA   Weinberg Z, Kim PB, Chen TH, Li S, Harris KA, Lunse CE, Breaker RR
+#=GF RL   Nat Chem Biol. 2015;11:606-610.
+#=GF WK   RAGATH_RNA_motifs
+#=GF SQ   2
+
+
+BABB01003568.1/701-850   AUCUGUUUAGCCAUAGCAA-UAUCGU-UGAAAUGCAAAUCAUCUACUUAUGUCGUGAGACAUUAUUUAACCACGUUAAAGUAUAAUAAUAUAAGUUAGGUAUGCCCUUAUAAAGACUUAGGUAACGCUAAGGACUAUAUUAUUAUACUUCUU
+BAAZ01000382.1/2451-2601 AAUUCAUUCGC-AAAGUAAUUAUUCUAUGAAAUGCAAAUUAUCUUCAUAUGUUGUGAAACAUAGCUUAACCACGUUAAAGUAUAAUAAUAUAAGUUAGGUAUGCCCUUAUAAAGACUUAGGUAGCGCUAAGGACUAUAUUAUUAUACUUCUU
+#=GC SS_cons             :::::::::<<-<-----<________>---->>>,,,,,,,,,,,,,<<<<<____>>>>>---------------(((((((((((((((-(((<<<_____>>>,,,,,,,,<<<<<______>>>>>)))))))))))))))))):::
+#=GC RF                  AauUgaUUaGC.aaAGuAaUUAUugUAuGAAAuGCAAAUuAUCUaCaUauGucGUGAgaCauaauUUAACCACGUUAaaGuauaauaauauaAGuuaGGUAUGCCCuUAUAAAGACuuaGGUAaCGCuaaGgaCuauauuauuauaCuuCUU
+//

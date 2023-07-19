@@ -1,0 +1,42 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00837
+#=GF ID   mir-251
+#=GF DE   microRNA mir-251
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   67.50
+#=GF TC   67.50
+#=GF NC   65.50
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 0 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000284;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   12672692
+#=GF RT   The microRNAs of Caenorhabditis elegans.
+#=GF RA   Lim LP, Lau NC, Weinstein EG, Abdelhakim A, Yekta S, Rhoades MW, Burge CB,
+#=GF RA   Bartel DP
+#=GF RL   Genes Dev. 2003;17:991-1008.
+#=GF RN   [2]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   MicroRNA
+#=GF SQ   5
+
+
+URS0000069FE0_6239/19-79  UUAAGUAGUGGUGCCGCUCUUAUUAGG-UUGAAAAGUAAUAAGAGUAGUUCACUACUUAUCA
+URS0000D518B3_135651/1-61 UUAAGUAGUGGUGCCGCUCUUAUUAGA-UGAGAUAGUAAUAAGAGUUGCUCACUACUUAUCA
+URS0000D52215_31234/1-60  UUAAGUAGUGGUGCCGCUCUUAUUAGA-AUCCAGAAUAAUAAGAGUCGCUCACUGCUUAUC-
+URS0000D539BE_6238/17-78  UUAAGUAGUGGUGCCGCUCUUAUUAGAAUUAUCAAGUAAUAAGAGUUGUUCGCUACUUAACG
+URS0000D53046_135651/1-61 AUAAGUAGUAGUGCCGCAGGUAACCGAUUUCAAUGGUU-UACCUACUGCCUCCUGCUUAGAA
+#=GC SS_cons              :<<<<<<<<<<-<<-<<<<<<<<<<__.________>>>>>>>>>>->>>>>>>>>>>>:::
+#=GC RF                   UUAAGuAGuGgUGCCgCucuUAUuAGA.UUaaAuAGUaAUAagaGuuGCuCaCUaCUUAucA
+//

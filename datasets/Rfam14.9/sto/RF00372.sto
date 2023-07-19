@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00372
+#=GF ID   sroH
+#=GF DE   sroH RNA
+#=GF AU   Barquist L; 0000-0003-4732-2667
+#=GF SE   PMID:14602901, INFERNAL
+#=GF SS   Predicted; Barquist L
+#=GF GA   80.00
+#=GF TC   88.70
+#=GF NC   72.90
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000655; ncRNA;
+#=GF RN   [1]
+#=GF RM   14602901
+#=GF RT   RNomics in Escherichia coli detects new sRNA species and indicates
+#=GF RT   parallel transcriptional output in bacteria.
+#=GF RA   Vogel J, Bartels V, Tang TH, Churakov G, Slagter-Jager JG, Huttenhofer A,
+#=GF RA   Wagner EG
+#=GF RL   Nucleic Acids Res 2003;31:6435-6443.
+#=GF CC   This family consists of a number of bacterial sroH RNA genes of around 160
+#=GF CC   bases in length. The function of this family is unknown [1].
+#=GF WK   sroH_RNA
+#=GF SQ   2
+
+
+U00096.2/4188510-4188350   GAAAAUAAGAACACAUGUUCUCAUCUUCCAGGAUGCAGCAGACUGAAGAAAUUCAGACAUCCCGCAACCUGCGAUUAUCGCAAGGUCAAGGCAAAGUCCGGUAAUGGCGUUCUGAAUACCAGAGAUAAUUCUCUGGCGAAACCCACCUUAAGGUGGGUUUU
+AAJV02000038.1/11464-11616 AUACACAUGCGGUCAUGAUAAUGCAGUUAAGGAUGCAGCAGACUGAUU-AAUCCAGACAUCCCGCUACAAGCGUA---CGC-UGGUC-AGGCCUGGUCCGGUAAAGGUGCUCUGAAUACCAGAGAUAUU--UCUGGCGAAACCCACCUCAAGGUGGGUUUU
+#=GC SS_cons               :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<<<<<<____>>>>>>::::
+#=GC RF                    aaAaAuAaGaagaCAUGuUauuauauUuaAGGAUGCAGCAGACUGAauAAAUuCAGACAUCCCGCaACauGCGauUAUCGCAaGGUCAAGGCaaaGUCCGGUAAuGGuGuUCUGAAUACCAGAGAUAaUUCUCUGGCGAAACCCACCUuAAGGUGGGUUUU
+//

@@ -1,0 +1,39 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02693
+#=GF ID   psm_mec_RNA
+#=GF DE   psm_mec locus RNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   85.00
+#=GF TC   85.70
+#=GF NC   63.30
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0045974; regulation of translation, ncRNA-mediated;
+#=GF RN   [1]
+#=GF RM   24877726
+#=GF RT   Genome-wide analysis of the regulatory function mediated by the small
+#=GF RT   regulatory  psm-mec RNA of methicillin-resistant Staphylococcus aureus.
+#=GF RA   Cheung GY, Villaruz AE, Joo HS, Duong AC, Yeh AJ, Nguyen TH, Sturdevant
+#=GF RA   DE, Queck SY, Otto M
+#=GF RL   Int J Med Microbiol. 2014;304:637-644.
+#=GF CC   psm_mec locus strain dependent gene (immune evasion factor protein A)
+#=GF CC   regulatory RNA. 
+#=GF WK   Methicillin-resistant_Staphylococcus_aureus
+#=GF SQ   4
+
+
+
+BX571856.1/49332-49190 AUCUUAAAUAGAAAGAGGGUAUGCAUAUGGAUUUCACUGGUGUUAUUACAAGCAUUAUUGAUUUAAUCAAGACUUGCAUUCAGGCUUUCGGUUAAUUUU---------UU----------CAACUAAAAAACAGAGGAAAUAUUCAACGACUUGAUUGUUUC
+Y13052.1/1021-1172     AUCUUAAAAGGAAAGAGGUUUUGCAAAUGGAUAUCGCUGGUGUUAUUACAAGCAUUAUUGAUUUAAUCAAGACUUGCAUUCAAACUUUCGGUUAAUUUUCAGUUUUAUUG----------CAUUAAAAAGGCAGAGGAAAUAUUCAAUCUUUUGAUUGUUUC
+Y14051.1/1066-1207     AUCUUAAAUAGAAAGAG-GUAUGCAUAUGGAUUUCACUGGUGUUAUUACAAGCAUUAUUGAUUUAAUCAAGACUUGCAUUCAGGCUUUCGGUUAAUUUU---------UU----------CAACUAAAAAACAGAGGAAAUAUUCAACGACUUGAUUGUUUC
+AB546780.1/10221-10069 AUCUUAAAUAGAAAGAGGGUUUGCAUAUGGACUUCACUGGUGUUAUUACAAGCAUUAUUGAUUUAAUCAAGACUUGCAUUCAGACUUUCGGUUAAGUUU---------UUUGUUUCAACGCAAUAAAAAAACAGAGGAAAUAUUCAACAAUUUGAUUGUUUC
+#=GC SS_cons           ::::::<<<-<<<<<---<-<<<<<----<<<<<<<-<<<<<<<______>>>>>>>->>>--->>>>------>>>>>->--->>>>>->>>------.........--..........----------------<<<<<<-<<<<____>>>>->>>>>>
+#=GC RF                AUCUUAaacaGaaaGAGGgUauGCauAUGGauuuCaCugguGuuAUUACAagCauuaUuGaUUUaauCAAGACUuGCauUcAgaCuuuCGguuAAuUUU.........Uu..........CAauaAAAAaaCAGAGGaaauaUuCaacaauuuGaUuguuuC
+//

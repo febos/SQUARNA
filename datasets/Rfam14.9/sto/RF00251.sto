@@ -1,0 +1,59 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00251
+#=GF ID   mir-219
+#=GF DE   mir-219 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; PFOLD
+#=GF GA   35.00
+#=GF TC   35.00
+#=GF NC   34.80
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000044;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF RN   [1]
+#=GF RM   12624257
+#=GF RT   Vertebrate microRNA genes.
+#=GF RA   Lim LP, Glasner ME, Yekta S, Burge CB, Bartel DP
+#=GF RL   Science 2003;299:1540.
+#=GF RN   [2]
+#=GF RM   12844358
+#=GF RT   Computational identification of Drosophila microRNA genes.
+#=GF RA   Lai EC, Tomancak P, Williams RW, Rubin GM
+#=GF RL   Genome Biol 2003;4:R42.
+#=GF CC   miR-219 was predicted in vertebrates by conservation between human, mouse
+#=GF CC   and Fugu and cloned in Fugu [1], and later predicted and experimentally
+#=GF CC   confirmed in Drosophila [2]. miR-219 homologs have since been predicted or
+#=GF CC   experimentally confirmed in a wide range of species which include the
+#=GF CC   platyhelminth Schmidtea mediterranea, several arthropod species and a wide
+#=GF CC   range of vertebrates (MIPF:MIPF0000044). The hairpin precursors
+#=GF CC   (represented here) are predicted based on base pairing and cross-species
+#=GF CC   conservation -- their extents are not known. In this case the mature
+#=GF CC   sequence is excised from the 5' arm of the hairpin.
+#=GF WK   mir-219_microRNA_precursor_family
+#=GF SQ   13
+
+
+AF100956.1/111730-111659     GCUCCUGAUUGUCCAAACGCAAUUCU----CGAGUCUCUGGCUCCGGCCGAGAGUUGCGUCUGGACGUCCCGAGCC
+D84401.1/35519-35448         GCUCCUGAUUGUCCAAACGCAAUUCU----CGAGUCUAUGGCUCCGGCCGAGAGUUGAGUCUGGACGUCCCGAGCC
+AL359091.10/91897-91825      GCCACUGAUUGUCCAAACGCAAUUCUUGUACGAGUCUGCGGC--CAACCGAGAAUUGUGGCUGGACAUCU-GUGGC
+AY152826.1/42824-42753       GCUCUUGAUUGUCCAAACGCAAUUCU----CGAGUCUAUGGCUCCGGCCGAGAGUUGAGUCUGGACGUCCCGAGCC
+AL928926.9/24183-24111       GCCACUGAUUGUCCAAACGCAAUUCUUGUACGAGUCUGCGGC--CAACCGAGAAUUGUGGCUGGACAUCU-GUGGU
+AJ421778.1/62949-62878       GCUCCUGAUUGUCCAAACGCAAUUCU----CGAGUCUAUGGCUCUGGCCGAGAGUUGAGUCUGGACGUCCCGAGCC
+AAPN01125568.1/829-757       GCCGCUGAUUGUCCAAACGCAAUUCUUGUGCGAGUUUGCGGC--CAACCGAGAAUUGUGACUGGACAUCU-GUGGC
+AAFR03043752.1/856-788       GCUCCUGAUUGUCCAAACGCAAUUCU----CGUGGCUCCGGCCCU---CGAGAGUUGGGUCUGGACAUCCCGAGCC
+AE014296.4/17308119-17308189 AGCUAUGAUUGUCCAAACGCAAUUCU----UGUUGAUAUUCA-AUAUUCAAGGGUUGCGACUGGGCAUCGCGGCUC
+AAWZ02035889.1/954-887       GGUCCUGAUUGUCCAAACGCAAUUCU----UG--UCUCCGCU--CCACCGAGAGUUGAGUCUGGACAUCAGGAGCC
+AY866244.1/138-209           GCUCCUGAUUGUCCAAACGCAAUUCU----CGAGUCUAUGGCUCCGGCCGAGAGUUGAGUCUGGACGUCCCGAGCC
+AY866245.1/430-501           GCUCCUGAUUGUCCAAACGCAAUUCU----CGAGUCUAUGGCCCCGGCCGAGAGUUGAGUCUGGACGUCCCGAGCC
+AY866243.1/430-501           GCUCCUGAUUGUCCAAACGCAAUUCU----CGAGUCUAUGGCUCUGGCCGAGAGUUGAGUCUGGACGUCCCGAGCC
+#=GC SS_cons                 :::::::::<<<<<<--<<<<<<<<<....<<__________._____>>>>>>>>>>>-->>>>>>:::::::::
+#=GC RF                      GcucCUGAUuGUCCAAACgCAAuUCU....CGAGUcUauGGc.ccaaCCGAGAgUUGcGuCUGGACaUCcCGaGcC
+//

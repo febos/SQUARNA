@@ -1,0 +1,42 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01080
+#=GF ID   UPD-PKib
+#=GF DE   Pseudoknot of upstream pseudoknot domain (UPD) of the 3'UTR
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   39.00
+#=GF TC   39.90
+#=GF NC   34.50
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   PKBASE; PKB00202;
+#=GF DR   PKBASE; PKB00118;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0046782; regulation of viral transcription;
+#=GF DR   GO; 1904973; positive regulation of viral translation;
+#=GF RN   [1]
+#=GF RM   10603167
+#=GF RT   Molecular characterization of a new furovirus mainly infecting rye.
+#=GF RA   Koenig R, Pleij CW, Huth W
+#=GF RL   Arch Virol. 1999;144:2125-2140.
+#=GF RN   [2]
+#=GF RM   9714254
+#=GF RT   Genome properties of beet virus Q, a new furo-like virus from sugarbeet,
+#=GF RT   determined from unpurified virus.
+#=GF RA   Koenig R, Pleij CW, Beier C, Commandeur U
+#=GF RL   J Gen Virol. 1998;79:2027-2036.
+#=GF WK   UPSK_RNA
+#=GF SQ   4
+
+
+AJ271839.1/3358-3389 GGUGCUUGCUAUUUCACCUAAAUCGAAAUAGC
+AB033689.1/7019-7050 GGUGCUUGUUAGUUCACCUAAAUCGAACUAAC
+U64512.1/3276-3307   GGUGCUUUUAUGUUCACCGAAAUCGAACAUAC
+AJ749657.1/3098-3129 GGUGCUUGUUAUUUCACCUAAAUCGAAAUAAC
+#=GC SS_cons         AAAA:::<<<<<<<aaaa_______>>>>>>>
+#=GC RF              GGUGCUUGUuagUUCACCUAAAUCGAAcuaAC
+//

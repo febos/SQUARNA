@@ -1,0 +1,56 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02812
+#=GF ID   asponA
+#=GF DE   anti ponA RNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   113.00
+#=GF TC   113.60
+#=GF NC   85.70
+#=GF TP   Gene; antisense;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000077; antisense;
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0046677; response to antibiotic;
+#=GF RN   [1]
+#=GF RM   25213728
+#=GF RT   Expression of antisense small RNAs in response to stress in Pseudomonas
+#=GF RT   aeruginosa.
+#=GF RA   Gomez-Lozano M, Marvig RL, Tulstrup MV, Molin S
+#=GF RL   BMC Genomics. 2014;15:783.
+#=GF RN   [2]
+#=GF RM   23028334
+#=GF RT   The single-nucleotide resolution transcriptome of Pseudomonas aeruginosa
+#=GF RT   grown in body temperature.
+#=GF RA   Wurtzel O, Yoder-Himes DR, Han K, Dandekar AA, Edelheit S, Greenberg EP,
+#=GF RA   Sorek R, Lory S
+#=GF RL   PLoS Pathog. 2012;8:e1002945.
+#=GF RN   [3]
+#=GF RM   22590564
+#=GF RT   Comparative profiling of Pseudomonas aeruginosa strains reveals
+#=GF RT   differential expression of novel unique and conserved small RNAs.
+#=GF RA   Ferrara S, Brugnoli M, De Bonis A, Righetti F, Delvillani F, Deho G,
+#=GF RA   Horner D, Briani F, Bertoni G
+#=GF RL   PLoS One. 2012;7:e36553.
+#=GF CC   Transcribed antisense to the penicillin-binding protein 1A gene called
+#=GF CC   ponA. It was identified by RNAseq and the expression was validated by 5'
+#=GF CC   and 3' RACE experiments. AsponA expression was up or down regulated under
+#=GF CC   different antibiotic stress. Due to its location it may be able to prevent
+#=GF CC   the transcription or translation of the opposite gene.[1] Study by Wurtzel
+#=GF CC   et al. and Ferrara et al. also detected its expression.
+#=GF WK   AsponA_antisense_RNA
+#=GF SQ   3
+
+
+
+AE004091.2/5681167-5680874 GAAAUUGUCGUCCUCGGCGGACAGCAGGGCAUGGAUGAAGUCCUGCGGGAUGUCGGCGAAGCGGAUCGGCGUCCGGCGCAUCUCGCCGAACUCGGAGAUCAGCUUGCCGUCCUCGCUGUAGACCUUGAGGGGGAUCUGCAGCUGGACGUUACGCAGAGCUUCCACCGAGGGCAGGCUGGGACUCAGAUAGAGAUAGGCGCCGCUGAAACUGAGCAGCACUCCACAAAUCAGGGUGACGCAAGUCCACCACAGGAACUUCAGCAGGCGCAUGGGUAGAUUC-GGAUUUCCAGGAAA
+HG322950.1/5644547-5644253 GAAAUUAUCGUCCUCGGCGGACAACAGGGCGUGAAUGAAGUCUGGGGGAAUGUCCGCGAAGCGAAUGGGCGUCCGGCGCAUCUCACCGAACUCUGCUAUCAAUUUGUUAUCACUGCUGUAAACGCGCAGCGGGAUCUGCAGCUGCACGUUACGCAGGGCGUCUACCGAGGGCAGGUUGGGACUGAGGUAGAGAUAAGCGCCGCUUAAACUGAGCAGCACUCCACAAAAUAUGGCGACGCAAGUCCACCACAGAAACUUCAGCAGGCGCAUUGGAAGGUCUUGGAUUUCCAGGGAA
+CP004143.1/5076814-5076520 GAAGUUGUCAUCCUCGGCCGAUAACAGUGCGUGGGUGAAGUCUUGGGGGAUUUCAGCAAAGCGAAUCGGCGUACGGCGCAUCUCGCCAAACUCUGCUAUCAAUCUGUUAUCACUGCUGUACACGCGCAACGGCAUCUGCAAACGCACGUUGCGCAAGGCCUCCACGGACGGGAGGUUUGGGCUGAGGUAGAGGUAGGCGCCGCUGAAACUGAGCAGCAAUCCACAGAUUAUGGUGACGCAGGUCCACCACAGAAACUUCAGCAGGCGCAUUGGAAGGUCUUGGAUUUCCAGAGAA
+#=GC SS_cons               :::::::::((((((((-(((,,<<<<<<<_________>>>>>>><<<<<<-<<-<<--<<______>>--->>->>>>>>>>,<<<____>>>,,,,,<<<<<<<<<<<<--<<<<<<<<<<<<___>>>>->>>>>>>>->>>>>---->>>->>>>)))-))))))))---((((((-((-((---------(((((((((((,,,,,<<--<<<-<<________>>>>>-->>,,,<<<______>>>,,))))))-)))))----------))--))-))))))::::
+#=GC RF                    GAAaUUgUCguCcuCgGCgGacAgCagggCgUGgaUGAAGuccuGcGggaugUCgGCgAAGCGaAUcGGCGUccGGcGcaucuCgCcgAACUcgGcuAUCggccuGccgucccugcuGuagacccgcAgcgggAucugCagcuggacgUUaCgCagggccuCcACcGagGgcAGGcugGgaCucAggUAGAGaUAgGCGCCGCugaaACUGAGCAGCacUCcACAaAuuAgGguGACGCAaGucCACCACAGgaACuucaGCAGGCGCAUuGGaAGgUccUGgaUuuCcagggAA
+//

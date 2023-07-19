@@ -1,0 +1,57 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00039
+#=GF ID   DicF
+#=GF DE   DicF RNA
+#=GF AU   Bateman A; 0000-0002-6982-4660
+#=GF SE   INFERNAL
+#=GF SS   Predicted; PFOLD
+#=GF GA   48.00
+#=GF TC   49.50
+#=GF NC   46.00
+#=GF TP   Gene; antisense;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 22 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000644; antisense_RNA;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF DR   GO; 0017148; negative regulation of translation;
+#=GF RN   [1]
+#=GF RM   7508908
+#=GF RT   Division inhibition gene dicF of Escherichia coli reveals a widespread
+#=GF RT   group of prophage sequences in bacterial genomes.
+#=GF RA   Faubladier M, Bouche JP
+#=GF RL   J Bacteriol 1994;176:1150-1156.
+#=GF RN   [2]
+#=GF RM   1372677
+#=GF RT   Regulation of the expression of the cell-cycle gene ftsZ by DicF antisense
+#=GF RT   RNA. Division does not require a fixed number of FtsZ molecules.
+#=GF RA   Tetart F, Bouche JP
+#=GF RL   Mol Microbiol 1992;6:615-620.
+#=GF RN   [3]
+#=GF RM   2477663
+#=GF RT   Genetic evidence that DicF, a second division inhibitor encoded by the
+#=GF RT   Escherichia coli dicB operon, is probably RNA.
+#=GF RA   Bouche F, Bouche JP
+#=GF RL   Mol Microbiol 1989;3:991-994.
+#=GF RN   [4]
+#=GF RM   28874523
+#=GF RT   Escherichia coli responds to environmental changes using enolasic
+#=GF RT   degradosomes and stabilized DicF sRNA to alter cellular morphology.
+#=GF RA   Murashko ON, Lin-Chao S
+#=GF RL   Proc Natl Acad Sci U S A. 2017;114:E8025.
+#=GF CC   DicF RNA is an antisense inhibitor of cell division gene ftsZ [1]. DicF
+#=GF CC   and Hfq are necessary to reduce FtsZ protein levels, leading to cell
+#=GF CC   filamentation under anaerobic conditions.[4]
+#=GF WK   DicF_RNA
+#=GF SQ   5
+
+
+AF370716.1/3656-3603       UGUGUGUAGUACUUGGCGGCAUCAGUUUUUCUUAGUCCUUUCUGAUGU-CCGCCC
+BA000007.2/1165782-1165731 UUCUGGUGACAUUUGGCGGUAUCAGUUUUACUCCGUA---ACUGCUCUGCCGCCC
+BA000007.2/2250671-2250722 UUCUGGUGACGUUUGGCGGUAUCAGUUUUACUCCGUG---ACUGCUCUGCCGCCC
+BA000007.2/2201445-2201496 UUCUGGUGACGUUUGGCGGUAUCAGUUUUACUCCGUG---GCUGCUCUGCCGCCC
+D84432.1/195877-195831     UUUGUGU-GUCUUUGGUGGCAUCAGU---AAUCUAAU---AC-GAUUUGCCACCU
+#=GC SS_cons               ::::::::::::::<<<<<<<-<<<<___________...>>>>--->>>>>>>:
+#=GC RF                    UUuuuGUGauaUUUGGCGGuAUCAGuUUUACUCcGUu...aCUGaUcUgCCGCCC
+//

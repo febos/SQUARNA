@@ -1,0 +1,59 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01009
+#=GF ID   mir-M7
+#=GF DE   microRNA mir-M7
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   91.00
+#=GF TC   91.10
+#=GF NC   44.90
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000526;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   16912324
+#=GF RT   Marek's disease virus encodes MicroRNAs that map to meq and the
+#=GF RT   latency-associated transcript.
+#=GF RA   Burnside J, Bernberg E, Anderson A, Lu C, Meyers BC, Green PJ, Jain N,
+#=GF RA   Isaacs G, Morgan RW
+#=GF RL   J Virol. 2006;80:8778-8786.
+#=GF RN   [2]
+#=GF RM   18430245
+#=GF RT   Deep sequencing of chicken microRNAs.
+#=GF RA   Burnside J, Ouyang M, Anderson A, Bernberg E, Lu C, Meyers BC, Green PJ,
+#=GF RA   Markis M, Isaacs G, Huang E, Morgan RW
+#=GF RL   BMC Genomics. 2008;9:185.
+#=GF RN   [3]
+#=GF RM   18256158
+#=GF RT   MicroRNA profile of Marek's disease virus-transformed T-cell line MSB-1:
+#=GF RT   predominance of virus-encoded microRNAs.
+#=GF RA   Yao Y, Zhao Y, Xu H, Smith LP, Lawrie CH, Watson M, Nair V
+#=GF RL   J Virol. 2008;82:4007-4015.
+#=GF RN   [4]
+#=GF RM   18842708
+#=GF RT   Sequence conservation and differential expression of Marek's disease virus
+#=GF RT   microRNAs.
+#=GF RA   Morgan R, Anderson A, Bernberg E, Kamboj S, Huang E, Lagasse G, Isaacs G,
+#=GF RA   Parcells M, Meyers BC, Green PJ, Burnside J
+#=GF RL   J Virol. 2008;82:12213-12220.
+#=GF RN   [5]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   Mir-M7_microRNA_precursor_family
+#=GF SQ   2
+
+
+URS0000D51DB9_10390/5-71 AACUGUUAUCUCGGGGAGAUCCCGAUCUCUCCUACCAGCAACUCGAGAUCUCUACGAGAUUACAGUU
+URS0000D564D0_10390/1-67 UGGCGUUGUCUCGUAGAGGUCCAGAUCUCUCCUGUUGGCAACUCGAAAUCUCUACGAGAUAACAGUU
+#=GC SS_cons             ::::<<<<<<<<<<<<<<<<---<<-----<<____>>---->>--->>>>>>>>>>>>>>>>::::
+#=GC RF                  uaguGUuaUCUCGuaGAGaUCCaGAUCUCUCcUauugGCAACUCGAaAuCUCuaCGAGAuaACAGUU
+//

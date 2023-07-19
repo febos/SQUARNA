@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01078
+#=GF ID   PK-PYVV
+#=GF DE   3'-terminal pseudoknot in PYVV
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   65.00
+#=GF TC   74.60
+#=GF NC   37.40
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 27.97 -Z 742849.287494 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   PKBASE; PKB00259;
+#=GF DR   PKBASE; PKB00260;
+#=GF DR   PKBASE; PKB00261;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF RN   [1]
+#=GF RM   15218192
+#=GF RT   Analysis of the RNA of Potato yellow vein virus: evidence for a tripartite
+#=GF RT   genome and conserved 3'-terminal structures among members of the genus
+#=GF RT   Crinivirus.
+#=GF RA   Livieratos IC, Eliasco E, Muller G, Olsthoorn RC, Salazar LF, Pleij CW,
+#=GF RA   Coutts RH
+#=GF RL   J Gen Virol. 2004;85:2065-2075.
+#=GF WK   Potato_yellow_vein_virus
+#=GF SQ   3
+
+
+AJ508757.2/3834-3892 CGGUAGAAAAGAUGGUUUGAAAACCACGCCUUCUACCAAUAUAGUAAAUAAAUAGGCGG
+AJ704619.1/2027-2082 CGGUAGAAAAGAUGGUGUUUAAACCACGCCUUCUACCAAUAUAGUAAAUAAAUAGG---
+AJ557129.1/5283-5339 A-GUAGAAAAGUUGGUGCUUAGACCACGCCCUCUACCGUAAUAAUAGAUAAAUAGGCG-
+#=GC SS_cons         :<<<<<<-----<<<<______>>>>AAAAA>>>>>>::::::::::::::::aaaaa.
+#=GC RF              cGGUAGAAAAGaUGGUgUuuAAACCACGCCUUCUACCAauAUAgUAAAUAAAUAGGCG.
+//

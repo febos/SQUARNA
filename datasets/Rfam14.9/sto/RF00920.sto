@@ -1,0 +1,49 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00920
+#=GF ID   MIR444
+#=GF DE   microRNA MIR444
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   miRBase; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   110.00
+#=GF TC   111.60
+#=GF NC   107.90
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   MIPF; MIPF0000402;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0035068; micro-ribonucleoprotein complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17543110
+#=GF RT   Cloning and characterization of microRNAs from wheat (Triticum aestivum
+#=GF RT   L.).
+#=GF RA   Yao Y, Guo G, Ni Z, Sunkar R, Du J, Zhu JK, Sun Q
+#=GF RL   Genome Biol. 2007;8:R96.
+#=GF RN   [2]
+#=GF RM   18353984
+#=GF RT   Genome-wide analysis for discovery of rice microRNAs reveals natural
+#=GF RT   antisense microRNAs (nat-miRNAs).
+#=GF RA   Lu C, Jeong DH, Kulkarni K, Pillay M, Nobuta K, German R, Thatcher SR,
+#=GF RA   Maher C, Zhang L, Ware D, Liu B, Cao X, Meyers BC, Green PJ
+#=GF RL   Proc Natl Acad Sci U S A. 2008;105:4951-4956.
+#=GF RN   [3]
+#=GF RM   18312648
+#=GF RT   Identification of novel and candidate miRNAs in rice by high throughput
+#=GF RT   sequencing.
+#=GF RA   Sunkar R, Zhou X, Zheng Y, Zhang W, Zhu JK
+#=GF RL   BMC Plant Biol. 2008;8:25.
+#=GF WK   Mir-444_microRNA_precursor_family
+#=GF SQ   4
+
+
+AK063114.1/148-276 UGCAAUUGGGGGCAGCAAGCUAGAGGUGGCAACUGCAUAAUUUGCAAGAAA-UUGU------------------UGG----------------------------------------CUGAAGAUCAUACCGAUGAUAUUCUUGCAAGUUAUGCAGUUGCUGCCUCAAGCUUGCUGCCUCCUGUUGCC
+CU406550.1/236-400 UGCAUAUGGUGGCACCAAGCAUGAGGUUACAACUGCAUUACUUGCAAGGGAAUCACAAGUCACAAGAAACACAUGUUAUUACAAUGGAUAAUCAA----------------------UGGGUCAUCAUACU-AUGACUUUCUUGCAAGUUGUGCAGUUGUUGCCUCAAGCUUGCUGCCUCCGUCUGUC
+AK066992.1/189-316 UGCAAGUGGAGGCGGCAAGCUAGAGACAGCAACUGCAUAUCUUGCAAGAAAAUC--------------------GGU----------------------------------------UUUAUGGCCAUACCGAUGAUUUUCUUGCAAGCUGUGCAGUUGUUGUCUCAAGCUUGCUGCCUCCCUUUGCC
+AK249841.1/242-414 CGCAUGUGGCGGCACCAAGCAUGAGGCAACAACUGCAGUACUUGUGGGGAAGGCACAAG---------------UAGGACACCAACAUUACCUGCAAGCAAGACGCAAAAUUAAUAGAACAUCACCAUACUUGUGGCUUUCUUGCAAGUCGUGCAGUUGCUGCCUCAAGCUUGCUGCCUCCCUUUGCC
+#=GC SS_cons       :<<<<--<<<<<<<-<<<<<--<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<_____..............._____________________......................_________________>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->>>>>->>>>>>>-->>>>:
+#=GC RF            uGCaggUGGcGGCacCaaGCauGaGGcagCaaCuGCacgacuuGcaaGaaagucacAAG...............uauaauACaAacauUAauuaa......................uuuaucAuCAUACuuaUgacuuuCuugCaagucguGCaGuuGcugCCuCAAGCuuGCuGCCgCCuucuGCC
+//

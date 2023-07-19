@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02244
+#=GF ID   mir-785
+#=GF DE   microRNA mir-785
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   62.00
+#=GF TC   62.50
+#=GF NC   56.30
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17174894
+#=GF RT   Large-scale sequencing reveals 21U-RNAs and additional microRNAs and
+#=GF RT   endogenous siRNAs in C. elegans.
+#=GF RA   Ruby JG, Jan C, Player C, Axtell MJ, Lee W, Nusbaum C, Ge H, Bartel DP
+#=GF RL   Cell. 2006;127:1193-1207.
+#=GF RN   [2]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   3
+
+
+URS0000579866_6239/8-94    UUCUCACCCAUCAGCACAGAAUUUUUCG-CU-A-ACAGAAACCUCAAAAC-----AAUGUAAGUGAAUUGUUUUGUGUAGAUGGUGGAAAUGAGC-
+URS0000D4F28F_6238/8-102   UUCGCAACCGUCAGCACAGAGUGCUUCGACUUACACAGAAUUCGUAAAACCAACUGAUGUAAGUGAAU-ACUCUGUGUUGAUGGUGAUGAUGCUGA
+URS0000008D1A_31234/12-100 UUUUUGUCCGUCAGCGCAGAAUUUUUUCGCUUACACGAGUAAUGUAAAC------GAUGUAAGUGAAU-AUUCUGUGUCGAUGGGUAUAAAAAGAU
+#=GC SS_cons               :<<<<<<<<<<<-<<<<<<<<<--<<<<-<<<<<<_______________.....__>>>>>>>>>>-.>>>>>>>>>->>>>>>----->>>>>:
+#=GC RF                    UucucacCCgUCAgCaCAGAguuuUUcgaCUuACACagaaaucguAAAaC.....gAUGUaAGugAAU.acUCUGuGuuGAuGGggauaAugagaa
+//

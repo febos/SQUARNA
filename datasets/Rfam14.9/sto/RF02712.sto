@@ -1,0 +1,79 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02712
+#=GF ID   EBER2
+#=GF DE   Epstein-Barr virus EBER2
+#=GF AU   Quinones-Olvera N; 0000-0002-4612-6819
+#=GF SE   Quinones-Olvera N
+#=GF SS   Published; PMID:25662012
+#=GF GA   200.00
+#=GF TC   217.30
+#=GF NC   69.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   GO; 0019044; maintenance of viral latency;
+#=GF DR   GO; 0051819; induction by symbiont of tumor or growth in host;
+#=GF DR   GO; 0039580; suppression by virus of host PKR signaling;
+#=GF RN   [1]
+#=GF RM   25807550
+#=GF RT   High prevalence of the EBER variant EB-8m in endemic nasopharyngeal
+#=GF RT   carcinomas.
+#=GF RA   Shen ZC, Luo B, Chen JN, Chao Y, Shao CK, Liu QQ, Wang Y
+#=GF RL   PLoS One. 2015;10:e0121420.
+#=GF RN   [2]
+#=GF RM   24252203
+#=GF RT   Identification and characterization of EBV genomes in spontaneously
+#=GF RT   immortalized  human peripheral blood B lymphocytes by NGS technology.
+#=GF RA   Lei H, Li T, Hung GC, Li B, Tsai S, Lo SC
+#=GF RL   BMC Genomics. 2013;14:804.
+#=GF RN   [3]
+#=GF RM   23152513
+#=GF RT   Whole-genome sequencing of the Akata and Mutu Epstein-Barr virus strains.
+#=GF RA   Lin Z, Wang X, Strong MJ, Concha M, Baddoo M, Xu G, Baribault C, Fewell C,
+#=GF RA   Hulme W, Hedges D, Taylor CM, Flemington EK
+#=GF RL   J Virol. 2013;87:1172-1182.
+#=GF RN   [4]
+#=GF RM   9542645
+#=GF RT   B-lymphoblastoid cell lines from cancer patients.
+#=GF RA   Lee WK, Kim SM, Sim YS, Cho SG, Park SH, Kim CW, Park JG
+#=GF RL   In Vitro Cell Dev Biol Anim. 1998;34:97-100.
+#=GF RN   [5]
+#=GF RM   25662012
+#=GF RT   EBV noncoding RNA binds nascent RNA to drive host PAX5 to viral DNA.
+#=GF RA   Lee N, Moss WN, Yario TA, Steitz JA
+#=GF RL   Cell. 2015;160:607-618.
+#=GF RN   [6]
+#=GF RM   6262773
+#=GF RT   Two small RNAs encoded by Epstein-Barr virus and complexed with protein
+#=GF RT   are precipitated by antibodies from patients with systemic lupus
+#=GF RT   erythematosus.
+#=GF RA   Lerner MR, Andrews NC, Miller G, Steitz JA
+#=GF RL   Proc Natl Acad Sci U S A. 1981;78:805-809.
+#=GF RN   [7]
+#=GF RM   24441309
+#=GF RT   RNA families in Epstein-Barr virus.
+#=GF RA   Moss WN, Lee N, Pimienta G, Steitz JA
+#=GF RL   RNA Biol. 2014;11:10-17.
+#=GF RN   [8]
+#=GF RM   19886912
+#=GF RT   Modulation of innate immunity system by Epstein-Barr virus-encoded
+#=GF RT   non-coding RNA and oncogenesis.
+#=GF RA   Samanta M, Takada K
+#=GF RL   Cancer Sci. 2010;101:29-35.
+#=GF CC   Highly structured, non-coding RNA highly abundant in EBV-infected cells
+#=GF CC   during latency. Contributes to oncogenesis by promoting growth of tumor
+#=GF CC   cells and by inducing apoptosis resistance. Known interactions include
+#=GF CC   paired PAX5 and cellular protein La.
+#=GF WK   EpsteinâBarr_virus-encoded_small_RNAs
+#=GF SQ   3
+
+
+EF187853.1/405-577 AGGACAGCCGUUGCCCUAGUGGUUUCGGACACACCGCCAACGCUCAGUGCGGUGCUACCGACCCGAGGUCAAGUCCCGGGGGAGGAGAAGAGAGGCUUCCCGCCUAGAGCAUUUGCAAGUCAGGAUUCUCUAAUCCCUCUGGGAGAAGGGUAUUCGGCUUGUCCGCUGUUUUU
+J02077.1/418-590   AGGACAGCCGUUGCCCUAGUGGUUUCGGACACACCGCCAACGCUCAGUGCGGUGCUACCGACCCGAGGUCAAGUCCCGGGGAAGGAGAAGAGAGGCUUCCCGCCUAGAGCAUUUGCAAGUCAGGAUUCUCUAAUCCCUCUGGGAGAAGGGUAUUCGGCUUGUCCGCUAUUUUU
+DQ883819.1/405-577 AGGACAGCCGUUGCCCUAGUGGUUUCGGACACACCGCCAACGCGCUGUGCGGUGCUGCCGUCCCGAGGUCAAGUCCCGGGGGAGGAGAAGAGCGGCUUCCCGCCUAGAGCAUUUGCAAGUCAGGAUUCUCUAAUCCCUCUGGGAGAAGGGUAUUCGGCUUGUCCGCUGUUUUU
+#=GC SS_cons       :(((((((((-((((((,,,<<--<<<<---<<<<<<___________>>>>>>--->>>>->>,,,,,,,,,<<<<<<<<<<<<<<<<---<<<<_____>>>>-------------------->>>>>>-->>>>->>>>>>,,))))))--))))-))))):::::::::
+#=GC RF            AGGaCaGCCGUugCCCuAGUGGUUuCGGACACaCCGCCAACGCuCaGUGCGGuGCUaCCGaCCCGAGGUCAAGuCCCgGGGgagGaGaaGAGaGGCUUCCCGCCuAGAGCAUUUGCAAGUCAGGAuuCuCcAAucCCUCcGGGaGAaGGGcaUUCGGCUuGuCCGCUgUUUUU
+//

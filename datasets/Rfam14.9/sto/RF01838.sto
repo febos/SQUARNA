@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01838
+#=GF ID   sobemo_FSE
+#=GF DE   sobemovirus ribosomal frameshift elemental
+#=GF AU   Boursnell C; 0000-0002-3494-4451
+#=GF SE   Published; PMID:10848968
+#=GF SS   Published; PMID:10848968
+#=GF GA   55.00
+#=GF TC   57.40
+#=GF NC   35.00
+#=GF TP   Cis-reg; frameshift_element;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001427; cis_regulatory_frameshift_element;
+#=GF DR   URL; http://recode.ucc.ie/recode/r200196;
+#=GF DR   GO; 0075523; viral translational frameshifting;
+#=GF RN   [1]
+#=GF RM   10848968
+#=GF RT   Regulation of -1 ribosomal frameshifting directed by cocksfoot mottle
+#=GF RT   sobemovirus genome.
+#=GF RA   Lucchesi J, Makelainen K, Merits A, Tamm T, Makinen K
+#=GF RL   Eur J Biochem. 2000;267:3523-3529.
+#=GF WK   Cocksfoot_mottle_virus
+#=GF SQ   5
+
+
+Z48630.1/1623-1701   GCAAUCCGGCCUUUAAACUACCAGCGGGCGGGCU---CCCUACGGGGCAGUCCGCCCUUGGCCAACUUAUCGAGUACGCGGG
+AM883097.1/442-523   GACCACGUUCCUUUAAACUGCCAGGGGGCGGGCUCGAGCCUUCGGGCGAGUCCGCCCUUGGACGGCUUAUCCAACUCGGAGA
+DQ680848.1/1623-1701 GCAAUCCGGCCUUUAAACUACCAGCGGGCGGGCU---CCCUACGGGGCAGUCCGCCCUUGGCCAACUUAUCGAGUACGCGGG
+AM990928.1/2051-2129 GAAGGUGAGCCUUUAAACUACCAGCGGGCGGACC---UCCUACGGGAGAGUCCGCCCUUGGAAGGCUUAUUCAGCUUGGGAA
+AF055888.1/1715-1793 GUUGCGGAGCCUUUAAACUACCAGCGGGCGGCAG---GGUCAAGGCCCUUGCCGCCCUUUCUCAACUUGCAGGCUACGACUU
+#=GC SS_cons         :::::::::::::::::::::::::<<<<<<<<<...<<<____>>>->>>>>>>>>:::::::::::::::::::::::::
+#=GC RF              GaaaucgaGCCUUUAAACUACCAGCGGGCGGgcu...gcCUAcGGgccaguCCGCCCUUGGaCaaCUUAUcgAguaCGggga
+//

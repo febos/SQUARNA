@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02674
+#=GF ID   AsdA
+#=GF DE   antisense RNA of dnaA mRNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   52.00
+#=GF TC   52.20
+#=GF NC   51.90
+#=GF TP   Gene; antisense;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000077; antisense;
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0043488; regulation of mRNA stability;
+#=GF RN   [1]
+#=GF RM   23637809
+#=GF RT   Identification and characterization of a cis-encoded antisense RNA
+#=GF RT   associated with the replication process of Salmonella enterica serovar
+#=GF RT   Typhi.
+#=GF RA   Dadzie I, Xu S, Ni B, Zhang X, Zhang H, Sheng X, Xu H, Huang X
+#=GF RL   PLoS One. 2013;8:e61308.
+#=GF WK   Salmonella_enterica
+#=GF SQ   4
+
+
+
+CAAZ01000116.1/24420-24500 UUUCGCGUUGGGUUUGCGCGCCAUAAUGCCGUUACCCACCGCGUGCAGCAGGUGAGUUUUACCCAGACCGGUGCCGCCAUA
+ABEH02000004.1/52969-52889 UUUCGCAUUGGGUUUGCGCGCCAUAAUGCCGUUACCCACCGCGUGCAGCAGGUGAGUUUUACCCAGACCGGUGCCGCCAUA
+AGSY01000025.1/45702-45622 UUUCGCAUUGGGCUUGCGCGCCAUAAUGCCGUUACCCACCGCGUGCAGAAGGUGCGUUUUACCCAGACCCGUGCCACCAUA
+AERM01000130.1/5252-5172   UUUGGCAUUCGGCUUGCGCGCCAUAAUGCCGUUACCCACCGCAUGCAGCAGGUGAGUUUUACCCAGACCCGUGCCGCCAUA
+#=GC SS_cons               :::<<<<-<<<<<--<<<-<<______>>>>>->>>>>->>>>-------<<<<-<<---<<<______>>>>>>>>>:::
+#=GC RF                    UUUcGCgUugGGuUUgCGCGCCAUAAUGCCGuUaCCcaCcGCgUGCAGcAGGcGaGuUUUaCcCAGACCgGugCCgCCAUA
+//

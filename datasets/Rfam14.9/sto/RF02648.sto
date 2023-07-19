@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02648
+#=GF ID   Cis90_sRNA
+#=GF DE   Ruegeria cis90 sRNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   50.00
+#=GF TC   50.50
+#=GF NC   49.90
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0010468; regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   27065955
+#=GF RT   Experimental Identification of Small Non-Coding RNAs in the Model Marine
+#=GF RT   Bacterium Ruegeria pomeroyi DSS-3.
+#=GF RA   Rivers AR, Burns AS, Chan LK, Moran MA
+#=GF RL   Front Microbiol. 2016;7:380.
+#=GF CC   Cis-encoded. Targets ABC transporter. Functions in transport. Higher sRNA
+#=GF CC   expression during C-limited growth.
+#=GF WK   Ruegeria
+#=GF SQ   2
+
+
+
+CP000031.1/3999629-3999858 AGGUCGAGGCGACCAGCGGUUCCUUGAAAUUGGCCUGUUGCAUCGGAUCGAAGUAGCCGCCCGGGUUGCCCGCCAUCCAGGUAUAGGUACGGGUCGAGCUGAGCCAUUGCAGGAACAGAUAGACCGCCUCGGGAUGCUGCGACUGCGACGAGAUCCAGGCCGU---GAUGUGGUAAUACAGAACCGACCGGCG-GUUCAGCUGAUCACCAAAGCGGCGCCCCACC-GGCA--GGUGG
+CP002623.1/4382961-4383194 AGGUUUCCUCCACGAAGGGUUCCGAGAAGUUUGCCUUCUGGAAGGGAUCGAAAUACCCGGCGGGGUUGCCCGCCAUCCAUGAAUAGGUCCGCGUGGAACUGAGCCACUGCAGGAAAAGGUAUGCGGCCUCCGG--GUUGGCGCUGCGC-GAGCUGACGGUACCGGUGAUGUUGUAAUAGAUCACCGACCGGCGCACGAGGCCGUCGUCAUGCUGCACACCCGGCGGGGCAUGGGCCG
+#=GC SS_cons               :[[<<<<<<-<<<<___>>>>>>>>>>,,((((-((-(((((-------(--(((((--(((((((<<<<-<<<_____>>>--->>>>,,<<<<---<<<--<<______>>-->>>--->>>>)))-))))--)))))--)))))).-))--))))<<<<<------<<<<<------<<<<<<_____>>->>>>----->>>>>---->>>>>,]]<<<<<_______>>>>>
+#=GC RF                    AGGucgcggCgaCcAaggGucccgcgaAauuggCCuuuuGcaagGGAUCGAAguagCCGcCgGGGuugCCCgCcAUCCAgGcAUAGGuaCGgGucGAaCugAGCCAuUGCAGGAAcaGaUAgaCcgCCUCcGg..GcugcgaCugCga.GaGaUccagGccgcGGUGAUGugguAAUAgAgcgcCGACCGGCGcgcgcaGCuGaccaCauaagcggCaCCCggCcGGGCAUGgGccG
+//

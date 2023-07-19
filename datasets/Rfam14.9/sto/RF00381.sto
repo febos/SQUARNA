@@ -1,0 +1,56 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00381
+#=GF ID   Antizyme_FSE
+#=GF DE   Antizyme RNA frameshifting stimulation element
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   PMID:15147837
+#=GF SS   Published; PMID:15147837
+#=GF GA   40.00
+#=GF TC   42.10
+#=GF NC   39.20
+#=GF TP   Cis-reg; frameshift_element;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 21 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000233; mature_transcript;
+#=GF DR   GO; 0006452; translational frameshifting;
+#=GF RN   [1]
+#=GF RM   15147837
+#=GF RT   Identification of a new antizyme mRNA +1 frameshifting stimulatory
+#=GF RT   pseudoknot in a subset of diverse invertebrates and its apparent absence
+#=GF RT   in intermediate species.
+#=GF RA   Ivanov IP, Anderson CB, Gesteland RF, Atkins JF
+#=GF RL   J Mol Biol 2004;339:495-504.
+#=GF CC   This family represents a structural element which is found in antizyme
+#=GF CC   mRNA and is known to promote frameshifting. Antizyme genes have have two
+#=GF CC   partially overlapping open reading frames, the second, which encodes the
+#=GF CC   functional protein requires +1 translational frameshifting. This
+#=GF CC   frameshift is stimulated by a pseudoknot present 3' of the frameshift site
+#=GF CC   in the antizyme mRNA. The frameshifting efficiency is dependent on the
+#=GF CC   level of polyamines in the cell, when the polyamine concentration is high
+#=GF CC   frameshifting is more likely to occur which leads to an increase in the
+#=GF CC   quantity of functional antizyme produced. The functional antizyme acts to
+#=GF CC   reduce ornithine decarboxylase (ODC) activity which leads to a drop in
+#=GF CC   polyamines present in the cell. Therefore, this family can be thought of
+#=GF CC   as a biosensor for intracellular free polyamines [1].
+#=GF WK   Antizyme_RNA_frameshifting_stimulation_element
+#=GF SQ   13
+
+
+BC056833.1/241-299       UGAUGCCCCUCACCCACCUCUGAAGAUCCCAGGUGGGCGAGGGAACGGAGCACGGGAUC
+AF242520.1/225-280       UGAUGCCCCUCACCCACUGUCGAAGAUCCCCGGUGGGCGAGGGGGCGGC---AGGGAUC
+AF258463.1/230-288       UGAUGUCCCUCACCCACCCCUGAAGAUCCCAGGUGGGCGAGGGAAUAGUCAGAGGGAUC
+D10706.1/256-314         UGAUGUCCCUCACCCACCCCUGAAGAUCCCAGGUGGGCGAGGGAACAGUCAGCGGGAUC
+AC004152.1/16641-16699   UGAUGCCCCUCACCCACCCCUGAAGAUCCCAGGUGGGCGAGGGAAUAGUCAGAGGGAUC
+AF291576.1/215-270       UGAUGCCCCUCACCCAUCAGUGAAGAUCCCGGGUGGGCGAGGGAACGG---AAGGGAUC
+D11373.1/473-530         UGAUGUCCCUCACCCAGCCCUGAAGAGCCCAGGUGGGCGAGGGAACAGUCAGC-GGAUC
+BC054690.1/204-259       UGAUGCCCCUCUCCCACUAACGAAGAUCCCGGGUGGGCGAGGG-ACGGGCA--GGGAUC
+AB017117.1/228-286       UGAUGUCCCUCUCCCACCCCUGAAGAUCCCAGGUGGGCGAGGGAAUGAUCAGCGGGAUC
+AF196332.1/69-127        UGAUGUCCCUCACCCACCCCUGAAGAUCCCAGGUGGGCGAGGGAAUAGUCAGAGGGACC
+AF293339.1/257-315       UGAUGUCCCUCACCCACCCCUGAAGAUCCCAGGUGGGCGAGGGGAUAGCCAGAGGGAUC
+AC127562.3/159570-159515 UGAUGCCCCUCACCCACUGUCGAAGAUCCCCGGAGGGCAAGGGGGCGGC---AGGGAUU
+AC145407.3/104311-104366 UGAUGCCCCUCACCCACUGUUGAAGACCCUCAGUGGGUGAGGGGGCGGC---AAGGAUC
+#=GC SS_cons             :::::<<<<<<-<<<<<<______AAAAAA_>>>>>>->>>>>>:::::::::aaaaaa
+#=GC RF                  UGAUGcCCCUCACCCACcccUGAAGAUCCCagGUGGGCGAGGGgAcgGuCAGAGGGAUC
+//

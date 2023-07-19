@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02657
+#=GF ID   sot2652
+#=GF DE   Sense overlapping transcript RNA 2652 (sot)
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   61.00
+#=GF TC   61.00
+#=GF NC   52.90
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   25806405
+#=GF RT   Sense overlapping transcripts in IS1341-type transposase genes are
+#=GF RT   functional non-coding RNAs in archaea.
+#=GF RA   Gomes-Filho JV, Zaramela LS, Italiani VC, Baliga NS, Vencio RZ, Koide T
+#=GF RL   RNA Biol. 2015;12:490-500.
+#=GF CC   It is associated with IS1341-type transposase (tnpB) genes, at the 3'-end
+#=GF CC   in H. salinarum NRC-1. The tetraloop structural motif may be functional.
+#=GF WK   Bacterial_small_RNA
+#=GF SQ   2
+
+
+
+AE004437.1/1988005-1987819 AUUACCGGACUCACAAAACCCAACCACAAGUUCGGUUGGUGCGUCUGUCCGGGUCGGGGCGCGUAAGCCGCCCAACCUCAUCCCGUUCCCUCGCGGAACAGGGAGUGUUAGCGCACGGCUGAGGGAACUACAAAAGCCUCGGGCCAUCGUGCCCGAGGCUGUUUACUCCGUUCUCGCGGGGGGUUCG
+AGFZ01000059.1/64264-64449 AUUACCGGACUCACAAAACCCAGCCGCAAGUGCGGUUGGUGCGUCUGUCCGGGUCGGGGCGUGUAAACCGCCCAACCUCAUCCCGCUCGCUUGCCGAGCAGGGAGUACUAGCGUACGGCUGAGGGAAUUACAAAAGCCUCGGGCCACCGCGCCCGAGGUUGUUUACGG-GUCCCGGGGUUCGGUUCG
+#=GC SS_cons               ::::<<<<<<--<<-----<<<<<<________>>>>>>--->>-->>>>>><<--<<<<<<____>->>>>>->>-------((-(((((((((((((--((((((<<<<<_____>>>>>,,,,,,,,,,,,<<<<<<<<<<______>>>>>>>>>>,,,))))))))))-)))))))))--))
+#=GC RF                    AUUACCGGaCUCaCAAAACCCagCCaCAAGUuCGGcuGGUGCGuCUGuCCGGGuCGGGGCGcGUAAgCCGCCCAaCCUCAUCCCGucCgcccgCgGggCAGggaGugccaGCGuACGGCuggGGGAAuUACAAAagCCuCGGGCCAuCGuGCCCGaGGcuGUUcaCuccGccCucGcgggcGgUUCG
+//

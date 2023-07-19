@@ -1,0 +1,43 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02815
+#=GF ID   Lig_thermometer
+#=GF DE   Lig 5' UTR thermometer
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; 24013626
+#=GF GA   51.50
+#=GF TC   51.50
+#=GF NC   51.30
+#=GF TP   Cis-reg; thermoregulator;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   SO; 0000204; five_prime_UTR;
+#=GF DR   GO; 0009266; response to temperature stimulus;
+#=GF DR   GO; 0030371; translation repressor activity;
+#=GF RN   [1]
+#=GF RM   24013626
+#=GF RT   Role for cis-acting RNA sequences in the temperature-dependent expression
+#=GF RT   of the multiadhesive lig proteins in Leptospira interrogans.
+#=GF RA   Matsunaga J, Schlax PJ, Haake DA
+#=GF RL   J Bacteriol. 2013;195:5092-5101.
+#=GF CC   It controls ligA and ligB gene expression in Leptospira interrogans in
+#=GF CC   response to temperature change. The lipoproteins LigA and LigB promote
+#=GF CC   adhesion of Leptospira to host proteins.The RNA is composed of
+#=GF CC   175-nucleotide 5'UTR and the first six lig codons (identical in ligA and
+#=GF CC   ligB). Lig expressions is limited by double-stranded RNA structure that
+#=GF CC   occludes the ribosome-binding site. At higher temperatures the site is
+#=GF CC   exposed to promote translation initiation.
+#=GF WK   Lig_RNA_thermometer
+#=GF SQ   2
+
+
+
+AHNZ02000335.1/6200-6404   AGAGAACUUCUAUAAAAUUGAUUUUUAAUUUUUGUUGAUAGUCGCCAAACAACGACUUGAUGCAAAAAUCUAAUUGGAUAAUUAUCCUUUUUAAAUUUUGUAAAGGCUCUCAAUAAAUAAACACAGCAAAUACACAAAAUGAAAACUUCAAAUAAAACAAUUAGAGUGAGUGUUUAUGAAGAAAAUAUUUUGUAUUUCGAUUUUU
+AE010300.2/3748278-3748475 AGAGAACUUCUAUAAAAUU-------AAUUUUUGUUGAUAGUCGCCAAACAACGACUUGAUGCAAAAAUCUAAUUGGAUAAUUAUCCUUUUUAAAUUUUGUAGAGGCUCUCAAUAAAUAAACACAGCAAAUACACAAAAUGAAAACUUCAAAUAAAACAAUUAGAGUGAGUGUUUAUGAAGAAAAUAUUUUGUAUUUCGAUUUUU
+#=GC SS_cons               :((((-(((-(((((((((<<<<-----<<<<<<<<----<<<<<________>>>>>---->>>>>>>>-->>>><<<<____>>>>,,,,,,)))))))))-)))-))))---------------------<<<<<<<<----<<<<<----<<<<<-<<_____>>->>>>>->>>>>---->>>>>>>>::::::::::::
+#=GC RF                    AggggAcuuCuauaaaauucacuUUUAAguuuugugGAUAgucgCCAAACAACGaguuGAUGcaaaaaucUAaguggggaAUUAuccuUUUUAAauuuuguaaAgggUcucaAUAAAUAAACACAGCAAAUACaCaaaaugAAAACuuCaAAUAaaaCaAuuAGAGUgaGuGuuuAuGaaGAAAAuauuuuGuAUUUCGAUUUUU
+//

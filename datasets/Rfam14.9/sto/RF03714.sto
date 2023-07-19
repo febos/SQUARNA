@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03714
+#=GF ID   MIR774
+#=GF DE   MIR774 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   80.00
+#=GF TC   81.90
+#=GF NC   69.20
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0001101;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor MIR774 imported from
+#=GF CC   miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+URS0000D50C97_59689/5-102  UCACUUGAGAUGAAGAUUUG---GAUGACAAAUACUUAAAACUUUGGUAAAUUUAAAUUACCAAUUUAAUUAUCUGUCACCCAAAUCUUCCUCUCAGGUUU
+URS0000A7772E_3702/20-120  UCAUUUGAGAUGAAGAUAUGGGUGAUGAUCAAUGCUUACGAUUUUGGUCAAUUUAUGUUAGCAAUUUAAUUCUUUUUCAUCCAUAUUUUCAUCUCGAAUUU
+URS0000D4FEBC_59689/20-117 AUAUUCGAGACGAAGAUAUG---GGUGACUAAUACUUAAGAUUUUGGUCAAUUUAAAUUACCAAUCUAAUUAUUUGUUACCCAUAUCUCCAUCUCCAAUUU
+URS00002A677D_3702/1-98    UCAUUUCAGAUGGCUGUUUG---GGUAACUAAUAUUUAAGAUUUUGGUCAAUUUAAGUUACCAAUUUAUAUAUUGGUUACCCAUAUGGCCAUCUCAAAUUU
+#=GC SS_cons               ::<<<<<<<<<<<<<<<<<<...<<<<<<<<<<<-<<<<<---<<<<<-<<<____>>>>>>>>>>>>>->>>>>>>>>>>>>>>>>>>>>>>>>>>>>::
+#=GC RF                    ucacuugaGauGgagauguG...GgugaccaauacuuaagAuUuuGgucaacUUAaguuacCaacuuaauuauuggucacCCacaucucCauCucaaguUU
+//

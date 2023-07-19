@@ -1,0 +1,43 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02658
+#=GF ID   IRES_RhPV
+#=GF DE   Rhopalosiphum padi virus 5'UTR internal ribosome entry site
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   688.00
+#=GF TC   688.70
+#=GF NC   55.10
+#=GF TP   Cis-reg; IRES;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000243; internal_ribosome_entry_site;
+#=GF DR   GO; 0043022; ribosome binding;
+#=GF RN   [1]
+#=GF RM   11581392
+#=GF RT   The 5' untranslated region of Rhopalosiphum padi virus contains an
+#=GF RT   internal ribosome entry site which functions efficiently in mammalian,
+#=GF RT   plant, and insect translation systems.
+#=GF RA   Woolaway KE, Lazaridis K, Belsham GJ, Carter MJ, Roberts LO
+#=GF RL   J Virol. 2001;75:10244-10249.
+#=GF RN   [2]
+#=GF RM   24376523
+#=GF RT   IRES-mediated translation of membrane proteins and glycoproteins in
+#=GF RT   eukaryotic cell-free systems.
+#=GF RA   Brodel AK, Sonnabend A, Roberts LO, Stech M, Wustenhagen DA, Kubick S
+#=GF RL   PLoS One. 2013;8:e82234.
+#=GF CC   This IRES element can function efficiently in mammalian, plant and insect
+#=GF CC   translation systems.
+#=GF WK   Rhopalosiphum_padi_virus
+#=GF SQ   2
+
+
+
+AF022937.1/1-579 GAUAAAAGAACCUAUAAUCCCUUCGCACACCGCGUCACACCGCGCUAUAUGCUGCUCAUUAGGAAUUACGGCUCCUUUUUUGUGGAUACAAUCUCUUGUAUACGAUAUACUUAUUGUUAAUUUCAUUGACCUUUACGCAAUCCUGCGUAAAUGCUGGUAUAGGGUGUACUUCGGAUUUCCGAGCCUAUAUUGGUUUUGAAAGGACCUUUAAGUCCCUACUAUACUACAUUGUACUAGCGUAGGCCACGUAGGCCCGUAAGAUAUUAUAACUAUUUUAUUAUAUUUUAUUCACCCCCCACAUUAAUCCCAGUUAAAGCUUUAUAACUAUAAGUAAGCCGUGCCGAAACGUUAAUCGGUCGCUAGUUGCGUAACAACUGUUAGUUUAAUUUUCCAAAAUUUAUUUUUCACAAUUUUUAGUUAAGAUUUUAGCUUGCCUUAAGCAGUCUUUAUAUCUUCUGUAUAUUAUUUUAAAGUUUAUAGGAGCAAAGUUCGCUUUACUCGCAAUAGCUAUUUUAUUUAUUUUAGGAAUAUUAUCACCUCGUAAUUAUUUAAUUAUAACAUUAGCUUUAUCUAUUUAUA
+EU282007.1/1-579 GAUAAAAGAACCUAUAAUCCCUUCGCACACCGCGUCACACCGCGCUAUAUGCUGCUCAUUAGGAAUUACGGCUCCUUUUUUGUGGAUACAAUCUCUUGUAUACGAUAUACUUAUUGUUAAUUUCAUUGACCUUUACGCAAUCCUGCGUAAAUGCUGGUAUAGGGUGUACUUCGGAUUUCCGAGCCUAUAUUGGUUUUGAAAGGACCUUUAAGUCCCUACUAUAUUACAUUGUACUAGCGUAGGCCACGUAGGCCCGUAAGAUAUUAUAAUUAUUUUAUUAUAUUUUAUUCCCCCCCCACAUUAACUCCAGUUAAAGCUUUAUAACUAUAAGUAAGCCGUGCCGAAACGUUAAUCGGUCGCUAGUUGCGUAACAACUAUUAGUUUAAUUUUCCAAAAUUUAUUUUUCACGAUUUUUAGUUAAGAUUUUAGCUUGCCUUAAGCAGUCUUUAUAUCUUCUGUAUAUUAUUUUAAAGUUUAUAGGAGCAAAGUUCGCUUUACUCGCAAUAGCUAUUUUAUUUAUUUUAGGAAUAUUAUCACCUCGUAAUUAUUUACUUAUAACUUUAGCUUUGUCUAUUUAUA
+#=GC SS_cons     :::<<<<<---<<-<<<<-<<<--<<<<<--<<<<______>>>>---->>->>>----->>>->>>>->>--->>>>>,[[[[[<<<<<<____>>>>>><<<<<<____>>>>>>,,,,,,,,,,,,,,,<<<<<<<____>>>>>>>((((((((((((((((((,,<<<<____>>>><<<______>>>,,,,,,,<<<<______>>>>,,,,))))))---)))))))))))),<<<<_____>>>>,<<<<<<<<<-<<<<_____>>>>->>>>>>>>>,,,,,,,]]]]]--------[[-[[[[[[[[[[[[[---[[[[[[[--[[,<<<<<________>>>>><<<_____>>><<<<____>>>>((-((((-(((((((((--((,,,,,,,<<<<<<_____>>>>>>,<<<<<<<<---<<<<---<<<<----<<<<<<<<-<<<_______>>>->>>>>>>>->>>>--->>>>----->>>-->>>>>,,,,))--)))))-))))-))))--)),,]]---]]]]]]]-]]]]]]----]]]]]]]-]]:::::::
+#=GC RF          GAUaaaaGAACCcAuaauCCCuUCGCaCaCCGCGcCACACCgCGCUAUAuGCuGCUCAUUaGGAauuaCgGCUCCuuuuUuGuGGauaCaaUCUCuuGuauaCgauaUACUuaucGuUAAUUUCAUUGACCUuuaCGCaAUCCuGCGuaaacGCugGuacaggguguaCUuCGGAUUUCCGagCCUAUAUUGGcUUUGAAAGGaCCUUUAAGuCCCUACuacaccACAcuguaCcaGCguAGGCCACGUAGGCCCguaagauauUauaauUAUUuuauUauaucuuacUCaCCCCCCaCaUUAAuuCCaGUcaaaGCuuuauaaCUAuaaguaaGCCGUgCCGaAACGUUAAuCGGcCGCUAGUUGCGuaacAACUguuaGuUuaauUuuCCaaaauUUauUUUUCACgaucuuUAGUUaagaucUuaGCuuGCCUUaaGCAGUCuuuAUAUCucCuguaUacuAUUUUAAaguUuacaGgaGCaaaGUUCGCuuUACUCGCaAUaGCuaUUUUauUUauuuuAGGaaUauuaUCaCCUCGUAAuuacuuaauuauaaCaUUaGCuuugUCuAUUUAUA
+//

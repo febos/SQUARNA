@@ -1,0 +1,46 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00035
+#=GF ID   OxyS
+#=GF DE   OxyS RNA
+#=GF AU   Bateman A; 0000-0002-6982-4660
+#=GF SE   Noncoding RNAs Database
+#=GF SS   Published; PMID:11804582
+#=GF GA   75.00
+#=GF TC   75.10
+#=GF NC   74.90
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   URL; http://biobases.ibch.poznan.pl/ncRNA;
+#=GF DR   SO; 0000384; OxyS_RNA;
+#=GF RN   [1]
+#=GF RM   9774350
+#=GF RT   The Escherichia coli OxyS regulatory RNA represses fhlA translation by
+#=GF RT   blocking ribosome binding.
+#=GF RA   Altuvia S, Zhang A, Argaman L, Tiwari A, Storz G
+#=GF RL   EMBO J 1998;17:6069-6075.
+#=GF RN   [2]
+#=GF RM   11804582
+#=GF RT   The Sm-like Hfq protein increases OxyS RNA interaction with target mRNAs.
+#=GF RA   Zhang A, Wassarman KM, Ortega J, Steven AC, Storz G
+#=GF RL   Mol Cell 2002;9:11-22.
+#=GF CC   OxyS is a small untranslated RNA which is induced in response to oxidative
+#=GF CC   stress in Escherichia coli. This novel RNA acts as a global regulator to
+#=GF CC   activate or repress the expression of as many as 40 genes, including the
+#=GF CC   fhlA-encoded transcriptional activator and the rpoS-encoded sigma(s)
+#=GF CC   subunit of RNA polymerase [1]. OxyS is bound by the Hfq protein, that
+#=GF CC   increases the OxyS RNA interaction with its target messages [2].
+#=GF WK   OxyS_RNA
+#=GF SQ   5
+
+
+AL627279.1/144216-144327   AGAACGGAGCGGUUUCUCGUUUAACCCUUGAAGACACCGCCCGUUCAGAGGGUAUCUCUCGAACCCGAAAUAACUAAAGCCAACGUGAACUUUUGCGGACCUC--UGGUCCGCU
+M34102.1/107-1             GAAACGGAGCGGCACCUCUUUUAACCCUUGAAGUCACUGCCCGUUUCGAGAGUUUCUC---AACUCGAA-UAACUAAAGCCAACGUGAACUUUUGCGGAUCUCCAGGAUCC---
+X16531.1/107-1             GAAACGGAGCGGCACCUCUUUUAACCCUUGAAGUCACUGCCCGUUUCGAGAGUUUCUC---AACUCGAA-UAACUAAAGCCAACGUGAACUUUUGCGGAUCUCCAGGAUCC---
+U87390.1/56-165            GAAACGGAGCGGCACCUCUUUUAACCCUUGAAGUCACUGCCCGUUUCGAGAGUUUCUC---AACUCGAA-UAACUAAAGCCAACGUGAACUUUUGCGGAUCUCCAGGAUCCGCU
+CP001127.1/4210197-4210086 AGAACGGAGCGGUUUCUCGUUUAACCCUUGAAGACACCGCCCGUUCAGAGGGUAUCUCUCGAACCCGAAAUAACUAAAGCCAACGUGAACUUUUGCGGACCUC--UGGUCCGCU
+#=GC SS_cons               <<<<<<<-<<<<-<<-<<___________>>->>-->>>>>>>>>>>,,<<<<_____..._>>>>,,,.,,,,,,,,,,,,,,,,,,,,,,,,<<<<<<<_____>>>>>>>:
+#=GC RF                    ggaaCGGAGCgGuacCuCuUUUAACCCUUGaAguCACcGCCCGuuccGAGgGuuUCUC...AaCcCGAA.UAACUAAAGCCAACGUGAACUUUUGcGGacCUCcAuGguCCgCU
+//

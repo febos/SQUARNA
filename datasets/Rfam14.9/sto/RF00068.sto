@@ -1,0 +1,53 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00068
+#=GF ID   SNORD21
+#=GF PI   U21
+#=GF DE   Small nucleolar RNA SNORD21
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; PFOLD; Griffiths-Jones SR, Daub J
+#=GF GA   63.00
+#=GF TC   64.00
+#=GF NC   62.50
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300771;
+#=GF DR   snoopy; Danio_rerio300117;
+#=GF RN   [1]
+#=GF RM   7937132
+#=GF RT   U21, a novel small nucleolar RNA with a 13 nt. complementarity to 28S
+#=GF RT   rRNA, is encoded in an intron of ribosomal protein L5 gene in chicken and
+#=GF RT   mammals.
+#=GF RA   Qu LH, Nicoloso M, Michot B, Azum MC, Caizergues-Ferrer M, Renalier MH,
+#=GF RA   Bachellerie JP
+#=GF RL   Nucleic Acids Res 1994;22:4073-4081.
+#=GF RN   [2]
+#=GF RM   8603691
+#=GF RT   SnoRNA U21 is also intron-encoded in Drosophila melanogaster but in a
+#=GF RT   different host-gene as compared to warm-blooded vertebrates.
+#=GF RA   Renalier MH, Nicoloso M, Qu LH, Bachellerie JP
+#=GF RL   FEBS Lett 1996;379:212-216.
+#=GF CC   U21 is a member of the C/D class of snoRNA which contain the C (UGAUGA)
+#=GF CC   and D (CUGA) box motifs. U21 is encoded within an intron of the gene for
+#=GF CC   ribosomal protein L5 in mammals [1], but within introns of the ADP
+#=GF CC   ribosylation factor gene in Drosophila [2]. U21 snoRNA has a 13 nt region
+#=GF CC   of complementarity with an invariant region of eukaryotic 28S ribosomal
+#=GF CC   RNA.
+#=GF WK   Small_nucleolar_RNA_SNORD21
+#=GF SQ   5
+
+
+Z35312.1/944-1038  GCUGAAUGAUGAUAUCCCACUAACUGAGCAGUCAGUAGUUGGUCCUUUGGUUGCAUAUGAUGCGAU-AAUUGUUUCAAGACGGGACUGA-UGGCAGC
+Z35311.1/728-821   GCC-AAUGAUGACACCACACUAACUGAGCAGUUAGUAGUUGGUCCUUUGAUUGCAUGUGAUGUAAU-CAUUGUUUCAAGACGGGACUGA-AGGCGGC
+D10737.1/4698-4793 GCUAUGUGAUGAUACCCCAAUGUCUGACCACUCCGUAGUAGGUCCAUGGUGUGUAAAUGAUGGACUGCGUAGUUUCAAGACGGGACUGA-UGGCAGC
+Z35416.1/1-94      -CUAUGUGAUGAUACCCCAAUGUCUGACCACUCCGUAGUAGGUCCAUGGUGUGUAAAUGAUGGACUGCGUAGUUUCAAGACGGGACUGA-UGGCAG-
+S62079.1/541-624   UCUAUAUGAUGUUAACAGCUUGU------AAUGAUUA-----UGCAUUGUGAUUAUUCAAGUUUAU--UUUGUUUCAAGACGGGACUGACUAUAUUA
+#=GC SS_cons       <<<<______________________________________________________________.______________________.>>>>:::
+#=GC RF            gccauaUGAUGAUAcCacAaUguCUGAgCAaUcagUAGUuGGUcCaUuGugUguAuaUGAuguaaU.caUuGUUUCAAGACGGGACUGA.uggcagc
+//

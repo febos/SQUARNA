@@ -1,0 +1,52 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01812
+#=GF ID   Pxr
+#=GF DE   Pxr regulatory sRNA
+#=GF AU   Moore B; 0000-0002-4074-1933
+#=GF SE   Published; PMID:20489016
+#=GF SS   Published; PMID:20489016
+#=GF GA   80.00
+#=GF TC   81.60
+#=GF NC   79.70
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000655; ncRNA;
+#=GF DR   GO; 0040033; sRNA-mediated gene silencing;
+#=GF RN   [1]
+#=GF RM   20489016
+#=GF RT   Adaptive evolution of an sRNA that controls Myxococcus development.
+#=GF RA   Yu YT, Yuan X, Velicer GJ
+#=GF RL   Science. 2010;328:993.
+#=GF RN   [2]
+#=GF RM   27621281
+#=GF RT   Spontaneous Reversions of an Evolutionary Trait Loss Reveal Regulators of
+#=GF RT   a Small RNA That Controls Multicellular Development in Myxobacteria.
+#=GF RA   Yu YN, Kleiner M, Velicer GJ
+#=GF RL   J Bacteriol. 2016;198:3142-3151.
+#=GF RN   [3]
+#=GF RM   29133885
+#=GF RT   A conserved stem of the Myxococcus xanthus sRNA Pxr controls sRNA
+#=GF RT   accumulation and multicellular development.
+#=GF RA   Yu YN, Cooper E, Velicer GJ
+#=GF RL   Sci Rep. 2017;7:15411.
+#=GF CC   Downregulates genes responsible for the formation of fruiting bodies in
+#=GF CC   Myxococcus xanthus, inhibiting the transition from growth to development
+#=GF CC   in the presence of abundant nutrients.[1] Two-component system operon
+#=GF CC   (histidine kinase gene and a Ï54 response regulator) is associated with
+#=GF CC   production and processing of Pxr sRNA.[2] Folds into 3 steam loops. SL1
+#=GF CC   and SL 2 are highly conserved across mycobacteria and SL1 is necessary for
+#=GF CC   the regulatory function. However, a conserved eight-base-pair segment of
+#=GF CC   the variable SL3 is necessary for PxR accumulation and multicellular
+#=GF CC   development.[3]
+#=GF WK   Pxr_sRNA
+#=GF SQ   2
+
+
+CP000113.1/1258215-1258322 AAGCGAGGCUGAAGGCGGUUCCCCCCCACCCCUUCAGCACUUCCGGUGAGUCACCUUGAGAAGA-CCCGCGGCCCGGCACCUCUUUGGGGUGUCGGGCCGCCUUCUUUU
+AAMD01000048.1/41147-41039 AAGCGAGGCUGAAGGUGGUUCCCCCCCACCCCUUCAGCACUUCCGGUGAGUCACCUUUAGAAGAACCCGCGGCCCGGUACCCUCUUGGGGUAUCGGGCCGCCUUCUUUU
+#=GC SS_cons               ::::<<<<<<<<<<<-<<<________>>>>>>>>>>>->>>,,<<<<___>>>>---<<<<<-----<<<<<<<<<<<<<<_____>>>>>>>>>>>>>>>>>>>:::
+#=GC RF                    AAGcgaGGcuGaaGGuGGuUcccccccaCCCCuuCagCACucccGGuGAGUCaCCUUuaGaaGAAcccGcGGcccGgcacccuuUUGgggugcCgggCCgCCuuCuUUU
+//

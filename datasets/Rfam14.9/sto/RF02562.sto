@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02562
+#=GF ID   CbSR14
+#=GF DE   Coxiella burnetii sRNA 14
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J 
+#=GF SS   Predicted; CMfinder
+#=GF GA   172.00
+#=GF TC   172.70
+#=GF NC   39.60
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   24949863
+#=GF RT   Identification of novel small RNAs and characterization of the 6S RNA of
+#=GF RT   Coxiella burnetii.
+#=GF RA   Warrier I, Hicks LD, Battisti JM, Raghavan R, Minnick MF
+#=GF RL   PLoS One. 2014;9:e100147.
+#=GF CC   In bacteria small regulatory RNAs are activated during stress and
+#=GF CC   virulence conditions. Coxiella burnetii small RNAs (CbSRs 1, 11, 12, and
+#=GF CC   14) are encoded within intergenic region IGR. CbSRs 2, 3, 4 and 9 are
+#=GF CC   located antisense to identified ORFs and are up-regulated during
+#=GF CC   intracellular growth in host cells.
+#=GF WK   Coxiella_burnetii
+#=GF SQ   2
+
+
+
+CP001020.1/26215-26403 GGACCGUGAGGACAGCAGUUUGUUGUUUGGCCCUUUGGGCAAAAAUUGAAUUCGGGAGGAUUAGUCUCCCAGGUUAGCCCGCAAUUCUUAUGAGUAACUCCUGUAACGGUACCCCCAUUUUCACAGCGAAGGUCAUCUCCCAAAGCUAUCGCAGUCAGCCCUAGAAGGACUAAGCUCGCUAUUAUUGCU
+Y10436.1/1-137         ----------------------------------------------------CGGGAGGAUUAGUCUCCCAGGUUAGCCCGCAAUUCUUAUGAGUAACUCCUGUAACGGUACCCCCAUUUUCACAGCGAAGGUCAUCUCCCAAAGCUAUCGCAGUCAGCCCUAGAAGGACUAAGCUCGCUAUUAUUGCU
+#=GC SS_cons           :::<<____>>---(((((-----((((((-((((-((((,,,,,,,,,,,,,<<<<<<_____>>>>>>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,<<<<-<<_____________>>->>>>,,,,,))))---))))-))))))--------))))):
+#=GC RF                GGAccGUGAggAcAGcaguUUGUUGcuugGcccuuUGGGcAAAAAUUGAAUUCGGGaGgAUUAGuCuCCCAGGUUAGCCCGCAAUUCUUAUGAGUAACUCCUGUAACGGUACCCCCAUUUUCACAGCGaAgGUCAUCUCCCAAAGCuAuCGCAGUCAgCCCUAGaaggACcaagCUCGCUAUUacugCU
+//

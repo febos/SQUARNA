@@ -1,0 +1,105 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00057
+#=GF ID   RyhB
+#=GF DE   RyhB RNA
+#=GF AU   Bateman A; 0000-0002-6982-4660
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Bateman A
+#=GF SS   Predicted; PFOLD; Moxon SJ
+#=GF GA   55.00
+#=GF TC   55.20
+#=GF NC   54.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 26.95 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000644; antisense_RNA;
+#=GF DR   GO; 0010039; response to iron ion;
+#=GF DR   GO; 0046677; response to antibiotic;
+#=GF RN   [1]
+#=GF RM   11917098
+#=GF RT   A small RNA regulates the expression of genes involved in iron metabolism
+#=GF RT   in Escherichia coli.
+#=GF RA   Masse E, Gottesman S
+#=GF RL   Proc Natl Acad Sci U S A 2002;99:4620-4625.
+#=GF RN   [2]
+#=GF RM   11448770
+#=GF RT   Novel small RNA-encoding genes in the intergenic regions of Escherichia
+#=GF RT   coli.
+#=GF RA   Argaman L, Hershberg R, Vogel J, Bejerano G, Wagner EG, Margalit H,
+#=GF RA   Altuvia S
+#=GF RL   Curr Biol 2001;11:941-950.
+#=GF RN   [3]
+#=GF RM   15913835
+#=GF RT   Micros for microbes: non-coding regulatory RNAs in bacteria.
+#=GF RA   Gottesman S
+#=GF RL   Trends Genet 2005;21:399-404.
+#=GF RN   [4]
+#=GF RM   15937163
+#=GF RT   Characterization of the small untranslated RNA RyhB and its regulon in
+#=GF RT   Vibrio cholerae.
+#=GF RA   Davis BM, Quinones M, Pratt J, Ding Y, Waldor MK
+#=GF RL   J Bacteriol. 2005;187:4005-4014.
+#=GF RN   [5]
+#=GF RM   29467745
+#=GF RT   Small Non-coding RNA RyhB Mediates Persistence to Multiple Antibiotics and
+#=GF RT   Stresses in Uropathogenic Escherichia coli by Reducing Cellular
+#=GF RT   Metabolism.
+#=GF RA   Zhang S, Liu S, Wu N, Yuan Y, Zhang W, Zhang Y
+#=GF RL   Front Microbiol. 2018;9:136.
+#=GF RN   [6]
+#=GF RM   28245801
+#=GF RT   Differentiation of ncRNAs from small mRNAs in Escherichia coli O157:H7
+#=GF RT   EDL933 (EHEC) by combined RNAseq and RIBOseq - ryhB encodes the regulatory
+#=GF RT   RNA RyhB and  a peptide, RyhP.
+#=GF RA   Neuhaus K, Landstorfer R, Simon S, Schober S, Wright PR, Smith C, Backofen
+#=GF RA   R, Wecko R, Keim DA, Scherer S
+#=GF RL   BMC Genomics. 2017;18:216.
+#=GF CC   The RyhB 90-nt RNA down-regulates a set of iron-storage and iron-using
+#=GF CC   proteins when iron is limiting; it is itself negatively regulated by the
+#=GF CC   ferric uptake repressor protein, Fur (Ferric uptake regulator). RyhB RNA
+#=GF CC   levels are inversely correlated with mRNA levels for the sdhCDAB operon,
+#=GF CC   encoding succinate dehydrogenase, as well as five other genes previously
+#=GF CC   shown to be positively regulated by Fur by an unknown mechanism. These
+#=GF CC   include two other genes encoding enzymes in the tricarboxylic acid cycle,
+#=GF CC   acnA and fumA, two ferritin genes, ftnA and bfr, and a gene for superoxide
+#=GF CC   dismutase, sodB [1]. This ncRNA gene was also identified in a screen and
+#=GF CC   called SraI and it was found to be expressed only in stationary phase
+#=GF CC   [2].First sRNA shown to mediate persistence to antibiotics in E.coli.[5]
+#=GF CC   It may act both as an RNA-RNA interaction based regulator and as a
+#=GF CC   transcript encoding for a small protein.[6]
+#=GF WK   RyhB
+#=GF **   Gained 4 new members by re-searching and changing structure
+#=GF SQ   26
+
+
+AY183121.1/21-87             GAAAGCACGACAUUGCUCACAUUGCUUCCAGUGUUUUUUA-AGCCAGC---UCGGGUGCUGGCUUUUUUUU
+AL627281.1/157209-157273     GAAAGCAUGACAUUGCUCACAUUGCUUCCAGUUUUAUUUU-GGCCAGC---UUU--UGCUGGCUUUUUUUU
+BX571867.1/241263-241198     AAAAGCACGACAUUGCUCACAUUGCUUCCAGUGUUUUUU--AGCCAGC---UCGGGUGCUGGCUUUUUUUU
+BX950851.1/2247640-2247706   GAGAGCACGACAUUGCUCACAUUGCUUCCAGUAUUAUUUU-AGCCAGC---CUACGUGCUGGCUUUUUUUU
+AY008264.2/541-607           AAAAGCACGACAUUGCUCACAUUGCUUCCAGUGUUUUUUA-AGCCAGC---UCGGGUGCUGGCUUUUUUUU
+X76000.1/258-323             GAGAGCACGACAUUGCUCACAUUGCUUCCAGUAUUAUUUU-AGCCAGC---CGACGUGCUG-CUUUUUUUU
+BX950851.1/4651440-4651375   GAAGGCACGACAUUGCUCACAUUGCUUCCAGUAUUAUUU--AGCCAGC---UCGGGUGCUGGCUUUUUUUU
+BX571859.1/98959-98893       GAAAGCACGACAUUGCUCACAUUGCUUCCAGUGUUUACUUUAGCCAGC---CAAG-UGCUGGCUUCUUUUU
+CP000038.1/3861605-3861541   GAAAGCACGACAUUGCUCACAUUGCUUCCAGUAUUACUU--AGCCAGC---CGGG-UGCUGGCUUUUUUUU
+BA000037.2/195620-195685     UUUGACACGACAUUGCUCACAUUGCUUCCAGUGUAAUUUA-UAGCUUU---AUGGUU-AAGCUGCCGUAUU
+AAUU01000182.1/409-344       UUUGACACGACAUUGCUCACAUUGCUUCCAGUGUAAUUUU-UAGCUUU---UUGG-UAAAGCGAAUCAAAA
+CP000653.1/1810151-1810088   UUUAGUACGACAUUGCUCACAUUGCUUCCAGUAUUUCUU--GCCCACU---UUU--UAGUGGGCUUUUUUU
+CP000647.1/1404566-1404503   UUCAGUACGACAUUGCUCACAUUGCUUCCAGUAUUUU----UGCCCGC---ACUUGUGCGGGCUUUUUUUA
+AM286415.1/4382210-4382145   GAAGGCACGACAUUGCUCACAUUGCUUCCAGUGUUUACUU-AGCCAGC---CGGG-UGCUGGCUUUUUUUU
+AAYS01000010.1/87292-87356   AAAAGCACGACAUUGCUCACAUUGCUUCCAGUAUU--UUA-AGCCAGC---UCGGGUGCUGGCUUUUUUGU
+AAZW01000010.1/62530-62465   UUUGACACGACAUUGCUCACAUUGCUUCCAGUGUAAUUUA-UAGCUUU---UAGG-UAAAGCUGUGGUAUU
+AAWP01000024.1/10163-10098   UUUGACACGACAUUGCUCACAUUGCUUCCAGUGUAAUUUA-UAGCUUC---UUGGUU-AAGCUGCCAUACA
+AP008232.1/4010678-4010614   GGGAGCACGACAUUGCUCACAUUGCUUCCAGUA--AUUUC-AGCCAGC---UUGUGCGCUGGCUUUUUUUG
+CP000653.1/4158664-4158599   GAAAGCACGACAUUGCUCACAUUGCUUCCAGUAUUACUUU-AGCCAGC---UUAA-CGCUGGCUUUUUUUU
+AAKK02000018.1/63583-63648   UUUGACACGACAUUGCUCACAUUGCUUCCAGUGUAAUUUA-UAGCUUC---UUGGUU-AAGCUGCUCUAUU
+AP008232.1/2523068-2523004   AUGGGCACGGCAUUGCUCAUAUUGCUUCCAGUAUUAUUU--AGCCAGC---AGGG-UGCUGGCUUUUUUUU
+AACY022459113.1/47-108       GAAGGCACGACAUUGCUCACAUUGCUUCCAGUUAAGG----GGCCAGU---UUU--UACUGGCCCUCUUUU
+CP000644.1/197460-197521     GAAGGCACGACAUUGCUCACAUUGCUUCCAGUUAUA-----GGGCCAG---UUCU-UCUGGCCCUCUUUUU
+CP000026.1/1645920-1645987   UUCGGUACGACAUUGCUCACAUUGCUUCCAGUAUUAUUU--GCCCGCCUCACCGAGU-GCGGGCUUUUUUU
+CP001113.1/3689979-3689915   GAAAGCACGACAUUGCUCACAUUGCUUCCAGUAUUAUUUU-GGCCAGC---UUU--UGCUGGCUUUUUUUU
+AALD02000007.1/113336-113399 GAAAGCACGACAUUGCUCACAUUGCUUCCAGUGUUUA----GGCCGGC---UCGGGUGCUGGCCCUUUUUU
+#=GC SS_cons                 ::::::<<<<----<<_______>>->>-->>--------.<<<<<<<...______>>>>>>>:::::::
+#=GC RF                      gaaaGCACGACAUUGCUCACAUUGCUUCCAGUaUUaUUUu.ggcCagc...uugggUgcuGgccUUUUUUU
+//

@@ -1,0 +1,111 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00753
+#=GF ID   mir-503
+#=GF DE   microRNA mir-503
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   54.00
+#=GF TC   54.70
+#=GF NC   50.80
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000183;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   15965474
+#=GF RT   Identification of hundreds of conserved and nonconserved human microRNAs.
+#=GF RA   Bentwich I, Avniel A, Karov Y, Aharonov R, Gilad S, Barad O, Barzilai A,
+#=GF RA   Einat P, Einav U, Meiri E, Sharon E, Spector Y, Bentwich Z
+#=GF RL   Nat Genet. 2005;37:766-770.
+#=GF RN   [2]
+#=GF RM   16274478
+#=GF RT   Identification of clustered microRNAs using an ab initio prediction
+#=GF RT   method.
+#=GF RA   Sewer A, Paul N, Landgraf P, Aravin A, Pfeffer S, Brownstein MJ, Tuschl T,
+#=GF RA   van Nimwegen E, Zavolan M
+#=GF RL   BMC Bioinformatics. 2005;6:267.
+#=GF RN   [3]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [4]
+#=GF RM   19196471
+#=GF RT   Cloning, characterization and expression analysis of porcine microRNAs.
+#=GF RA   Reddy AM, Zheng Y, Jagadeeswaran G, Macmil SL, Graham WB, Roe BA, Desilva
+#=GF RA   U, Zhang W, Sunkar R
+#=GF RL   BMC Genomics. 2009;10:65.
+#=GF RN   [5]
+#=GF RM   19917043
+#=GF RT   MicroRNA identity and abundance in porcine skeletal muscles determined by
+#=GF RT   deep sequencing.
+#=GF RA   Nielsen M, Hansen JH, Hedegaard J, Nielsen RO, Panitz F, Bendixen C,
+#=GF RA   Thomsen B
+#=GF RL   Anim Genet. 2010;41:159-168.
+#=GF RN   [6]
+#=GF RM   16582102
+#=GF RT   The expression profile of microRNAs in mouse embryos.
+#=GF RA   Mineno J, Okamoto S, Ando T, Sato M, Chono H, Izu H, Takayama M, Asada K,
+#=GF RA   Mirochnitchenko O, Inouye M, Kato I
+#=GF RL   Nucleic Acids Res. 2006;34:1765-1771.
+#=GF RN   [7]
+#=GF RM   20215419
+#=GF RT   MicroRNA transcriptome in the newborn mouse ovaries determined by massive
+#=GF RT   parallel sequencing.
+#=GF RA   Ahn HW, Morin RD, Zhao H, Harris RA, Coarfa C, Chen ZJ, Milosavljevic A,
+#=GF RA   Marra MA, Rajkovic A
+#=GF RL   Mol Hum Reprod. 2010;16:463-471.
+#=GF RN   [8]
+#=GF RM   20413612
+#=GF RT   Mammalian microRNAs: experimental evaluation of novel and previously
+#=GF RT   annotated genes.
+#=GF RA   Chiang HR, Schoenfeld LW, Ruby JG, Auyeung VC, Spies N, Baek D, Johnston
+#=GF RA   WK, Russ C, Luo S, Babiarz JE, Blelloch R, Schroth GP, Nusbaum C, Bartel
+#=GF RA   DP
+#=GF RL   Genes Dev. 2010;24:992-1009.
+#=GF RN   [9]
+#=GF RM   20403161
+#=GF RT   Small RNA expression and strain specificity in the rat.
+#=GF RA   Linsen SE, de Wit E, de Bruijn E, Cuppen E
+#=GF RL   BMC Genomics. 2010;11:249.
+#=GF RN   [10]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   Mir-503_microRNA_precursor_family
+#=GF SQ   14
+
+
+URS00007E3D31_9615/1-63   -----UAGCAGCG---GGAACAGUACUGCAGUGGGCAAUCGGUGUUCUGGAGUAUUGUUUCUGCUGCCCGG---
+URS000075A9A3_9913/6-76   UGCCCUAGCAGCG---GGAACAGUACUGCAGUGGGCAAUUGGUGAUCUGGAGUAUUGUUUCUGCUGCCCGGGCA
+URS0000BDE3C6_9823/17-87  UGCCCUAGCAGCG---GGAACAGUACUGCAGUGGGCGAUCGGUACUCUGGGGUAUUGUUUCUGCUGCCCGGGCA
+URS00006B830C_9796/1-71   UGCCCUAGCAGCG---GGAACAGUACUGCAGUGGGCGAUCGGUGCUCUGGAGUAUUGUUCCUGCUGCCCGGGCA
+URS0000D519C8_29078/6-76  UGCCCUAGCAGCG---GGAACAGUACUGCAGUGGGUGAUCCGUAUUCUGGAGUAUUGUUUCUGCUGCCCGGGUA
+URS00006ED333_10090/1-71  UGCCCUAGCAGCG---GGAACAGUACUGCAGUGAGUGUUUGGUGCCCUGGAGUAUUGUUUCCACUGCCUGGGUA
+URS00006D1689_10116/1-71  UGCCCUAGCAGCG---GGAACAGUACUGCAGUGAGUGUUUGGUGCCCUGGAGUAUUGUUUCCGCUGCCUGGGUA
+URS00007E4923_246437/1-61 -----UAGCAGCG---GUAACACUACUGCAGUGAG-GUCUGG-GCUCUGGAGUAUUGUUUCUGCUGCCAGG---
+URS000075B898_9598/1-70   UGCCCUAGCAGCG---GGAACAGUUCUGCAGUGAGCGAUCGGUGCUCUGGAGUAUUGUUUCCGCUGCCAGGGU-
+URS000075ECE9_9593/16-86  UGCCCUAGCAGCG---GGAACAGUUCUGCAGUGAGCGAUCGGUGCUCUGGAGUAUUGUUUCCGCUGCCAGGGUA
+URS00006588D4_9606/1-71   UGCCCUAGCAGCG---GGAACAGUUCUGCAGUGAGCGAUCGGUGCUCUGGGGUAUUGUUUCCGCUGCCAGGGUA
+URS00006E4318_9600/1-71   UGCCCUAGCAGCG---GGAACAGUUCUGCAGUGAGCGAUUGGUGCUCUGGAGUAUUGUUUCCGCUGCCAGGGUA
+URS0000648170_9544/1-71   UGCCCUAGCAGCG---GGAACAGUUCUGCAGUGAGUGAUCAGUACUCUGGAGUAUUGUUUCCGCUGCCAGGGUA
+URS000075D6CD_10029/5-74  UGCCCUAGCAGCGUCCAAAACAGUACUGCAGU----AUUUGGUAAGCUGGAGUAUUGUUUCCGCUGCUCGGGUA
+#=GC SS_cons              :<<<<--<<<<<<...<<<<<<<<-<<-<<<--<<<<_____>>>>>>>->>->>>>>>>>>>>>>>-->>>>:
+#=GC RF                   UgCCCUAGCAGCG...GgAACAgUaCuGCAGUGggcgaUuGGugccCUGGaGUAuUGUUcCCGCUGCCaGGGcA
+//

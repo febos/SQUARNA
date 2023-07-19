@@ -1,0 +1,44 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00556
+#=GF ID   L19_leader
+#=GF DE   Ribosomal protein L19 leader
+#=GF AU   Barrick JE
+#=GF SE   Barrick JE, CMFinder
+#=GF SS   Predicted; Barrick JE, CMFinder
+#=GF GA   36.00
+#=GF TC   36.30
+#=GF NC   35.80
+#=GF TP   Cis-reg; leader;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 20.00 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000233; mature_transcript;
+#=GF DR   GO; 0010468; regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   7517053
+#=GF RT   Diverse mechanisms for regulating ribosomal protein synthesis in
+#=GF RT   Escherichia coli.
+#=GF RA   Zengel JM, Lindahl L
+#=GF RL   Prog Nucleic Acid Res Mol Biol. 1994;47:331-370.
+#=GF CC   This family is a putative r-protein leader autoregulatory structure [1]
+#=GF CC   found in B. subtilis and other low-GC Gram-positive bacteria. It is
+#=GF CC   located in the 5' untranslated regions of mRNAs encoding ribosomal protein
+#=GF CC   L19 (rplS).
+#=GF WK   Ribosomal_protein_L19_leader
+#=GF SQ   10
+
+
+BA000043.1/1221406-1221449 ACGAUGUUCCGCUG-CAAUGAAGAG-AUCAUUGGCAUGAACAUCUG
+AP006627.1/2412709-2412672 ACGAUAUUCCGCUG-CUGCAG------UGUUGG-CAUGAAUGUCUG
+AE017333.1/1781209-1781250 ACGAUGUUCCGCUG-UGCCGGUU--AACUCGCG-CAAGAGCAUCUG
+AP008934.1/1590561-1590520 ACUAUGAUCCGCUG-CUAUAUUU---UGUCGAGGCAAGAACAUAGG
+AE017355.1/3678229-3678186 ACGAUGUUCCGCUG-UAAUUUAUUUAGACUUUA-UAAGAGCAUCUG
+AP006716.1/1732449-1732407 ACUAUGAUCCGCUG-CUAUAUGA--AUGUCUAGGCAAGAACAUAGG
+BA000028.3/1580280-1580318 ACGAUGUUCCGCUGUCCCAU-------ACUUGUUCAUGAGCAUUAG
+CP000046.1/1265245-1265287 ACUAUGAUCCGCUG-CUAUAUAU--UUGUCGAGGCAAGAACAUAGG
+BA000004.3/2598726-2598685 ACGAUGUUCCGCUG-CAGGGGUA---GAAGCUGUCAUGAGCAUCUG
+AL009126.3/1675981-1676022 ACGAUGUUCCGCUGUGCCGGUU---UUUGUGGC-CAAGAGCAUCUG
+#=GC SS_cons               ::<<<<<<<---<<.<<<<____...___>>>>->>->>>>>>>::
+#=GC RF                    ACGAUGuUCCGCUG.ccauguuu...uauauggGCAAGAgCAUCUG
+//

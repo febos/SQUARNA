@@ -1,0 +1,54 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01097
+#=GF ID   RF_site8
+#=GF DE   Gag/pro ribosomal frameshift site
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   43.00
+#=GF TC   43.00
+#=GF NC   42.90
+#=GF TP   Cis-reg; frameshift_element;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   PKBASE; PKB00107;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0075523; viral translational frameshifting;
+#=GF RN   [1]
+#=GF RM   2402881
+#=GF RT   RNA pseudoknots: translational frameshifting and readthrough on viral
+#=GF RT   RNAs.
+#=GF RA   ten Dam EB, Pleij CW, Bosch L
+#=GF RL   Virus Genes. 1990;4:121-136.
+#=GF RN   [2]
+#=GF RM   7585244
+#=GF RT   Analysis of the role of the pseudoknot component in the SRV-1 gag-pro
+#=GF RT   ribosomal frameshift signal: loop lengths and stability of the stem
+#=GF RT   regions.
+#=GF RA   ten Dam EB, Verlaan PW, Pleij CW
+#=GF RL   RNA. 1995;1:146-154.
+#=GF RN   [3]
+#=GF RM   9237911
+#=GF RT   Base-pairings within the RNA pseudoknot associated with the simian
+#=GF RT   retrovirus-1 gag-pro frameshift site.
+#=GF RA   Du Z, Holland JA, Hansen MR, Giedroc DP, Hoffman DW
+#=GF RL   J Mol Biol. 1997;270:464-470.
+#=GF RN   [4]
+#=GF RM   9490779
+#=GF RT   Mutational analysis of the RNA pseudoknot involved in efficient ribosomal
+#=GF RT   frameshifting in simian retrovirus-1.
+#=GF RA   Sung D, Kang H
+#=GF RL   Nucleic Acids Res. 1998;26:1369-1372.
+#=GF WK   Ribosomal_frameshift
+#=GF SQ   4
+
+
+AB181392.1/1897-1948 GGGAAACGGACUGAGGGGCCAGCCCCAGGCCCCGAAACAAGCUUAUGGGGCG
+AF252389.1/572-623   GGGAAACGGGUGGAGGGGCCAGCCCCAGGCCCCGAAACAAGCUUAUGGGGCG
+U85505.1/2460-2511   GGGAAACGGGAUGAGGGGCCAGCCCCAGGCCCCGAAACAAGCAUAUGGGGCA
+M80216.1/1954-2005   GGGAAACUGGGUGAGGGGCCAGCCCCUGGCCCCGAAACAAUGUUAUGGGGCA
+#=GC SS_cons         ::::::::::::::<<<<<<_AAAAAA>>>>>>::::::::::::aaaaaa:
+#=GC RF              GGGAAACGGGuUGAGGGGCCAGCCCCAGGCCCCGAAACAAGcUUAUGGGGCa
+//

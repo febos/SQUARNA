@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02597
+#=GF ID   shuA_thermo
+#=GF DE   shuA/chuA 5' UTR thermoregulator
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Kouse et al, PMID:23704938
+#=GF SS   Published; PMID:23704938
+#=GF GA   58.00
+#=GF TC   58.60
+#=GF NC   39.30
+#=GF TP   Cis-reg; thermoregulator;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 0 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0002168; RNA_thermometer;
+#=GF DR   GO; 0009266; response to temperature stimulus;
+#=GF DR   GO; 0006417; regulation of translation;
+#=GF RN   [1]
+#=GF RM   23704938
+#=GF RT   RNA-mediated thermoregulation of iron-acquisition genes in Shigella
+#=GF RT   dysenteriae and pathogenic Escherichia coli.
+#=GF RA   Kouse AB, Righetti F, Kortmann J, Narberhaus F, Murphy ER
+#=GF RL   PLoS One. 2013;8:e63781.
+#=GF CC   Shingella ShuA the outer-membrane heme receptor and its E.coli orthologue
+#=GF CC   ChuA expression are subject to temperature-dependent post-transcriptional
+#=GF CC   regulation by 5' UTR regions containing FourURNA thermometer. 
+#=GF WK   RNA_thermometer
+#=GF SQ   5
+
+
+
+AE005174.2/4458702-4458671 AUUUUUUAUUUUCCUCAUGGAGAAUCGMUAUG
+CP000034.1/3287428-3287459 AUUUUUUAUUUUCCUCAUGGAGAAUCGCUAUG
+CU928161.2/3863653-3863622 AUUUUUUAUUUUCCUCAUGGAGAAUCGCUAUG
+CU928163.2/4108408-4108377 AUUUUUUAUUUUCCUCAUGGAGAAUCGCUAUG
+CP000243.1/3916118-3916087 AUUUUUUAUUUUCCUCAUGGAGAAUCGCUAUG
+#=GC SS_cons               :::::::<<<<<<<____>>>>>>>:::::::
+#=GC RF                    AUUUUUUAUUUUCCUCAUGGAGAAUCGCUAUG
+//

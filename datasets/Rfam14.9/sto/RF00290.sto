@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00290
+#=GF ID   BaMV_CRE
+#=GF DE   Bamboo mosaic potexvirus (BaMV) cis-regulatory element
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   PMID:14585345
+#=GF SS   Published; PMID:14585345
+#=GF GA   100.00
+#=GF TC   181.30
+#=GF NC   35.70
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 18 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000233; mature_transcript;
+#=GF DR   GO; 0039689; negative stranded viral RNA replication;
+#=GF RN   [1]
+#=GF RM   14585345
+#=GF RT   Functional analysis of the cloverleaf-like structure in the 3'
+#=GF RT   untranslated region of bamboo mosaic potexvirus RNA revealed dual roles in
+#=GF RT   viral RNA replication and long distance movement.
+#=GF RA   Chen IH, Meng M, Hsu YH, Tsai CH
+#=GF RL   Virology 2003;315:415-424.
+#=GF CC   This family represents a cloverleaf-like cis-regulatory element found in
+#=GF CC   the 3' UTR of the bamboo mosaic potexvirus. This family is thought to play
+#=GF CC   an important role in the initiation of minus-strand RNA synthesis and may
+#=GF CC   also be involved in the regulation of viral replication [1].
+#=GF WK   Bamboo_mosaic_potexvirus_(BaMV)_cis-regulatory_element
+#=GF SQ   5
+
+
+L77962.1/6225-6364   AACGUUGCAUGAUCGUAAAACAUGCCCGGCUUACCGUGAGCCGCCUUUGAAAGAAAGGUUUACACGGACUCUGUUGCGUUACGCACGUACCUAACUUGUGCCGGCAGAAUAAAGACCUUUUGGUUUCUACAGUUUUUUCC
+AF047977.1/876-1015  AACGUUGCAUGAUCGUAAAACAUGCCCGGCUUACCGUGAGCCGCCUUUGAAAGAAAGGUUUACACGGACUCUGUUGCGUUACGCACGUACCUAACCCGUGCCAGCAGAAUAAAGACCUUUUGGUUUCUACAGUUUUUUCC
+AF077362.1/600-739   AACGUUGCAUGAUCGUAAAACAUGCCCGGCUUACCGUGAGCCGCCUUUGAAAGAAAGGUUUACACGGACUCUGUUGCGUUACGCACGUACCUAACCCGUGCCAGCAGAAUAAAGACCUUUUGGUUUCUACAGUUUUUUCC
+D26017.1/6226-6365   AACGUUGCAUGAUCGUAAAACAUGCCCGGCUUACCGUGAGCCGCCUUUGAAAGAAAGGUUUACACGGACUCUGUUGCGUUACGCACGUACCUAACCCGUGCCAGCAGAAUAAAGACCUUUUGGUUUCUACAGUUUUUUCC
+AF077359.1/1060-1199 AACGUUGCAUGAUCGUAAAACAUGCCCGGCUUACCGUGAGCCGCCUUUGAAAGAAAGGUUUACACGGACUCUGUUGCGUUACGCACGUACCUAACCCGUGCCAGCAGAAUAAAGACCUUUUGGUUUCUACAGUUUUUUCC
+#=GC SS_cons         ::::::<<<<<_________>>>>>,<<<<<<_____>>>>>><<<<<_____>>>>>-------<<--<<<<<<<------<<<<<_________>>>>>>>>>>>>------->>:::::::::::::::::::::::
+#=GC RF              AACGUUGCauGAUCGUAAAACauGCCCGGCuuACCGUgaGCCGCCuuuGAAAGaaaGGUUUACACGGACuCuGuuGCGUUACGCaCGUACCUAACcCGuGCCagCaGaAUAAAGACCUUUUGGUUUCUACAGUUUUUUCC
+//

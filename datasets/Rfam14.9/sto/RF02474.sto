@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02474
+#=GF ID   GlsR5
+#=GF DE   Small nucleolar RNA GlsR5
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Predicted
+#=GF SS   Predicted; WAR
+#=GF GA   100.00
+#=GF TC   114.10
+#=GF NC   31.20
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 22.23 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   23019220
+#=GF RT   Evolutionarily divergent spliceosomal snRNAs and a conserved non-coding
+#=GF RT   RNA processing motif in Giardia lamblia.
+#=GF RA   Hudson AJ, Moore AN, Elniski D, Joseph J, Yee J, Russell AG
+#=GF RL   Nucleic Acids Res. 2012;40:10995-11008.
+#=GF WK   Small_nucleolar_RNA
+#=GF SQ   2
+
+
+ACGJ01002910.1/40910-40824 --UUAAAAGCUGUGAUGACAGGUUCUUGCCCCGUAUGACCCUGCGAUGAGUUAUACAAAAGAACGCACUCAAGCCAACCGACUGAGCUC
+AY820286.1/1-89            AAUUAAAAGCUGUGAUGACAGGUUCUUGCCCCGUAUGACCCUGCGAUGAGUUAUACAAAAGAACGCAUCCAAGCCAACCGGCUGAGCUC
+#=GC SS_cons               :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#=GC RF                    AAUUAAAAGCUGUGAUGACAGGUUCUUGCCCCGUAUGACCCUGCGAUGAGUUAUACAAAAGAACGCAuuCAAGCCAACCGgCUGAGCUC
+//

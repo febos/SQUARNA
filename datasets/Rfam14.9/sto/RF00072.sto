@@ -1,0 +1,63 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00072
+#=GF ID   SNORA75
+#=GF PI   U23
+#=GF DE   Small nucleolar RNA SNORA75
+#=GF AU   Bachellerie JP
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; PFOLD; Griffiths-Jones SR
+#=GF GA   80.00
+#=GF TC   80.10
+#=GF NC   78.00
+#=GF TP   Gene; snRNA; snoRNA; HACA-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000594; H_ACA_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300788;
+#=GF DR   snoopy; Homo_sapiens300068;
+#=GF RN   [1]
+#=GF RM   9106664
+#=GF RT   The family of box ACA small nucleolar RNAs is defined by an evolutionarily
+#=GF RT   conserved secondary structure and ubiquitous sequence elements essential
+#=GF RT   for RNA accumulation.
+#=GF RA   Ganot P, Caizergues-Ferrer M, Kiss T
+#=GF RL   Genes Dev 1997;11:941-956.
+#=GF RN   [2]
+#=GF RM   12457565
+#=GF RT   The expanding snoRNA world.
+#=GF RA   Bachellerie JP, Cavaille J, Huttenhofer A
+#=GF RL   Biochimie 2002;84:775-790.
+#=GF RN   [3]
+#=GF RM   12007400
+#=GF RT   Small nucleolar RNAs: an abundant group of noncoding RNAs with diverse
+#=GF RT   cellular functions.
+#=GF RA   Kiss T
+#=GF RL   Cell 2002;109:145-148.
+#=GF CC   U23 belongs to the H/ACA class of snoRNAs. snoRNAs bind a number of
+#=GF CC   proteins (including dyskerin, Gar1p and Nop10p in the case of the H/ACA
+#=GF CC   class) to form snoRNP complexes. This class are thought to guide the sites
+#=GF CC   of modification of uridines to pseudouridines by forming direct base
+#=GF CC   pairing interactions with substrate RNAs [3]. Targets include ribosomal
+#=GF CC   and spliceosomal RNAs as well as the Trypanosoma spliced leader RNA (SL
+#=GF CC   RNA) as possibly other, still unknown cellular RNAs [3]. U23 can direct
+#=GF CC   the pseudouridylation of U97 in human 18S rRNA (Bachellerie JP, Ganot, P
+#=GF CC   unpublished data). U23 is encoded within intron 12 of the nucleolin gene
+#=GF CC   in human, mouse, rat chicken, and Xenopus laevis.
+#=GF WK   Small_nucleolar_RNA_SNORA75
+#=GF SQ   6
+
+
+AJ009730.1/1-133    GCUUUCUCA-UGAGCUCCUCUCUGCCGAU----CAGUGGCGUUGUAUGGAUUCGCACGAGAAGAAGAGACUAA--UCAC-AAAUUGAACAGGCACC----CCCC-UAAUCUCAACAGGUG-------UUGCCCAUGUCUG----CUGUGAAACAAUU
+AJ009731.1/1-129    UUCUUCUCA-UGAGCUCCUCUCUGUCAAUC---CAGUGGCAGUGUAUGGAUUCGCACGAGAAGUAGAGUGA-U--UCAC-AGUUU-AACAGGUGUUU---CCAC-UG-------CAUUGG----GACAUGCCCAUGUCUG----AUGUGAGACAUUC
+AJ009728.1/1-142    CACUUCUCAAUGAGCUCCUUCCUGCCGACAUAUCCAUGGCAGCCUAUGGAUUCGCACGAGAAGGACAUAAACAGCUCAGUAGU---GGCACGC--UCA--CAACCUGGU-UAUACAUCAGUUGUGAUUAACCACUUACUGU----UCU---ACAAGU
+M55022.1/344-480    AUCUUCUCAUUGAGCUCCUUUCUGUCAAC----CAGUGACAGAUUAUGGAUUCGCACGAGAAGAAGAGAAAGU--UCAC-AGAACUAGCAC----UUAAUCUUC-UG-UUUUUGCAGGAG-------AUCUAUUUGGCUGUUAUGUGUGAGACAUUC
+X07699.1/9946-10078 AUCUUCUCAUUGAGCUCCUUUCUGUCCAU----CAGUGAUAGAUUAUGGAUUCGCACGAGAAGAAGAGAGAAU--UCAC-AGAACUGGCAC----UUAU-CUUC-UG-UUUUUGCAGAAG--------UAUAUUUGGCUGU--UGUGUGAGACAUUA
+AJ007015.1/1-137    GUCUUCUCAUUGAGCUCCUUUCUGUCUAU----CAGUGGCAGUUUAUGGAUUCGCACGAGAAGAAGAGAGAAU--UCAC-AGAACUAGCAUUAUUUUAC-CUUC-UG-UCUUUACAGAGG--------UAUAUUUAGCUGU--AUUGUGAGACAUUC
+#=GC SS_cons        ::<<<<<<-----<<<<<---<<<<<___....____>>>>>----->>>--->>-->>>>>>----------..<<<<.<<-----------..---..<<<<.<<.______>>>>>>.......--------------...>>>>>>:::::::
+#=GC RF             auCUUCUCAuUGAGCUCCUuUcuGcCaAu....CAGUGgCaguuUAUGGAUUCGCACGAGAAGaAgAgAaAau..uCAc.AcaauuagCAcgc..UuA..Cccc.UG.UuUuuaCAgggG.......uuauauuUguCUGU...gUgUGagACAuuu
+//

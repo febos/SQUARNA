@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01147
+#=GF ID   sR12
+#=GF DE   Small nucleolar RNA sR12
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Predicted; WAR; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   38.00
+#=GF TC   39.60
+#=GF NC   35.20
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 21 -Z 549862.597050 CM SEQDB
+#=GF DR   URL; http://lowelab.ucsc.edu/snoRNAdb/;
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   10775111
+#=GF RT   Homologs of small nucleolar RNAs in Archaea.
+#=GF RA   Omer AD, Lowe TM, Russell AG, Ebhardt H, Eddy SR, Dennis PP
+#=GF RL   Science. 2000;288:517-522.
+#=GF WK   Small_nucleolar_RNA
+#=GF SQ   5
+
+
+AF195106.1/1-62            GAAUGAAG-AACCCAACCUUAUCUGAGGUUAUGAUG---ACAGGUUGUUCGUCAGAUCGAUGUGAG
+BA000001.2/1732056-1732107 GGAUGAUG-AGCGUUUACCGGUCUGA-GCUGUGAUG---AUAUCG-GCACU-------G-UCUGAC
+AF254842.1/1-50            GA-UGAUG-AGCGUUUACCGGUCUGA-GCUGUGAUG---ACAUCG-GCACU-------G-UCUGA-
+AE006641.1/2189456-2189402 AAGUGAUGUAGCAGGGACGUA-CUGAAGC--UAAUGUGGAAAGAGUAUAAA-------GA-CUGAC
+AE009950.1/1849496-1849445 GGAUGAUG-AGCGUUUACCGGUCUGA-GUUGUGAUG---AUACUG-GCACU-------G-UCUGAC
+#=GC SS_cons               ::::::::.:::::::::::::::::::::::::::...::::::::::::.......::::::::
+#=GC RF                    GAAUGAUG.AGCguuuACcugUCUGAgGcUGUGAUG...AcAggGUGuACu.......GAUCUGAc
+//

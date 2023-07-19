@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03894
+#=GF ID   mir-5736
+#=GF DE   mir-5736 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   90.00
+#=GF TC   96.20
+#=GF NC   58.30
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0001480;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-5736 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   2
+
+
+URS0000D5381C_32264/15-94 AAAUACCUUUGCGGAGUUGAUUGGGCGAAUGGGUCUUAAACAAUCAACCAUCUGCCCAAUCGACUCCAAAAAAAGUAUUA
+URS0000D516C6_32264/1-79  AAAUACUUUUGCGGAGUAGACUGGUCAAAUGGGUCUUAAACAAUCAAUCAUUUCGCCAAUCUACUGCAAAGAA-GUAUUC
+#=GC SS_cons              :<<<<<<<<<--<<<<<<<<<<<<<<<<<<<<_______________>>>>>>>>>>>>>>>>>>>>-->>>>->>>>>:
+#=GC RF                   AaauaCuuuuGCGgaGucGauuGGgcaaauGgGUCUUAAACAAUCAAcCauuugcCCaauCgaCucCAAaaaaAGuauua
+//

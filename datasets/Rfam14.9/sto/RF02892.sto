@@ -1,0 +1,44 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02892
+#=GF ID   SR6_antitoxin
+#=GF DE   Bacillus SR6 antitoxin
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   55.00
+#=GF TC   55.60
+#=GF NC   43.70
+#=GF TP   Gene; antisense;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   SO; 0000077; antisense;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF DR   GO; 0110001; toxin-antitoxin complex;
+#=GF DR   GO; 0009407; toxin catabolic process;
+#=GF RN   [1]
+#=GF RM   29414903
+#=GF RT   Bacillus subtilis Type I antitoxin SR6 Promotes Degradation of Toxin yonT
+#=GF RT   mRNA and Is Required to Prevent Toxic yoyJ Overexpression.
+#=GF RA   Reif C, Loser C, Brantl S
+#=GF RL   Toxins (Basel). 2018; [Epub ahead of print]
+#=GF CC   Overlaps 2 toxins: 3' end of yonT and yoyJ at its 5'end. In type I
+#=GF CC   toxin-antitoxin (TA) systems the antitoxin is a small RNA that neutralizes
+#=GF CC   a toxin protein. YonT/SR6 system is located on the SPÎ² prophage of the B.
+#=GF CC   subtilis chromosome and it was shown to be multi-stress responsive. SR6
+#=GF CC   acts by promoting yonT mRNA degradation. It may regulate the second toxin,
+#=GF CC   yoyJ by a different mechanism.
+#=GF WK   Bacillus_subtilis_type_I_antitoxin_SR6
+#=GF SQ   3
+
+
+
+AL009126.3/2219746-2219849 GAACUAAAGGAGAAGUUCAUUCCCCUUUAGCUUAGCUCUCAUCGGCGUAUACGUUGGCGUUGUCUCUUUGGUCGGAGCCGCUUGCGUAUACGCUUUUUCUUUUU
+KY030782.1/56132-56029     GAACUAAAGGAGAAGUUCAUUCCCUUUUAGCUUAGCUCUCAUCUGCGUAUACGUUGGCGUUGUCUCUUUGGUCGGAGCCGCUUGCGUAUACGCUUUUUCUUUUU
+CP002207.1/1608855-1608957 UAACUAAAGGAGAAGUUGAUUCCCCUUUAGCGUUU-AAUUAUCGGCGUAUACGUUUGCGUUGUCUCUUGCUACGGAGUCGCUUACGUGUACGCUUUUUCUUUUU
+#=GC SS_cons               :::<<<<<<<-<<<_____>>>->>>>>>>-------------<<<<<<<<<<<-<<<<--<-<<<<______>>>>>>>>>->>>>>>>>>>>::::::::::
+#=GC RF                    gAACuaaagGAGaaGUUcAuuCCCcuuuaGCuUagcucUcAUCgGCGuauaCGcUgGCGUUgUCuCuUugguCgGaGcCGCcUgCGuauaCGCcUUUUCUUUUU
+//

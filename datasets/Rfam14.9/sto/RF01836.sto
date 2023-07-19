@@ -1,0 +1,37 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01836
+#=GF ID   weev_FSE
+#=GF DE   ribosomal frameshift site
+#=GF AU   Boursnell C; 0000-0002-3494-4451
+#=GF SE   Published; PMID:19895695
+#=GF SS   Published; PMID:19895695
+#=GF GA   40.00
+#=GF TC   40.60
+#=GF NC   39.20
+#=GF TP   Cis-reg; frameshift_element;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001427; cis_regulatory_frameshift_element;
+#=GF DR   URL; http://recode.ucc.ie/recode/r200969;
+#=GF DR   GO; 0075523; viral translational frameshifting;
+#=GF RN   [1]
+#=GF RM   19895695
+#=GF RT   Bioinformatic evidence for a stem-loop structure 5'-adjacent to the
+#=GF RT   IGR-IRES and for an overlapping gene in the bee paralysis dicistroviruses.
+#=GF RA   Firth AE, Wang QS, Jan E, Atkins JF
+#=GF RL   Virol J. 2009;6:193.
+#=GF WK   Western_equine_encephalitis_virus
+#=GF SQ   6
+
+
+EU708192.1/1780-1806 GGCGUCUGCCUGGGGAAGGCAGACGCC
+M24200.1/1600-1626   GGCGCCUACCUGGCGAAGGUNGACGCC
+AF339479.1/3017-3043 GGCGUCUACCUCUCGAAGGCAGACGCC
+AF103728.1/9960-9986 GGCGUCUACCUGGGGAAGGUAGACGCC
+DQ393792.1/2365-2391 GGCGUCUGCCUGGGGAAGGUGGACGCC
+U90536.1/2446-2472   GGCGCCUACCUUGCGAAGGUAGACGCC
+#=GC SS_cons         <<<<<<<<<<<_____>>>>>>>>>>>
+#=GC RF              GGCGUCuaCCUGGgGAAGGuaGACGCC
+//

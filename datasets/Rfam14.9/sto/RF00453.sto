@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00453
+#=GF ID   Cardiovirus_CRE
+#=GF DE   Cardiovirus cis-acting replication element (CRE)
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   PMID:10500216
+#=GF SS   Published; PMID:10500216
+#=GF GA   37.00
+#=GF TC   37.30
+#=GF NC   36.70
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000233; mature_transcript;
+#=GF DR   GO; 0019079; viral genome replication;
+#=GF RN   [1]
+#=GF RM   10500216
+#=GF RT   A coding RNA sequence acts as a replication signal in cardioviruses.
+#=GF RA   Lobert PE, Escriou N, Ruelle J, Michiels T
+#=GF RL   Proc Natl Acad Sci U S A 1999;96:11560-11565.
+#=GF CC   This family represents a Cardiovirus cis-acting replication element (CRE)
+#=GF CC   which is located within the region encoding the capsid protein VP2 and is
+#=GF CC   required for viral replication [1].
+#=GF WK   Cardiovirus_cis-acting_replication_element
+#=GF SQ   4
+
+
+AB090161.1/1485-1517 UCGGCCGUAAACACCCAAUCAUCAGUAGGCCGA
+M94868.1/505-537     UCGGCCACAAACACUCAAUCCUCCGUUGGCCGG
+U32924.1/505-537     UCGGCCACAAACACACAGUCUACUGUUGGCCGG
+U20288.1/324-356     UCGGCCACAAACACGCAGUCUACUGUUGGCCGA
+#=GC SS_cons         <<<<<<<---<<<__________>>>>>>>>>>
+#=GC RF              uCGGCCACAAACaCuCAaUCuuCuGUUGGCCGa
+//

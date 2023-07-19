@@ -1,0 +1,56 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00900
+#=GF ID   mir-255
+#=GF DE   microRNA mir-255
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   50.00
+#=GF TC   50.10
+#=GF NC   48.00
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000368;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17174894
+#=GF RT   Large-scale sequencing reveals 21U-RNAs and additional microRNAs and
+#=GF RT   endogenous siRNAs in C. elegans.
+#=GF RA   Ruby JG, Jan C, Player C, Axtell MJ, Lee W, Nusbaum C, Ge H, Bartel DP
+#=GF RL   Cell. 2006;127:1193-1207.
+#=GF RN   [2]
+#=GF RM   19460142
+#=GF RT   Dynamic expression of small non-coding RNAs, including novel microRNAs and
+#=GF RT   piRNAs/21U-RNAs, during Caenorhabditis elegans development.
+#=GF RA   Kato M, de Lencastre A, Pincus Z, Slack FJ
+#=GF RL   Genome Biol. 2009;10:R54.
+#=GF RN   [3]
+#=GF RM   20062054
+#=GF RT   Comprehensive discovery of endogenous Argonaute binding sites in
+#=GF RT   Caenorhabditis elegans.
+#=GF RA   Zisoulis DG, Lovci MT, Wilbert ML, Hutt KR, Liang TY, Pasquinelli AE, Yeo
+#=GF RA   GW
+#=GF RL   Nat Struct Mol Biol. 2010;17:173-179.
+#=GF RN   [4]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   5
+
+
+URS0000D50717_6238/20-78  GUAAGAAAUCUUUGUAGUUUUCCGCGAGUCAACGUGAAAACUGAAGAGAUUUUUUACAG
+URS0000D4F3E6_31234/1-59  GUAAGAAAUCUUUGUGGUUUUCCGUGUUUAAACGCGAAAACUGAAGAGAUUUUUUACAG
+URS00001B6367_6239/25-83  GUAAGAAAUCUUUGUAGUUCUCCGUAUUGUGACGUGAAAACUGAAGAGAUUUUUUACAG
+URS0000D53F70_135651/1-59 GUAAGAAAUCUUUGUGGUUUUCCGUUAUGAGACGAGAAAACUGAAGAGAUUUUUUACAG
+URS0000D4FC64_6289/23-79  GUAGGAAAUCUGGUUAGUUUUCCGCAGUUCG-CGU-AAAACUGAAAAGAUUUGUUACAG
+#=GC SS_cons              <<<<<<<<<<<<<-<<<<<<<<<<<______>>>->>>>>>>>->>>>>>>>>>>>>::
+#=GC RF                   GUAagAAAUCUuuGUaGUUuUCCGuaaUuagaCGuGAaAACuGAagAGAUUUuuUACAG
+//

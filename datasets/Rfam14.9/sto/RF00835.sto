@@ -1,0 +1,60 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00835
+#=GF ID   mir-58
+#=GF DE   microRNA mir-58
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   76.00
+#=GF TC   76.40
+#=GF NC   69.20
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000282;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   11679671
+#=GF RT   An abundant class of tiny RNAs with probable regulatory roles in
+#=GF RT   Caenorhabditis elegans.
+#=GF RA   Lau NC, Lim LP, Weinstein EG, Bartel DP
+#=GF RL   Science. 2001;294:858-862.
+#=GF RN   [2]
+#=GF RM   17174894
+#=GF RT   Large-scale sequencing reveals 21U-RNAs and additional microRNAs and
+#=GF RT   endogenous siRNAs in C. elegans.
+#=GF RA   Ruby JG, Jan C, Player C, Axtell MJ, Lee W, Nusbaum C, Ge H, Bartel DP
+#=GF RL   Cell. 2006;127:1193-1207.
+#=GF RN   [3]
+#=GF RM   11679672
+#=GF RT   An extensive class of small RNAs in Caenorhabditis elegans.
+#=GF RA   Lee RC, Ambros V
+#=GF RL   Science. 2001;294:862-864.
+#=GF RN   [4]
+#=GF RM   20062054
+#=GF RT   Comprehensive discovery of endogenous Argonaute binding sites in
+#=GF RT   Caenorhabditis elegans.
+#=GF RA   Zisoulis DG, Lovci MT, Wilbert ML, Hutt KR, Liang TY, Pasquinelli AE, Yeo
+#=GF RA   GW
+#=GF RL   Nat Struct Mol Biol. 2010;17:173-179.
+#=GF RN   [5]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   Mir-58_microRNA_precursor_family
+#=GF SQ   5
+
+
+URS0000D5044D_135651/1-67 -------UGCCCUACUCUUCGCAUCUCAUCACUUCGUCCGCCA-------AUAUAAGGAUGAGAUCGUU-CAGUACGGCAAU----
+URS00004DE969_6239/10-86  AUCC-AUUGCCCUACUCUUCGCAUCUCAUCACUUCGUCCAAUA-------CCAUAGGGAUGAGAUCGUU-CAGUACGGCAAUGGAC
+URS0000D5303C_31234/19-97 AUCCCAUUGCCCUACUAUUCGCAUCUCAUCACUUCCUCCAGUA-------AUAUAAGGAUGAGAUCGUUUCAGUACGGCAAUGGAA
+URS00001D90C7_31234/18-94 AUCC-AUUGCCCUACUAUUCGCAUCUCAUCACUUCCUCCAGUA-------AUAUAAGGAUGAGAUCGUU-CAGUACGGCAAUGGAA
+URS000079C1B1_6238/1-84   AUCC-AUUGCCCUACUAUUCGCAUCUCAUCACUCCAGUAUAUAUAUAUAUAUAUAAGGAUGAGAUCGUU-CAGUACGGCAAUGGAA
+#=GC SS_cons              :<<<.<<<<<<-<<<<---<<-<<<<<<<<-<<<_________.......____>>>>>>>>>>>>>--.->>>>->>>>>>>>>:
+#=GC RF                   AuCC.auUGCCCUaCUaUUCGCaUCUCaUCACuuCauccaaUA.......AUAUaaGGAuGAGAuCGUU.CAGuACGGCAauGGaa
+//

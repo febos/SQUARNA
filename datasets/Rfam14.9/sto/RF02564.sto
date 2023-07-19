@@ -1,0 +1,46 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02564
+#=GF ID   naRNA4
+#=GF DE   Nucleoid-associated noncoding RNA 4 (CssrE)
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Published; PMID:26307168
+#=GF GA   59.50
+#=GF TC   59.50
+#=GF NC   59.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0036386; bacterial nucleoid DNA packaging;
+#=GF DR   GO; 0043590; bacterial nucleoid;
+#=GF DR   GO; 0005515; protein binding;
+#=GF RN   [1]
+#=GF RM   26307168
+#=GF RT   A New Noncoding RNA Arranges Bacterial Chromosome Organization.
+#=GF RA   Qian Z, Macvanin M, Dimitriadis EK, He X, Zhurkin V, Adhya S
+#=GF RL   MBio. 2015; [Epub ahead of print]
+#=GF RN   [2]
+#=GF RM   21483688
+#=GF RT   An integrated approach for finding overlooked genes in Shigella.
+#=GF RA   Peng J, Yang J, Jin Q
+#=GF RL   PLoS One. 2011;6:e18509.
+#=GF CC   In E. coli small RNA transcribed from repeated extragenic palindromic
+#=GF CC   element (REP325) called nucleoid-associated ncRNA 4 (nRNA4) collaborates
+#=GF CC   HU protein in condensing the DNA. The secondary structure but not the
+#=GF CC   sequence of the RNA is important in nucleoid condensation. Also identified
+#=GF CC   in Shigella as CssrE [2]. 
+#=GF WK   Nucleoid
+#=GF SQ   3
+
+
+
+AM946981.2/4233354-4233278 GGCCGGAUAAGGCGUUUACGCCGCAUCCGGCAACGGUGCCGACUGCCUGAUGCGACGCUUGCGCGUCUUAUCAGGCC
+CP000819.1/4304795-4304719 GGCCGGAUAAGGCGUUUACGCCGCAUCCGGCAAUGGUGCCGACUGCCUGAUGCGACGCUUGCGCGUCUUAUCAGGCC
+AP009048.1/4330759-4330683 GGCCGGAUAAGGCGUUUACGCCGCAUCCGGCAACGGUGCCGACUGCCUGAUGCGACGCUUGCGCGUCUUAUCAGGCC
+#=GC SS_cons               :<<<<<<<--<<<<____>>>>-->>>>>>>-------------<<<<<<<<-<<<<<____>>>>>->>>>>>>>:
+#=GC RF                    GGCCGGauAAGGCGUUUACGCCGCauCCGGCAAcGGUGCCGACUGCCuGaugCGaCGCUUGCGCGuCUuauCaGGCC
+//

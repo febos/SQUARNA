@@ -1,0 +1,46 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02207
+#=GF ID   WT1-AS_5
+#=GF DE   WT1 antisense RNA conserved region 5
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Predicted; CMfinder
+#=GF SS   Predicted; CMfinder
+#=GF GA   80.00
+#=GF TC   89.00
+#=GF NC   47.50
+#=GF TP   Gene; lncRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 21.44 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001463; lincRNA;
+#=GF RN   [1]
+#=GF RM   2173145
+#=GF RT   Tissue, developmental, and tumor-specific expression of divergent
+#=GF RT   transcripts in Wilms tumor.
+#=GF RA   Huang A, Campbell CE, Bonetta L, McAndrews-Hill MS, Chilton-MacNeill S,
+#=GF RA   Coppes MJ, Law DJ, Feinberg AP, Yeger H, Williams BR
+#=GF RL   Science. 1990;250:991-994.
+#=GF RN   [2]
+#=GF RM   8406502
+#=GF RT   Sequence of the WT1 upstream region including the Wit-1 gene.
+#=GF RA   Gessler M, Bruns GA
+#=GF RL   Genomics. 1993;17:499-501.
+#=GF RN   [3]
+#=GF RM   17210670
+#=GF RT   A CTCF-binding silencer regulates the imprinted genes AWT1 and WT1-AS and
+#=GF RT   exhibits sequential epigenetic defects during Wilms' tumourigenesis.
+#=GF RA   Hancock AL, Brown KW, Moorwood K, Moon H, Holmgren C, Mardikar SH,
+#=GF RA   Dallosso AR, Klenova E, Loukinov D, Ohlsson R, Lobanenkov VV, Malik K
+#=GF RL   Hum Mol Genet. 2007;16:343-354.
+#=GF WK   WT1-AS
+#=GF SQ   4
+
+
+AL049692.13/51819-51741 GGCACUUUUAGCGGGGGGAGAGGAGGUUAUCUGAAGGGA----GGCUGGCUUGAAUGUGAGUCGUUGUGUUUGUGAAACCCAG
+L25110.1/3560-3638      GGCACUUUUAGCGGGGGGAGAGGAGGUUAUCUGAAGGGA----GGCUGGCUUGAAUGUGAGUCUUUGUGUUUGUGAAACCCAG
+X77549.1/328-250        GGCACUUUUAGCGGGGGGAGAGGAGGUUAUCUGAAGGGA----GGCUGGCUUGAAUGUGAGUCGUUGUGUUUGUGAAACCCAG
+AANU01216576.1/178-102  GGCCCUUUUAGCGGGGGGAGAGGAGGUUAUCUGAAGGGAGGGAGGCAGGCUUGAAUGUGAGUC------UUUGUGAAACCCAG
+#=GC SS_cons            :::::::::::::::::::::::::::::::::::::::....::::::::::::::::::::::::::::::::::::::::
+#=GC RF                 GGCaCUUUUAGCGGGGGGAGAGGAGGUUAUCUGAAGGGA....GGCuGGCUUGAAUGUGAGUCgUUGUGUUUGUGAAACCCAG
+//

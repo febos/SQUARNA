@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02172
+#=GF ID   RFPL3-AS1_2
+#=GF DE   RFPL3 antisense RNA 1 conserved region 2
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Predicted; CMfinder; Eberhardt R
+#=GF SS   Predicted; CMfinder;
+#=GF GA   40.00
+#=GF TC   41.20
+#=GF NC   39.80
+#=GF TP   Gene; lncRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 19.84 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001463; lincRNA;
+#=GF RN   [1]
+#=GF RM   10508838
+#=GF RT   Duplications on human chromosome 22 reveal a novel Ret Finger Protein-like
+#=GF RT   gene family with sense and endogenous antisense transcripts.
+#=GF RA   Seroussi E, Kedra D, Pan HQ, Peyrard M, Schwartz C, Scambler P, Donnai D,
+#=GF RA   Roe BA, Dumanski JP
+#=GF RL   Genome Res. 1999;9:803-814.
+#=GF WK   RFPL3-AS1
+#=GF SQ   3
+
+
+AJ010233.1/158-88       CUUGGUAACAGAGAAGGGGUCCUCACUUGCCCACUCUUUGGAAUCCACCUUCCAUUGAUCUUCUGGGGGAA
+AANU01294782.1/439-509  CUUGGUAAUAGAGAAGGGGUCCUCACUUGCCCAGUCUUUGGAAUCCGCCUUCUGUUGAUCUUCUGGGGAAC
+ABRT010789798.1/681-751 CUUGGUAAUAUAGUUGGGCUCCUCAUUUCCCCACUCUUUGGAAGUCAUCUUCUCCUCAACUUCUGGGGGAA
+#=GC SS_cons            :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#=GC RF                 CUUGGUAAuAgAGaaGGGgUCCUCAcUUgCCCAcUCUUUGGAAucCacCUUCuguUgAuCUUCUGGGGGAa
+//

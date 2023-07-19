@@ -1,0 +1,45 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00385
+#=GF ID   IBV_D-RNA
+#=GF DE   Infectious bronchitis virus D-RNA
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   PMID:11119581
+#=GF SS   Published; PMID:11119581
+#=GF GA   35.00
+#=GF TC   40.90
+#=GF NC   34.60
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 22 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000233; mature_transcript;
+#=GF DR   GO; 0019079; viral genome replication;
+#=GF DR   GO; 0019072; viral genome packaging;
+#=GF RN   [1]
+#=GF RM   11119581
+#=GF RT   cis-acting sequences required for coronavirus infectious bronchitis virus
+#=GF RT   defective-RNA replication and packaging.
+#=GF RA   Dalton K, Casais R, Shaw K, Stirrups K, Evans S, Britton P, Brown TD,
+#=GF RA   Cavanagh D
+#=GF RL   J Virol 2001;75:125-133.
+#=GF CC   This family represents a cis-regulatory element known as defective RNA or
+#=GF CC   D-RNA. This region is thought to be essential for viral replication and
+#=GF CC   efficient packaging [1].
+#=GF WK   Infectious_bronchitis_virus_D-RNA
+#=GF SQ   10
+
+
+U52601.1/1238-1278     GGUAGAUAGGCAUGUAGCUU-AGCACCUACAUGUCUAUCGCC
+AF111995.1/1438-1478   GGAAGAUAGGCAUGUAGCUU-AGCACCUACAUGUCUAUCGCC
+AY319651.1/27421-27462 GGAAGAUAGGCAUGUAGCUUGAUUACCUACAUGUCUAUCGCC
+AJ278334.1/215-256     GGAAGAUAGGCAUGUAGUUUGAUUACCUACAUGUCUAUCGCC
+U52594.1/1381-1422     GGCAGAUAGGCAUGUAGCUUGAUUACCUACAUGUCUAUCGCC
+L06251.1/212-253       GGGAGAUAGGCAUGUAGCUUGAUUACCUACAUGUCUAUCGCC
+U52596.1/1422-1463     GAAAGAUAGGCAUGUAGCUUGAUUACCUAUAUGUCUAUCGCC
+M28565.1/1541-1582     GGAAGAUAGGCAUGUAGCUUGAUUACCUACAUGUGUAUCGCC
+U52598.1/1424-1465     GGAAGAUAGGCAUGUAGCUUAAUUACCUACAUGUCUAUCGCC
+AF111996.1/1438-1478   GGCAGAUAGGCAUGUAGCUU-AGCACCUACAUGUCUAUCGCC
+#=GC SS_cons           <<--<<<<<<<<<<<<<_________>>>>>>>>>>>>>->>
+#=GC RF                GGaAGAUAGGCAUGUAGCUUGAUUACCUACAUGUCUAUCGCC
+//

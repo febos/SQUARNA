@@ -1,0 +1,39 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00499
+#=GF ID   Parecho_CRE
+#=GF DE   Human parechovirus 1 (HPeV1) cis regulatory element (CRE)
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   PMID:12438643
+#=GF SS   Published; PMID:12438643
+#=GF GA   55.00
+#=GF TC   59.90
+#=GF NC   52.50
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 19 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000233; mature_transcript;
+#=GF DR   GO; 0019079; viral genome replication;
+#=GF RN   [1]
+#=GF RM   12438643
+#=GF RT   Terminal RNA replication elements in human parechovirus 1.
+#=GF RA   Nateri AS, Hughes PJ, Stanway G
+#=GF RL   J Virol 2002;76:13116-13122.
+#=GF CC   This family represents a Parechovirus cis regulatory element which is
+#=GF CC   located in the 5'-terminal 112 nucleotides of the genome of human
+#=GF CC   parechovirus 1 (HPeV1). The family consists of two stem-loop structures
+#=GF CC   (SL-A and SL-B) together with a pseudoknot. Disruption of any of these
+#=GF CC   elements impairs both viral replication and growth [1].
+#=GF WK   Human_parechovirus_1_(HPeV1)_cis_regulatory_element_(CRE)
+#=GF SQ   5
+
+
+AF055846.1/1-102 -------------UCCUAGAGAGCUUGGCCGUCGGGCCUUAUA-CCCGACUUGCUGAGUUUCUCUAGGAGAGU-CCCUUUCCCAGCCCUGAGGCGGCUGGUCAAUAAAAGCCUCAAA
+AJ005695.1/1-113 UUUGAAAGGGGUCUCCUAGAGAGCUUGGCCGUCGGGCCUUACACCCCGACUUGCUGAGUUUCUCUAGGAGAGU-CCCUUUCCCAGCCA-GAGGUGGCUGGUCAAACAAUACCA--AA
+L02971.1/1-115   UUUGAAAGGGGUCUCCUAGAGAGCUUGCC--UAGGGCCUUAUAACCCGACUUGCUGAGCUUCUAUAGGAAAAAACCCUUUCCCAGCCUUGGGGUGGCUGGUCAAUAAAAACCCCCAU
+AB084913.1/1-113 UUUGAAAGGGGUCUCCUAGAGAGCUUGGCCGUCGGGCCUUAUACCCCGACUUGCUGAGCUUCUCUAGAAGAGU-CCUUUUCCCAGCCA-GAGGUGGCUGGUUAAAUAAUACCU--AC
+S45208.1/1-115   UUUGAAAGGGGUCUCCUAGAGAGCUUGCC--UAGGGCCUUAUAACCCGACUUGCUGAGCUUCUAUAGGAAAAAACCCUUUCCCAGCCUUGGGGUGGCUGGUCAAUAAAAACCCCCAU
+#=GC SS_cons     :::<<<<<<<<<<<<<<<<<<<<<<<<<<-<<<<<<________>>>>>>-->>>>>>>>>->>>>>>>>>->.>>>>>>><<<<<<__AAAAA>>>>>>:::::::::aaaaa:::
+#=GC RF          UUUGaaagGGgucucCuagagagCuuggCcGucGGGCCUUAuAaCCCgaCUUGcugaGcuuCucuaGgagagc.CCcuuuCCCaGCCuUGaGGuGGCuGGUcAAuaAAaACCucaAu
+//

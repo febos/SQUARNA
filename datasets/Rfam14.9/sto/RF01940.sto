@@ -1,0 +1,44 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01940
+#=GF ID   hvt-mir-H
+#=GF DE   microRNA hvt-mir-H9
+#=GF AU   Boursnell C; 0000-0002-3494-4451
+#=GF SE   Predicted; ClustalW2
+#=GF SS   Predicted; RNAalifold
+#=GF GA   55.00
+#=GF TC   57.20
+#=GF NC   41.00
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   MIPF; MIPF0000783;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   19403687
+#=GF RT   Novel microRNAs (miRNAs) encoded by herpesvirus of Turkeys: evidence of
+#=GF RT   miRNA evolution by duplication
+#=GF RA   Yao Y, Zhao Y, Smith LP, Watson M, Nair V
+#=GF RL   J Virol. 2009;83:6969-6973.
+#=GF RN   [2]
+#=GF RM   19328516
+#=GF RT   MicroRNAs of Gallid and Meleagrid herpesviruses show generally conserved
+#=GF RT   genomic locations and are virus-specific
+#=GF RA   Waidner LA, Morgan RW, Anderson AS, Bernberg EL, Kamboj S, Garcia M,
+#=GF RA   Riblet SM, Ouyang M, Isaacs GK, Markis M, Meyers BC, Green PJ, Burnside J
+#=GF RL   Virology. 2009;388:128-136.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+AF291866.1/121538-121628 UAGGCUUGGGCACGGUCCUUCUCGCGGAUAGCGUAGAUGUCUCUAUUCGUUAACAGCUACAUUGUCCGCAGGGAUCUAGCCACAUGGCAAU
+AF291866.1/121390-121479 GACAGUUGGGGCAUA-CUUUCUCAUGGACCCCCGAGUUGUGUCUAUUCGUUAACAGCUAGGCCGUCCAUGAGGUCGUAGGCACCCAGUAAU
+AF282130.1/115651-115740 GACAGUUUGGGCAUA-CUUUCUUAUGGACCGCCGAGGUGUGUCUAUUCGUUAACAGCUAGGCCGUCCAUGAGGUCGUAGGCACCCAGUAAU
+AF291866.1/121857-121945 CCAGGCUUGGGCGU--AUUUUCUCCGGUGAGCGUAGCUGCCUGUAGUCGUUAGCAGCUACGUUGUCCGCGGGAUUCUAGCCACCUGGCAAU
+#=GC SS_cons             :::::::::::::::.:::<<<<<<<<<<<<<<<<<-<<<____________>>>->>>>>>>>>>>>>>>>>::::::::::::::::::
+#=GC RF                  uAaggUUuGGgcaua.cUUucccgcGGacagCguAGaUGucUcUAuUCGUUAaCAGCUacGcuguCCgcgggguucUAGcCACcugGuAAU
+//

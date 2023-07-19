@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02455
+#=GF ID   Virus_CITE_1
+#=GF DE   Dianthovirus RNA2 cap-independent translation element
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Eberhardt R
+#=GF SS   Predicted; PMID:20561661
+#=GF GA   80.00
+#=GF TC   111.40
+#=GF NC   32.90
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF RN   [1]
+#=GF RM   20561661
+#=GF RT   A Y-shaped RNA structure in the 3' untranslated region together with the
+#=GF RT   trans-activator and core promoter of Red clover necrotic mosaic virus RNA2
+#=GF RT   is required for its negative-strand RNA synthesis.
+#=GF RA   An M, Iwakawa HO, Mine A, Kaido M, Mise K, Okuno T
+#=GF RL   Virology. 2010;405:100-109.
+#=GF WK   Cap-independent_translation_element
+#=GF SQ   2
+
+
+
+S46027.1/1091-1183         AGAAGGAGACAAGAAUUGCGUUGGCUUCGGCGAGCGACGAAAUGGUUUAAAUACAGGCUACGAGUUCUCCUCGUAGGGUCUCUUGCCUCCGGC
+X08021.1/1092-1184         AAAAGAGAAAGAGAAUUGCUUUGGCUUCGGCGGAAGACGAAAAGGUUUAAAUACAGGCUACGAGUUCUCCUCGUAGGGUCUCUCUUUCUUGGC
+#=GC SS_cons               :::::(((((((((,<<<<<<<-<<____>>->>>>->>>,,,,<<______>>,,,<<<<<<<_____>>>>>>>,,,,)))))))))::::
+#=GC RF                    AaAAGggggcgaGaAuuGCguuGGCUUCGGCGaacGACgaAAaGGuUUAAAUaCAGGCuaCGaGUUCUCCuCGuaGGGUCuCucgccccuGGC
+//

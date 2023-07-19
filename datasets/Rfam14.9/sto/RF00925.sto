@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00925
+#=GF ID   MIR1027
+#=GF DE   microRNA MIR1027
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   miRBase; Daub J
+#=GF SS   Predicted; RNAalifold; Daub J
+#=GF GA   150.00
+#=GF TC   172.10
+#=GF NC   80.70
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000414;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17601824
+#=GF RT   Common functions for diverse small RNAs of land plants.
+#=GF RA   Axtell MJ, Snyder JA, Bartel DP
+#=GF RL   Plant Cell. 2007;19:1750-1769.
+#=GF WK   MicroRNA
+#=GF SQ   2
+
+
+ABEU01006583.1/57263-57122 GUGCAAGAGCAGAUACUUAAGUCGAAGAGCAUCUUUCUAUCUUCUCUUCCAAUCUAUUGAUCUGCCCUUCCAAUACUAUCAGAUCAAUAGAUUGGAAGAGCAGAUCGAAAAAUGCUCUCACCUUAAGGAGAGACAGCGACUC
+ABEU01006585.1/184-43      GUGCAAGAGCAGAUACUUAAGUCGAAGAGCAUCUUUCUAUCUUCUCUUCCAAUCUAUUGAUCUGCCCUUCCAAUACUAUCAGAUCAAUAGAUUGGAAGAGCAGAUCGAAAAAUGCUCUCACCUUAAGGAGAGACAGCGACUC
+#=GC SS_cons               :::::::::::::::<<<<<<--<<-<<<<<<-<<<<-<<<<-<<<<<<<<<<<<<<<<<<<<<_______________>>>>>>>>>>>>>>>>>>>>>->>>>->>>>->>>>>>>>-->>>>>>:::::::::::::::
+#=GC RF                    GUGCAAGAGCAGAUACuuaaGUCGaAGaGCauCuuuCUauCuUCuCuuCCaauCuauuGauCuGCCCUUCCAAUACUAUCaGauCaauaGauuGGaaGaGCaGauCGaaaAauGCuCuCACCuuaaGGAGAGACAGCGACUC
+//

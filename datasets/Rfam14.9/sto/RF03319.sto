@@ -1,0 +1,41 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03319
+#=GF ID   mir-989
+#=GF DE   mir-989 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   59.00
+#=GF TC   59.20
+#=GF NC   54.70
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000885;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;DR   GO; 0007298; border follicle cell migration;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-989 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   9
+
+
+URS00003A3160_7165/14-121 GCCACGGGGGUACGCCGCUACGUUGCUUUCACUUGGU-----------------------------------------------ACGCUCGUAUAGUAUAGAGCUAAAAGUAAACAUAGAU----------CCAUGUGAUGUGACGUAGUGGUACCCUCCCGUGU
+URS0000D55136_7159/12-98  GUCAUGGGGGACCGCCGCUACCUCGCUUUCACUUGGU--------------------------------------------------ACCGAUUUCCCAUAAU----------------------------CCAUGUGAUGUGACGUAGUGGUACCUUCCCUUGG
+URS0000D54426_7176/6-95   GUCAUGGGGAAACGCCGCUACCUCGCUUUCACUUGGU-------------------------------------------------GGCCAUAGAUUUCGAUAUC--------------------------CCAUGUGAUGUGACGUAGUGGUACCUUCCCUUGG
+URS0000D53BCB_7091/5-87   CAGGGUUGAAAUGGCCAUUACCUCACAGUCACGUGGU----------------------------------------------CAUGAUGGUACA------------------------------------ACGUGUGAUGUGACGUAGUGGAAGUCUCGACCUG
+URS0000D566A1_7130/7-89   CAGGGUUGAAAUGGCCAUUACCUCACAGUCACGUGGU----------------------------------------------CAUGUUGGUACA------------------------------------ACGUGUGAUGUGACGUAGUGGAAGUCUCGACCUG
+URS0000D519D3_7240/1-77   ----------------------------------------------------------------------------------------UGCCGAGAUAAGUUUCAUUUUGCGUCUUUUGAAUUCGAAUAGUUCAUGUGAUGUGACGUAGUGGAACAUACCUGAAA
+URS00002E0BE5_7237/3-120  GUUGCGGGAAUGGGCCACUACCUCGCAGUCACGUGA-----------------------------------------------UAUCGGAAUGCAAUGAUCUACGUUAAAUUGUGUUUCUUUUUGAAUAGUUCAUGUGAUGUGACGUAGUGGAACAUUCCUGGCG
+URS0000D4F324_7244/10-170 GAUUCGGGAAUUGGCCACUACCUCGCAGUCACGUGAU----CCACAAACGCAGCCGGCUCUGGUGCUUGGGAAAAAUACAAUUUUCUUUUGUUUUCCUGGGCGCCGCAACGUUUUGCGUUCAUUUCAUAUUUCAUGUGAUGUGACGUAGUGGAACAUUCCUGACG
+URS000078D439_7227/5-169  AUUUUGGGAAUCGGCCACUACCUUGCAGUCACGUGAUGAAAAGACACAGGUGACACUGAUCCGGAUUUGGUAGUUGACAAAUCCUCCAUGCCGAGAUUAGUUUCAUUUUGCGUCUUUUGAAUUCGAAUAGUUCAUGUGAUGUGACGUAGUGGAACAUACCUGAAA
+#=GC SS_cons              ::<<<<<<<<----<<<<<<<-<<<<--<<<<-<<<_..............................................________________________________________________>>>->>>>->>>>->>>>>>>---->>>>>>>>:
+#=GC RF                   gucgcgGGaauugGCCaCUACCUCgCagUCACguGgU..............................................uacgaUgguauaaUuaguuuCauuaaguuuuuuUugaauUugaAUAgUcCaUGUGAUGuGACGUAGuGGAACauuCCcgcgg
+//

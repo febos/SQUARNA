@@ -1,0 +1,51 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00138
+#=GF ID   SNORD16
+#=GF PI   U16
+#=GF DE   Small nucleolar RNA SNORD16
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; PFOLD
+#=GF GA   45.00
+#=GF TC   45.50
+#=GF NC   41.70
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00046
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Oryzias_latipes300068;
+#=GF DR   snoopy; Gasterosteus_aculeatus300109;
+#=GF RN   [1]
+#=GF RM   8335006
+#=GF RT   A novel small nucleolar RNA (U16) is encoded inside a ribosomal protein
+#=GF RT   intron and originates by processing of the pre-mRNA.
+#=GF RA   Fragapane P, Prislei S, Michienzi A, Caffarelli E, Bozzoni I
+#=GF RL   EMBO J 1993;12:2921-2928.
+#=GF RN   [2]
+#=GF RM   11387227
+#=GF RT   RNomics: an experimental approach that identifies 201 candidates for
+#=GF RT   novel, small, non-messenger RNAs in mouse.
+#=GF RA   Huttenhofer A, Kiefmann M, Meier-Ewert S, O'Brien J, Lehrach H,
+#=GF RA   Bachellerie JP, Brosius J
+#=GF RL   EMBO J 2001;20:2943-2953.
+#=GF CC   U16 is a member of the C/D class of snoRNA which contain the C (UGAUGA)
+#=GF CC   and D (CUGA) box motifs. U81 acts as a guanine methylation guide and is
+#=GF CC   found in an intron of ribosomal proteins L1 gene in animals [1]. This
+#=GF CC   snoRNA was independently named MBII-98 in mouse [2].
+#=GF WK   Small_nucleolar_RNA_SNORD16
+#=GF SQ   5
+
+
+AF357363.1/1-90  ---------GUCGUAAUUUGCGUCUUACUCUGUUCACAGCGACAGUUGCCUGCUGUCAGUAUGCUGGUUCAGAAGGUUGACGAACAU--UGUUACUGAGCA
+X67692.1/35-134  UGCUAUGAUGUCGUAAUUUGCGUCUUACUCCACAUCAUGCGACAGUUGCCUGCUGUCAUUAAGCUGGUGUGGGUGACUGACGAAUAUC-GCGUUCUGAGCA
+Z70298.1/1-100   UGCAAUGAUGGUGUAAUUUGCGUCUUACCUGUUAUUCAGUGACGGUUGCCUGCUGUCAUUAAGCUGGUGCCGAGGGCUGACGAUAAAACAAGU-CUGAGCA
+X72205.1/148-246 UGCAAUGAUGUCGUAAUUUGCGUCUUACUCUGUUCUCAGCGACAGUUGCCUGCUGUCAGUAAGCUGGUACAGAAGGUUGACGAAAAU--UCUUACUGAGCA
+X67691.1/37-137  UGCUAUGAUGUCGUAAUUUGCGUCUUACUCCACAUCAAGCUACAGUUGCCUGCUGUUAUUAUGCUGAUGUGGAUGACUGACGAACAUCAGCGUUCUGAGCA
+#=GC SS_cons     <<<-----------------<<<<-----<<<<<----<<<<<<<_______>>>>>----->>--->>>>>------>>>>------.--------->>>
+#=GC RF          uGCaAUGAUGucGUAAUUUGCGuCUUACUccgcauuaAGcgaCaGUUGCCUGCuGucAuUAagCUGGugcggAaGgcUGaCGAaaAua.ucgUuCUGAGCa
+//

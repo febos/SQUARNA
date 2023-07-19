@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01108
+#=GF ID   BMV3_UPD-PK1
+#=GF DE   Pseudoknot of upstream pseudoknot domain (UPD) of the 3'UTR
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   38.00
+#=GF TC   40.80
+#=GF NC   35.40
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   PKBASE; PKB00154;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 1904973; positive regulation of viral translation;
+#=GF DR   GO; 0046782; regulation of viral transcription;
+#=GF RN   [1]
+#=GF RM   7684465
+#=GF RT   Contributions of the brome mosaic virus RNA-3 3'-nontranslated region to
+#=GF RT   replication and translation.
+#=GF RA   Lahser FC, Marsh LE, Hall TC
+#=GF RL   J Virol. 1993;67:3295-3303.
+#=GF WK   UPSK_RNA
+#=GF SQ   2
+
+
+X58459.1/594-619   GAGCCCCUGACUGGGUUAAAGUCACA
+J02042.1/1829-1854 GAGCCCCUGACUGGGUUAAAGUCACA
+#=GC SS_cons       :<<<<<_AAAAA>>>>>::aaaaa::
+#=GC RF            GAGCCCCUGACUGGGUUAAAGUCACA
+//

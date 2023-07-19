@@ -1,0 +1,41 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02763
+#=GF ID   IsrM
+#=GF DE   IsrM sRNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   376.00
+#=GF TC   376.20
+#=GF NC   115.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0040033; sRNA-mediated gene silencing;
+#=GF RN   [1]
+#=GF RM   18267966
+#=GF RT   Small RNAs encoded within genetic islands of Salmonella typhimurium show
+#=GF RT   host-induced expression and role in virulence.
+#=GF RA   Padalon-Brauch G, Hershberg R, Elgrably-Weiss M, Baruch K, Rosenshine I,
+#=GF RA   Margalit H, Altuvia S
+#=GF RL   Nucleic Acids Res. 2008;36:1913-1927.
+#=GF RN   [2]
+#=GF RM   21949647
+#=GF RT   A Salmonella small non-coding RNA facilitates bacterial invasion and
+#=GF RT   intracellular replication by modulating the expression of virulence
+#=GF RT   factors.
+#=GF RA   Gong H, Vu GP, Bai Y, Chan E, Wu R, Yang E, Liu F, Lu S
+#=GF RL   PLoS Pathog. 2011;7:e1002120.
+#=GF WK   IsrM_small_RNA
+#=GF SQ   2
+
+
+
+CP001363.1/2925275-2925603 AGCUUCAUGCUUCUUUUUUAGAUAGUUUGUUGUUCGUGCCUAUCGUACACUUUGCGACUGUUCGUUUUGCAUCUAUUCCAAGCAUCAAUCAAUACAAUAAAUUUCAGCACCAUAAAGAUAAUAAUAAAAAUCAACAAGAUACGAAAACCCCUUCCAUAUCAACAUCAUCACCACCCUUUUUGCGCCUUCCCUUCCCCGCAAAAAAUAAAAAUCUCCAACAAACUCAACCAUCUCCCCCACCAAUUACAAGGACGCCAGCCACUUUUUAGUUGUUUGAAGUUCAAUGAAGUCUACUAAGCCCGCACAGCACAAGCUCUGCGGGCUUUUUU
+AB439839.1/45-348          AGCUUCAUGCUUCUUUUUUAGAUAGUUUGUUGUUCGUGCCUAUCGUACACUUUGCGACUGUUCGUUUUGCAUCUAUUCCAAGCAUCAAUCAAUACAAUAAAUUUCAGCACCAUAAAGAUAAUAAUAAAAAUCAACAAGAUACGAAAACCCCUUCCAUAUCAACAUCAUCACCACCCUUUUUGCGCCUUCCCUUCCCCGCAAAAAAUAAAAAUCUCCAACAAACUCAACCAUCUCCCCCACCAAUUACAAGGACGCCAGCCACUUUUUAGUUGUUUGAAGUUCAAUGAAGUCUACUAAGCCCGCA-------------------------
+#=GC SS_cons               :{{{{{{{{{{{{,,,,,,[[[[[[[[[[[[[,,,((((,,,<<<<<_____>>>>>,<<<<-<<<-<<<___________>>>-->>>->>>>,,,,,,,,,,,,)))),,,,,,,,,,,,,,,,,,,,,,,,,,,<<<<-<<<______>>>-->>>>,,,,,,,,,,,,,,,,<<<<<<<<____________>>>>>>>>,,,,,,,,,,,]]]]]]]]]-----]]]],,,,,,,<<<<<<-<<<<__________>>>>->>>>>>,,,}}}}}---}}}}}}}-----<<<<<<<<<-<<<____>>>->>>>>>>>>::::
+#=GC RF                    AgCuuCaugCuuCUUUUUUaGauaGuuuGuuGUUCGuGCCUAuCGuaCACUUugCGaCuguuCguuUuGCAUCUAUUCCAAGCaUCaauCaauaCAAUAAAUUUCAGCaCCAUAAAGAUAAUAAUAAAAAUCAACAAGauaCGaaAACCCCuuCCAuauCAACAUCAUCACCACCCuuuuuGCGCCUUCCCUUCCCCGCaaaaaAUAAAAAUCUCCaaCaaaCuCAACCauCuCCCCCACCaauuaCaagGACGCCAGCCACuuuUuaguuGUUUGaaGuUCAauGaaGuCUACUaaGcccGcacaGcAcAAgCucugCgggCuuuuuu
+//

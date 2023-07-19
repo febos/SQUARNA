@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01454
+#=GF ID   RCNMV_5UTR
+#=GF DE   5'UTR enhancer element
+#=GF AU   Osuch I
+#=GF SE   INFERNAL
+#=GF SS   Published; PMID:19577782
+#=GF GA   75.00
+#=GF TC   136.00
+#=GF NC   40.20
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0045975; positive regulation of translation, ncRNA-mediated;
+#=GF DR   GO; 0043487; regulation of RNA stability;
+#=GF RN   [1]
+#=GF RM   19577782
+#=GF RT   Host-dependent roles of the viral 5' untranslated region (UTR) in RNA
+#=GF RT   stabilization and cap-independent translational enhancement mediated by
+#=GF RT   the 3' UTR of Red clover necrotic mosaic virus RNA1.
+#=GF RA   Sarawaneeyaruk S, Iwakawa HO, Mizumoto H, Murakami H, Kaido M, Mise K,
+#=GF RA   Okuno T
+#=GF RL   Virology. 2009 Aug; 391:(1)107-18
+#=GF WK   Red_clover_necrotic_mosaic_virus_translation_enhancer_elements
+#=GF SQ   3
+
+
+L07884.1/1-120   U--AAACGUUUCACCGGUUUGUAAAUUGGAACUUCGUAGUUCGCCAGACGCCUUCUUCGUAUCAAGGAACUGGAAAUUGUACGGUGAGUCUGUCAUUUU-AUUUUCUACUUUUCGUACCAGUC
+J04357.1/1-123   GACAAACGUUUUACCGGUUUGUAAAUAGGAGCACACAAGCUCGCUAGUCGCCCCCUUCGUAUCGGGGAUCUAGAGAUUAAACGGUAUACCUGUCAUUUUAAAUUUCUACUUUUCGUACCAGUC
+AB034916.1/2-123 AACAAACGUUUUACCGGUUUGUAAAUUGGAAUUCUCGAAUUCGCCAGUCGCCUUCUUCGUAUCAAGGAUCUGGAAUUUGAACGGUAUCUUUAUCAUUUUAA-UUUCUACUUUUCGUACCAGUC
+#=GC SS_cons     :<<<<<<_________>>>>>>,,,,,,<<<<______>>>>,<<<<---<<<<_________>>>>-->>>>---------<<<<<___________________________>>>>>::::
+#=GC RF          aaCaaaCGUUUuACCGGuuuGuAAAUuGGagcucucaAgcuCGCcaGuCGCCccCUUCGUAUCggGGAuCugGAaaUUgaACGGuacaucUgUCAUUUUAAaUUUCUACUUUUCguaCCAGUC
+//

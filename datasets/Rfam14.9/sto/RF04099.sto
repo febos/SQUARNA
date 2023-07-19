@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF04099
+#=GF ID   MIR837
+#=GF DE   MIR837 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   117.00
+#=GF TC   117.60
+#=GF NC   93.50
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0001155;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor MIR837 imported from
+#=GF CC   miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   2
+
+
+URS00002C2F74_3702/32-153 UAUAAAGUCAUCAUGUUUUUUUCAUCAGUUUCUUGUUCGUUUCAAAAUUAUGAUUUUUGUUUACUUACACUCAUAAUCUUGAAACGAACAAAAAACUGAUGGAAAAACAUGAGGACUUUAUA
+URS0000D5506B_59689/1-119 UAUAAAGUCUCCAUGUUUUUU-CAUU-GUUUCUUGUUUUUUUCAAGAUUAUGAUUUUUGUUUAAUUACAAUCAUAAUCUUGAAACGAACAAGAAACUGAUG-AAAAACAUGAGGACUUUAUA
+#=GC SS_cons              <<<<<<<<<<<<<<<<<<<<--<<<<-<<<<<<<<<<<<<<<<<<<<<<<<<<----<<<______>>>->>>>>>>>>>>>>>>>>>>>>>>>>>->>>>->>>>>>>>>>>>>>>>>>>>
+#=GC RF                   uauaaaGuccccauGuuuuuUucaucaGuuucuuGuucguuucaagauuauGaUUUUuGuUUAaUUaCaauCauaaucuugaaacgaaCaagaaaCUgauggaaaaaCauggggaCuuuaua
+//

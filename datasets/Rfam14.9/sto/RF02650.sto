@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02650
+#=GF ID   CncR1
+#=GF DE   Cag non-coding RNA1
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; PMID:268638
+#=GF GA   76.00
+#=GF TC   76.10
+#=GF NC   43.30
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 2000145; regulation of cell motility;
+#=GF DR   GO; 0044650; adhesion of symbiont to host cell;
+#=GF RN   [1]
+#=GF RM   26863876
+#=GF RT   The cag-pathogenicity island encoded CncR1 sRNA oppositely modulates
+#=GF RT   Helicobacter pylori motility and adhesion to host cells.
+#=GF RA   Vannini A, Roncarati D, Danielli A
+#=GF RL   Cell Mol Life Sci. 2016;73:3151-3168.
+#=GF CC   Encoded by the virulence-associated cag pathogenicity island (cag-PAI). It
+#=GF CC   is an abundant and conserved sRNA which does not target cag-PAI genes, but
+#=GF CC   down-regulates bacterial motility and have positive role on the adhesion
+#=GF CC   to host cells.
+#=GF WK   Helicobacter_pylori
+#=GF SQ   3
+
+
+
+CP001173.1/536898-536686     GUGUUUUUUAGAUGGAAAACUCCUUUAUUCUUUAACAGAUGUUUUCUGUUCUUUUUUUGGCAUAAACAAACAAAUCGUUGGUUUGUGCUAUACCACAUGUUAAUAUCAGCAAGUGGGGUAUUCUUUGAGAUUUGGAGUUAGAUUAGGGUGGUUUUGUAAAAUAUUUAUUAUUUUAUGCUCCUUUGUAAGUUCACCGCCCUGAACUACUUCUUU
+AY330639.1/10523-10311       GUGUUUUUUAGAUGGAAAACUCCUUUAUUCUUUAACAGAUGUUUUCUGUUCUUUGUUUGGCAUAAACAAACAAAUCGUUGGUUUGUGCUAUACCACAUGUUAGUAUCAGCAAGUGGGGUAUUCUUUGAGAUUUGGAGUUAGAUUAGGGUGGUUUUGUAAAAUAUUUAUUAUUUUAUGCUCCUUUGUAAGUUCACCGCCCUGAACUAUUUCUUU
+AFAO01000045.1/125969-126181 GUGUUUUUUAGAUGGAAAACUCCUUUAUUCUUUAACAGAUGUUUUCUGUUCUUUGUUUGGCAUAAACAAACAAAUCGUUGGUUUGUGCUAUACCACAUGCUAGUAUCAGCAAGUGGGGUAUUCUUUGAGAUUUGGAGUUAGAUUAGGGUGGUUUUGUAAAAUAUUUAUUAUUUUAUGCUCCUUUAUAAGUUCACCGCCCUGAACUAUUUCUUU
+#=GC SS_cons                 ::::::::<<<<-<<<____>>>>>>>,,,,,,<<<<<<_____>>>>>>,,,,,,,<<<<<<<<<<-<<<_____>>>->>>>>>>>>>,,<<<<-<<<<______>>>>->>>>-----------------(((((-((-((((((((((,,,<<<<<<<<_____>>>>>>>><<<________>>>,,))))))))))-))))))):::
+#=GC RF                      GUGUUUUUuagaUGGaAAACuCCucuaUUCUUUaaCaGaUGUUUuCuGuuCUUUgUUugGCacaaaCAaaCAAAUCGuuGGuuuguGCcaUACCaCAuGcuAgUAUCagCaAGuGGGGUAUUCUUUGAGAUUUGgaguUaGAucaGGGcGGuUUUguaaaauaUUUAUuauuuuacgCuCCUUUgUAaGcUCaCCgCCCugaACuacucCUUU
+//

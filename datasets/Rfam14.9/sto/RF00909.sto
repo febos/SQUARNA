@@ -1,0 +1,54 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00909
+#=GF ID   mir-883
+#=GF DE   microRNA mir-883
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   miRBase; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   60.00
+#=GF TC   63.50
+#=GF NC   57.30
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000389;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [2]
+#=GF RM   17989215
+#=GF RT   RNA sequence analysis defines Dicer's role in mouse embryonic stem cells.
+#=GF RA   Calabrese JM, Seila AC, Yeo GW, Sharp PA
+#=GF RL   Proc Natl Acad Sci U S A. 2007;104:18097-18102.
+#=GF RN   [3]
+#=GF RM   20215419
+#=GF RT   MicroRNA transcriptome in the newborn mouse ovaries determined by massive
+#=GF RT   parallel sequencing.
+#=GF RA   Ahn HW, Morin RD, Zhao H, Harris RA, Coarfa C, Chen ZJ, Milosavljevic A,
+#=GF RA   Marra MA, Rajkovic A
+#=GF RL   Mol Hum Reprod. 2010;16:463-471.
+#=GF WK   MicroRNA
+#=GF SQ   3
+
+
+AAHY01211886.1/6262-6339 U-GCAAUGCAUUACUGAGAAUGGGUAGCAGUCACUUUGUACUA-UGAGUAACUGCAACAUCUCUCAGUAUUGUAAGGUUC
+AAHY01211887.1/3534-3610 -UGCACUAUAAUGCUGAGAG-AAGUAGCAGUUACUUUAUUCUA-UAAGUAACUGCAACAGCUCUCAGUAUUGUAAGGCUC
+AAHX01115170.1/8183-8259 U-GCACU-CAAUGCUGAGAG-AAGUAGCAGUUACUUUUUACUCUUAAGUAACUGCAACAUCUCUCAGUAUUGUAAGGCUC
+#=GC SS_cons             :.<<--<<<<<<<<<<<<<<.--<<-<<<<<<<<<<_______._>>>>>>>>>>->>-->>>>>>>>>>>>>>-->>::
+#=GC RF                  U.GCAcugcaauaCuGaGaG.aaGuAGCaGuuaCuuUaUaCUa.UaaGuaaCuGCAaCAuCuCuCaGuauugcaAGGCUC
+//

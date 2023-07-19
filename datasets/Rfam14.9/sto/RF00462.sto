@@ -1,0 +1,41 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00462
+#=GF ID   IRES_APC
+#=GF DE   APC internal ribosome entry site (IRES)
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Published; 12034871
+#=GF SS   Published; PMID:12034871
+#=GF GA   50.00
+#=GF TC   59.90
+#=GF NC   40.30
+#=GF TP   Cis-reg; IRES;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 21 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000243; internal_ribosome_entry_site;
+#=GF DR   GO; 0043022; ribosome binding;
+#=GF RN   [1]
+#=GF RM   12034871
+#=GF RT   Attenuated APC alleles produce functional protein from internal
+#=GF RT   translation initiation.
+#=GF RA   Heppner Goss K, Trzepacz C, Tuohy TM, Groden J
+#=GF RL   Proc Natl Acad Sci U S A 2002;99:8161-8166.
+#=GF CC   This family represents an APC internal ribosome entry site (IRES) which is
+#=GF CC   located in the coding sequence of the gene. APC is a tumour suppressor
+#=GF CC   gene which is associated with the inherited disease adenomatous polyposis
+#=GF CC   coli (APC).It is thought that IRES-mediated translation of APC is
+#=GF CC   important for an apoptotic cascade [1].
+#=GF WK   APC_internal_ribosome_entry_site_(IRES)
+#=GF SQ   6
+
+
+BX934229.1/489-541 AGUCUCCACCUUACUGAAAAUUUCUCCUUGCAAACAGAUAUGACCAGAAGGCA
+BX932893.1/573-625 AGCCUCCCCCUUACUGAAAAUUUCUCCUUGCAAACAGAUAUGACCAGAAGGCA
+M74088.1/529-581   AGUCUUCCUUUAACUGAAAAUUUUUCCUUACAAACAGAUAUGACCAGAAGGCA
+M73548.1/549-601   AGUCUUCCUUUAACUGAAAAUUUUUCCUUACAAACAGAUUUGACCAGAAGGCA
+U64442.1/511-563   AGCCUUCCUCUUACAGAAAAUUUUUCCAUGCAGACUGAUAUGACCAGAAGACA
+M88127.1/505-557   AGCCUGCCUUUAACUGAAAAUUUUUCCUUACAGACAGACAUGACAAGACGGCA
+#=GC SS_cons       :<<<<<<----<<<<<__________________>>>->>------>>>>>>:
+#=GC RF            AGcCuuCCUuUuACuGAAAAUUUUUCCUUaCAAACaGAUaUGACCAGaaGgCA
+//

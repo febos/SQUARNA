@@ -1,0 +1,48 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01457
+#=GF ID   rli22
+#=GF DE   Listeria sRNA rli22
+#=GF AU   Osuch I
+#=GF SE   INFERNAL
+#=GF SS   Predicted; RNAalifold
+#=GF GA   80.00
+#=GF TC   116.90
+#=GF NC   41.10
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00114
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF DR   GO; 0045947; negative regulation of translational initiation;
+#=GF RN   [1]
+#=GF RM   19448609
+#=GF RT   The Listeria transcriptional landscape from saprophytism to virulence.
+#=GF RA   Toledo-Arana A, Dussurget O, Nikitas G, Sesto N, Guet-Revillet H,
+#=GF RA   Balestrino D, Loh E, Gripenland J, Tiensuu T, Vaitkevicius K, Barthelemy
+#=GF RA   M, Vergassola M, Nahori MA, Soubigou G, Regnault B, Coppee JY, Lecuit M,
+#=GF RA   Johansson J, Cossart P
+#=GF RL   Nature. 2009;459:950-956.
+#=GF RN   [2]
+#=GF RM   27400116
+#=GF RT   Two novel members of the LhrC family of small RNAs in Listeria
+#=GF RT   monocytogenes with overlapping regulatory functions but distinctive
+#=GF RT   expression profiles.
+#=GF RA   Mollerup MS, Ross JA, Helfer AC, Meistrup K, Romby P, Kallipolitis BH
+#=GF RL   RNA Biol. 2016;13:895-915.
+#=GF CC   The UCCC motifs prevent ribosomal binding to oppA mRNA. 
+#=GF WK   Listeria_monocytogenes_non-coding_RNA
+#=GF SQ   6
+
+
+AL591973.1/31997-32107       UAAUAUAGAACUUGUAAGCAAGGAAUACAAUUAGUUUUACUCCCUUUUUGCUAAUUGUAAACUUCCUUAAAAUCCUAAACUCCCUUUUUUGGACCGACUUGAUUGUCGGUC
+AM263198.1/32814-32923       UAAUAUAGAACUUGUAAGCAAGGAACACAAUUAGUUUUACUCCCUUUUUGCUAAUUGUAGAAUUCCUUAAAAUCCUAAACUCCCUU-UUUGGACCGACUUGAUUGUCGGUC
+AE017262.2/34076-34185       UAAUAUAGAACUUGUAAGCAAGGAAUACAAUUAGUUUUACUCCCUUUUUGCUAAUUGUAGAAUUCCUUAAAAUCCUAAACUCCCUU-UUUGGACCGACUUGAUUGUCGGUC
+EU073162.1/361-470           UAAUAUAGAACUUGUAAGCAAGGAAUACAAUUAGUUUUACUCCCUUUUUGCUAAUUGUAGAAUUCCUUAAAAUCCUAAACUCCCUU-UUUGGACCGACUUGAUUGUCGGUC
+CP002002.1/31999-32109       UAAUAUAGAACCUGUAAGCAAGGAAUACAAUUAGUUUUACUCCCUUUUUGCUAAUUGUAAACUUCCUUAAAAUCCUAAACUCCCUUUUUUGGACCGACUUGAUUGUCGGUC
+AARN04000001.1/298123-298233 UAAUAUAGAACUUGUAAGCAAGGAAUACAAUUAGUUUUACUCCCUUUUUGCUAAUUGUAAACUUCCUUAAAAUCCUAAACUCCCUUUUUUGGAUCGACUUGAUUGUCGGUC
+#=GC SS_cons                 :::::::::::::::::::<<<<<<<<<<<<<<<<______________>>>>>>>>>>--->>>>>>-----------------------<<<<<<<______>>>>>>>
+#=GC RF                      UAAUAUAGAACUUGUAAGCaaGGaauaCaauuaGuUUUACUCCCUUUUUgCuaauuGuaaAauuCCuuAAAAUCCUAAACUCCCUUUUUUGGacCGaCUUGAUUGuCGguC
+//

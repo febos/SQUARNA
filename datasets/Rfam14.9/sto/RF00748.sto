@@ -1,0 +1,80 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00748
+#=GF ID   mir-433
+#=GF DE   mir-433 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   70.00
+#=GF TC   81.90
+#=GF NC   44.80
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000177;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF DR   GO; 0071222; cellular response to lipopolysaccharide;
+#=GF DR   GO; 0060291; long-term synaptic potentiation;
+#=GF DR   GO; 1990830; cellular response to leukemia inhibitory factor;
+#=GF RN   [1]
+#=GF RM   19758457
+#=GF RT   Characterization of bovine miRNAs by sequencing and bioinformatics
+#=GF RT   analysis.
+#=GF RA   Jin W, Grant JR, Stothard P, Moore SS, Guan LL
+#=GF RL   BMC Mol Biol. 2009;10:90.
+#=GF RN   [2]
+#=GF RM   15891114
+#=GF RT   Clustering and conservation patterns of human microRNAs.
+#=GF RA   Altuvia Y, Landgraf P, Lithwick G, Elefant N, Pfeffer S, Aravin A,
+#=GF RA   Brownstein MJ, Tuschl T, Margalit H
+#=GF RL   Nucleic Acids Res. 2005;33:2697-2706.
+#=GF RN   [3]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [4]
+#=GF RM   19784364
+#=GF RT   Ago2 immunoprecipitation identifies predicted microRNAs in human embryonic
+#=GF RT   stem cells and neural precursors.
+#=GF RA   Goff LA, Davila J, Swerdel MR, Moore JC, Cohen RI, Wu H, Sun YE, Hart RP
+#=GF RL   PLoS One. 2009;4:e7192.
+#=GF RN   [5]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-433 imported
+#=GF CC   from miRBase.
+#=GF WK   Mir-433
+#=GF SQ   12
+
+
+URS000021534B_10090/4-96  CCGGGGAGAAGUACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS000075AA61_9796/4-96   CCGGGGAGAAGUACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUAAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS0000688CFC_9606/1-93   CCGGGGAGAAGUACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS00006D3088_9544/1-93   CCAGGGAGAAGUACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS00007E48E8_9615/1-74   -----------UACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGU--------
+URS000075D3F0_9598/1-92   -CGGGGAGAAGUACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS000075DDCC_9593/8-100  CCGGGGAGAAGUACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS0000688CFC_9600/1-93   CCGGGGAGAAGUACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS0000688CFC_10116/1-93  CCGGGGAGAAGUACGGUGAGCCUGUCAUUAUUCAGAGAGGCUAGAUCCUCUGUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS00003C3627_9940/10-102 CCGGGGAGAAGUACGGUGAGCCUGUCAUUGUUCAGAGAGGCUAGAUCCUCCUUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS00007E36D6_9925/10-102 CCGGGGAGAAGUACGGUGAGCCUGUCAUUGUUCAGAGAGGCUAGAUCCUCCUUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+URS000075C6BA_9913/4-96   CCGGGGAGAAGUACGGUGAGCCUGUCAUUGUUCAGAGAGGCUAGAUCCUCCUUGUUGAGAAGGAUCAUGAUGGGCUCCUCGGUGUUCUCCAGG
+#=GC SS_cons              <<--<<<<<<---<<<-<<<<<<<<<<<-<<<<<--<<<<______>>>>-->>-------->>>->>>>>>>>>>>->>>--->>>>>>->>
+#=GC RF                   cCgGGGaGaaGUACGgUGaGCCcguCauUaucCaGAGaGGCUAGAUCCuCuguGUUGAGAAGgauCauGacgGGCuCCcCGGUGuuCuCCAGg
+//

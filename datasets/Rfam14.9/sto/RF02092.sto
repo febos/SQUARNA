@@ -1,0 +1,58 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02092
+#=GF ID   mir-2970
+#=GF DE   mir-2970 microRNA precursor
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   72.00
+#=GF TC   77.00
+#=GF NC   71.50
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 77.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   21627805
+#=GF RT   Song exposure regulates known and novel microRNAs in the zebra finch
+#=GF RT   auditory forebrain.
+#=GF RA   Gunaratne PH, Lin YC, Benham AL, Drnevich J, Coarfa C, Tennakoon JB,
+#=GF RA   Creighton CJ, Kim JH, Milosavljevic A, Watson M, Griffiths-Jones S,
+#=GF RA   Clayton DF
+#=GF RL   BMC Genomics. 2011;12:277.
+#=GF RN   [2]
+#=GF RM   20360741
+#=GF RT   The genome of a songbird.
+#=GF RA   Warren WC, Clayton DF, Ellegren H, Arnold AP, Hillier LW, Kunstner A,
+#=GF RA   Searle S, White S, Vilella AJ, Fairley S, Heger A, Kong L, Ponting CP,
+#=GF RA   Jarvis ED, Mello CV, Minx P, Lovell P, Velho TA, Ferris M, Balakrishnan
+#=GF RA   CN, Sinha S, Blatti C, London SE, Li Y, Lin YC, George J, Sweedler J,
+#=GF RA   Southey B, Gunaratne P, Watson M, Nam K, Backstrom N, Smeds L, Nabholz B,
+#=GF RA   Itoh Y, Whitney O, Pfenning AR, Howard J, Volker M, Skinner BM, Griffin
+#=GF RA   DK, Ye L, McLaren WM, Flicek P, Quesada V, Velasco G, Lopez-Otin C, Puente
+#=GF RA   XS, Olender T, Lancet D, Smit AF, Hubley R, Konkel MK, Walker JA, Batzer
+#=GF RA   MA, Gu W, Pollock DD, Chen L, Cheng Z, Eichler EE, Stapley J, Slate J,
+#=GF RA   Ekblom R, Birkhead T, Burke T, Burt D, Scharff C, Adam I, Richard H,
+#=GF RA   Sultan M, Soldatov A, Lehrach H, Edwards SV, Yang SP, Li X, Graves T,
+#=GF RA   Fulton L, Nelson J, Chinwalla A, Hou S, Mardis ER, Wilson RK
+#=GF RL   Nature. 2010;464:757-762.
+#=GF RN   [3]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+URS00007E3DDD_28377/7-86   GUCACUGCAGACAGUCAGUAGUUGGUCUGGCAUAAGCAGAAAGUUUCAGAUCACCUCUUGGCUGUGAGUAGUGUGGAGCC
+URS0000D52A2E_8665/1-80    AUCACUGCUGACAGUCAGUAGUUGGUCUGGGGUAAGCAGGAAAUCUCAGAUCAUCUCUUGACUGUGGAUGGUGUAGGGGA
+URS00007E3CFA_13616/1-59   ---------GACAGUCAGUAGUUGGUCUGGUGUGAGCAGGAAUUCUCAGAUCACCUCUUGGCUGUGAG------------
+URS000075BD6A_59729/41-120 UGCCCUGCGGACAGUCAGCAGUUGGUCUGGUGUGAGCAGCAAUUCUCAGAUCACCUCUUGGCUGUGGGUGGUGCAGGGAG
+#=GC SS_cons               ::<<<<<<--<<<<<<<<-<<-<<<<<<<<_______________>>>>>>>>->>->>>>>>>>-->>>>>>:::::::
+#=GC RF                    auCaCcgcaGACAGuCAgUAGUUGgUCUGgugUaAGCAGaAAuUcuCAGAuCAcCUCuUGgCUGUGagugGuGuaGgGaa
+//

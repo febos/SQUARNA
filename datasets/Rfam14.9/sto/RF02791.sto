@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02791
+#=GF ID   CcsR1
+#=GF DE   Conserved CCUCCUCCC motif stress-induced RNA 1
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; 25777678;
+#=GF GA   65.30
+#=GF TC   65.30
+#=GF NC   65.00
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 605271.01655 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF DR   GO; 0080183; response to photooxidative stress;
+#=GF RN   [1]
+#=GF RM   25777678
+#=GF RT   A cluster of four homologous small RNAs modulates C1 metabolism and the
+#=GF RT   pyruvate  dehydrogenase complex in Rhodobacter sphaeroides under various
+#=GF RT   stress conditions.
+#=GF RA   Billenkamp F, Peng T, Berghoff BA, Klug G
+#=GF RL   J Bacteriol. 2015;197:1839-1852.
+#=GF CC   A cluster of four homologous sRNAs called CcsR 1-4 has been shown to play
+#=GF CC   a role in photo-oxidative stress resistance.
+#=GF WK   Rhodobacter_sphaeroides
+#=GF SQ   2
+
+
+
+CP000143.2/692456-692374   GUUUCCUGCGAGGUCCCACCUCCUCCCGGGACCUGUAGCAGCAGCGGCGACGCCUCUCCUCCUCCCUGGUGUCGCCGUCCUUU
+ACYY01000023.1/29669-29587 GUUUCUUGCUGAACCCCACCUCCUCCCGGGGUUUCUGGCAAACGCGGCGGCACUGAUCCUCCUCCCCAGUGCCGCCGCAGCUU
+#=GC SS_cons               ::::::<<<-<<<<<<<__________>>>>>>>>>>-------<<<<<<<<<<_____________>>>>>>>>>>::::::
+#=GC RF                    GUUUCuugcuaggcCCCACCUCCUCCCGGGgccuguaGCAaaaGCGGCGgCaCcuaUCCUCCUCCCugGuGcCGCCGuaguUU
+//

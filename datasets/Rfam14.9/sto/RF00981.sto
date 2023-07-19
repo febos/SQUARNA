@@ -1,0 +1,52 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00981
+#=GF ID   mir-939
+#=GF DE   microRNA mir-939
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   84.00
+#=GF TC   84.20
+#=GF NC   55.20
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000490;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17616659
+#=GF RT   Patterns of known and novel small RNAs in human cervical cancer.
+#=GF RA   Lui WO, Pourmand N, Patterson BK, Fire A
+#=GF RL   Cancer Res. 2007;67:6031-6043.
+#=GF RN   [2]
+#=GF RM   18186931
+#=GF RT   Identification of novel homologous microRNA genes in the rhesus macaque
+#=GF RT   genome.
+#=GF RA   Yue J, Sheng Y, Orwig KE
+#=GF RL   BMC Genomics. 2008;9:8.
+#=GF RN   [3]
+#=GF RM   20214803
+#=GF RT   Genome-wide comparative analysis of microRNAs in three non-human primates.
+#=GF RA   Brameier M
+#=GF RL   BMC Res Notes. 2010;3:64.
+#=GF RN   [4]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   Mir-939_microRNA_precursor_family
+#=GF SQ   4
+
+
+URS000066A147_9544/1-83 UGUGGGCAGGGCCCUGGGGAGCUGAGGCUCUGGGGGUGGCCGGGGCUGACCCCUGGGCCUCUGCUCCCCAGUGUCUGACCGUG
+URS000075A4CC_9598/1-81 UGUGGGCAGGGCCCUGGGGAGCUGAGGCUCUGGGGGUGGCCGGGGCUGACCC-UGGGCCUCUGCUCCCCAGUGUCUGACCGC-
+URS000069D7BD_9606/1-82 UGUGGGCAGGGCCCUGGGGAGCUGAGGCUCUGGGGGUGGCCGGGGCUGACCC-UGGGCCUCUGCUCCCCAGUGUCUGACCGCG
+URS00006F5081_9600/1-80 UGUGG-CAGGGUC-UGGGGAGCUGAGGCUCUGGGAGUGGCCGGAGCUGACUC-UGGGCCUCUGCUCCCCAGUGUCUGACCGCG
+#=GC SS_cons            :<<<<---<<<<-<<<<<<<<<-<<<<<<<--<<<<<<<<____>>>->>>>.>>>>>>>>->>>>>>>>>->>>>-->>>>:
+#=GC RF                 UgcGGGCAgGgcCcuGGGGaGCUGaGGCcCUGgGgGugGCCGGgGCcGaCcC.cGgGCCuCUGCuCCCCagUgcCcGACCgcG
+//

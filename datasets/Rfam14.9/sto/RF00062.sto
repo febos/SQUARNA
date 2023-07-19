@@ -1,0 +1,39 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00062
+#=GF ID   HgcC
+#=GF DE   HgcC family RNA
+#=GF AU   Bateman A; 0000-0002-6982-4660
+#=GF SE   Bateman A
+#=GF SS   Predicted; RNAalifold
+#=GF GA   50.00
+#=GF TC   77.50
+#=GF NC   48.60
+#=GF TP   Gene;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 0 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000655; ncRNA;
+#=GF RN   [1]
+#=GF RM   12032319
+#=GF RT   Noncoding RNA genes identified in AT-rich hyperthermophiles.
+#=GF RA   Klein RJ, Misulovin Z, Eddy SR
+#=GF RL   Proc Natl Acad Sci U S A 2002;99:7542-7547.
+#=GF CC   The HgcC ncRNA gene was identified computationally in AT-rich
+#=GF CC   hyperthermophiles. The genes were named hgcA through hgcG ("high GC").
+#=GF CC   HgcC is of unknown function. Two other homologues were detected called
+#=GF CC   HhcA and HhcB after "homologue of hgcC" [1]. This family contains a large
+#=GF CC   number of putative archaeal matches to the 3' end of the known ncRNAs.
+#=GF CC   Many of these partly overlap coding regions.
+#=GF WK   HgcC_family_RNA
+#=GF SQ   5
+
+
+AF468965.1/1-126         GAGGGUAGCUCUGACUCUGCCCG-----AUGAC---ACCAACCUGCCCUGUGACCUAUCGGCGACGAUAAGUAGCAGGGUGUU---------------------------------------CCGUGUUGGAACCUCCACCCUUUAGGU-GGAGAGAAGAUCAG---UUAAAAUUCC
+AF447577.1/1-129         GAGGGCUG-UCUGACCCAGCCCG-----AUGAG---CUGAACCUGCCCUGUGACCUACCGGCGACGGUAGGGAGAAGGGUGUU---------------------------------------CCCCGUGGGAACCUCCGAGCUUUAGCUCGGAGAGGAGGUCAGCUUUUAACAUUUC
+AF468966.1/1-127         GAGGGUGCCUCUGACCGUGCCCG-----AUGAC---ACCAACCUGCCCAAUGAAGCACGGGCGACCGUGGGGA---GGGUGUU---------------------------------------CCCUGUGGGAACCCUCGCCAUUCACGGCGAGGAGGAGGUCAGCUCCUCCACGUUC
+L77117.1/951852-951980   GAGGGCUG-UCUGACCCAGCCCG-----AUGAG---CUGAACCUGCCCUGUGACCUACCGGCGACGGUAGGGAGAAGGGUGUU---------------------------------------CCCCGUGGGAACCUCCGAGCUUUAGCUCGGAGAGGAGGUCAGCUUUUAACAUUUC
+AE009950.1/754818-754978 GUGGUCUUUAC-GCCCAAGGGAGGGGUAAUGGGCCUGAGACCGGGCCC-UCGGGC------CGAAC---CGAAACC-GGUG--ACGGGAGUAGGUGGAUGAGAGCCCGCAAACCUCUCCCCGCCC-GUUGAAAGCCUCGCCCUUCAAGGCGGGGAGGAGGUCAGGAGG-AGAUAACC
+#=GC SS_cons             ::<<<<<<________>>>>>>,:::::,,,,,:::,,,,,,,,<<<<<------<<<<<____>>>>>------>>>>><<<---------------------------------------<<_____>>>>><<<<<<<<____>>>>>>>>:::::::::::::::::::::::
+#=GC RF                  GagGgcuguuCUGaCccagcCcG.....AUGAg...augAaCcugCCCugUGAccuaccGGCGACgguagGgAgaaGGGuGuu.......................................CCcuGUuGGaaCCccCGcccUUuAgggCGggGAGGAGGUCAGcuuuUAaaauuuC
+//

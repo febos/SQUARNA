@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02861
+#=GF ID   IR_84
+#=GF DE   Neisseria sRNA 84
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   51.00
+#=GF TC   51.50
+#=GF NC   50.20
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   27486197
+#=GF RT   Comprehensive Identification of Meningococcal Genes and Small Noncoding
+#=GF RT   RNAs Required for Host Cell Colonization.
+#=GF RA   Capel E, Zomer AL, Nussbaumer T, Bole C, Izac B, Frapy E, Meyer J,
+#=GF RA   Bouzinba-Segard H, Bille E, Jamet A, Cavau A, Letourneur F, Bourdoulous S,
+#=GF RA   Rattei T, Nassif X, Coureuil M
+#=GF RL   MBio. 2016; [Epub ahead of print]
+#=GF WK   Neisseria_meningitidis
+#=GF SQ   3
+
+
+
+AE002098.2/2021833-2022018 CAACGUG-------CAAAAAAAACCAUUCAUACCAAGGGU-AAGUAUGAAUGGUCAAUACAUUGCGGGAAAACGUCUUACUUGCUGCACUGCCGAAAAGGGA-GAAACGGCAGCGGUA-AUCAGCGGAAAGGAUUGUACCCGAAUUAAUAUUAAGAAACGUUAAUCGCGAAAAUAUAUUAACAAACCUGU-UGAAAC
+AE004969.1/2138417-2138232 CAACGCG-------CAAAAAAAACCAUUCAUACCAAGGGU-AAGUAUGAAUGGUCAAUACAUUGCGGGAAAACAUCUUACUUGCUGCACUGCCGAAAAGGGA-GAAACGGCAGCGUUA-ACCAGCAA-AAGCAUUGUACCUUUAUUAAUGUUAAAAAACAUUAAUUUUGAAAAUAUAUUAACGAAUAUAUCUGGAAC
+GL635794.1/300572-300765   CUGUUUUUGCAGAUAAAA-AAAACCAUUCAUACUAAGGGAGAAGUAUGAAUGGCCAAUACAUUGCGGGAAAACGUCUUACUUGCUGCACCGCCCAAAAGGGAUGAAAGAGCGGUGUUGUGUCAGCAAUUGGUAUUCUACCGUUUUUAGUAUUAAAUGCUGUUAAGAA-GUGAAAUUAUUUCAAUAAGUUG-CAAGAU
+#=GC SS_cons               :::((((.......,,,,,,,,<<<<<<<<<<<_______.__>>>>>>>>>>>,,,,,,,,,,<<<<---<<<<<<<--<<<<<<<-<<<<<<________.____>>>>>>->---.-->>>>>>-->>>>->>>->>>>,<<<<<<<<<____>>>>>>>>>))))--------<<<<<<____>>>.>>>:::
+#=GC RF                    Caacgcg.......aAAAAAAAaCCauuCauaCcAAGGGu.AAGuauGaauGGuCAAUACAUUGcgGGAAAacgucuuACuuGCuGCACcGCcgAAAAGGGA.GAAAcgGCgGcGuUa.auCaGCaauaaggaUcguACCcguauuaacguuAAaaaacguuaaucgcgaaAAuaUAucgccaaAuaugg.cgaaAc
+//

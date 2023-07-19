@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03926
+#=GF ID   MIR1435
+#=GF DE   MIR1435 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   94.00
+#=GF TC   94.00
+#=GF NC   93.90
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000760;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor MIR1435 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   3
+
+
+URS0000219D17_4530/1-183  ---ACUUUUCUUAAGUCAAACUUUUUUUUAGAUUUGAUCAA---AUUUAUAAAAAA-AAU--AUAGCAAUAUUUUUAGAAAAA-----------------AAUAUGUUCAAUAUUAAAUGUAAUGAAACUAAUUUGGUGCUAUAACUGUUUUUAUAUUUUUCUAUAAUAAAUUUGAUUAAACUUUGAAGUAGUUUGACUUAAAAAAAGU----
+URS0000D52ECD_4558/56-253 UAGCUUUUUCUUAAGUCAAACUUUUCU---AAUUUUGACAA---UUUUAGAAAAUA-UAUUAACAUCUACAAGUUCAAAUAAAUGCAAUACCAACUACCAAACAUAUUUCAUGGAGGAUUUAAUGAAACAAACUUGAUGUUGUAGAUGUUGAUGCAUCUUUCUGU---AAACUUGGUCAAA-----GAUAAGUUUGACUUAGGAAAAACUAAA
+URS0000D50723_4558/56-234 UAAAGUUUUCUUAAGUCAAACCUUUUA---AAGUUUAACAAAAUUUAUAGAAAAGAGCACCAAAAUUUAUG-GCACUAGUAUA------------------AAAUGUU--------GUCAUAAU-AUGCUGAUUUGGUAUCAUAAAUACUUGUGCUCUUUUCUAC---AAAUUCAAUCAAACGUAAAAAAAGUUUUGAUUUAAAAUAACUCUA
+#=GC SS_cons              ::::<<<<<-<<<<<<<<<<<<<<<<-...---<<<<<---...---<<<<<<<<-.<<<-<<<<<<<<<<---<<<<<<___................._______________________________>>>>>>--->>>>>>>>>>->>>-->>>>>>>>-...-------->>>>>----->>>>>>>>>>>>>>>>->>>>>:::::
+#=GC RF                   UAaacUuUUCuuAAgucAAACuuuUuu...aAuUUugaCAA...uUuuAgAAAagA.cAcuaacAucuAugaguucaaguAaA.................AAuAUgUUuaAUauaagauaUAAUGAaaCuaacuugaUgucaUagaUguuugUgcacuUUUcUau...AAAuUugaucaAACuUaaaAaaaGUUUgacUUaaaAAaAgcUaaA
+//

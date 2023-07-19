@@ -1,0 +1,37 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00262
+#=GF ID   sar
+#=GF DE   sar RNA
+#=GF AU   Bateman A; 0000-0002-6982-4660
+#=GF SE   Pubmed:9042942, INFERNAL
+#=GF SS   Predicted; RNAalifold; Daub J
+#=GF GA   43.00
+#=GF TC   44.80
+#=GF NC   40.90
+#=GF TP   Gene; antisense;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 23 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000644; antisense_RNA;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF RN   [1]
+#=GF RM   9042942
+#=GF RT   Antisense RNA control of gene expression in bacteriophage P22. I.
+#=GF RT   Structures of sar RNA and its target, ant mRNA.
+#=GF RA   Schaefer KL, McClure WR
+#=GF RL   RNA 1997;3:141-156.
+#=GF CC   Sar RNA is an antisense RNA that is partly responsible for the negative
+#=GF CC   regulation of antirepressor synthesis during development of bacteriophage
+#=GF CC   P22 [1].
+#=GF WK   sar_RNA
+#=GF SQ   4
+
+
+AF527608.1/15090-15023 GUUGGUUUUUCUCCAAGGAUUUACUGACAACCGAAGCCCUGACUGUUACCGCGGUUGGGGCUUCAACU
+X01916.1/599-532       GUUGGUUUUUCUCCAAGGAUUUACUGACAACCGAAGCCCUGACUGUUACCGCAGUUGGGGCUUCAACU
+AY121861.1/1816-1749   GUUGGUUUUUCUCCAAGGAUUUACUGACAACCGAAGCCCUGACUGUUACCGCAGUUGGGGCUUCAACU
+CP000711.1/6497-6564   UCGUUAAUUCCUAUGCGUGGUUUUACGAUACCGAAGCCCUGACUGUUCCCGCAGUUGGGGCUUCAACU
+#=GC SS_cons           <<<<<<________________>>>>>>----<<<<<<<<<<<<<<____>>>>>>>>>>>>>>::::
+#=GC RF                guggguuUUuCUccAaGgAuUUacucacaACCGAAGCCCUGACuGUUaCCGCaGUUGGGGCUUCAACU
+//

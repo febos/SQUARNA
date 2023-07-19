@@ -1,0 +1,41 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01409
+#=GF ID   STnc250
+#=GF PI   ypfM_ORF
+#=GF DE   STnc250 Hfq binding RNA
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF SE   Predicted; WAR; Infernal
+#=GF SS   Predicted; WAR
+#=GF GA   42.00
+#=GF TC   42.20
+#=GF NC   39.90
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   18725932
+#=GF RT   Deep sequencing analysis of small noncoding RNA and mRNA targets of the
+#=GF RT   global post-transcriptional regulator, Hfq.
+#=GF RA   Sittka A, Lucchini S, Papenfort K, Sharma CM, Rolle K, Binnewies TT,
+#=GF RA   Hinton JC, Vogel J
+#=GF RL   PLoS Genet. 2008;4:e1000163.
+#=GF RN   [2]
+#=GF RM   17971080
+#=GF RT   A small non-coding RNA of the invasion gene island (SPI-1) represses outer
+#=GF RT   membrane protein synthesis from the Salmonella core genome.
+#=GF RA   Pfeiffer V, Sittka A, Tomer R, Tedin K, Brinkmann V, Vogel J
+#=GF RL   Mol Microbiol. 2007;66:1174-1191.
+#=GF WK   Hfq_binding_sRNA
+#=GF SQ   3
+
+
+AL627274.1/255987-255894     GAAGUCAUGCUUCGUAAAUAAAUGCCUGGAAGGCACCGCGCUCCCAUAGGGGAUAAGAAAAGGCGACUCAACGAAAGUCGCCUUUUUUGUGCCC
+CP000026.1/453883-453976     GAAGUCAUGCUUCGUAAAUAAAUGCCUGGAAAGCACCGCGCUCCCAUAGAGGAUAAGAAAAGGCGACUCAACGAAAGUCGCCUUUUUUGUGCCC
+ABEH02000006.1/327014-327107 GAAGUCAUGCUUCGUAAAUAAAUGACUGGAAGGCACCGCGCUCCCAUAGGGGAUAAGAAAAGGCGACUCAACGAAAGUCGCCUUUUUUGUGCCC
+#=GC SS_cons                 <<<<_____>>>>,,,,,,,,,<<<<_____>>>>,,,,,,<<<<____>>>>,,<<<<<<<<<<<<<_______>>>>>>>>>>>>>::::::
+#=GC RF                      GaaGUCAUGCuuCGUAAAUAAAuGccUGGAAggCaCCGCGCuCCcAUAGgGGaUAagaaaaGGCGaCuCAACGAAaGuCGCCuuuuuuGUGCCC
+//

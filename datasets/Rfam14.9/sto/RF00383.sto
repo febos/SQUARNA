@@ -1,0 +1,39 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00383
+#=GF ID   IS1222_FSE
+#=GF DE   Insertion sequence IS1222 ribosomal frameshifting element
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   PMID:15126494
+#=GF SS   Published; PMID:15126494
+#=GF GA   45.00
+#=GF TC   45.30
+#=GF NC   39.00
+#=GF TP   Cis-reg; frameshift_element;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000233; mature_transcript;
+#=GF DR   GO; 0006452; translational frameshifting;
+#=GF RN   [1]
+#=GF RM   15126494
+#=GF RT   -1 frameshifting at a CGA AAG hexanucleotide site is required for
+#=GF RT   transposition of insertion sequence IS1222.
+#=GF RA   Mejlhede N, Licznar P, Prere MF, Wills NM, Gesteland RF, Atkins JF, Fayet
+#=GF RA   O
+#=GF RL   J Bacteriol 2004;186:3274-3277.
+#=GF CC   This family represents the insertion sequence IS1222 ribosomal
+#=GF CC   frameshifting element. The element stimulates frameshifting which is known
+#=GF CC   to be required for transposition [1].
+#=GF WK   Insertion_sequence_IS1222_ribosomal_frameshifting_element
+#=GF SQ   5
+
+
+X78052.1/454-571         GGCGCUUCAGGUGGCUCUUGGGCGAAAGUACUGACGACAGACCAGAAGCGGGAAGCCGUGAUGUUGAUAUGUGAUGCGACCGGUCUGUCGCAACGUCGUGCCUGCAGGCUCACAGGUU
+AY378100.1/192650-192767 GGCACUUCAGGUGGCUCUGGGGCGAAAGUACUGACGACAGACCAGAAGCGGGAAGCCGUUGAGUUUAUGUGUGAUGCGACCGGUCUGUCGCAACGUCGUGCCUGCAGGCUUACAGGUU
+AF324174.1/302-419       GGCGCUUCAGGUGGCUCUGGGUCGAAAGUUCUGACGACAGACCAGAAGCGGGAAGCCGUGGACGUCAUGUGUGAGGUCGCCGGUCUGUCGCAACGUCGUGCCUGCAGGCUGGCAGGUC
+AY528232.1/302-419       GGCGCUUCAGGUGGCUCUGGGGCGAAAGUACUGACGACAGACCAGAAGCGGGAAGCCGUGAUGUUGAUGUGUGAUGCGACCGGUCUGUCGCAACGUCGUGCCUGCAGGCUUACAGGUU
+AJ414030.1/131-14        GGCGCUUCAGGUGGCUCUUGGGCGAAAGUACUGACGACAGACCAGAAGCGGGAAGCCGUGAUGUUGAUGUGUGAUGCGACCGGUCUGUCGCAACGUCGUGCCUGCAGGCUAACAGGUU
+#=GC SS_cons             ::::::::::::::::::::::::::::::::::(((((((((,,,,<<<<____>>>>,,,<<<<__________>>>>,)))))))))::::::::::::::::::::::::::::
+#=GC RF                  GGCgCUUCAGGUGGCUCUgGGgCGAAAGUaCUGACGaCaGaCCAGAAgCGGGAAGCCGugauGucgAUgUGUGAuGcgaCCGGuCuGuCGCAACGUCGUGCCUGCAGGCUuACAGGUu
+//

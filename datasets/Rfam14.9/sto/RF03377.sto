@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03377
+#=GF ID   mir-960
+#=GF DE   mir-960 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   100.00
+#=GF TC   114.10
+#=GF NC   84.70
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000897;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0060259; regulation of feeding behavior;
+#=GF DR   GO; 0006955; immune response;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-960 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   2
+
+
+URS000048DF54_7227/1-93 GGGUUUUGUACCACAUUCUGAGUAUUCCAGAUUGCAUAGCUUUGUGCUACUAUUGCUAUACGGUCUGGGACACUUUUAACAUGGUAUCAAAUC
+URS0000D50A27_7240/2-94 GGGUUUUGUACCACAUUCAGAGUAUUCCAGGUUGCAUAGCUUUGUGCUACUAUUGCUGUACGAUCUGGGACACUUUUAACAUGGUAUCAAAUC
+#=GC SS_cons            :<<<<<-<<<<<<--<<--<<<<-<<<<<<<<<<-<<<<<--<<______>>-->>>>>->>>>>>>>>>->>>>-->>-->>>>>>->>>>>
+#=GC RF                 GGguuuUguaCCaCAuuCagaGuAucCCaGgccGCacaGCUUugUGCUACcaUUGCuguACggcCuGGgaCaCucUUaaCAuGGuacCaaacC
+//

@@ -1,0 +1,84 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00766
+#=GF ID   mir-335
+#=GF DE   microRNA mir-335
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   64.00
+#=GF TC   64.70
+#=GF NC   63.60
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000196;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [2]
+#=GF RM   20215419
+#=GF RT   MicroRNA transcriptome in the newborn mouse ovaries determined by massive
+#=GF RT   parallel sequencing.
+#=GF RA   Ahn HW, Morin RD, Zhao H, Harris RA, Coarfa C, Chen ZJ, Milosavljevic A,
+#=GF RA   Marra MA, Rajkovic A
+#=GF RL   Mol Hum Reprod. 2010;16:463-471.
+#=GF RN   [3]
+#=GF RM   20413612
+#=GF RT   Mammalian microRNAs: experimental evaluation of novel and previously
+#=GF RT   annotated genes.
+#=GF RA   Chiang HR, Schoenfeld LW, Ruby JG, Auyeung VC, Spies N, Baek D, Johnston
+#=GF RA   WK, Russ C, Luo S, Babiarz JE, Blelloch R, Schroth GP, Nusbaum C, Bartel
+#=GF RA   DP
+#=GF RL   Genes Dev. 2010;24:992-1009.
+#=GF RN   [4]
+#=GF RM   17616659
+#=GF RT   Patterns of known and novel small RNAs in human cervical cancer.
+#=GF RA   Lui WO, Pourmand N, Patterson BK, Fire A
+#=GF RL   Cancer Res. 2007;67:6031-6043.
+#=GF RN   [5]
+#=GF RM   19267191
+#=GF RT   Identification and characteristics of cattle microRNAs by homology
+#=GF RT   searching and small RNA cloning.
+#=GF RA   Long JE, Chen HX
+#=GF RL   Biochem Genet. 2009;47:329-343.
+#=GF RN   [6]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   MicroRNA
+#=GF SQ   14
+
+
+URS000063D0D0_9606/3-94   UUUUGAGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUUUGCUAUAUUCA
+URS000075E07A_9598/2-93   UUUUGAGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUUUGCUAUAUUCA
+URS0000A9760C_9600/1-92   UUUUGAGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUUUGCUAUAUUCA
+URS000075B372_9544/1-88   ----GAGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUUUGCUAUAUUCA
+URS000075D3D3_9593/8-99   AUUUGAGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUUUGCUAUAUUCA
+URS000075D6E6_9796/1-75   ----GAGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCA-------------
+URS00007E4724_246437/1-58 -------------UCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACC---------------------
+URS00007E4466_9925/2-92   UUUUGGGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUUUGCUGUAUUC-
+URS000075F08A_9913/1-92   UUUUGGGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUUUGCUGUACUCA
+URS00007E4724_9615/1-58   -------------UCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACC---------------------
+URS000075B910_9823/2-80   UUUUGGGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCA-------------
+URS0000664515_10116/3-98  UUUUGGGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGUUUUUCGUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUUUGUUAUAGCCA
+URS0000710A73_10090/3-98  UUUUGGGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGUUUUUCGUAAACCGUUUUUCAUUAUUGCUCCUGACCCCCUCUCAUGGGUUAUAGCCA
+URS0000D50880_29078/1-78  ---UGGGCGGGGGUCAAGAGCAAUAACGAAAAAUGUUUGU----CAUAAACCGUUUUUCAUUAUUGCUCCUGACCUCCUCUCAUU-----------
+#=GC SS_cons              ::::<<<-<<<<<<<<-<<<<<<<<<-<<<<<<<<<<<<<...._>>>>>->>>>>>>>->>>>>>>>>->>>>>>>>->>>::::::::::::::
+#=GC RF                   uUUUGgGCGGgGGuCaAGaGCaauaaCGaaaaauGuuugu....CauaaaCCguuuuuCAuuauuGCuCCuGaCCcCCUCcCAUuuGcUaUAuucA
+//

@@ -1,0 +1,43 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03123
+#=GF ID   gCoV-3UTR
+#=GF DE   Gammacoronavirus 3'UTR
+#=GF AU   Lamkiewicz K; 0000-0002-6375-6441
+#=GF SE   Lamkiewicz K
+#=GF SS   Predicted;
+#=GF GA   175.80
+#=GF TC   175.80
+#=GF NC   50.50
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 765380.351698 CM SEQDB
+#=GF CL   CL00117
+#=GF DR   GO; 0039694; viral RNA genome replication;
+#=GF DR   SO; 0000205; three_prime_UTR;
+#=GF DR   SO; 0001201; positive_sense_ssRNA_viral_sequence;
+#=GF RN   [1]
+#=GF RM   25736566
+#=GF RT   The structure and functions of coronavirus genomic 3' and 5' ends.
+#=GF RA   Yang D, Leibowitz JL
+#=GF RL   Virus Res. 2015;206:120-133.
+#=GF RN   [2]
+#=GF RM   25307890
+#=GF RT   RNA structure analysis of alphacoronavirus terminal genome regions.
+#=GF RA   Madhugiri R, Fricke M, Marz M, Ziebuhr J
+#=GF RL   Virus Res. 2014;194:76-89.
+#=GF CC   In gammacoronaviruses a stem-loop located at the 3' UTR is observed, which
+#=GF CC   is vital for viral replication. Even though a nearby pseudoknot structure,
+#=GF CC   which has been observed in other genera of coronaviruses, is present, its
+#=GF CC   functional importance has not been established yet.
+#=GF WK   Coronavirus_3'_UTR
+#=GF SQ   3
+
+
+NC_001451.1/27333-27607 -AUUACCUACAUGUCUAUCGCCAGGGAAAUGUCUAAUCUGUCUACUUAGUAGCCUGGAAACGAACGGUAGACCCUUAGAUUUUAAUUUAGUUUAAUUUUUAGUUUAGUUUAAG-UUAGUUUAGAGUAGGUAUAAAGAUGCCAGUGCCGGGGCCACGCGGAGUACGAUCGAGG--GUACAGCACUAGGACG----CCCAUUAGGGGAAGAGCUAAAUUUUAGUUUA---AGUUAAGUUUAAUUGGCUAAGUAUAGUUAAA-AUUUAUAGGCUAGUAUAGAGUUAGAGC
+NC_010800.1/27357-27632 UAGCACCUACAUGUCUAUCGCCAGGGAAAUGUCUAAUCUGUCUACUUAGUAGCCUGGAAACGAACGGUAGACCCUUAGAUUUUAAUUUAGUUUAAUUUUUAGUUUAGUUUAAG-UUAGUUUAGAGUAGGUGUAAAGAUGCCAGUGCCGGGGCCACGCGGAGUACGAUCGAGG--GUACAGCACAAGGACG----CCCAUUAGGGGAAGAGCUAAAUUUUAGUUUA---AGUUAAGUUUAAUUGGCUAAGUAUAGUUAAA-AUUUAUAGGCUAGUAUAGAGUUAGAGC
+NC_010646.1/31386-31654 --AUACGUUCGCGUCUGUAGGUUUUG---------CGUUGUCUACUGCUUGGAGAAUCAGCAAUUUGUCAUCUUAUAGCCAAGAGUACGAAGGAUGACACGGUUUAUUAUGAAAGAAUUUCACCAAAAAU-UGAUUACGCCUUAGGCUAGACUAGGUCCAA-AGAAUCCAGUGAGAGAAGCCCUGCAAUGUAAAUCCAUUGGGGAAAGAGUUAGAAAAGAUUGUAAUUAUUCUAGGUGAUUGUGAAAAGUAGUUUUAAAUUUGACUA---UAGGUAAUUGUU--AGC
+#=GC SS_cons            .:((((((((,,<<<<<<<<<<<<<----------------<<<<___>>>>>>>>>------->>>>>>>>,,,,,,,,,,<<<-<<<<________>>>>->>>,<<<<<<.____>>>>>>)))))))),,,,,,,,,,<<<<-----<<-<<<<_____>>-->>->>..----->>>>,,,,,,,....<<<_____>>>,,,,<<<_______>>>,,,...<<<<<<______>>>>>>,,,<<<<<_____.__>>>>>::::::::::::::::::::
+#=GC RF                 .AacAccUacauGucuaucGccaggGAAAUGUCUAauuUGUCuAcUuagUaGccuggaAaCgAaCgguagaCuuuUAGauuuuAaUccgguuuAauuuucggUuUagucUgAa.uuAguUcAgaguAggUguaAagAuGCCaguGcCggGgccAcGcggAgUAcgAUCgAgg..GuaaAgCacuaggAuG....cCCAUUaGGGgAAGAgcUAaAuuuuAguuUA...agucaAGuUuAaUuggcuAAGUAgagUUAAA.aUcucUAGGCUAGuauAgaGUUAGAGC
+//

@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02879
+#=GF ID   MH_s10
+#=GF DE   Mesorhizobail RNA 10
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; R-scape;
+#=GF GA   81.00
+#=GF TC   81.10
+#=GF NC   39.70
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   28943874
+#=GF RT   A Genome-Wide Prediction and Identification of Intergenic Small RNAs by
+#=GF RT   Comparative Analysis in Mesorhizobium huakuii 7653R.
+#=GF RA   Fuli X, Wenlong Z, Xiao W, Jing Z, Baohai H, Zhengzheng Z, Bin-Guang M,
+#=GF RA   Youguo L
+#=GF RL   Front Microbiol. 2017;8:1730.
+#=GF CC   Existence predicted via genome wide comparisons with 4 related strains.
+#=GF CC   Analysed further by deep sequencing and Northern blot under various stress
+#=GF CC   conditions. Exhibited 2 bands. Strong signals in response to variety of
+#=GF CC   stimuli. Highly abundant in symbiotic, micro-oxygen, oxidative and salt
+#=GF CC   stress conditions. 
+#=GF WK   Mesorhizobium
+#=GF SQ   3
+
+
+
+BA000012.4/6385458-6385600         CUCGUUCGCGGCA-GCGUGCCCCGGUGCCGCCAUCAGAAGGGCCAGAAGAAUCGCCCGGCAGGCCCGGCCGGGCGGGAAAAGAAAGCGCGUCGAAGAAAAGCCCGCUGGCCCAGGAAAGCGCAUGGCGGGAAGUAUGGCCGAUA
+CP002447.1/4989891-4989749         UUCGUCGGCGGCA-GCGUGAUGCGGCGCCAGCAUCAGAAGGGCCAAAAGGAGCGCCCGGCGGAUCCGGCCGGGCGGGAAAAGAAAGCGCGUCGAUGAAAAGCCGGCUGGCCCAGGAAAGCGCAUGGCGUGAAGUAUGGCCGAUA
+CAUM01000068.1/28123-28265         CUCAUCCGC-AUACGCAUUGGCUGACGCCAGCGGCGAAAGGGCCAAAAGGAGCGCCCGACAAAUCCGGCCGGGCGAGGAAAAGAAGCGCGUCGAUGAAAAGCCUGAAGGCUCAGGAAUGCGCAUGGCGCCAAGUAUGGCCGAUA
+#=GC SS_cons                       ::<<<<<--<<<<.<-------<<<<<<---------<<____>>------>>>>>----->->->->>>>>>>>------------((((,,,,,,,,<<<<____>>>>,,,,,,,<<<<___>>>>,,,,,,)))):::::
+#=GC RF                            cUCguccGCGgca.gCgUgauccGgcGcCagCauCagaaGGGCcaaAAGgAgCgcCCGgCagacCcGgcCgggcGgGaAAAgaAAGCGCguCGAuGAAAgGCCuGcuGGCcCAGGAAagCGCAUGGCGcgAAGUAugGCCGAUA
+//

@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02642
+#=GF ID   Spy491311c
+#=GF DE   S. pyogenes small RNA Spy491311c
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   178.00
+#=GF TC   178.80
+#=GF NC   61.60
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   23062031
+#=GF RT   Identification of novel growth phase- and media-dependent small non-coding
+#=GF RT   RNAs in Streptococcus pyogenes M49 using intergenic tiling arrays.
+#=GF RA   Patenge N, Billion A, Raasch P, Normann J, Wisniewska-Kucper A, Retey J,
+#=GF RA   Boisguerin V, Hartsch T, Hain T, Kreikemeyer B
+#=GF RL   BMC Genomics. 2012;13:550.
+#=GF WK   Bacterial_small_RNA
+#=GF SQ   2
+
+
+
+CP000829.1/1321853-1321711 CUAGGAAAAAGGAUGCAAGUAUCUUAUCUAAAGCGAGUUCGGGGUAGUUAGAGCCGAAUGGUAGGACUGCAGAUUGGCGCUUCCGUUUGGGCAGUGUGAUUAAGUAUAUUUGUCAAUAUUGCCCAAAAAGAUACUAUAUAAAU
+CP000261.1/1378326-1378185 CUAGGAAAAA-GAUGCAAGUAUCUUAUCUAAAGCGAGUUCGGGGUAGUUAGAGCCGAAUGGUAGGACUGCAGAUUGGCGCUUCCGUUUGGGCAGUGUGAUUAAGUAUAUUUGUCAAUAUUGCCCAAAAAGAUACUAUAUAAAU
+#=GC SS_cons               :::::::::::::::::((((((((,,,,,<<<<<---<<---<<<<<<---<<<____>>>-->>>>>>->>---->>>>>,,,<<<<<<<<<<<<<<<-<<_____>>->>>->>>>>>>>>>>>))))))))::::::::
+#=GC RF                    CUAGGAAAAAgGAUGCAaGuauCuuAUCUAaaGCGAGUuCGGGGcaGucAGAgCCGAAUGGcAGgaCugCAGaUUGGCGCuuCCGuuuGGGCaguguGacUaaGUAUAuuUguCAacacuGCCCaaaaaGauaCuAUAUAAAU
+//

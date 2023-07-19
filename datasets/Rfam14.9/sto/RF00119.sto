@@ -1,0 +1,37 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00119
+#=GF ID   C0299
+#=GF DE   C0299 RNA
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Hershberg R
+#=GF SS   Predicted; PFOLD
+#=GF GA   40.00
+#=GF TC   52.20
+#=GF NC   32.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   12202758
+#=GF RT   Transcriptome analysis of Escherichia coli using high-density
+#=GF RT   oligonucleotide probe arrays.
+#=GF RA   Tjaden B, Saxena RM, Stolyar S, Haynor DR, Kolker E, Rosenow C
+#=GF RL   Nucleic Acids Res 2002;30:3732-3738.
+#=GF CC   This family consists of a group of Shigella flexneri and Escherichia coli
+#=GF CC   RNA genes which are 78 bases in length and are found between the hlyE and
+#=GF CC   umuD genes. The function of this RNA is unknown.
+#=GF WK   C0299_RNA
+#=GF SQ   5
+
+
+U73842.1/82-4              GCCACGUGAGCACAAGAUAAGAGAACGAAAAAUCAGCAGCCUAUGCAGCGACAAAUAUUGAUAGCCUGAAUCAGUAUUG
+CP000034.1/1125398-1125476 GCCGCGUGAGCACAGGAUAAGAGAACGAAAAAUCAGCAGUCUAUGCAGCGACAAAUAUUGAUAGCCUGAAUCAGUAUUG
+CP001063.1/1218217-1218295 GCCACGUGAGCACAGGAUAAGAGAACGAAAAAUCAGCAGUCUAUACAGCGACAAAUAUUGAUAGCCUGAAUCAGUAUUG
+CU928145.2/1326462-1326540 GCCACGUGAGCACAGGAUAAGAGAACGAAAAAUCAGCAGUCUAUGCAGCGACAAAUAUUGAUAGCCUGAAUCAGUAUUG
+CP000970.1/1991085-1991007 GGCGCGUGAGCACAGGAUAAGAUAACGAAAAAUCAGCAGUCUAUGCAGCGACAAAUAUUGAUAGCCUGAAUCAGUAUUG
+#=GC SS_cons               <<--<<<<-<<----<<<_____________>>>---->>->>>>-->>----<<<<<<<<<_______>>>>>>>>>:
+#=GC RF                    GCCaCgugAgCACAgGauAAGAgAACGAAAAauCAGCAGcCuauGCAGCGACAaauauuGauAGCCUGAauCaguauuG
+//

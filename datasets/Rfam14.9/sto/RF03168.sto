@@ -1,0 +1,40 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03168
+#=GF ID   c-di-GMP-I-UAU
+#=GF DE   c-di-GMP-I-UAU riboswitch
+#=GF AU   Weinberg Z; 0000-0002-6681-3624
+#=GF SE   Published; PMID:28265071
+#=GF SS   Published; PMID:28265071
+#=GF GA   65.90
+#=GF TC   65.90
+#=GF NC   65.80
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF CL   CL00126
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0035438; cyclic-di-GMP binding;
+#=GF RN   [1]
+#=GF RM   28265071
+#=GF RT   Bioinformatic analysis of riboswitch structures uncovers variant classes
+#=GF RT   with altered ligand specificity.
+#=GF RA   Weinberg Z, Nelson JW, Lunse CE, Sherlock ME, Breaker RR
+#=GF RL   Proc Natl Acad Sci U S A. 2017;114:E2077.
+#=GF CC   c-di-GMP-I-GGC is a variant of c-di-GMP-I riboswitch RF01051, that
+#=GF CC   includes CORESEQ UAU
+#=GF WK   Cyclic_di-GMP-I_riboswitch
+#=GF SQ   6
+
+
+URS0000D6922B_338966/1-76 CACCGACGGUGCACAGCACGGGUAACCGUGUGUCGCAAAACUAC-C-AUCCC--GAAGA-----GG---GAUAGAGGGGUUGUCGAAG
+URS0000D6AD63_859657/1-81 UGUUGCAUUUGCAAAGCUGGAGUGAUCCGGCGACGCAAAGCCAGGGGGACUUCCGUAUC---GGAA---GUCAGCC-AGUUGUCCGCC
+URS0000D6647A_12908/1-77  UUCUAUAAGUGCAAAAUCAGGGCAACUUGAUGACGCAAAGCUAC-GGCUUCUG-AUA------CAG---GGUCGCCGGGGUGUCAGGG
+URS0000D6A728_12908/1-85  CUAGAAAAAUACAAACUAAAGGAAACUUUAGGUCGUAAAAGCAC-CUGUUGACCGCUAAC--AGUCUAUGGCAGCGGGGUUAUUAAGG
+URS0000D6BE6B_12908/1-80  UAAGAUAAAUCCACACCCGUCGUGAGGCGAGUCCGGAAAGCCAC-GGGUCUU--AAGAUUGA--AA---GAUAGCCGGGUUGUCAACA
+URS0000D6BBBE_12908/1-79  CAAGAAAAAUCCAAACCUGCUGUAAAGCAGGGACGGAAAGCCAC-GGGUUUCUUUUGU----AAGA---AGCAGCC-GGUUAUCAAUA
+#=GC SS_cons              ::::::::::<<---<<<<<<____>>>>>>--->>--<<<<-<.<<<<<<<<<_____.._>>>>--->>>-->>>>>>>:::::::
+#=GC RF                   uaagAaAaaUgCAAAcccgggGuAAcccgggGaCGcAAAgCcAC.gGgucccccguaaa...gggg...gacAGCcGgGuUGUCAAgg
+#=GC CORE                 .........X..........................X.............................................X.....
+//

@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02821
+#=GF ID   V_IGR5
+#=GF DE   Vibrio RNA IGR5
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   75.00
+#=GF TC   75.60
+#=GF NC   45.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   19223322
+#=GF RT   Experimental discovery of sRNAs in Vibrio cholerae by direct cloning,
+#=GF RT   5S/tRNA depletion and parallel sequencing.
+#=GF RA   Liu JM, Livny J, Lawrence MS, Kimball MD, Waldor MK, Camilli A
+#=GF RL   Nucleic Acids Res. 2009;37:e46.
+#=GF CC   Identified by direct cloning an parallel sequencing experiments with
+#=GF CC   5S/tRNA depletion. Confirmed by Northern blot. 
+#=GF WK   Vibrio
+#=GF SQ   2
+
+
+
+CP007654.1/299263-299373   ACG-UACUUAAGCUGGUGCAUCCGUAUUUGCGCCAAAAUUUGUACCGAAUUUUUUGAA--CUCGUUACGCCGCUAUUUAUUACAGAAUGAAUUUAAAGCGUAAUUUUUUCACAC
+BA000037.2/1934290-1934180 UCGCUUCAGAGGCUGGUACAUCCGUAUUUGUACCAAAAUCUGUACCAAAUUAUCCAAAUUCACUUAUGUUUGAUUAUUAAUAC--AUUGAUUUUCAAAGCAUAAUUA-CUGAAC
+#=GC SS_cons               ::<-<<<------<<<<<<<________>>>>>>>------>>>>---------<<<<-----<<<<<<<----<<<<<<<____>>>>>>>----->>>>>>>--->>>>:::
+#=GC RF                    uCGcuaCuuAaGCuGGugCaUCCGUAUUuGcaCCaAAAUuUGuaCCaAAUUuUucgaaUUCuCuuuuggcuGaUauuuauuACAGaaugaauUUaAAgccaaaaUUuuucgaAC
+//

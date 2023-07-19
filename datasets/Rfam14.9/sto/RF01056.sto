@@ -1,0 +1,50 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01056
+#=GF ID   Mg_sensor
+#=GF DE   Magnesium Sensor
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF SE   Gardner PP
+#=GF SS   Published; PMID:17381304
+#=GF GA   40.00
+#=GF TC   41.40
+#=GF NC   36.60
+#=GF TP   Cis-reg; riboswitch;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0010468; regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   17381304
+#=GF RT   A Mg2+-responding RNA that controls the expression of a Mg2+ transporter.
+#=GF RA   Groisman EA, Cromie MJ, Shi Y, Latifi T
+#=GF RL   Cold Spring Harb Symp Quant Biol. 2006;71:251-258.
+#=GF RN   [2]
+#=GF RM   16615891
+#=GF RT   An RNA sensor for intracellular Mg(2+).
+#=GF RA   Cromie MJ, Shi Y, Latifi T, Groisman EA
+#=GF RL   Cell. 2006;125:71-84.
+#=GF RN   [3]
+#=GF RM   18248433
+#=GF RT   Regulation of magnesium homeostasis in Salmonella: Mg(2+) targets the mgtA
+#=GF RT   transcript for degradation by RNase E.
+#=GF RA   Spinelli SV, Pontel LB, Garcia Vescovi E, Soncini FC
+#=GF RL   FEMS Microbiol Lett. 2008;280:226-234.
+#=GF CC   The Magnesium sensor RNA element is a cis-regulatory element that
+#=GF CC   regulates the expression of the magnesium transporter protein MgtA. It is
+#=GF CC   located in the 5' UTR of this gene. The element adopts different
+#=GF CC   structures depending on the presence or absence of Mg2+, this has the
+#=GF CC   affect of regulating whether transcription reads through the mgtA coding
+#=GF CC   region or stops within the 5' UTR.
+#=GF WK   Magnesium_responsive_RNA_element
+#=GF SQ   4
+
+
+U07843.1/1597-1709         CUUACCGGAGG-CGACAUGGACCCUGAACCCACCCCUCUCCCGCGAUGGAGAAUUUUCCUUUUCCGGUAAGCCUGCCUCU--GCUGUCUUACCGG--UG-UGUAAGACAGUGACACAAU
+CP000653.1/495640-495750   CUUACCGGAGG-CUGUAUGGACCCUGAUCCCACCCCUCUCCCGCGAUGGAGAAU---CUCUUUCCGGUAAGCCAGCCCUC--GCUGUCUCACCGG--UGAUGUGAGGCAGCAACGUCAU
+CP000247.1/4704294-4704409 CUUACCGGAGG-UUAUAUGGAACCUGAUCCCACGCCUCUCCCUCGACGGAGAUUAAAACUUUUCCGGUAAGCCCGUCUUUUCACGGCGUUACCGGA-UG-CGUAAGGCCGUGACGUUUU
+CP000647.1/5085745-5085861 CUUACCGGAGAUAGUUAUGGACCCCGAUCCCACUCCUCAUCCUCGAUGGAGCAACCUUUCUUUCCGGUAAGCCUGUUUAAC-ACUGCUUUACCGGAAAG-CGUAAAGCAGUGACGUCCU
+#=GC SS_cons               (((((((((((.,,,,,<<<_________>>>,,,,<<<<<______>>>>>,,,,,,,,)))))))))))----------.<<<<<<<<<<____.__._>>>>>>>>>>::::::::
+#=GC RF                    CuuaCCGGagg.uuaUAuGGAcCCuGAuCCCaCuCCuCucCCuCGAuGgaGaauuuuuuuuuuCCGGuaaGCCuGucUuuu.gCuGccuuaCCGGA.uG.uGuaaggCaGcgACgUuaU
+//

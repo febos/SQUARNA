@@ -1,0 +1,54 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00221
+#=GF ID   SNORD43
+#=GF PI   U43
+#=GF DE   Small nucleolar RNA SNORD43
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; Griffiths-Jones SR
+#=GF GA   45.00
+#=GF TC   45.40
+#=GF NC   44.80
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 18.00 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00059
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Homo_sapiens300740;
+#=GF DR   snoopy; Loxodonta_africana300493;
+#=GF RN   [1]
+#=GF RM   12736310
+#=GF RT   The high diversity of snoRNAs in plants: identification and comparative
+#=GF RT   study of 120 snoRNA genes from Oryza sativa.
+#=GF RA   Chen CL, Liang D, Zhou H, Zhuo M, Chen YQ, Qu LH
+#=GF RL   Nucleic Acids Res 2003;31:2601-2613.
+#=GF RN   [2]
+#=GF RM   10684968
+#=GF RT   The intron-containing L3 ribosomal protein gene (RPL3): sequence analysis
+#=GF RT   and identification of U43 and of two novel intronic small nucleolar RNAs.
+#=GF RA   Duga S, Asselta R, Malcovati M, Tenchini ML, Ronchi S, Simonic T
+#=GF RL   Biochim Biophys Acta 2000;1490:225-236.
+#=GF CC   U43 is a C/D box small nucleolar RNA that is encoded in intron 1 of the
+#=GF CC   ribosomal protein L3 gene in human and cow [2]. Three other snoRNAs ( U82,
+#=GF CC   U83a and U83b) are also encoded in the same host gene but from different
+#=GF CC   introns [2]. The rice homologue is expressed from a cluster also
+#=GF CC   containing snoR16 [1]. The Arabidopsis homologue is annotated as snoR41 in
+#=GF CC   the sequence databases. U43 is hypothesised to guide methylation of
+#=GF CC   2'-O-ribose residues on 18S ribosomal RNA [1]. This family represents
+#=GF CC   mammalian U43.
+#=GF WK   Small_nucleolar_RNA_SNORD43
+#=GF SQ   4
+
+
+AJ238853.1/1-62        CACAGAUGAUGAACUUAUUGACGGGCGGACAGAAACUGUGUGCUGAUUGUCACGUUCUGAU-U-
+X96642.1/1-62          CACAGAUGAUGAACUUAUUGACGGGCGGACAGAAACUGUGUGCUGAUUGUCACGUUCUGAU-U-
+AP001324.4/95881-95819 ACAG-AUGAUGAACUCAUUGACAGACAUACAGAGACUGUGUGCUGAUUGUCAUGUUCUGACUUA
+AJ238851.1/484-547     CAGAAAUGAUGAACUUACUGACGGGCGGACAGAGACACUGUGCUGAUUGUCAGGUUCUGAUUUG
+#=GC SS_cons           <<<<________________________________________________________>>>>
+#=GC RF                caaagAUGAUGAACUUAUUGACGGGCGgACAGAgACUgUGUGCUGAUUGUCAuGUUCUGAuuug
+//

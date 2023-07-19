@@ -1,0 +1,68 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00334
+#=GF ID   SNORA3
+#=GF PI   snoMBI-28
+#=GF DE   Small nucleolar RNA SNORA3/SNORA45 family
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   INFERNAL
+#=GF SS   Predicted; RNAalifold
+#=GF GA   51.00
+#=GF TC   51.20
+#=GF NC   50.70
+#=GF TP   Gene; snRNA; snoRNA; HACA-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 23 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00022
+#=GF DR   snoRNABase; ACA3;
+#=GF DR   snoRNABase; ACA3-2;
+#=GF DR   SO; 0000594; H_ACA_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Mus_musculus300761;
+#=GF DR   snoopy; Homo_sapiens300363;
+#=GF RN   [1]
+#=GF RM   15199136
+#=GF RT   Human box H/ACA pseudouridylation guide RNA machinery.
+#=GF RA   Kiss AM, Jady BE, Bertrand E, Kiss T
+#=GF RL   Mol Cell Biol. 2004;24:5797-5807.
+#=GF RN   [2]
+#=GF RM   11387227
+#=GF RT   RNomics: an experimental approach that identifies 201 candidates for
+#=GF RT   novel, small, non-messenger RNAs in mouse.
+#=GF RA   Huttenhofer A, Kiefmann M, Meier-Ewert S, O'Brien J, Lehrach H,
+#=GF RA   Bachellerie JP, Brosius J
+#=GF RL   EMBO J 2001;20:2943-2953.
+#=GF RN   [3]
+#=GF RM   16361266
+#=GF RT   A novel experimental approach for systematic identification of box H/ACA
+#=GF RT   snoRNAs from eukaryotes.
+#=GF RA   Gu AD, Zhou H, Yu CH, Qu LH
+#=GF RL   Nucleic Acids Res. 2005;33:e194.
+#=GF RN   [4]
+#=GF RM   16381836
+#=GF RT   snoRNA-LBME-db, a comprehensive database of human H/ACA and C/D box
+#=GF RT   snoRNAs.
+#=GF RA   Lestrade L, Weber MJ
+#=GF RL   Nucleic Acids Res. 2006;34:D158-D162.
+#=GF CC   The members of this family belong to the H/ACA class of snoRNAs which are
+#=GF CC   thought to guide the sites of modification of uridines to pseudouridines
+#=GF CC   [1]. This family includes mouse snoMBI-28 and human homologues ACA3
+#=GF CC   (SNORA3) and ACA3-2 (SNORA45). Both ACA3 and ACA3-2 share the same host
+#=GF CC   gene [3]. MBI-28, ACA3 and ACA3-2 are all predicted to guide the
+#=GF CC   pseudouridylation of residues in 28S rRNA [1,2,3].
+#=GF WK   Small_nucleolar_RNA_MBI-28
+#=GF SQ   6
+
+
+AJ609428.1/1-130       AUCGAGGCUAGAGUCACGCUUGGGUAUCGGCUAUUGCCUGAGUGUGCUAGAGUCCUCGAAGAGUAACUGCUGACCUU-AUUCACUGGCUGUG-GGCCUUAUG-GCACAGUCAGUCACCAGGUUAGAGACAUGC
+AB020236.1/2404-2533   AUCGAGGCUAGAGUCACGCUUGGGUAUCGGCUAUUGCCUGAGUGUGCUAGAGUCCUCGAAGAGUAACUGCUGACCUU-AUUCACUGGCUGUG-GGCCUUAUG-GCACAGUCAGUCACCAGGUUAGAGACAUGC
+AB020237.1/3193-3322   GCCGAGGCUAGAGUCACAUCCUGACA-UGGUGCUUGUCCUGGUGUGCUACAGUUCUCGGAGAGAAUCG-CUGGUCUUGAUUCAUUGGUAGGG-GCCUUCAGUGUCCCUUCUAGUGCCCAGAUCAGAAACAUGG
+AB020236.1/3615-3745   GCCGAGACUAGAGUCACAUCCUGACA-CAACUCUUGUCCUGGUGUGCUAGAGUACUCGAAGAGAAUCUACUGGUCUUGAUUCACUGGUGGGG-GCAGUCGGUGCCCCCGUUAGUGCCCAGAUCAGAAACAUAC
+AC104360.8/62127-61997 GCCGAGACUAGAGUCACAUCCUGACA-CAACUCUUGUCCUGGUGUGCUAGAGUACUCGAAGAGAAUCUACUGGUCUUGAUUCACUGGUGGGG-GCAGUCGGUGCCCCCGUUAGUGCCCAGAUCAGAAACAUAC
+AF357390.1/1-120       ------------GUCACGCUCAGGUAUUGCUUGUUGCCUUAGUGUGCUUAAGUCCUCGAAGAAUAACUGCUGACCUU-AUUCACUGGCUGUGUGGACUUUCUGGCACAGUCAGUCACCAGGUUAGUGACAUAU
+#=GC SS_cons           :<<<<<<<<--<<-<<<<<<--<<<<._______>>>>-->>>>>>>>-->>>->>>>>----------<<<<<<<-<---<<<<<<-<<<<.<<_______>>>>>>->>>>>>->->>>>>>>::::::::
+#=GC RF                gcCGaGgCuAGaGUCaCacccuGgca.cgacuaUugcCuugguGuGCuAgaGcaCuCGgAGAGaAuCugCugacCuUGAUUcacuggugGgG.gcauUuauugcCcCcgccagugaCCaGgucaGAaACAUac
+//

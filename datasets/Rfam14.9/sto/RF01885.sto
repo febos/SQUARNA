@@ -1,0 +1,68 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01885
+#=GF ID   HSR-omega_1
+#=GF PI   HSR-omega_1; ; DLX6-AS1_2
+#=GF DE   Heat shock gene hsromega conserved region 1
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Predicted; WAR; Eberhardt R
+#=GF SS   Predicted; WAR;
+#=GF GA   80.00
+#=GF TC   92.20
+#=GF NC   33.70
+#=GF TP   Gene; lncRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 29.27 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001641; lincRNA gene;
+#=GF DR   SO; 0001463; lincRNA;
+#=GF DR   GO; 0016607; nuclear speck;
+#=GF DR   GO; 0042981; regulation of apoptotic process;
+#=GF RN   [1]
+#=GF RM   10984439
+#=GF RT   Omega speckles - a novel class of nuclear speckles containing hnRNPs
+#=GF RT   associated with noncoding hsr-omega RNA in Drosophila.
+#=GF RA   Prasanth KV, Rajendra TK, Lal AK, Lakhotia SC
+#=GF RL   J Cell Sci. 2000;113:3485-3497.
+#=GF RN   [2]
+#=GF RM   19737742
+#=GF RT   The developmentally active and stress-inducible noncoding hsromega gene is
+#=GF RT   a novel regulator of apoptosis in Drosophila.
+#=GF RA   Mallik M, Lakhotia SC
+#=GF RL   Genetics. 2009;183:831-852.
+#=GF RN   [3]
+#=GF RM   20065067
+#=GF RT   Improved activities of CREB binding protein, heterogeneous nuclear
+#=GF RT   ribonucleoproteins and proteasome following downregulation of noncoding
+#=GF RT   hsromega transcripts help suppress poly(Q) pathogenesis in fly models.
+#=GF RA   Mallik M, Lakhotia SC
+#=GF RL   Genetics. 2010;184:927-945.
+#=GF CC   The heat shock gene hsromega is a long non-coding RNA which produces a
+#=GF CC   number of transcripts. These transcripts include a nuclear transcript,
+#=GF CC   hsromega-n, which is detected as small speckles in the interchromatin
+#=GF CC   space and co-localises with heterogeneous nuclear RNA-binding proteins
+#=GF CC   (hnRNPs) [1]. Hsromega-n interacts directly and indirectly with a number
+#=GF CC   of regulatory proteins including hnRNPs, cAMP response element binding
+#=GF CC   binding protein (CBP), proteasome, and Drosophila inhibitor of apoptosis
+#=GF CC   protein 1 (DIAP1). Through these interactions, it has roles in the
+#=GF CC   regulation of apoptosis [2] and the suppression of poly(Q) toxicity [3].
+#=GF WK   Hsromega
+#=GF SQ   13
+
+
+AAFS01000208.1/10013-9936      ACAACUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUACGCAAACGCGUAG
+AANI01014362.1/14677-14602     ACACGUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUACGCGA--UCGAUA
+AAPP01019520.1/1057-1134       ACCACUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAUGUUGAUACGCGAACGCGUAC
+AAPT01020159.1/556430-556506   ACAAGUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUGAAAAGUUGAUACGCGA-AUCGAUC
+AAPU01011178.1/205842-205767   ACACGUUAACCAAGCAUUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUACGCGA--UCGAAC
+AAQB01009437.1/2975909-2975986 ACACGUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUACGCGUGAUCGAUC
+AASS01005805.1/431-507         ACCACUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUAU-CGAUAUCGAUC
+M14558.1/1200-1274             -CACUUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUACGCGA--UCGAAC
+U18307.1/1713-1789             ACCACUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUAU-CGAUAUCGAUC
+X05347.1/1362-1436             ACACUUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUU-GGCGUUGAAAGUUGAUACGCGA--UCGAAC
+X04188.1/1639-1715             ACCACUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUAU-CGAUAUCGAUC
+M14557.1/1176-1252             ACCACUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUAU-CGAUAUCGAUC
+X16337.1/1526-1603             ACAACUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUACGCAAACGCGUAG
+#=GC SS_cons                   ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#=GC RF                        ACaacUUAACCAAGCAAUAUGUAUUUCUUUCUCUAAACUUUAUAGUUGGGCGUUGAAAGUUGAUAcGCGAuauCGauc
+//

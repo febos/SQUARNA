@@ -1,0 +1,57 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01923
+#=GF ID   mir-711
+#=GF DE   microRNA mir-711
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   68.00
+#=GF TC   68.30
+#=GF NC   58.20
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   MIPF; MIPF0000748;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   19406225
+#=GF RT   In silico detection and characteristics of novel microRNA genes in the
+#=GF RT   Equus caballus genome using an integrated ab initio and comparative
+#=GF RT   genomic approach
+#=GF RA   Zhou M, Wang Q, Sun J, Li X, Xu L, Yang H, Shi H, Ning S, Chen L, Li Y, He
+#=GF RA   T, Zheng Y
+#=GF RL   Genomics. 2009;94:125-131.
+#=GF RN   [2]
+#=GF RM   16582102
+#=GF RT   The expression profile of microRNAs in mouse embryos
+#=GF RA   Mineno J, Okamoto S, Ando T, Sato M, Chono H, Izu H, Takayama M, Asada K,
+#=GF RA   Mirochnitchenko O, Inouye M, Kato I
+#=GF RL   Nucleic Acids Res. 2006;34:1765-1771.
+#=GF RN   [3]
+#=GF RM   18215311
+#=GF RT   miRNAminer: a tool for homologous microRNA gene search
+#=GF RA   Artzi S, Kiezun A, Shomron N
+#=GF RL   BMC Bioinformatics. 2008;9:39.
+#=GF RN   [4]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   Mir-711_microRNA_precursor_family
+#=GF SQ   6
+
+
+URS000075B4E6_9544/1-69  ACUGACUUUGAGUCUCUCCUCAGGGUGCUGCAGGCAAAGCUGGGGACCCAGGGAGAGACGUAAGUGAGG
+URS000075B4E6_9598/1-69  ACUGACUUUGAGUCUCUCCUCAGGGUGCUGCAGGCAAAGCUGGGGACCCAGGGAGAGACGUAAGUGAGG
+URS000075B4E6_9606/1-69  ACUGACUUUGAGUCUCUCCUCAGGGUGCUGCAGGCAAAGCUGGGGACCCAGGGAGAGACGUAAGUGAGG
+URS000075EB89_9796/1-61  ----ACUUUAAGUCUCUUUUCAGGGUGCCACAGGCAAAGCUGGGGACCCAGGGAGAGACGUAAGU----
+URS000075D9F5_10090/7-75 CCUAACUUUGAAUCUCUUCUUAGGGUGCUUCAGGCAAAGCUGGGGACCCGGGGAGAGAUGUAAGUCUGG
+URS000075AB49_10116/1-68 CCUAACUUUGAAUCUCUUCGUAGGGUGCUUCAGGGAAAGCUGGGGACCCUGGGAGAGAUGUAAGUCAA-
+#=GC SS_cons             :<<-<<<<---<<<<<<<<<--<<<<-<<-<<<______>>>>>->>>>->>>>>>>>>-->>>>->>:
+#=GC RF                  aCuaACUUUGAgUCUCUcCucAGGGUGCuuCAGGcAAAGCUGgGGACCCagGgAGAGAcGUAAGUgaGG
+//

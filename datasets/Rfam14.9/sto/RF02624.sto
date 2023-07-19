@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02624
+#=GF ID   BSnc150
+#=GF DE   Brucella sRNA 150
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   73.00
+#=GF TC   73.10
+#=GF NC   33.10
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   26553849
+#=GF RT   Transcriptome-Wide Identification of Hfq-Associated RNAs in Brucella suis
+#=GF RT   by Deep Sequencing.
+#=GF RA   Saadeh B, Caswell CC, Chao Y, Berta P, Wattam AR, Roop RM 2nd, O'Callaghan
+#=GF RA   D
+#=GF RL   J Bacteriol. 2015;198:427-435.
+#=GF WK   Brucella_sRNA
+#=GF SQ   2
+
+
+
+AE014292.2/1083352-1083395 ACCACAUAAGCGCCGGCCAAAGGCGCAUCAGGGGAACAUGAACA
+CP002079.1/1137150-1137193 ACCACAUAAGCGCCGGCCAAAGGCGCAUCAGGGGAACAUGAAUG
+#=GC SS_cons               :<<------<<<<<_______>>>>>------>>::::::::::
+#=GC RF                    ACCACAUAAGCGCCGGCCAAAGGCGCAUCAGGGGAACAUGAAua
+//

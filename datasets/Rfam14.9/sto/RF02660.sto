@@ -1,0 +1,45 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02660
+#=GF ID   icaR_3p_UTR
+#=GF DE   icaR 3'UTR
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   369.00
+#=GF TC   369.90
+#=GF NC   357.20
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   SO; 0000205; three_prime_UTR;
+#=GF DR   GO; 0030371; translation repressor activity;
+#=GF RN   [1]
+#=GF RM   24367275
+#=GF RT   Base pairing interaction between 5'- and 3'-UTRs controls icaR mRNA
+#=GF RT   translation in Staphylococcus aureus.
+#=GF RA   Ruiz de los Mozos I, Vergara-Irigaray M, Segura V, Villanueva M, Bitarte
+#=GF RA   N, Saramago M, Domingues S, Arraiano CM, Fechter P, Romby P, Valle J,
+#=GF RA   Solano C, Lasa I, Toledo-Arana A
+#=GF RL   PLoS Genet. 2013;9:e1004001.
+#=GF CC   The 3'UTR of icaR mRNA (repressor of the main expolysaccharidic compound
+#=GF CC   of the bacteria biofilm matrix) binding to the 5' UTR can interfere with
+#=GF CC   the translation initiation complex and generate a double stranded
+#=GF CC   substrate for RNaseIII. Mozos at al. showed that the interaction was
+#=GF CC   between UCCCCUG motif in the 3'UTR and the Shine-Dalagarno region at the
+#=GF CC   5'UTR. Deletion of the motif resulted in IcaR repressor accumulation and
+#=GF CC   inhibition of biofilm development.
+#=GF WK   Staphylococcus_aureus
+#=GF SQ   3
+
+
+
+BABM01000001.1/2833385-2832996 UUUUUGUUACUAGUUUGUAAUAAUUAACUUACUUUUGUAAAAAAAGACAUGAGAUUAUUUUUUUAAAUCUAUAUAAAGUUGACAAUACAAAUCGAUAUUGAGAAUAUUAAGAUGUAUAUGAAUUUUAUAAAUUAAAUGCAAUACAUUAAUAUAAAUAUCAAUUGUUGCAAAAUACGAUUUGUUCAAUGAUUUUAUAAUAUUAUUCUUUAUAUUUGUGAAUGGUUAAGUUUGUCUUUGAACAUAUUAUAAAAGUGUAAUGUUCCCCUGAAAAGAAUAAGUUGUCAUCUAAUUACAGGAAAUCCGCAUAAAUUAGAUGAAAUGGAAAGUAAUAAGUAAUAAUUUAUUGAUAAGCGCCUAUGUGAUGGUAAAUCAUGACAUAGGCGCUUUUUU
+FR714927.1/2684496-2684107     UUUUUGUUACUAGUUUGUAAUAAUUAACUUACUUUUGUAAAAAAAGACAUGAGAUUAUUUUUUUAAAUCUAUAUAAAGUUGACAAUACAAAUCGAUAUUGAGAAUAUUAAGAUGUAUAUGAAUUUUAUAAAUUAAAUGCAAUACAUUAAUAUAAAUAUCAAUUGUUGCAAAAUACGAUUUGUUCAAUGAUUUUAUAAUAUUAUUCUUUAUAUUUGUGAAUGGUUAAGUUUGUCUUUGAACAUAUUAUAAAAGUGUAAUGUUACCCUGAAAAGAAUAAGUUGUCAUCUAAUUACAGGAAAUCCGCAUAAAUUAGAUGAAAUGGAAAGUAAUAAGUAAUAAUUUAUUGAUAAGCGCCUAUGUGAUGGUAAAUCAUGACAUAGGCGCUUUUUU
+CP001781.1/2779360-2778971     UUUUUGUUACUAGUUUGUAAUAAUUAACUUACUUUUGUAAAAAAAGACAUGAGAUUAUUUUUUUAAAUCUAUAUAAAGUUGACAAUACAAAUCGAUAUUGAGAAUAUUAAGAUGUAUAUGAAUUUUAUAAAUUAAAUGCAAUACAUUAAUAUAAAUAUCAAUUGUUGCAAAAUACGAUUUGUUCAAUGAUUUGAUAAUAUUAUUCUUUAUAUUUGUGAAUGGUUAAGUUUGUCUUUGAACAUAUUAUAAAAGUGUAAUGUUCCCCUGAAAAGAAUAAGUUGUCAUCUAAUUACAGGAAAUCCGCAUAAAUUAGAUGAAAUGGAAAGUAAUAAGUAAUAAUUUAUUGAUAAGCGCCUAUGUGAUGGUAAAUCAUGACAUAGGCGCUUUUUU
+#=GC SS_cons                   :::<<<<<<<______>>>>>>>,[[[[[(((((((((((,,,,<<<--<<<<<______>>>>>-->>>,<<<<<<<<<-<--<<<<<--<-<<<<<<___>>>>>>->-->>>>>->->>>>>>>>>,,,,,,,<<<<<<<-<<<-<<<____>>>->>>>>>>>>>,,,,,,,,,,<<<<<<<-<<<--<<<---<<<<<<<___________>>>>>>>--->>>->>>->>>>>>>,,))))))))))),,,<<<<<_________>>>>>]]]]]<<<<<<<<<<---<<____>>----->>>>>>>>>>,,,,,,,,,<<<<<<<<____>>>>>>>>,,<<<<<<<<<<<<-<<<______>>>->>>>>>>>>>>>::::
+#=GC RF                        UUUuuguuaCUAGUUUGuaacaaUcaaCucaCuuuuguaaAAAAaGaCAugagaUUAUUUucucaAAuCuAuauaaaguuGaCAauaCaAAuCgauauuGAGaauaucAaGAuGuauAuGaacuuuauaAAUUAAAuGCaacaCauuAauaUAAAuauCaauuguuGCaAAAUACGAUUuGuuCaaUGacUUgacAAUaccauuCUUUAUAUUUGUGaaugguUAAgucUguCUuuGaaCaUAuuacaaaaGugUAAuguucCCCUGAAAAgaacaaGuuguCauCuaauuACAGGAAAUCCGCAUAaauuaGauGaAAUGGAAAGcaauaaguAAUAacuuauugAUaaGCGCCuauGuGauGGUAAAUCauGaCauaGGCGCuuUUUU
+//

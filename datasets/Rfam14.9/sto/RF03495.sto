@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03495
+#=GF ID   mir-968
+#=GF DE   mir-968 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   88.00
+#=GF TC   88.10
+#=GF NC   78.00
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000865;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-968 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+URS000014472D_7227/8-86  AGCUUCCUUAAGUAGUAUCCAUUAAAGGGUUGUUCUCAACAUGCAAAUCAACCUUUUGAUGUACUACUUUAAGAAUCUC
+URS0000D5480F_7240/12-90 AGCUUCCUUAAGUAGUAUCCAUUAAAGGGUUGUUCUCAACAUGCAAAUCAACCGUUUGAUGUACUACUUUAGGAAUCUA
+URS00003C22B9_7237/19-96 AGCUUCCUUAAGUAGUAUCCAUUAAGAGGUCGUCAUCUAGCUA-AAAUCGACCUUUUGAUGUACUACUUUAAAAAAGCA
+URS0000D532F9_7244/19-96 AUGUGCCUUAAGUAGUAACCAUUAAGAGGUUGUUGUUAG-AUUUAAAUCCACCUUUUAAUGUACUACUUAUGACAAAUG
+#=GC SS_cons             :::<<<<<-<<<<<<<<--<<<<<<<<<<<<<________________>>>>>>>>>>>>>>>>>>>>>->>>>>::::
+#=GC RF                  AgcUuccuUAAGUAGUAuCCAUuAAaaGGUcGUUaUcaAcAUgcAAAUCgACCuuUUgAUGUACUACUUuaggaAaaUa
+//

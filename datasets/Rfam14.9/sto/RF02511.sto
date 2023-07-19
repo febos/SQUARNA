@@ -1,0 +1,32 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02511
+#=GF ID   PYLIS_4
+#=GF DE   Pyrrolysine insertion sequence TetR
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Predicted; WAR
+#=GF SS   Predicted; WAR
+#=GF GA   50.00
+#=GF TC   56.10
+#=GF NC   38.90
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 1001268; recoding_stimulatory_region;
+#=GF DR   GO; 0030631; pyrrolysine incorporation;
+#=GF RN   [1]
+#=GF RM   23557142
+#=GF RT   Effects of using coding potential, sequence conservation and mRNA
+#=GF RT   structure conservation for predicting pyrroly-sine containing genes.
+#=GF RA   Theil Have C, Zambach S, Christiansen H
+#=GF RL   BMC Bioinformatics. 2013;14:118.
+#=GF WK   PYLIS_downstream_sequence
+#=GF SQ   2
+
+
+AE010299.1/3625967-3626066 UAGUUCAUAGGUGAGUACCCCGAUUAUAGUCGGAUGUACUCAUAUUUCCAUUCGGGAAGGUUCAACCUGGAAGAUAGCGAAGAUAUGGAUGAGGUUGCAA
+CP000099.1/4234546-4234447 UAGUUCGUAGCUCAGUAUCCAGAUUAUAAUCGGAUGUACCUCUAUUUCCGAUCUGGAAGGUUCAAUCUGGAAGAUUAUGAAAAUAUGGAUGAAGCUGCAA
+#=GC SS_cons               ::::::::::::::::::<<<<<--------<<<-<<<____>>>->>>-->>>>>--<<_____>>:::::::::::::::::::::::::::::::::
+#=GC RF                    UAGUUCaUAGgUgAGUAuCCcGaUUAUAaUCGGaUguaCuuauauUuCCauuCgGGAAGgUUCAAcCUGGAAGAUuauGAAaAUAUGGAUGAaGuUGCAA
+//

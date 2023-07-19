@@ -1,0 +1,47 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02672
+#=GF ID   SprX
+#=GF DE   Small pathogenicity island RNA X
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Published; PMID:24557948
+#=GF SS   Published; PMID:24557948
+#=GF GA   80.00
+#=GF TC   179.70
+#=GF NC   55.50
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0040033; sRNA-mediated gene silencing;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF RN   [1]
+#=GF RM   24557948
+#=GF RT   A small RNA controls a protein regulator involved in antibiotic resistance
+#=GF RT   in Staphylococcus aureus.
+#=GF RA   Eyraud A, Tattevin P, Chabelskaya S, Felden B
+#=GF RL   Nucleic Acids Res. 2014;42:4892-4905.
+#=GF RN   [2]
+#=GF RM   27438010
+#=GF RT   Enhancement of the pathogenicity of Staphylococcus aureus strain Newman by
+#=GF RT   a small noncoding RNA SprX1.
+#=GF RA   Kathirvel M, Buchad H, Nair M
+#=GF RL   Med Microbiol Immunol. 2016;205:563-574.
+#=GF CC   SprX was shown to influence antibiotic resistance of the bacteria to
+#=GF CC   Vancomycin and Teicoplanin glycopeptides, which are used to treat MRSA
+#=GF CC   infections. In this study the authors identified a SprX target, stage V
+#=GF CC   sporulation protein G (Spo VG). By reducing Spo VG expression levels, SprX
+#=GF CC   affects S. aureus resistance to the glycopeptide antibiotics. It is
+#=GF CC   involved in regulation of pathogenicity factors.[2]
+#=GF WK   SprX_small_RNA
+#=GF SQ   3
+
+
+
+CP000253.1/1464207-1464058 ACACAUGCAUCAACUAUUUACAUCUAUCCUUGUUCACCCAAGCAUGUCACUGGGUGUUUUUUCUUACGAUAGAGAGCAUAGUUUUCAUACUACUCCC-CGUAGUAUAUAUGACUUUAGCAUUCCCGUAUAACAGUUUACGGGGUGCUUUUU
+BA000018.3/2008789-2008643 ACACAUGCAUCAACUAUUUACAUC----CUUGUUCACCCAAGCAUGUCACUGGGUGUUUUUUCUUAUGAUAGAGAGCAUAGUUUUCAUACUACUCCCCCGUAGUAUAUAUGACUUUAGCAUUCCCGUAUAAUAGUUUACGGGGUGCUUUUU
+CP000253.1/2035378-2035228 ACACAUGCAUCAACUAUUUACAUCUAUCCUUGUUCACCCAAGCAUGUCACUGGGUGUUUUUUCUUAUGAUAGAGAGCAUAGUUUUCAUACUACUCCCUCGUAGUAUAUAUGACUUUAGCAUUCCCGUAUAAUAGUUUACGGGGUGCUUUUU
+#=GC SS_cons               ::<<<-<-<<-<<____>>-->>----->->>>,<<<<<<__________>>>>>><<-<<<<<<______>>>>>->->>,,,,,<<<<<<<______>>>>>>>,,,,,,,,,,<<<<<-<<<<<<________>>>>>>>>>>>::::
+#=GC RF                    ACaCaUGCauCaaCUAUuuACauCUAUcCUuGuUCaCCCaAGCAUGUCACuGGGuGuuUuuuCuuAuGAUAgaGagCaUagUUUUCauaCuaCUCCCuCGuaGuauAUAUGACUUUaGCauUCCCGuaUAAuAGUUuaCGGGguGCuUUUU
+//

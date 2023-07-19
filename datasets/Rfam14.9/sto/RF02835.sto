@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02835
+#=GF ID   Bcj11
+#=GF DE   Burkholderia RNA 11
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   49.00
+#=GF TC   49.40
+#=GF NC   48.60
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0005515; protein binding;
+#=GF RN   [1]
+#=GF RM   23142676
+#=GF RT   Experimental identification of small non-coding regulatory RNAs in the
+#=GF RT   opportunistic human pathogen Burkholderia cenocepacia J2315.
+#=GF RA   Ramos CG, Grilo AM, da Costa PJ, Leitao JH
+#=GF RL   Genomics. 2013;101:139-148.
+#=GF CC   Co-purified with Hfq, expression confirmed by Northern blot. Predicted
+#=GF CC   target marZ. Overlaps coding sequence.
+#=GF WK   Burkholderia_cenocepacia
+#=GF SQ   4
+
+
+
+JRKM01000001.1/1213986-1213865 GCAACCUGAAGCUGGCGGCCGAGUACCCCAGCGUGUUCCGCUCGC-UGCUGGGGAUUUCGUGGAUGUGGUUCUUUGGCGCGGUCUUCCUGUCGCAGUUCCCUGCGUUCGCCAAGGAGGUGCUG
+CP000539.1/4119161-4119040     GCAACCUGAAGCUGGCGCACGGCAACACCGUGGUGUUCCGCUCGC-UGCUGGGCAUCUCGUGGAUGUGGUUCUUCGGCGCGGUGUUCCUGUCGCAGUUCCCCAGCUUCGCCAAGGACGUGCUG
+CP010951.1/1902359-1902238     GCAAUCUCAAGCUCGCGCACGGCAACGC-GGUGGUGUUCCGCUCGCUGCUGGGCAUCAGCUGGAUGUGGUUCUUCGGCGCGGUGUUCCUGUCGCAGUUCCCCAGCUUCGCCAAGGAGGUGCUG
+CP000555.1/3947785-3947906     GCAACCUGAAGCUCGCGCACGGCAACCUG-GUGGUGUUCCGUUCGCUGCUCGGCAUCUCGUGGAUGUGGUUCUUCGGCGCGGUGUUCCUGUCGAUGUUCCCGGCCUUCGCGAAGGAGGUGCUG
+#=GC SS_cons                   :::::::::<<<-<<-<<<-<<<<<<______>>>>>>->>>->>.->>>-<<<<<-<<<<<<<<<-<<--<<-<<<<<-<<____>>>>>>>->>-->>--->>>---->>>>>>->>>>>:
+#=GC RF                        GCAAcCUgAaGCUggCgccCggcaaCaccgguGuugucCggcucc.UGCuggGcaucuccuggacgUGGUUCuUcGgCgCGGUgUUCCuGuCgcaGUUCCCuacguUCGCcaaggaggugCuG
+//

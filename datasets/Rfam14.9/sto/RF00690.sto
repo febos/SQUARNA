@@ -1,0 +1,54 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00690
+#=GF ID   MIR408
+#=GF DE   microRNA MIR408
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   miRBase; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   64.00
+#=GF TC   65.50
+#=GF NC   63.30
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000102;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   15258262
+#=GF RT   Novel and stress-regulated microRNAs and other small RNAs from
+#=GF RT   Arabidopsis.
+#=GF RA   Sunkar R, Zhu JK
+#=GF RL   Plant Cell. 2004;16:2001-2019.
+#=GF RN   [2]
+#=GF RM   19939267
+#=GF RT   High throughput approaches reveal splicing of primary microRNA transcripts
+#=GF RT   and tissue specific expression of mature microRNAs in Vitis vinifera.
+#=GF RA   Mica E, Piccolo V, Delledonne M, Ferrarini A, Pezzotti M, Casati C, Del
+#=GF RA   Fabbro C, Valle G, Policriti A, Morgante M, Pesole G, Pe ME, Horner DS
+#=GF RL   BMC Genomics. 2009;10:558.
+#=GF RN   [3]
+#=GF RM   19939267
+#=GF RT   High throughput approaches reveal splicing of primary microRNA transcripts
+#=GF RT   and tissue specific expression of mature microRNAs in Vitis vinifera.
+#=GF RA   Mica E, Piccolo V, Delledonne M, Ferrarini A, Pezzotti M, Casati C, Del
+#=GF RA   Fabbro C, Valle G, Policriti A, Morgante M, Pesole G, Pe ME, Horner DS
+#=GF RL   BMC Genomics. 2009;10:558.
+#=GF WK   Mir-408_microRNA_precursor_family
+#=GF SQ   8
+
+
+AARH01001232.1/22607-22493 AGA----GACA-GAUGAAGACGGGGAACAGGCAG---------------------------------------AGCAUG---GAUG-----GAGCUACUAAC-------------------------------------------------------------AGAAG------UACUUGUUUUGGCUCU-ACCCAUGCACUGCCUCUUCCCUGGCUUG-UGGCUCUUCCUUUUCU
+AASG02001473.1/22877-22996 AGAAACAGACA-GACAAAGACUGGGAACAGGCAG---------------------------------------UGCAUG---GAUG-----GGGCUACUAAC-------------------------------------------------------------AGAAAA-----CAUCUGUUUUGGCUCU-ACCCCUGCACUGCCUCUUCCCUGGCUUC-CGGUUCUUCUUUUUGU
+AC136840.24/84429-84307    AGUUAAUGACAGGACAAAGACAGGGAACAUGCAG---------------------------------------AGCAUG---GAUG-----AAACUAUCGAC-------------------------------------------------------------AGUGAAGG---AAACUGUUGUGGCUCC-ACUCAUGCACUGCCUCUUCCCUGGCUUA-UAAUCUGUUUUUAUUA
+AM434998.2/53932-53808     AAAUGGAGACAAGAGGAAGACGGGGACGAGGUAG---------------------------------------UGCAUG---GAUG-----GAACUAUUAAC-------------------------------------------------------------AGAAGAAUGUUAAGCUGUUUUUGCUCU-ACCCAUGCACUGCCUCUUCCCUGGCU-C-UGUCUCUCCUUUACUC
+AK228004.1/1596-1471       AAGCGGUAAUGAGAGAGAGACAGGGAACAAGCAG---------------------------------------AGCAUG---GAUU-----GAGUUUACUAA-------------------------------------------------------------AACAUUAAACGACUCUGUUUUGUCUCU-ACCCAUGCACUGCCUCUUCCCUGGCUCC-CUCUUUUUUUCUCUAU
+GQ379191.1/170-351         GAUUGGAGAGGAGAG-GAGACAGGGAUGAGGCAGAGCAUGGGAUGGGGCUAUCAACAGAUGUAGAUUAUUCCUUGCACAAGAGAUGAUGAUGAGCUGUGAAUGAGU-----------------------------------------------------UCUGAGAGAUGGCUGGUGUUGUUGUUGCUCCCUCCCCUGCACUGCCUCUUCCCUGGCUCCCCUGCACACCUCUCUCU
+AY730704.1/10-135          AAGCGGUAAUGAGAGAGAGACAGGGAACAAGCAG---------------------------------------AGCAUG---GAUU-----GAGUUUACUAA-------------------------------------------------------------AACAUUAAACGACUCUGUUUUGUCUCU-ACCCAUGCACUGCCUCUUCCCUGGCUCC-CUCUUUUUUUCUCUAU
+GQ905616.1/68-256          GGUUGGUUUUGAUUUGGAGACAGGGAUGAGACAG---------------------------------------AGCAUG--GGAUG-----GGGCCAUCAACAAAGUGGAGGGACUAGCUUGCGAGGCAGAAAGAAGGUGCCAGUGCCGGUGCCUCCCCGGUGAAACGAUGAUGGGAGUGUUGUUGCUCCCUCCCCUGCACUGCCUCUUCCCUGGCUCC-GAUCCCCCACCGUUGC
+#=GC SS_cons               ::::::::::::::::<<<-<<<<<<<-<<<<<<.......................................-<<<<<..-<---.....<<_____________.....................................................____________________________>>---->>>>>>->>>>>>->>>>>>>->>>:.::::::::::::::::
+#=GC RF                    aauUGGugAugAgAugGAGACaGGGAagAgGCAG.......................................aGCAuG..aGAUG.....GaGCUaucAAcaAau.....................................................ugUGAgAaaaagaUGgaauUGUUgUuGCuCcCuCCCaUGCACUGCcUCuUCCCuGGCUCC.uuucuCuccucuuUuu
+//

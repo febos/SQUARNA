@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02615
+#=GF ID   BSR0626
+#=GF DE   Brucella sRNA 0626
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   155.00
+#=GF TC   155.10
+#=GF NC   58.30
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   25852653
+#=GF RT   Identification of a Novel Small Non-Coding RNA Modulating the
+#=GF RT   Intracellular Survival of Brucella melitensis.
+#=GF RA   Wang Y, Ke Y, Xu J, Wang L, Wang T, Liang H, Zhang W, Gong C, Yuan J,
+#=GF RA   Zhuang Y, An C, Lei S, Du X, Wang Z, Li W, Yuan X, Huang L, Yang X, Chen Z
+#=GF RL   Front Microbiol. 2015;6:164.
+#=GF WK   Brucella_sRNA
+#=GF SQ   2
+
+
+
+AE008918.1/661282-661409 UUCCUUCAUUGGCAGAAAAAAUCGAAAACGGUAGCAUUCAAAAUGAAAACAUCCGAAAGCGAAGCGAUAAUAAUUGGGGAGAACGUGUGAAUAAUAUGCGGGCAACCCGCGUGCCUUCUGAUUCCCCC
+CP000709.1/637805-637678 UUCCUUCAUUGGCAGAAAAAAUCGAAAGCGGUAGCAUUCAAAAUGAAAACAUCCGAAAGCGAAGCGAUAAUAAUUGGGGAGAACGUGUGAAUAAUAUGCGGGCAACCCGCGUGCCUUCUGAUUCCCCC
+#=GC SS_cons             ::<<______>>,,,,,,,,,<<<----<<<-----<<<<___>>>>----->>>---->>>-------------<<<<<----<<--<<<---<<<<<<<<___>>>>>>>>-->>>-->>>>>>>:
+#=GC RF                  UUCCUUCAUUGGCAGAAAAAAuCGAAAaCGGUAGCAuuCaAAAuGaaAACAUCCGAAAGCGaAGCGAUAAUAAUUGGGGaGAACguGUGaaUAAcacGCGGGCAACCCGCgugCCuuCUGacuCCCCC
+//

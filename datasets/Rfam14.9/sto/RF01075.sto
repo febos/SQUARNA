@@ -1,0 +1,47 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01075
+#=GF ID   TLS-PK1
+#=GF DE   Pseudoknot of tRNA-like structure
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   80.00
+#=GF TC   109.20
+#=GF NC   37.80
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   PKBASE; PKB00138;
+#=GF DR   PKBASE; PKB00164;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0045069; regulation of viral genome replication;
+#=GF RN   [1]
+#=GF RM   6328450
+#=GF RT   Nucleotide sequence of the 3'-terminal tRNA-like structure in barley
+#=GF RT   stripe mosaic virus genome.
+#=GF RA   Kozlov YuV, Rupasov VV, Adyshev DM, Belgelarskaya SN, Agranovsky AA,
+#=GF RA   Mankin AS, Morozov SYu, Dolja VV, Atabekov JG
+#=GF RL   Nucleic Acids Res. 1984;12:4001-4009.
+#=GF RN   [2]
+#=GF RM   1935928
+#=GF RT   tRNA-like structures. Structure, function and evolutionary significance.
+#=GF RA   Mans RM, Pleij CW, Bosch L
+#=GF RL   Eur J Biochem. 1991;201:303-324.
+#=GF RN   [3]
+#=GF RM   8623558
+#=GF RT   Comparisons of the genomic cis-elements and coding regions in RNA beta
+#=GF RT   components of the hordeiviruses barley stripe mosaic virus, lychnis
+#=GF RT   ringspot virus, and poa semilatent virus.
+#=GF RA   Solovyev AG, Savenkov EI, Agranovsky AA, Morozov SY
+#=GF RL   Virology. 1996;219:9-18.
+#=GF WK   Transfer_RNA-like_structures
+#=GF SQ   2
+
+
+M81486.1/3496-3591   AUUGGUAUGUAAGCUACUUCUUCCAGUAGCUGCGUCAUAACAUCAAGGUUAUGCAUACUGAGCCGAAGCUCAGCUUCGGUCCUCCAA-GGAAGACCA
+AY787207.1/2721-2816 AUUGGUAUGUAAGCUACAACUUCCGGUAGCUGCGUCACACU-UUAAGAGUGUGCAUACUGAGCCGAAGCUCAGCUUCGGUCCCCCAAGGGAAGACCA
+#=GC SS_cons         :((((((((,,<<<<<<__AAAAA_>>>>>>,,,,<<<<<<______>>>>>>))))))))-<<<<<<_____>>>>>>:::::::::aaaaa::::
+#=GC RF              AuugGuauGUAaGCuaCaaCUUCCaGuaGCuGCGUCacaccAUuAAGgguguGCauaCugaGCCGaaGCUCAGCuuCGGUCCuCCAAgGGAAGACCA
+//

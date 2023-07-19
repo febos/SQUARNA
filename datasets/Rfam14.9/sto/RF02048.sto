@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02048
+#=GF ID   STnc30
+#=GF DE   Salmonella enterica conserved region STnc30
+#=GF AU   Burge SW; 0000-0002-2506-927X
+#=GF SE   Burge SW
+#=GF SS   Predicted; WAR; Burge, SW
+#=GF GA   120.00
+#=GF TC   159.80
+#=GF NC   34.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   18725932
+#=GF RT   Deep sequencing analysis of small noncoding RNA and mRNA targets of the
+#=GF RT   global post-transcriptional regulator, Hfq.
+#=GF RA   Sittka A, Lucchini S, Papenfort K, Sharma CM, Rolle K, Binnewies TT,
+#=GF RA   Hinton JC, Vogel J
+#=GF RL   PLoS Genet. 2008;4:e1000163.
+#=GF WK   Bacterial_small_RNA
+#=GF SQ   2
+
+
+
+AE006468.1/58792-58923   AUCUUAAGAAUUUCUUUUGAUAUUCAAUGUGCGACAGGAAGAAUAAGGCGUAGUCGUCAUCCGUUGCUAAUGCCCCACCUUUUUGCUAUUCAUCUGAAAAACCAGCACAAUCGUUGCUGGUUUUUUGGUUGU
+CAAT01000320.1/4899-5030 AUCUUAAGAAUUUCUUUUGAUAUUCAAUGUGCGACAGGAAAAAUAAGGCGUAGUCGUCAUCCGGUGCUAAUGCCCCACCUUUUUGCUAUUCAUCUAGAAAAACCGCACAAUCGUUGCUGGUUUUUGGGUUGU
+#=GC SS_cons             :::::::<<<<-<<____>>->>>>,,,,,((((-(((,,,,,,,,<<<<____>>>>,,,,,,,<<____>>,,,,)))--))))-------<<<<<<<<<<<<<<_______>>>>>>>>>>>>>>::::
+#=GC RF                  AUCUUAAGaauUuCUUUUGaUauuCAAUGUGCgaCaGGAAaAAUAAGgCGUAGUCGuCAUCCGuUGCUAAUGCCCCACCuUUuuGCUAUUCAUCuggaaaacCaGCaCAAUCGUuGCuGguuuuccgGUUGU
+//

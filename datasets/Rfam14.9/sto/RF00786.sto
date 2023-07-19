@@ -1,0 +1,108 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00786
+#=GF ID   mir-289
+#=GF DE   mir-289 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   80.00
+#=GF TC   83.60
+#=GF NC   69.80
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000222;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17994087
+#=GF RT   Evolution of genes and genomes on the Drosophila phylogeny.
+#=GF RA   Clark AG, Eisen MB, Smith DR, Bergman CM, Oliver B, Markow TA, Kaufman TC,
+#=GF RA   Kellis M, Gelbart W, Iyer VN, Pollard DA, Sackton TB, Larracuente AM,
+#=GF RA   Singh ND, Abad JP, Abt DN, Adryan B, Aguade M, Akashi H, Anderson WW,
+#=GF RA   Aquadro CF, Ardell DH, Arguello R, Artieri CG, Barbash DA, Barker D,
+#=GF RA   Barsanti P, Batterham P, Batzoglou S, Begun D, Bhutkar A, Blanco E, Bosak
+#=GF RA   SA, Bradley RK, Brand AD, Brent MR, Brooks AN, Brown RH, Butlin RK,
+#=GF RA   Caggese C, Calvi BR, Bernardo de Carvalho A, Caspi A, Castrezana S,
+#=GF RA   Celniker SE, Chang JL, Chapple C, Chatterji S, Chinwalla A, Civetta A,
+#=GF RA   Clifton SW, Comeron JM, Costello JC, Coyne JA, Daub J, David RG, Delcher
+#=GF RA   AL, Delehaunty K, Do CB, Ebling H, Edwards K, Eickbush T, Evans JD,
+#=GF RA   Filipski A, Findeiss S, Freyhult E, Fulton L, Fulton R, Garcia AC,
+#=GF RA   Gardiner A, Garfield DA, Garvin BE, Gibson G, Gilbert D, Gnerre S, Godfrey
+#=GF RA   J, Good R, Gotea V, Gravely B, Greenberg AJ, Griffiths-Jones S, Gross S,
+#=GF RA   Guigo R, Gustafson EA, Haerty W, Hahn MW, Halligan DL, Halpern AL, Halter
+#=GF RA   GM, Han MV, Heger A, Hillier L, Hinrichs AS, Holmes I, Hoskins RA, Hubisz
+#=GF RA   MJ, Hultmark D, Huntley MA, Jaffe DB, Jagadeeshan S, Jeck WR, Johnson J,
+#=GF RA   Jones CD, Jordan WC, Karpen GH, Kataoka E, Keightley PD, Kheradpour P,
+#=GF RA   Kirkness EF, Koerich LB, Kristiansen K, Kudrna D, Kulathinal RJ, Kumar S,
+#=GF RA   Kwok R, Lander E, Langley CH, Lapoint R, Lazzaro BP, Lee SJ, Levesque L,
+#=GF RA   Li R, Lin CF, Lin MF, Lindblad-Toh K, Llopart A, Long M, Low L, Lozovsky
+#=GF RA   E, Lu J, Luo M, Machado CA, Makalowski W, Marzo M, Matsuda M, Matzkin L,
+#=GF RA   McAllister B, McBride CS, McKernan B, McKernan K, Mendez-Lago M, Minx P,
+#=GF RA   Mollenhauer MU, Montooth K, Mount SM, Mu X, Myers E, Negre B, Newfeld S,
+#=GF RA   Nielsen R, Noor MA, O'Grady P, Pachter L, Papaceit M, Parisi MJ, Parisi M,
+#=GF RA   Parts L, Pedersen JS, Pesole G, Phillippy AM, Ponting CP, Pop M, Porcelli
+#=GF RA   D, Powell JR, Prohaska S, Pruitt K, Puig M, Quesneville H, Ram KR, Rand D,
+#=GF RA   Rasmussen MD, Reed LK, Reenan R, Reily A, Remington KA, Rieger TT, Ritchie
+#=GF RA   MG, Robin C, Rogers YH, Rohde C, Rozas J, Rubenfield MJ, Ruiz A, Russo S,
+#=GF RA   Salzberg SL, Sanchez-Gracia A, Saranga DJ, Sato H, Schaeffer SW, Schatz
+#=GF RA   MC, Schlenke T, Schwartz R, Segarra C, Singh RS, Sirot L, Sirota M,
+#=GF RA   Sisneros NB, Smith CD, Smith TF, Spieth J, Stage DE, Stark A, Stephan W,
+#=GF RA   Strausberg RL, Strempel S, Sturgill D, Sutton G, Sutton GG, Tao W,
+#=GF RA   Teichmann S, Tobari YN, Tomimura Y, Tsolas JM, Valente VL, Venter E,
+#=GF RA   Venter JC, Vicario S, Vieira FG, Vilella AJ, Villasante A, Walenz B, Wang
+#=GF RA   J, Wasserman M, Watts T, Wilson D, Wilson RK, Wing RA, Wolfner MF, Wong A,
+#=GF RA   Wong GK, Wu CI, Wu G, Yamamoto D, Yang HP, Yang SP, Yorke JA, Yoshida K,
+#=GF RA   Zdobnov E, Zhang P, Zhang Y, Zimin AV, Baldwin J, Abdouelleil A,
+#=GF RA   Abdulkadir J, Abebe A, Abera B, Abreu J, Acer SC, Aftuck L, Alexander A,
+#=GF RA   An P, Anderson E, Anderson S, Arachi H, Azer M, Bachantsang P, Barry A,
+#=GF RA   Bayul T, Berlin A, Bessette D, Bloom T, Blye J, Boguslavskiy L, Bonnet C,
+#=GF RA   Boukhgalter B, Bourzgui I, Brown A, Cahill P, Channer S, Cheshatsang Y,
+#=GF RA   Chuda L, Citroen M, Collymore A, Cooke P, Costello M, D'Aco K, Daza R, De
+#=GF RA   Haan G, DeGray S, DeMaso C, Dhargay N, Dooley K, Dooley E, Doricent M,
+#=GF RA   Dorje P, Dorjee K, Dupes A, Elong R, Falk J, Farina A, Faro S, Ferguson D,
+#=GF RA   Fisher S, Foley CD, Franke A, Friedrich D, Gadbois L, Gearin G, Gearin CR,
+#=GF RA   Giannoukos G, Goode T, Graham J, Grandbois E, Grewal S, Gyaltsen K, Hafez
+#=GF RA   N, Hagos B, Hall J, Henson C, Hollinger A, Honan T, Huard MD, Hughes L,
+#=GF RA   Hurhula B, Husby ME, Kamat A, Kanga B, Kashin S, Khazanovich D, Kisner P,
+#=GF RA   Lance K, Lara M, Lee W, Lennon N, Letendre F, LeVine R, Lipovsky A, Liu X,
+#=GF RA   Liu J, Liu S, Lokyitsang T, Lokyitsang Y, Lubonja R, Lui A, MacDonald P,
+#=GF RA   Magnisalis V, Maru K, Matthews C, McCusker W, McDonough S, Mehta T,
+#=GF RA   Meldrim J, Meneus L, Mihai O, Mihalev A, Mihova T, Mittelman R, Mlenga V,
+#=GF RA   Montmayeur A, Mulrain L, Navidi A, Naylor J, Negash T, Nguyen T, Nguyen N,
+#=GF RA   Nicol R, Norbu C, Norbu N, Novod N, O'Neill B, Osman S, Markiewicz E,
+#=GF RA   Oyono OL, Patti C, Phunkhang P, Pierre F, Priest M, Raghuraman S, Rege F,
+#=GF RA   Reyes R, Rise C, Rogov P, Ross K, Ryan E, Settipalli S, Shea T, Sherpa N,
+#=GF RA   Shi L, Shih D, Sparrow T, Spaulding J, Stalker J, Stange-Thomann N,
+#=GF RA   Stavropoulos S, Stone C, Strader C, Tesfaye S, Thomson T, Thoulutsang Y,
+#=GF RA   Thoulutsang D, Topham K, Topping I, Tsamla T, Vassiliev H, Vo A, Wangchuk
+#=GF RA   T, Wangdi T, Weiand M, Wilkinson J, Wilson A, Yadav S, Young G, Yu Q,
+#=GF RA   Zembek L, Zhong D, Zimmer A, Zwirko Z, Jaffe DB, Alvarez P, Brockman W,
+#=GF RA   Butler J, Chin C, Gnerre S, Grabherr M, Kleber M, Mauceli E, MacCallum I
+#=GF RL   Nature. 2007;450:203-218.
+#=GF RN   [2]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-289 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   8
+
+
+URS00002E4487_7238/1-96  AGUUUACAGUAAAAUAAAUAUUUAAGUGGAGCCUGCGACUC---------CAGUCCCUCUG--ACUG--ACUGG-----GGUAAGUCACUUGAGCGUUUGUUGGCACGUAAAAG
+URS00002E4487_7240/1-96  AGUUUACAGUAAAAUAAAUAUUUAAGUGGAGCCUGCGACUC---------CAGUCCCUCUG--ACUG--ACUGG-----GGUAAGUCACUUGAGCGUUUGUUGGCACGUAAAAG
+URS0000450747_7245/1-96  AGUUUACAGUAAAAUAAAUAUUUAAGUGGAGCCUGCGACUC---------CAGUCCCUCUG--ACUG--ACUGG-----GGUAAGUCUCUCGAGCGUUUGUUGGCACGUAAAAG
+URS0000415B4D_7227/2-97  AGUUUACAGUAAAAUAAAUAUUUAAGUGGAGCCUGCGACUU---------CAGUCCCUCUG--ACUG--ACUGG-----GGUAAGUCACUUGAGCGUUUGUUGGCACGUAAAAG
+URS000047CF7C_7220/1-96  AGUUUACAGUAAAAUAAAUAUUUAAGUGGAGCCUGCGACUC---------CAGUCCCUCUG--ACGG--ACUGG-----GGUAACUCACUUGAGCGUUUGUUGGCACGUAAAAG
+URS000004F02C_7217/2-115 AGUUUACAGUAAAAUAAAUAUUUAAGUGGAGCCUGCGACUCUGCUACUGCCACUGCCACUGCCACUGCCACUGCCGCUCGGGGAGUCACUUGAGCGUUUGUUGGCACGUAAAAG
+URS00000AF00A_7237/2-98  AGUUUACAGUGAAAUAAAUAUUUAAGUGGAGCCUGCGACUGG--------GACUCCAGCUC--UCCG--ACUGG-----GCUAACUCACUUGAGCGUUUGUUGGCACGUAAAAG
+URS000048FB54_7234/1-97  AGUUUACAGUGAAAUAAAUAUUUAAGUGGAGCCUGCGACUGG--------GACUCCAGCUC--UCCG--ACUGG-----GCUAACUCACUUGAGCGUUUGUUGGCACGUAAAAG
+#=GC SS_cons             ::<<<<<-<<--<<<<<<<-<<<<<<<<<-<<<<-------.........<<_______>>..----..---->.....>>>--->>>>>>>>>->>>>>>>--->>>>>>>::
+#=GC RF                  AGuuuaCAGuAAaauaaauAuuuaaGuGgAgCCcGCGACUc.........cagUcCcuCug..aCuG..ACUGg.....GGcaAguCaCuugagCguuuguuGGCaCGuaaaAG
+//

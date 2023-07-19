@@ -1,0 +1,57 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03538
+#=GF ID   Flavi_TBFV_CRE
+#=GF DE   Tick-borne Flavivirus 3' UTR cis-acting replication element (CRE)
+#=GF AU   Lamkiewicz K; 0000-0002-6375-6441
+#=GF SE   Lamkiewicz K
+#=GF SS   Predicted; LocARNA 2.0.0RC8
+#=GF GA   60.50
+#=GF TC   67.50
+#=GF NC   60.40
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   GO; 0039694; viral RNA genome replication;
+#=GF DR   SO; 0000205; three_prime_UTR;
+#=GF RN   [1]
+#=GF RM   9696848
+#=GF RT   Identification of specific nucleotide sequences within the conserved 3'-SL
+#=GF RT   in the dengue type 2 virus genome required for replication.
+#=GF RA   Zeng L, Falgout B, Markoff L
+#=GF RL   J Virol 1998;72:7510-7522.
+#=GF RN   [2]
+#=GF RM   23760236
+#=GF RT   Differential RNA sequence requirement for dengue virus replication in
+#=GF RT   mosquito and mammalian cells.
+#=GF RA   Villordo SM, Gamarnik AV
+#=GF RL   J Virol. 2013;87:9365-9372.
+#=GF RN   [3]
+#=GF RM   28421048
+#=GF RT   Functional Information Stored in the Conserved Structural RNA Domains of
+#=GF RT   Flavivirus Genomes.
+#=GF RA   Fernandez-Sanles A, Rios-Marco P, Romero-Lopez C, Berzal-Herranz A
+#=GF RL   Front Microbiol. 2017;8:546.
+#=GF CC   Flavi_TBFV_CRE is a Tick Borne Flavivirus family. Flavivirus 3' UTR
+#=GF CC   cis-acting replication element (CRE) plays a crucial role in the virus
+#=GF CC   replication and is thought to be needed for the formation of a
+#=GF CC   "replication complex" [1], it is composed of a small hairpin (sHP) and a
+#=GF CC   larger structural element (3'SL). It has been shown that mutations in sHP
+#=GF CC   are lethal for the virus [2]. CRE is involved in the 5'-3' UTR interation
+#=GF CC   of flaviviruses [3]
+#=GF WK   Flavivirus_3'_UTR
+#=GF SQ   8
+
+
+NC_001809.1/10766-10871 UCCCCCUC-GACAGAGGGGGGGCGGUUCUUGUUCUCCCUGAGCCACCAUCACCCAGACACAGAUAGUCUGACAAGGAGGUGAUGUGUGACUCGG-AAAAACACCCGCU
+NC_027709.1/10765-10870 UCCCCCUC-GACAGAGGGGGGGCGGUUCUUGUUCUCCCUGAGCCACCAUCACCCAGACACAGAUAGUCUGACAAGGAGGUGAUGCGUGACUCGG-AAAAACACCCGCU
+NC_001672.1/11036-11141 UCCCCCUC-GGUAGAGGGGGGGCGGUUCUUGUUCUCCCUGAGCCACCAUCACCCAGACACAGGUAGUCUGACAAGGAGGUGAUGUGUGACUCGG-AAAAACACCCGCU
+NC_003687.1/10734-10839 UCCCCCAG-GAAACUGGGGGGGCGGUUCUUGUUCUCCCUGAGCCACCACCAUCCAGGCACAGAUAGCCUGACAAGGAGAUGGUGUGUGACUCGG-AAAAACACCCGCU
+NC_003690.1/10838-10943 UCCCCCUC-GUCAGAGGGGGGGCGGUUCUUGUUCUCCCUGAGCCACCAUCACCUAGACACAGAUAGUCUGAAAAGGAGGUGAUGCGUGUCUCGG-AAAAACACCCGCU
+NC_005062.1/10682-10787 UCCCCCUC-AUCUGAGGGGGGGCGGUUCUUGUUCUCCCUGAGCCACCAUCACCCAGACACAGGCAGUCUAACAAGGAGGUGAUGUGUGACUCGG-AACAACACCCGCU
+HM055369.1/10668-10774  -CCCCCUGCUAUGCAGGGGGGGCGGUUCUUGUUCUCCCCGAACCAUCAUCACCAAGACACAGAUUGUCGGACAAGGAGGUGGUGCAUGUUUCGGAAAAAACAUCCGCU
+AF311056.1/10715-10800  UCCCCCAG-GAAACUGGGGGGGCGGUUCUUGUUCUCCCUGAGCCACCGCCAUCCAGGCACAGAUAGCCUGACAAGGAGAUGGUGAGU---------------------
+#=GC SS_cons            :<<<<<<<.____>>>>>>><<<<<----<<<<----<<<<<-<<<<<<<<<<<<<<<_______>>>>>------->>>>>>>->>>->>>>>.--->>>>->>>>>
+#=GC RF                 UCCCCCuc.gauagaGGGGGgGCGGUUCUuGuuCUCCCcGagCCacCacCacCcaGgCACAGauaGcCugAcAAGGAGguGguGuguGacuCgG.AAaaaCacCCGCc
+//

@@ -1,0 +1,133 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00763
+#=GF ID   mir-339
+#=GF DE   microRNA mir-339
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   60.00
+#=GF TC   61.40
+#=GF NC   58.90
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000193;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF RN   [2]
+#=GF RM   20215419
+#=GF RT   MicroRNA transcriptome in the newborn mouse ovaries determined by massive
+#=GF RT   parallel sequencing.
+#=GF RA   Ahn HW, Morin RD, Zhao H, Harris RA, Coarfa C, Chen ZJ, Milosavljevic A,
+#=GF RA   Marra MA, Rajkovic A
+#=GF RL   Mol Hum Reprod. 2010;16:463-471.
+#=GF RN   [3]
+#=GF RM   20413612
+#=GF RT   Mammalian microRNAs: experimental evaluation of novel and previously
+#=GF RT   annotated genes.
+#=GF RA   Chiang HR, Schoenfeld LW, Ruby JG, Auyeung VC, Spies N, Baek D, Johnston
+#=GF RA   WK, Russ C, Luo S, Babiarz JE, Blelloch R, Schroth GP, Nusbaum C, Bartel
+#=GF RA   DP
+#=GF RL   Genes Dev. 2010;24:992-1009.
+#=GF RN   [4]
+#=GF RM   14691248
+#=GF RT   Identification of many microRNAs that copurify with polyribosomes in
+#=GF RT   mammalian neurons.
+#=GF RA   Kim J, Krichevsky A, Grad Y, Hayes GD, Kosik KS, Church GM, Ruvkun G
+#=GF RL   Proc Natl Acad Sci U S A. 2004;101:360-365.
+#=GF RN   [5]
+#=GF RM   20403161
+#=GF RT   Small RNA expression and strain specificity in the rat.
+#=GF RA   Linsen SE, de Wit E, de Bruijn E, Cuppen E
+#=GF RL   BMC Genomics. 2010;11:249.
+#=GF RN   [6]
+#=GF RM   19170227
+#=GF RT   Identification and expression profiling of microRNAs during bovine oocyte
+#=GF RT   maturation using heterologous approach.
+#=GF RA   Tesfaye D, Worku D, Rings F, Phatsara C, Tholen E, Schellander K, Hoelker
+#=GF RA   M
+#=GF RL   Mol Reprod Dev. 2009;76:665-677.
+#=GF RN   [7]
+#=GF RM   19758457
+#=GF RT   Characterization of bovine miRNAs by sequencing and bioinformatics
+#=GF RT   analysis.
+#=GF RA   Jin W, Grant JR, Stothard P, Moore SS, Guan LL
+#=GF RL   BMC Mol Biol. 2009;10:90.
+#=GF RN   [8]
+#=GF RM   19633723
+#=GF RT   Repertoire of bovine miRNA and miRNA-like small regulatory RNAs expressed
+#=GF RT   upon viral infection.
+#=GF RA   Glazov EA, Kongsuwan K, Assavalapsakul W, Horwood PF, Mitter N, Mahony TJ
+#=GF RL   PLoS One. 2009;4:e6349.
+#=GF RN   [9]
+#=GF RM   19917043
+#=GF RT   MicroRNA identity and abundance in porcine skeletal muscles determined by
+#=GF RT   deep sequencing.
+#=GF RA   Nielsen M, Hansen JH, Hedegaard J, Nielsen RO, Panitz F, Bendixen C,
+#=GF RA   Thomsen B
+#=GF RL   Anim Genet. 2010;41:159-168.
+#=GF RN   [10]
+#=GF RM   20180025
+#=GF RT   Cloning and characterization of microRNAs from porcine skeletal muscle and
+#=GF RT   adipose tissue.
+#=GF RA   Cho IS, Kim J, Seo HY, Lim do H, Hong JS, Park YH, Park DC, Hong KC, Whang
+#=GF RA   KY, Lee YS
+#=GF RL   Mol Biol Rep. 2010;37:3567-3574.
+#=GF RN   [11]
+#=GF RM   20433717
+#=GF RT   Deciphering the porcine intestinal microRNA transcriptome.
+#=GF RA   Sharbati S, Friedlander MR, Sharbati J, Hoeke L, Chen W, Keller A, Stahler
+#=GF RA   PF, Rajewsky N, Einspanier R
+#=GF RL   BMC Genomics. 2010;11:275.
+#=GF RN   [12]
+#=GF RM   15325244
+#=GF RT   Altered expression profiles of microRNAs during TPA-induced
+#=GF RT   differentiation of HL-60 cells.
+#=GF RA   Kasashima K, Nakamura Y, Kozu T
+#=GF RL   Biochem Biophys Res Commun. 2004;322:403-410.
+#=GF RN   [13]
+#=GF RM   15634332
+#=GF RT   New human and mouse microRNA genes found by homology search.
+#=GF RA   Weber MJ
+#=GF RL   FEBS J. 2005;272:59-73.
+#=GF RN   [14]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   Mir-339_microRNA_precursor_family
+#=GF SQ   12
+
+
+URS0000698C8E_10116/2-93  CGGGGUGGACACCGUCCCUGUCCUCCAGGAGCUCACGUAUGCCUGCCUGUGAGCGCCU-CGACGACAG-AGCCAGAGUCCACCCCUGCACUGCC
+URS00006A63BC_10090/2-93  CGGGGUGGCCACUAUCCCUGUCCUCCAGGAGCUCACGUAUGCCUGCCUGUGAGCGCCU-CGGCGACAG-AGCCGGUGUCCACCCCUGCACUGUC
+URS000075D3DB_10029/1-80  -----CAGCCACCGUCCCUGUCCUCCAGGAGCUCACGUAUGCCUGCCUGUGAGCACCU-CGAUGACAG-AGCCGGUGUCCACCCCUG-------
+URS0000759EBD_9598/1-92   CGGGGCGGCCGCUCUCCCUGUCCUCCAGGAGCUCACGUGUGCCUGCCUGUGAGCGCCU-CGACGACAG-AGCCAGCGCCUGCCCCAGUGUCUGC
+URS000075C41C_9593/20-111 CGGGGCGGCCGCUCUCCCUGUCCUCCAGGAGCUCACGUGUGCCUGCCUGUGAGCGCCU-CGACGACAG-AGCCGGCGCCUGCCCCAGUGUCUGC
+URS000075B703_9606/1-92   CGGGGCGGCCGCUCUCCCUGUCCUCCAGGAGCUCACGUGUGCCUGCCUGUGAGCGCCU-CGACGACAG-AGCCGGCGCCUGCCCCAGUGUCUGC
+URS000075BFFA_9544/1-92   CGGGGCGGCCGCUCUCCCUGUCCUCCAGGAGCUCACGUGUGCCUGCCUGUGAGCGCCU-CGACGACAG-AGCCGGCGCCCGCCCCAGUGUCUGC
+URS0000A8B5A2_9600/1-94   CGGGGCGGCCGCUCUCCCUGUCCUCCAGGAGCUCACGUGUGCCUGCCUGUGAGCGCCUUCGACGACAGGAGCCGGCGCCCGCCCCAGUGUCUGC
+URS000075B465_9823/1-80   ----GCAGCCGCCGUCCCUGUCCUCCAGGAGCUCACUUACCUUGGGCCGUGAGCUCCU-CGAGGCCAG-AGCCCGUGUCUGCCUCU--------
+URS00007E3426_9615/1-58   --------------UCCCUGUCCUCCAGGAGCUCACUUAUAUCUGGCCGUGAGCUCCU-CGAGGCCAG-AGCCC--------------------
+URS0000759DE6_9913/1-78   -GGGGCAGCCGCUGUCCCUGUCCUCCAGGAGCUCACUUG-GUCCGGCCGUGCGCUCCU-CGAGGCCAG-AGCCCGUGUCUGC------------
+URS0000D54FD8_29078/1-74  ------AGCCGCGCUCCCUGUCCUCCAGGAGCUCACCUGCGUCCGGCCGUGAGCGCCU-CGGGGCCAG-AGCCCGCGUCUGC------------
+#=GC SS_cons              ::::<<<<-<<<<--<-<<<-<-<<-<<<-<<<<<<<<<____>>>-->>>>>>->>>.->>->->>>.->-->>>>->>>>::::::::::::
+#=GC RF                   CGGGGcgGcCgCccUCCCuGUCCuCCaGGAGCuCaCgugUgcCcgcCuGuGaGCgCCu.CGacGaCaG.AGCCgGcGuCcgCCcCaGugucugC
+//

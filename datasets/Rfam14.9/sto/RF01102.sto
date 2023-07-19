@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01102
+#=GF ID   PK1-TEV_CVMV
+#=GF DE   5'-leader pseudoknot of TEV/CVMV
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Pseudobase
+#=GF SS   Pseudobase
+#=GF GA   40.00
+#=GF TC   42.70
+#=GF NC   38.70
+#=GF TP   Cis-reg; leader;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   PKBASE; PKB00277;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0002190; cap-independent translational initiation;
+#=GF RN   [1]
+#=GF RM   15911616
+#=GF RT   Cap-independent translation of tobacco etch virus is conferred by an RNA
+#=GF RT   pseudoknot in the 5'-leader.
+#=GF RA   Zeenko V, Gallie DR
+#=GF RL   J Biol Chem. 2005;280:26813-26824.
+#=GF WK   Tobacco_etch_virus
+#=GF SQ   2
+
+
+M15239.1/38-74   CGAAUCUCAAGCAAUCAAGCAUUCUACUUCUAUUGCA
+AJ237843.3/24-59 CGAAU-UCAAGCAAUCAAGCAUUCAAGCGCUCUUUUA
+#=GC SS_cons     :<<<<<<___AAAAA__>>->>>>:::::::aaaaa:
+#=GC RF          CGAAUCUCAAGCAAUCAAGCAUUCuAguuCUaUUuuA
+//

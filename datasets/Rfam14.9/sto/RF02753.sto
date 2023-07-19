@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02753
+#=GF ID   ES173
+#=GF DE   ES173 sRNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold
+#=GF GA   90.00
+#=GF TC   92.90
+#=GF NC   74.30
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   26653712
+#=GF RT   Differential expression of small RNAs under chemical stress and fed-batch
+#=GF RT   fermentation in E. coli.
+#=GF RA   Rau MH, Bojanovic K, Nielsen AT, Long KS
+#=GF RL   BMC Genomics. 2015;16:1051.
+#=GF CC   Differentially expressed under several chemical stress conditions.
+#=GF WK   Escherichia_coli_sRNA
+#=GF SQ   4
+
+
+
+U00096.2/3154543-3154606   UUUUUACGCCUCAAACUUUCGUUUUCGGG-CAUUUCGUCCAGACUUAAGUUCACAACACCUCACC
+AEJY01000042.1/60378-60441 UUUUUACGCCUCAAACUUUCGUUUUUGGG-CAUUUCGUCCAGACUUAAGUUCACAACACCUCACC
+ADUU01000026.1/72568-72504 UUUUUACGCCUCAAACUUUCGUUUUCGGGUCAUUUCGUCCAGACUUAAGUUCACAACACCUCACC
+AEJZ01000135.1/15562-15499 UUUUUCCUCCUCAAACUUUCGUUUUUGGG-UAUUUCGUCCAGACUUAAGUUCACACCAACUCACC
+#=GC SS_cons               :::::::::::::<<<<<--<<<<--<<<.<_____>>>>>>>>-->>>>>::::::::::::::
+#=GC RF                    UUUUUACgCCUCAAACUUUCGUuUUuGGG.cAUUUCgUCCAgACUUAAGUUCACAACAcCUCACC
+//

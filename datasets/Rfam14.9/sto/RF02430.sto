@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02430
+#=GF ID   SpF19_sRNA
+#=GF DE   Streptococcus sRNA SpF19
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Eberhardt R
+#=GF SS   Predicted; mfold
+#=GF GA   60.00
+#=GF TC   89.10
+#=GF NC   53.20
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   22807675
+#=GF RT   Control of virulence by small RNAs in Streptococcus pneumoniae.
+#=GF RA   Mann B, van Opijnen T, Wang J, Obert C, Wang YD, Carter R, McGoldrick DJ,
+#=GF RA   Ridout G, Camilli A, Tuomanen EI, Rosch JW
+#=GF RL   PLoS Pathog. 2012;8:e1002788.
+#=GF WK   Streptococcus_sRNA
+#=GF SQ   3
+
+
+
+AAFA03000004.1/83317-83220         AAAUAAAAGGAUGUUAUCGCU--UUAAGGCGAGCAGGAACCUAUUUAAAUGAAUCGAUACGAUAUAUGUCGAUUUCUUUUAAGUAGGUUC-UUUUAUUUUA
+AARD01000216.1/4451-4353           GAAAUAAAAGAUGUUAUCGCU--UUAAGGCGAGCAGGAACCUAUUUAAAUGAAUCGAUACGAUAUAUGUCGAUUUCUUUUAAGUAGGUUCUUUUAUUUUAA
+CP002925.1/559026-559124           AAAUAAAAGGAUGUUAUCACUAAUACAAGUGAGCAGGAACCUAUUUAAUCACAUCAGAAGAAGUUUC-UUGAUG-UUUUUAAGUAGGUUCCUUUUAUUUUA
+#=GC SS_cons                       (((((((,,,,,,,,,<<<<<..____>>>>>,,<<<<<<<<<<<<<<--<<<<<<<<<<___>>>>-->>>>>->-->>>>>>>>>>>>>>)))))))::
+#=GC RF                            aaauaaaAgGAUGUUAuCgCc..UuaAgGcGaGCagGaaCCuauuuaaaugcauCgguacgAuguacGUcGaugUcUUuuaaguaGGuuCcuuuuauuuuA
+//

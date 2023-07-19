@@ -1,0 +1,111 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01174
+#=GF ID   snoU43
+#=GF DE   Small nucleolar RNA U43
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Predicted; WAR; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   45.00
+#=GF TC   45.30
+#=GF NC   43.90
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 31.42 -Z 549862.597050 CM SEQDB
+#=GF DR   URL; http://snoopy.med.miyazaki-u.ac.jp/view.cgi?id=DRO30008;
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   17994087
+#=GF RT   Evolution of genes and genomes on the Drosophila phylogeny.
+#=GF RA   Clark AG, Eisen MB, Smith DR, Bergman CM, Oliver B, Markow TA, Kaufman TC,
+#=GF RA   Kellis M, Gelbart W, Iyer VN, Pollard DA, Sackton TB, Larracuente AM,
+#=GF RA   Singh ND, Abad JP, Abt DN, Adryan B, Aguade M, Akashi H, Anderson WW,
+#=GF RA   Aquadro CF, Ardell DH, Arguello R, Artieri CG, Barbash DA, Barker D,
+#=GF RA   Barsanti P, Batterham P, Batzoglou S, Begun D, Bhutkar A, Blanco E, Bosak
+#=GF RA   SA, Bradley RK, Brand AD, Brent MR, Brooks AN, Brown RH, Butlin RK,
+#=GF RA   Caggese C, Calvi BR, Bernardo de Carvalho A, Caspi A, Castrezana S,
+#=GF RA   Celniker SE, Chang JL, Chapple C, Chatterji S, Chinwalla A, Civetta A,
+#=GF RA   Clifton SW, Comeron JM, Costello JC, Coyne JA, Daub J, David RG, Delcher
+#=GF RA   AL, Delehaunty K, Do CB, Ebling H, Edwards K, Eickbush T, Evans JD,
+#=GF RA   Filipski A, Findeiss S, Freyhult E, Fulton L, Fulton R, Garcia AC,
+#=GF RA   Gardiner A, Garfield DA, Garvin BE, Gibson G, Gilbert D, Gnerre S, Godfrey
+#=GF RA   J, Good R, Gotea V, Gravely B, Greenberg AJ, Griffiths-Jones S, Gross S,
+#=GF RA   Guigo R, Gustafson EA, Haerty W, Hahn MW, Halligan DL, Halpern AL, Halter
+#=GF RA   GM, Han MV, Heger A, Hillier L, Hinrichs AS, Holmes I, Hoskins RA, Hubisz
+#=GF RA   MJ, Hultmark D, Huntley MA, Jaffe DB, Jagadeeshan S, Jeck WR, Johnson J,
+#=GF RA   Jones CD, Jordan WC, Karpen GH, Kataoka E, Keightley PD, Kheradpour P,
+#=GF RA   Kirkness EF, Koerich LB, Kristiansen K, Kudrna D, Kulathinal RJ, Kumar S,
+#=GF RA   Kwok R, Lander E, Langley CH, Lapoint R, Lazzaro BP, Lee SJ, Levesque L,
+#=GF RA   Li R, Lin CF, Lin MF, Lindblad-Toh K, Llopart A, Long M, Low L, Lozovsky
+#=GF RA   E, Lu J, Luo M, Machado CA, Makalowski W, Marzo M, Matsuda M, Matzkin L,
+#=GF RA   McAllister B, McBride CS, McKernan B, McKernan K, Mendez-Lago M, Minx P,
+#=GF RA   Mollenhauer MU, Montooth K, Mount SM, Mu X, Myers E, Negre B, Newfeld S,
+#=GF RA   Nielsen R, Noor MA, O'Grady P, Pachter L, Papaceit M, Parisi MJ, Parisi M,
+#=GF RA   Parts L, Pedersen JS, Pesole G, Phillippy AM, Ponting CP, Pop M, Porcelli
+#=GF RA   D, Powell JR, Prohaska S, Pruitt K, Puig M, Quesneville H, Ram KR, Rand D,
+#=GF RA   Rasmussen MD, Reed LK, Reenan R, Reily A, Remington KA, Rieger TT, Ritchie
+#=GF RA   MG, Robin C, Rogers YH, Rohde C, Rozas J, Rubenfield MJ, Ruiz A, Russo S,
+#=GF RA   Salzberg SL, Sanchez-Gracia A, Saranga DJ, Sato H, Schaeffer SW, Schatz
+#=GF RA   MC, Schlenke T, Schwartz R, Segarra C, Singh RS, Sirot L, Sirota M,
+#=GF RA   Sisneros NB, Smith CD, Smith TF, Spieth J, Stage DE, Stark A, Stephan W,
+#=GF RA   Strausberg RL, Strempel S, Sturgill D, Sutton G, Sutton GG, Tao W,
+#=GF RA   Teichmann S, Tobari YN, Tomimura Y, Tsolas JM, Valente VL, Venter E,
+#=GF RA   Venter JC, Vicario S, Vieira FG, Vilella AJ, Villasante A, Walenz B, Wang
+#=GF RA   J, Wasserman M, Watts T, Wilson D, Wilson RK, Wing RA, Wolfner MF, Wong A,
+#=GF RA   Wong GK, Wu CI, Wu G, Yamamoto D, Yang HP, Yang SP, Yorke JA, Yoshida K,
+#=GF RA   Zdobnov E, Zhang P, Zhang Y, Zimin AV, Baldwin J, Abdouelleil A,
+#=GF RA   Abdulkadir J, Abebe A, Abera B, Abreu J, Acer SC, Aftuck L, Alexander A,
+#=GF RA   An P, Anderson E, Anderson S, Arachi H, Azer M, Bachantsang P, Barry A,
+#=GF RA   Bayul T, Berlin A, Bessette D, Bloom T, Blye J, Boguslavskiy L, Bonnet C,
+#=GF RA   Boukhgalter B, Bourzgui I, Brown A, Cahill P, Channer S, Cheshatsang Y,
+#=GF RA   Chuda L, Citroen M, Collymore A, Cooke P, Costello M, D'Aco K, Daza R, De
+#=GF RA   Haan G, DeGray S, DeMaso C, Dhargay N, Dooley K, Dooley E, Doricent M,
+#=GF RA   Dorje P, Dorjee K, Dupes A, Elong R, Falk J, Farina A, Faro S, Ferguson D,
+#=GF RA   Fisher S, Foley CD, Franke A, Friedrich D, Gadbois L, Gearin G, Gearin CR,
+#=GF RA   Giannoukos G, Goode T, Graham J, Grandbois E, Grewal S, Gyaltsen K, Hafez
+#=GF RA   N, Hagos B, Hall J, Henson C, Hollinger A, Honan T, Huard MD, Hughes L,
+#=GF RA   Hurhula B, Husby ME, Kamat A, Kanga B, Kashin S, Khazanovich D, Kisner P,
+#=GF RA   Lance K, Lara M, Lee W, Lennon N, Letendre F, LeVine R, Lipovsky A, Liu X,
+#=GF RA   Liu J, Liu S, Lokyitsang T, Lokyitsang Y, Lubonja R, Lui A, MacDonald P,
+#=GF RA   Magnisalis V, Maru K, Matthews C, McCusker W, McDonough S, Mehta T,
+#=GF RA   Meldrim J, Meneus L, Mihai O, Mihalev A, Mihova T, Mittelman R, Mlenga V,
+#=GF RA   Montmayeur A, Mulrain L, Navidi A, Naylor J, Negash T, Nguyen T, Nguyen N,
+#=GF RA   Nicol R, Norbu C, Norbu N, Novod N, O'Neill B, Osman S, Markiewicz E,
+#=GF RA   Oyono OL, Patti C, Phunkhang P, Pierre F, Priest M, Raghuraman S, Rege F,
+#=GF RA   Reyes R, Rise C, Rogov P, Ross K, Ryan E, Settipalli S, Shea T, Sherpa N,
+#=GF RA   Shi L, Shih D, Sparrow T, Spaulding J, Stalker J, Stange-Thomann N,
+#=GF RA   Stavropoulos S, Stone C, Strader C, Tesfaye S, Thomson T, Thoulutsang Y,
+#=GF RA   Thoulutsang D, Topham K, Topping I, Tsamla T, Vassiliev H, Vo A, Wangchuk
+#=GF RA   T, Wangdi T, Weiand M, Wilkinson J, Wilson A, Yadav S, Young G, Yu Q,
+#=GF RA   Zembek L, Zhong D, Zimmer A, Zwirko Z, Jaffe DB, Alvarez P, Brockman W,
+#=GF RA   Butler J, Chin C, Gnerre S, Grabherr M, Kleber M, Mauceli E, MacCallum I
+#=GF RL   Nature. 2007;450:203-218.
+#=GF RN   [2]
+#=GF RM   15987805
+#=GF RT   Genome-wide analyses of two families of snoRNA genes from Drosophila
+#=GF RT   melanogaster, demonstrating the extensive utilization of introns for
+#=GF RT   coding of snoRNAs.
+#=GF RA   Huang ZP, Zhou H, He HL, Chen CL, Liang D, Qu LH
+#=GF RL   RNA. 2005;11:1303-1316.
+#=GF WK   Small_nucleolar_RNA
+#=GF SQ   11
+
+
+
+AEAB01027627.1/3905-3978     AUGAUGAUU--------UAGAAAAUUUAUGGUUAGAU-AUA-CUGAAUAA-CCUUGAUGAA--C---UUAUUCUAGGGCGGUCUGAUUUU
+AADG06002824.1/6841-6765     AUGAUGAUUA-CA--UUUUUAAUGUUUAUGGUUUUAAAA---CUGAAUAA-CCAUGAGGAU--A----AAUUCUAGGGCGGUCUGAUAUU
+AEVX01005495.1/1202-1277     AUGAUGAUUU-AG--A-UUAAAAGUUUAUGGUU----UUCGUCUGAAUAA-UCUUGACGAU--A---AUAUUCUAGGGCGGUCUGAUUUU
+AJ784369.2/7-85              AUGAUGAGUA-UA--C-UAGAAGAUUUAUGGUUAGAACACAUAUGAUUAA-CCGUGAUUAU--C----UCAACUAGGGCGGACUGACCAA
+AAEU02000017.1/580975-581052 AUGAUGAUU--UA--C-UAGAAGAUUUAUGGUUAGAACACAACUGAUUAA-CCGUGAUUAU--C----UCAACUAGGGCGGACUGACUAA
+AAPP01019560.1/78790-78713   AUGAUGAGUA-AA--C-UAGAAAAUUUAUGGUUAGAACACA-AUGAAUAA-CCUUGAUUAA--A----UUAACUAGGGCGGACUGAUCAA
+AAPU01010962.1/18103-18022   AUGAUGAGGAACA--G-UUAAAAUUUUAUGGUUAGAACACAUAUGAUUAA-CCGUGAUUAU--CA--AUUAACUAGGGCGGACUGACUCG
+AADE01000237.1/3017-2936     AUGAUGAUAA-AA--GGUAAAAAAUUUAUGGUUAGAAACUGUAUGAUCAA-CCGUGAUUAUUAC----UUUACUAGGGCGGACUGACUAA
+AANI01017147.1/264213-264131 AUGAUGAGAA-ACAGU-UAAAAUUUUUAUGGUUAGAACACAAAUGAUCAA-CUGUGAUUAUGAC----UUAACUAGGGCGGACUGAUUUG
+AAPT01018771.1/29442-29360   AUGAUGAGGAACA--G-UUAAAUUAUUAUGGUUAGAACACAUAUGAUAAAACCGUGAUUAU--UA--AUUAACUAGGGCGGACUGAUUUG
+AAQB01009437.1/229446-229526 GUGAUGAAUU-UA--G-U-UAUCAAUUAUGGUUAGAACAAACAUGAUUU--CCGUGAUUAU--CAAUUAUAACUAGGGCGAACUGACUAA
+#=GC SS_cons                 ::::::::::.::..:.:::::::::::::::::::::::::::::::::.::::::::::..:....::::::::::::::::::::::
+#=GC RF                      AUGAUGAuua.aa..g.UaaAAaaUUUAUGGUUAGAAcAcAuaUGAuuAA.CCgUGAUuAU..c....UuaaCUAGGGCGGaCUGAuUua
+//

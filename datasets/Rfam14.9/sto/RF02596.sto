@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02596
+#=GF ID   cyano_het_sRNA
+#=GF DE   Cyanobacteria heterocyst sRNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Brendes-Alvarez et al, PMID:26870012
+#=GF SS   Predicted; PMID:26870012
+#=GF GA   35.70
+#=GF TC   35.70
+#=GF NC   35.00
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   26870012
+#=GF RT   Identification of Conserved and Potentially Regulatory Small RNAs in
+#=GF RT   Heterocystous Cyanobacteria.
+#=GF RA   Brenes-Alvarez M, Olmedo-Verd E, Vioque A, Muro-Pastor AM
+#=GF RL   Front Microbiol. 2016;7:48.
+#=GF WK   Bacterial_small_RNA
+#=GF SQ   5
+
+
+BA000019.2/4547237-4547182 GGGAUGUUGUUAUGCACUGGAUUU-AUAGAGAGGUUUGGUGGUGAGCCAAACCUUUU
+CP000117.1/1926704-1926760 GGGAUGUUGUUAUGCACUGGAUUUUAUAGAAAGGUUUGGUGGUGAGCCAAACCUUUU
+CP002059.1/1330171-1330116 GGGAUGUUGUUAUGCACUGGAUUU-AUAGCGAGGUUUGGUUAACCACCAAACCUUUU
+AAVW01000015.1/27277-27222 GGGAUGUUGUUAUGCACUGGAUUU-AUAGUGAGGUUUGGUGAUCAGCCAAACCUCUU
+CP001037.1/871141-871196   GGGAUGUUGUUAUGCACUGGAUUU-AUAUAGAGGUUUGGCGGUGAGCCAAACCUUUU
+#=GC SS_cons               :<<-<<<______>>>>>------.-----<<<<<<<<<<_____>>>>>>>>>>::
+#=GC RF                    GGGAUGUUGUUAUGCACUGGAUUU.AUAGagAGGUUUGGcGgUgAgCCAAACCUcUU
+//

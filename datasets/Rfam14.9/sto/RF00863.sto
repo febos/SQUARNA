@@ -1,0 +1,47 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00863
+#=GF ID   mir-BART17
+#=GF DE   microRNA mir-BART17
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   miRBase; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   100.00
+#=GF TC   112.80
+#=GF NC   50.20
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 20 -Z 549862.597050 CM SEQDB
+#=GF DR   MIPF; MIPF0000321;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0035068; micro-ribonucleoprotein complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   16540699
+#=GF RT   A combined computational and microarray-based approach identifies novel
+#=GF RT   microRNAs encoded by human gamma-herpesviruses.
+#=GF RA   Grundhoff A, Sullivan CS, Ganem D
+#=GF RL   RNA. 2006;12:733-750.
+#=GF RN   [2]
+#=GF RM   17604727
+#=GF RT   A mammalian microRNA expression atlas based on small RNA library
+#=GF RT   sequencing.
+#=GF RA   Landgraf P, Rusu M, Sheridan R, Sewer A, Iovino N, Aravin A, Pfeffer S,
+#=GF RA   Rice A, Kamphorst AO, Landthaler M, Lin C, Socci ND, Hermida L, Fulci V,
+#=GF RA   Chiaretti S, Foa R, Schliwka J, Fuchs U, Novosel A, Muller RU, Schermer B,
+#=GF RA   Bissels U, Inman J, Phan Q, Chien M, Weir DB, Choksi R, De Vita G,
+#=GF RA   Frezzetti D, Trompeter HI, Hornung V, Teng G, Hartmann G, Palkovits M, Di
+#=GF RA   Lauro R, Wernet P, Macino G, Rogler CE, Nagle JW, Ju J, Papavasiliou FN,
+#=GF RA   Benzing T, Lichter P, Tam W, Brownstein MJ, Bosio A, Borkhardt A, Russo
+#=GF RA   JJ, Sander C, Zavolan M, Tuschl T
+#=GF RL   Cell. 2007;129:1401-1414.
+#=GF WK   MicroRNA
+#=GF SQ   2
+
+
+AJ507799.2/139894-139995 GUUGAACAGGAUGUGGCACCCUAAGAGGACG-CAGGCAUAC-AAGGUUAUUACCCAGUCCUUGUAUGCCUGGUGUCCCCUUAGUGGGACGCAGGCCUAGGUAGC
+AY037858.1/134283-134386 CUUACGCGGCCUGCGGAACCCUAAGAGGGGGGCCUGCACGCCGAGGUUAUUUCCCAGCCCUUCGAUGCAUGGUCCCCCCUUAGUGGACUGCAGGCCCAUGUAGC
+#=GC SS_cons             ::::::::<--<<<<---<<<<<<<-<<<<<-<<<<<<<<<-<<<<____________>>>>>>>>>>>>->>>>>>->>>>>->>-->>>>-->:::::::::
+#=GC RF                  gUUaaaCaGgauGcgGaACCCuaaGAGGggggCagGCauaccaaGGUUAUUuCCCAGuCCuuguauGCcuGGuccCCCCuuaGUGGaacgCaGGCCuAuGUAGC
+//

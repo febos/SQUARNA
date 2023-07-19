@@ -1,0 +1,49 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00294
+#=GF ID   snoTBR17
+#=GF DE   Small nucleolar RNA TBR17
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Moxon SJ
+#=GF SS   Predicted; PFOLD; Moxon SJ
+#=GF GA   40.00
+#=GF TC   72.30
+#=GF NC   30.40
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.79 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   10747997
+#=GF RT   Fibrillarin-associated box C/D small nucleolar RNAs in Trypanosoma brucei.
+#=GF RT   Sequence conservation and implications for 2'-O-ribose methylation of
+#=GF RT   rRNA.
+#=GF RA   Dunbar DA, Wormsley S, Lowe TM, Baserga SJ
+#=GF RL   J Biol Chem 2000;275:14767-14776.
+#=GF RN   [2]
+#=GF RM   12215523
+#=GF RT   Purified box C/D snoRNPs are able to reproduce site-specific
+#=GF RT   2'-O-methylation of target RNA in vitro.
+#=GF RA   Galardi S, Fatica A, Bachi A, Scaloni A, Presutti C, Bozzoni I
+#=GF RL   Mol Cell Biol 2002;22:6663-6668.
+#=GF CC   TBR17 is a member of the C/D class of snoRNA which contain the C (UGAUGA)
+#=GF CC   and D (CUGA) box motifs. Most of the members of the box C/D family
+#=GF CC   function in directing site-specific 2'-O-methylation of substrate RNAs
+#=GF CC   [1,2].
+#=GF WK   Small_nucleolar_RNA_TBR17
+#=GF SQ   6
+
+
+
+AF168728.1/150-269         UGCGCUC----AGUGGACAUGAUGCUCCGCCGC---CCAUAUAUCCCGCUAUGUAUAUCCUGUGUGCGCUCUAGUUCCG-UUGGGACCCUGAAGAG------UAAGCACACUAAACCAUGCAUUAUACAUGACC
+Z50171.1/84-208            UGCUCUC----AGUGGACAUGAUGCUCCGCCGC---CCAUAUAUCCCGUUAUGUAUAUCCUGUGUGCGCUCUAGUUCCG-UUGGGACCCUGAAGAGUAAGAGUAAGCACACUA-ACCGUGCAUUAUACAUGACC
+HE575324.1/2850286-2850408 UGCUCUCUACAAGGGCACAUGAUGCUCCGCCGC---CACGUUAUCCCACUAUGCAUAUCCUUAGUGCGCCCUAGCUCCCUUUGGCGCUCUGAUGGG------UCAGUACA--AAACCAUGCAUCAUACAUUCAG
+FR796401.1/453114-453234   UGCUGCU----CGCGCGCCUGACGCACCGCCGCGCGCCGCGGUUCCCGUUACGCAUAUCCUGUGUGCGCUCCAGCCCCG-UCGGGGCCAUGACGAG------UUCGCAA--CCAACCAUGCGUUACACAUUGCC
+FR799592.1/451263-451380   UGCGCG-------CGCGCCUGACGCACCGCCGCGCGCCGCGGUUCCCGUUACGCAUAUCCUGUGUGCGCUCCAGCCCCG-UCGGGGCCAUGACGAG------UCCGCAA--CCAACCAUGCGUUACACAUUGCC
+FR798979.1/436434-436554   UGCCUCG----CGCGCGCCUGACGCACCGCCACGCGCCGCGGUUCCCGUUACGCAUAUCCUGUGUGCGCUCCAGCCCCG-UCGGGGCCAUGACGAG------UCCGCAA--CCAACCAUGCGUUACACAUUGCC
+#=GC SS_cons               :::::::....:::<<_________________...___________________________________________.________________......________._____________________>>
+#=GC RF                    UGCucuc....aGuGgaCaUGAuGCuCCGCCGC...CcauauaUCCCGuUAuGcAUAUCCUGUGUGCGCUCuAGcuCCg.UuGGggCCaUGAaGAG......UcaGCAaA.uaAACCAUGCaUUAuACAUuacC
+//

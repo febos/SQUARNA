@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03969
+#=GF ID   mir-622
+#=GF DE   mir-622 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   86.00
+#=GF TC   86.00
+#=GF NC   85.80
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000619;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-622 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+URS000075CCC5_9544/13-84 CAAGUACUGGUCUCAGCAGACUGAGGAGAGCACCGCAGUGGUCACCACACAGUCUGCUGAGGUUGGAGCUGC
+URS0000D551DA_9600/14-85 CAAGUACUGGUCUCAGCAGAUUGAGGAGAGCACCACAGUGGUCACCACACAGUCCACUGAGGUUGGAGCUGC
+URS0000759951_9606/13-84 CAAGUACUGGUCUCAGCAGAUUGAGGAGAGCACCACAGUGGUCAUCACACAGUCUGCUGAGGUUGGAGCUGC
+URS000075B897_9598/12-83 CAAGUAUUGGUCUCAGCAGAUUGAAGAGAGCACCACAGUGGUCAUCACACAGUCUGCUGAGGUUGGAGCUGC
+#=GC SS_cons             ::<<<-<<<<<<<<<<<<<<<<<-<<-<<-<<<____>>>->>->>--->>>>>>>>>>>>>>>>>->>>::
+#=GC RF                  CAaGuAcugguCuCaGCaGacuGAGgAGaGCaCCACAGuGGuCAcCACACaguCuGCuGaGguuggAgCuGC
+//

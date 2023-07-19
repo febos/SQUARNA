@@ -1,0 +1,43 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03535
+#=GF ID   TEG147
+#=GF DE   Staphylococcus aureus small RNA TEG147
+#=GF AU   Liger J; 0000-0002-8776-8930
+#=GF AU   Minaud L; 0000-0002-6214-3651
+#=GF AU   Poulain C; 0000-0002-5371-1581
+#=GF AU   Vencic J; 0000-0003-3525-1806
+#=GF SE   Published; PMID:20505759;
+#=GF SS   Predicted; LocARNA;
+#=GF GA   56.10
+#=GF TC   56.10
+#=GF NC   55.20
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001055; transcriptional_cis_regulatory_region;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF RN   [1]
+#=GF RM   20505759
+#=GF RT   Cartography of methicillin-resistant S. aureus transcripts: detection,
+#=GF RT   orientation and temporal expression during growth phase and stress
+#=GF RT   conditions.
+#=GF RA   Beaume M, Hernandez D, Farinelli L, Deluen C, Linder P, Gaspin C, Romby P,
+#=GF RA   Schrenzel J, Francois P
+#=GF RL   PLoS One. 2010;5:e10725.
+#=GF CC   TEG147 is an RNA element identified by RNA-seq in S. aureus N315 [1] with
+#=GF CC   homologues in other Staphylococcus species. Other names: sRNA85, srn_0960,
+#=GF CC   SAOUHSCs103.
+#=GF WK   Teg147
+#=GF SQ   4
+
+
+
+CP000253.1/386294-386353     AACUGAUCCAUGAGAGUAGGAACCCCAUCAUACGGGAAUUU-CGAAAUCAUGGGUUUUUUG
+LUGM01000002.1/900415-900473 AAUCCACCUAUGAGAGUAGGAACCCCACCAUAUGGGGAUUU-CGAAAUCAUAGGUUUUUG-
+JMJF01000005.1/93013-92953   ACUCAACCCAUGAAAGUAGACACCCCACCAUAAGGGGAUGAGCGAAAUCAUGGGUUUUUUG
+AP023034.1/433520-433579     AACUGAUCCAUGAGAGUAGGAACCCCAUCAUACGGGAAUUU-CGAAAUCAUGGGUUUUUUG
+#=GC SS_cons                 ::::<<<<<<<<<-----<<<<-<<<_______>>>-->>>.>---->>>>>>>>>:::::
+#=GC RF                      AAuuaAcCCAUGAGAGUAGgaACCCCAuCAUAcGGGaAUuu.CGAAAUCAUGGgUuUUUUG
+//

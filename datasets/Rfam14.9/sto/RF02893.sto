@@ -1,0 +1,61 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02893
+#=GF ID   RpsF_leader
+#=GF DE   RpsF leader
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; 24310371;
+#=GF GA   37.00
+#=GF TC   37.00
+#=GF NC   36.60
+#=GF TP   Cis-reg; leader;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0005836; regulatory region;
+#=GF DR   GO; 0017148; negative regulation of translation;
+#=GF DR   GO; 0005515; protein binding;
+#=GF RN   [1]
+#=GF RM   24310371
+#=GF RT   Bacterial RNA motif in the 5' UTR of rpsF interacts with an S6:S18
+#=GF RT   complex.
+#=GF RA   Fu Y, Deiorio-Haggar K, Soo MW, Meyer MM
+#=GF RL   RNA. 2014;20:168-176.
+#=GF RN   [2]
+#=GF RM   26447183
+#=GF RT   An S6:S18 complex inhibits translation of E. coli rpsF.
+#=GF RA   Babina AM, Soo MW, Fu Y, Meyer MM
+#=GF RL   RNA. 2015;21:2039-2046.
+#=GF RN   [3]
+#=GF RM   23980204
+#=GF RT   S6:S18 ribosomal protein complex interacts with a structural motif present
+#=GF RT   in its own mRNA.
+#=GF RA   Matelska D, Purta E, Panek S, Boniecki MJ, Bujnicki JM, Dunin-Horkawicz S
+#=GF RL   RNA. 2013;19:1341-1348.
+#=GF CC   Conserved and widely distributed to many bacterial species RNA structure.
+#=GF CC   It precedes operon containing rpsF, which encodes ribosomal protein S6.
+#=GF CC   The motif also precedes operon containing rpsR, which encodes ribosomal
+#=GF CC   protein S18. The RNA was shown to interact with S6:S18 protein dimer in
+#=GF CC   vitro.[1] It was shown that RpsF leader regulates gene expression in
+#=GF CC   response to the S6:S18 complex, contributing to the regulation of
+#=GF CC   ribosomal protein levels [2].
+#=GF WK   RpsF_leader_RNA
+#=GF SQ   10
+
+
+
+U00096.3/4425036-4425120       GCCG--ACCUUUAA-CACGUUCCUUGCCUCCCCGGGA-UUCGGCUGACCCAGACAGGAGGCUGAAUAAUCCGUAAGGAGCAAU--UCGAUG
+FN543502.1/3436271-3436355     GCCG--ACCUUUAA-CACGUUCCUUGCCUCCCCGGGC-CUCGGCUGACCCAGACAGGAGGCUGAAUAAUCCGUAAGGAGCAAU--UCGAUG
+CP000880.1/3147309-3147225     GCCG--ACCUUUAA-CACGUUCCUUGCCUCCAUGGGC-CGCGGCUGACCCAGACAGGAGGCUGAAUAAUCCGUAAGGAGCAAU--UCGAUG
+CP000783.1/183478-183563       GCCG--CCCUUUAAUCACGUUCCUUGCCUCCCCGGGC-CGCGGCUGACCCAGACAGGAGGCUGAAUAAUCCGUAAGGAGCAAU--UCGAUG
+CP001600.2/428412-428497       GCCG--CCCACAAA-UACGUUCCUUGCCUCCAUGGGC-UACGGCUGACCCCGACAGGAGGCUGAAUAAUCCGUAAGGAGCAAU-UUCGAUG
+CP002038.1/3924123-3924038     GCCG-UACACACAA-CACGUUCCUUGCUUCCAUGGGC-CGCGGCUGACCCUGACAGGAGGCUGAAUAAUCCGUAAGGAGCAAU--UCGAUG
+CP011254.1/2336794-2336877     GCAC--A-CAUACA-CACGUUCCUUGCUUCCAUGGGC-CGCGGUUGACCCUGACAGGAGGCUGAAUAAUCCGUAAGGAGCAAU--UCGAUG
+AL590842.1/3949426-3949340     GCCG--CACACAAA-CACGUUCCUUGCCUCCAUGGGC-CGCGGUUGACCCUAUCAGGAGGCUGAAUAAUCCGUAAGGAGCAAUAAUCGAUG
+JMPN01000019.1/92947-92862     GCCGUCACACUAAA-CACGUUCCUUGCUUCCAUGGGC-CACGGCUGACCCUGACAGGAGGCUGAAUAAUCCGUAAGGAGCUAU--U-GAUG
+JXNU01000003.1/3715356-3715443 GCCG-UACACACUA-CACGUUCCUUGCUUCCAUGGGCUCGCGGCUGACCCUGACAGGAGGCUGAAUAAUCCGUAAGGAGCAAA-UUCGAUG
+#=GC SS_cons                   ::::..::::::::.:::<<<<<<<<<<<<<--<<<_._________>>>----->>>>>>------------>>>>>>>:::..::::::
+#=GC RF                        GCCG..accuuuaA.CACGuuCCuuGCcuCCauGGGC.cgCGGcUGACCCuGACAGGagGCUGAAUAAUCCGUaaGGagCAAU..UCGAUG
+//

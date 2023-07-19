@@ -1,0 +1,41 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02793
+#=GF ID   asR3
+#=GF DE   Pyrobaculum asRNA3
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; 22783241;
+#=GF GA   46.00
+#=GF TC   46.20
+#=GF NC   37.20
+#=GF TP   Gene; antisense; 
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000077; antisense;
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF RN   [1]
+#=GF RM   22783241
+#=GF RT   Diversity of Antisense and Other Non-Coding RNAs in Archaea Revealed by
+#=GF RT   Comparative Small RNA Sequencing in Four Pyrobaculum Species.
+#=GF RA   Bernick DL, Dennis PP, Lui LM, Lowe TM
+#=GF RL   Front Microbiol. 2012;3:231.
+#=GF CC   Binds to the 3'-end of the tpi gene (triose-phosphate-isomerse). The tpi
+#=GF CC   mRNA has a conserved structural element located close to the stop codon.
+#=GF CC   Binding of the asR3 may be able to compete against the formation of the
+#=GF CC   tpi element structure and this may modulate the function of this highly
+#=GF CC   conserved element.
+#=GF WK   Pyrobaculum_asR3_small_RNA
+#=GF SQ   3
+
+
+
+AE009441.1/880183-880239 CGCUCGCGGCGG-GGCCGCCUUAAGUGUCCGCCGCUCAUUUGCCCCCAAUUCGGGGGU
+LOBY01000142.1/6175-6119 GGAUCGCGGCGG-GGCCGCCUCAAGUGUCCGCCGCUCAUCUGCCCCCGCUCCGGGGGA
+FN869859.1/97113-97058   AGAUCGCGGCCGCAGCCGCC-UAGGUGGCGGCCGCUCAUGUGCCCCCUCCA-GGGGGU
+#=GC SS_cons             :::::<<<<<<<.-<<-<<_____>>>>>>>>>>>------<<<<<<_____>>>>>>
+#=GC RF                  aGAUCGCGGCgG.ggCCGCCUUAAGUGuCcGCCGCUCAUuUgCCCCCacUuCGGGGGu
+//

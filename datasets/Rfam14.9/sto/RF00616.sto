@@ -1,0 +1,81 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00616
+#=GF ID   LhrC
+#=GF DE   Listeria LhrC
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   Daub J
+#=GF SS   Published; PMID:16682563
+#=GF GA   110.00
+#=GF TC   115.30
+#=GF NC   107.20
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00114
+#=GF DR   SO; 0000655; ncRNA;
+#=GF DR   GO; 0003729; mRNA binding;
+#=GF DR   GO; 0045947; negative regulation of translational initiation;
+#=GF RN   [1]
+#=GF RM   16682563
+#=GF RT   Identification of small Hfq-binding RNAs in Listeria monocytogenes.
+#=GF RA   Christiansen JK, Nielsen JS, Ebersbach T, Valentin-Hansen P,
+#=GF RA   Sogaard-Andersen L, Kallipolitis BH
+#=GF RL   RNA. 2006;12:1383-1396.
+#=GF RN   [2]
+#=GF RM   25034691
+#=GF RT   A multicopy sRNA of Listeria monocytogenes regulates expression of the
+#=GF RT   virulence  adhesin LapB.
+#=GF RA   Sievers S, Sternkopf Lillebaek EM, Jacobsen K, Lund A, Mollerup MS,
+#=GF RA   Nielsen PK, Kallipolitis BH
+#=GF RL   Nucleic Acids Res. 2014;42:9383-9398.
+#=GF RN   [3]
+#=GF RM   26176322
+#=GF RT   The multicopy sRNA LhrC controls expression of the oligopeptide-binding
+#=GF RT   protein OppA in Listeria monocytogenes.
+#=GF RA   Sievers S, Lund A, Menendez-Gil P, Nielsen A, Storm Mollerup M, Lambert
+#=GF RA   Nielsen S, Buch Larsson P, Borch-Jensen J, Johansson J, Kallipolitis BH
+#=GF RL   RNA Biol. 2015;12:985-997.
+#=GF RN   [4]
+#=GF RM   27400116
+#=GF RT   Two novel members of the LhrC family of small RNAs in Listeria
+#=GF RT   monocytogenes with overlapping regulatory functions but distinctive
+#=GF RT   expression profiles.
+#=GF RA   Mollerup MS, Ross JA, Helfer AC, Meistrup K, Romby P, Kallipolitis BH
+#=GF RL   RNA Biol. 2016;13:895-915.
+#=GF CC   This RNA was identifed by screening for RNA molecules which
+#=GF CC   co-immunoprecipitated with the RNA chaperone Hfq [1]. However, neither the
+#=GF CC   stability nor the activity of LhrC is depending on the presence of
+#=GF CC   Hfq[2][3]. LhrC is transcribed from the intergenic region between the
+#=GF CC   protein coding genes cysK, a putative cysteine synthase and sul, a
+#=GF CC   putative dihydropteroate synthase [1]. In Listeria monocytogenes four
+#=GF CC   additional copies of lhrC have been identifed in the genome, three of
+#=GF CC   which are located in tandem repeat upstream of the originally
+#=GF CC   characterised lhrC [1]. This RNA molecule appears to be conserved amongst
+#=GF CC   Listeria species but has not been identified in other bacterial species.
+#=GF CC   The direct mRNA targets of LhrC are the virulence adhesion LapB, and the
+#=GF CC   oligo-peptide binding protein OppA. The 3 conserved UCCC motifs common to
+#=GF CC   all copies of LhrC are involved in the mRNA binding and
+#=GF CC   post-transcriptional repression of the target genes. Interestingly, 2
+#=GF CC   other Listerina monocytogenes sRNAs Rli22 and Rli33 contain two UCCC
+#=GF CC   motifs and use them to repress oppA mRNA expression.[4]
+#=GF WK   Listeria_Hfq_binding_LhrC
+#=GF SQ   12
+
+
+AL596164.1/23950-24060   AUAAGCUAACAACAAGCAAAACAAUU---CAUU---CU--U--UCCCCUUUUUAGAAUGAAAUUCCUAAACUCCC-U--UUU-UG-ACCAGUGUGGUUUACUCC--CUUUUU-CCACACUGGUUUUUUA
+AL591974.1/32086-32197   AUAAGCUAACAACAAGCAAAACAUUU--UCAUU---CU--U--UCCCCUUUUUAGAAUGAAGAUCCCAAACUCCC-U--UUUUGA--CCAGUGUGGUUUACUCCCUUUUU---CCACACUGGUUUUUUG
+AL596167.1/8204-8314     AUAAGCUAACAACAAGCAAAACAUUUU--CAUUU--CU--U--UCCC-UUUUUAGAAUGAAAAUCCCAAACUCCC-U--UUU-AG--CUAGUGCGGUUUACUCC--CUUUUU-CCGCGCUAGUUUUUUC
+AADR01000023.1/5275-5162 AUAAGCUAACAACAAGCAAAACAUUUU--CAUUCUUCU--C--CCCCCUUUUUAGAAUGAAGAUCCCAAACUCCC-U--UUU-UG-ACCGAUGCGGUUUACUCC--CUUUU--CCGCAUCGGUUUUUUU
+AL596164.1/23546-23655   AUAAGCUAACAACAA-CAAAACAUUUU--CAUU---CU--U--UCCC-CUUUUAGAAUGGAAAUCCCAAACUCCC-U--UUU-UA-GCCAGUGUGGUUUACUCC--CUUUUU-CCACACUGGUUUUUUA
+AM263198.1/188916-189028 AUAAGCUAACAACAAGCAAAACAUUUU--CAUU---CU--UCCUCCCCCUAUUAGAAUGAAAAUCCCAACUCCCU-U--UUU-UG-ACCGAUGCGGUUUACUCC--CUUUU--CCGCAUCGGUUUUUUU
+AL596164.1/24153-24267   AUAAGCUAACAACAAGCAUAACAUUUU--CAUU---CUUCU--CCCCCCUAUUAGAAUGAAAACCCUAAACUCCC-UUUUUU-UG-ACCGAUGCGGUUUACUCC--CUUUU--CCGCAUCGGUUUUUUU
+AADR01000023.1/5482-5368 AUAAGCUAACAACAAGCAAAACAUUUU--CAUUCUUCU--C--CCCCCUUUUUAGAAUGAAGAUCCCAAACUCCC-U--UUU-UG-ACCAGUGUGGUUUACUCC--CUUUUU-CCACACUGGUUUUUUC
+AL591974.1/32492-32605   AUAAGCUAACAACAAACAAAACAUUU-U-CAUU---CU--UCUCCCCCCUUUUAGAAUGAAAAUCCCAAACUCCCUU--UUU-UG-ACCGAUGCGGUUUACUCC--CUUUU--CCGCAUCGGUUUUUUU
+AARU02000014.1/4738-4625 AUAAGCUAACAACAAACAAAACAUUUU--CAUU---CUUCU--CCCCCCUUUUAGAAUGAAAAUCCCAAACUCCC-U--UUU-UUGACCGAUGCGGUUUACUCC--CUUUU--CCGCAUCGGUUUUUUU
+FM242711.1/982673-982783 AUAAGCUAACAACAAGCAAAACAUUUU--CAUUU--CU--U--U-CCCUUUUUAGAAUGAAAAUCCCAAACUCCC-U--UUU-AG--CUAGUGCGGUUUACUCC--CUUUUU-CCGCACUAGUUUUUUU
+AE017262.2/237550-237663 AUAAGCUAACAACAAGCAAAACAUUUU--CAUU---CU--UCUCCCCCCUUUUAGAAUGAAGAUCCCAAACUCCC-U--UUU-UG-ACCAGUGUGGUUUACUCC--CUUUU-UCCACACUGGUUUUUUA
+#=GC SS_cons             ::::::::::::::::::::::<<<<<..<<<<...<_.._..___________>>>>>>>>>>-----------.-..---.--.-<<<<<<<<<________.._____..>>>>>>>>>:::::::
+#=GC RF                  AUAAGCUAACAACAAgCAAAACauuuu..Cauu...CU..U..uCCCCuUuUUAGaauGaaaauCCcAAACUCCC.U..UUU.ug.ACcgguGcGGUUUACUCC..CUUUU..CCgCaccgGUUUUUUu
+//

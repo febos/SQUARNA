@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03441
+#=GF ID   mir-613
+#=GF DE   mir-613 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   70.00
+#=GF TC   98.50
+#=GF NC   67.30
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000590;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-613 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   3
+
+
+URS000075EF41_9606/1-87 GGUGAGUGCGUUUCCAAGUGUGAAGGGACCCUUCCUGUAGUGUCUUAUAUACAAUACAGUAGGAAUGUUCCUUCUUUGCCACUCAUA
+URS000075AE37_9598/1-85 --UGAGUGCAUUUCCAAGUGUGAAGGGACCCUUCCUGUAGUGUCUUAUAUACAAUACAGUAGGAAUGUUCCUUCUUUGCCACUCAUA
+URS0000A88F60_9600/1-87 GGUGAGUGCAUUUCCAAGUGUGAAGGGACCCUUCCUGUAGUGUCUUAUAUACAAUACAGUAGGGAUGUUCCUUCUUCGCCACUUAUA
+#=GC SS_cons            :<<<<<<<---------<<<-<<<<<<<<<<<--<<<<<-<<<_______>>>->>>>>->>>--->>>>>>>>-->>>>>>>>>>:
+#=GC RF                 GgugaGuGCaUUUCCAAGugUGaaGGgaCCCuUCCuGuaGuGuCUUAUAUaCaAuaCaGUaGGaAUGuuCCuuCUUcgCCaCucacA
+//

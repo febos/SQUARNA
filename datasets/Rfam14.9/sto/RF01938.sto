@@ -1,0 +1,78 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01938
+#=GF ID   mir-1251
+#=GF DE   microRNA mir-1251
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   81.00
+#=GF TC   81.60
+#=GF NC   69.20
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   MIPF; MIPF0000621;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   20413612
+#=GF RT   Mammalian microRNAs: experimental evaluation of novel and previously
+#=GF RT   annotated genes
+#=GF RA   Chiang HR, Schoenfeld LW, Ruby JG, Auyeung VC, Spies N, Baek D, Johnston
+#=GF RA   WK, Russ C, Luo S, Babiarz JE, Blelloch R, Schroth GP, Nusbaum C, Bartel
+#=GF RA   DP
+#=GF RL   Genes Dev. 2010;24:992-1009.
+#=GF RN   [2]
+#=GF RM   18760970
+#=GF RT   Computational identification of novel microRNA homologs in the chimpanzee
+#=GF RT   genome
+#=GF RA   Baev V, Daskalova E, Minkov I
+#=GF RL   Comput Biol Chem. 2009;33:62-70.
+#=GF RN   [3]
+#=GF RM   18945293
+#=GF RT   Annotation of 390 bovine miRNA genes by sequence similarity with other
+#=GF RT   species
+#=GF RA   Strozzi F, Mazza R, Malinverni R, Williams JL
+#=GF RL   Anim Genet. 2009;40:125.
+#=GF RN   [4]
+#=GF RM   18402656
+#=GF RT   Hidden layers of human small RNAs
+#=GF RA   Kawaji H, Nakamura M, Takahashi Y, Sandelin A, Katayama S, Fukuda S, Daub
+#=GF RA   CO, Kai C, Kawai J, Yasuda J, Carninci P, Hayashizaki Y
+#=GF RL   BMC Genomics. 2008;9:157.
+#=GF RN   [5]
+#=GF RM   18285502
+#=GF RT   Application of massively parallel sequencing to microRNA profiling and
+#=GF RT   discovery in human embryonic stem cells
+#=GF RA   Morin RD, O'Connor MD, Griffith M, Kuchenbauer F, Delaney A, Prabhu AL,
+#=GF RA   Zhao Y, McDonald H, Zeng T, Hirst M, Eaves CJ, Marra MA
+#=GF RL   Genome Res. 2008;18:610-621.
+#=GF RN   [6]
+#=GF RM   20214803
+#=GF RT   Genome-wide comparative analysis of microRNAs in three non-human primates
+#=GF RA   Brameier M
+#=GF RL   BMC Res Notes. 2010;3:64.
+#=GF RN   [7]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   Imported from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   7
+
+
+URS000075C678_9606/2-67   UGGACUCUAGCUGCCAAAGGCGCUUCUCCUUCUGAACAGAGCGCUUUGCUCAGCCAGUGUAGACAU
+URS000075AE23_9913/2-67   UGGACUCUAGCUGCCAAAGGCGCUUCUCCUUCUGAACCGAGCGCUUUGCUCAGCCAGUGUAGACAU
+URS00007143EB_10090/11-76 UGGACUCUAGCUGCCAAAGGCGCUUCUCCUUCUGAACAGAGCGCUUUGCUCAGCCAGUGUAGACAU
+URS000075C678_9600/2-67   UGGACUCUAGCUGCCAAAGGCGCUUCUCCUUCUGAACAGAGCGCUUUGCUCAGCCAGUGUAGACAU
+URS000075D36F_9598/1-66   UGGACUCUAGCUGCCAAAGGCGCUUCUCCUUCUGAACAGAGCGCUUUGCUCAGCCAGUGUAGACAU
+URS00007E486E_9544/1-59   ---ACUCUAGCUGCCAAAGGCGCUUCUCCUUCUGAACAGAGCGCUUUGCUCAGCCAGUGUAG----
+URS00007E49B4_13616/1-59  ---ACUCUAGCUGACUAAGGCGCUUCUCUUUCUAAAAAGAGCGCUUUACUUAGCCAGUGUAG----
+#=GC SS_cons              :::<<-<<-<<<<---<<<<<<<<<-<<_____>>--->>>>>>>>>--->>>>->>->>::::::
+#=GC RF                   UGGACUCUAGCUGcCAAAgGCGCUuCUCCUUCUGAAcAgAGCGCuUUGCUCAGCCAGUGUAGACAU
+//

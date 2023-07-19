@@ -1,0 +1,41 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01279
+#=GF ID   snoR53Y
+#=GF DE   Small nucleolar RNA snoR53Y
+#=GF AU   Wilkinson A; 0000-0001-7406-0151
+#=GF SE   Predicted; WAR; Wilkinson A
+#=GF SS   Predicted; WAR; Wilkinson A
+#=GF GA   43.00
+#=GF TC   44.40
+#=GF NC   40.10
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00080
+#=GF DR   URL; http://bioinf.scri.sari.ac.uk/cgi-bin/plant_snorna/home;
+#=GF DR   URL; http://lowelab.ucsc.edu/snoRNAdb/;
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Arabidopsis_thaliana300082;
+#=GF RN   [1]
+#=GF RM   11780637
+#=GF RT   Multiple snoRNA gene clusters from Arabidopsis.
+#=GF RA   Brown JW, Clark GP, Leader DJ, Simpson CG, Lowe T
+#=GF RL   RNA. 2001;7:1817-1832.
+#=GF WK   Small_nucleolar_RNA
+#=GF SQ   7
+
+
+AC069159.8/55796-55870     AUUCCCUAUGAUGG--U-----------AA-----UAACCAUGCUAAUACUGAUG---UCUUGUGACUGAAUCAAAGUUAU---------GUGUCUGAGGGAAUU
+AC172870.1/115241-115165   AUUCCCUAUGAUGGCUU-----------AA-----CAACCAUGCUAAUGCUGAUU---UCUUGUGACCGAAACAACGUUAA---------AUGACUGAGGGAAUA
+AJ532521.1/2-78            GUUCCCAGUGAUGG--UUUAA-------AU-----UAACCAUGCUAAUACUGAUG---UCCAUUGACG--AGUAAAAGUGU---------UUUACUGAGGGAACC
+AC167403.2/76385-76309     GUUCCCAAUGAUGU--U-----------ACUUU--UAACCAUGCUAAUGCUGAUUA--CAUGAUUAUC--UUUAAUAUCAA---------UAUACUGAGGGAACA
+AARH01017162.1/10398-10481 GUUCCCAGUGAUGC--UUAAAU------AU-----GAACCAUGCUAAUGCUGAUCA--UUGGAUGACUGAAACUCUUUCUCAAU------CUUGCUGAGGGAACA
+AASG02008443.1/3486-3392   GUUCCCAGUGAUGU--UGAAUUAUAUAUAU-----AUACCAUGCUAAUUCUGAUCAUGUUUUGUGACAGAAACCUCUUUCUCUUAUA---UUUGCUGAGGGAACA
+AM460399.2/62494-62583     GUUCCCUAUGAUGG--U-----------UUGGAUUCAACCAUGCUAAUUCUGAUCA--UUCUGUGAUUGAAGCAUUUUUCUUUUUCCUAAUUUUCUGAGGGAACU
+#=GC SS_cons               <<<<<_________.._...........__....._____________________..__________________________......_________>>>>>:
+#=GC RF                    GUUCCCaaUGAUGg..U...........Au.....uAACCAUGCUAAUuCUGAUcA..UuuugUGAcuGAAaCaauuUUauuuU......uUUaCUGAGGGAACa
+//

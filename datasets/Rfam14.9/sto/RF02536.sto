@@ -1,0 +1,31 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02536
+#=GF ID   AEV_CRE
+#=GF DE   Avian encephalitis virus (AEV) cis-acting replication element (CRE)
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   PMID:18684812
+#=GF SS   Published; PMID:18684812
+#=GF GA   100.00
+#=GF TC   164.90
+#=GF NC   54.10
+#=GF TP   Cis-reg;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF RN   [1]
+#=GF RM   18684812
+#=GF RT   Identification of a conserved RNA replication element (cre) within the
+#=GF RT   3Dpol-coding sequence of hepatoviruses.
+#=GF RA   Yang Y, Yi M, Evans DJ, Simmonds P, Lemon SM
+#=GF RL   J Virol. 2008;82:10118-10128.
+#=GF WK   Avian_encephalitis_virus_cis-acting_replication_element
+#=GF SQ   2
+
+
+AJ225173.1/5433-5567 GCACAAUGUAGUAGGAUAUGGAAGACUGAGUUUGUGGAAGAGAAGAUAUCUGUGGGGUCUAAAACGAAGUACCACAAGUCCCCUUUAUAUGAUUUUUGUCCACAGGAGGUUAUUAAAUGUCCCACUAAGUUGUUC
+AY517471.1/5432-5566 GCACAAUGUAGUAGGAUAUGGAAGACCGAGUUUGUGGAAGAGAAGAUAUCUGUGGGGUCUAAAACGAAGUAUCACAAGUCCCCUUUAUAUGAUUUUUGUCCACAGGAGGUUGUUAAAUGUCCCACUAAGUUGUUC
+#=GC SS_cons         ::<<<<<-<<<<-<<<<<<----<<<<---<<<<<<<<-<<<<<--<<<-<<-<<<<-<<________________>>->>>>-->>->>>->>>>>->>>>>>>>->>>>----->>>>>>->>>>->>>>>::
+#=GC RF              GCaCaacGuaGuAGGacauGGAAgaCcGAGccuGuGGaAgagaaGAcauCugUGGGGUCuAAAACGAAGUAuCACAaGUCCCCUUcaUaugAuucucGuCCaCaggAgGucaUUAAauguCCCaCuaAguuGuUC
+//

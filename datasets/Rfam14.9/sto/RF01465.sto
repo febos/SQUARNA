@@ -1,0 +1,34 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01465
+#=GF ID   rli31
+#=GF DE   Listeria sRNA rli31
+#=GF AU   Osuch I
+#=GF SE   INFERNAL
+#=GF SS   Predicted; RNAalifold
+#=GF GA   80.00
+#=GF TC   81.80
+#=GF NC   62.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   19448609
+#=GF RT   The Listeria transcriptional landscape from saprophytism to virulence.
+#=GF RA   Toledo-Arana A, Dussurget O, Nikitas G, Sesto N, Guet-Revillet H,
+#=GF RA   Balestrino D, Loh E, Gripenland J, Tiensuu T, Vaitkevicius K, Barthelemy
+#=GF RA   M, Vergassola M, Nahori MA, Soubigou G, Regnault B, Coppee JY, Lecuit M,
+#=GF RA   Johansson J, Cossart P
+#=GF RL   Nature. 2009;459:950-956.
+#=GF WK   Listeria_monocytogenes_non-coding_RNA
+#=GF SQ   3
+
+
+AL596165.1/140809-140924 UAGAGAUUGUCAUUUGAAAUAAGCUAGUUAAGAAUAAAUCACUUCCCCCAUAGAAAUGUUCUUAACAGCUUAUUGCAAAUAAACACUCCUUUUAAGAUAGUUGUAGCACAGAAUUU
+AM263198.1/560040-560154 UAGAGAUUGUUAUUUGAAAUAAGUUGGUUAAAAAUAAAUCACUUCCCCCAUAGAAAUAUUUUUAAUCACUUAAGACGAAUAAACACUCCU-UAAAUAUAGUUGUAGCACAGAAUUU
+FM242711.1/601458-601572 UAGAGAUUGUCAUUUGAAAUAAGCUAAUUGAAAAUAAAUUACUUCCCCCAUAGAAAUAUUCUUAAUUGCUUAUUUCAAAUAAACACUCCU-UUAAGAUAGUUGUAGCACAGAAUUU
+#=GC SS_cons             ::<<<--<<<-<<<<<-<<<<<<<-<<<<<<<<<<<--<<____________>>-->>>>>>>>>>>>>>>>>>->>>>>-->>>>>>::.:::::::::::::::::::::::::
+#=GC RF                  UAGaGAUuGucauuuGAaauaaGcUgguuaagaauaAAucACUUCCCCCAUAgaAAuauucuuaaccgCuuauuaCaaauAAaCaCuCCU.UuAAgAUAGUUGUAGCACAGAAUUU
+//

@@ -1,0 +1,49 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00356
+#=GF ID   snoR32_R81
+#=GF DE   Small nucleolar RNA R32/R81/Z41
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Moxon SJ
+#=GF SS   Predicted; PFOLD; Moxon SJ, Daub J
+#=GF GA   45.00
+#=GF TC   46.40
+#=GF NC   40.10
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF DR   snoopy; Arabidopsis_thaliana300130;
+#=GF RN   [1]
+#=GF RM   11469857
+#=GF RT   Identification of 66 box C/D snoRNAs in Arabidopsis thaliana: extensive
+#=GF RT   gene duplications generated multiple isoforms predicting new ribosomal RNA
+#=GF RT   2'-O-methylation sites.
+#=GF RA   Barneche F, Gaspin C, Guyot R, Echeverria M
+#=GF RL   J Mol Biol 2001;311:57-73.
+#=GF RN   [2]
+#=GF RM   12007400
+#=GF RT   Small nucleolar RNAs: an abundant group of noncoding RNAs with diverse
+#=GF RT   cellular functions.
+#=GF RA   Kiss T
+#=GF RL   Cell 2002;109:145-148.
+#=GF CC   This family contains the related snoRNAs R32, R81 and Z41 which are
+#=GF CC   members of the C/D class of snoRNA containing the C (UGAUGA) and D (CUGA)
+#=GF CC   box motifs. Most of the members of the box C/D family function in
+#=GF CC   directing site-specific 2'-O-methylation of substrate RNAs [1,2].
+#=GF WK   Small_nucleolar_RNA_R32/R81/Z41
+#=GF SQ   6
+
+
+AY707463.1/3-93        ---GGAAUAUGAUGAAAG------UUGUA---UAUCGGUGAUGGU-------CUUUUGAUUCAUAUGAUCGACAAAAAUUUCAACUCGCUACGUUCUUUCUGAUUCUUUU
+AF317954.1/1-88        ---AGAAUAUGAUGAAAG------UUGUA---UAUCGGUGAUGGU-------CUUUUGAUUCAUAUGAUCGACAAAAAUUUCAACUCGCUACGUUCUUUCUGAUUCU---
+AJ240071.1/6-99        UGUAGAAUAUGAUGAAAG------UUGUA---UAUCGGUGAUGGU-------CUUUUGAUUCAUAUGAUCGACAAAAAUUUCAACUCGCUACGUUCUUUCUGAUUCUUAC
+AF323461.1/1-98        UGAAGAAUGUGAUGAAAG------UUGUCGAUUAUGUGUGAUGAU------UCUUUAGAUUCAAUUGAUCGAUAAAAACUUCAAUUCGCUACGUUCUUUCUGAUUCUUCA
+AJ240072.1/1-98        UGAAGAAUGUGAUGAAAG------UUGUCGAUUAUGUGUGAUGAU------UCUUUAGAUUCAAUUGAUCGAUAAAAACUUCAAUUCGCUACGUUCUUUCUGAUUCUUCA
+AP009676.1/64521-64418 AGACGAACAUGAUGAAAGCAAAAAUUAAAAAGAAUGCGUGAUCAUCAAACAUUAUGUGUUUGAUAUGAUCG------AACUUGUCAUGCUACGUUCUUUCUGAUUCGUCU
+#=GC SS_cons           :::<<<<___________......_____________________......____________________________________________________>>>>:::
+#=GC RF                uGAaGAAUAUGAUGAAAG......UUguaaAuuAUguGUGAUgaU......UcuUuuGaUUcAuaUGAUCGAuAAAAAuUUcAacucGCUACGUUCUUUCUGAUUCuUcu
+//

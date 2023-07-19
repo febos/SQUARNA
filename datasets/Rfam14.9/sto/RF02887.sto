@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02887
+#=GF ID   mgtC_leader
+#=GF DE   Salmonella mgtC leader RNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; Rscape;
+#=GF GA   48.00
+#=GF TC   48.50
+#=GF NC   42.10
+#=GF TP   Cis-reg; leader;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0005836; regulatory region;
+#=GF DR   GO; 0010468; regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   28874555
+#=GF RT   A trans-acting leader RNA from a Salmonella virulence gene.
+#=GF RA   Choi E, Han Y, Cho YJ, Nam D, Lee EJ
+#=GF RL   Proc Natl Acad Sci U S A. 2017;114:10232-10237.
+#=GF CC   From mgtCBR operon, decreases flagellin production during infection by
+#=GF CC   directly base pairing with mRNAs of the fljB gene encoding flagellin and
+#=GF CC   promotes fljBA mRNA degradation.
+#=GF WK   Salmonella
+#=GF SQ   4
+
+
+
+AE014613.1/3868819-3868931         CAAAUUCAUGCAGGAGUAAUAUGUUGGACAGUCACUUUUACGUAA---AUCAUCUGGCAAGUUAACGCACGC-UAUUCCUGC-GCUGCUUGCCGAACCGGUGGGCAGCAAUCUCCCCU
+CP002272.1/1103938-1104051         CAAAUUCAUACAGGAGUAAUACGUUGGACAGUCACCCUUAUUUAA---UUUACAAGGCAAGCUAACGCGACG-UAUUCCUGCCGCUGCUUGCCGAACUGGCGGGCAGCAAUCCCUUCU
+CP000647.1/2013908-2013800         CACUUUUAUUCAGGAGUCAUACGUUGGACAGUCACCCUUAUUGCG---AUUUUCCGGCAAGCUAACGCGAUC--AUUUC----GCUGCUUGCCGUCCCGGCGGGCAGCAAUCUCUCAG
+AP012551.1/2663131-2663248         CAACUUCACACAGGAGAAUUCAGUUGGACAGUCACCCUUAUCGAUGGCAAUACAAGGCAAGCUGACUCGCGAAUUCUUUUGUCGCUGCUUGCCAACAUGGCGGGCAGCAAUCCUCACC
+#=GC SS_cons                       :::<<<------<<____________________>>---->>>,,...,,,,,,,,,,,,,,,,,,<--<<_.___________________>>-->,<<-<<<_______>>>->>:
+#=GC RF                            CAAccccAUaCAGGAGuAaUauGUUGGACAGUCACCcUUAgggAa...AuUAuaaGGCAAGcUAACgCGcga.UaUUucUGcCGCUGCUUGCcgAacuGgcGgGCAGCAAUCcCucCu
+//

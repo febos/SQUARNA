@@ -1,0 +1,87 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01412
+#=GF ID   BsrG
+#=GF DE   BsrG
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF SE   Predicted; WAR; Infernal
+#=GF SS   Predicted; WAR
+#=GF GA   55.00
+#=GF TC   55.40
+#=GF NC   54.80
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF DR   GO; 0001896; autolysis;
+#=GF DR   GO; 0090729; toxin activity;
+#=GF RN   [1]
+#=GF RM   18948176
+#=GF RT   Novel small RNA-encoding genes in the intergenic regions of Bacillus
+#=GF RT   subtilis.
+#=GF RA   Saito S, Kakeshita H, Nakamura K
+#=GF RL   Gene. 2008;428:1-10.
+#=GF RN   [2]
+#=GF RM   22229825
+#=GF RT   BsrG/SR4 from Bacillus subtilis--the first temperature-dependent type I
+#=GF RT   toxin-antitoxin system.
+#=GF RA   Jahn N, Preis H, Wiedemann C, Brantl S
+#=GF RL   Mol Microbiol. 2012;83:579-598.
+#=GF RN   [3]
+#=GF RM   26234942
+#=GF RT   Against the mainstream: the membrane-associated type I toxin BsrG from
+#=GF RT   Bacillus subtilis interferes with cell envelope biosynthesis without
+#=GF RT   increasing membrane permeability.
+#=GF RA   Jahn N, Brantl S, Strahl H
+#=GF RL   Mol Microbiol. 2015;98:651-666.
+#=GF RN   [4]
+#=GF RM   23969414
+#=GF RT   One antitoxin--two functions: SR4 controls toxin mRNA decay and
+#=GF RT   translation.
+#=GF RA   Jahn N, Brantl S
+#=GF RL   Nucleic Acids Res. 2013;41:9870-9880.
+#=GF RN   [5]
+#=GF RM   26940229
+#=GF RT   A multistress responsive type I toxin-antitoxin system: bsrE/SR5 from the
+#=GF RT   B. subtilis chromosome.
+#=GF RA   Muller P, Jahn N, Ring C, Maiwald C, Neubert R, Meissner C, Brantl S
+#=GF RL   RNA Biol. 2016;13:511-523.
+#=GF RN   [6]
+#=GF RM   26565032
+#=GF RT   In Vitro Characterization of the Type I Toxin-Antitoxin System bsrE/SR5
+#=GF RT   from Bacillus subtilis.
+#=GF RA   Meissner C, Jahn N, Brantl S
+#=GF RL   J Biol Chem. 2016;291:560-571.
+#=GF RN   [7]
+#=GF RM   20525796
+#=GF RT   Identification of regulatory RNAs in Bacillus subtilis.
+#=GF RA   Irnov I, Sharma CM, Vogel J, Winkler WC
+#=GF RL   Nucleic Acids Res. 2010;38:6637-6651.
+#=GF CC   bsrE, bsrG and bsrH pair through intermolecular interactions with
+#=GF CC   antisense sRNAs. They form type I toxin/antitoxin system that includes an
+#=GF CC   mRNA encoding for a short, toxic peptide (bsrE, bsrG and bsrH) and an
+#=GF CC   antitoxin that is comprised of an antisense RNA.[7] bsrG encodes a
+#=GF CC   39-amino-acid toxin, and the 180 nucleotide antisense sRNA called SR4 acts
+#=GF CC   as the antitoxin (they overlap by 123 nucleotides). SR4 interaction with
+#=GF CC   the 3'UTR of bsrG RNA promotes bsrG degradation and inhibits its
+#=GF CC   translation.[2][4] BsrG interferes with cell envelope biosynthesis, causes
+#=GF CC   membrane invaginations and delocalisation of the cell wall synthesis and
+#=GF CC   initiates autolysis.[3] bsrE RNA encodes 30 amino-acid toxin peptide. Its
+#=GF CC   antitoxin gene, SR5 overlaps by 112 nucleotides at the 3' end of bsrE.[5]
+#=GF CC   SR5 also overlaps bsrG from nucleotide 163 to 52 (Rfam overlap check). The
+#=GF CC   antitoxin SR5 promotes bsrE degradation but unlike SR4 it does not
+#=GF CC   directly inhibits toxin mRNA translation.[5][6]
+#=GF WK   Bacillus_subtilis_BSR_sRNAs
+#=GF SQ   6
+
+
+AE017333.1/3485452-3485196 UAUAAAAAGCU---UUGCUCACUCAAGGGAAGUCUUGCUCAUCCCCU-UCUGAA-AGGGGGUGAUAAAA-AUGACAGCAUAUGAAACAAUCUCUUUAAUGAUUGCUUUUGGCAUGCUGAU---------UGCCAUGUUGUCAGAGAACAAA---------------------------GAAAAAUAGACCGCCCCUUGAGCCUGGAAAGUGAUAGGGAGUGGUCUAUUUUAGGUCAAU-CU-----GAGCAA-GCCCCUUCGA-AGGGCC--GGCUUUUUGUACA-AGCCGAAGUGUU-GG-AGCACUUCGG
+AF027868.1/49816-50069     UACAGUAAGUU---UUGCUCACUCGAGGGA-GUCUUGCUCAUCCCCU-AAUGAA-AGGGG-UGAUGCU--AUGUCAACAUUCCAGGCAUUAAUGCUAAUGCUUGCAAUCGGGUCGUUUAUA------AUCGCCCUAUUGACGU---AUAUA--------------------------GAAAAAAUAGACCU-CCCUUGAGCCUCAGAACCUGAAGGGAUAGGCCUACCUAGAACC-ACAUC-----GAGCAA-GCCCUUU-G--AUGGGC--AACUUUUUGUACAGAGCCGGGGUGUU-GGUAGCACCUCGG
+AP006627.1/3751669-3751418 AACAAUAGCAUA--ACGGUUACUCAAGGGU-GGUCGGCACA-CUCCC-AUGAAA-GGGGG-UGUUGCUGUAUGACAGUAUUUGAAGGAAUUUCCCUUAUGUUGACGUUUGGGCUUCUGAUC------GUUGCAAUGCUGUCAUUUCACAAC------------------------CACAAAAAAUAAUCCA-CCCUUGAGUU-------AGU--GGCUCAGGUGGAUUAUUCGUCCAA-UC-----GGCCG--AUCCCUU-GC-AGGGAUCCGAGCUAUUGUUUG-ACUGAAGGUGUG-AC-AGCACCUUCA
+BA000004.3/369992-370242   CAAUAGAAUAGGAUUU-----CUCGAGGGU-GGUCGGCACACUCCCAAGUUGAAAGGGGG-UGGUGCUGUUUGACGGUAUUUGAAGCGUUGAUGUUUGC-CGUAGCGUUUGCGACUUUAAUC-----AUCGCGGUGCUGUCGUUUCAUGAA---------------------------AAAAAAUAAUCCA-CCCUUGAGUUAGCGGCUCAG-GUGGAUUCGUCUAUCCUAUGGCC--------------GA-UCCCCUU-G--GAGGGA-ACCGUUUUAUUGCAUGACCGUCGAUGUUACCGCAUCGGCGG
+AARF01000097.1/2047-2290   GCAAUAG-------UGGCUUACGUGGGCGG-----UCGGCAUCACCU--CGGAA-AGGAGGUGAUGCU--AUGGAGACGUUUCAGGCUCUUCAAUUAAUGUUCUUAUUUGGAAUGUUUAUUCUAGCGCUUUUAACGUUUAUCCAGAAAAUG--------------------------AAAUAGAU-------CGCCCACGCUAAGGAAACGA----------UCUAUUUCGUUUGUAAACCUUAUUAAGCCGACCGCCUA-GUAGCGCGG------CUAUUGCCAGACCGUGGACGAU-ACCAGCGUCUGCG
+AL009126.3/2273535-2273822 UACA-UAAAGU---UUGCUCACUCAAGGGA-GUCUUGCUCAUCCCCU--AUGAA-AGGGG-UGGGAAA--AUGACUGUUUACGAAUCAUUAAUGAUAAUGAUCAAUUUUGGCGGAUUGAUAUUAAAUACCGUCUUGUUGAUCUUCAAUAUAAUGAUGAUUGUAACGUCAAGCCAAAAGAAAAAAUAGACCUUCCCUUGAGUUUGGACACCUGAAGGGUUAGGCCUACGCAGAUUUGACAAC-----GAGCAA-GCCCUUU-G--AUGGGC--AGCUUU-UGUACAGAGCCAGGGUGCU-ACCAACACCCUGG
+#=GC SS_cons               {{{{{-{{{-{...{{{{{{,[[[[[[[[-.[[[[,,,<<<-<<<<<.______.>>>>>.>>>,,,,..,,(((((((,,,,,,<<<__________>>>,,,,,,,,<<<<_________.....__>>>>,))))))),,,,,,,,,,..........................,,,,,,,,]]]]--.]]]]]]]],,,,,,,,,<<<._______________>>>,,,,,,,,,,.....}}}}}}.<<<<___.__.__>>>>..}-}}}-}}}}}-----<<<<<<<<<<.___>>>>>>>>>>
+#=GC RF                    uacaauaagau...uuGcucACuCaaGGGa.GucuuGCuCAUCcCCu.auuGAA.aGGgG.UGaUGcu..AUGacagcaUuUgAAgCauUuauguUaAuGcUuauuuUUgGcgugUUuAUuc.....aUcgCcaugcuguCauuuaAuAua..........................aAAAAAAUagaCCa.CCCuuGaGuUugggaAucgg.AGGGauaGGUCUAUuccguuUcuAaAuC.....gagCaa.gccCcUU.Gu.auGggc..aacuuUuuguaCAgAgCcgggGuGcu.AcCagCaCcccgG
+//

@@ -1,0 +1,54 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00965
+#=GF ID   mir-549
+#=GF DE   microRNA mir-549
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   93.00
+#=GF TC   93.90
+#=GF NC   86.90
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000470;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   16505370
+#=GF RT   The colorectal microRNAome.
+#=GF RA   Cummins JM, He Y, Leary RJ, Pagliarini R, Diaz LA Jr, Sjoblom T, Barad O,
+#=GF RA   Bentwich Z, Szafranska AE, Labourier E, Raymond CK, Roberts BS, Juhl H,
+#=GF RA   Kinzler KW, Vogelstein B, Velculescu VE
+#=GF RL   Proc Natl Acad Sci U S A. 2006;103:3687-3692.
+#=GF RN   [2]
+#=GF RM   18186931
+#=GF RT   Identification of novel homologous microRNA genes in the rhesus macaque
+#=GF RT   genome.
+#=GF RA   Yue J, Sheng Y, Orwig KE
+#=GF RL   BMC Genomics. 2008;9:8.
+#=GF RN   [3]
+#=GF RM   20214803
+#=GF RT   Genome-wide comparative analysis of microRNAs in three non-human primates.
+#=GF RA   Brameier M
+#=GF RL   BMC Res Notes. 2010;3:64.
+#=GF RN   [4]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   Mir-549_microRNA_precursor_family
+#=GF SQ   5
+
+
+URS00006468AB_9606/18-89 AUAUAUUGAGAGCUCAUCCAUAGUUGUCACUGUCUCAAAUCAGUGACAACUAUGGAUGAGCUCUUAAUAUAU
+URS000066F5C4_9544/18-88 AUAUAUUGAGAGCUCAUCCAUAGUUGUCACUGUCUCAGAUCA-UGACAAUUAUGGAUGAGCUCUUAAUAUAU
+URS00006B8758_9600/18-89 AUAUAUUGAGAGCUCAUCCAUAGUUGUCACUGUCUCAGAUCAGUGACAACUAUGGAUGAGCUCUUAAUAUAU
+URS0000759C94_9598/18-89 AUAUAUUGAGAGCUCAUCCAUAGUUGUCACUGUCUCAGAUCAGUGACAACUAUGGAUGAGCUCUUAAUAUAU
+URS00007E4264_9544/1-57  --------AGAGCUCAUCCAUAAUUGUCAUGAUCUGAGA-CAGUGACAACUAUGGAUGAGCUCUCA------
+#=GC SS_cons             <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<________>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#=GC RF                  auauauugaGaGCuCauCCauaguuGuCacuGUCUcAGAUCaguGaCaacuauGGauGaGCuCuuaauauau
+//

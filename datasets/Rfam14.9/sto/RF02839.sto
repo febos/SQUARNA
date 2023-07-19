@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02839
+#=GF ID   Ref66
+#=GF DE   Enterococcus sRNA 66
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF AU   Repoila F; 0000-0001-5149-9698
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   92.00
+#=GF TC   92.20
+#=GF NC   40.00
+#=GF TP   Gene; antisense;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB 128 CM SEQDB
+#=GF DR   SO; 0000644; antisense_RNA;
+#=GF RN   [1]
+#=GF RM   25737579
+#=GF RT   Whole-genome mapping of 5' RNA ends in bacteria by tagged sequencing: a
+#=GF RT   comprehensive view in Enterococcus faecalis.
+#=GF RA   Innocenti N, Golumbeanu M, Fouquier d'Herouel A, Lacoux C, Bonnin RA,
+#=GF RA   Kennedy SP, Wessner F, Serror P, Bouloc P, Repoila F, Aurell E
+#=GF RL   RNA. 2015;21:1018-1030.
+#=GF CC   Name âRefâ stands for RNA in E. faecalis. 
+#=GF WK   Enterococcus_faecalis
+#=GF SQ   2
+
+
+
+CSXB01000067.1/316-206   AAAGAGAGGUAUGCGGGUACAUACCUCUCCUUUUAUACCAACACCAGUUAUAAGAACUGGUGGCUUACUGAGUUAA--GUUUUG------AAUCUUAACCGUUCGGC-CUACGAAGCUUG
+AE016830.1/681566-681449 AAAGAGAGAUAUGCAGGAACAUACCUCUC-UAGUA-GCCACUACUAGUUAUAAGAACUAGCGGCUUACUGAGUUAUUGGUUUUAUUUCAAACGCUUAACCGUUCAGCUCCUCAAAGCUUA
+#=GC SS_cons             ::<<<<<<-<<<<______>>>>->>>>>.><<<<.<<<----<<<<<<_____>>>>>>->>>->>>><<<<<<-<<<<<_______________>>>>>->->>>>>:::::::::::
+#=GC RF                  AAaGaGaGauauGCaGGaACauaCCuCuC.uagua.gCCAauACcaGuuAUAAGaaCugGuGGcUuacuGaGuuaucGGuuUUaUUUcAAAauCUUaaCCgUuCagCuCuuCaAAGCUUa
+//

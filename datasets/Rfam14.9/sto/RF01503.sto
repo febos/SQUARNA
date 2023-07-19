@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01503
+#=GF ID   Afu_203
+#=GF DE   A. fumigatus sRNA Afu_203
+#=GF AU   Osuch I
+#=GF SE   INFERNAL
+#=GF SS   Predicted; WAR; Clustal_alifold;
+#=GF GA   37.00
+#=GF TC   37.10
+#=GF NC   33.10
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   18346967
+#=GF RT   Small ncRNA transcriptome analysis from Aspergillus fumigatus suggests a
+#=GF RT   novel mechanism for regulation of protein synthesis.
+#=GF RA   Jochl C, Rederstorff M, Hertel J, Stadler PF, Hofacker IL, Schrettl M,
+#=GF RA   Haas H, Huttenhofer A
+#=GF RL   Nucleic Acids Res. 2008;36:2677-2689.
+#=GF WK   Aspergillus_fumigatus_non-coding_RNAs
+#=GF SQ   3
+
+
+ABDB01000029.1/278235-278125 GACGAGGAUUAUAUAUAUUGCAUGGCUUUCGGACAACCAUGACGGUAACUCCAUACCUUUGGUAUGUUGUCAUGGCUGCAUGACGUACAUCGCAGGGGUAAUGAGUCGACC
+AAHF01000002.1/294063-293953 GACGAGGAUUAUAUAUAUUGCAUGGCUUUCGGACAACCAUGACGGUAACUCCAUACCUUUGGUAUGUUGUCAUGGCUGCAUGACGUACAUCGCAGGGGUAAUGAGUCGACC
+AAKE03000007.1/238870-238761 GACGGGGAUUAUAUAUUGCAUGAGUUUCUCGGACA-CCAUGACGGUAGCUUCAUACCUUUGGUAUGUUGUCAUGGCUGCAUGACGUACAUCGCAGGGGUAAUGAGUCGACC
+#=GC SS_cons                 ::<<<<<--<<<_________>>>-->>>>>------------<<<-<<<<--<<<<<<<<<-<<<<<<<<<<<____>>>>>>>->>>>>->>>>>>>>-->>>>-->>>
+#=GC RF                      GACGaggAUcauAUAUauugcauggcccuCGGACAACCAUGACGGuAaCucCAuaCCccuGGUauGucGuCauGGCUGCauGaCgUaCauCGCaggGGuaAUgaGuCGaCC
+//

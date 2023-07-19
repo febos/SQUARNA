@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF03684
+#=GF ID   mir-1990
+#=GF DE   mir-1990 microRNA precursor family
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   63.00
+#=GF TC   63.70
+#=GF NC   62.10
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 25.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000718;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF RN   [1]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF CC   This family represents the microRNA (miRNA) precursor mir-1990 imported
+#=GF CC   from miRBase.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+URS0000D5025D_283909/1-74 CGCAGUUGUAAGUUGACAUAGUCCCAGGGCCAAGUACAGCGAUGCAACCCGGGACUACGUUAACUUCCAGCCUC-
+URS0000D51C29_283909/1-75 CGAGGCUGGAAGUUAACGUAGUCCCGGGUUGCAUCGCUGUACUUGGCCCUGGGACUAUGUCAACUUACAACUGCG
+URS0000D537D7_6454/3-68   ACGUGCAGUAAGUUGAUGGGGUCCCAGGUU--------GUCUAUAAUCCCGGGACUACGUCAACUACU-GCAAGG
+URS0000D56455_225164/3-67 UCGUGCAGUAAGUUGAUGGGGUCCCAGGUU--------AUUUU--GUCCCGGGACUACGUCAACUACUAGCACGC
+#=GC SS_cons              :::<<<<<-<<<<<<<<<<<<<<<<-<<___________________>>->>>>>>>>>>>>>>>>->>>>>:::
+#=GC RF                   cgguGcuGUaAGUUgAcguaGUCCCAGGUUgaAuuaCuGUauUuaauCCCGGGACuacgUcAACUucCagCaucg
+//

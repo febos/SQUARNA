@@ -1,0 +1,48 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02011
+#=GF ID   mir-575
+#=GF DE   microRNA mir-575
+#=GF AU   Boursnell C; 0000-0002-3494-4451
+#=GF SE   Predicted; ClustalW2
+#=GF SS   Predicted; RNAalifold
+#=GF GA   60.00
+#=GF TC   73.20
+#=GF NC   35.80
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   MIPF; MIPF0000586;
+#=GF DR   URL; http://www.mirbase.org;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   18760970
+#=GF RT   Computational identification of novel microRNA homologs in the chimpanzee
+#=GF RT   genome
+#=GF RA   Baev V, Daskalova E, Minkov I
+#=GF RL   Comput Biol Chem. 2009;33:62-70.
+#=GF RN   [2]
+#=GF RM   20214803
+#=GF RT   Genome-wide comparative analysis of microRNAs in three non-human primates
+#=GF RA   Brameier M
+#=GF RL   BMC Res Notes. 2010;3:64.
+#=GF RN   [3]
+#=GF RM   16505370
+#=GF RT   The colorectal microRNAome
+#=GF RA   Cummins JM, He Y, Leary RJ, Pagliarini R, Diaz LA Jr, Sjoblom T, Barad O,
+#=GF RA   Bentwich Z, Szafranska AE, Labourier E, Raymond CK, Roberts BS, Juhl H,
+#=GF RA   Kinzler KW, Vogelstein B, Velculescu VE
+#=GF RL   Proc Natl Acad Sci U S A. 2006;103:3687-3692.
+#=GF WK   Mir-575_microRNA_precursor_family
+#=GF SQ   3
+
+
+AC073413.6/132554-132462     -AUUCAGCCCUGCCACUGGCUUAUGUCAUGACCUUGGGCUACUCAGGCUGUCUGCACAAUGAGCCAGUUGGACAGGAGCAGUGCCACUCAACUC
+ABGA01388661.1/10721-10628   AAUUCAGCCCUGCCACUGGCUUAUGUCAUGACCUUGGGCUACUCAGGCUGUCUGCACAAUGGGCCAGUUGGACAGGAGCAGUGCCACUCAACUC
+AADB02007055.1/191943-191850 AAUUCAGCCCUGCCACUGGCUUAUGUCAUGACCUUGGGCUACUCAGGCUGUCUGCACAAUGAGCCAGUUGGACAGGAGCAGUGCCACUCAACUC
+#=GC SS_cons                 ::::::<<<<<<<<<<<<<<<<<<<<<<-<<<<<<<<<___>>>>>>-->>>>>->>->>>>>>>>>->>>->>>>->>:::::::::::::::
+#=GC RF                      AAUUcAGCCCuGCCaCuGGCucauGuCaUGaCCcuGgGcUACcCagGcUGuCuGcaCAaugaGCCaGUuGGACaGGAGCAGUGccAcUcAAcUc
+//

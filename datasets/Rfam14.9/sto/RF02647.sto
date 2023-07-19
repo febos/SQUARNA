@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02647
+#=GF ID   Cis52_sRNA
+#=GF DE   Ruegeria cis52 sRNA
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   56.00
+#=GF TC   56.00
+#=GF NC   55.30
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0010468; regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   27065955
+#=GF RT   Experimental Identification of Small Non-Coding RNAs in the Model Marine
+#=GF RT   Bacterium Ruegeria pomeroyi DSS-3.
+#=GF RA   Rivers AR, Burns AS, Chan LK, Moran MA
+#=GF RL   Front Microbiol. 2016;7:380.
+#=GF CC   Cis-encoded. Targets oligo/dipeptide ABC transporter. Functions in
+#=GF CC   transport. Higher sRNA expression during C-limited growth.
+#=GF WK   Ruegeria
+#=GF SQ   2
+
+
+
+CP000031.1/1765577-1765755 UUCUCAGCGCGUGCUUGAGCACGAUAUUGGGGAAGGACACGCCCUUGAGCCGCGCGGUGCGGAUAUAUUGCGCCGUCAUCACCUCGGUCAUCGAGGCGCGGGUCAUCCGCGCGAUAUAACCCAUGCCAUAGAGCGCGAUGGUCAGCACCGGCAGGAAGAAGUUCUCGAAUGUCGGCUGC
+AAMO01000004.1/24266-24444 UCCUGAGCGCGUGCUUCAGCACGAUGUUGCGGAAGGUCACGCCCUUGAGCCGCGCGGUGCGGAUGUAUUGCGCCGUCAUCACCUCGGCCAUCGAGGCACGGGUCAUCCGGGCGAUGUAGCCCAUGCCGAAGAGGGCGAUGGUCAGCACCGGCAGGAAGAAAUUCUCGAAGGUGGCGUUC
+#=GC SS_cons               :::(((-(((((-((((-(((------((((------(-(((---(((-(((((<<<<<<<<_____>>>>>>>>,,,,,,<<<<<_____>>>>>)))))-)))---)))-)------)))))))))-))-)))))-)))---<<<<<<<<<<<<<____>>>>---->>>>>>->>>
+#=GC RF                    UuCccaGCGCgcGCucgAGCaCGAUaUuGgGGAAGGaCACgCCCUuGaGCCGcGCGGcGCggAUaUAccGCgCCGUCAUCACCuCGGuCAUCGaGGCgCGGGuCaUCCGcGCGAUaUAaCcCauGCcgaaGAgcGCGAuggUCAGcacCggCagGaaGAAauuCcCGAAuGccGggugC
+//

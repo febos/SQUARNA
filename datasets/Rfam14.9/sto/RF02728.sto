@@ -1,0 +1,47 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02728
+#=GF ID   HrrF
+#=GF DE   Haemophilus regulatory RNA responsive to iron
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Santana et al, PMID:25157846
+#=GF SS   Predicted; CMfinder
+#=GF GA   77.00
+#=GF TC   77.00
+#=GF NC   45.10
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF DR   GO; 0045975; positive regulation of translation, ncRNA-mediated;
+#=GF DR   GO; 0010039; response to iron ion;
+#=GF RN   [1]
+#=GF RM   25157846
+#=GF RT   HrrF is the Fur-regulated small RNA in nontypeable Haemophilus influenzae.
+#=GF RA   Santana EA, Harrison A, Zhang X, Baker BD, Kelly BJ, White P, Liu Y,
+#=GF RA   Munson RS Jr
+#=GF RL   PLoS One. 2014;9:e105644.
+#=GF CC   Involved in iron homeostasis in Haemophilus species. Orthologues exist
+#=GF CC   only among other Pasteurellacae. It is an analog to PrrF and RyhB RNAs.
+#=GF CC   HrrF is maximally expressed when iron levels are low. Ferric uptake
+#=GF CC   regulator (Fur) binds upstream of the hrrF promoter. HrrF stability is not
+#=GF CC   dependant on the RNA chaperone Hfq. RNA-seq has shown that that HrrF
+#=GF CC   targets are mRNAs of genes whose products are involved in molybdate
+#=GF CC   uptake, deoxyribonucleotide synthesis, and amino acid synthesis.
+#=GF WK   HrrF_RNA
+#=GF SQ   7
+
+
+
+FQ312006.1/1350346-1350443 ACAUCUGUU------------------------------------AAGCGAUUGCAGGUUGCUCCA--ACAGGUAGAGUAGAAAGUAAAUUCGUUAGGGUU--CAAAAAGGCUGAAGGUUUAA-ACUUCAGCCUUUUUU
+FQ312002.1/1295729-1295828 ACAUCUGUU---------------------------------UCGUAGCGAUUGCAGGUUGCUUCA--ACAGGUAGAGUAGAAAGUAAAUUCGUUAGGGUU---AAAAAGGCUGAAGGUUUAA-ACUUCAGCCUUUUUU
+AE004439.1/147426-147558   ACAUCUGUUAGAGAUAAAGGUGGGAAUGAUAGAGUAGAUCGUUUUCAGUCUGAGU--CAUACUCCA-AACAGGUAGAGUAGAAAGUAAAUUCGUUAGGGUAUUUAU--GGGCUGAAGGUUUAA-ACUUCAGCCUUUUUU
+CP000746.1/870985-871073   GUAUCUGUU------------------------------------AAGGCAU-AGAUGCUCCG-----ACAGGUAGAGUAGAAAGUAAAUUCGUUAGGGU------AAAAACUGAAGUUGUAUGACUUCAGUUUUU--U
+CP001733.1/1977765-1977896 ACAUCUGUUAAGUAUUGCAAUGAAGAUGAA-CGGUAG-UCAUUGGAAGUCU--GCAUAGUACUCCA-AACAGGUAGAGUAGAAAGUAAAUUCGUUAGGGUAUUUGAAAAGACUGAAG-UUUAA-GCUUCAGUCUUUUUU
+CP001607.1/1451194-1451326 CCAUCUGUUAAGUAUUGCAGUUGAGAUGAU-GGGUAG-UCAUUU-UGAAGUUUGCAUAGUACUCCAUAACAGGUAGAGUAGAAAGUAAAUUCGUUAGGGUAUUU-AAAAGACUGAAG-UUUAA-ACUUCAGUCUUUUUU
+CP002276.1/1248713-1248598 AUAUCUGUUACUAUACACACAUCUG-----------------UU-AAGCGAUUGCAGGUUGCUCCA--ACAGGUAGAGUAGAAAGUAAAUUCGUUAGGGUU--CAAAAAGGCUGAAGGUUUAA-ACUUCAGUCUUUUUU
+#=GC SS_cons               ::<<<<<<-----------------...._.______.....--,-<<<<<<_____>>>>>>---..>>>>>>,,,,,,,,,,,,,,<<<<____>>>>,,,,<<<<<<<<<<<<<______._>>>>>>>>>>>>>:
+#=GC RF                    acauCUGUUAaauauuacaauuaag.................Uu.aaGcgccuGcAuggcgCucCA..ACAGguAGAGUAGAAAGUAAauuCGUUAGggua..uaaaaaGgCUGaaGgUUUAA.ACuuCAGcCuuuuuU
+//

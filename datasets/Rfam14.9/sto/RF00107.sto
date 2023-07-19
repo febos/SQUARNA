@@ -1,0 +1,48 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00107
+#=GF ID   FinP
+#=GF DE   FinP
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Published; PMID:9917389
+#=GF GA   45.00
+#=GF TC   50.80
+#=GF NC   43.10
+#=GF TP   Gene;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00016
+#=GF DR   SO; 0000644; antisense_RNA;
+#=GF RN   [1]
+#=GF RM   9917389
+#=GF RT   Degradation of FinP antisense RNA from F-like plasmids: the RNA-binding
+#=GF RT   protein, FinO, protects FinP from ribonuclease E.
+#=GF RA   Jerome LJ, van Biesen T, Frost LS
+#=GF RL   J Mol Biol 1999;285:1457-1473.
+#=GF RN   [2]
+#=GF RM   14633993
+#=GF RT   FinO is an RNA chaperone that facilitates sense-antisense RNA
+#=GF RT   interactions.
+#=GF RA   Arthur DC, Ghetu AF, Gubbins MJ, Edwards RA, Frost LS, Glover JN
+#=GF RL   EMBO J 2003;22:6346-6355.
+#=GF CC   The FinOP system regulates the transfer of F-like plasmids. FinP encodes
+#=GF CC   an antisense RNA product that is complementary to part of the 5' UTR of
+#=GF CC   the traJ mRNA. The traJ gene encodes a protein required for transcription
+#=GF CC   from the major transfer promoter, pY. The FinO protein is essential for
+#=GF CC   effective repression, acting by binding to FinP and protecting it from
+#=GF CC   RNase E degradation.
+#=GF WK   FinP
+#=GF SQ   6
+
+
+AE006471.1/61593-61518 GACACAUAGGAACCUCCUCA--AAGGAUUCUAUGGACAGUCGAUGCAGGGAGU-GACAG-CUCCCUGUAUCGGCGAUUUA
+X55896.1/1041-966      CACACAUAGGAACCUCCUCA--AAGGAUUCUAUG-ACAGUCGAUGCAGGGAGG-GACAAGCUCCCUGCAUCGGCGAUUUU
+U01159.2/1039-961      GAUACAUAGGAACCUCCUCACAAAGGAUUCUAUGGACAGUCGAUGCAGGGAGUUCACGU-CUCCCUGCAUCGGCGAUUUU
+X55894.1/1036-958      GAUACAUAGGAACCUCCUCACAAAGGAUUCUAUGGACAGUCGAUGCAGGGAGGAGAGAA-CUCCCUGCAUCGGCGAUUUU
+AF389529.1/1113-1037   GAUACACAGGAGCCUCCUCA--AAGGAUUCUAUGGGUAGUCGAUGCAGGGAGG-GACCAACUCCCUGCAUCGGCGAUUUA
+M20941.1/217-140       GAUACAUAGGAACCUCCUCUCAAAGGAUUCUAUGGACAGUCGAUGCGGGGAGGUCGCU--CUCCCUGCAUCGGCGAUUUU
+#=GC SS_cons           ::::<<<<<<<-<<<________>>>->>>>>>>----<<<<<<<<<<<<<<_______.>>>>>>>>>>>>>>::::::
+#=GC RF                gAuACauaGgaACCuCCUCAcAAaGGAuuCuauGGAcAGuCGauGCaGGGaGgugAcaa.CuCCCuGCauCGgCGAUUUu
+//

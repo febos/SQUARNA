@@ -1,0 +1,45 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00474
+#=GF ID   snosnR57
+#=GF DE   Small nucleolar RNA snR57
+#=GF AU   Moxon SJ; 0000-0003-4644-1816
+#=GF SE   Moxon SJ
+#=GF SS   Predicted; Griffiths-Jones S
+#=GF GA   50.00
+#=GF TC   52.80
+#=GF NC   46.70
+#=GF TP   Gene; snRNA; snoRNA; CD-box;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0000593; C_D_box_snoRNA;
+#=GF DR   GO; 0006396; RNA processing;
+#=GF DR   GO; 0005730; nucleolus;
+#=GF RN   [1]
+#=GF RM   12007400
+#=GF RT   Small nucleolar RNAs: an abundant group of noncoding RNAs with diverse
+#=GF RT   cellular functions.
+#=GF RA   Kiss T
+#=GF RL   Cell 2002;109:145-148.
+#=GF RN   [2]
+#=GF RM   10024243
+#=GF RT   A computational screen for methylation guide snoRNAs in yeast.
+#=GF RA   Lowe TM, Eddy SR
+#=GF RL   Science 1999;283:1168-1171.
+#=GF CC   snR57 is a member of the C/D class of snoRNA which contain the C (UGAUGA)
+#=GF CC   and D (CUGA) box motifs. Most of the members of the box C/D family
+#=GF CC   function in directing site-specific 2'-O-methylation of substrate RNAs
+#=GF CC   [1].
+#=GF WK   Small_nucleolar_RNA_snR57
+#=GF SQ   5
+
+
+CR382122.1/550657-550747   UUCU--AAAUGAUUAUAAAAA---CAAAAUAUUUAUAACUGAGGAAGUAUAUGCAGGACAUAUUGUUAUUUAGGAAUUCUUCGUUUAUGAUC----AGGA
+AJ575660.1/48834-48920     GGCA--AAAUGAUUAGGAACA--------UAUUUUCUACUGAGGAUGUAAAUGCAGGACAAAUCGUUA---AGGAAUUCUUCGUUUAUGAUCUUAGUGCA
+AF064269.1/1-88            ----AAGCGUGAUUAUAAAAAAUGAUUUAAAUAUUUUUCUGAGGAAGUAUAUGCAGGACAUAUUGUGAAUUAGGAAUUCUUCGUUUAUGAUC--------
+U19028.1/2512-2416         GGUUAAGCGUGAUUAUAAAAAAUGAUUUAAAUAUUUUUCUGAGGAAGUAUAUGCAGGACAUAUUGUGAAUUAGGAAUUCUUCGUUUAUGAUCU---GGCC
+CR382138.2/1137204-1137296 UUAU---CAUGAUUAAACCCAAUGAUAU-AACAAAUGACUGAGGAUGCAUAUGCAAGACAAAAAUAAAUUUAGGAAUUCUUCGUUUAUGAUUU---AUAC
+#=GC SS_cons               <<<<.._______________________________________________________________________________________...>>>>
+#=GC RF                    ggcu..acaUGAUUAuAAAaAAUGauauAaAUaUuUuaCUGAGGAaGUAUAUGCAGGACAuAUuGUuAuUUAGGAAUUCUUCGUUUAUGAUcU...agcc
+//

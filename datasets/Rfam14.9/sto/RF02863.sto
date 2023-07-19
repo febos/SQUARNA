@@ -1,0 +1,38 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02863
+#=GF ID   sRNA_2410
+#=GF DE   Enterococcus sRNA 2410
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Argasinska J
+#=GF SS   Predicted; RNAfold;
+#=GF GA   61.00
+#=GF TC   61.60
+#=GF NC   59.70
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 604040.189692 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000370; small_regulatory_ncRNA;
+#=GF RN   [1]
+#=GF RM   28894187
+#=GF RT   Small RNAs in vancomycin-resistant Enterococcus faecium involved in
+#=GF RT   daptomycin response and resistance.
+#=GF RA   Sinel C, Augagneur Y, Sassi M, Bronsard J, Cacaci M, Guerin F, Sanguinetti
+#=GF RA   M, Meignen P, Cattoir V, Felden B
+#=GF RL   Sci Rep. 2017;7:11067.
+#=GF CC   Produced as 2 transcripts on Northern blot. Expressed in mid, late
+#=GF CC   exponential and early stationary phases of growth. Expression remained
+#=GF CC   uniform under daptomycin exposure.
+#=GF WK   Enterococcus_faecium
+#=GF SQ   3
+
+
+
+CP003583.1/2651143-2651337 UUAGCUACUUUAGAUAGGUUUGUAUUCAU-CAUGAUGGAUACAAACGUUAAACGACA--GUUUGUAUCUAUGAUGGCUAAAGAACUUUGUAUUGCAGCAAAAAGCCACGUAGACAAAAUGCUAAGUGGCUGAGCA-GUGAAAAUACAAAGUAAA-AGUAUCAAGCAUUC------UACUUUUUCAAUUUAUUUUCCGACUUUUCAA
+CP003504.1/990085-989901   UUAGCUACUUUAGAUAGGUUUGUAUUCAUGAAUUAUGGAUACAAACACCAAACAACU-GGUUUGUAUCUAUGAUGGCUAAAGAACUUUGUAUUACG--CAAAAGCCACGUAGACAUUACGUUAAGUGGCUAAGCG---AAAAGUACAAAGU------AAUCACGAUUUC------UUAC---UUACAUACUCUUUCGAUACUCAAU
+MIJY01000006.1/46304-46103 UUAGCUAUUUUAGAUAGGUUUGUAUUCAUGAAUCAUGGAUACAAACAGCAAAAGACUGUUUUUGUAUCUAUGAUGGCUAGAGCACUUUGUACUGAA-CAAACAGCCACGUAGACA--AUCCUAAGUGGCUAACAAAAGUAAUGAACUAAC-GACUUUUAUCAAUCCAUUUAGGCAUAUUGUCUGAAUGGAUUUUUUGUUUUAUCAA
+#=GC SS_cons               (((((((---((((((,<<<<<<<<<<<<_____>>>>>>>>>>>>,,<<<<<____._>>>>>))))))---))))))),,,<<<<<<<<<<---.<----<<<<<<-<<<________>>>->>>>>>-----.>---->>>>>>>>>><<<.<<<<__________......>>>>>>>::::::::::::::::::::::::
+#=GC RF                    uuaGCuacUUuaGauaGGuuuGuauuCauGaAUuauGgauaCaaaCaucaaacgACu.uguuuguauCuaUGAugGCuaaAGaacuuuGuacugca.caAAaaGCCaCGuaGACAaaAugCuaAGuGGCuaAgca.guaAAaguaCaaagugac.aguaUCAagcuuUc......uacugucUuAauuaaUuUUucGauuuuucAa
+//

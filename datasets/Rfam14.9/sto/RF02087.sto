@@ -1,0 +1,35 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02087
+#=GF ID   Yar_3
+#=GF DE   Yellow-achaete intergenic RNA conserved region 3
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Predicted; CMfinder; Eberhardt R
+#=GF SS   Predicted; CMfinder;
+#=GF GA   50.00
+#=GF TC   59.40
+#=GF NC   38.20
+#=GF TP   Gene; lncRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 19.89 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001463; lincRNA;
+#=GF DR   GO; 0005737; cytoplasm;
+#=GF DR   GO; 0042749; regulation of circadian sleep/wake cycle;
+#=GF RN   [1]
+#=GF RM   21775470
+#=GF RT   A Conserved Long Non-coding RNA Affects Sleep Behavior in Drosophila.
+#=GF RA   Soshnev AA, Ishimoto H, McAllister BF, Li X, Wehling MD, Kitamoto T, Geyer
+#=GF RA   PK
+#=GF RL   Genetics 2011;0:0-0.
+#=GF WK   Yar_(gene)
+#=GF SQ   4
+
+
+AE014298.4/260895-260961   GACUCUGGCUACGAGGCGCGUGUGUGCAAUAUCAGGUUUCCGCAUCGACUUGCAUAGUGAUUC--GAGG
+AAPQ01005758.1/54851-54917 GAGUCUGGCCACGAGGCGCGUGUGUGCAAUAUCAGGUUUCCGUGUCAACUUGCAUAGUGACUC--AAGG
+AAPP01017309.1/7589-7655   GGCUCGGGCCAAGAGGCGCGUGUGUGCAAUAUCAGGUUUCCAUGUCAACUGGCACAGUGGUUG--GAGG
+AAEU02001095.1/90591-90659 GAGUCUGGCCACGAGGCGCGUGUGUGCAAUAUCAGGUUUCCGUGUCAACUUGCAUAGUGAUUCAGGAUG
+#=GC SS_cons               :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::..::::
+#=GC RF                    GagUCuGGCCAcGAGGCGCGUGUGUGCAAUAUCAGGUUUCCGUGUCaACUuGCAUAGUGaUUc..GAGG
+//

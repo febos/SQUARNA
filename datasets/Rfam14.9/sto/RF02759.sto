@@ -1,0 +1,41 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02759
+#=GF ID   LasI_thermometer
+#=GF DE   LasI 5' UTR ROSE like thermometer
+#=GF AU   Argasinska J; 0000-0003-2678-2824
+#=GF SE   Grosso-Becerra et al, PMID:25313031
+#=GF SS   Predicted; PMID:25313031;
+#=GF GA   76.00
+#=GF TC   76.80
+#=GF NC   40.10
+#=GF TP   Cis-reg; thermoregulator;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 549862.597050 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0000204; five_prime_UTR;
+#=GF DR   SO; 0002168; RNA_thermometer;
+#=GF DR   SO; 0005836; regulatory_region;
+#=GF DR   GO; 0009266; response to temperature stimulus;
+#=GF DR   GO; 0006417; regulation of translation;
+#=GF RN   [1]
+#=GF RM   25313031
+#=GF RT   Regulation of Pseudomonas aeruginosa virulence factors by two novel RNA
+#=GF RT   thermometers.
+#=GF RA   Grosso-Becerra MV, Croda-Garcia G, Merino E, Servin-Gonzalez L,
+#=GF RA   Mojica-Espinosa R, Soberon-Chavez G
+#=GF RL   Proc Natl Acad Sci U S A. 2014;111:15562-15567.
+#=GF CC   ROSE-like thermometer in the 5'UTR blocks the translation at lower
+#=GF CC   temperature.
+#=GF WK   Repression_of_heat_shock_gene_expression_(ROSE)_element
+#=GF SQ   3
+
+
+
+FM209186.1/4393752-4393643 AGCCUAGCAAGGGUCCGGGUUCACCGAAAUCUAUCUCAUUUGCUAGUUAUAAAUUUAUGAAAUUUGCAUAAAUUCUUCAGCUUCCUAUUUGGAGGAAGUGAAGAUGAUCG
+CP000744.1/4032440-4032331 AGCCUAGCAAGGGACCGGGACGACCGAAAUCUAUCUCAUUUGCUAGUUAUAAAUUUAUGAAAUUUGCAUAAAUUCUUCAGCUUCCUAUUUGGAGGAAGUGAAGAUGAUCG
+AE004091.2/1559151-1559260 AGCCUAGCAAGGGUCCGGGUUCACCGAAAUCUAUCUCAUUUGCUAGUUAUAAAAUUAUGAAAUUUGCAUAAAUUCUUCAGCUUCCUAUUUGGAGGAAGUGAAGAUGAUCG
+#=GC SS_cons               :::<<<<<<<<<---<<<_____>>>--->>>-------->>>>>>,,,,,,<<<<<<<_______>>>>>>><<<<<<-<<<<<<______>>>>>>>>>>>>::::::
+#=GC RF                    AGCCuaGCaaGgGuCCGGGuucACCGAAAcCuAUCUCAUUuGCuaGUUAUAAauuuauGAAAUUUGCauaaauuCuuCaGCuuCCuAUUUGGaGGaaGuGaaGaUGAUCG
+//

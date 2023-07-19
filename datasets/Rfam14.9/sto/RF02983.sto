@@ -1,0 +1,36 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02983
+#=GF ID   Fibrobacter-1
+#=GF DE   Fibrobacter-1 RNA
+#=GF AU   Weinberg Z; 0000-0002-6681-3624
+#=GF SE   Weinberg Z
+#=GF SS   Published; PMID:28977401;
+#=GF GA   77.90
+#=GF TC   77.90
+#=GF NC   35.40
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 24.98 -Z 742849.287494 --mxsize
+#=GF SM   128 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   28977401
+#=GF RT   Detection of 224 candidate structured RNAs by comparative analysis of
+#=GF RT   specific subsets of intergenic regions.
+#=GF RA   Weinberg Z, Lunse CE, Corbino KA, Ames TD, Nelson JW, Roth A, Perkins KR,
+#=GF RA   Sherlock ME, Breaker RR
+#=GF RL   Nucleic Acids Res. 2017;45:10811-10823.
+#=GF CC   Fibrobacter (Fibrobacteres). BLAST against metagenomes (Fibrobacteres)
+#=GF WK   Fibrobacter-1_RNA_motif
+#=GF SQ   4
+
+
+URS0000D6AEB8_12908/1-101 UAUUUAAGGUCCCCAGGUCCUGCGGUGCGGG-CGGGCGGUACUUUCCGUCA-AGAAACAUCGGGGGCUCGGACGAGGUCCAUACUUUUGGUCCU-GUCUUGGGG
+URS0000D66217_59374/1-101 UAUUUAAGGUCCCCAGGCUCUGCUUUGCAGG-CGGGCGGUACUUUCCGUCA-AGAAACAUCGGGAGCUCGGACACGGUCCAUACUUUUGGACUG-GUCUUGGGG
+URS0000D65E5C_12908/1-101 UAUUUAUGUUCCCUAGACUUUACGCUGUGGA-AAUGCGGUACUUUCCGUAAGAGAAGCACGUG-GGUUCGGAAGCG-UCCAUACUUUUGGAAUGCUUCUUAGGG
+URS0000D6587B_12908/1-102 UAUUUAGGUUCCCUAGG-UCGCGUGGGGCGGAAUUGCGGUACUUUCCGUAA-GGAACCCCCCGAGGCUCGGAAGCGCUCCAUACUUUUGGAGGGCUUUUUAGGG
+#=GC SS_cons              ::::::::::(((((,,,<<<<_____>>>>.,,<<<<<______>>>>>,-,,,,,,,,,,,,,,,,,<<<<---<<<<<______>>>>>--->>>>)))))
+#=GC RF                   UAUUUAaGuUCCCcaGgccccgcuuuGcggg.aaggCGGUACUUUCCGucA.AGAAaCaucuGggGcUCgGacgcGguCCaUACUUUuGGacugcguCuugGGG
+//

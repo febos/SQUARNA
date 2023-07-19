@@ -1,0 +1,54 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF00955
+#=GF ID   mir-1829
+#=GF DE   microRNA mir-1829
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   60.00
+#=GF TC   62.70
+#=GF NC   43.40
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000460;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   18392026
+#=GF RT   Discovering microRNAs from deep sequencing data using miRDeep.
+#=GF RA   Friedlander MR, Chen W, Adamidi C, Maaskola J, Einspanier R, Knespel S,
+#=GF RA   Rajewsky N
+#=GF RL   Nat Biotechnol. 2008;26:407-415.
+#=GF RN   [2]
+#=GF RM   19460142
+#=GF RT   Dynamic expression of small non-coding RNAs, including novel microRNAs and
+#=GF RT   piRNAs/21U-RNAs, during Caenorhabditis elegans development.
+#=GF RA   Kato M, de Lencastre A, Pincus Z, Slack FJ
+#=GF RL   Genome Biol. 2009;10:R54.
+#=GF RN   [3]
+#=GF RM   20062054
+#=GF RT   Comprehensive discovery of endogenous Argonaute binding sites in
+#=GF RT   Caenorhabditis elegans.
+#=GF RA   Zisoulis DG, Lovci MT, Wilbert ML, Hutt KR, Liang TY, Pasquinelli AE, Yeo
+#=GF RA   GW
+#=GF RL   Nat Struct Mol Biol. 2010;17:173-179.
+#=GF RN   [4]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   MicroRNA
+#=GF SQ   4
+
+
+URS0000147160_6239/1-58 AAGCGAUCUUCUAGAUGGUUGUAAAACAUCGAGUAUUACAACCACUGGAAUUUCUCUA
+URS00002B61F0_6239/1-58 AAGCGAAAUUCAAGAUGGUUGUAAAACAUCGAGUACUACAACCACUGGAAUUUCUCUA
+URS00003E646C_6239/1-58 AAGGGGACUUCUAAUUGUUUGUAAAAAAUCGAGUAUUACAACCAUUGGAAUUUCUCUA
+URS000023F50C_6239/7-64 AAGAGCGCUUGUAGUGAGUUGUCAAAAAUUGAGUAUGACAACCACUGCAAUUUCUCUA
+#=GC SS_cons            :<<<<<<-<<<<<<-<<<<<<<<<-<<_____>>->>>>>>>>>>>>>>>->>>>>>:
+#=GC RF                 AAGaGaacUUcuAGuuGGUUGUaaAAcAUCGAgUAuuACAACCaCUggAAUuuCuCUA
+//

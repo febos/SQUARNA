@@ -1,0 +1,48 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF01027
+#=GF ID   mir-765
+#=GF DE   microRNA mir-765
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF SE   Griffiths-Jones SR
+#=GF SS   Predicted; RNAalifold
+#=GF GA   130.00
+#=GF TC   131.60
+#=GF NC   107.30
+#=GF TP   Gene; miRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF DR   MIPF; MIPF0000545;
+#=GF DR   SO; 0001244; pre_miRNA;
+#=GF DR   GO; 0016442; RISC complex;
+#=GF DR   GO; 0035195; gene silencing by miRNA;
+#=GF RN   [1]
+#=GF RM   16954537
+#=GF RT   Many novel mammalian microRNA candidates identified by extensive cloning
+#=GF RT   and RAKE analysis.
+#=GF RA   Berezikov E, van Tetering G, Verheul M, van de Belt J, van Laake L, Vos J,
+#=GF RA   Verloop R, van de Wetering M, Guryev V, Takada S, van Zonneveld AJ, Mano
+#=GF RA   H, Plasterk R, Cuppen E
+#=GF RL   Genome Res. 2006;16:1289-1298.
+#=GF RN   [2]
+#=GF RM   20214803
+#=GF RT   Genome-wide comparative analysis of microRNAs in three non-human primates.
+#=GF RA   Brameier M
+#=GF RL   BMC Res Notes. 2010;3:64.
+#=GF RN   [3]
+#=GF RM   30423142
+#=GF RT   miRBase: from microRNA sequences to function.
+#=GF RA   Kozomara A, Birgaoanu M, Griffiths-Jones S
+#=GF RL   Nucleic Acids Res. 2019;47:D155.
+#=GF WK   Mir-765_microRNA_precursor_family
+#=GF SQ   4
+
+
+URS000068E793_9606/1-114 UUUAGGCGCUGAUGAAAGUGGAGUUCAGUAGACAGCCCUUUUCAAGCCCUACGAGAAACUGGGGUUUCUGGAGGAGAAGGAAGGUGAUGAAGGAUCUGUUCUCGUGAGCCUGAA
+URS000075A8A6_9598/1-113 UUUAGGCGCUGAUGAAAGUGGAGUUCAGUAGACAGCCCUUUUCAAGCCCUACAAGAAACUGGGGUUUCUGGAGGAGAAGGAAGGUGAUGAAGGAUCUGUUCUCGUGAGCCUGA-
+URS000064D931_9600/1-114 UUUAGGGGCUGAUGAAAGUGGAGUUCAGUAGACAGCCCUUUUCAAGCCCUACAAGAAACUAGGGUUUCUGGAGGAGAAGGAAGGUGAUGAAGGAUCUGUUCUCGUGAGCCUGAA
+URS00006DE6D3_9544/1-114 UUUAGGGGCUGAUGAAAGUGGAGUUCAGUAGACAACCCUUUUCAAGCCCUGCAAGAAACUGGGGUUUCUGGAGGAGAGGGAAGGUGCUGAAGGGGCUGCUCUCGUGAGCCUGAA
+#=GC SS_cons             :::::<<<<<-<<<<-<<<<<<-<<<<----<<---<<<<<<<<<<<<<<<________>>>>>>>>------>>>>>>>--->>-->>>>--->>>>>>->>>>->>>>>:::
+#=GC RF                  UUUAGggGCuGacGaAagcgGaGuuCaGUAGaCAgCCCuucuCaagCCCcaCaAGAAACugGGGcuuCUGGAGGagaaGGAAGGuGauGaaGGauCcgcuCuCguGaGCccGAA
+//

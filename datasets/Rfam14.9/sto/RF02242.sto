@@ -1,0 +1,32 @@
+# STOCKHOLM 1.0
+
+#=GF AC   RF02242
+#=GF ID   Xoo5
+#=GF DE   Xanthomonadaceae sRNA Xoo5
+#=GF AU   Eberhardt R; 0000-0001-6152-1369
+#=GF SE   Predicted; ClustalW
+#=GF SS   Predicted; RNAalifold
+#=GF GA   50.00
+#=GF TC   65.90
+#=GF NC   42.20
+#=GF TP   Gene; sRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   SO; 0001263; ncRNA_gene;
+#=GF RN   [1]
+#=GF RM   21276262
+#=GF RT   Identification and functional characterization of small non-coding RNAs in
+#=GF RT   Xanthomonas oryzae pathovar oryzae.
+#=GF RA   Liang H, Zhao YT, Zhang JQ, Wang XJ, Fang RX, Jia YT
+#=GF RL   BMC Genomics. 2011;12:87.
+#=GF WK   Xanthomonas_sRNA
+#=GF SQ   3
+
+
+CP000967.1/2045785-2045908 CUAUGCAAGCAAACGCCUUUCAGCACGACACCAGCGCCGCCCGGAUGGCCUCCGGCAUGACAUCGCGUGCCCGCCGACCGGAAUCCCACAUUUUCGCUGGGUAAGCCGGGGCGUU-UGCUGUUCC
+CP000050.1/2262883-2263006 CUAUGCACGCAAACGCCUUUCAGCACGACAGCAGCGCCGCCCGGAUGGCCUCCGGCAUGACGUCGCGUGCCCGCCAACCGGAAUCCCACAUUUUCGCUGGGUAA-CCGGAGCGUUUUGCUGCCUG
+AATO01000195.1/985-1108    UCAUGAACGCCGACCUGCAGCCACACGCCGCCAGCGCCGCCCGGAUGGCCUCCGGGAUGACCUCGCGCGCGCGCCGACCGGAACCCCGCCAUUCCGCUGGGUGA-CCGGGGCGUCCUGCCGUCCG
+#=GC SS_cons               ::::::::::::::::::::::::::::::((((((-(((((<<-<<<<----<<<<<<______>>>>>>->>>>->><<---<<<<<______>->>>>---.>>))-)))---)))))):::
+#=GC RF                    cuAUGcAcGCaaACgccuuuCagCACGaCagCaGCgCCGCCCGGAcGGCCUCCgGcauGACaUCGCgugCcCGCCgACCGGAAuCCCaCauUUuCGCuGGGUaA.CCGGgGCGUuuuGCuGcccg
+//
