@@ -241,7 +241,14 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False):
     # Ignore the bps that would form a hairpin of len < 3
     # And satisfy the restraints
     for i in range(len(seq) - 1):
-        for j in range(i + 4, len(seq)):
+
+        # Allow short "hairpins" between different RNA chains
+        inc4 = 4
+        for chk in (1, 2):
+            if i + chk < len(seq) and seq[i + chk] in SEPS:
+                inc4 = chk + 1
+
+        for j in range(i + inc4, len(seq)):
             boolmat[i, j] = int(seq[i] + seq[j] in bps) * \
                             (not interchainonly or chains[i] != chains[j]) * \
                             (i not in rxs and j not in rxs) * \
@@ -261,7 +268,14 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False):
     # Fill the upper triangle of the matrix with bp weights
     # Ignore the bps that would form a hairpin of len < 3
     for i in range(len(seq) - 1):
-        for j in range(i + 4, len(seq)):
+
+        # Allow short "hairpins" between different RNA chains
+        inc4 = 4
+        for chk in (1, 2):
+            if i + chk < len(seq) and seq[i + chk] in SEPS:
+                inc4 = chk + 1
+        
+        for j in range(i + inc4, len(seq)):
             scoremat[i, j] = bps[seq[i] + seq[j]] * boolmat[i, j]
 
     return boolmat, scoremat
@@ -360,7 +374,7 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
         diag = []
         i, j = x, y
         
-        while i <= j - 4: # this is to forbid hairpins of len < 3
+        while i <= j - 1: 
             diag.append([matrix[i, j], bpscorematrix[i, j], (i, j)])
             i += 1
             j -= 1
@@ -436,6 +450,9 @@ def ScoreStems(seq, stems, rstems,
         # if we are inside the sub-ECR - where it will end
         inblockend = -1
 
+        # Whether the stem confines an external loop
+        between_chains = False
+
         for pos in range(stemstart+1, stemend):
 
             partner = bppartners[pos]
@@ -445,6 +462,9 @@ def ScoreStems(seq, stems, rstems,
 
                 if pos > inblockend:
                     dots += 1
+                # If a separator instead of a dot
+                if seq[pos] in SEPS:
+                    between_chains = True
 
             # if the pseudoknotted wing and not inside sub-ECR - increment brackets
             elif partner < stemstart or partner > stemend:
@@ -492,7 +512,9 @@ def ScoreStems(seq, stems, rstems,
         idealdist = 4 if inblockend == -1 else 2
 
         stemdist = dots + bracketweight*brackets # stem distance
-        stemdistfactor = (1 / (1 + abs(stemdist - idealdist)))**distcoef
+
+        # Ignore stemdistfactor for external loops
+        stemdistfactor = (1 / (1 + abs(stemdist - idealdist)))**distcoef if not between_chains else 1
 
         order = len(levelset) # number of conflicting pseudoknot levels
         orderfactor = (1 / (1 + order))**orderpenalty

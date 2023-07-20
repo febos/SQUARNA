@@ -51,7 +51,7 @@ def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
 def YieldStems(seq, reactivities = None, restraints = None, 
                bpweights = {}, interchainonly = False,
                minlen = 2, minbpscore = 0):
-   """Returns a list of stems based on a (possibly aligned) sequence"""
+    """Returns a list of stems based on a (possibly aligned) sequence"""
 
     # turn seq into UPPERCASE & replace T with U
     seq = seq.upper().replace("T", "U")
