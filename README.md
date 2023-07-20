@@ -31,7 +31,16 @@ a (hopefully) arbitrary version of NumPy library.
     
     An example of running single-sequence predictions for a set
     of aligned sequences. "if=q" tells SQUARNA to ignore all the
-    input lines except the sequence itself.
+    default input lines and read only the sequences.
+    
+    4) python3 SQUARNA.py i=examples/ali_input.afa a
+    
+    An example of running alignment-based predictions.
+    
+    5) python3 SQUARNA.py i=examples/ali_input.afa if=q a v
+    
+    An example of running alignment-based predictions in the
+    verbose mode.
 
 # Input format
 
@@ -88,8 +97,14 @@ a (hopefully) arbitrary version of NumPy library.
     
     For examples of an appropriate default input file format see 
     examples/seq_input.fas. 
+    
+    Alternatively, SQUARNA can read standard Fasta, Stockholm 
+    and Clustal (.aln) formats. The input format is recognized 
+    automatically. In the case of Stockholm format the "SS_cons"
+    structure will be treated as default reference line. In the case
+    of Fasta or Clustal formats only the sequences will be processed. 
 
-# Output format
+# Output format (single-sequence mode)
 
     The output format is a fasta-like format with the "name" lines 
     starting with ">" sign and followed by a number of data sections:
@@ -112,6 +127,28 @@ a (hopefully) arbitrary version of NumPy library.
     structure with the only addition of RK (rank) value), where K is 
     defined with toplim parameter, see below. The chain separators are 
     introduced into all the lines as they appear in the sequence.
+    
+# Output format (alignment-based mode)
+
+    The output format consists of three main sections: (1) intermediate
+    information (in verbose mode only); (2) processed default input 
+    lines; (3) the three (steps 1-3) predicted secondary structures in 
+    the dot-bracket format. Between the sections 1 and 2 there is 
+    the first separator line ("="-line), and between the sections 
+    2 and 3 there is the second separator line ("_"-line).
+    In the verbose mode the intermediate information includes 
+    the following: (1) ">Step 1, Iteration 1", the conserved base pairs,
+    first one by one in the dot-bracket format along with their scores,
+    then assembled into a number of secondary structures; (2) ">Step 1,
+    Iteration 2", the conserved base pairs from the second iteration, 
+    the format is the same as in the first iteration; (3) output of
+    restrained single-sequence predictions, see section "Output format
+    (single-sequence mode)" for more details; (4) ">Step 2, Populated
+    base pairs", the base pairs from the single-sequence predictions
+    listed one by one in dot-bracket format along with the numbers of 
+    their source sequences; (5) ">Step 2, Consensus", the step-2 
+    consensus structures built from the populated base pairs along with
+    the used frequency thresholds.
 
 # Options 
 
@@ -123,7 +160,15 @@ a (hopefully) arbitrary version of NumPy library.
     c=FILENAME / config=FILENAME [DEFAULT: c=./def.conf]
     
         Path to a config file, see files "def.conf" and "alt.conf" 
-        for the format details.
+        for the format details. In the alignment-based mode,
+        the default config file is c=./ali.conf.
+
+    a / ali / alignment [DEFAULT: FALSE]
+    
+        Run SQUARNA in the alignment-based mode. If specified,
+        ali.conf will be used as the config file by default, 
+        unless another config file is explicitly specified 
+        by the user.
 
     if={qtrf} / inputformat={qtrf} [DEFAULT: if=qtrf]
     
@@ -146,6 +191,24 @@ a (hopefully) arbitrary version of NumPy library.
         structure_score. Independently, if d is present, the mutually 
         divergent structures will be put first.  
         
+    fl=INT / freqlim=INT [DEFAULT: fl=0.35]
+    
+        Ignored in the single-sequence mode.
+        The percentage of sequences required to contain a base pair,
+        in order for it to be added to the predicted consensus structure
+        at step-2. The consensus will include all the base pairs present
+        in at least "fl" share of the sequences given that the base pair
+        is not in conflict (does not share a position) with a more 
+        populated base pair.
+
+    ll=INT / levlim=INT [DEFAULT: ll=(3 - len(seq)>500)]
+    
+        Ignored in the single-sequence mode.
+        The allowed number of pseudoknot levels. All the base pairs
+        of the higher levels will be removed from the structure predicted
+        at step-1. By default, ll=3 for short alignments of no more than
+        500 columns, and ll=2 for longer alignments.
+                
     tl=INT / toplim=INT [DEFAULT: tl=5]
     
         How many top-N structures will be subject to comparison with the
@@ -160,6 +223,17 @@ a (hopefully) arbitrary version of NumPy library.
         How many top-N structures will be used to derive the predicted
         structure consensus.
 
+    s3={i,u,1,2} / step3={i,u,1,2} [DEFAULT: s3=u]
+    
+        Ignored in the single-sequence mode.
+        Defines the structure that will be printed at step-3. If s3=1,
+        the structure from step-1 will be printed, and the step-2 will
+        be skipped completely, meaning the prediction will be super fast.
+        If s3=2, the structure from step-2 will be printed. If s3=u, the
+        union of base pairs of the two structures will be printed. 
+        If s3=i, the intersection of base pairs of the two structures 
+        will be printed.
+        
     msn=INT / maxstemnum=INT [DEFAULT: None]
     
         Maximum number of stems to predict in each structure. By default,
@@ -204,6 +278,11 @@ a (hopefully) arbitrary version of NumPy library.
     t=INT / threads=INT [DEFAULT: t=cpu_count]
     
         Number of CPUs to use. 
+        
+    v / verbose [DEFAULT: FALSE]
+    
+        Ignored in the single-sequence mode.
+        Run SQUARNA in the verbose mode. 
 
 
 # Contacts
