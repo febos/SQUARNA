@@ -133,8 +133,7 @@ if __name__ == "__main__":
     #tool    = "IPknot"
 
     for tool in {"Rfam14.9":("SQUARNAs2",  "IPknot", "CentroidAlifold", "SQUARNAs3u", "SQUARNAs3i"),
-                 "RfamPDB":("SQUARNAs2",   "IPknot", "CentroidAlifold",
-                            "RscapeNested","SQUARNAs3u", "SQUARNAs3i","RscapeTotal")}[dataset]:
+                 "RfamPDB":("SQUARNAs3u", "SQUARNAs3i","RscapeTotal")}[dataset]:
             
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())

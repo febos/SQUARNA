@@ -25,6 +25,26 @@ ReactDict = {"_" : 0.00,  "+" : 0.50,  "#" : 1.00,
              }
 
 
+def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
+    """Print matrix and sequence into tsv format"""
+    print('',*list(seq),sep='\t')
+
+    Pairs1 = DBNToPairs(dbn1) # bps from dbn1 will be framed with []
+    Pairs2 = DBNToPairs(dbn2) # bps from dbn2 will be framed with <>
+
+    for i in range(len(seq)):
+        print(seq[i], end='\t')
+        line = []
+        for j in range(len(seq)):
+            x = str(matrix[i][j])
+            if (i,j) in Pairs1:
+                x = '['+x+']'
+            if (i,j) in Pairs2:
+                x = '<'+x+'>'
+            line.append(x)
+        print(*line, sep='\t')
+        
+
 def EncodedReactivities(seq, reacts, reactformat):
     """Takes a list of floats, returns a string"""
     if reactformat == 3:
@@ -731,14 +751,14 @@ def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
                          key = lambda x: [x[1][rb] for rb in rankby],
                          reverse = True)
     # Remove the appended bps sets and return
-    return [x[:-1] for x in finstemsets]
+    return [x[:-1] for x in finstemsets]  
 
    
 def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                paramsets = [], conslim = 5, toplim = 5,
                hardrest = False, rankbydiff = True,
                rankby = (0, 2, 1), interchainonly = False,
-               threads = 1, mp = True):
+               threads = 1, mp = True, stemmatrix = None):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     reacts == list of reactivities (values from 0 to 1)
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -751,7 +771,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     interchainonly = allow only bps between different chains
     threads == number of CPUs to use
     mp == whether to use multiprocessing at all
-    
+    stemmatrix == if specified the bpscorematrix will be weighted with the stemmatrix
+                  that was derived from the sequence alignment
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
 
     assert set(rankby) == {0, 1, 2} and len(rankby) == 3, "Invalid ranking indices"
@@ -782,6 +803,12 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     if dbn:
         assert len(seq) == len(dbn)
         shortseq, shortdbn  = UnAlign(seq, dbn)
+
+    # Unalign stemmatrix
+    if stemmatrix:
+        gapinds = [i for i in range(len(seq)) if seq[i] in GAPS]
+        shortsmat = np.delete(stemmatrix, gapinds, 0)
+        shortsmat = np.delete(shortsmat, gapinds, 1)
     
     # Parse restraints into unpaired bases (rxs) and base pairs (rbps)
     rbps, rxs, rlefts, rrights = ParseRestraints(shortrest)
@@ -816,6 +843,10 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, rxs,
                                                rlefts, rrights,
                                                interchainonly)
+
+        #Weight the bpscorematrix with the alignment-derived scores
+        if stemmatrix:
+            bpscorematrix = bpscorematrix * shortsmat
 
         # List of lists of stems (each stem list is a currently predicted secondary structure
         curstemsets = [[],]
@@ -1000,7 +1031,7 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
                   conslim, reactformat, mp = True,
-                  sink = sys.stdout):
+                  sink = sys.stdout, stemmatrix = None):
     """Main-like function;
        sink param is standard system output by default,
        we need it to use the buffer in alignment-mode parallelizations"""
@@ -1008,7 +1039,7 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     # Run prediction
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
                             paramsets, conslim, toplim, hardrest,
-                            rankbydiff, rankby, interchainonly, threads, mp)
+                            rankbydiff, rankby, interchainonly, threads, mp, stemmatrix)
 
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction

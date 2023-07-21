@@ -223,29 +223,29 @@ def SQRNdbnali(objs, defrests = None, defreacts = None, defref = None,
 
     # Build the dbns from the assembled stem-scored matrix
     pred_dbns = MatrixToDBNs(stemmatrix, minbpscore, len(objs), verbose)
-    # Return the first dbn
-    return pred_dbns[0]
+    # Return the first dbn and the stemmatrix
+    return pred_dbns[0], stemmatrix
 
 
 def mpRunSQRNdbnseq(args):
     """multiprocessing (single-parameter) version of RunSQRNdbnseq;
        here we parallelize over the sequences instead of parallelizing
        over alternative structures within each sequence prediction"""
-    obj, step1, paramsetnames, paramsets, threads,\
+    obj, paramsetnames, paramsets, threads,\
     rankbydiff, rankby, hardrest, interchainonly,\
-    toplim, outplim, conslim, reactformat, verbose = args
+    toplim, outplim, conslim, reactformat, verbose, smat = args
 
-    name, seq, reacts, restrs, ref = obj
+    name, seq, reacts, rests, ref = obj
 
     # We use a printing buffer so that the output is ordered
     # instead of being mixed up due to parallelization
     with io.StringIO() as buffer:
     
-        cons, dbns, nums1, nums2 = RunSQRNdbnseq(name, seq, reacts, step1, ref, paramsetnames,
+        cons, dbns, nums1, nums2 = RunSQRNdbnseq(name, seq, reacts, rests, ref, paramsetnames,
                                                  paramsets, threads, rankbydiff, rankby,
                                                  hardrest, interchainonly, toplim, outplim,
                                                  conslim, reactformat,
-                                                 mp = False, sink = buffer)
+                                                 mp = False, sink = buffer, stemmatrix = smat)
         return cons, buffer.getvalue()
 
 
@@ -328,10 +328,10 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
         print(">Step 1, Iteration 1")
 
     # Iteration 1    
-    pred_dbn = SQRNdbnali(objs, defrests, defreacts, defref, 
-                          bpweights, interchainonly,
-                          minlen, minbpscore,
-                          threads, verbose)
+    pred_dbn, smat = SQRNdbnali(objs, defrests, defreacts, defref, 
+                                bpweights, interchainonly,
+                                minlen, minbpscore,
+                                threads, verbose)
 
     if verbose:
         print(">Step 1, Iteration 2")
@@ -341,11 +341,14 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
     pred_dbn = SQRNdbnali(objs, pred_dbn, defreacts, defref, 
                           bpweights, interchainonly,
                           minlen, minbpscore,
-                          threads, verbose)
+                          threads, verbose)[0]
 
     # Truncate pseudoknotted bps of order higher than levellimit
     step1dbn = PairsToDBN(DBNToPairs(pred_dbn), N,
                           levellimit = levellimit)
+
+    # Normalize the stemmatrix obtained from the first iteration
+    smat = smat / np.max(smat) * 5
 
     if verbose:
         print(">Step 1, Result")
@@ -355,12 +358,12 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
     if step3 != '1':
         if verbose:
             print(">Step 2, Individuals")
-        # Run restrained single-sequence predictions
+        # Run stemmatrix-weighted single-sequence predictions
         with Pool(threads) as pool:
-            inputs = [(obj, step1dbn, paramsetnames, paramsets, threads,
+            inputs = [(obj, paramsetnames, paramsets, threads,
                        rankbydiff, rankby, hardrest, interchainonly,
                        toplim, outplim, conslim, reactformat,
-                       verbose) for obj in objs]
+                       verbose, smat) for obj in objs]
             for cons, output in pool.imap(mpRunSQRNdbnseq, inputs):
                 if verbose:
                     print(output, end = '')
