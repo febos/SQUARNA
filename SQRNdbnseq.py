@@ -805,7 +805,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         shortseq, shortdbn  = UnAlign(seq, dbn)
 
     # Unalign stemmatrix
-    if stemmatrix:
+    if stemmatrix is not None:
         gapinds = [i for i in range(len(seq)) if seq[i] in GAPS]
         shortsmat = np.delete(stemmatrix, gapinds, 0)
         shortsmat = np.delete(shortsmat, gapinds, 1)
@@ -845,7 +845,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                                                interchainonly)
 
         #Weight the bpscorematrix with the alignment-derived scores
-        if stemmatrix:
+        if stemmatrix is not None:
             bpscorematrix = bpscorematrix * shortsmat
 
         # List of lists of stems (each stem list is a currently predicted secondary structure
