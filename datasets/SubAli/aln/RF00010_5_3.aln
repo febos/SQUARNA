@@ -1,0 +1,124 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+X65707.1/109-543                    GAGA-GU-U-A-G-G-G-AGGGAGUUGCGGA-UU--C-CUGU--------
+CP000713.1/444808-445211            UUGG-UA-A-A-C-C-A--GACGAUCGCCGU-UU--U-AAGUUAAAUAUU
+CP001341.1/2464077-2463692          UGGG-AC-A-G-C-C-A--GGCGGCCGCGCG-UC--A-C-----------
+AP010918.1/2472230-2471802          UGAG-UU-G-G-C-U-G--GGCGGCCGCGGC-UC--G-CGUAGGGCUUGU
+AE008923.1/912011-912437            GGAG-UC-G-G-C-C-A--GACAGUCGCGUC-AC--U-C-----------
+
+X65707.1/109-543                    --------------------------------------------------
+CP000713.1/444808-445211            GAUGCG--------------------------------------------
+CP001341.1/2464077-2463692          --------------------------------------------------
+AP010918.1/2472230-2471802          GUGG----------------------------------------------
+AE008923.1/912011-912437            --------------------------------------------------
+
+X65707.1/109-543                    ------------------------------CACA-----GG-G-A-A-UC
+CP000713.1/444808-445211            ---------------UUAAGUGUGAUUAUUUAAG-----AC-A-A-A-AG
+CP001341.1/2464077-2463692          ------------------------------GAAA------G-U-G-G-CU
+AP010918.1/2472230-2471802          ------------------AUUCACGAGGUUCAGC-----GU-C-G-A-GU
+AE008923.1/912011-912437            ------------------------------GCAA------G-A-G-U-GC
+
+X65707.1/109-543                    UGAGGAAAGUCCGGGCUU-CC-CAAA--GGCCA-A-ACUUG---------
+CP000713.1/444808-445211            GGAGGAAAGUCCGGGCUA-C---AUA--AGGCA-G-CG-UG---------
+CP001341.1/2464077-2463692          CGAGGAACGUCCGGGCUC-C---ACA--GGGCA-G-GG-UG---------
+AP010918.1/2472230-2471802          CGAGGAAAGUCCGGACUU-C---ACA--GAGCA-G-GG-UG---------
+AE008923.1/912011-912437            CGAGGAAAGUCCGGGCUC-C---AUA--GGGCA-A-GG-UG---------
+
+X65707.1/109-543                    -------CUGGG------------UAACG----------------CCCAG
+CP000713.1/444808-445211            -------CCAGC------------UAACG----------------GCUGG
+CP001341.1/2464077-2463692          -------GUGGG------------UAACG----------------CCCAC
+AP010918.1/2472230-2471802          -------AUUGC------------UAACG----------------GCAAU
+AE008923.1/912011-912437            -------CCAGG------------UAACG----------------CCUGG
+
+X65707.1/109-543                    UGCGC-----------------------GCGA------GCGUGAGG-AC-
+CP000713.1/444808-445211            GCGGG-----------------------GUAA------CCCGACGA-CA-
+CP001341.1/2464077-2463692          UCGGG-----------------------GUAA------CCCGCAGG-CA-
+AP010918.1/2472230-2471802          CCGAG-----------------------GUGA------CUCGCGGG-AA-
+AE008923.1/912011-912437            GCGGC-----------------------GCAA------GCCGACGG-AA-
+
+X65707.1/109-543                    --AGU-GCCACAGAAA--AAU--ACC-GCC----CU---U--UUUAGAAA
+CP000713.1/444808-445211            --AGU-GCAACAGAGA--GCAG-ACC-GCC----UC---A--AUUUAAGC
+CP001341.1/2464077-2463692          --AGU-GCCACAGAGA--AUAG-ACC-GCC----UG---C--GUUUUCCG
+AP010918.1/2472230-2471802          --AGU-GCCACAGAAA--ACAG-ACC-GCC----AU---C--C-------
+AE008923.1/912011-912437            --AGU-GCAACAGAAA--GAU--ACC-GCCU--ACG---U--CCCUCGUC
+
+X65707.1/109-543                    ACAGCAACCAGUAAACAGUUAACAG-------------------------
+CP000713.1/444808-445211            UCUAC---------------------------------------------
+CP001341.1/2464077-2463692          --------------------------------------------------
+AP010918.1/2472230-2471802          --------------------------------------------------
+AE008923.1/912011-912437            ACCCCUUUGCCGCCACUGAAACGUGCCAGCGAUG----------------
+
+X65707.1/109-543                    ------------------------------------GGUUUUUCUGCUGA
+CP000713.1/444808-445211            --------------------------------------------------
+CP001341.1/2464077-2463692          --------------------------------------------------
+AP010918.1/2472230-2471802          --------------------------------------------------
+AE008923.1/912011-912437            --------------------------CCUCGCAUCGCCAAGCGCGCUCGG
+
+X65707.1/109-543                    CUAACUGGUAACUGACCACUGAA-A----A--G---GGUAAGGGUGCAAA
+CP000713.1/444808-445211            -----AGCCUAGCUGUAAAGUGG-U----G--A---GGUAAGGGUGAAAG
+CP001341.1/2464077-2463692          -----------UUUUCGGAAAGC-G---GC--A---GGUAAGGGUGAAAC
+AP010918.1/2472230-2471802          -----------------UCG--U-G----G--U---GGCAAGGGUGAAAC
+AE008923.1/912011-912437            AGGCCGCAAAGGGGUGGCGAGGG-G----C--C---GGUAAGGGUGAAAU
+
+X65707.1/109-543                    ----GGU---GC-G--G--U----------------------AAGAG-CG
+CP000713.1/444808-445211            ----GGU---GC-G--G--U----------------------AAGAG-CG
+CP001341.1/2464077-2463692          ----GGU---GG-U--G--U----------------------AAGAG-AC
+AP010918.1/2472230-2471802          ----GGU---GC-G--G--U----------------------AAGAG-CG
+AE008923.1/912011-912437            ----GGU---GC-G--G--U----------------------AAGAG-CG
+
+X65707.1/109-543                    CACC-AGCAG-U-A-U-C--GAGA---G-G-U-A-CUGG-C-UC------
+CP000713.1/444808-445211            CACC--GCGU-G-G-C-UG-GCAA--CA-GUU-C-AUGG-C-AA------
+CP001341.1/2464077-2463692          CACC-AGCUU-C-C-C-GG-GUGA--CC-G-G-G-AAGG-C-UA------
+AP010918.1/2472230-2471802          CACC-AGCAU-U-C-C-GG-GUGA--CC-G-G-G-GUGG-C-UA------
+AE008923.1/912011-912437            CACC--GCGA-G-U-C-CG-GUAA--CG-G-A-C--CGG-C-AC------
+
+X65707.1/109-543                    ----------GGUAAAC-CCCGGUUGGAAGCAAGGUC-GGAG--------
+CP000713.1/444808-445211            ----------GGUAAAC-UCCACGC-GUAGCAAGACC-AAAU--------
+CP001341.1/2464077-2463692          ----------GGUAAAC-CCCACCC-GGAGCAAGGCC-AGAC--------
+AP010918.1/2472230-2471802          ----------GGCAAAC-CCCACCC-GAAGCAAGGCC-AAGAAGGCCGCA
+AE008923.1/912011-912437            ----------GGCAAAC-CCCACCU-GGAGCAAGACC-AAAU--------
+
+X65707.1/109-543                    ----------------------GGGCA--A-AGGUU--------------
+CP000713.1/444808-445211            ----------------------AGGUG--U-CCAUUA-------------
+CP001341.1/2464077-2463692          ----------------------A-GGG--C-ACGUUU-------------
+AP010918.1/2472230-2471802          CCG--------AAAGUGCGGCCGC-------------GCAGG--------
+AE008923.1/912011-912437            ----------------------AGGGA--U-CCAUU--------------
+
+X65707.1/109-543                    ----------------------------------------GGUCUUUUUC
+CP000713.1/444808-445211            ----------------------------------------CUUGUCGCCU
+CP001341.1/2464077-2463692          ---------------------------------------GAGGGCUGCCC
+AP010918.1/2472230-2471802          ----------------------------------CGCUUGAGGGUUGCUC
+AE008923.1/912011-912437            ----------------------------------------GGCGUGGCCC
+
+X65707.1/109-543                    ----CUGCC--------CCAU---GA-U-----UGGU---G-----G--A
+CP000713.1/444808-445211            ----GCAGG---------GGA---CA-C-----GGGU---A-----G---
+CP001341.1/2464077-2463692          ----GCCCG--------AGUG---UC-C-----GGGU---A-----G---
+AP010918.1/2472230-2471802          ----GCCCG--------A---------GCCUGCGGGU---A-----G---
+AE008923.1/912011-912437            ----GCGCU---------GGA---UC-C-----GGGU---A-----G---
+
+X65707.1/109-543                    A-CCGC---------------------U--UGA-GGAA-U-U-UGGUAAC
+CP000713.1/444808-445211            G-UUGC---------------------U--UGA-GCGU-A-C-UGGCAAC
+CP001341.1/2464077-2463692          G-CCGC---------------------U--AGA-GGGU-G-C-CGGCAAC
+AP010918.1/2472230-2471802          G-CCGC---------------------U--CGA-GGCA-C-C-CGGUAAC
+AE008923.1/912011-912437            G-UUGC---------------------U--UGA-GCGC-C-G-CGGUGAC
+
+X65707.1/109-543                    AA-A--U-U-U-C-C--CAGAUAGAU-AACUCCCC---------------
+CP000713.1/444808-445211            GG-U--G-C-G-C-C--UAGAUGAAU-GAUCGUUC---------------
+CP001341.1/2464077-2463692          GG-U--A-C-C-C-G--UAGAUGGAU-GGCCGUCG---------------
+AP010918.1/2472230-2471802          GGUG--U-G-U-C----CAGAUGGAU-GGUCGCCG---------------
+AE008923.1/912011-912437            GU-A--G-C-G-C-C--UAGACGAAU-GACUGUCC---------------
+
+X65707.1/109-543                    --AAGGGUGCCUCGCAUCC-------------------------------
+CP000713.1/444808-445211            ---------AC---------------------------------------
+CP001341.1/2464077-2463692          --CCCCCGUGACGGCAACGGCA----------------------------
+AP010918.1/2472230-2471802          --CCGUGCCGCCGUUAGCUUGGCUGU------------------------
+AE008923.1/912011-912437            --AC----------------------------------------------
+
+X65707.1/109-543                    -------UGGAACAGAACCCGGCUUA--C-GACUAAC-UCUCUUUU
+CP000713.1/444808-445211            ----------GACAGAACCCGGCUUA--U-CGGUUUA-CCAAAAUA
+CP001341.1/2464077-2463692          ----CGGGGGAACAGAACCCGGCGUA--U-CGGUUGU-CCCAUCCG
+AP010918.1/2472230-2471802          GGCGGCGCGGAACAGAAUCCGGCUUA--C-AGGCCAA-CUCGUCCG
+AE008923.1/912011-912437            ----------GACAGAACCCGGCUUA--U-CGGCCGG-CUCCGCCG
+
+

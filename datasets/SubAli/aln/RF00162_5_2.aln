@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+URS0000A76399_911092/1-94           G-GCUUAUCAAGAG-AGG-G-CG-----------------AGCGA--CUG
+ACEC01000115.1/2240-2146            G-UCUUAUCAAGAG-UGG-U-GG-----------------AGGUA-ACAG
+CP001472.1/3934139-3934250          A-UUUCAUGAAGAG-UGG-C-UG-----------------AGGGA--CGG
+ABJI02000433.1/3689-3816            C-GCUCAUCCAGAG-GGG-C-AG-----------------AGGGA--ACG
+ABCF01000005.1/97205-97306          U-UCUUAUCGAGAG-AGG-C-AG-----------------AGGGA--CUG
+
+URS0000A76399_911092/1-94           G-CGCGA--AGAU-CCC--CGGCAACC-A---------------------
+ACEC01000115.1/2240-2146            G-ACCUG--UGAA-GCC--CGGCAACC-------UUUUG-----------
+CP001472.1/3934139-3934250          G-CCCUG--UGAC-GCC-ACGACAACC-G-GCU-CGAGCAA---------
+ABJI02000433.1/3689-3816            G-CCCGU--UGAA-GCC-CCGGCAACC-C-UCC-CGCCGACCGCGA----
+ABCF01000005.1/97205-97306          G-CCCUG--UGAA-GCC-UCGGCAGCGGA-CUA-UU--------------
+
+URS0000A76399_911092/1-94           --------------------------------------------GAA---
+ACEC01000115.1/2240-2146            --------------------------------------------AGU---
+CP001472.1/3934139-3934250          ------------------------------------------UUCGG---
+ABJI02000433.1/3689-3816            -------------------------------------GGUCACGGUG---
+ABCF01000005.1/97205-97306          --------------------------------------------UAU---
+
+URS0000A76399_911092/1-94           -----AU--GGUGCCA-AUUC--CUG-CAGCG--------GAA-------
+ACEC01000115.1/2240-2146            -----AA--GGUGCCA-AAUC--CUG-CGGCU------------------
+CP001472.1/3934139-3934250          -GAC-AU-CGGUGUCA-ACUC--UCU-CCUGCG------UAAC-------
+ABJI02000433.1/3689-3816            -GGG-AA--GGUGCCA-AUUC--CGU-CUCGUGG-----CGAAGUG----
+ABCF01000005.1/97205-97306          -AGU-AC--CGUGCCA-AAUC--CAG-CAAGC---------AU-------
+
+URS0000A76399_911092/1-94           ---------------ACGU-UG-A-AA-GAUGAGC-CG-
+ACEC01000115.1/2240-2146            ---------------AUGC-CG-A-AA-GAUGAGA-A--
+CP001472.1/3934139-3934250          ---------------GGCG-GG-G-AA-CAUGAGA-U--
+ABJI02000433.1/3689-3816            ------------CGUCACG-AG-G-AA-GAUGAGG-A--
+ABCF01000005.1/97205-97306          ---------------GUCU-UG-G-GA-GAUAAGA-A--
+
+

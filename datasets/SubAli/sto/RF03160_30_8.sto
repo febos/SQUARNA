@@ -1,0 +1,60 @@
+# STOCKHOLM 1.0
+#=GF AC   RF03160
+#=GF ID   twister-P1
+#=GF DE   type-P1 twister ribozyme
+#=GF AU   Weinberg Z; 0000-0002-6681-3624
+#=GF AU   Ames TD
+#=GF SE   Published; PMID:24240507;
+#=GF SS   Published; PMID:24240507;
+#=GF GA   67.20
+#=GF TC   67.20
+#=GF NC   67.10
+#=GF TP   Gene; ribozyme;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF CL   CL00120
+#=GF DR   SO; 0000374; catalytic activity;
+#=GF DR   GO; 0003824; catalytic activity;
+#=GF RN   [1]
+#=GF RM   24240507
+#=GF RT   A widespread self-cleaving ribozyme class is revealed by bioinformatics.
+#=GF RA   Roth A, Weinberg Z, Chen AG, Kim PB, Ames TD, Breaker RR
+#=GF RL   Nat Chem Biol. 2014;10:56-60.
+#=GF CC   The twister ribozyme motif, present stem P3 variant (type P3) [1]
+#=GF WK   Twister_ribozyme
+#=GF SQ   1613
+
+RF03160__URS0000D66182_6183/1-71    CAAA-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6C302_7029/1-66    UUUU-UAA-CCAAGCCAAC----------------------GAUGGUAAUUU-----------------------------------------------------GUUGACAGUCCUAAGC-CUGU----------------AAUAA------------------------UUGG-GAAGG----AAAA
+RF03160__URS0000D66030_6183/1-71    UUAG-CAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D68DBB_6183/1-71    GAUA-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D693E8_6183/1-69    AAUC-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUGCUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG------UU
+RF03160__URS0000D675CE_6183/1-71    CUAU-AAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D66E13_6183/1-70    UAUU-UAA-CUCCGCCUGUAGCUC-----------------UUCUG------------------------------------------------------GAGCUGCUGCCGGUCACAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUCG
+RF03160__URS0000D66EF4_6183/1-73    GUCC-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGUU--GGGC
+RF03160__URS0000D684A0_12908/26-76  GUUU-UAA-UGCAGC--------------------------CUGGG---------------------------------------------------------------ACGGUUACAAGC-CCGU----------------GAAA-------------------------UGCA-GAGUA----GAAC
+RF03160__URS0000D6B2DB_6183/1-70    ACAA-CAA-CUCCGCCUGUAGUUC-----------------CUCUG------------------------------------------------------GGGCUACUGUCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D67E2B_12908/1-119  GUUC-UAA-UGCAGCCAGCACGACUUUGUC--AUA------GAUAAAAUAUCAUUAAUACACUAUUUACACAGAUG-------------UAUGCGAUUAC-UAGUGCUGGGAGUCCUAAGC-CUCC----------------AUAAA------------------------UGCA-GAAGG----GAAC
+RF03160__URS0000D6D27E_12908/27-83  ACUU-UAA-UGCAACC-------------------------AAUGAA-------------------------------------------------------------GGCCGUGACAAGU-CGGU----------------GGACAA-----------------------UGCA-GAGUCA---AAGU
+RF03160__URS0000D693C3_12908/1-75   UUCA-GAA-CUCGGCCACAGGG-------------------AUUUUUAUACACCA-----------------------------------------------CCUUGUGUCGGUCCCAAGC-CCGG----------------AUAAA------------------------UGAG-GAGGG----UCUA
+RF03160__URS0000D6CDB4_12908/22-76  UUCC-UAA-AACCGC--------------------------CGUCG---------------------------------------------------------------CCCGUCCAAAGC-CGGG----------------AUGUGAAA---------------------GGUU-GAUGG----GGAA
+RF03160__URS0000D6B5A6_6183/1-70    CAAC-CAA-CUCCACCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D68199_6183/1-70    UUUG-UAA-CUCCGUCUGUAGCUC-----------------UUCUA------------------------------------------------------GAAUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6A53F_6183/1-70    CUUA-UUA-CUCCGCUUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D66C67_6183/1-71    UAUA-UAA-CUCCACCUGUGGCUCC----------------UUCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D69D49_7029/1-64    AUUU-UAA-CCACACCAACUA--------------------CAUUU---------------------------------------------------------AAGUUGCCAGUCCUAAGU-CUGA----------------AUAAA------------------------GUGG-GAAGG----AAGC
+RF03160__URS0000D698BD_6183/1-70    CCUC-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGCCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6C66D_6183/1-72    UUUU-UAA-CUCUGCCGGUAGCUCC----------------UCCAG-----------------------------------------------------GGGGCUACUGCCGGUCCUAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUAG
+RF03160__URS0000D6C5A2_6183/1-70    CCAU-CAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6962B_6183/1-70    UAGU-UAA-CUCUGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6AF90_12908/17-77  ACCU-UAA-UGCAGCCGCCC---------------------AGCA-----------------------------------------------------------GGGCGCGGGUCCCAAGC-CCCG----------------GUAAA------------------------UGCA-GAGGG----AGGA
+RF03160__URS0000D6BFD1_6183/1-71    CGAC-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D67704_12908/30-100 AUUG-UAA-UGCAGCAUAUAGAUGU----------------AUUA------------------------------------------------------ACACCUAUAUAGAGUUCAAAGC-CUCU----------------ACAAA------------------------UGCA-GAUGA----CAAU
+RF03160__URS0000D67D81_6183/1-71    CCAG-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GCAG-GAGGG----UUGG
+RF03160__URS0000D65C00_12908/1-63   GCUA-UAA-UGCAGCUUGGAA--------------------GAAA----------------------------------------------------------UUCCAAACGGUCACAAGC-CCGU----------------AUAAA------------------------UGCA-GAGUG----UAUG
+RF03160__URS0000D6AE99_12908/24-109 UUCU-UAA-UGUAGC--------------------------CCAACG--------------------------------------------------------------UCUGUGACAAGC-CAGAAGAGAUUACCUAUAGUUACGCGU------ACUA-AGGUAAUAGAAUACA-GAGUC----AAGA
+RF03160__URS0000D6C713_12908/25-79  UCUG-UAA-UGCAAC--------------------------CAAUG---------------------------------------------------------------CAGGUCACAAGU-CCUG----------------AUGAAAAA---------------------UGCA-GAGUG----CAGA
+#=GC SS_cons                        ((((.---.((((BB<<<<<<__.................._____........................................................_>>>>>><<<__AAA__bb._>>>................,,,,,........................)))).--aaa....))))
+#=GC RF                             uuuu.UAA.uGCaGCCaguaucu..................cauua........................................................gauacuGcCGGUCCCAAGC.CCGg................AuAAA........................uGCa.GAGGG....aaaa
+//

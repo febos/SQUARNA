@@ -1,0 +1,180 @@
+# STOCKHOLM 1.0
+#=GF AC   RF03160
+#=GF ID   twister-P1
+#=GF DE   type-P1 twister ribozyme
+#=GF AU   Weinberg Z; 0000-0002-6681-3624
+#=GF AU   Ames TD
+#=GF SE   Published; PMID:24240507;
+#=GF SS   Published; PMID:24240507;
+#=GF GA   67.20
+#=GF TC   67.20
+#=GF NC   67.10
+#=GF TP   Gene; ribozyme;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF CL   CL00120
+#=GF DR   SO; 0000374; catalytic activity;
+#=GF DR   GO; 0003824; catalytic activity;
+#=GF RN   [1]
+#=GF RM   24240507
+#=GF RT   A widespread self-cleaving ribozyme class is revealed by bioinformatics.
+#=GF RA   Roth A, Weinberg Z, Chen AG, Kim PB, Ames TD, Breaker RR
+#=GF RL   Nat Chem Biol. 2014;10:56-60.
+#=GF CC   The twister ribozyme motif, present stem P3 variant (type P3) [1]
+#=GF WK   Twister_ribozyme
+#=GF SQ   1613
+
+RF03160__URS0000D6D0CB_6183/1-72    UUCG-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGAU---UGGG
+RF03160__URS0000D65DE6_7425/1-73    UUUU-UAA-UGUGGCC-UUGUACCUA---------------CAAAA----------------------------------------------------UAGGUAUAAAGACGGUCUCAAGC-CCGU----------------GUAAA------------------------CACA-GAGAG----AAAA
+RF03160__URS0000D666F7_6183/1-71    UUAU-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGACUACUGACGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6BC5D_6183/1-71    GCAU-UAA-CUCCGCCUGUAGCUCCU---------------CCAG-----------------------------------------------------AG--GCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6B7C3_6183/1-71    UCUA-UAA-CUCCGCCUGCAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGA----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6B6F6_7425/1-81    ACUGUUAA-UGCGGCCUUAUUUU-----------ACUACGCAAUA--------------------------------------GCGUUGU----------GAAAGUAUGACGGUCUCAAGC-CCG-----------------AUAA-------------------------CGCA-GAGAG----CAGU
+RF03160__URS0000D6629D_6183/1-71    AUAA-UAA-CUCGGCCUGUAGCGCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAA-GAGGG----UUGG
+RF03160__URS0000D6779C_6183/1-70    AUGU-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUAGUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D68835_6183/1-70    ACAG-UAA-CUCCGCCUGUAGCU------------------AUUCUAG-----------------------------------------------------AGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6A251_12908/30-96  AAAG-UAA-UGCAGCCGCCCGCCG-----------------CGCG-------------------------------------------------------CGG-GGACGUCGGUAGCAAGC-CCGU----------------GUAA-------------------------UGCA-GAGUU----UUCU
+RF03160__URS0000D6B740_6183/1-72    CCCA-CAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUGCUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGU---UGGG
+RF03160__URS0000D66523_6183/1-70    UCUA-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCGAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6D07F_214688/26-90 CUCU-UAA-UGCAGCCCGCGG--------------------CUGGAA--------------------------------------------------------CCGCGGCCGGUCGCAAGC-CCGG----------------GUGAA------------------------UGCA-GAGCG----CGGG
+RF03160__URS0000D6AC83_6183/1-71    UAUA-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUGCUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D65A91_6183/1-71    AUUU-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAAGG----UUGG
+RF03160__URS0000D67A04_6183/1-70    GUGA-AAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCUCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D65BF1_6183/1-70    AGAA-UAA-CUCCUCCUGUAACUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUUCGAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D67F2A_6183/1-70    UUUC-UAA-CACCGCCUGUAGCUC-----------------UUUUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6ABCA_12908/24-76  CUUG-UAA-UGCCAC--------------------------CAUUG---------------------------------------------------------------GAGGUCCCAAGU-CCUC----------------AUGAAA-----------------------GGCA-GAGGG----AAAG
+RF03160__URS0000D68CDF_6183/1-70    UCAG-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCAGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUAG
+RF03160__URS0000D682EC_6183/1-74    UGUU-UAA-CUCCGCCUGUAGCC------------------CAUGCGGA----------------------------------------------------GGCUACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGGUUG-GGCA
+RF03160__URS0000D66E19_12908/1-81   UAGG-UAA-CUCCGCCUAUGUCAUCU---------------UAAGGCGUAACU---------------------------------------------AAAUGACAUAGCCGGUCCCAAGC-CCGG----------------AAAAA------------------------GGAG-GAGGG----GAUA
+RF03160__URS0000D6C54E_6183/1-71    AUGU-UAA-CUCUGCCUGUAGCUC-----------------CUCCUA-----------------------------------------------------GGGCUACUGCCGGUUCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6B8A1_6183/1-71    UAAC-CAA-CUCCGCCUGUAGCUUC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6C8C7_6183/1-71    UAUU-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D69E72_12908/19-70  UGCC-UAA-UGCAGC--------------------------CAUAG---------------------------------------------------------------ACGGUCACAAGC-CCGU----------------GCAAA------------------------UGCA-GAGUG----AGCA
+RF03160__URS0000D6589B_6183/1-71    AUUG-UAA-CUCCGCCUGUAGCCCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGA----------------GUAAA------------------------GGAG-GAGGG----UUGU
+RF03160__URS0000D65AF6_6183/1-71    CCAA-AAA-CUCCGCCUGUAGGUC-----------------UUCCGG-----------------------------------------------------GGGCUACCGUCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D66886_12908/17-78  GCCG-UAA-UGCAGCCGCGC---------------------CGAUG----------------------------------------------------------GCGCGCCGGUCACAAGC-CCGG----------------AUAGA------------------------UGCA-GAGUG----CGGC
+RF03160__URS0000D6666C_12908/28-93  UCUC-UAA-UGCAGCUCAUCA--------------------UGGUUUU-------------------------------------------------------UGAUGAACGGUUGCAAGC-CCGU----------------GGAAA------------------------UGCA-GAGCA----GAGA
+RF03160__URS0000D683FC_6183/1-70    AAAA-UAA-CUCCGCCUGUAGCUC-----------------UUAUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6BE45_6183/1-71    UUGA-UAA-CUCCACCUGUAUCUCC----------------UCCGG-----------------------------------------------------GGGCA-ACUGCCGGUCCCAAGC-GCGG----------------AUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D67254_12908/1-53   UCUG-UAA-UGCAGCC-------------------------UUAA---------------------------------------------------------------GACGGUUACAAGC-CCGU----------------GUAAA------------------------UGCA-GAGUA----CAGA
+RF03160__URS0000D6CCB5_6183/1-71    GCCA-GAA-CUCCGCCUGUAGCUC-----------------UUUUA------------------------------------------------------GAGUUACUGCCGGUUCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGU---UGGG
+RF03160__URS0000D6B918_12908/25-87  UUCG-UAA-ACUCACUUCCAG--------------------GUGU----------------------------------------------------------CUGGAAACGGUUGCAAGU-CCGU----------------GAAAA------------------------GAGC-GAGCA----CGAA
+RF03160__URS0000D673B7_6183/1-71    AUAA-AAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D66154_6183/1-70    CCAA-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6B1CC_6183/1-70    ACAA-UAA-CUCCUCCUGUAGCUCU----------------CCU-------------------------------------------------------AGAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6AA68_6183/1-59    CCUG-UAA-CUCCUCCGG-----------------------GGACUA-----------------------------------------------------------CUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D67437_12908/1-66   GCCU-UAA-CCCGACCACGGGC-------------------UAAC---------------------------------------------------------GCCCGUGCCGGUCCCAAGU-CCGG----------------ACAAAC-----------------------UGGG-GAGGG----UUCA
+RF03160__URS0000D66EFD_6183/1-60    CCUG-UAG-CUCCGCCGGU----------------------GGCU------------------------------------------------------------ACUGCCGGUUCCAAGC-CCAG----------------AUAAA------------------------GGAG-GAGGGU---UAGG
+RF03160__URS0000D6A822_6183/1-72    GUUC-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGU-CCGG----------------GUAAA------------------------GGAG-GAGGGUU--UGGC
+RF03160__URS0000D69B53_6183/1-70    GAAU-AAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----GUGG
+RF03160__URS0000D6709A_6183/1-71    UUCA-UAA-CUCCGCCUGUAGCUC-----------------CUCCG------------------------------------------------------GGGCUACUGCCGGUCUCAAGC-CCGG----------------AUAUA------------------------GGAG-GAGGGU---UGGG
+RF03160__URS0000D661E9_6183/1-71    AUAG-AAA-CUCCGCCUGUAGCU-C----------------CUCCG-----------------------------------------------------GCGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGU
+RF03160__URS0000D6AEC7_12908/1-67   CAAC-UAA-AACGGCCGCAC-AG------------------UGAA--------------------------------------------------------CGGGUGCGAGUGUCCCAAGC-CACU----------------AUAAAC-----------------------CGUU-GAGGG----GUUG
+RF03160__URS0000D6A1EA_6183/1-71    GUUA-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGACUACUGCCGGUCCCAAGC-CCGA----------------AUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D68D2D_6183/1-71    UGUA-UAA-CUCCGCCUGUAGCCCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGA----UUGG
+RF03160__URS0000D6BBE5_12908/16-83  GCCG-UAA-UGCAGCCCCCUGCCC-----------------GAUU-------------------------------------------------------GGGCCGGGGCCGGUCCCAAGC-CCGG----------------AAAA-------------------------UGCA-GAGGG----CGGA
+RF03160__URS0000D6603E_12908/18-69  UCUG-UAA-UGCCAG--------------------------CGUGG---------------------------------------------------------------GCGGUUCCAACU-CCGU----------------GAAAA------------------------GGCA-GAGGA----CAGA
+RF03160__URS0000D66EBD_12908/1-74   GUUA-UAA-AUGAGCUUAACGUCUGC---------------ACAUCG---------------------------------------------------GCAAGCGUUAAACAGUUGCAAGC-CUGU----------------UAAA-------------------------UCAU-GAGCA----UAAC
+RF03160__URS0000D68668_12908/22-73  CCGG-UAA-UGCGGC--------------------------AAG-----------------------------------------------------------------CCAGUUGCAAGC-CUGG----------------CGGCGGA----------------------CGCA-GAGCA----ACGG
+RF03160__URS0000D658F0_413999/1-56  CUUU-UAA-UGUAGCCAC-----------------------GAAA-------------------------------------------------------------GUGACAGUCCCAAGC-CUG-----------------AUAAA------------------------UACA-GAGGG----AAAG
+RF03160__URS0000D67BA2_12908/14-66  UCCU-CAA-UGCGGC--------------------------AAG-----------------------------------------------------------------CCGGUGACAAGC-CCGG----------------CGGUAGA----------------------CGCA-GAGUCA---AGGA
+RF03160__URS0000D6B465_6183/1-70    UUAC-UAA-CUCCGCCUGUAGCACU----------------UCUAG-----------------------------------------------------A--GUUACUGCCGGUCCCAAGC-CCAG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6AD14_12908/1-71   GCUC-UAA-UGUGGCUGGCACU-------------------AAUCGUUACCA--------------------------------------------------AGUGCCAACGGUUGCAAGC-CCG-----------------AACAA------------------------CACA-GAGCA----GAGC
+RF03160__URS0000D66DF1_12908/16-76  ACCU-UAA-UGCAGCCAUCC---------------------GGAA-----------------------------------------------------------GGAUGCCGGUCACAAGC-CCGG----------------AUAAA------------------------GGCA-GAGUG----AGGU
+RF03160__URS0000D68E91_12908/17-74  UUAG-UAA-UGCAGCCUC-----------------------AUGUU------------------------------------------------------------GAGAUGGUCACAAGC-CCAU----------------AUAAA------------------------UGCA-GAGUG----UUUU
+RF03160__URS0000D6A58C_6183/1-70    UUUA-AAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D67228_6183/1-71    UCAG-CAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGU
+RF03160__URS0000D65DD2_6183/1-69    AAUU-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGUCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG------UU
+RF03160__URS0000D667B5_6183/1-70    UAAG-UAA-CUCCGCC--UGAGGCCC---------------CUCUG----------------------------------------------------GGG--UUAAUGCCGGUUCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6C74A_4558/1-52    UGCU-UAA-CACUGC--------------------------CAAUG---------------------------------------------------------------CCGGUCCCAAGC-CCGG----------------AUAAA------------------------AGUG-GAGGG----GGCA
+RF03160__URS0000D67FC0_12908/1-63   GGUG-UAA-CACGGCUACGG---------------------UUUAA----------------------------------------------------------CCGUAAAGGUUCAAAGU-CCUU----------------GUAAAC-----------------------UGUG-GAUGA----CACC
+RF03160__URS0000D68507_12908/23-89  CAAU-UAA-AACGGCCGCACC--------------------GUGAACG-------------------------------------------------------GGUGCGAGUGUCCCAAGC-CACU----------------AUAAAC-----------------------CGUU-GAGGG----GUUG
+RF03160__URS0000D65E3D_12908/1-61   GGAU-UAA-UGCAGCUACAC---------------------UAUU-----------------------------------------------------------GUGUAAGAGUCCAAAGC-CUCU----------------AUAAA------------------------UGCA-GAUGG----GUCA
+RF03160__URS0000D69AC2_6183/1-71    UCAU-GAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6BCFD_6183/1-68    AAUC-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGG------UU
+RF03160__URS0000D6C852_12908/14-65  GCGC-UAA-UGCAGC--------------------------CGAGG---------------------------------------------------------------ACGGUCACAAGC-CCGU----------------GAAAA------------------------UGCA-GAGUG----GCGU
+RF03160__URS0000D686AC_6183/1-71    AUUA-AAA-CUCCGCUUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUACCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D65FC4_12908/15-80  UUCC-UAA-UGCAGCCACCGGC-------------------CUAUA--------------------------------------------------------GCCGGUGCAGGUCACAAGC-CCUG----------------AUCAA------------------------UGCA-GAGUG----GGAA
+RF03160__URS0000D68100_6183/1-73    GUCU-AAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGUU--GGGC
+RF03160__URS0000D6B9B5_12908/19-74  UCCU-UAA-UGCAGCUC------------------------CUUAG-------------------------------------------------------------GAACGGUCACAAGC-CCGU----------------GAGAA------------------------UGCA-GAGUG----AGGA
+RF03160__URS0000D67D5B_6183/1-71    AAAA-AAA-CUCCGCCUGUAGCUC-----------------CUCCUA-----------------------------------------------------GGGCCACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6B68B_6183/1-71    CCAU-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6A114_6183/1-71    UUAU-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACAGCCGAUUCCAAGC-CCGG----------------GUAAA------------------------GGUG-GAGGG----UUGG
+RF03160__URS0000D69BF4_12908/27-96  CAAU-UAA-AACGGCCACGCCGAC-----------------CAUG-------------------------------------------------------GGCGGCGUGAGGGUCCGAAGC-CCCU----------------ACAAAC-----------------------AGUU-GACGG----GUUG
+RF03160__URS0000D6AED7_6183/1-71    UUUG-UAA-CUCCGCCUGUAGCCCC----------------UCCA------------------------------------------------------GAGGUUACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-AAGGA----UUGG
+RF03160__URS0000D6A9DF_6183/1-71    CAAC-AAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D66352_6183/1-72    ACCA-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGU---UGGG
+RF03160__URS0000D67531_6183/1-73    ACCC-GAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGUU--GGGC
+RF03160__URS0000D6C716_6183/1-71    AAAU-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUCGCUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6C074_12908/17-76  GCCU-UAA-UGCAGCCACUC---------------------AUA------------------------------------------------------------GAGUGAUGGUCACAAGC-CCAU----------------AUAAA------------------------UGCA-GAGUG----AGGC
+RF03160__URS0000D67113_12908/1-93   UAAG-UAA-UGCAGCC--ACUAUUG----------------UUUGAAUAGUUCUAUAUAAAGAGUGCCA------------------------------UUUUGGUACGACGGUUCUAAGC-CCGU----------------GUAAA------------------------UGCA-GAAGA----CUAA
+RF03160__URS0000D69642_6183/1-72    UUCU-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGU---UGGG
+RF03160__URS0000D6A5C4_6183/1-70    AUUU-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6B8EC_6183/1-70    CGAU-UAA-CUCCGCCUGUAGCU------------------AUUCUAG-----------------------------------------------------AGUUACUGUCGGUCCCAAGC-CCGG----------------GUAAA------------------------AGAG-GAGGG----UUGG
+RF03160__URS0000D68CF0_6183/1-71    CUGAUGAA-CUCCGCCUGUAGCUC-----------------UUCAA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6C00B_6183/1-71    UUAU-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGAGCUACUGCCGGUCCCAAAC-CCGG----------------AUAAA------------------------GGAG-GAGAG----UUGG
+RF03160__URS0000D67B9A_6183/1-71    UCAU-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D688BB_4558/1-56    GAAG-UAA-CACUGC--------------------------CAGUG---------------------------------------------------------------CCGGUCCCAAGC-CCGG----------------AUGUAAAAA--------------------GGUG-GAGGG----UUUA
+RF03160__URS0000D6674C_6183/1-70    AAAU-AAA-CUCCGCCUGUAGCUC-----------------UUCGA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D69A71_6183/1-71    CGAU-UAA-CUCCGCCUGUAGCUCCU---------------CCAG-----------------------------------------------------AG--GCUACUGCCGAUCUCAAGC-CCGG----------------AUAAA------------------------GGAG-AAGGG----UUUG
+RF03160__URS0000D6D451_6183/1-70    UCUA-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCUGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGAG----UUGG
+RF03160__URS0000D69EE5_6183/1-71    GUAU-AAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6A9AD_12908/15-66  -GCC-UAA-UGCAGUC-------------------------GAUG---------------------------------------------------------------GACGGUCACAAGC-CCGU----------------GAAAA------------------------UGCA-GAGUG----GGCG
+RF03160__URS0000D660AB_6183/1-70    AUAU-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAUUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6BB88_7425/1-54    CUUU-UAA-UGCGGCC-------------------------UAUU---------------------------------------------------------------GUCGGUCUCAAGC-CCGA----------------AGAAAA-----------------------CGCG-GAGAG----AAAG
+RF03160__URS0000D6C5B3_6183/1-71    UCAC-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D67CFF_6183/1-70    AGAU-AAA-CUCCGCCUGUAGCU------------------CUUCUAA-----------------------------------------------------AGUUACUGCCGGUUCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6B613_12908/1-52   AUAG-UAA-UGCAGC--------------------------CAUAG---------------------------------------------------------------ACAGUGGCAAGC-CUGU----------------AAA--------------------------UGCA-GAGCCAA--CUAC
+RF03160__URS0000D6A28E_6183/1-70    UAAU-UAA-CUCCGCCUGUAGCCCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGCCUCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGG-----UUA
+RF03160__URS0000D66712_6183/1-72    UUCA-AAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGU---UGAG
+RF03160__URS0000D6B0D6_6183/1-71    ACAU-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGA----------------GUAAA------------------------GGAG-GAGGG----UUAG
+RF03160__URS0000D67D81_6183/1-71    CCAG-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GCAG-GAGGG----UUGG
+RF03160__URS0000D6AC7B_12908/1-53   AUGU-UAA-UGCAGCC-------------------------UAUA---------------------------------------------------------------GGCGGUUACAAGC-CCGU----------------GUAAA------------------------UGCA-GAGUA----ACAU
+RF03160__URS0000D6B141_6183/1-71    GUAG-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D67043_6183/1-72    CCUA-UAAGCUCCGCCUGUAGCUCC----------------UCGG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6841E_6183/1-71    CUAC-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D66AAE_6183/1-71    AUUA-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D68BA9_6183/1-70    CUGA-CAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAAUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGA
+RF03160__URS0000D6A42F_12908/21-75  UUAG-UAA-UGUGGC--------------------------CUAAG---------------------------------------------------------------ACAGUUGCAAGC-CUGU----------------UUGAAAAA---------------------CACA-GAGCA----CUAA
+RF03160__URS0000D67D83_6183/1-72    CAUU-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGGU---UGUG
+RF03160__URS0000D67FE3_6183/1-71    CACA-CAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGGUACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGGU---UGGG
+RF03160__URS0000D697F9_12908/1-55   GUAU-UAA-AGCUAC--------------------------CAUUG---------------------------------------------------------------ACGGUCACAAGU-CCGU----------------AUUAAAAA---------------------AGCU-GAGUG----AUAC
+RF03160__URS0000D6A936_6183/1-71    UUUA-UAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUGCUGCUGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGG----UUGA
+RF03160__URS0000D6BA26_12908/1-52   UCUG-UAA-UGCAGC--------------------------CUAAG---------------------------------------------------------------ACGGUUACAAGC-CCGU----------------GGAAA------------------------UGCA-GAGUA----CAGA
+RF03160__URS0000D6AA75_12908/1-55   CAGU-UAA-UCCAGC--------------------------CAAAG---------------------------------------------------------------CCAGUCACAAGC-CUGG----------------UUGAUAAA---------------------UGGG-GAGUG----GCUG
+RF03160__URS0000D67AF7_6183/1-73    UGUU-AAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGGUUG-GGCA
+RF03160__URS0000D6AE7B_7029/1-64    AUUU-UAA-CCACACCAACUA--------------------CGUUU---------------------------------------------------------AAGUUGUCAGUCCUAAGU-CUGA----------------AUAAA------------------------GUGG-GAAGG----AAGU
+RF03160__URS0000D6A43F_6183/1-71    UUUA-UAA-CUCCGCCUGUAGC-UC----------------CUCUG-----------------------------------------------------GAGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGA----UUGG
+RF03160__URS0000D6BF1D_6183/1-70    UCAU-CAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCAG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D68860_12908/18-76  GCCU-UAA-UGCAGCUCCC----------------------CCAG------------------------------------------------------------GGGAACGGUCACAAGC-CCGU----------------GGAAA------------------------UGCA-GAGUG----AGGC
+RF03160__URS0000D69A9F_6183/1-72    AUCA-UAA-CUCCGCCUGUAGCUC-----------------UUCCGU-----------------------------------------------------GGGCUACUGCCAGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGGU---UGGG
+RF03160__URS0000D65D5F_12908/1-64   UCUG-UAA-UGCAGCUAUCGAG-------------------GGUU---------------------------------------------------------UUCGAUAACGGUUCCAAGC-CCGU----------------ACAA-------------------------UGCA-GAGGA----CAGA
+RF03160__URS0000D6958C_7029/1-71    UUUU-UAA-UCAUACCAGUGAUCUA----------------AUAUU-----------------------------------------------------CAGAUCACUGACAGUCCUAAGU-CUGU----------------AAAA-------------------------AUGA-GAAGG----AAAA
+RF03160__URS0000D6B9A6_6183/1-70    AAGA-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUAUUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGGG-GAGGG----UUGG
+RF03160__URS0000D6A6CD_12908/20-84  ACCC-UAA-UGCAGCUUCGGA--------------------UAUGCG--------------------------------------------------------UCCGGAACGGUGACAAGU-CCGU----------------AUAAA------------------------UGCA-GAGUC----AGGG
+RF03160__URS0000D67E02_12908/1-76   AUCU-UAA-AGUUGCCUACAAUUCC----------------UAAAUAUAC-------------------------------------------------GGAAC-GUAGACGGUCCCAAGU-CCG-----------------AAUAAAA----------------------AACU-GAGGG----AGAU
+RF03160__URS0000D69281_12908/1-55   ACCG-UAA-UGCAGC--------------------------CUUUG---------------------------------------------------------------ACGGUCACAAGC-CCGU----------------AUGAGAAA---------------------UGCA-GAGUG----GGGA
+RF03160__URS0000D65E04_6183/1-70    GUAC-AAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAAUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6C960_12908/1-55   UCUG-UAA-UGUGAC--------------------------CAUUG---------------------------------------------------------------AGCGUUUCAAGU-CGCU----------------AUGAAAAA---------------------CACA-GAGAA----CAGA
+RF03160__URS0000D6CEAE_12908/17-80  CCCA-UAA-UGCGGCCCGGCC--------------------CCAUC---------------------------------------------------------GGUCGGACGGUCACAAGC-CCGU----------------GGGAA------------------------CGCA-GAGUG----UGGA
+RF03160__URS0000D674E1_12908/28-91  UUUU-UAA-ACAUGCCAGU----------------------AAAUAUUGAC------------------------------------------------------ACUGUCAGUCCCAACC-CUGA----------------UAAA-------------------------AUGU-GAGGG----AAAA
+RF03160__URS0000D66CA8_6183/1-73    GCUU-UAA-CUCCGCCUGUAGUAUCU---------------CCAG-----------------------------------------------------AGGUC--ACUGACGGUCCCAAGC-CCGG----------------UUAGA------------------------GGAG-GAGGGCU--GAGC
+RF03160__URS0000D68DCB_12908/1-87   AUUG-UAA-UGUAGCUGCCA-UC-UCU-AUC----------CUAGUUGGUGU-----------------------------------------GGUUGGUUGGUUGGUAACGGUUGUAAGC-CCGU----------------AUAGA------------------------UACA-GAACA----CAGU
+RF03160__URS0000D66AFC_12908/1-55   UUAG-AAA-CUCCGC--------------------------CAUUG---------------------------------------------------------------CCGGUCCCAAGC-CCGG----------------AUGAAAAA---------------------GGAG-GAGGG----UUGA
+RF03160__URS0000D6D24C_6183/1-71    ACAA-UAA-CUCCGCCUGUAGCUCC----------------UCCA------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6AFCA_6183/1-70    UUGU-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6AF6A_6183/1-71    ACAU-UAA-CUCCGCCUGUAGCU-C----------------CUCCG-----------------------------------------------------GAGGCUACUGCCGGUCCCAAGC-CCGG----------------AUAGA------------------------GGAG-GAGGA----UCGG
+RF03160__URS0000D6CBEF_6183/1-70    UUAA-GAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D676A4_6183/1-71    UUUU-UAA-UUCCGCCUGUAGCUCC----------------UACG------------------------------------------------------GGGGUUACUGCCGGUCGCAAGC-CCGG----------------AUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6CFD8_12908/16-70  GCCU-UAA-UGCGGCUCC-----------------------AUAC-------------------------------------------------------------GGAACGGUUGCAAGC-CCG-----------------AUAA-------------------------CGCA-GAGCA----AGGA
+RF03160__URS0000D6ABD4_6183/1-71    ACGU-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D66F36_6183/1-71    ACUA-AAA-CUCCGCCUGUAGCUCC----------------UCCG------------------------------------------------------GGGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D68DB5_12908/1-55   CCGC-UAA-CCAUGC--------------------------CGUGG---------------------------------------------------------------CCAGUCCCAAGC-CUGG----------------AUGUGAAA---------------------AUGG-GAGGG----GCGG
+RF03160__URS0000D6D330_12908/1-84   ACAA-UAA-UGCGGCCUCGCUACCAAUAC------------GCAUUUAUUA--------------------------------------------GUAUUGGUAACGUGACAGUCCCAAGC-CUGU----------------AAAA-------------------------CGCA-GAGGG----UUGU
+RF03160__URS0000D67376_12908/15-72  -UCC-UAA-UGCAGCCGCC----------------------GGUAA-----------------------------------------------------------GGCGAUGGUCGCAAGC-CCAU----------------GAAA-------------------------UGCA-GAGCG----GGAG
+RF03160__URS0000D6D16C_6183/1-70    UAAU-AAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUAACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGC----UUCG
+RF03160__URS0000D65DBC_6183/1-70    CAUA-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+#=GC SS_cons                        ((((.---.((((BB<<<<<<__.................._____........................................................_>>>>>><<<__AAA__bb._>>>................,,,,,........................)))).--aaa....))))
+#=GC RF                             uuuu.UAA.uGCaGCCaguaucu..................cauua........................................................gauacuGcCGGUCCCAAGC.CCGg................AuAAA........................uGCa.GAGGG....aaaa
+//

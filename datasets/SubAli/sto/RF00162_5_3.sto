@@ -1,0 +1,122 @@
+# STOCKHOLM 1.0
+#=GF AC   RF00162
+#=GF ID   SAM
+#=GF PI   S_box
+#=GF DE   SAM riboswitch (S box leader)
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF AU   Ontiveros-Palacios N; 0000-0001-8457-4455
+#=GF SE   Grundy F, Henkin T, PMID:10094622
+#=GF SS   Published; PMID:10094622
+#=GF GA   44.40
+#=GF TC   44.40
+#=GF NC   44.30
+#=GF TP   Cis-reg; riboswitch;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF CL   CL00012
+#=GF DR   SO; 0000035; riboswitch;
+#=GF DR   GO; 0010468; regulation of gene expression;
+#=GF RN   [1]
+#=GF RM   10094622
+#=GF RT   The S box regulon: a new global transcription termination control system
+#=GF RT   for methionine and cysteine biosynthesis genes in gram-positive bacteria.
+#=GF RA   Grundy FJ, Henkin TM
+#=GF RL   Mol Microbiol 1998;30:737-749.
+#=GF RN   [2]
+#=GF RM   12910260
+#=GF RT   An mRNA structure that controls gene expression by binding
+#=GF RT   S-adenosylmethionine.
+#=GF RA   Winkler WC, Nahvi A, Sudarsan N, Barrick JE, Breaker RR
+#=GF RL   Nat Struct Biol 2003;10:701-707.
+#=GF RN   [3]
+#=GF RM   12702767
+#=GF RT   The riboswitch-mediated control of sulfur metabolism in bacteria.
+#=GF RA   Epshtein V, Mironov AS, Nudler E
+#=GF RL   Proc Natl Acad Sci U S A 2003;100:5052-5056.
+#=GF RN   [4]
+#=GF RM   15215334
+#=GF RT   Comparative genomics of the methionine metabolism in Gram-positive
+#=GF RT   bacteria: a variety of regulatory systems.
+#=GF RA   Rodionov DA, Vitreschak AG, Mironov AA, Gelfand MS
+#=GF RL   Nucleic Acids Res 2004;32:3340-3353.
+#=GF RN   [5]
+#=GF RM   16810258
+#=GF RT   Structure of the S-adenosylmethionine riboswitch regulatory mRNA element.
+#=GF RA   Montange RK, Batey RT
+#=GF RL   Nature. 2006;441:1172-1175.
+#=GF RN   [6]
+#=GF RM   20006621
+#=GF RT   Discrimination between closely related cellular metabolites by the SAM-I
+#=GF RT   riboswitch.
+#=GF RA   Montange RK, Mondragon E, van Tyne D, Garst AD, Ceres P, Batey RT
+#=GF RL   J Mol Biol. 2010;396:761-772.
+#=GF RN   [7]
+#=GF RM   20637415
+#=GF RT   Free state conformational sampling of the SAM-I riboswitch aptamer domain.
+#=GF RA   Stoddard CD, Montange RK, Hennelly SP, Rambo RP, Sanbonmatsu KY, Batey RT
+#=GF RL   Structure. 2010;18:787-797.
+#=GF RN   [8]
+#=GF RM   20951706
+#=GF RT   SAM recognition and conformational switching mechanism in the Bacillus
+#=GF RT   subtilis yitJ S box/SAM-I riboswitch.
+#=GF RA   Lu C, Ding F, Chowdhury A, Pradhan V, Tomsic J, Holmes WM, Henkin TM, Ke A
+#=GF RL   J Mol Biol. 2010;404:803-818.
+#=GF RN   [9]
+#=GF RM   22355167
+#=GF RT   YbxF and YlxQ are bacterial homologs of L7Ae and bind K-turns but not
+#=GF RT   K-loops.
+#=GF RA   Baird NJ, Zhang J, Hamma T, Ferre-D'Amare AR
+#=GF RL   RNA. 2012;18:759-770.
+#=GF RN   [10]
+#=GF RM   22539525
+#=GF RT   Structure and folding of a rare, natural kink turn in RNA with an A*A pair
+#=GF RT   at the 2b*2n position.
+#=GF RA   Schroeder KT, Daldrop P, McPhee SA, Lilley DM
+#=GF RL   RNA. 2012;18:1257-1266.
+#=GF RN   [11]
+#=GF RM   23325110
+#=GF RT   The plasticity of a structural motif in RNA: structural polymorphism of a
+#=GF RT   kink turn as a function of its environment.
+#=GF RA   Daldrop P, Lilley DM
+#=GF RL   RNA. 2013;19:357-364.
+#=GF RN   [12]
+#=GF RM   27016741
+#=GF RT   A critical base pair in k-turns determines the conformational class
+#=GF RT   adopted, and  correlates with biological function.
+#=GF RA   Huang L, Wang J, Lilley DM
+#=GF RL   Nucleic Acids Res. 2016;44:5390-5398.
+#=GF RN   [13]
+#=GF RM   33978763
+#=GF RT   Structure and folding of four putative kink turns identified in structured
+#=GF RT   RNA species in a test of structural prediction rules.
+#=GF RA   Huang L, Liao X, Li M, Wang J, Peng X, Wilson TJ, Lilley DMJ
+#=GF RL   Nucleic Acids Res 2021;49:5916-5924.
+#=GF CC   The SAM riboswitch is found upstream of a number of genes which code for
+#=GF CC   proteins involved in methionine or cysteine biosynthesis in Gram-positive
+#=GF CC   bacteria. The SAM riboswitch acts at the level of transcription
+#=GF CC   termination control. The predicted structure consists of a complex
+#=GF CC   stem-loop region followed by a single stem loop terminator region. An
+#=GF CC   alternative and mutually exclusive form involves bases in the 3' segment
+#=GF CC   of helix 1 with those in the 5' region of helix 5 to form a structure
+#=GF CC   termed the anti-terminator form [1]. This entry represents the conserved
+#=GF CC   core of the complex structure involving helices 1-4. The structure of SAM
+#=GF CC   riboswitch has been reported in PDBs: 2GIS, 2YDH, 2YGH, 3GX2, 3GX3, 3GX5,
+#=GF CC   3GX6, 3GX7, 3IQN, 3IQP, 3IQR, 3V7E_C, 3V7E_D, 4AOB, 4B5R, 4KQY, 5FJC,
+#=GF CC   5FK1, 5FK2, 5FK3, 5FK4, 5FK5, 5FK6, 5FKD, 5FKE, 5FKF, 5FKG, 5FKH, 7EAF
+#=GF CC   [5-13] 
+#=GF WK   SAM_riboswitch_(S_box_leader)
+#=GF SQ   457
+
+RF00162__AL596164.1/95936-95817     C-UCUUAUCGAGAG-CGG-C-AG-----------------AGGGA--CUGG-CCCGA--UGAA-GCC--CGGCAACC-U-AAC-UUUAUUUAA-----------------------------------------------GCGUAAA----GUG-AA--GGUGCUA-AUUC--CAG-CAAAAUGG---UGUAUU-------------------CCGUUU-UG-G-UA-GAUAAGA-G--
+RF00162__ACJM01000005.1/12852-12955 C-UCUUAUCAAGAGAAGG-U-GG-----------------AGGGA--CUGG-CCCGA--UGAA-ACC--CGGCAACCGG-ACA-CGC----------------------------------------------------------------GUC-GC--GGUGCUA-AUUC--CAG-CAGGGAG-----UGAA----------------------ACCC-UG-A-UA-GAUAAGA-G--
+RF00162__AL596172.1/176254-176136   A-UCUUAUCCAGAG-UGG-U-GG-----------------AGGGA--AAUG-CCCUG--UGAA-ACC--CAGCAACC-U-AAA-CAAUAAUUC----------------------------------------------AUUAUGUG----UUU-AA--GGUGCUA-AGUC--AUG-CAGAACAA---CGAUU---------------------UGUUC-UG-A-AA-GAUGAGA-A--
+RF00162__CP000148.1/765280-765385   U-UCUUAUCACGAG-CGA-C-CG-----------------AGGGA--CUGG-CCCUA--UGAC-GUC-GCGGCAACC-C-CCC-GC----------------------------------------------------------AAG----GGG-AC--GGUGCCA-AAUC--CUG-CGGAACG-----GCAA---------------------CGUUC-CG-G-GA-GAUAAGG-A--
+RF00162__CP000853.1/102837-102950   C-UUUUAUCGAGAG-AGG-U-GG-----------------AGGGA--AAGG-CCCUA--UGAA-ACC-UCGGCAACC-U-GCA-AACGUAU--------------------------------------------------UUGUUU----GAA-AA--GGUGCCA-AUUC--CUA-CUCUAAG-----UGAA---------------------CUUAG-AG-A-GA-GAUAAGA-G--
+#=GC SS_cons                        (.(((((((,,,,<.<<<.<.--.................-<<<_..AAAA.>>>--..----.>>>.>><<<<-<<.<.<<<._____.......................................................__>....>>>.--..>>>>>>,.,,<a..aaa.<<<<<<_.....____......................>>>>.>>.-.->.))))))).)..
+#=GC RF                             c.ucUuAUcaAGAG.gGG.c.gG.................AGGGA..cuGG.CCCua..UGAA.gCC.cCgGCAACC.c.ccc.uuuuu.......................................................aag....ggg.Aa..GGUGCcA.AuuC..Cug.Cgggcca.....uaau......................ggcc.cG.a.aa.gAUaAga.g..
+#=GC RNA_motif_k_turn               ===================X.XX.................XX============XXX..XXXX.X==============================================================================================================================================================================
+#=GC RNA_ligand_SAM                 =======X===X=============================================================X=======================================================================================XXX==================================================================X========
+#=GC RNA_structural_elements        [=P1=5p=][J1][========================P2=============================][======================================P3=variable=SL=========================================][J3][============================P4===========================][=P1=3p=]==
+//

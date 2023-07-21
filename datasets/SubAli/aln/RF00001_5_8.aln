@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+X15246.1/11-127                     --UGCGGU-GG-C-A-AU-GGC----AA-U-A-A-G---GA---------
+AF170176.1/1092-1207                --CCUGGC-GG-C-A-CU-AGC----GC-G-G-U-G---GU---------
+X05081.1/5-114                      -----GGC-GA-C-U-AU-AGC----GA-U-U-U-G---GA---------
+X12884.1/1-117                      --CUUGGC-GG-U-C-AU-AGC----GA-A-G-A-G---GU---------
+M10817.1/1-119                      --GCCUAC-GG-C-C-AU-ACC----AC-C-C-U-G---AA---------
+
+X15246.1/11-127                     -U-AC-A----------C--CUG----U-UC----CCAUGC------CGA
+AF170176.1/1092-1207                -C-CC-A----------C--CUG----A-CC----CCAUGC------CGA
+X05081.1/5-114                      -A-CC-A----------C--CUG----A-UA----CCAUCU------CGA
+X12884.1/1-117                      -C-AC-A----------C--CCG----U-UC----CCAUCC------CGA
+M10817.1/1-119                      -C-AC-G----------C--CCG----A-UC----UCGUCU-------GA
+
+X15246.1/11-127                     -ACACA-GU-AGUUAA-G-----------------CUUCUUA-A-C--G-
+AF170176.1/1092-1207                -ACUCA-GA-AGUGAA-A-----------------CGCCGUA-G-C--G-
+X05081.1/5-114                      -ACUCA-GA-AGUGAA-A-----------------CAUUUCC-G-C--G-
+X12884.1/1-117                      -ACACG-GU-CGUUAA-G-----------------CUCUUCU-G-U--G-
+M10817.1/1-119                      -UCUCG-GA-AGCUAA-G-----------------CAGGGUC-G-G--G-
+
+X15246.1/11-127                     --CC--GAAA----GUAGUUGG---UGGGAAAC-U-GCCUG-CGA---G-
+AF170176.1/1092-1207                --CC--GAUG----GUAGUGUG----GGGUCUC-C-CCAUG-CGA---G-
+X05081.1/5-114                      --CC--AAUGA----UAGUGUG----AGGCUUC-C-UCAUG-CGA---A-
+X12884.1/1-117                      --CC--GAAG----GUAAUUGGG---GGCUGUC-C-CCCUG-UGA---G-
+M10817.1/1-119                      --CC--UGGUUA--GUACUUGGA--UGGGAGAC-C-GCCUG-GGA---A-
+
+X15246.1/11-127                     --GAUA----GG-A-AG-CU--G-CCGCGC
+AF170176.1/1092-1207                --AGUA----GG-G-AA-CU--G-CCAGGC
+X05081.1/5-114                      --AGUA----GG-U-CA-UC--G-CCA---
+X12884.1/1-117                      --AGUA----GG-U-CA-CU--G-CCAGGC
+M10817.1/1-119                      -UACCG----GG-U--G-CU--G-UAGGCU
+
+

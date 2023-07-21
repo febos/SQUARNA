@@ -1,0 +1,87 @@
+# STOCKHOLM 1.0
+#=GF AC   RF00001
+#=GF ID   5S_rRNA
+#=GF DE   5S ribosomal RNA
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Mifsud W; 0000-0002-9805-6461
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF SE   Szymanski et al, 5S ribosomal database, PMID:11752286
+#=GF SS   Published; PMID:11283358
+#=GF GA   38.00
+#=GF TC   38.00
+#=GF NC   37.90
+#=GF TP   Gene; rRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 24.99 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00113
+#=GF DR   URL; http://rose.man.poznan.pl/5SData/;
+#=GF DR   SO; 0000652; rRNA_5S;
+#=GF DR   GO; 0003735; structural constituent of ribosome;
+#=GF DR   GO; 0005840; ribosome;
+#=GF RN   [1]
+#=GF RM   11752286
+#=GF RT   5S Ribosomal RNA Database.
+#=GF RA   Szymanski M, Barciszewska MZ, Erdmann VA, Barciszewski J
+#=GF RL   Nucleic Acids Res 2002;30:176-178.
+#=GF RN   [2]
+#=GF RM   11283358
+#=GF RT   Crystal structure of the ribosome at 5.5 A resolution.
+#=GF RA   Yusupov MM, Yusupova GZ, Baucom A, Lieberman K, Earnest TN, Cate JH,
+#=GF RA   Noller HF
+#=GF RL   Science 2001;292:883-896.
+#=GF RN   [3]
+#=GF RM   10926492
+#=GF RT   The role of the central zinc fingers of transcription factor IIIA in
+#=GF RT   binding to 5 S RNA.
+#=GF RA   Searles MA, Lu D, Klug A
+#=GF RL   J Mol Biol 2000;301:47-60.
+#=GF RN   [4]
+#=GF RM   23838690
+#=GF RT   Systematic analysis and evolution of 5S ribosomal DNA in metazoans.
+#=GF RA   Vierna J, Wehner S, Honer zu Siederdissen C, Martinez-Lage A, Marz M
+#=GF RL   Heredity (Edinb). 2013;111:410-421.
+#=GF CC   5S ribosomal RNA (5S rRNA) is a component of the large ribosomal subunit
+#=GF CC   in both prokaryotes and eukaryotes. In eukaryotes, it is synthesised by
+#=GF CC   RNA polymerase III (the other eukaryotic rRNAs are cleaved from a 45S
+#=GF CC   precursor synthesised by RNA polymerase I). In Xenopus oocytes, it has
+#=GF CC   been shown that fingers 4-7 of the nine-zinc finger transcription factor
+#=GF CC   TFIIIA can bind to the central region of 5S RNA. Thus, in addition to
+#=GF CC   positively regulating 5S rRNA transcription, TFIIIA also stabilises 5S
+#=GF CC   rRNA until it is required for transcription.
+#=GF WK   5S_ribosomal_RNA
+#=GF SQ   712
+
+RF00001__X02025.1/1-116       --UCUGGU-GG-C-G-AU-AGC----GA-G-A-A-G---GU----------C-AC-A----------C--CCG----U-UC----CCAUAC------CGA-ACACG-GA-AGUUAA-G-----------------CUUCUCA-G-C--G---CC--GAUG----GUAGUUAG----GGGCUGU-C-CCCUG-UGA---G---AGUA----GG-A-CG-CU--G-CCAGGC
+RF00001__M11538.1/4-116       --CCUGAU-GA-C-C-AU-GGC----GA-A-C-U-G---GA----------A-CC-A----------C--CCC----U-UC----CCAUCC------CGA-ACAGG-GC-CGUGAA-A-----------------CAGUUCA-G-C--G---CC--GAUGA----UA---GUG--CGCAUUCG-C-GUGUG---A---A---AGUA----GG-A-CA-UC--G-UCAGGC
+RF00001__AY599019.1/4972-5080 --CCUGGU-GA-U-C-AU-AGC----GA-A-G-A-G---GU----------C-CC-A----------C--CCG----U-UC----CCAUCC------CGA-ACACG-GA-AGUUAA-G-----------------CUCUUCA-G-C--G---CC--GAUG----GUACUGCUA--U-----------UGCG-GGA---G---AGUA----GG-U-CG-UC--G-CCAGGC
+RF00001__X12886.1/1-117       --UGUGGU-GA-C-G-AU-GGC----GA-G-A-A-G---GA----------U-AC-A----------C--CUG----U-UC----CCAUGU------CGA-ACACA-GA-AGUUAA-G-----------------CUUCUUA-G-C--G---CC--GAGA----GUAGUUGGG---GGAUCGC-U-CCCUG-CGA---G---GGUA----GG-A-CG-UU--G-CCAUGC
+RF00001__X02251.1/3-118       --CUUGGC-GA-C-C-AU-AGC----GU-U-G-U-G---GA----------C-CC-A----------C--CUG----A-UU----CCAUGC------CGA-ACUCA-GA-AGUGAA-A-----------------CGCAAUA-G-C--G---CC--GAUG----GUAGUGUG----GGGUUUC-C-CCAUG-UGA---G---AGUA----GG-A-CA-UC--G-CCAGGC
+RF00001__X02036.1/1-119       --GGAUGC-GG-C-C-AU-ACU----AA-G-G-A-G---AA----------A-GC-A----------C--CUC----A-UC----CCGUCC-------GA-UCUGA-GA-AGUUAA-G-----------------CUCCUUC-A-G--G---CG--UGGUUA--GUACUGGGG--UGGGGGAC-C-ACCUG-GGA---A--UCCCA----CG-U--G-CU--G-CAUUCU
+RF00001__AJ744985.1/1-109     --GCCUGC-GG-C-C-AC-ACC----AC-U-U-U-G---AA----------U-AA-G----------C--CUG----A-----------------------UCUCA-GA-AGUGAA-A-----------------CAAUGUU-G-G--G---CU--UGGUUA--GUACUUGGA--UGGGAAAC-C-GCCUG-GGA---A--UAUCA----AG-U--G-CU--G-UAGGCA
+RF00001__X55251.1/3-116       --UACGGC-GG-UCC-AU-AGC----GG-C-A-G-G---GA----------A-AC-G----------C--CCG----G-UC----CCAUCC------CGA-ACCCG-GA-AGCUAA-G-----------------CCUGCCA-G-C--G---CC--GAUGA----UACUACCC---AUCCGGG-U-------GGA---A--AAGUA----GG-A-CA-CC--G-CCGAAC
+RF00001__L27166.1/1-122       --GUAGGC-GG-C-C-AG-AGC----GG-U-A-G-G---GA----------A-AC-A----------C--CCG----U-AC----CCAUUC------CGA-ACACG-GA-AGUUAA-G-----------------CCUACCA-G-C--GU-AUC--GUGAA---GUACUGGAG--UGAGCGAU-C-CUCAG-GGA---A---CCAC----GAGU-CG-CC--G-CCUACC
+RF00001__Z35330.1/6121-6235   --CCUGGU-GG-U-U-UU-AGC----GA-A-G-A-G---CC----------U-CA-A----------C--CCG----A-UC----CCAUCC------CGA-ACUCG-GC-CGUUAA-A-----------------CUCUUCA-G-C--G---CC--AAUG----GUACUAUG----GCUUAAG-C--CCUG-GGA---G---AGUA----GG-U-CG-CU--G-CCAGGC
+RF00001__J01851.1/1-119       --GUUGUC-GG-C-C-AU-ACU----AU-G-C-C-U---AA----------C-GC-A----------C--CAG----A-UC----CCAUCC-------GA-ACUCU-GA-AGUUAA-G-----------------CGGCAUA-A-G--G---CG--AGGUUA--GUACUUGGG--UGGGGGAC-C-GCCAG-GGA---A--GCCCU----CG-U--G-CU--G-ACAGCU
+RF00001__AJ131592.1/3-116     --CCUGAU-GA-C-C-AU-AGC----GA-G-U-U-G---GU----------A-CC-A----------C--CCC----U-UC----CCAUCC------CGA-ACAGG-AC-CGUGAA-A-----------------CGACUCC-A-C--G---CC--GAUGA----UAGUGCGG--AUU----G-C-CCGUG-UGA---A---AGUA----GG-U-AA-UC--G-UCAGGC
+RF00001__AY934066.1/157-271   --CCUGGU-UG-U-U-AU-AGC----AA-A-G-G-G---UU----------A-AA-A----------C--CGG----A-UC----CCAUCU------CGA-ACUCA-UU-GGAGAA-U-----------------UCCUUUA-G-C--G---CC--GAUG----GUACUUAG---UCU--UAA-G-GCUUG-GGA---G---AGUA----GG-A-CG-UA--G-CCAGGC
+RF00001__X05517.1/3-118       --CUUGAC-GA-C-C-AU-AGA----GC-G-U-U-G---GA----------A-CC-A----------C--CUG----A-UC----CCAUCC------CGA-ACUCA-GC-AGUGAA-A-----------------CGACGCA-U-C--G---CC--GAUG----GUAGUGUG----GGGUCUC-C-CCAUG-UGA---G---AGUA----GG-U-CA-UC--G-UCAAGC
+RF00001__X13005.1/1-116       --UCCAGU-GA-U-G-AU-GGC----AA-A-G-A-G---GC----------C-AC-A----------C--CCG----U-UC----CCAUGC------CGA-ACACG-GA-AGUUAA-G-----------------CUCUUUU-G-C--G---CC--GAUG----GUAGUUGG----GGGUUUC-C-CCCUG-UGA---G---AGUA----GG-A-CG-UC--G-CUGGGC
+RF00001__DQ776904.1/441-560   --GAAGGU-AA-G-C-GU-GCU----UG-G-G-C-GAGAGU----------A-GU-A----------C--UAG----G-AU----GGGU---------GA-CCUCC-GA-AGUUAA-G-----------------CGUGCUU-G-G--G---CG--AGAGUA--GUACUAGGA--UGGGUGAC-C-UCCUA-GGA---A--GUCCU----CG-U--G-UU--G-CAUUCC
+RF00001__X55259.1/3-117       --UACGGC-GG-U-CAAU-AGC----GG-C-A-G-G---GA----------A-AC-G----------C--CCG----G-UC----CCAUCC------CGA-ACCCG-GA-AGCUAA-G-----------------CCUGCCA-G-C--G---CC--AAUGA----UACUGCCC--U----CAC-C-GGGUG-GAA---A---AGUA----GG-A-CA-CC--G-CCGAAC
+RF00001__Z50054.1/4-120       --GUCGGU-GG-C-G-AU-AGC----GG-U-G-G-G---GA----------A-AC-G----------C--CCG----G-UC----CCUUUC------CGA-ACCCG-GA-AGCUAA-G-----------------CCUGCCA-G-C--G---CC--GAUG----GUACUGUAC---UCGAUAG-G-GUGUG-GGA---G---AGUA----GG-A-CA-CC--G-CCGACA
+RF00001__K02343.1/1-119       --GUUAUC-GG-C-C-AU-ACU----AA-G-C-C-A---AA----------A-GC-A----------C--CGG----A-UC----CCAUUC-------GA-ACUCC-GA-AGUUAA-G-----------------CGGCUUA-A-G--G---CA--UGGUUA--GUACUAAGG--UGGGGGAC-C-GCUUG-GGA---A--GCCCA----UG-U--G-CU--G-AUAGCU
+RF00001__M76573.1/4-118       --CCUGGU-GG-C-U-AU-GGC----GG-G-A-G-A---GA----------U-CC-A----------C--CCG----A-UC----CCAUCC------CGA-ACUCG-GC-CGUGAA-A-----------------ACCCCCA-G-C--G---CC--UAUGA----UACUGCG----GCUUAAG-C--CGUG-GGA---A---AGUC----GG-U-CG-CC--G-CCAGGU
+RF00001__AF134704.1/5562-5676 --CUUGAC-GA-C-C-AU-AGA----GC-A-U-U-G---GA----------A-CC-A----------C--CUG----A-UC----CCAUCC------CGA-ACUCA-GC-AGUGAA-A-----------------CGAUGCA-U-C--G---CC--GAUG----GUAGUGUG----GGGUUUC-C-CCAUG-UGA---G---AGUA----GG-U-CA-UC--G-UCAAG-
+RF00001__AY544572.1/31-151    --ACAUGC-G-------U-ACG----UG-C-G-C-G---GAAUAU--AUUAA-GC-A-------------CGG----A-UC----CCAUCA-------GA-ACUCC-GA-AGUUAA-G-----------------CGUGCUU-G-G--G---CA--AGAGUA--GUACUAGGA--UGGGUGAC-C-UCCUG-GGA---G---ACCU----CG-U--A-UU--G-CAUUCC
+RF00001__L27168.1/1-120       ---UUGGC-GA-C-C-AU-AGC----GG-C-G-A-G---UG----------A-CC-U----------C--CCG----U-AC----CCAUCC------CGA-ACACG-GA-AGAUAA-G-----------------CUCGCCU-G-C--GU-UUC--GGUCA---GUACUGGAU--UGGGCGAC-C-CUCUG-GGA---A---AUCU----GAUU-CG-CC--G-CCACC-
+RF00001__M58368.1/1-118       --AUCCAC-GG-C-C-AU-AGG----AC-U-C-U-G---AA----------A-GC-A----------C--UGC----A-GC----CCGUCC-------GA-UCUGC-AA-AGUUAA-C-----------------CAGAGUA-C-C--G---CU--CAGUUA--GUACCAUGG--UGGGGGAC-C-AUGCG-GGA---A--UCCUG----GG-U--G-CU--G-UGGUU-
+RF00001__M35576.1/1-118       --AUCUUC-GG-C-C-AU-AGG----AC-A-G-A-G---AA----------A-AU-A----------C--CGC----A-UC----CCGUCC-------GA-UCUGC-GC-AGUCAA-G-----------------CUCUGUA-C-C--G---CU--UAGUUA--GUACCAUAG--UGGGGGAC-C-AUAUG-GGA---A--UCCUG----AG-U--G-CU--G-AAGUU-
+RF00001__X02044.1/4-118       --CCUGGU-GG-U-C-AU-UGC----GG-G-C-U-C---GA----------A-AC-A----------C--CCG----A-UC----CCAUCC------CGA-ACUCG-GC-CGUGAA-A-----------------GAGCCCU-G-C--G---CC--AAUG----GUACUGCG---UCU--UAA-G-GCGUG-GGA---G---AGUA----GG-U-CG-CC--G-CCAGGC
+RF00001__M10364.1/2-118       --CCUGGU-GG-U-G-AU-GGC----GA-U-G-U-G---GA----------C-CC-A----------C-ACUC----A-UC-----CAUCC------CGA-ACUGA-GU-GGUGAA-A-----------------CGCAUUU-G-C--G---GC--GACGA----UAGUUGGA---GGGUAGC-C-UCCUG-UCA---A---AAUA----GC-U-AA-CC--G-CCAGGG
+RF00001__Z50736.1/3-119       --UUCGGU-GG-U-G-UU-GGC----GG-A-G-G-G---GA----------A-AC-G----------C--CCG----G-UC----CCAUUC------CGA-ACCCG-GA-AGCUAA-G-----------------CCCUCCU-G-C--G---CC--GAUG----GUACUGCAC---UCGUGAG-G-GUGUG-GGA---G---AGUA----GG-A-CG-CU--G-CCGAAC
+RF00001__M34910.1/5-126       --UUUGGC-GG-C-C-AU-AGC----GG-C-G-G-G---GC----------A-AU-U----------C--CUG----U-AC----CCAUCC------CGA-ACACA-GA-AGAUAA-G-----------------CCCGCCU-G-C-GU---UC--UAUACU--GUACUAAAG--UAUGAGAG-U-CUUUG-GGA---A--AUAUG----GA-A-CG-CU--G-CCAUCU
+RF00001__D90255.1/422-538     --CCUGGU-GA-U-U-AU-GGA----GA-G-A-A-G---GC----------C-AU-A----------C--CCG----U-UC----CCAUUC------CGA-ACACG-GA-AGUCAA-G-----------------CUUCUCA-U-C--G---CC--GAUG----GUACUAUUG---GGUUCGC-U-CAAUG-GGA---G---AGUA----GG-A-CA-UU--G-CCGGGU
+#=GC SS_cons                  ..((((((.((.(.,.,,.,<<....-<.<.<.<.<...--..........-.<<.-..........-..<<<....<.<<....______.......>>.-->>>.>-.->>---.-.................>>>>>--.>.>..<...<<..-<<---..-<-<<----..-<<____>.>.-----.>>-...>..-->>-....>>.>..).))..).))))):
+#=GC RF                       ..gccuGc.gg.c.C.AU.Acc....ag.c.g.c.g...aA..........a.gc.A..........C..cgG....a.uC....CCAUCc.......Ga.ACuCc.gA.AguUAA.G.................cgcgcUu.g.g..g...Cc..agggUA..GUAcuagGa..UGgGuGAc.C.uCcUG.ggA...A..gacca....gG.u..g.cc..g.Caggcc
+//

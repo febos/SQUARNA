@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+M11541.1/4-119                      --UCUGGC-GG-C-C-AU-AGC----GC-A-G-U-G---GA---------
+Z18289.1/4653-4769                  --CUUGAU-AC-U-U-AU-AGC----GC-A-G-U-G---GA---------
+X06995.1/1-119                      --GGGUGC-GA-U-A-AU-ACC----AC-C-G-C-U---AA---------
+X00865.1/1-119                      --ACAUAC-GA-C-C-AU-AGA----CG-C-U-A-G---AA---------
+EF175854.1/1-112                    --GGGUGC-GA-U-C-GU-ACC----AG-C-A-C-U---AA---------
+
+M11541.1/4-119                      -A-CC-A----------C--CCC----U-UC----CCAUCC------CGA
+Z18289.1/4653-4769                  -C-CC-A----------C-AUCG----A-UC-----CAUCC------CGA
+X06995.1/1-119                      -C-GU-A----------U--CGG----A-UC----CGAUCA-------GA
+X00865.1/1-119                      -A-AU-A----------C--GGG----A-UC----CCGUCC-------GC
+EF175854.1/1-112                    -A-GC-A----------C--C-G----A-UC----CCAUCA-------GA
+
+M11541.1/4-119                      -ACAGG-AC-CGUGAA-A-----------------CACUGCA-G-C--G-
+Z18289.1/4653-4769                  -ACUCG-AU-UGUUAA-A-----------------CACUACA-G-C--G-
+X06995.1/1-119                      -ACUCC-GU-AAUUAA-G-----------------CGCGCUU-G-G--G-
+X00865.1/1-119                      -UCUCC-CAUAGUCAA-G-----------------CUGGCGA-U-C--G-
+EF175854.1/1-112                    -ACUCU-GC-AGUUAA-G-----------------CGUGCUC-G-G--G-
+
+M11541.1/4-119                      --CC--UAUGA----UAGUUGA----GGGCCUC-C-CUCCG-CGA---A-
+Z18289.1/4653-4769                  --GC--AAUGA----UACUGAAG---GGGAAGC-C-UUUUG-GGA---A-
+X06995.1/1-119                      --CU--AGAGUA--GUACUGGGA--UGGGUGAC-C-UCUCG-GGA---A-
+X00865.1/1-119                      --GC--GGAUUA--GUAGUUGGG--UCGGUGAC-G-ACCAG-CGA---A-
+EF175854.1/1-112                    --CG--AGAGUA--GUACUGGCU--UGGGUGAC-C-------CGC---A-
+
+M11541.1/4-119                      --AGUC----GG-U-CA-CC--G-CCAGAC
+Z18289.1/4653-4769                  --AGUA----GC-U-CA-GU--G-CCAAGG
+X06995.1/1-119                      -GUCCU----AG-U--G-UU--G-CACCCA
+X00865.1/1-119                      -UACCU----GC-U--G-UU--G-UAUGU-
+EF175854.1/1-112                    --AUUU----CU-U--U-UC--C-UUCUUA
+
+

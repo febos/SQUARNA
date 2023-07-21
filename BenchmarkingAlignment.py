@@ -129,12 +129,13 @@ def PredictRscapeTotal(dataset, fam):
 
 if __name__ == "__main__":
 
-    dataset = "RNAStralignExt" # RNAStralignExt / Rfam14.9 / RfamPDB
+    dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli
     #tool    = "IPknot"
 
-    for tool in {"RNAStralignExt":("SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
+    for tool in {"RNAStralignExt":(),
                  "Rfam14.9":("IPknot", "CentroidAlifold", "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
-                 "RfamPDB":("RscapeTotal","SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i")}[dataset]:
+                 "RfamPDB":("RscapeTotal","SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
+                 "SubAli": ("RNAalifold","SQUARNAs1","RscapeTotal","RscapeNested")}[dataset]:
             
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
