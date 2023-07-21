@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+CP001472.1/3934139-3934250          A-UUUCAUGAAGAG-UGG-C-UG-----------------AGGGA--CGG
+CP000141.1/2169978-2169874          C-UCUUAUCAAGAG-UGG-C-GG-----------------AGGGA--CUG
+ABFU01000060.1/128844-128955        C-UCUUAUCGAGAG-CGG-C-GG-----------------AGGGA-AUAG
+L42943.1/254-144                    C-UCUUAUCCUGAG-UGG-U-GG-----------------AGGGA-CAUG
+AE017334.2/4074410-4074519          U-UCUUAUCUAGAG-AGG-U-AG-----------------AGGGA--CUG
+
+CP001472.1/3934139-3934250          G-CCCUG--UGAC-GCC-ACGACAACC-G-GCU-CGAGCAA---------
+CP000141.1/2169978-2169874          G-CCCAA--UGAA-GCC--CGGCAACC-G-GCC-AUAUU-----------
+ABFU01000060.1/128844-128955        G-CCCUG--UGAA-GCC--CGGCAACC-A-UCA-AGCGAAUU--------
+L42943.1/254-144                    GACCCAA--UGAA-ACC--CAGCAACC-U-CUU-UUUUA-----------
+AE017334.2/4074410-4074519          G-CCCUA--UGAC-GCC-UCAGCAACC-A-UUA-ACAUU-----------
+
+CP001472.1/3934139-3934250          ------------------------------------------UUCGG---
+CP000141.1/2169978-2169874          -------------------------------------------UUUG---
+ABFU01000060.1/128844-128955        -----------------------------------------UUGCUU---
+L42943.1/254-144                    -------------------------------------------UAAA---
+AE017334.2/4074410-4074519          -------------------------------------------UGUU---
+
+CP001472.1/3934139-3934250          -GAC-AU-CGGUGUCA-ACUC--UCU-CCUGCG------UAAC-------
+CP000141.1/2169978-2169874          -GCA-AU--GGUGCCA-AUUC--CUG-CGGAU--------UAA-------
+ABFU01000060.1/128844-128955        -GAA-AA--GGUGCUA-AUUC--CUA-CAGGUAA-----UC---------
+L42943.1/254-144                    -AGA-AA--GGUGCCA-AACCGUUUG-CAGACA------AAUA-------
+AE017334.2/4074410-4074519          -AAU-AA--GGUGCUA-AUUC--CAG-CAAAUUG----CGAAA-------
+
+CP001472.1/3934139-3934250          ---------------GGCG-GG-G-AA-CAUGAGA-U--
+CP000141.1/2169978-2169874          ---------------AUUC-CG-G-GA-GAUAAGA-G--
+ABFU01000060.1/128844-128955        ---------------UACC-UG-G-AA-GAUAAGA-G--
+L42943.1/254-144                    ---------------GGUC-UG-A-AC-GAUAAGA-G--
+AE017334.2/4074410-4074519          ---------------AAUU-UG-A-CA-GAUGAGA-A--
+
+

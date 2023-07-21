@@ -1,0 +1,100 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+AF221921.1/98-548                   ---------------GGCGGG--UUGCGGGAGC-UGCGAG-CGGCCG---
+AF221919.1/107-614                  GUGCGGACGGGCUGCGUGGGC------GGGUCG---GUCC--GUCCU---
+AF221931.1/99-541                   ----GGGUUGCGGAGGGUGGG---CUCGGGAG--GGGUGGC-GGUCA---
+AF221906.1/96-545                   ----GGGUUGCGGAGGGAGGG---CCCGGGAG--GGGUGAG-CGUCC---
+AF221917.1/99-542                   ----GGGUUGCGGAGGGUGGG---CCUGGGAG--GGGUGGC-GGUCG---
+
+AF221921.1/98-548                   --UCUC--GUCUAACCCUAAA-GAGAAA---------------GGCGUAG
+AF221919.1/107-614                  -GGCAC--AUCUAACCCUAAAUGCGCGCUGGUUGAAGUGGCUU-------
+AF221931.1/99-541                   UUUUCU--GUCUAACCCUAACUGAAACG---------------GGCGUAG
+AF221906.1/96-545                   AUUAUC--GUCUAACCCUAACUGAGAUG---------------GGCGUAG
+AF221917.1/99-542                   UUUUAU--GUCUAACCCUAACUGAGAAG---------------GGCAUAG
+
+AF221921.1/98-548                   GU-GCUUGGCCUU---------GGCGACU--------------------C
+AF221919.1/107-614                  ---------CUCC-------UGGGCGA-U--------------------C
+AF221931.1/99-541                   GC-GCUGCGCUUU--------UGUU-CCC--------------------C
+AF221906.1/96-545                   GC-GCCGCGCUUU--------UGCUUCC---------------------C
+AF221917.1/99-542                   GC-GCUGCGCUUU--------UGUU-CCC--------------------C
+
+AF221921.1/98-548                   GCCCGCUGUUUUU-UGGCUGGCUUUCAGCGGGUGAA---GAGGCCCAAG-
+AF221919.1/107-614                  GCUCGCUGUUUUUGUGGCUGGCUUUCAGCGGGCU--GGAGGAGCCGGG--
+AF221931.1/99-541                   GCACGCUGUUUUUCUCGCUGACUUUCAGCGGGCGGA---AAAGCCUUG--
+AF221906.1/96-545                   GCGCGCUGUUUUUCUCGCUGACUUUCAGCGGGCGGA---AAAGCCUCG--
+AF221917.1/99-542                   GCACGCUGUUUUUCUCGCUGACUUUCAGCGGGCGGA---AAAGCCUCG--
+
+AF221921.1/98-548                   ACCUA-CCGCC-ACCCACCGUCUAGUGUCUUAAGGGCACAAAGUCCUGCC
+AF221919.1/107-614                  ------------AGCGGAGGCGGAGGACCGAG------------------
+AF221931.1/99-541                   GCCUA-CUGCC-ACACACCAUCCAGUUU----------------------
+AF221906.1/96-545                   GCCUA-CUGCC-GUCUACUGUCGUAUCU----------------------
+AF221917.1/99-542                   GCCUA-CUGCC-AUCCACCAUCCAGUUU----------------------
+
+AF221921.1/98-548                   CGCCACCCUUCGA---------------GGAGCGAAA---CCC----AAA
+AF221919.1/107-614                  ----------------------------------------CC-----AAA
+AF221931.1/99-541                   ----------------------------GGAGCAAA----CA-----AAA
+AF221906.1/96-545                   ----------------------------GGAGCAAA----CA-----AAA
+AF221917.1/99-542                   ----------------------------GGAGCAAA----CA-----AAA
+
+AF221921.1/98-548                   AAAGUC--AGC-CCC-------UGG-CCG-CCUCUCGCCCUCUC----GC
+AF221919.1/107-614                  AACGUC--AGC-CG--------AGG-CC-----GGGC--GGCCC------
+AF221931.1/99-541                   AAUGUC--AGC-GGC-------UGG-CC--UGCUCGCCCCUCCC----GG
+AF221906.1/96-545                   AAUGUC--AGC-CGC-------UGG-UC--CGCUCGCCCCAUCC----GG
+AF221917.1/99-542                   AAUGUC--AGC-CGC-------CGG-CC--UGCUCGCCCCUCCC----GG
+
+AF221921.1/98-548                   AA---------------------CCCGC--CU------------------
+AF221919.1/107-614                  ----CG-----------------CUCGUGGCCCGUCCGCACUGUCCGGGC
+AF221931.1/99-541                   G---AG-----------------CCUGCGGCGACUC--------------
+AF221906.1/96-545                   G---AA-----------------CCUGCGGUGGCUC--------------
+AF221917.1/99-542                   G---AU-----------------CCUGCGGUGGCUC--------------
+
+AF221921.1/98-548                   ----------------------------------------CCG-UCCC-A
+AF221919.1/107-614                  CAGGCCCCGGCCCGAACCCCCUGGAGACAACUCCCGCAGGGUCUGCGCUG
+AF221931.1/99-541                   ---------------------------------------GCC-CGCUU-A
+AF221906.1/96-545                   ---------------------------------------GUC-CGCCC-U
+AF221917.1/99-542                   ---------------------------------------GCC-CGCUU-A
+
+AF221921.1/98-548                   --------------GCCUC--CAUCCCCGC--CCC--------AGGCCGC
+AF221919.1/107-614                  CGCCGCGGAGC-----CCCG-GCU-GCCC--ACGUAG------AGGCGGC
+AF221931.1/99-541                   --------------GCCCCCGCAU-CCCGC--CUGG-------AGGCCGC
+AF221906.1/96-545                   ------------GCCCCCGCGC---UCCGC--CUAG-------AGGCCGC
+AF221917.1/99-542                   --------------GCCCCCGCGU-CCCGC--CUGG-------AGGCCGC
+
+AF221921.1/98-548                   GGUCGGUCC-GGG-CUUC----UUCG---GAAGU-CCC-GUUGCCGUCGC
+AF221919.1/107-614                  GG-CCGUCUCGGGGCCCCUG--CGUG--CGGGGCGCCC-ACUGCGGCCGC
+AF221931.1/99-541                   GGUCGGCCC-GGGGCUUC----UCCG---GAGGCACCC-AUUGCCGUCGC
+AF221906.1/96-545                   GGUCCGCCC-GGGGCUUC----UCCG---GAGGCACCC-AAUGCAGCCGC
+AF221917.1/99-542                   GGUCGGCCC-GGGGCUUC----UCCG---GAGGCACCC-AUUGCCGUCGC
+
+AF221921.1/98-548                   GAAGAG-UUCGC-CUCUGUCAGCC---GCGGG-GCU-U--GGGGC-----
+AF221919.1/107-614                  CAAGAG-CUCGU-CUCUGUCAGCCUC--GGGUGCACG--UGGG---CCCG
+AF221931.1/99-541                   GAAGAGU-UGG-GCUCUGUCAGCC---GCGGG-ACCCUUGGGGGC-----
+AF221906.1/96-545                   GAAGAGU-UAG-GCUCUGUCAGCC---GCGGA-UCC--CGCGGGGGC---
+AF221917.1/99-542                   GAAGAGU-UGG-GCUCUGUCAGCC---GCGGG-ACCUUUGGGGGC-----
+
+AF221921.1/98-548                   ----CA--GGGA---CGG--------------------------------
+AF221919.1/107-614                  CGGUCG-AGCCCUAAGGCC----------------GGGCGUGGGG-CUG-
+AF221931.1/99-541                   ----CAA-GGGC--GAGGC-------------------------------
+AF221906.1/96-545                   ----CAA-GGGU--GAGGC---------------------------UUAG
+AF221917.1/99-542                   ----CAA-GGGC--GAGGC-------------------------------
+
+AF221921.1/98-548                   --GACCCUGU-CC--GCAGG-GAGAGAAA-----CU-GGAGCCGGG-CCC
+AF221919.1/107-614                  ----------GGGUCGCAGG-GAGAGUAA----CCGUGAGCCGGC-GCCC
+AF221931.1/99-541                   -----UCUGG---CCGCAGG-GAGAGAAA-----CG-GAGC--GGGUCCC
+AF221906.1/96-545                   GCC--GCGGG---CCGCAGG-AAGAAAAA----CC--GAGC-G-AGUUCU
+AF221917.1/99-542                   -----UCUGG---CCGCAGG-GAGAGAAAA----CG-GAGC--GGGUCCC
+
+AF221921.1/98-548                   ---------UCCACGGUGC-C--UCCC-CGAGCUGU-GGGAUC-U-GCAC
+AF221919.1/107-614                  -------AGCCUUCAGGGCG--CUCCCUCGAGCUAU-GGGA-GC-UGCCC
+AF221931.1/99-541                   -------CUCGCGCGGUGCGC-UUCCC-UGAGCUGU-GGGA-C-UUGCAC
+AF221906.1/96-545                   -------CACGCGCGGUGCGCUU-CCC-UGAGCUGU-GGG-UC-GUGCGC
+AF221917.1/99-542                   -------CUUGCGCGGUGCGC-UUCCC-UGAGCUGU-GGGA-C-UUGCAC
+
+AF221921.1/98-548                   --CC-GGGACU--CGAACCCUACACUU
+AF221919.1/107-614                  ---CCGGGC--AC-GGCUCGGACACCC
+AF221931.1/99-541                   --CC-GGGACUA-G-GCUCACACACAC
+AF221906.1/96-545                   --CU-GGGACU-CG-GCUCAGACACGU
+AF221917.1/99-542                   --CC-GGGACUA-G-GCUCACACACAU
+
+

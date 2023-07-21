@@ -129,15 +129,18 @@ def PredictRscapeTotal(dataset, fam):
 
 if __name__ == "__main__":
 
-    #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli
+    #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset in ("RfamPDB", "Rfam14.9", "SubAli"):
+    for dataset in ("RfamPDB", "Rfam14.9", "SubAli", "SeqSim"):
 
         for tool in {"RNAStralignExt":(),
                      "Rfam14.9":("IPknot", "CentroidAlifold", "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
-                     "RfamPDB":("RscapeTotal","SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
+                     "RfamPDB":("SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
                      "SubAli": ("RscapeNested",
+                                "IPknot", "CentroidAlifold",
+                                "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
+                     "SeqSim": ("RNAalifold", "SQUARNAs1", "RscapeNested", "RscapeTotal",
                                 "IPknot", "CentroidAlifold",
                                 "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i")}[dataset]:
                 

@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+M28975.1/65-183                     --GAGUAC-GA-C-C-AU-ACU----UG-A-G-U-G---AA---------
+X16225.1/825-943                    --GCUUAC-GA-C-C-AU-AUC----AC-G-U-U-G---AA---------
+DQ867108.1/1-118                    --GCUUAC-GG-C-C-AU-ACC----AG-C-C-U-G--------------
+X73890.1/1-118                      --AUCCAC-GG-C-C-AU-AGG----AC-U-C-U-G---AA---------
+AF330837.1/213-340                  --GUAUGC-GA-U-C-AU-ACC----AG-C-A-C-U---RA---------
+
+M28975.1/65-183                     -A-AC-A----------C--CAU----A-UC----CCGUCC-------GA
+X16225.1/825-943                    -U-GC-A----------C--GCC----A-UC----CCGUCC-------GA
+DQ867108.1/1-118                    -U-AC-G----------C--CCG----A-UC----UCGUCC-------GA
+X73890.1/1-118                      -A-AC-A----------C--CGC----A-UC----CCGUCC-------GA
+AF330837.1/213-340                  -U-AC-A----------CAGUAG----A-UC----CCRWUYCCCAUCAGA
+
+M28975.1/65-183                     -UUUGU-GA-AGUUAA-G-----------------CACCCAC-A-G--G-
+X16225.1/825-943                    -UCUGG-CA-AGUUAA-G-----------------CAACGUU-G-A--G-
+DQ867108.1/1-118                    -UCGCG-GA-AGAUAA-A----------------ACGCGUUU-G-G--U-
+X73890.1/1-118                      -UCUGC-GA-AGUUAA-C-----------------CAGAGUG-C-C--G-
+AF330837.1/213-340                  -ACUCC-GC-AGUUAA-G-----------------CGUGCUU-G-G--G-
+
+M28975.1/65-183                     --CU--UAGUUA--GUACUGAGG--UCAGUGAU-G-ACUCG-GGA---A-
+X16225.1/825-943                    --UC--CAGUUA--GUACUUGGA--UCGGAGAC-G-GCCUG-GGA---A-
+DQ867108.1/1-118                    --CU--UGGCCA--GUACUUGGA--UGGGAGAC-C-ACAUA-GGA---A-
+X73890.1/1-118                      --CC--UAGUUA--GUACCACGG--UGGGGGAC-C-ACGCG-GGA---A-
+AF330837.1/213-340                  --CG--AAUAUU--GUACUAGGA--UGGGUGAC-C-UCCCG-GGA---A-
+
+M28975.1/65-183                     -CCCUG----AG-U--G-CC--G-UACUCC
+X16225.1/825-943                    -UCCUG----GA-U--G-UU--G-UAAGCU
+DQ867108.1/1-118                    -CCCCG----AG-U--G-CU--G-ACAGCU
+X73890.1/1-118                      -UCCUG----GG-U--G-CU--G-UGGUU-
+AF330837.1/213-340                  -GUCCU----CG-U--G-UU--G-CAUCCC
+
+

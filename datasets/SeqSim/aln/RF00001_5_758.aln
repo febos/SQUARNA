@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+M34776.1/2-116                      --CCUGGU-GG-C-U-AU-GGC----GA-G-G-A-G---GC---------
+X67494.1/1-118                      --AUCCUC-GG-C-C-AU-AGA----AU-G-A-C-G---AA---------
+X03911.1/1-119                      --GUCUAC-GG-C-C-AU-ACC----AC-G-U-U-G---AA---------
+L27163.1/1-119                      ---GUAGC-GG-C-C-AC-AGC----GG-U-G-G-G---GU---------
+S39188.1/3-117                      --CCUGGU-GG-C-U-UU-AGC----GA-A-G-C-G---AU---------
+
+M34776.1/2-116                      -C-UA-A----------C--CCG----A-UC----CCAUCC------CGA
+X67494.1/1-118                      -A-AC-G----------A--CGC----G-UC----CCGUCC-------GA
+X03911.1/1-119                      -A-GC-A----------C--CGG----U-UC----UCGUCC-------GA
+L27163.1/1-119                      -U-CC-U----------C--CCG----U-AC----CCAUCC------CGA
+S39188.1/3-117                      -C-AG-A----------C--CCG----A-UC----CCAUCC------CGA
+
+M34776.1/2-116                      -ACUCG-GC-CGUUAA-A-----------------CUCCUCA-G-U--G-
+X67494.1/1-118                      -UCUGC-GA-AUCUAA-G-----------------CGUCGUA-U-C--G-
+X03911.1/1-119                      -UCACC-GA-AGUUAA-G-----------------CAACGUC-G-G--G-
+L27163.1/1-119                      -ACACG-GA-AGAUAA-G-----------------CCCACCA-G-C--GU
+S39188.1/3-117                      -ACUCG-GC-CGUCAA-A-----------------CGCUCCA-G-C--G-
+
+M34776.1/2-116                      --CC--GAUG----GUACUAUG---UCU--UAA-G-ACCUG-GGA---G-
+X67494.1/1-118                      --CU--AGGUUA--GUACCAAGG--UGGGGGAC-C-ACUUG-GGA---A-
+X03911.1/1-119                      --CC--CGGUUA--GUACUUGGA--UGGGUGAC-C-GCCUG-GGA---A-
+L27163.1/1-119                      -UCC--GGGGA---GUACUGGAG--UGCGCGAC-C-CUCUG-GGA---A-
+S39188.1/3-117                      --CC--AAUG----GUACUAUG---UCU--CAA-G-ACCUG-GGA---G-
+
+M34776.1/2-116                      --AGUA----GG-U-CG-UC--G-CCAGGC
+X67494.1/1-118                      -UCCCU----AG-U--G-CC--G-AGGUU-
+X03911.1/1-119                      -UACCG----GG-U--G-CU--G-UAGACU
+L27163.1/1-119                      --ACCG----GGUU-CG-CC--G-CUAC--
+S39188.1/3-117                      --AGUA----GG-U-CG-UC--G-CCAGGC
+
+

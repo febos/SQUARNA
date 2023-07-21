@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+X16193.1/4-119                      --CUUGGC-GA-C-C-AU-AGC----GC-U-U-U-G---GA---------
+X01002.1/1-119                      --GUUUAC-GA-C-C-AU-AUC----AC-G-U-U-G---AA---------
+X04309.1/2-120                      --GCCUAC-GA-C-C-AU-AUC----AC-C-C-U-G---AA---------
+AF516462.1/347-450                  --GGAUGC-GA-U-C-AU-ACC----AG-C-A-C-U---AA---------
+V01425.1/590-708                    --CCCUGC-GG-C-U-AC-ACC----CC-C-C-U-G---AA---------
+
+X16193.1/4-119                      -C-CC-A----------C--CUG----A-UU----CCAUGC------CGA
+X01002.1/1-119                      -U-AU-A----------C--CGG----U-UC----UCGUCC-------GA
+X04309.1/2-120                      -U-GC-G----------C--CCG----A-UC----UCGUCC-------GA
+AF516462.1/347-450                  -A-GC-A----------C--CGG----A----------------------
+V01425.1/590-708                    -A-GA-G----------C--CUG----A-UC----UUGUCU-------GA
+
+X16193.1/4-119                      -ACUCA-GA-AGUGAA-A-----------------CAGAGCA-G-C--G-
+X01002.1/1-119                      -UCACC-GA-AGUCAA-G-----------------CAGCGUC-G-A--G-
+X04309.1/2-120                      -UCUCG-GA-AGCUAA-G-----------------CAGGGUC-G-A--G-
+AF516462.1/347-450                  ---UCC-CA-U---CA-G-----------------CGUGCUU-G-G--G-
+V01425.1/590-708                    -UCUCA-GA-AGCCAU-G-----------------CGGGGCC-G-A--C-
+
+X16193.1/4-119                      --CC--GAUG----GUAGUGUG----GGGUCUC-C-CCAUG-UGA---G-
+X01002.1/1-119                      --CC--UAGUNA--GUACUUGGA--UGGGUGAC-C-GCCUG-GGA---A-
+X04309.1/2-120                      --CC--UGGUUA--GUACUUGGA--UGGGAGAC-C-GCCUG-GGA---A-
+AF516462.1/347-450                  --CG--AGAGUA--GUACUAGGA--UAGGUGAC-C-UCCUG-GGA---A-
+V01425.1/590-708                    --CC--UGGUUA--GUACCUGGA--UGGGAGAC-C-ACCUG-GGA---A-
+
+X16193.1/4-119                      --AGUA----GG-A-CA-UC--G-CCAGGC
+X01002.1/1-119                      -UACUA----GG-U--G-CC--G-UAGACU
+X04309.1/2-120                      -UACCA----GG-U--G-UU--G-UAGGCU
+AF516462.1/347-450                  --GUCG---UCG-U--G-UU--G-CAUUCC
+V01425.1/590-708                    --UACA----AG-G-UG-UU--G-UAGUCU
+
+

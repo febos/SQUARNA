@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+Z11822.1/1-116                      --CCUGGU-GG-C-G-AU-GGC----GA-G-A-A-G---GA---------
+X02627.1/4-118                      --CCUGGU-GG-U-C-AU-CGC----GG-G-G-C-G---GC---------
+AF516424.1/400-520                  --CUUGCC-GA-U-C-AU-ACC----AG-C-A-C-U---AA---------
+AF116561.1/5902-6018                --UUCGGU-GG-U-U-AU-AGC----GG-U-G-G-G---GA---------
+X02259.1/3-117                      --CCUGGC-GG-C-C-AU-AGC----GC-C-G-U-G---GA---------
+
+Z11822.1/1-116                      -C-AC-A----------C--CCG----U-UC----CCAUAC------CGA
+X02627.1/4-118                      -U-GC-A----------C--CCG----U-UC----CCUUUC------CGA
+AF516424.1/400-520                  -A-GC-A----------C--CGG----A-UC----CCAUCA-------GA
+AF116561.1/5902-6018                -A-AC-A----------C--CCG----G-UC----CCAUUC------CGA
+X02259.1/3-117                      -A-CC-A----------C--CUG----A-UC----CCAUGC------CGA
+
+Z11822.1/1-116                      -ACACG-GA-AGUUAA-G-----------------CUUCUCA-G-C--G-
+X02627.1/4-118                      -ACACG-GC-CGUGAA-A-----------------CGCCCCA-G-C--G-
+AF516424.1/400-520                  -ACUCC-GA-AGUUAA-G-----------------CGUGCUU-G-G--G-
+AF116561.1/5902-6018                -ACCCG-GU-AGUUAA-G-----------------CCCGCCA-G-C--G-
+X02259.1/3-117                      -ACUCA-GA-AGUGAA-A-----------------CGCGGUA-G-C--G-
+
+Z11822.1/1-116                      --CC--GAUG----GUAGUUGGG---GC-AUUG-C-CCCUG-CGA---G-
+X02627.1/4-118                      --CC--AAUG----GUACUUCG---UCU--CAA-G-ACGCG-GGA---G-
+AF516424.1/400-520                  --CG--AGAGUA--GUACUAGGA--UAGGUGCU-U-GGGCG-AGA---GU
+AF116561.1/5902-6018                --CC--GAUG----GUACUGCAC---UGGUGAC-G-GUGUG-GGA---G-
+X02259.1/3-117                      --CC--GAUG----GUAGUGUG----GCAUUUG-C--CAUG-UGA---G-
+
+Z11822.1/1-116                      --AGUA----GG-A-CG-CU--G-CCAGGC
+X02627.1/4-118                      --AGUA----GG-U-CG-CU--G-CCAGGU
+AF516424.1/400-520                  AGUACU----AG-G--A-UA--G-GUGACC
+AF116561.1/5902-6018                --AGUA----GG-U-CG-CC--G-CCGGAC
+X02259.1/3-117                      --AGUA----GG-A-CA-CU--G-CCAGGC
+
+

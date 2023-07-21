@@ -1,0 +1,62 @@
+# STOCKHOLM 1.0
+#=GF AC   RF00001
+#=GF ID   5S_rRNA
+#=GF DE   5S ribosomal RNA
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Mifsud W; 0000-0002-9805-6461
+#=GF AU   Gardner PP; 0000-0002-7808-1213
+#=GF SE   Szymanski et al, 5S ribosomal database, PMID:11752286
+#=GF SS   Published; PMID:11283358
+#=GF GA   38.00
+#=GF TC   38.00
+#=GF NC   37.90
+#=GF TP   Gene; rRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 24.99 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00113
+#=GF DR   URL; http://rose.man.poznan.pl/5SData/;
+#=GF DR   SO; 0000652; rRNA_5S;
+#=GF DR   GO; 0003735; structural constituent of ribosome;
+#=GF DR   GO; 0005840; ribosome;
+#=GF RN   [1]
+#=GF RM   11752286
+#=GF RT   5S Ribosomal RNA Database.
+#=GF RA   Szymanski M, Barciszewska MZ, Erdmann VA, Barciszewski J
+#=GF RL   Nucleic Acids Res 2002;30:176-178.
+#=GF RN   [2]
+#=GF RM   11283358
+#=GF RT   Crystal structure of the ribosome at 5.5 A resolution.
+#=GF RA   Yusupov MM, Yusupova GZ, Baucom A, Lieberman K, Earnest TN, Cate JH,
+#=GF RA   Noller HF
+#=GF RL   Science 2001;292:883-896.
+#=GF RN   [3]
+#=GF RM   10926492
+#=GF RT   The role of the central zinc fingers of transcription factor IIIA in
+#=GF RT   binding to 5 S RNA.
+#=GF RA   Searles MA, Lu D, Klug A
+#=GF RL   J Mol Biol 2000;301:47-60.
+#=GF RN   [4]
+#=GF RM   23838690
+#=GF RT   Systematic analysis and evolution of 5S ribosomal DNA in metazoans.
+#=GF RA   Vierna J, Wehner S, Honer zu Siederdissen C, Martinez-Lage A, Marz M
+#=GF RL   Heredity (Edinb). 2013;111:410-421.
+#=GF CC   5S ribosomal RNA (5S rRNA) is a component of the large ribosomal subunit
+#=GF CC   in both prokaryotes and eukaryotes. In eukaryotes, it is synthesised by
+#=GF CC   RNA polymerase III (the other eukaryotic rRNAs are cleaved from a 45S
+#=GF CC   precursor synthesised by RNA polymerase I). In Xenopus oocytes, it has
+#=GF CC   been shown that fingers 4-7 of the nine-zinc finger transcription factor
+#=GF CC   TFIIIA can bind to the central region of 5S RNA. Thus, in addition to
+#=GF CC   positively regulating 5S rRNA transcription, TFIIIA also stabilises 5S
+#=GF CC   rRNA until it is required for transcription.
+#=GF WK   5S_ribosomal_RNA
+#=GF SQ   712
+
+RF00001__X16193.1/4-119     --CUUGGC-GA-C-C-AU-AGC----GC-U-U-U-G---GA----------C-CC-A----------C--CUG----A-UU----CCAUGC------CGA-ACUCA-GA-AGUGAA-A-----------------CAGAGCA-G-C--G---CC--GAUG----GUAGUGUG----GGGUCUC-C-CCAUG-UGA---G---AGUA----GG-A-CA-UC--G-CCAGGC
+RF00001__X01002.1/1-119     --GUUUAC-GA-C-C-AU-AUC----AC-G-U-U-G---AA----------U-AU-A----------C--CGG----U-UC----UCGUCC-------GA-UCACC-GA-AGUCAA-G-----------------CAGCGUC-G-A--G---CC--UAGUNA--GUACUUGGA--UGGGUGAC-C-GCCUG-GGA---A--UACUA----GG-U--G-CC--G-UAGACU
+RF00001__X04309.1/2-120     --GCCUAC-GA-C-C-AU-AUC----AC-C-C-U-G---AA----------U-GC-G----------C--CCG----A-UC----UCGUCC-------GA-UCUCG-GA-AGCUAA-G-----------------CAGGGUC-G-A--G---CC--UGGUUA--GUACUUGGA--UGGGAGAC-C-GCCUG-GGA---A--UACCA----GG-U--G-UU--G-UAGGCU
+RF00001__AF516462.1/347-450 --GGAUGC-GA-U-C-AU-ACC----AG-C-A-C-U---AA----------A-GC-A----------C--CGG----A-------------------------UCC-CA-U---CA-G-----------------CGUGCUU-G-G--G---CG--AGAGUA--GUACUAGGA--UAGGUGAC-C-UCCUG-GGA---A---GUCG---UCG-U--G-UU--G-CAUUCC
+RF00001__V01425.1/590-708   --CCCUGC-GG-C-U-AC-ACC----CC-C-C-U-G---AA----------A-GA-G----------C--CUG----A-UC----UUGUCU-------GA-UCUCA-GA-AGCCAU-G-----------------CGGGGCC-G-A--C---CC--UGGUUA--GUACCUGGA--UGGGAGAC-C-ACCUG-GGA---A---UACA----AG-G-UG-UU--G-UAGUCU
+#=GC SS_cons                ..((((((.((.(.,.,,.,<<....-<.<.<.<.<...--..........-.<<.-..........-..<<<....<.<<....______.......>>.-->>>.>-.->>---.-.................>>>>>--.>.>..<...<<..-<<---..-<-<<----..-<<____>.>.-----.>>-...>..-->>-....>>.>..).))..).))))):
+#=GC RF                     ..gccuGc.gg.c.C.AU.Acc....ag.c.g.c.g...aA..........a.gc.A..........C..cgG....a.uC....CCAUCc.......Ga.ACuCc.gA.AguUAA.G.................cgcgcUu.g.g..g...Cc..agggUA..GUAcuagGa..UGgGuGAc.C.uCcUG.ggA...A..gacca....gG.u..g.cc..g.Caggcc
+//

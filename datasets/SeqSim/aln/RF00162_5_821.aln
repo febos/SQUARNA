@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+AP008230.1/4551167-4551265          C-UCUUAUCAAGAG-AGG-C-GG-----------------AGGGA--CUG
+URS0000A7638A_911092/1-94           G-GCUUAUCAAGAG-AGG-G-UG-----------------AGCGA--CUG
+AAXV01000007.1/42365-42470          C-UCUUAUCAAGAG-UAG-C-UG-----------------AGGGA--CUG
+ABWN01000022.1/104834-104735        U-GCUUAUUCAGAG-UGA-U-GG-----------------AGAUACAUAG
+URS0002311979_119072/1-94           G-GCUUAUCAAGAG-AGG-G-CG-----------------AGGGA--CUG
+
+AP008230.1/4551167-4551265          G-CCCCA--UGAA-GCC--CGGCAACC-U-ACA-UAU-------------
+URS0000A7638A_911092/1-94           G-CGCGA--AGAG-CCC--CGGCAACC-A---------------------
+AAXV01000007.1/42365-42470          G-CCCUA--UGAA-GCU--CGGCAACC-U-CCU-UUUAU-----------
+ABWN01000022.1/104834-104735        G-AUCUG--UGAA-GUC-ACGGCAACC-C-CCU-UGG-------------
+URS0002311979_119072/1-94           G-CCCGA--CGAC-CCC--CGGCAACC----------AG-----------
+
+AP008230.1/4551167-4551265          --------------------------------------------------
+URS0000A7638A_911092/1-94           --------------------------------------------GAA---
+AAXV01000007.1/42365-42470          --------------------------------------------AAA---
+ABWN01000022.1/104834-104735        --------------------------------------------------
+URS0002311979_119072/1-94           --------------------------------------------AA----
+
+AP008230.1/4551167-4551265          -GUG-A---GGUGCUA-AAUC--CAGAGAACC--------AUC-------
+URS0000A7638A_911092/1-94           -----AU--GGUGCCA-AUUC--CUG-CAGCG--------GAA-------
+AAXV01000007.1/42365-42470          -GGA-A---GGUGCUA-AAUC--CUG-CAAACGA-----AAUU-------
+ABWN01000022.1/104834-104735        -CGG-AA--GGUGCCA-ACCU--GAG-CGAAA----------G-------
+URS0002311979_119072/1-94           -----AU--GGUGCCA-AUUC--CUG-CAGCG--------GAA-------
+
+AP008230.1/4551167-4551265          ---------------AGGU-UC-G-AA-GAUAAGA-G--
+URS0000A7638A_911092/1-94           ---------------ACGU-UG-A-AA-GAUGAGC-CG-
+AAXV01000007.1/42365-42470          ---------------CGUU-UG-A-UA-GAUAAGA-G--
+ABWN01000022.1/104834-104735        ---------------UAUU-CG-A-GC-AAUAAGU-G--
+URS0002311979_119072/1-94           ---------------ACGU-UG-A-AA-GAUGAGC-CG-
+
+

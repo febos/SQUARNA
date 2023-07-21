@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+CP000673.1/1716322-1716209          U-UCUUAUCAAGAG-AGA-C-GG-----------------AGGGA--CUG
+ACME01000005.1/38827-38723          A-UUGUAUCAAGAG-AGG-U-GG-----------------AGGGA--CUG
+URS000080DDBE_1423/1-119            GUUCUUAUCAAGAG-AAG-C-AG-----------------AGGGA--CUG
+AP008934.1/15667-15765              A-UCUUAUUUCGAG-AAG-C-UG-----------------AGGGA-CUUG
+AP009389.1/251789-251896            U-UCUUAUCGAGAG-AAG-G-GG-----------------AGGGA--CGG
+
+CP000673.1/1716322-1716209          G-CCCUA--UGAU-GUC--CGGCAACCAG-AAG-AUUUU-----------
+ACME01000005.1/38827-38723          G-CCCUU--UGAA-ACC-UCGGCAACA-G-GUU-CAUU------------
+URS000080DDBE_1423/1-119            G-CCCGA--CGAA-GCU-UCAGCAACC-G-GUG-UAAUGGCGA-------
+AP008934.1/15667-15765              G-CCCAG--UGAU-GCU-UCAGCAACCGG-CUG-UGU-------------
+AP009389.1/251789-251896            A-CCCAA--UGAA-CCU-UCGGCAACC-U-UCA-GGCUUGA---------
+
+CP000673.1/1716322-1716209          --------------------------------------------UAU---
+ACME01000005.1/38827-38723          --------------------------------------------UUG---
+URS000080DDBE_1423/1-119            ---------------------------------------AAGCCAUG---
+AP008934.1/15667-15765              --------------------------------------------------
+AP009389.1/251789-251896            -----------------------------------------AGGCCU---
+
+CP000673.1/1716322-1716209          -UUC-AU--GGUGCUA-AUUC--CAG-CAGGUAU-----UAAUAUG----
+ACME01000005.1/38827-38723          -AAU-AC--UGUGCCA-CUUC--CUG-CAAGCUU-----U--A-------
+URS000080DDBE_1423/1-119            -ACC-AA--GGUGCUA-AAUC--CAG-CAAGCUC-----GAAC-------
+AP008934.1/15667-15765              -AGU-AC--GGUGCUA-AAAC--CAA-CGA----------UAC-------
+AP009389.1/251789-251896            -GAA-AA--GGUGCCA-AUUU--CCG-CCGGG----------U-------
+
+CP000673.1/1716322-1716209          ------------AAAAGCC-UG-A-UA-GAUAAGA-G--
+ACME01000005.1/38827-38723          ---------------UGCU-UG-A-AA-GAUAGAA-U--
+URS000080DDBE_1423/1-119            ---------------AGCU-UG-G-AA-GAUAAGAAC--
+AP008934.1/15667-15765              ---------------AC-U-CG-A-AU-GAUAAGU-A--
+AP009389.1/251789-251896            ---------------AACC-GG-A-GA-GAUAAGA-A--
+
+

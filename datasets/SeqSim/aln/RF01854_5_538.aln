@@ -1,0 +1,46 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+CP000255.1/508278-508378            --------------------------------------------------
+CP000716.1/1385812-1385778          --------------------------------------------------
+CP001186.1/24962-25226              CCGUGCUAAGC-GGGGAGGUAGCGGUGCCCUAUA--CUCGCAAUCCGCUC
+D11413.1/5-264                      CCGUGCUAAGCGGGGGAGGUAGCGGUGCCCUAUA--CUCGCAAUCCGCUC
+CP000560.1/27594-27646              --------------------------------------------------
+
+CP000255.1/508278-508378            --------------------------------------------------
+CP000716.1/1385812-1385778          --------------------------------------------------
+CP001186.1/24962-25226              U-AGCGAG-GCCGA---AUCCCC-UCUC-GAGGUUAU-GUUGCU-GUAAG
+D11413.1/5-264                      U-AGC-AG-GCCGA---AUCCCC-UCUC-GAGGUUAU-GUUGCU-GUAAG
+CP000560.1/27594-27646              --------------------------------------------------
+
+CP000255.1/508278-508378            ----------------------------------AUUUCGGU---CCUAU
+CP000716.1/1385812-1385778          --------------------------------------------------
+CP001186.1/24962-25226              G-UCUGCC-UUAAGUAAGU-GGU---GUU-GA-CGUUUGGGU---CCUGC
+D11413.1/5-264                      G-UCUGCC-UUAAGUAAGU-GGU---GUU-GA-CGUUUGGGU---CCUGC
+CP000560.1/27594-27646              --------------------------------------------------
+
+CP000255.1/508278-508378            G---CAAUAUGA--ACCC-AUGAACCAUGUCAGGUCCUGACGGAAGCAGC
+CP000716.1/1385812-1385778          ---------------------GAACCGGGUCAGGUCCGGAAGGAAGCAGC
+CP001186.1/24962-25226              G---CAACGGGA--CCCC-GUGAACCUUGUCAGGUCCGGAAGGAAGCAGC
+D11413.1/5-264                      G---CAACGGGA---CCC-GUGAACCUUGUCAGGUCCGGAAGGAAGCAGC
+CP000560.1/27594-27646              ----------GA--AUUC-AUGAACCAUGUCAGGUCCGGAAGGAAGCAGC
+
+CP000255.1/508278-508378            AUUAAGUGGAUCAUCAUA-UGUG---CCGUAGG--GUAGC-CGAGAUUU-
+CP000716.1/1385812-1385778          CCUAAG--------------------------------------------
+CP001186.1/24962-25226              AAUAAGCGGGUCUUCUCG-UGUG---CCGCAGG--AGUGC-CUGAACCG-
+D11413.1/5-264                      AAUAAGCGGU-CUUCUCG-UGUG---CCG-AG---AGUGC-CUGAACCG-
+CP000560.1/27594-27646              AUUAAGUGAAACCUCU----------------------------------
+
+CP000255.1/508278-508378            ----AG--------------------------------------------
+CP000716.1/1385812-1385778          --------------------------------------------------
+CP001186.1/24962-25226              ----AGCU-AACU-GCUUGA--GUAACGCUUAUG-G-UAC--GUAAUCGA
+D11413.1/5-264                      ----AGCU-AACU-GCUUGA--GUAACG-UUAU--GGUAC--GUAAUCGA
+CP000560.1/27594-27646              --------------------------------------------------
+
+CP000255.1/508278-508378            ---------------
+CP000716.1/1385812-1385778          ---------------
+CP001186.1/24962-25226              CGGA-GGGUGCACGG
+D11413.1/5-264                      CAGA-AGGUGCACGG
+CP000560.1/27594-27646              ---------------
+
+

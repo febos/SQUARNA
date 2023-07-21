@@ -1,0 +1,52 @@
+# STOCKHOLM 1.0
+#=GF AC   RF00005
+#=GF ID   tRNA
+#=GF DE   tRNA
+#=GF AU   Eddy SR; 0000-0001-6676-4706
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Mifsud W; 0000-0002-9805-6461
+#=GF SE   Eddy SR
+#=GF SS   Published; PMID:8256282
+#=GF GA   29.00
+#=GF TC   29.00
+#=GF NC   28.90
+#=GF TP   Gene; tRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 22.00 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00001
+#=GF DR   SO; 0000253; tRNA;
+#=GF DR   GO; 0030533; triplet codon-amino acid adaptor activity;
+#=GF RN   [1]
+#=GF RM   8256282
+#=GF RT   The tertiary structure of tRNA and the development of the genetic code.
+#=GF RA   Hou YM
+#=GF RL   Trends Biochem Sci 1993;18:362-364.
+#=GF RN   [2]
+#=GF RM   9023104
+#=GF RT   tRNAscan-SE: a program for improved detection of transfer RNA genes in
+#=GF RT   genomic sequence.
+#=GF RA   Lowe TM, Eddy SR
+#=GF RL   Nucleic Acids Res 1997;25:955-964.
+#=GF CC   Transfer RNA (tRNA) molecules are approximately 80 nucleotides in length.
+#=GF CC   Their secondary structure includes four short double-helical elements and
+#=GF CC   three loops (D, anti-codon, and T loops). Further hydrogen bonds mediate
+#=GF CC   the characteristic L-shaped molecular structure. tRNAs have two regions of
+#=GF CC   fundamental functional importance: the anti-codon, which is responsible
+#=GF CC   for specific mRNA codon recognition, and the 3' end, to which the tRNAs
+#=GF CC   corresponding amino acid is attached (by aminoacyl-tRNA synthetases).
+#=GF CC   tRNAs cope with the degeneracy of the genetic code in two manners: having
+#=GF CC   more than one tRNA (with a specific anti-codon) for a particular amino
+#=GF CC   acid; and 'wobble' base-pairing, i.e. permitting non-standard base-pairing
+#=GF CC   at the 3rd anti-codon position.
+#=GF WK   Transfer_RNA
+#=GF SQ   954
+
+RF00005__J04815.1/1380-1451   UGGGUUGU-A-GCUAAAU---GUA---AAGGCG-C-UUGGC-CGUUAACCAA-GAA------------------------AU--AGUA-GGA-UAA-AA--ACCUA-U-CUUCCCA-G
+RF00005__X01647.1/2451-2378   CGCGGAGU-A-GAGCAGUC-UGGU---AGCUCG-C-AAGGC-UCAUAACCUU-GAG------------------------GU--CAUA-GGU-UCA-AA--UCCUG-U-CUCCGCC-A
+RF00005__AF052653.1/130-203   AGCGGGGU-A-GAGUAAUU--GGUC--AACUCA-U-CAGGC-UCAUGACCUG-AAG------------------------AU--UGCA-GGU-UCG-AA--UCCUG-U-CCCCGCC-U
+RF00005__AY017179.1/1528-1601 GGGCCGGU-A-GCUCAGCC-UGGG---AGAGCG-U-CGGCU-UUGCAAGCCG-AAG------------------------GC--CCCG-GGU-UCG-AA--UCCCG-G-CCGGUCC-A
+RF00005__M20951.1/1-71        GCGGGUAU-A-GUUUAAU---GGU---AAAAUU-C-CUCCU-UGCCAAGGAG-AAU------------------------A---UGCG-GGU-UCG-AU--UCCCG-C-UACCCGC-C
+#=GC SS_cons                  (((((((,.,.<<<<___...___..._>>>>,.<.<<<<_.______>>>>.>,,........................,...,<<<.<<_.___.__.._>>>>.>.))))))).:
+#=GC RF                       GgagauaU.A.GCucAgU...GGU...AgaGCg.u.cgGaC.UuaaAAuCcg.aag........................g...cgcg.GGU.UCg.Aa..UCCcg.c.uaucucC.a
+//

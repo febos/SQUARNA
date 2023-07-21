@@ -1,0 +1,67 @@
+# STOCKHOLM 1.0
+#=GF AC   RF00005
+#=GF ID   tRNA
+#=GF DE   tRNA
+#=GF AU   Eddy SR; 0000-0001-6676-4706
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Mifsud W; 0000-0002-9805-6461
+#=GF SE   Eddy SR
+#=GF SS   Published; PMID:8256282
+#=GF GA   29.00
+#=GF TC   29.00
+#=GF NC   28.90
+#=GF TP   Gene; tRNA;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 22.00 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00001
+#=GF DR   SO; 0000253; tRNA;
+#=GF DR   GO; 0030533; triplet codon-amino acid adaptor activity;
+#=GF RN   [1]
+#=GF RM   8256282
+#=GF RT   The tertiary structure of tRNA and the development of the genetic code.
+#=GF RA   Hou YM
+#=GF RL   Trends Biochem Sci 1993;18:362-364.
+#=GF RN   [2]
+#=GF RM   9023104
+#=GF RT   tRNAscan-SE: a program for improved detection of transfer RNA genes in
+#=GF RT   genomic sequence.
+#=GF RA   Lowe TM, Eddy SR
+#=GF RL   Nucleic Acids Res 1997;25:955-964.
+#=GF CC   Transfer RNA (tRNA) molecules are approximately 80 nucleotides in length.
+#=GF CC   Their secondary structure includes four short double-helical elements and
+#=GF CC   three loops (D, anti-codon, and T loops). Further hydrogen bonds mediate
+#=GF CC   the characteristic L-shaped molecular structure. tRNAs have two regions of
+#=GF CC   fundamental functional importance: the anti-codon, which is responsible
+#=GF CC   for specific mRNA codon recognition, and the 3' end, to which the tRNAs
+#=GF CC   corresponding amino acid is attached (by aminoacyl-tRNA synthetases).
+#=GF CC   tRNAs cope with the degeneracy of the genetic code in two manners: having
+#=GF CC   more than one tRNA (with a specific anti-codon) for a particular amino
+#=GF CC   acid; and 'wobble' base-pairing, i.e. permitting non-standard base-pairing
+#=GF CC   at the 3rd anti-codon position.
+#=GF WK   Transfer_RNA
+#=GF SQ   954
+
+RF00005__AF314016.1/506-436     UAAGGAGU-A-GUAUAAA---GGA---AGUACA-A-AGGGU-UUUGAUCUCU-UAA------------------------G---UAUA-GGU-UCA-AU--UCCUA-U-CUCUUUA-G
+RF00005__X14485.1/2-72          GCCCGGGU-A-GUUUAAA---GGU---AAAACC-U-UAAUU-UCAUACGUUA-AAG------------------------A---UGAG-AAU-UCG-AU--UUUCU-C-CCCAGGU-U
+RF00005__X15613.1/59-121        GACGGUAU-A-GUUUAA----GUU---GAGAUG-U-GUGCU-CUGCGAGCAU-UCG------------------------G---UAGA---G-GUU--------UC-U-UGCCGUU-G
+RF00005__X52392.1/6430-6362     GAGGCCUU-A-GCUUAA----UU----AAAGCG-U-CUGAU-UUGCAUUCAG-GAG------------------------A---UACA-GGU-UAA-UG--UCCUG-U-UGGUCUU-A
+RF00005__M93388.1/1318-1384     CUGGGGGU-A-GCUUAA----GAUU--AAAGUU-U-GGAAU-UCUUACUUCU-AAG------------------------A---UAUC-UG--GUU------UGGA-U-UCUUCAG-G
+RF00005__X57045.1/288-359       UCCUCCCU-G-GCGCAGUC--GGC---AGCGCG-U-UAGGC-UGUUAACCAU-CAG------------------------G---UGUU-GGU-UCG-AA--UCCAA-C-GGGAGGA-G
+RF00005__K00174.1/1-68          GAGAUAUU-A-GUAAAA----UA----AUUACA-U-AACCU-UGUCAAGGUU-AAG------------------------U---UAUA-GAC-UUA-AA---UCUA-U-AUAUCUU-A
+RF00005__M22656.1/587-656       ACUUUUAA-A-GGAUAGA---AGU---AAUCCA-U-CGGUC-UUAGGAACCG-AAA----------------------------AAUU-GGU-GCA-AC--UCCAA-A-UAAAAGU-A
+RF00005__K00434.1/154-84        UAGGAUAG-G-GUGUAUU---GGU---AGCACG-G-AAAAU-UUUGAAUUCU-UAG------------------------G---UGUA-GGU-UCA-AU--UCCUA-U-UGUCCUA-G
+RF00005__X12631.1/1207-1274     CAGGAGAA-A-GUUUAAU---AA----AAAACC-G-CAGCU-UUGGGAGUUG-CA-------------------------A---UGUA-AG--GUA-AG--CCUUA-U-UCUCUUG-A
+RF00005__X66520.1/7-88          GUGGAAGU-G-GCGGAGU---GGUU--AUCGGG-C-AUGAC-UAGAAAUCAU-GU--GGG-C---UUU--------GCCCG---CGCA-GGU-UCG-AA--UCCUG-C-CGUUCAC-G
+RF00005__AF233324.1/37223-37296 CGGCGAGU-A-GCGCAGCU-UGGU---AGCGCA-A-CUGGU-UUGGGACCAG-UGG------------------------GU--CGGA-GGU-UCG-AA--UCCUC-U-CUCGCCG-A
+RF00005__X53649.1/160-231       UGGGCUAU-G-GUGUAAUU--GGC---AGCACG-A-CUGAU-UCUGGUUCAG-UUA------------------------G---UCUA-GGU-UCG-AG--UCCUG-G-UAGCCCA-G
+RF00005__AC068900.3/7333-7404   GUCGUUGU-A-GUAUAGU---GGUA--AGUAUU-C-CCGCC-UGUCACGCGG-GUG------------------------A---CCCG-GGU-UCG-AU--CCCCG-G-CAACGGC-G
+RF00005__AB042240.3/6758-6687   UGGGGCGU-G-GCCAAGU---GGU---AAGGCA-G-CGGGU-UUUGGUCCCG-UUA------------------------CU--CGGA-GGU-UCG-AA--UCCUU-C-CGUCCCA-G
+RF00005__X07924.1/110-197       GGAGAGAU-G-GCCGAGU---GGUUG-AAGGCG-C-AGCAC-UGGAAAUGCU-GU--UUA-AGG-UUU---UC-CCUUAA----CGAG-GGU-UCG-AA--UCCCU-C-UCUCUCC-G
+RF00005__X14822.1/1-73          UGAAUCGU-A-GACUAAUA--GGU---AAGUCA-C-CAAAA-UUUGAGUUUG-GAA------------------------UU--UGUU-UGU-UCG-AA--UCAAA-C-CGGUUCA-A
+RF00005__X04175.1/1-71          AGGGGAGU-A-GUUCAAC---GGA---AAAACU-U-UAGUC-UUCAAAACUG-AC-------------------------AU--CGUG-GGU-UCG-AC--UCCCG-C-CUCCCUU-G
+RF00005__X67736.1/4837-4923     GGAGAGAU-G-GCCGAGU---GGUUU-AAGGCG-U-AGCAU-UGGAACUGCU-AU--GUA-GGC-UUU---U--GUUUAC----CGAG-GGU-UCG-AA--UCCCU-C-UCUUUCC-G
+RF00005__M68929.1/50694-50622   GCCCGCGU-A-GCUCAGAU--GGU---AGAGCA-U-UCCCA-UGGUAAGGGA-AAG------------------------GC--CUCC-GGU-UCA-AG--UCCGG-U-CGUAGGC-U
+#=GC SS_cons                    (((((((,.,.<<<<___...___..._>>>>,.<.<<<<_.______>>>>.>,,........................,...,<<<.<<_.___.__.._>>>>.>.))))))).:
+#=GC RF                         GgagauaU.A.GCucAgU...GGU...AgaGCg.u.cgGaC.UuaaAAuCcg.aag........................g...cgcg.GGU.UCg.Aa..UCCcg.c.uaucucC.a
+//

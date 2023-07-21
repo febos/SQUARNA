@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+AF272626.1/2982-3085                --UGUAGU-GA-U-C-AU-AUC----AG-A-G-U-G---GA---------
+X01617.1/1-119                      --GGAUGC-GG-U-C-AU-ACC----AG-G-G-C-U---AC---------
+X05528.1/1-121                      --ACAUUC-GG-C-C-AU-ACU----UG-GUA-G-A---UA---------
+X05234.1/1-119                      --GCUUAC-GG-C-C-AU-AUC----AC-G-C-U-G---AA---------
+X00020.1/1-119                      --GUCUAC-GA-C-C-AU-AUC----AC-G-U-U-G---AA---------
+
+AF272626.1/2982-3085                -A-AU-A----------C--CUG----U-UC----CCAUCC------CGA
+X01617.1/1-119                      -U-AC-A----------C--CAG----A-UC----CCAUCA-------GA
+X05528.1/1-121                      -U-GC-G----------C--CUU----A-UC----CCAUCC------CGA
+X05234.1/1-119                      -A-AC-A----------C--CGG----U-UC----UCGUCC-------GA
+X00020.1/1-119                      -A-AC-A----------C--CGG----U-UC----UCGUCC-------GA
+
+AF272626.1/2982-3085                -ACACA-GA-AGUCAA-G-----------------CACUCUA-G-A--G-
+X01617.1/1-119                      -ACUCU-GC-AGUUAA-G-----------------CGCCCUU-G-G--G-
+X05528.1/1-121                      -ACUGA-GA-AGCUAA-G-----------------UCUCCAU-A-G--G-
+X05234.1/1-119                      -ACACC-GA-AGUUAA-G-----------------CAACGUA-G-A--G-
+X00020.1/1-119                      -UCACC-GA-AGUUAA-G-----------------CAACGUC-G-A--G-
+
+AF272626.1/2982-3085                --CC--GAAAA----UA---------GCGCAAG-U---------A---A-
+X01617.1/1-119                      --CC--GGAAUA--GUACUGGGA--UGGGUGAC-C-UCCCG-GGA---A-
+X05528.1/1-121                      --CC--CAGGGA--GUACUGCGG--UCAGGGAU-G-ACGCU-GGA---A-
+X05234.1/1-119                      --CC--UGGUGA--GUACUUGGA--UGGGUGAC-C-GCUUG-GGA---A-
+X00020.1/1-119                      --CG--UGGUUA--GUACGUGGA--UGGGUGAC-C-GCCUC-GGA---A-
+
+AF272626.1/2982-3085                --AAUA----GG-U-CA-UC--G-CUACGC
+X01617.1/1-119                      -GUCCC----GG-U--G-CU--G-CAUCCA
+X05528.1/1-121                      -AUCUG----GG-U--G-CU--G-AAUGUU
+X05234.1/1-119                      -UACCA----GG-U--G-CU--G-UAAGCA
+X00020.1/1-119                      -UACCA----CG-U--G-UU--G-UAGGCU
+
+

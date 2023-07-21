@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+AL591976.1/242770-242867            A-ACUUAUCAAGAA-AGG-U-GG-----------------AGGGU-UCUG
+ACJX02000007.1/318260-318153        C-UCUUAUCCAGAG-CGG-C-GG-----------------AGGGA--CUG
+ABWO01000038.1/8212-8308            C-UCUUAUUCAGAG-UGG-U-GG-----------------AGGUA-AAAG
+BA000043.1/883132-883242            U-UCUUAUCAAGAG-AAG-C-GG-----------------AGGGA-ACUG
+ACOM01000005.1/822103-822219        A-ACUUAUCAAGAG-UGG-U-GG-----------------AGGGA--CUG
+
+AL591976.1/242770-242867            G-CCCCG--UGAA-GCC-UUGGCAACC-G-GAU-UU--------------
+ACJX02000007.1/318260-318153        G-CCCUG--CGAA-GCC--CGGCAACCU--GCU-UACCCUU---------
+ABWO01000038.1/8212-8308            G-AUCUA--UGAA-GCC-ACGGCAACC-C-CGG-GAA-------------
+BA000043.1/883132-883242            G-CCCAA--UGAA-GCU-UCAGCAACC-A-GCC-GCCCG-----------
+ACOM01000005.1/822103-822219        G-CCCUA--UGAA-ACC--CGGCAACC-G-ACA-UUUAGUUCAU------
+
+AL591976.1/242770-242867            --------------------------------------------------
+ACJX02000007.1/318260-318153        -----------------------------------------UGGGGA---
+ABWO01000038.1/8212-8308            --------------------------------------------------
+BA000043.1/883132-883242            --------------------------------------------GCG---
+ACOM01000005.1/822103-822219        --------------------------------------UUACUAUAU---
+
+AL591976.1/242770-242867            -UUC-AC--GGUGCCA-AAUC--CAG-CAGG--------UAAC-------
+ACJX02000007.1/318260-318153        -GC--GU--GGUGCCA-AAAC--CUG-CAACC--------GAA-------
+ABWO01000038.1/8212-8308            -CGG-AA--GGUGCCA-ACCU--GAG-CGAGU------------------
+BA000043.1/883132-883242            -GCC-A---GGUGCUA-AAUC--CAG-CGAAUUGA--GCAUUC-------
+ACOM01000005.1/822103-822219        -GUG-AC--GGUGCUA-AUUC--CUG-CAGUUUA-----UUUA-------
+
+AL591976.1/242770-242867            -----------------AC-UG-A-CA-GAUAAGG-C--
+ACJX02000007.1/318260-318153        ---------------AGGU-UG-A-AU-GAUGAGA-G--
+ABWO01000038.1/8212-8308            ----------------AAU-CG-A-AC-AAUAAGA-G--
+BA000043.1/883132-883242            ---------------AAUU-CG-G-CA-GAUAAGA-A--
+ACOM01000005.1/822103-822219        ----------------AAC-UG-G-UA-GAUGAGA-G--
+
+

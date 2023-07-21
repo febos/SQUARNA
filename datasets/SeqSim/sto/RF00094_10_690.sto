@@ -1,0 +1,56 @@
+# STOCKHOLM 1.0
+#=GF AC   RF00094
+#=GF ID   HDV_ribozyme
+#=GF DE   Hepatitis delta virus ribozyme
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Daub J; 0000-0001-6022-563X
+#=GF SE   Griffiths-Jones SR, Daub J
+#=GF SS   Published; PMID:9783582
+#=GF GA   50.00
+#=GF TC   55.00
+#=GF NC   49.00
+#=GF TP   Gene; ribozyme;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF DR   URL; http://subviral.med.uottawa.ca/cgi-bin/species.cgi?fkLongueur=2;
+#=GF DR   SO; 0000374; ribozyme;
+#=GF RN   [1]
+#=GF RM   9783582
+#=GF RT   Crystal structure of a hepatitis delta virus ribozyme.
+#=GF RA   Ferre-D'Amare AR, Zhou K, Doudna JA
+#=GF RL   Nature 1998;395:567-574.
+#=GF RN   [2]
+#=GF RM   3184270
+#=GF RT   Characterization of self-cleaving RNA sequences on the genome and
+#=GF RT   antigenome of human hepatitis delta virus.
+#=GF RA   Kuo MY, Sharmeen L, Dinter-Gottlieb G, Taylor J
+#=GF RL   J Virol 1988;62:4439-4444.
+#=GF RN   [3]
+#=GF RM   2430299
+#=GF RT   Structure and replication of the genome of the hepatitis delta virus.
+#=GF RA   Chen PJ, Kalpana G, Goldberg J, Mason W, Werner B, Gerin J, Taylor J
+#=GF RL   Proc Natl Acad Sci U S A. 1986;83:8774-8778.
+#=GF CC   The hepatitis delta virus (HDV) ribozyme is necessary for viral
+#=GF CC   replication and is thought to be the only catalytic RNA known to be
+#=GF CC   required for viability of a human pathogen. The ribozyme acts to process
+#=GF CC   the RNA transcripts to unit lengths in a self cleavage reaction. The
+#=GF CC   ribozyme is found to be active in vivo in the absence of any protein
+#=GF CC   factors and is the fastest known naturally occurring self-cleaving RNA
+#=GF CC   [1].
+#=GF WK   Hepatitis_delta_virus_ribozyme
+#=GF SQ   33
+
+RF00094__AB037948.1/685-775 GUGGCCGGCAUGGCC-CCA--------GCCUCCUCGCUGGCGCCGGCUGGGCAACGAUCCGA--GGGGA-CUA--U-CCCU-C----UC-GAGAAUCGGCAAA---UGGGGCCCC
+RF00094__AM183332.1/902-810 UCGGGUCGGCAUGGCAUCUCC------ACCUCCCCGC-GGUCCGACCUGGG---CAU-CCGUA-GGAGG-ACGGAC--GUC-C--ACUC--GG--AUGGCGAAGGGAGAGCCAGU
+RF00094__AF104263.1/681-769 AUGGCCGGCAUGGUC-CCA--------GCCUCCCCGGUGGCGCCGGCUGGGCAACAUUCCGAA-GGGGA-CCG--U---CC-C----UC--GGUAAUGGCGAA---UGGGACCCA
+RF00094__EF514904.1/897-798 UCGGGUCGGCAUGGCAUCUCCACCUCCACCUCCUCGC-GGUCCGACCUGGG---CAU-CCGAA-GGAGGAGCGGAC--GUC-C--ACUC--GG--AUGGCUAAGGGAGAGCCCAG
+RF00094__AJ309880.1/911-818 UCGGGUCGGCAUGGCAUCUCC------ACCUCCUCGC-GGUCCGACCUGGG---CAUCCGUA--GGAGGACAG-AC--GUC-C----UACUCG-GAUGGCUAAGGGAGAGCCAGU
+RF00094__U81988.1/679-767   AUGGCCGGCAUGGUC-CCA--------GCCUCCUCGCUGGCGCCGGCUGGGCAACAUUCCGA--GGGGA-CCG--C--CCC-C----UC--GGUAAUGGCGAA---UGGGACCCA
+RF00094__AF104264.1/907-816 UCGGGUCGGCAUGGCAUCUCC------ACCUCCCCGC-GGUCCGACCUGGG---CAU-CCGUA-GGAGG-ACGAAC--GUCAC----UC--GG--AUGGCUAAGGGAGAGCCAGU
+RF00094__M28267.1/687-775   AUGGCCGGCAUGGUC-CCA--------GCCUCCUCGCUGGCGCCGGCUGGGCAACAUUCCGA--GGGGA-CCG--U--CCC-C----UC--GGUAAUGGCGAA---UGGGACGCA
+RF00094__X85253.1/682-769   AUGGCCGGCAUGGUC-CCA--------GCCUCCUUCGUGGCGCCGGCUGGGCAACAUUCCGA--GGGGA-CCG--U---CC-C----UC--GGUAAUGGCGAA---UGGGACCCA
+RF00094__L22063.1/691-781   GUGGCCGGCAUGGCC-CCA--------GCCUCCUCGCUGGCGCCGGCUGGGCAACGAUCCGA--GGGAG-CUA--C-UCCU-C----UC-GAGAAUCGGCAAA---UGGGGCCCC
+#=GC SS_cons                ::<<<<<<<--AAAA-AAA--......<<<_BB____.>>>>>>>>>>bb-...<<<<<<<<-.<<<-<.___..>..->>.>....>>..>>.>>>>::::::::aaaaaaa::
+#=GC RF                     uugGgcgGgaauGuCAuCuCC......gCCUCCuCGc.GGccCcgcCuGGG...CauuCcGaA.GGgGg.ccG..c..gcC.C....uC..gG.aauGGCuAAGGGaGaGaCacu
+//

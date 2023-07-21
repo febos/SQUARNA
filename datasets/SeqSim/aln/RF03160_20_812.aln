@@ -1,0 +1,88 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+URS0000D6B540_12908/1-60            UUUU-UAA-UGAAGCCACAGU--------------------GAUC-----
+URS0000D69761_6183/1-71             GUCG-UAA-CUCCGCCGGUAGCU------------------CUUCUAU--
+URS0000D6A650_12908/19-78           AGUG-UAA-UGCAGCCGUGC---------------------AAU------
+URS0000D6C70C_12908/1-65            UUCA-GAA-CUCAGCCACAGG--------------------UUUU-----
+URS0000D676AE_6183/1-72             CACA-UAA-CUCCGCCUGUAGCUCC----------------UCCA-----
+URS0000D69776_6183/1-73             GUCA-AAA-CUCCGCCUGUAGCUCC----------------UCCG-----
+URS0000D6BE35_12908/18-102          CACC-UAA-UGCAUCCCGUGC--------------------CUAG-----
+URS0000D680B9_6183/1-70             AUUU-AAA-CUCCGCCUGUAGCUC-----------------UUCUA----
+URS0000D6D3AC_6183/1-71             UAUU-UAA-CUCCGCCUGUAUUCCC----------------UUCG-----
+URS0000D6C09C_6183/1-71             UCCU-UAA-CUCCGCCUGGAGCCU-----------------CUCUG----
+URS0000D68A3A_12908/27-96           CAAU-UAA-AACGGCCACGCCGAC-----------------CAUG-----
+URS0000D66668_7029/1-66             UUUU-UAA-CCAAGCCAACAAU-------------------GAUAG----
+URS0000D68D61_12908/18-69           CUCG-UAA-UGCGGC--------------------------GAA------
+URS0000D68282_12908/1-61            GUUG-UAA-ACACGCCACU----------------------UUGAUU---
+URS0000D694B0_6183/1-70             UUGU-AAA-CUCCGCCUGUAGCUC-----------------UUCUA----
+URS0000D69281_12908/1-55            ACCG-UAA-UGCAGC--------------------------CUUUG----
+URS0000D6BDC7_6183/1-72             CCCU-UAA-CUCCGCCUGUAGCUCC----------------UCUG-----
+URS0000D6649C_6183/1-71             GUAU-CAA-CUCCGCCUGUAGCUCC----------------ACUG-----
+URS0000D68580_12908/1-63            GCCG-UAA-UGCAGCCGCGC---------------------CGUUGC---
+URS0000D657F5_6183/1-71             UGAC-UAA-CUCCGCUUGUAGCUCC----------------UCCG-----
+
+URS0000D6B540_12908/1-60            --------------------------------------------------
+URS0000D69761_6183/1-71             --------------------------------------------------
+URS0000D6A650_12908/19-78           --------------------------------------------------
+URS0000D6C70C_12908/1-65            --------------------------------------------------
+URS0000D676AE_6183/1-72             -------------------------------------------------G
+URS0000D69776_6183/1-73             -------------------------------------------------G
+URS0000D6BE35_12908/18-102          --------------------------------------------------
+URS0000D680B9_6183/1-70             --------------------------------------------------
+URS0000D6D3AC_6183/1-71             -------------------------------------------------G
+URS0000D6C09C_6183/1-71             --------------------------------------------------
+URS0000D68A3A_12908/27-96           --------------------------------------------------
+URS0000D66668_7029/1-66             --------------------------------------------------
+URS0000D68D61_12908/18-69           --------------------------------------------------
+URS0000D68282_12908/1-61            --------------------------------------------------
+URS0000D694B0_6183/1-70             --------------------------------------------------
+URS0000D69281_12908/1-55            --------------------------------------------------
+URS0000D6BDC7_6183/1-72             -------------------------------------------------G
+URS0000D6649C_6183/1-71             -------------------------------------------------G
+URS0000D68580_12908/1-63            --------------------------------------------------
+URS0000D657F5_6183/1-71             -------------------------------------------------G
+
+URS0000D6B540_12908/1-60            ---ACUGUGAGGGUCCUAAGC-CCCU----------------AA------
+URS0000D69761_6183/1-71             -AGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA---
+URS0000D6A650_12908/19-78           ----GCACGAGAGUCCAAAGC-CUCU----------------AUAAA---
+URS0000D6C70C_12908/1-65            ---UUUGUGCCGGUCCCGAGC-CCGG----------------GUAAA---
+URS0000D676AE_6183/1-72             GGGCUACUGCCGGUCCCAAGC-CCGG----------------GUAAA---
+URS0000D69776_6183/1-73             GGGCUACUGCCGGUCCCAAGC-CCGG----------------AUAAA---
+URS0000D6BE35_12908/18-102          ---GCACGGCGGGUGACAAGC-CCCGGUAGCUCCG-------ACGACGGU
+URS0000D680B9_6183/1-70             GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA---
+URS0000D6D3AC_6183/1-71             GGGCUACUGCCGGUCGCAAGC-CCGG----------------GUAAA---
+URS0000D6C09C_6183/1-71             GGGUUACUGCCGAUCCCAAGC-CCGG----------------AUAAA---
+URS0000D68A3A_12908/27-96           GGCGGCGUGAGGGUCCGAAGC-CCCU----------------ACAAAC--
+URS0000D66668_7029/1-66             --UUUGUUGACAGUCCUAAGC-CUGU----------------UAUAA---
+URS0000D68D61_12908/18-69           ---------CCGGUGGCAAGC-CCGG----------------UGGUGGA-
+URS0000D68282_12908/1-61            -----AGUGAAGGUCGCAAGC-CCUU----------------AGAAA---
+URS0000D694B0_6183/1-70             GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA---
+URS0000D69281_12908/1-55            ---------ACGGUCACAAGC-CCGU----------------AUGAGAAA
+URS0000D6BDC7_6183/1-72             GGGUUGCUGCCGGUCCCAAGC-CCGG----------------GUAAA---
+URS0000D6649C_6183/1-71             GGGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA---
+URS0000D68580_12908/1-63            ----GCGCGCCGGUCACAAGC-CCGG----------------AGAAA---
+URS0000D657F5_6183/1-71             GGGCUACUGCCGGUUCCAAGC-CCGG----------------GUAAA---
+
+URS0000D6B540_12908/1-60            ---------------------UUCA-GAAGG----GAAA
+URS0000D69761_6183/1-71             ---------------------GGAG-GAGGGU---UGGG
+URS0000D6A650_12908/19-78           ---------------------UGCA-GAUGG----CGCG
+URS0000D6C70C_12908/1-65            ---------------------UGAG-GAGGGGU--UUAA
+URS0000D676AE_6183/1-72             ---------------------GGAG-GAGGGU---UGGG
+URS0000D69776_6183/1-73             ---------------------GGAG-GAGGGUU--UGGC
+URS0000D6BE35_12908/18-102          A-----------CGGAGUCAAUGCA-GAGUC----GGUG
+URS0000D680B9_6183/1-70             ---------------------GGAG-GAGGG----UUGG
+URS0000D6D3AC_6183/1-71             ---------------------GGAG-GAGGG----UUGG
+URS0000D6C09C_6183/1-71             ---------------------GGAG-GAGGGU---UGGG
+URS0000D68A3A_12908/27-96           ---------------------AGUU-GACGG----GUUG
+URS0000D66668_7029/1-66             ---------------------UUGG-GAAGG----AAAA
+URS0000D68D61_12908/18-69           ---------------------CGCA-GAGCC----AGAG
+URS0000D68282_12908/1-61            ---------------------GUGU-GAGCG----CAAC
+URS0000D694B0_6183/1-70             ---------------------GGAG-GAGGU----UUGG
+URS0000D69281_12908/1-55            ---------------------UGCA-GAGUG----GGGA
+URS0000D6BDC7_6183/1-72             ---------------------GGAG-GAGGGU---UGGG
+URS0000D6649C_6183/1-71             ---------------------GGAG-GAGGG----UUGG
+URS0000D68580_12908/1-63            ---------------------UGCA-GAGUG----AGGA
+URS0000D657F5_6183/1-71             ---------------------GGAG-GAGGG----GUGG
+
+

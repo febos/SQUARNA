@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+X06847.1/1-119                      --AUCUGC-GG-C-C-AU-ACC----GC-G-C-U-G---AA---------
+M76574.1/4-118                      --UCUGGU-GG-C-C-AU-GGC----GG-C-A-G-C---AA---------
+Z50074.1/3-119                      --UUCGGU-GG-U-C-AU-GGC----GG-A-G-G-G---GA---------
+M59346.1/3-119                      --UUCGGU-GG-U-C-AU-UGC----GU-U-A-G-G---GA---------
+X52297.1/1-116                      ---CCGGU-GG-C-A-AU-GUC----GG-A-G-G-G---GU---------
+
+X06847.1/1-119                      -C-GU-U----------C--CGC----G-UC----UCGUCC-------GA
+M76574.1/4-118                      -A-UC-A----------C--CCG----A-UC----CCAUGC------CGA
+Z50074.1/3-119                      -A-AC-G----------C--CCG----G-UC----CCAUUC------CGA
+M59346.1/3-119                      -A-AC-G----------C--CCG----G-UU----ACAUUC------CGA
+X52297.1/1-116                      -C-CC-A----------C--CCG----U-UC----CCAUCC------CGA
+
+X06847.1/1-119                      -UCCGC-GC-AGACAA-G-----------------CAUCGCA-G-G--G-
+M76574.1/4-118                      -ACUCG-GC-CGUCAA-A-----------------UGCCCCA-G-C--G-
+Z50074.1/3-119                      -ACCCG-GA-AGCUAA-G-----------------UCCUCCA-G-C--G-
+M59346.1/3-119                      -ACCCG-GA-AGCUAA-G-----------------CCUUUCA-G-C--G-
+X52297.1/1-116                      -ACACG-GA-AGUUAA-G-----------------CCCUCCA-G-A--G-
+
+X06847.1/1-119                      --GC--CAGAGA--GUAUUGACG--UGGGUGAC-C-AGUCG-AGA---A-
+M76574.1/4-118                      --CC--CAUGA----UACUCUG----CCUCAAG-G-CAC---GGA---A-
+Z50074.1/3-119                      --CC--GAUG----GUACUGCA---UGCGUGAG-C-GUGUG-GGA---G-
+M59346.1/3-119                      --CC--GAUG----GUACUGCAG---GGGGGAC-C-CUGUG-GGA---G-
+X52297.1/1-116                      --CC--GAUG----GUACUCCGC---GGGAAAC-C-GCGCG-GGA---G-
+
+X06847.1/1-119                      -CACUG---UGC-U--G-CC--G-CAGGU-
+M76574.1/4-118                      -AAGUC----GG-U-CG-CC--G-CCAGAU
+Z50074.1/3-119                      --AGUA----GG-A-CG-CC--G-CCGAAC
+M59346.1/3-119                      --AGUA----GG-A-CG-CC--G-CCGAAC
+X52297.1/1-116                      --AGUA----GG-U-CG-CU--G-CCGGAU
+
+

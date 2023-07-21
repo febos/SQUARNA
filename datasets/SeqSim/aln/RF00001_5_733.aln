@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+X55268.1/3-119                      --UUCGGU-GG-U-C-AU-AGC----GU-U-A-G-G---GA---------
+M19950.1/1-120                      --GGUUGC-GG-C-C-AU-AUC----UA-G-C-A-G---AA---------
+M34911.1/4-118                      --UAUAAC-GG-U-C-AU-AGC----GG-A-G-G-A---GC---------
+X14817.1/224-341                    --ACCAAC-GG-C-C-AU-ACC----AU-G-U-U-G---AA---------
+X02253.1/3-118                      --CCUGGC-GA-C-C-AU-AGC----AU-U-A-U-G---GA---------
+
+X55268.1/3-119                      -A-AC-G----------C--CCG----G-UU----ACAUUC------CGA
+M19950.1/1-120                      -A-GC-A----------C--CGU----U-UC----CCGUCC-------GA
+M34911.1/4-118                      -C-AC-A----------U--CCG----A-UC----CCGUCC------CGA
+X14817.1/224-341                    -A-GU-A----------C--CCA----G-UC----UCGUCA-------GA
+X02253.1/3-118                      -C-CC-A----------C--CUG----A-UC----CCAUGC------CGA
+
+X55268.1/3-119                      -ACCCG-GA-AGCUAA-G-----------------CCUUUCA-G-C--G-
+M19950.1/1-120                      -UCAACUGU-AGUUAA-G-----------------CUGCUAA-G-A--G-
+M34911.1/4-118                      -UCUCG-GA-AAUUAA-G-----------------CCCUCCA-G-C--G-
+X14817.1/224-341                    -UCCUG-G--AGUCCC-A-----------------CAACGUC-G-G--G-
+X02253.1/3-118                      -ACUCA-GA-AGUGAA-A-----------------CGUAAUA-G-C--G-
+
+X55268.1/3-119                      --CC--GAUG----GUACUGCAG---GGGGGAC-C-CUGUG-GGA---G-
+M19950.1/1-120                      --CC--UGACCG-AGUAGUGUAG--AGGGCGAC-C-AUACG-CGA---A-
+M34911.1/4-118                      --AU--ACCCUA-AGUACUGCCA--U---UUG------GUG-GGA---A-
+X14817.1/224-341                    --CC--CGGUCA--GUACUUGGA--UGGGUGAC-C-GCCUG-GGA---A-
+X02253.1/3-118                      --CC--GAUG----GUAGUGUG----GGGUUUC-C-CCAUG-UGA---G-
+
+X55268.1/3-119                      --AGUA----GG-A-CG-CC--G-CCGAGC
+M19950.1/1-120                      -ACUCA----GG-U--G-CU--G-CAAUC-
+M34911.1/4-118                      -CAGGG----UG-A-CG-CU--G-UUGAUC
+X14817.1/224-341                    -CACCG----GG-U--G-UU--G-UUGGCA
+X02253.1/3-118                      --AGUA----GG-A-CA-UC--G-CCAGGC
+
+

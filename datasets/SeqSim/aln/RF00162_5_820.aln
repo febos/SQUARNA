@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+AAOX01000002.1/320243-320340        C-ACUUAUCCAGAG-AGG-C-GG-----------------AGGGA--CUG
+CP000673.1/1915422-1915314          U-UCUUAUCAAGAG-AGG-U-GG-----------------AGGGA--CUG
+BA000043.1/745485-745383            U-UCUUAUCAAGAG-AGG-G-GG-----------------AGGGA--CUG
+CP001022.1/449125-449227            C-UCUUAUCGUGAGUUGG-C-AG-----------------AGGGA-AUUG
+CP001101.1/884104-884209            C-UAUCAUCCAGAA-AGG-U-GG-----------------AGGGA--GUG
+
+AAOX01000002.1/320243-320340        G-CCCGA--UGAA-GCC-UCGGCAGCAGG-UCU-GUU-------------
+CP000673.1/1915422-1915314          G-CCCUA--UGAU-GCC--CGGCAACC-U-GAA-UGUAUU----------
+BA000043.1/745485-745383            G-CCCGG--UGAA-CCC-UCAGCAACC-U-GGC-CCG-------------
+CP001022.1/449125-449227            G-CCCGA--AGAC-GCC-GCAGCAACC-G-ACC-AUCC------------
+CP001101.1/884104-884209            G-CCCUG--AGAA-GCC-UUGGCAACC-G-UCA-GU--------------
+
+AAOX01000002.1/320243-320340        --------------------------------------------------
+CP000673.1/1915422-1915314          ------------------------------------------UACAU---
+BA000043.1/745485-745383            --------------------------------------------CGG---
+CP001022.1/449125-449227            --------------------------------------------------
+CP001101.1/884104-884209            --------------------------------------------AGU---
+
+AAOX01000002.1/320243-320340        -GAC-AC--UGUGCCA-AUUC--CA--CCGGU----------A-------
+CP000673.1/1915422-1915314          -UCA-AU--GGUGCUA-AUUC--CAG-CAGGUAA-----UAUA-------
+BA000043.1/745485-745383            -CCA-A---GGUGCUA-AAUC--CAGACAGGCGG-----AAG--------
+CP001022.1/449125-449227            -GGC-AC--GGUGCUA-CAUC--CAA-CAGAC--------AUU-------
+CP001101.1/884104-884209            -GAU-U---GGUGCCA-AUUC--CAA-CCCGGAC-----AAGCA------
+
+AAOX01000002.1/320243-320340        ---------------UACC-GG-A-AA-GAUAAGC-A--
+CP000673.1/1915422-1915314          ----------------ACC-UG-A-AA-GAUGAGA-G--
+BA000043.1/745485-745383            -----------------CC-UG-G-AA-GAUAAGA-A--
+CP001022.1/449125-449227            ---------------CGUC-UG-A-GA-GAUAAGA-G--
+CP001101.1/884104-884209            --------------GUGCG-GG-G-AA-GAUGAUU-G--
+
+

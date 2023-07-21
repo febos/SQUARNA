@@ -1,0 +1,62 @@
+# STOCKHOLM 1.0
+#=GF AC   RF00010
+#=GF ID   RNaseP_bact_a
+#=GF DE   Bacterial RNase P class A
+#=GF AU   Griffiths-Jones SR; 0000-0001-6043-807X
+#=GF AU   Mifsud W; 0000-0002-9805-6461
+#=GF SE   Brown JW, The Ribonuclease P Database, PMID:9847214
+#=GF SS   Published; PMID:9847214
+#=GF GA   100.00
+#=GF TC   100.50
+#=GF NC   99.60
+#=GF TP   Gene; ribozyme;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -E 1000 -Z 549862.597050 CM SEQDB
+#=GF CL   CL00002
+#=GF DR   URL; http://jwbrown.mbio.ncsu.edu/RNaseP/home.html;
+#=GF DR   SO; 0000386; RNase_P_RNA;
+#=GF DR   GO; 0008033; tRNA processing;
+#=GF DR   GO; 0004526; ribonuclease P activity;
+#=GF DR   GO; 0030680; dimeric ribonuclease P complex;
+#=GF RN   [1]
+#=GF RM   9759486
+#=GF RT   Ribonuclease P: unity and diversity in a tRNA processing ribozyme.
+#=GF RA   Frank DN, Pace NR
+#=GF RL   Annu Rev Biochem 1998;67:153-180.
+#=GF RN   [2]
+#=GF RM   9847214
+#=GF RT   The Ribonuclease P Database.
+#=GF RA   Brown JW
+#=GF RL   Nucleic Acids Res 1999;27:314.
+#=GF RN   [3]
+#=GF RM   23324607
+#=GF RT   Identification and characterization of small RNAs in Yersinia pestis.
+#=GF RA   Beauregard A, Smith EA, Petrone BL, Singh N, Karch C, McDonough KA, Wade
+#=GF RA   JT
+#=GF RL   RNA Biol. 2013;10:397-405.
+#=GF CC   Ribonuclease P (RNase P) is a ubiquitous endoribonuclease, found in
+#=GF CC   archaea, bacteria and eukarya as well as chloroplasts and mitochondria.
+#=GF CC   Its best characterised activity is the generation of mature 5'-ends of
+#=GF CC   tRNAs by cleaving the 5'-leader elements of precursor-tRNAs. Cellular
+#=GF CC   RNase Ps are ribonucleoproteins. RNA from bacterial RNase Ps retains its
+#=GF CC   catalytic activity in the absence of the protein subunit, i.e. it is a
+#=GF CC   ribozyme. Isolated eukaryotic and archaeal RNase P RNA has not been shown
+#=GF CC   to retain its catalytic function, but is still essential for the catalytic
+#=GF CC   activity of the holoenzyme. Although the archaeal and eukaryotic
+#=GF CC   holoenzyme s have a much greater protein content than the bacterial ones,
+#=GF CC   the RNA cores from all the three lineages are homologous -- helices
+#=GF CC   corresponding to P1, P2, P3, P4, and P10/11 are common to all cellular
+#=GF CC   RNase P RNAs. Yet, there is considerable sequence variation, particularly
+#=GF CC   among the eukaryotic RNAs. Identified in Yersinia as Ysr151/RnpB. 
+#=GF WK   Ribonuclease_P
+#=GF SQ   458
+
+RF00010__CP000250.1/2253459-2253028 UCAG-UC-G-G-C-C-G--GACGGCCGCUCC-CG--C-ACCGGC-----------------------------------------------------------------------------------CGAAAGG-----CU-G-C-G-GGGGAGGAAAGUCCGGGCUC-C---AUC-GACAUA-C-GG-UG----------------CCGGA------------UAACG----------------UCCGGCGGGG-----------------------GCGA------CCCCAGGG-AA---AGU-GCCACAGAGA--CCGA-ACC-GCC----CC---G--CGAAGCC-----------------------------------------------------------------------------------------------------------------GCAAGGCGAAG-C----G--G---GGUAAGGGUGAAAA----GGU---GC-G--G--U----------------------AAGAG-CGCACC--GCGU-C-U-C-CG-GCAA--CG-G-A-G-ACGG-C-AU----------------GGUAAAC-CCCACCG-GGAGCAAAACC-GAAU------------------------------AGGGA--C-GGCAUCGCGGACAGUUCGCUCU--------------------CGGGCGAUAACUCCGCAGGGUGAUGUC---AAACCC--------GCCG---UC-C-----GGGU---A-----G---G-UUGC---------------------U--CGA-GGCG-C-U-GUGCAAACA-G--C-G-U-C-C--CAGAGGAAU-GGCCGUCG-----------------CGUAUCGCUCCGCCUCACGGCGA--------------------------GCGGUGCCCUCCAGAACCCGGCUUA--C-AGGCCGA-CUGAUACU
+RF00010__CP000089.1/575353-575735   AAAG-UC-G-G-C-C-A--GGCAAUCGCUGG-GC--A-C-------------------------------------------------------------------------------------------GUAA------G-U-G-C-CGGGAGGAAAGUCCGGGCUC-C---AUU--GGGCG-G-GA-UG----------------CCAGU------------UAACG----------------GCUGGGUGCUAUACGGU--------CGCAAGACCUAA------GGCAACGG-AA---AGU-GCAACAGAGA--AUAG-ACC-GCCG--AUG---G--CGUU-----------------------------------------------------------------------------------------------------------------------GUAAGACG-C---AC--A---GGUAAGGGUGAAAC----GGC---GA-G--G--U----------------------AAGAG-CUCACC--GCGU-C-C-A-CG-GUAA--CG-GCG-G-ACGG-C-AC----------------GGUAAAC-CCCAUCC-GGAGCAAGACC-AAAU------------------------------AGGGA--A-GCUGA------------------------------------------------------GGCGUGGCCC----GCGCU---------GCU---UC-C-----GGGU---A-----G---G-UUGC---------------------U--UGA-GCCU-G-U-CGGUGACGG-C--A-G-G-C-C--UAGAGGAAU-GAUUGCCG----------------AACCUCGCAAGAGGG-------------------------------------------GAACAAAACCCGGCUUA--U-CGGCCGG-CUUUCCAA
+RF00010__CR543861.1/2832237-2831882 GAAG-UG-G-A-C-U-G--GACGGUCGCUGC-UG--U-GGAGGUCU-------------------------------------------------------------------------------UCGUGACUG-----AA-A-C-A-GGGGAGGAAAGUCCGGGCUU-C---AUA--GGGCA-G-GG-UG----------------CCAGG------------UAACG----------------CCUGGGCGGU-----------------------GAAA------GCCGACGG-AA---AGU-GCAGCAGAGA--GUAG-ACC-GCC----UC---A------------------------------------------------------------------------------------------------------------------------------UUCG----U----G--A---GGUAAGGGUGAAAG----GGU---GC-G--G--U----------------------AAGAG-CGCACC--GCGU-G-U-C-UG-GUAA--CA-GUU-C-ACGG-C-AU----------------GGUAAAC-CCCACCA-GAAGCAAGACC-AAAU------------------------------AGGAA--U-CCUGA------------------------------------------------------GGUACGGCCC----GUACU---------GGA---UU-C-----GGGU---A-----G---G-UCGC---------------------U--UGA-GCGU-A-U-GAGUGAUUG-U--A-C-G-C-C--UAGAGGAAU-GAUCGUCC-----------------UC--------------------------------------------------------GACAGAACCCGGCUUA--C-AGGUCCA-CUUCACCA
+RF00010__CP000512.1/850110-850447   GAAG-CG-C-G-C-C-A--GACCGCCGCUGG-UG--C-ACGUGC-----------------------------------------------------------------------------------CGAAAGG-----CC-G-C-A-CUGGAGGAACGUCCGGACUG-C---ACA--GGACG-G-CG-UA----------------GCAGC------------UAACG----------------GCUGUCCACC-----------------------GCGA------GGUGAGGA-UC---AGA-GCAACAGAGA--CGAG-UCC-G-------G---A--AGG-------------------------------------------------------------------------------------------------------------------------AGUGCCG---------------CAAGGCAGACCA----GCC--------------------------------------GG----GGU----------------GAAA------------------CG----------------GGCAAUC-UCUACGC-GCAGCAAUACC-AAGU------------------------------AGGCC--A-GCGUUG----------------------------------------------------ACGUGG---UU----CCGCG-------GAGCU---GG-C-----GGGU---A-----G---G-UAGC--------------------AU--CGA-GCCG-G-GUGGGCGACCC-C--C-G-G-C-C--CAGAGUAAU-GGCGGUCA-----------------CGUGCGGGCAACCGCA----------------------------------------UGCACAGAAUCCGGCUUA--U-CGGCGCG-CUUCACAC
+RF00010__CP000878.1/1554059-1554452 GAAA-GC-A-G-G-A-G-AGGUGAUCACAAU-CA--A-GAUUUAUCGCGU------------------------------------------------------------------------UUCGCAAUAAAU-----GC-U-U-G-AUUGAGGAAAGUCCGGGCUC-CC-UGAU--GGUCA-A-GCUUG----------------CUGGG------------UAACU----------------CCCAGUGCGG-----------------------GUGA------CCGUGAGG-AU---AGU-GCCACAGAAA--CAC--ACC-GCC----GA---U--GGCUUAG-----------------------------------------------------------------------------------------------------------------UCCCACUCAGC-A----C--A---GGCAAGGGUGCAAA----GGU---GC-G--G--U----------------------AAGAG-CGCACC-AGCAG-C-A-U-C--GAGA---G-G-U-G-CUGG-C-UU----------------GGUAAAC-CCCGGCUAGGAGCAAGGC------------------------------------AAAGG--A-GCAUUA-----------------------------------------------------AUGGCCAUCU----AUGAU---------GCU---CC-U-----GAAA---A-----A--AG-CCGC---------------------U--UGA-GGUU-G-U-CGGUAACGG-C--A-G-U-C-C--CAGAUAGAU-GAUUACCC-----------------ACUAACCUUUUUAGGUA--------------------------------------GUGAACAGAACCCGGCUUA--U-GACCUGC-UUUCACCC
+#=GC SS_cons                        {{{{.{{.{.{.{.{.{..{{{{{{{,<<<<.<<..<.<<__........................................................................................____.....>>.>.>.>.>>>>,,,,AAA,AAAAA[[[.[...---..BBBB-.[.[[.[[................<<<<<............_____................>>>>><<<<<.......................____......>>>>->((.--...-((.(((,,,,,,,..,,,,.,<<.<<<....<<...<..<<<.........................................................................................................................____>>>.>....>..>...>>>-->>,,,,,,,....<<<...<<.<.._.._......................_____.>>>>>>..<<<<.<.<.<.<<.____..>>.>.>.>.>>>-.>.,,................)))--)).))]]]]].]]]],,,<<<<.----..............................--<<<..<.<<----....................................................-<<<<<_bbbb....>>>>>........->>>...>>.>.....----...-.....>...>.>>,,.....................,..,,,.<<<<.<.<.<<____>>>.>..>.>.>.>.,..,,,,,,,,,.}}}}}}}-.................--------------............................................-------aaaaaaaa-..}.-}}}}}}.}}}}::::
+#=GC RF                             cgag.cc.g.g.c.c.g..ggcggucGCgcc.cc..c.ccuu........................................................................................aaaa.....gg.g.g.g.ggcGAGGAAAGUCCGGgCUc.C...AuA..GggCA.g.gg.uG................ccgGg............UAACg................cCcggcgggg.......................GugA......ccccAgGG.Aa...AGu.gCcACAGAAA..auAg.ACC.gCc....cg...c..ccc.........................................................................................................................uuauggg.g....c..g...gGcAAGGGUGAAAa....GGu...gc.g..G..U......................AAGAG.cgcaCC..Gcgc.c.c.c.cG.GuaA..Cg.g.g.g.gcgG.C.uu................gGcAAaC.CCCaccc.GgAGCAAggcc.AAAU..............................AGGgg..c.gcauuu....................................................acgggcugcuc....gcccg........agcg...cc.C.....GGGU...a.....g...g.ccGC.....................U..uGA.Gccg.g.c.cgGuAAcgg.c..c.g.g.C.C..uAGAugAAU.gaccgcca.................ucuauuuaaauuuu............................................aACAGAAcCCGGCUUA..c.aggccgg.cucgucau
+//

@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+M33887.1/1-111                      --UAAGGU-GG-U-U-AU-UGC----GG-C-G-G-G---GC---------
+X62857.1/1-121                      --GUUGGC-GG-U-C-AU-GGC----GU-G-G-G-G---UU---------
+Z11821.1/3-116                      ----UGGU-GG-C-G-AU-GGC----GA-G-A-A-G---GU---------
+M27961.1/79-196                     --GCUUAC-GG-C-C-AA-ACC----AC-G-U-U-G---AA---------
+AJ312082.1/1-119                    --GUCUAC-GA-C-C-AU-AUC----AC-G-U-U-G---AA---------
+
+M33887.1/1-111                      -U-CG-A----------C--CUC----U-UC----CCAUCC------CGA
+X62857.1/1-121                      -U-AU-A----------C--CUG----A-UC----UCGUUU------CGA
+Z11821.1/3-116                      -C-AC-A----------C--CCG----U-UC----CCAUGC------CGA
+M27961.1/79-196                     -A-GC-A----------C--GAC----A-UC----CCGUCC-------GA
+AJ312082.1/1-119                    -A-AC-A----------C--CGG----U-UC----UCGUCC-------GA
+
+M33887.1/1-111                      -ACAGA-GU-AGUUAA-G-----------------CCCGCCU-G-C--G-
+X62857.1/1-121                      -UCUCA-GU-AGUUAA-G-----------------UCCUGCU-G-C--GU
+Z11821.1/3-116                      -ACACG-GA-AGUUAA-G-----------------CUUCUCA-G-C--G-
+M27961.1/79-196                     -UCUGU-CA-AGUUAA-G-----------------CAACGUU-G-G--G-
+AJ312082.1/1-119                    -UCACC-GA-AGUUAA-G-----------------CAACGUC-G-A--G-
+
+M33887.1/1-111                      --CA--GAUG----GUACUGCAG--U----UA-----UGUG-GGA---G-
+X62857.1/1-121                      -UGU--GGGUGU--GUACUGCGG--UUUUUUG----CUGUG-GGA---A-
+Z11821.1/3-116                      --CC--GAUG----GUAGUUGGG---GC-AUUG-C-CCCUG-CGA---G-
+M27961.1/79-196                     --CC--UGGUUA--GUACUUGGA--UCGGAGAC-G-GCUUG-GGA---A-
+AJ312082.1/1-119                    --CC--CGGUUA--GUACUUGGA--UGGGUGAC-C-GCCUG-GGA---A-
+
+M33887.1/1-111                      --AGUA----UG-U-CG-UC--G-CCUUUC
+X62857.1/1-121                      --GCCC----ACUU-CA-CU--G-CCAGAC
+Z11821.1/3-116                      --AGUA----GG-A-CG-UU--G-CCAGGC
+M27961.1/79-196                     -UCCCA----GG-U--G-CU--G-UAAGC-
+AJ312082.1/1-119                    -UACCG----GG-U--G-UU--G-UAGACA
+
+

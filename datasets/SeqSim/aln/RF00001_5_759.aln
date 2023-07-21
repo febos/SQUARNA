@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+X52300.1/5-122                      --CCCCGU-GC-C-U-UU-AGC----GC-C-U-C-G---GA---------
+J01872.1/1-119                      --GUUGGU-GG-C-C-AU-ACU----AA-G-C-C-U---AA---------
+X01534.1/1-119                      --GCCUAC-GG-C-C-AU-ACC----AC-G-U-U-G---AA---------
+X00377.1/2-120                      --UGGUGC-GG-U-C-AU-ACC----AG-C-G-C-U---AA---------
+M76580.1/4-118                      --UCUGAU-GG-C-C-AU-GGC----GG-G-A-G-C---AA---------
+
+X52300.1/5-122                      -A-CC-A----------C--CCC----A-CU----CCAUGC------CGA
+J01872.1/1-119                      -A-GC-A----------C--CGG----A-UC----CCAUUC-------GA
+X01534.1/1-119                      -A-AC-A----------C--CGG----U-UC----UCGUCU-------GA
+X00377.1/2-120                      -U-GC-A----------C--CGG----A-UC----CCAUCA-------GA
+M76580.1/4-118                      -A-UC-A----------C--CCG----A-UC----CCAUCC------CGA
+
+X52300.1/5-122                      -ACUGG-GU-CGUGAA-A-----------------CGUGGCA-G-C--G-
+J01872.1/1-119                      -ACUCC-GA-AGUUAA-G-----------------CGGCUUA-A-G--G-
+X01534.1/1-119                      -UCACC-GA-AGUUAA-G-----------------CAACGUA-G-G--G-
+X00377.1/2-120                      -ACUCC-GC-AGUUAA-G-----------------CGCGCUU-G-G--G-
+M76580.1/4-118                      -ACUCG-GC-CGUCAA-A-----------------UGCCCCA-G-C--G-
+
+X52300.1/5-122                      --CC--UAUGA----UACUUGGA---CCGCAGG-G-UCCUG-GAA---A-
+J01872.1/1-119                      --CG--AGGUUA--GUACUAAGG--UGGGGGAC-C-GCUUG-GGA---A-
+X01534.1/1-119                      --CC--UGCCCA--GUACUUGGA--UGGGUGAC-C-GCCUG-GGA---A-
+X00377.1/2-120                      --CC--AGAACA--GUACUGGGA--UGGGUGAC-C-UCCCG-GGA---A-
+M76580.1/4-118                      --CC--CAUGA----UACUCUG----CCUCAAG-G-CAC---GGA---A-
+
+X52300.1/5-122                      --AGUC----GG-UGCA-GU--G-CGGGGG
+J01872.1/1-119                      -GUCCU----CG-U--G-UU--G-ACAACC
+X01534.1/1-119                      -CAGCA----GG-U--G-UU--G-UAGGCU
+X00377.1/2-120                      -GUCCU----GG-U--G-CC--G-CACCCC
+M76580.1/4-118                      -AAGUC----GG-U-CG-CC--G-CCAGAU
+
+

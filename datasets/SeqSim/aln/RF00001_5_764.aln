@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+M36155.1/1-117                      --UCUGGU-GA-U-G-AU-GGC----AU-A-G-A-G---GU---------
+X71804.1/109-227                    --GUCUAC-GG-C-C-AU-ACC----AC-C-C-U-G---AA---------
+AJ419791.1/210-328                  --GCUAUC-GG-C-C-AU-ACU----AA-G-C-C-A---AA---------
+X01555.1/3-118                      --CUUGAC-GA-U-C-AU-AGA----GC-G-U-U-G---GA---------
+U18089.1/3485-3600                  --UCUGGC-GG-C-C-AU-AGC----GC-A-G-U-G---GA---------
+
+M36155.1/1-117                      -A-AC-A----------C--UCC----U-UC----CCAUUC------CGA
+X71804.1/109-227                    -C-GC-G----------C--CCG----A-UC----UCGUCU-------GA
+AJ419791.1/210-328                  -U-GC-A----------C--CGG----A-UC----CCAUCC-------GA
+X01555.1/3-118                      -A-CC-A----------C--CUG----A-UC----CCAUCC------CGA
+U18089.1/3485-3600                  -A-CC-A----------C--CCC----U-UC----CCAUCU------CGA
+
+M36155.1/1-117                      -ACAGG-AC-AGUUAA-G-----------------GUCUAUA-G-C--G-
+X71804.1/109-227                    -UCUCG-GA-AGCUAA-G-----------------CAGGGUC-G-G--G-
+AJ419791.1/210-328                  -ACUCC-GA-AGUUAA-G-----------------CGGUUUA-A-G--G-
+X01555.1/3-118                      -ACUCA-GC-AGUGAA-A-----------------CGACGCA-U-C--G-
+U18089.1/3485-3600                  -ACAGG-AC-CGUGAA-A-----------------CGCUGCA-G-C--G-
+
+M36155.1/1-117                      --CC--GAUG----GUACUGCA---UGGGAGAC-U-GUGUG-GAA---G-
+X71804.1/109-227                    --CC--UGGUUA--GUACUUGGA--UGGGAGAC-C-GCCUG-GGA---A-
+AJ419791.1/210-328                  --CC--UGUUAA--GUACUGAGG--UGGGGGAC-C-ACUCG-GGA---A-
+X01555.1/3-118                      --CC--GAUG----GUAGUGUG----GGGUUUC-C-CCAUG-UAA---G-
+U18089.1/3485-3600                  --CC--UAUGA----UAGUUGA----GGGUCUC-C-CUCCG-CGA---A-
+
+M36155.1/1-117                      --AGUA----GG-A-CG-UC--G-CCAGGU
+X71804.1/109-227                    -UACCG----GG-U--G-CU--G-UAGGCU
+AJ419791.1/210-328                  -CUUCA----GG-U--G-CU--G-AUAGCU
+X01555.1/3-118                      --AGUA----GG-U-CA-UC--G-UCAGGC
+U18089.1/3485-3600                  --AGUC----GG-U-CA-CC--G-CCAGAC
+
+

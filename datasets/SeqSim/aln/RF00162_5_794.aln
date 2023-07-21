@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+CP001034.1/2889251-2889136          U-CCUUAUCAAGAG-UGG-U-GG-----------------AGGGA--CUG
+AE015927.1/303338-303443            C-UCUUAUCGAGAG-AGG-U-GG-----------------AGGGA-AAGG
+CP000885.1/4762158-4762063          C-UCUUAUUCAGAG-UGA-C-GG-----------------AGAGU-AAAG
+AAJM01000461.1/236-129              U-UCUUAUCCAGAG-AGG-U-GG-----------------AGGGA--CUG
+ACNI01000057.1/7157-7272            U-ACUUAUCCAGAG-AGG-U-GG-----------------AGGGA--ACG
+
+CP001034.1/2889251-2889136          G-CCCUA--UGAA-GCC--CGGCAACC-G-GCA-GCAGCUAA--------
+AE015927.1/303338-303443            G-CCCUA--UGAA-ACC--CGGCAACC-A-AUA-UUUUUA----------
+CP000885.1/4762158-4762063          A-CUCAG--UGAA-GUC-ACGGCAACC-C-CCU-AU--------------
+AAJM01000461.1/236-129              G-CCUUA--UGAA-ACC-UCAGCAACAGG-UCU-GCUUA-----------
+ACNI01000057.1/7157-7272            G-CCCUA--AGAA-ACC-UCAGCAACC-C-CUA-UGCAAU----------
+
+CP001034.1/2889251-2889136          ----------------------------------------UCCUGCU---
+AE015927.1/303338-303443            ------------------------------------------GAAGU---
+CP000885.1/4762158-4762063          --------------------------------------------------
+AAJM01000461.1/236-129              -------------------------------------------AGUA---
+ACNI01000057.1/7157-7272            ------------------------------------------UUUAU---
+
+CP001034.1/2889251-2889136          -GUA-AA--GGUGCCA-AAUC--CUG-CAGAAGU-----GUAUU------
+AE015927.1/303338-303443            -AUU-AA--GGUGCCA-AUUC--CUG-CAGAA----------A-------
+CP000885.1/4762158-4762063          -GGG-AA--GGUGCUA-AGUU--GAG-CGAGC------------------
+AAJM01000461.1/236-129              -GAC-AC--UGUGCUA-AUUC--CAG-CGGGUGA-----UAAU-------
+ACNI01000057.1/7157-7272            -AGG-AA--GGUGCUA-AUUC--C-G-CAGAGAA-----CACGAUG----
+
+CP001034.1/2889251-2889136          --------------ACUUC-UG-A-CA-GAUAAGG-A--
+AE015927.1/303338-303443            ---------------GUUC-UG-C-AA-GAUAAGA-G--
+CP000885.1/4762158-4762063          ----------------AAU-CG-A-AC-AAUGAGA-G--
+AAJM01000461.1/236-129              -----------------CC-UG-A-UA-GAUGAGA-G--
+ACNI01000057.1/7157-7272            ------------UGUUUUU-UG-A-AA-GAUAAGA-G--
+
+

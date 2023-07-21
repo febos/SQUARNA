@@ -1,0 +1,81 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+X52144.1/697-961                    CCGUGCUAAGC-GGGGAGGUAGCGGUGCCCUGUA--CCUGCAAUCCGCUC
+CP000001.1/25120-25384              CCGUGCUAAGC-GGGGAGGUAGCGGUGCCCUAUA--CUCGCAAUCCGCUC
+D11420.1/5-270                      CCGUGCUAAGCAGGCGAGGUAGCGGUGCCCCAUA--CCCGCAAUCCGCUC
+AF269814.1/2629-2729                --------------------------------------------------
+X14796.1/291-555                    CCGUGCUAAGC-GGGGAGGUAGCGGUGCCCUGUA--CCUGCAAUCCGCUC
+AE008691.1/46248-46514              CCGUACUAGAU-GGGGAGGUAGCGGUGCCCUGUAG-CCUGCAACCCGCUA
+U15684.1/154-183                    --------------------------------------------------
+AE017225.1/25229-25331              --------------------------------------------------
+CP000560.1/27594-27646              --------------------------------------------------
+AP008934.1/2359274-2359174          --------------------------------------------------
+
+X52144.1/697-961                    U-AGCAGG-GCCGA---AUCCCU-UCUC-GAGGUUCG-UUUACU-UUAAG
+CP000001.1/25120-25384              U-AGCGAG-GCCGA---AUCCCU-UCUC-GAGGUUAU-GUUGCU-GUAAG
+D11420.1/5-270                      U-AGGAGG-GCCGA---AUCCCU-UCUC-GAGGUUCG-UUUACU-GUAAG
+AF269814.1/2629-2729                --------------------------------------------------
+X14796.1/291-555                    U-AGCAGG-GCCGA---AUCCCU-UCUC-GAGGUUCG-UUUACU-UUAAG
+AE008691.1/46248-46514              U-AGCAGG-GUCGA---AUUCCCAGGCU-GAGGCCUGA-UUUCU-GUAAG
+U15684.1/154-183                    --------------------------------------------------
+AE017225.1/25229-25331              --------------------------------------------------
+CP000560.1/27594-27646              --------------------------------------------------
+AP008934.1/2359274-2359174          --------------------------------------------------
+
+X52144.1/697-961                    G-CCUGCC-UUAAGUAAGU-GGU---GUU-GA-CGUUUGGGU---CCUGC
+CP000001.1/25120-25384              G-CCUGCC-UUAAGUAAGU-GGU---GUU-GA-CGUUUGGGU---CCUGC
+D11420.1/5-270                      G-UCUGCC-UUAAGUAAGU-GGC---GUU-GA-CGUCUGGGU---CCUGC
+AF269814.1/2629-2729                ----------------------------------AUUUCGGU---CCUAU
+X14796.1/291-555                    G-CCUGCC-UUAAGUAAGU-GGU---GUU-GA-CGUUUGGGU---CCUGC
+AE008691.1/46248-46514              G-CCUG--GCGCAAGUAAGUGGCGUU-GA-UACUUGA-GU--CCUGCG--
+U15684.1/154-183                    --------------------------------------------------
+AE017225.1/25229-25331              ---------------------------------CGUUUGGGU---CCUGC
+CP000560.1/27594-27646              --------------------------------------------------
+AP008934.1/2359274-2359174          ----------------------------------AUCUCGGU---CCUAU
+
+X52144.1/697-961                    G---CAAUGGGA--AUUC-AUGAACCAUGUCAGGUCCGGAAGGAAGCAGC
+CP000001.1/25120-25384              G---CAACGGGA--CCCC-GUGAACCUUGUCAGGUCCGGAAGGAAGCAGC
+D11420.1/5-270                      G---CAAUGGGA--AUUC-AUGAACCAUGUCAGGUCCGGAAGGAAGCAGC
+AF269814.1/2629-2729                G---CAAUAUGA--ACCC-AUGAACCAUGUCAGGUCCUGACGGAAGCAGC
+X14796.1/291-555                    G---CAAUGGGA--AUUC-AUGAACCAUGUCAGGUCCGGAAGGAAGCAGC
+AE008691.1/46248-46514              ----CAACGGAGA--UUU-GCGAACCCCGUCAGGUCCGGAAGGAAGCAGC
+U15684.1/154-183                    ----------------------AACCAUGUCAGGUCCGGAAGGAAGCAGC
+AE017225.1/25229-25331              G---CAACGGGA--CCCC-GUGAACCUUGUCAGGUCCGGAAGGAAGCAGC
+CP000560.1/27594-27646              ----------GA--AUUC-AUGAACCAUGUCAGGUCCGGAAGGAAGCAGC
+AP008934.1/2359274-2359174          G---CAAUAUGA--ACCC-AUGAAUCAUGUCAGGUCCUGACGGAAGCAGC
+
+X52144.1/697-961                    AUUAAGUGAAACCUCUCA-UGUG---CCGCAGG--GUUGC-CUGGGCCG-
+CP000001.1/25120-25384              AAUAAGCGGGUCUUCUCG-UGUG---CCGCAGG--AGUGC-CUGAACCG-
+D11420.1/5-270                      AUUAAGUGAAACCUCUCA-UGUG---CCGCAGG--GUUGC-CUGGGCUG-
+AF269814.1/2629-2729                AUUAAGUGGAUCCUCAUA-UGUG---CCGUAGG--GUAGC-CGAGAUUUA
+X14796.1/291-555                    AUUAAGUGAAACCUCUCA-UGUG---CCGCAGG--GUUGC-CUGGGCCG-
+AE008691.1/46248-46514              GGUAAGCAAACACCUCCG-UGUGCCGCAGG--GGU-GCUUGAGUGG----
+U15684.1/154-183                    AU------------------------------------------------
+AE017225.1/25229-25331              AAUAAGCGGGUCUUCUCG-UGUG---CCGCAGG--AGUGC-CUGAACCG-
+CP000560.1/27594-27646              AUUAAGUGAAACCUCU----------------------------------
+AP008934.1/2359274-2359174          AUUAAGUGGAUCAUCGUA-UGUG---CCGUAGG--GUUGC-CGAGAUUUA
+
+X52144.1/697-961                    ----AGCU-AACU-GCUUAA--GUAACGCUUAG--GGUAG--CGAAUCGA
+CP000001.1/25120-25384              ----AGCU-AACU-GCUUAA--GUAACGCUUAUG-G-UAC--GUAAUCGA
+D11420.1/5-270                      ----AGCU-AACU-GCUUAA--GUAACGCUUAG--GGUAG--CGAAUCGA
+AF269814.1/2629-2729                G-------------------------------------------------
+X14796.1/291-555                    ----AGCU-AACU-GCUUAA--GUAACGCUUAG--GGUAG--CGAAUCGA
+AE008691.1/46248-46514              ----AGCUAACU-GCUUGCGUAACG---CUUAU--GGGGA--CAGGUCG-
+U15684.1/154-183                    --------------------------------------------------
+AE017225.1/25229-25331              ----AGC-------------------------------------------
+CP000560.1/27594-27646              --------------------------------------------------
+AP008934.1/2359274-2359174          G-------------------------------------------------
+
+X52144.1/697-961                    CAGA-AGGUGCACGG
+CP000001.1/25120-25384              CAGA-AGGUGCACGG
+D11420.1/5-270                      CAGA-AGGAGCACGG
+AF269814.1/2629-2729                ---------------
+X14796.1/291-555                    CAGA-AGGUGCACGG
+AE008691.1/46248-46514              AAGCUGGGUGUACGG
+U15684.1/154-183                    ---------------
+AE017225.1/25229-25331              ---------------
+CP000560.1/27594-27646              ---------------
+AP008934.1/2359274-2359174          ---------------
+
+

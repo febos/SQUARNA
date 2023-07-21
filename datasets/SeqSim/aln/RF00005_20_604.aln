@@ -1,0 +1,67 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+X16746.1/1-72                       GGCAACAU-G-GCCAAGC---GGCU--AAGGCA-U-GGGUC-UGCAACAC
+J04815.1/1953-1885                  AGAGGUCU-A-GUUAAA----AU----AUAACU-U-UGGGU-UGUCAGGC
+M68929.1/165481-165397              GCGGAUAU-G-AUGGAAUU--GGUA--GACAUG-C-CAGGU-UUAGGUUC
+X99772.1/11702-11770                GUAGAUUU-A-GUUUAA----CC----AAGACA-U-UAGAU-UGUGAUUC
+X16885.1/779-708                    GGUAAAGU-A-AGCUAAAU--GUU---AAGCUU-U-UGGGU-UCAUACCU
+L00194.1/685-756                    GGGGCCAU-A-GCUCAGUU--GGU---AGAGCG-C-CUGCU-UUGCAAGC
+M86495.1/1026-1092                  CAAGAUAU-A-GCUUAA----AC----AAAGCA-C-CUAGU-UUACACCU
+X59562.1/71-144                     GGGACUAU-A-GUUUAGUU--GGAU--AUAACG-A-CCGGC-UACGAACC
+M24578.1/1373-1445                  GCCCGGCU-A-GCUCAGUC--GGU---AGAGCG-C-CAGAC-UCUUAAUC
+M86497.1/1-66                       GUUAAUGU-A-GCUUAAA---CU----AAAGCA-A-GGCAC-UGAAAAUG
+Y10943.1/948-1016                   CAAAGUAU-A-GCUUAACC--------AAAGCC-U-UUCGC-UUACACCG
+AF069749.1/1422-1494                UCCUCUGU-A-GUUCAGUC--GGU---AGAACG-G-CGGAC-UGUUAAUC
+AL021918.1/94597-94678              GUAGUCGU-G-GCCGAGU---GGUU--AAGGCG-A-UGGAC-UUGAAAUC
+D11467.1/1-72                       UGGGGCGU-G-GCCAAGC---GGU---AAGGCA-G-CAGGU-UUUGAUCC
+D00548.1/191-271                    GGAGGGGU-A-GCGAAGU---GGCUA-AACGCG-G-GUGGC-UGUAACCC
+K01749.1/2878-2958                  GAAGUAAU-G-GCUGAGU---GGUU--AAAGCG-G-CAGAC-UGUAAAUC
+AC084429.5/20418-20485              GUGAAUAU-A-GUUUAC----AA----AAAACA-U-UAGAC-UGUGAAUC
+K00367.1/1-82                       GGCACUAU-G-GCCGAGU---GGUU--AAGGCG-A-GAGAC-UCGAAAUC
+X14822.1/1-73                       UGAAUCGU-A-GACUAAUA--GGU---AAGUCA-C-CAAAA-UUUGAGUU
+AAEU02004214.1/433-498              AUUCAAAU-A-GCUUAUA---UUU---AGAGUA-U-GACAC-UGAAGAUG
+
+X16746.1/1-72                       CC-UGA------------------------U---CAUC-GGU-UCG-AA-
+J04815.1/1953-1885                  CA-AAA------------------------U---UGCU-GGU-UAA-AU-
+M68929.1/165481-165397              UG-GU--GAC-CA--UAA-------UGUUCG---UGGG-GGU-UCG-AG-
+X99772.1/11702-11770                UA-AAA------------------------A---UAGA-GGU-UAA-AC-
+X16885.1/779-708                    CA-AAA------------------------A---UAGAAGGA-UAA-AA-
+L00194.1/685-756                    AG-GUG------------------------U---CGUC-GGU-UCG-AA-
+M86495.1/1026-1092                  AG-AAG------------------------A---UUUC-ACA-CAC-UA-
+X59562.1/71-144                     GG-UAG------------------------GU--CUCA-GGU-UCG-AC-
+M24578.1/1373-1445                  UG-GUG------------------------GU--CGGG-GGU-UCG-AG-
+M86497.1/1-66                       CC-UAG------------------------A---UGGG-U-A-UUU-A--
+Y10943.1/948-1016                   AA-ACA------------------------A---UAUC-UGU-UAA-AC-
+AF069749.1/1422-1494                CG-UAU------------------------GU--CACU-GGU-UCG-AG-
+AL021918.1/94597-94678              CA-UU--GGG-G---UUU--------CCCCG---CGCA-GGU-UCG-AA-
+D11467.1/1-72                       UG-UUA------------------------UU--CGGA-GGU-UCG-AA-
+D00548.1/191-271                    AC-UU--CC------UUA---C------GGUU--CGGG-GGU-UCG-AA-
+K01749.1/2878-2958                  UG-UU--GGU-----AGU---------ACCGU--CGUU-GGU-UCG-AA-
+AC084429.5/20418-20485              UG-ACA------------------------A---CAGG-AAA-UAA-AC-
+K00367.1/1-82                       UC-UU--GGG-C---UCU--------GCCCG---CGCU-GGU-UCA-AA-
+X14822.1/1-73                       UG-GAA------------------------UU--UGUU-UGU-UCG-AA-
+AAEU02004214.1/433-498              UC-AUG------------------------G---AGAU-U---AAU-U--
+
+X16746.1/1-72                       -UCCGA-U-UGUUGCC-U
+J04815.1/1953-1885                  -UCCAG-C-GGCUUCU-G
+M68929.1/165481-165397              -UCCCU-C-UAUCCGU-A
+X99772.1/11702-11770                -CCCUC-U-AAUCCAC-C
+X16885.1/779-708                    -ACCUC-U-CUUUAUC--
+L00194.1/685-756                    -UCCGU-C-UGGCUCC-A
+M86495.1/1026-1092                  ---UGA-A-UAUCUUG-A
+X59562.1/71-144                     -CCCUG-A-UGGUCUC-G
+M24578.1/1373-1445                  -CCCCC-C-GUUGGGC-G
+M86497.1/1-66                       ---ACU-C-CAUAAAC-A
+Y10943.1/948-1016                   -CCGGA-U-UACUUUG-A
+AF069749.1/1422-1494                -UCCAG-U-CAGAGGA-G
+AL021918.1/94597-94678              -UCCUG-C-CGACUAC-G
+D11467.1/1-72                       -UCCUU-C-CGUCCCA-G
+D00548.1/191-271                    -UCCCU-C-CCCCUCC-A
+K01749.1/2878-2958                  -UCCAA-C-UUACUUC-A
+AC084429.5/20418-20485              --CUCC-U-UAUUCAC-C
+K00367.1/1-82                       -UCCUG-C-UGGUGUC-G
+X14822.1/1-73                       -UCAAA-C-CGGUUCA-A
+AAEU02004214.1/433-498              ---AAU-C-UUUGAAU-A
+
+

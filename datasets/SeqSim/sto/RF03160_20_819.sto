@@ -1,0 +1,50 @@
+# STOCKHOLM 1.0
+#=GF AC   RF03160
+#=GF ID   twister-P1
+#=GF DE   type-P1 twister ribozyme
+#=GF AU   Weinberg Z; 0000-0002-6681-3624
+#=GF AU   Ames TD
+#=GF SE   Published; PMID:24240507;
+#=GF SS   Published; PMID:24240507;
+#=GF GA   67.20
+#=GF TC   67.20
+#=GF NC   67.10
+#=GF TP   Gene; ribozyme;
+#=GF BM   cmbuild -F CM SEED
+#=GF CB   cmcalibrate --mpi CM
+#=GF SM   cmsearch --cpu 4 --verbose --nohmmonly -T 30.00 -Z 742849.287494 CM SEQDB
+#=GF CL   CL00120
+#=GF DR   SO; 0000374; catalytic activity;
+#=GF DR   GO; 0003824; catalytic activity;
+#=GF RN   [1]
+#=GF RM   24240507
+#=GF RT   A widespread self-cleaving ribozyme class is revealed by bioinformatics.
+#=GF RA   Roth A, Weinberg Z, Chen AG, Kim PB, Ames TD, Breaker RR
+#=GF RL   Nat Chem Biol. 2014;10:56-60.
+#=GF CC   The twister ribozyme motif, present stem P3 variant (type P3) [1]
+#=GF WK   Twister_ribozyme
+#=GF SQ   1613
+
+RF03160__URS0000D661B7_6183/1-71    UCAG-UAA-CUCCGCCUGUAGCUCC----------------UCUG------------------------------------------------------GGGGUUGCUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D65948_6183/1-72    CCCC-UAA-CUCCGCUUGUAGCCC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGAUC--AGGC
+RF03160__URS0000D68306_12908/16-77  GCCU-UAA-UGCAGCUCCCC---------------------CAAAG----------------------------------------------------------GGGGAACGGUCACAAGC-CCGU----------------GGAAA------------------------UGCA-GAGUG----AGGC
+RF03160__URS0000D696E6_12908/20-80  ACCU-UAA-UGCAACUUCCG---------------------CCAA-----------------------------------------------------------CGGGAACGGUCACAAGU-CCGU----------------AUGAA------------------------UGCA-GAGUG----AGGA
+RF03160__URS0000D67306_12908/28-86  UACC-UAA-ACUAGCCAC-----------------------ACCACA-----------------------------------------------------------GUGACAGUCCUAAGC-CUGU----------------AUAAA------------------------UAGU-GAAGG----GGUA
+RF03160__URS0000D6ACC0_12908/15-72  -UCU-UAA-UGCAGCCGCC----------------------GGUAA-----------------------------------------------------------GGCGAUGGUCGCAAGC-CCAU----------------GAAA-------------------------UGCA-GAGCG----GGGG
+RF03160__URS0000D69FA4_6183/1-70    GCAU-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6A4B9_6183/1-70    GUAG-AAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGA----------------GUAAA------------------------GGAG-GAGGG----UUGA
+RF03160__URS0000D66DA6_6183/1-74    UGUC-UAA-CUCCGCCUGUAGAUCC----------------UCCG------------------------------------------------------GGGGCUACUGCUGGUCCCAAGU-CCAG----------------GUAAA------------------------GGAG-GAGGGUUG-GGCA
+RF03160__URS0000D673FF_12908/19-77  GCUC-UAA-UGCAGCUGCU----------------------GAUC------------------------------------------------------------AGCAACGGUCGCAAGC-CCGU----------------AUAAA------------------------UGCA-GAGCG----GAGA
+RF03160__URS0000D6B1CC_6183/1-70    ACAA-UAA-CUCCUCCUGUAGCUCU----------------CCU-------------------------------------------------------AGAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D6D03E_6183/1-70    GUAG-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUUCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D664F4_12908/30-90  CGCU-UAA-GCCUACUGGC----------------------AAUGAA----------------------------------------------------------GUCAGCUGUUACAAGU-CAGC----------------ACAAA------------------------AGGU-GAGUA----AGCA
+RF03160__URS0000D68585_214688/28-97 GCCG-UAA-UGCAGCCGCCGCGGC-----------------ACGC-------------------------------------------------------GCCGCGGCGCCGGUCCCAAGC-CCGG----------------AGCGAA-----------------------UGCA-GAGGG----GGGU
+RF03160__URS0000D6A103_12908/31-95  CGUU-UAA-UGUAGCCAUAUCU-------------------UUAA---------------------------------------------------------AGGUAUGAGAGUCUAAAGC-CUCU----------------AUAAA------------------------UACA-GAUAG----GACG
+RF03160__URS0000D67428_12908/1-74   GCAUGUAA-CUCCGCCUGUGGGC------------------ACUAUGCAUG--------------------------------------------------GCUCACAGCCGGUCUCAAGC-CCGG----------------GGUAA------------------------GGAG-GAGAG----AUGC
+RF03160__URS0000D663F1_6183/1-70    CGUA-UAA-CUCCGCCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CUGG----------------GUAAA------------------------GGAG-GAGGG----UUGG
+RF03160__URS0000D692C9_6183/1-68    AAUC-UAA-CUCCACCUGUAGCUC-----------------UUCUA------------------------------------------------------GAGUUACUGCCGGUCCCAAGC-CCGG----------------GUAAA------------------------GGAG-GAGGG------UU
+RF03160__URS0000D6CC71_12908/24-78  UUCU-UAA-UGUAGC--------------------------CGUUG---------------------------------------------------------------GUGGUCCAAAGC-CCAC----------------AUGAGAAA---------------------UACA-GAUGG----AGAU
+RF03160__URS0000D6CEF6_12908/18-75  ACCU-UAA-UGCAGCUCC-----------------------GAAA-------------------------------------------------------------GGAACGGUGACAAGC-CCGU----------------AUUAA------------------------UGCA-GAGUCA---AGGA
+#=GC SS_cons                        ((((.---.((((BB<<<<<<__.................._____........................................................_>>>>>><<<__AAA__bb._>>>................,,,,,........................)))).--aaa....))))
+#=GC RF                             uuuu.UAA.uGCaGCCaguaucu..................cauua........................................................gauacuGcCGGUCCCAAGC.CCGg................AuAAA........................uGCa.GAGGG....aaaa
+//

@@ -1,0 +1,59 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+ACKT01000016.1/194512-194407        A-CCUCAUCCAGAG-CAG-U-GG-----------------AGGGA--AUG
+URS0002311979_119072/1-94           G-GCUUAUCAAGAG-AGG-G-CG-----------------AGGGA--CUG
+ABYC01000290.1/27042-27199          C-GCUCAUCCAGAG-GGG-C-AG-----------------AGGGA-CACG
+AAOX01000055.1/439-545              U-UCUUAUCGAGAG-UGG-U-GG-----------------AGGGA--CUG
+CP003029.1/2215558-2215432          A-GCUCAUCCAGAA-GGG-U-GG-----------------AGGGA-CCAG
+AANC01000003.1/237429-237533        A-UGUUAUCAAGAA-AGG-C-GG-----------------AGGGA-AUAG
+AP006627.1/604071-603968            U-UCUUAUUAAGAG-GAG-C-AG-----------------AGGGA--CUG
+U36379.1/1-106                      A-UCCU-----GAG-UGG-U-GG-----------------AGGGA-CAUG
+AP008934.1/1011112-1011223          C-UCUUAUCCUGAG-UGG-C-GG-----------------AGGGACAUGG
+AL596170.1/192-86                   C-UCUUAUUAUGAG-UGG-U-AG-----------------AGGGA--CUG
+
+ACKT01000016.1/194512-194407        G-CCCGA--UGAA-GCU-GCGGCAACC-A-UGA-CGACU-----------
+URS0002311979_119072/1-94           G-CCCGA--CGAC-CCC--CGGCAACC----------AG-----------
+ABYC01000290.1/27042-27199          G-CCCGU--UGAA-GCC-CCGGCAACC-C-UCC-GGUCGGUACUCCCGGC
+AAOX01000055.1/439-545              G-CCCUG--UGAU-ACC--CGGCAGCC-G-CUG-ACUUA-----------
+CP003029.1/2215558-2215432          G-CCCUG--UGAA-GCC-CUGGCAACC-G-CCC-CGUUGAUCGUCGG---
+AANC01000003.1/237429-237533        A-CCCUA--UGAA-GCC-UUAGCAACC-C-UUU-CUCC------------
+AP006627.1/604071-603968            G-CCCAA--UGAU-GCU-UCAGCAACC-C-CGC-CAU-------------
+U36379.1/1-106                      GACCCAA--UGAA-ACC--CAGCAACC-U-CUU-UUUUA-----------
+AP008934.1/1011112-1011223          A-CCCAA--UGAA-GCC--CAGCAACC-U-CUU-CUUAA-----------
+AL596170.1/192-86                   G-CCCGU--UGAA-ACC--CAGCAACC-U-UUC-AAUUC-----------
+
+ACKT01000016.1/194512-194407        --------------------------------------------GGG---
+URS0002311979_119072/1-94           --------------------------------------------AA----
+ABYC01000290.1/27042-27199          GCGUGUUCCA------------CCCGCGUCCGCGAGGCUCCCGGCUC---
+AAOX01000055.1/439-545              --------------------------------------------GUC---
+CP003029.1/2215558-2215432          -----------------------------------GAGACGACGUGG---
+AANC01000003.1/237429-237533        --------------------------------------------CGA---
+AP006627.1/604071-603968            --------------------------------------------GAG---
+U36379.1/1-106                      -------------------------------------------UAAA---
+AP008934.1/1011112-1011223          -------------------------------------------UUGA---
+AL596170.1/192-86                   -------------------------------------------GUUG---
+
+ACKT01000016.1/194512-194407        -UCA-AC--GGUGCCA-AUUC--CUU-UAGGCGG-------AC-------
+URS0002311979_119072/1-94           -----AU--GGUGCCA-AUUC--CUG-CAGCG--------GAA-------
+ABYC01000290.1/27042-27199          -GGG-AA--GGUGCCA-AUUC--CGU-CUCGCGG-----CGAGAUG----
+AAOX01000055.1/439-545              -AGA-AU--GGUGCUA-AAUC--CAG-CAAAGCG-----CAAU-------
+CP003029.1/2215558-2215432          -GGA-AA--GGUGCCA-AUUC--CUG-CCUCGCA-----CGAC-------
+AANC01000003.1/237429-237533        -AAG-AA--GGUGCUA-CAUU--CUA-UCUGU--------UUU-------
+AP006627.1/604071-603968            -CGG-AA--GGUGCUA-AUUC--CAG-CAGGA-------CUAC-------
+U36379.1/1-106                      -AGA-AA--GGUGCCA-AACCGUUUG-CAGACA------AAUA-------
+AP008934.1/1011112-1011223          -AGA-AA--GGUGCCA-AACCGUUUG-CAGACAA-----AUAG-------
+AL596170.1/192-86                   -AAA-A---GGUGCUA-AAUC--CUG-CGAAGUG-----UGAU-------
+
+ACKT01000016.1/194512-194407        ---------------UGCC-UA-U-GA-GAUGAGA-G--
+URS0002311979_119072/1-94           ---------------ACGU-UG-A-AA-GAUGAGC-CG-
+ABYC01000290.1/27042-27199          ------------CGUCGCG-AG-G-AA-GAUGAGG-A--
+AAOX01000055.1/439-545              ---------------GCUU-UG-G-CA-GAUAAGA-U--
+CP003029.1/2215558-2215432          --------------CGCGA-GG-G-GA-GAUGAGC-U--
+AANC01000003.1/237429-237533        ---------------UGCA-GA-A-UA-GAUAACG-C--
+AP006627.1/604071-603968            ---------------GUCC-UG-G-GA-GAUAAGA-G--
+U36379.1/1-106                      ---------------GGUC-UG-A-AC-GAUAAGA-G--
+AP008934.1/1011112-1011223          ---------------CGUC-UG-A-AC-GAUAAGA-G--
+AL596170.1/192-86                   ---------------GCUU-CG-A-GA-GAUAAGA-G--
+
+

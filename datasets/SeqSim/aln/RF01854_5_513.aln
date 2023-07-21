@@ -1,0 +1,46 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+CP000002.3/30682-30947              CCGUGCUAAGC-GGGGAGGUAGCGGUGCCCUGUAC-UC-GCAAUCCGCUC
+CP000253.1/444208-444308            --------------------------------------------------
+CP000716.1/1385812-1385778          --------------------------------------------------
+CP000813.1/551215-551244            --------------------------------------------------
+BA000004.3/46485-46751              CCGUGCUAGGU-GGGGAGGUAGCGGUGCCCUGUCA-CUCGCAAUCCGCUA
+
+CP000002.3/30682-30947              G-AGCGAG-GCCGA---AUCCCUUUCUC-GAGGUUCG--UUUACUUUAAG
+CP000253.1/444208-444308            --------------------------------------------------
+CP000716.1/1385812-1385778          --------------------------------------------------
+CP000813.1/551215-551244            --------------------------------------------------
+BA000004.3/46485-46751              U-AGCGAG-GCUGA---AUCCCU-UCUA-GAGGUUUU--GUCACCGUAGG
+
+CP000002.3/30682-30947              G-UCUGCC-UUAAGCAAGU-GGU---GUU-GA-CGCUUGGGU---CCUGC
+CP000253.1/444208-444308            ----------------------------------AUUUCGGU---CCUAU
+CP000716.1/1385812-1385778          --------------------------------------------------
+CP000813.1/551215-551244            --------------------------------------------------
+BA000004.3/46485-46751              G-UCUGCC-CUAAGUAAGU-GGU---GUU-GA-CGCUUGGGU---UCUAC
+
+CP000002.3/30682-30947              G---CAAUGGGA--AUCC-AUGAACCAUGUCAGGUCCGGAAGGAAGCAGC
+CP000253.1/444208-444308            G---CAAUAUGA--ACCC-AUGAACCAUGUCAGGUCCUGACGGAAGCAGC
+CP000716.1/1385812-1385778          ---------------------GAACCGGGUCAGGUCCGGAAGGAAGCAGC
+CP000813.1/551215-551244            ----------------------AACCAUGUCAGGUCCGGAAGGAAGCAGC
+BA000004.3/46485-46751              G---CAACGAAA--ACCC-ACGAACCCUGUCAGGUCCGGAAGGAAGCAGC
+
+CP000002.3/30682-30947              AUUAAGUGGAACCUUCCA-UGUG---CCGCAGG--GUUGC-CUGGGCUG-
+CP000253.1/444208-444308            AUUAAGUGGAUCAUCAUA-UGUG---CCGUAGG--GUAGC-CGAGAUUU-
+CP000716.1/1385812-1385778          CCUAAG--------------------------------------------
+CP000813.1/551215-551244            AU------------------------------------------------
+BA000004.3/46485-46751              AGUAAGUGGCCCCUUUCG-UGUG---CCGUAGA--GUCGC-CUGGGCCG-
+
+CP000002.3/30682-30947              ----AGCU-AACU-GCUUAA--GUAACGCUUAG--GGUAG--CGAAUCGA
+CP000253.1/444208-444308            ----AG--------------------------------------------
+CP000716.1/1385812-1385778          --------------------------------------------------
+CP000813.1/551215-551244            --------------------------------------------------
+BA000004.3/46485-46751              ----AGCU-AACU-GCUCAG--GUAACGCCUAGG-GUGGC--AUGAUCGA
+
+CP000002.3/30682-30947              CAGA-AGGUGCACGG
+CP000253.1/444208-444308            ---------------
+CP000716.1/1385812-1385778          ---------------
+CP000813.1/551215-551244            ---------------
+BA000004.3/46485-46751              AGGA-AGGUGCACGG
+
+

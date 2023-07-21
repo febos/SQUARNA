@@ -1,0 +1,34 @@
+CLUSTAL X (1.81) multiple sequence alignment
+
+
+ACJX02000007.1/318260-318153        C-UCUUAUCCAGAG-CGG-C-GG-----------------AGGGA--CUG
+URS000080E1B3_911092/1-94           G-GCUUAUCAAGAG-AGG-U-UU-----------------AGGGA--CUG
+CP000909.1/4069333-4069227          U-GCUCAUCGAGAU-GGG-C-UG-----------------AGGGA--CUG
+URS000080DF35_32630/1-94            G-GCUUAUCAAGAG-AGG-U-GG-----------------AGGGA--CUG
+AP009484.1/63878-63783              U-GCUUAUCCAGAG-UGG-U-GG-----------------AGGGA--CUG
+
+ACJX02000007.1/318260-318153        G-CCCUG--CGAA-GCC--CGGCAACCU--GCU-UACCCUU---------
+URS000080E1B3_911092/1-94           G-CCCGA--CGAA-ACC--CGGCAACC-----------------------
+CP000909.1/4069333-4069227          G-CCCGA--UGAC-GCC--CGGCAACC-C-CCG-CCA-------------
+URS000080DF35_32630/1-94            G-CCCGA--UGAA-ACC--CGGCAACC-----------------------
+AP009484.1/63878-63783              G-CCCUA--UGAA-ACC--CGGCAACC-U-AUU-A---------------
+
+ACJX02000007.1/318260-318153        -----------------------------------------UGGGGA---
+URS000080E1B3_911092/1-94           -----------------------------------------------AGA
+CP000909.1/4069333-4069227          --------------------------------------------------
+URS000080DF35_32630/1-94            -----------------------------------------------AGA
+AP009484.1/63878-63783              --------------------------------------------------
+
+ACJX02000007.1/318260-318153        -GC--GU--GGUGCCA-AAAC--CUG-CAACC--------GAA-------
+URS000080E1B3_911092/1-94           A----AU--GGUGCCA-AUUC--CUG-CAGCG--------GAA-------
+CP000909.1/4069333-4069227          -GGG-AA--GGUGCCA-AAUC--CAG-CGGCAAU-----GGAUAU-----
+URS000080DF35_32630/1-94            A----AU--GGUGCCA-AUUC--CUG-CAGCG--------GAA-------
+AP009484.1/63878-63783              -AUU-UA--GGUGCUA-AUUC--CAG-CAGGU---------AU-------
+
+ACJX02000007.1/318260-318153        ---------------AGGU-UG-A-AU-GAUGAGA-G--
+URS000080E1B3_911092/1-94           ---------------ACGU-UG-A-AA-GAUGAGC-CG-
+CP000909.1/4069333-4069227          ------------CAUUGGC-CG-A-AA-GAUGAGA-G--
+URS000080DF35_32630/1-94            ---------------ACGU-UG-A-AA-GAUGAGC-CA-
+AP009484.1/63878-63783              ---------------AUCC-UG-A-AA-GAUAAGG-U--
+
+
