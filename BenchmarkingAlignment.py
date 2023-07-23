@@ -136,7 +136,7 @@ if __name__ == "__main__":
 
         for tool in {"RNAStralignExt":(),
                      "Rfam14.9":("IPknot", "CentroidAlifold", "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
-                     "RfamPDB":("SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
+                     "RfamPDB":(),
                      "SubAli": ("RscapeNested",
                                 "IPknot", "CentroidAlifold",
                                 "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
