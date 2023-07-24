@@ -12,6 +12,7 @@ inp.tmp
 outp.tmp
 tmp/*
 *test.py
+nohup.out
 
 # Distribution / packaging
 .Python

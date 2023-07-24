@@ -132,17 +132,17 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset in ("RfamPDB", "Rfam14.9", "SubAli", "SeqSim"):
+    for dataset in ("SeqSim", "SubAli", "Rfam14.9"):
 
         for tool in {"RNAStralignExt":(),
-                     "Rfam14.9":("IPknot", "CentroidAlifold", "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
+                     "Rfam14.9":("CentroidAlifold", "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i","IPknot"),
                      "RfamPDB":(),
                      "SubAli": ("RscapeNested",
-                                "IPknot", "CentroidAlifold",
-                                "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i"),
-                     "SeqSim": ("RNAalifold", "SQUARNAs1", "RscapeNested", "RscapeTotal",
-                                "IPknot", "CentroidAlifold",
-                                "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i")}[dataset]:
+                                "CentroidAlifold",
+                                "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i", "IPknot" ),
+                     "SeqSim": ("RscapeNested", "RscapeTotal",
+                                "CentroidAlifold",
+                                "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i", "IPknot",)}[dataset]:
                 
             outname = "{}_{}".format(dataset,tool)
             title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
