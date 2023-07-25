@@ -140,9 +140,7 @@ if __name__ == "__main__":
                      "SubAli": ("RscapeNested",
                                 "CentroidAlifold",
                                 "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i", "IPknot" ),
-                     "SeqSim": ("RscapeNested", "RscapeTotal",
-                                "CentroidAlifold",
-                                "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i", "IPknot",)}[dataset]:
+                     "SeqSim": ("SQUARNAs3u", "SQUARNAs3i", "IPknot",)}[dataset]:
                 
             outname = "{}_{}".format(dataset,tool)
             title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
