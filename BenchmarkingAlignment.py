@@ -132,83 +132,86 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset in ("SeqSim", "SubAli", "Rfam14.9"):
-
-        for tool in {"RNAStralignExt":(),
-                     "Rfam14.9":("CentroidAlifold", "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i","IPknot"),
-                     "RfamPDB":(),
-                     "SubAli": ("RscapeNested",
-                                "CentroidAlifold",
-                                "SQUARNAs2", "SQUARNAs3u", "SQUARNAs3i", "IPknot" ),
-                     "SeqSim": ("SQUARNAs3u", "SQUARNAs3i", "IPknot",)}[dataset]:
+    for dataset, tool in (("SubAli", "RscapeNested"),
+                          ("SubAli", "CentroidAlifold"),
+                          ("SubAli", "SQUARNAs2"),
+                          ("SubAli", "SQUARNAs3u"),
+                          ("SubAli", "SQUARNAs3i"),
+                          ("Rfam14.9","CentroidAlifold"),
+                          ("Rfam14.9","SQUARNAs2"),
+                          ("Rfam14.9","SQUARNAs3u"),
+                          ("Rfam14.9","SQUARNAs3i"),
+                          ("Rfam14.9","IPknot"),
+                          ("SubAli", "IPknot"),
+                          ("SeqSim","IPknot"),):
                 
-            outname = "{}_{}".format(dataset,tool)
-            title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
-            outp1 = open(outname+'.fas','w')
-            outp2 = open(outname+'.tsv','w')
-            outp2.write(title+'\n')
+        outname = "{}_{}".format(dataset,tool)
+        title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
+        outp1 = open(outname+'.fas','w')
+        outp2 = open(outname+'.tsv','w')
+        outp2.write(title+'\n')
 
-            t0 = time.time()
+        t0 = time.time()
 
-            famfiles = glob.glob("datasets/{}/sto/*".format(dataset))
-            fams = []
+        famfiles = glob.glob("datasets/{}/sto/*".format(dataset))
+        fams = []
 
-            for famfile in famfiles:
-                fam = os.path.basename(famfile).split('.')[0]
-                headers, seqnames, seqdict, gcnames, gcdict = ReadStockholm(famfile)
-                LEN    = len(gcdict['SS_cons'])
-                DEPTH  = len(seqnames)
-                refdbn = PairsToDBN(DBNToPairs(gcdict['SS_cons']), LEN)
-                fams.append((LEN, DEPTH, fam, refdbn))
-            fams.sort()
+        for famfile in famfiles:
+            fam = os.path.basename(famfile).split('.')[0]
+            headers, seqnames, seqdict, gcnames, gcdict = ReadStockholm(famfile)
+            LEN    = len(gcdict['SS_cons'])
+            DEPTH  = len(seqnames)
+            refdbn = PairsToDBN(DBNToPairs(gcdict['SS_cons']), LEN)
+            fams.append((LEN, DEPTH, fam, refdbn))
+        fams.sort()
 
-            cnt = 0  
-            for LEN, DEPTH, fam, refdbn in fams:
-                cnt += 1
-                name = '>'+fam
-                print(name,end='')
+        cnt = 0  
+        for LEN, DEPTH, fam, refdbn in fams:
+            cnt += 1
+            name = '>'+fam
+            print(name,end='')
 
-                preddbn = {"SQUARNAs1":PredictSQUARNAs1,
-                           "SQUARNAs2":PredictSQUARNAs2,
-                           "SQUARNAs3i":PredictSQUARNAs3i,
-                           "SQUARNAs3u":PredictSQUARNAs3u,
-                           "RNAalifold":PredictRNAalifold,
-                           "CentroidAlifold":PredictCentroidAlifold,
-                           "IPknot": PredictIPknot,
-                           "RscapeNested": PredictRscapeNested,
-                           "RscapeTotal" : PredictRscapeTotal,
-                           }[tool](dataset, fam)
+            preddbn = {"SQUARNAs1":PredictSQUARNAs1,
+                        "SQUARNAs2":PredictSQUARNAs2,
+                        "SQUARNAs3i":PredictSQUARNAs3i,
+                        "SQUARNAs3u":PredictSQUARNAs3u,
+                        "RNAalifold":PredictRNAalifold,
+                        "CentroidAlifold":PredictCentroidAlifold,
+                        "IPknot": PredictIPknot,
+                        "RscapeNested": PredictRscapeNested,
+                        "RscapeTotal" : PredictRscapeTotal,
+                        }[tool](dataset, fam)
 
-                t1 = time.time()-t0
+            t1 = time.time()-t0
 
-                print("...COMPLETE ({}sec) == {}/{}".format(round(t1,3), cnt, len(fams)))
+            print("...COMPLETE ({}sec) == {}/{}".format(round(t1,3), cnt, len(fams)))
 
-                pairsr = set(DBNToPairs(refdbn))
-                pairsq = set(DBNToPairs(preddbn))
+            pairsr = set(DBNToPairs(refdbn))
+            pairsq = set(DBNToPairs(preddbn))
 
-                TP = len(pairsr & pairsq)
-                FP = len(pairsq - pairsr)
-                FN = len(pairsr - pairsq)
+            TP = len(pairsr & pairsq)
+            FP = len(pairsq - pairsr)
+            FN = len(pairsr - pairsq)
                     
-                FS = 2*TP / (2*TP + FN + FP) if (TP + FN + FP) else 1
-                PRC = (TP / (TP + FP)) if (TP+FP) else 1
-                RCL = (TP / (TP + FN)) if (TP+FN) else 1
+            FS = 2*TP / (2*TP + FN + FP) if (TP + FN + FP) else 1
+            PRC = (TP / (TP + FP)) if (TP+FP) else 1
+            RCL = (TP / (TP + FN)) if (TP+FN) else 1
 
-                outp1.write(name+'\n')
-                outp1.write(refdbn+'\n')
-                outp1.write(preddbn+'\n')
-                outp1.write("LEN={} DEPTH={}, TIME={}sec TP={} FP={} FN={} PRC={} RCL={} FS={}\n"\
-                            .format(LEN, DEPTH,round(t1,3),
-                                    TP,FP,FN,
-                                    round(PRC,3),
-                                    round(RCL,3),
-                                    round(FS,3)))
-                res = [name[1:], LEN, DEPTH, round(t1,3), TP, FP, FN,
-                        round(PRC,3), round(RCL,3), round(FS,3),
-                        refdbn,preddbn]
-                outp2.write('\t'.join([str(g) for g in res])+'\n')
+            outp1.write(name+'\n')
+            outp1.write(refdbn+'\n')
+            outp1.write(preddbn+'\n')
+            outp1.write("LEN={} DEPTH={}, TIME={}sec TP={} FP={} FN={} PRC={} RCL={} FS={}\n"\
+                        .format(LEN, DEPTH,round(t1,3),
+                                TP,FP,FN,
+                                round(PRC,3),
+                                round(RCL,3),
+                                round(FS,3)))
+            res = [name[1:], LEN, DEPTH, round(t1,3), TP, FP, FN,
+                    round(PRC,3), round(RCL,3), round(FS,3),
+                    refdbn,preddbn]
+            outp2.write('\t'.join([str(g) for g in res])+'\n')
 
-            outp1.close()
-            outp2.close()
+        outp1.close()
+        outp2.close()
 
 
