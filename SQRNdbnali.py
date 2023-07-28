@@ -343,7 +343,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                           minlen, minbpscore,
                           threads, verbose)[0]
 
-    # Truncate pseudoknotted bps of order higher than levellimit
+    # Truncate pseudoknotted bps of order higher than levellimit for the step1 structure
     step1dbn = PairsToDBN(DBNToPairs(pred_dbn), N,
                           levellimit = levellimit)
 
@@ -376,6 +376,10 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                 print(Consensus(structs, lim / 100), str(lim)+'%', sep='\t')
     else:
         step2dbn = '.' * N
+
+    # Truncate pseudoknotted bps of order higher than levellimit for the step2 structure
+    step2dbn = PairsToDBN(DBNToPairs(step2dbn), N,
+                          levellimit = levellimit)
 
     if verbose:
         print("=" * N) # Separator line 1 if verbose 

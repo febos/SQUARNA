@@ -206,8 +206,9 @@ a (hopefully) arbitrary version of NumPy library.
         Ignored in the single-sequence mode.
         The allowed number of pseudoknot levels. All the base pairs
         of the higher levels will be removed from the structure predicted
-        at step-1. By default, ll=3 for short alignments of no more than
-        500 columns, and ll=2 for longer alignments.
+        at step-1 and from the structure predicted at step-2. By default, 
+        ll=3 for short alignments of no more than 500 columns, 
+        and ll=2 for longer alignments.
                 
     tl=INT / toplim=INT [DEFAULT: tl=5]
     
