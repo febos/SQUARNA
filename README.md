@@ -168,8 +168,9 @@ a (hopefully) arbitrary version of NumPy library.
         Run SQUARNA in the alignment-based mode. If specified,
         ali.conf will be used as the config file by default, 
         unless another config file is explicitly specified 
-        by the user. Only the first parameter set in the config 
-        file will be used.
+        by the user. The bpweights, minlen, and minbpscore 
+        parameters for step-1 will be derived from the first 
+        parameter set in the config file.
 
     if={qtrf} / inputformat={qtrf} [DEFAULT: if=qtrf]
     

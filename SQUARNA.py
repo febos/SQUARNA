@@ -542,8 +542,6 @@ if __name__ == "__main__":
                           conslim, reactformat)
 
     else: # Running alignment-based SQUARNA
-        # Only the first paramset is used in alignment mode
-        paramsetnames, paramsets = paramsetnames[:1], paramsets[:1]
 
         # Get the processed sequences
         objs, fmt = ParseInput(inputfile, inputformat)
