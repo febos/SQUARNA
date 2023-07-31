@@ -132,10 +132,7 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset, tool in (("SeqSim","SQUARNAs3u"),
-                          ("SeqSim","SQUARNAs3i"),
-                          ("Rfam14.9","SQUARNAs2"),
-                          ("Rfam14.9","SQUARNAs3u"),
+    for dataset, tool in (("Rfam14.9","SQUARNAs3u"),
                           ("Rfam14.9","SQUARNAs3i"),
                           ("Rfam14.9","IPknot"),
                           ("SubAli", "IPknot"),

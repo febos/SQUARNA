@@ -2,20 +2,20 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="210mm"
    height="297mm"
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="Figure6.svg">
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   sodipodi:docname="Figure6.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,17 +25,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="983.41806"
-     inkscape:cy="514.89164"
+     inkscape:zoom="0.175"
+     inkscape:cx="1900"
+     inkscape:cy="1400"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1858"
-     inkscape:window-height="1016"
-     inkscape:window-x="62"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1163"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -44,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,12 +54,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:1;fill:#ffffff;stroke:#00000a;stroke-width:2.61691928;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;stroke:#00000a;stroke-width:2.23633;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10"
-       width="1764.3308"
-       height="954.35913"
-       x="-384.21869"
-       y="-78.093544" />
+       width="1157.2874"
+       height="1062.5331"
+       x="-384.40897"
+       y="-78.283836" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot12"
@@ -133,7 +134,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
          id="flowPara96">......(.....................).............................	4754.5</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
-         id="flowPara1159"></flowPara><flowPara
+         id="flowPara1159" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
          id="flowPara1167">&gt;Conserved base pairs (assembled)</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
@@ -179,7 +180,8 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
          id="flowPara124" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
-         id="flowPara126" /></flowRoot>    <flowRoot
+         id="flowPara126" /></flowRoot>
+    <flowRoot
        xml:space="preserve"
        id="flowRoot146"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -191,11 +193,12 @@
            x="1333.4014"
            y="120.44836" /></flowRegion><flowPara
          id="flowPara152"
-         style="font-size:192px">A</flowPara></flowRoot>    <flowRoot
+         style="font-size:192px">A</flowPara></flowRoot>
+    <flowRoot
        xml:space="preserve"
        id="flowRoot12-3"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,666.55249,22.450399)"><flowRegion
+       transform="matrix(0.26458333,0,0,0.26458333,52.120936,551.07498)"><flowRegion
          id="flowRegion14-6"><rect
            id="rect16-7"
            width="4752.1499"
@@ -305,11 +308,12 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
          id="flowPara124-6" /><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace"
-         id="flowPara126-1" /></flowRoot>    <flowRoot
+         id="flowPara126-1" /></flowRoot>
+    <flowRoot
        xml:space="preserve"
        id="flowRoot146-0"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,-99.682552,-98.354949)"><flowRegion
+       transform="matrix(0.26458333,0,0,0.26458333,-717.66377,430.26963)"><flowRegion
          id="flowRegion148-6"><rect
            id="rect150-3"
            width="303.04578"
@@ -317,5 +321,6 @@
            x="1333.4014"
            y="120.44836" /></flowRegion><flowPara
          id="flowPara152-2"
-         style="font-size:192px">B</flowPara></flowRoot>  </g>
+         style="font-size:192px">B</flowPara></flowRoot>
+  </g>
 </svg>
