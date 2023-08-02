@@ -132,11 +132,10 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset, tool in (("Rfam14.9","SQUARNAs3u"),
-                          ("Rfam14.9","SQUARNAs3i"),
+    for dataset, tool in (("SubAli", "IPknot"),
+                          ("SeqSim","IPknot"),
                           ("Rfam14.9","IPknot"),
-                          ("SubAli", "IPknot"),
-                          ("SeqSim","IPknot"),):
+                          ):
                 
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())

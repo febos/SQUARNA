@@ -47,6 +47,10 @@ def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
 
 def EncodedReactivities(seq, reacts, reactformat):
     """Takes a list of floats, returns a string"""
+
+    # Put the reactivities into (0, 1) range
+    reacts = [x if 0 <= x <= 1 else 0 if x < 0 else 1 for x in reacts]
+    
     if reactformat == 3:
         reactline = ''.join(["_+##"[int(x * 3)]
                              for x in reacts])
