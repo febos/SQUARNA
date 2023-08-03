@@ -1,0 +1,2 @@
+suboptmin	suboptmax	suboptsteps	minlen	minbpscore	minfinscorefactor	distcoef	orderpenalty	def2	tpc	fpc	fnc	fstotc	fsc	prc	rcc	tp5	fp5	fn5	fstot5	fs5	pr5	rc5
+0.7	0.9	2	3	7	1.25	0.09	1.0	True	350	69	70	0.834	0.832	0.828	0.839	369	35	51	0.896	0.908	0.921	0.899
