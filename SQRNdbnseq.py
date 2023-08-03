@@ -235,7 +235,7 @@ def UnAlign(seq, dbn):
     return newseq, newdbn
 
 
-def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False):
+def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False, reacts = None):
     """Return a matrix with bp-weights in cells"""
 
     # list of ordinal numbers of chains
@@ -300,7 +300,13 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False):
                 inc4 = chk + 1
         
         for j in range(i + inc4, len(seq)):
-            scoremat[i, j] = bps[seq[i] + seq[j]] * boolmat[i, j]
+
+            # Weight with reactivities if any
+            reactfactor = 1 if reacts is None else (1 - (reacts[i] + reacts[j]) / 2 ) * 2
+            if bps[seq[i] + seq[j]] <= 0:
+                reactfactor = 1 / max(reactfactor, 0.01)
+
+            scoremat[i, j] = bps[seq[i] + seq[j]] * boolmat[i, j] * reactfactor
 
     return boolmat, scoremat
 
@@ -458,7 +464,7 @@ def ScoreStems(seq, stems, rstems,
         descr = ''
         bps = stem[0]
 
-        reactfactor = sum(1 - reacts[pos] for bp in bps for pos in bp) / len(bps)
+        reactfactor =  1 #(sum((1 - (reacts[bp[0]] + reacts[bp[1]]) / 2 ) for bp in bps) / len(bps) * 2) ** 1.5
 
         descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
 
@@ -846,7 +852,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         # Generate initial bp-matrix (with bp weights in cells)
         bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, rxs,
                                                rlefts, rrights,
-                                               interchainonly)
+                                               interchainonly,
+                                               reacts = shortreacts)
 
         #Weight the bpscorematrix with the alignment-derived scores
         if stemmatrix is not None:
@@ -1044,7 +1051,7 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
                             paramsets, conslim, toplim, hardrest,
                             rankbydiff, rankby, interchainonly, threads, mp, stemmatrix)
-
+    
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
 
@@ -1107,4 +1114,137 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   paramsetnames[paramsetind], sep='\t', file = sink)
 
     return consensus, predicted_structures, consensus_metrics, topN_metrics
+
+
+
+if __name__ == "__main__":
+
+    from collections import Counter
+  
+    queue = []
+
+    with open("datasets/S01_200.fas") as file:
+        lines = file.readlines()
+
+        for ii in range(0,len(lines)-2,4):
+
+            nm  = lines[ii].strip()[1:]
+            sq  = lines[ii+1].strip()
+            db  = lines[ii+2].strip()
+            rct = list(map(float,lines[ii+3].strip().split()))
+            queue.append([nm, sq, db, None, rct])
+
+    outp = open('temp.tsv','w')
+
+    title = '\t'.join("suboptmin suboptmax suboptsteps minlen minbpscore minfinscorefactor distcoef orderpenalty def2 tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
+    print(title)
+    outp.write(title+'\n')
+    outp.close()
+
+    ######################################
+
+    threads = 32
+
+    conslim = 1
+    toplim  = 5
+    maxstemnum = 10**6
+
+    for suboptmin in (0.65, 0.7, 0.75, 0.8, 0.85, 0.9):
+        for suboptmax in (0.9, 0.95, 0.99):
+            for suboptsteps in (1, 2):
+                for minlen in (2, 3):
+                    for minbpscore in (3.25, 4.5, 5.75, 7):
+                        for minfinscorefactor in (0.75, 1.0, 1.25):
+                            for distcoef in (0.09, 0.05, 0.15):
+                                for orderpenalty in (1.0, 0.75, 1.25):
+                                    for def2 in (False, True):
+                                                            
+                                        print(suboptmin, suboptmax, suboptsteps, minlen, minbpscore, minfinscorefactor, distcoef, orderpenalty, def2, sep='\t', end='\t')
+
+                                        paramsets = []
+                                        paramsets.append({"bpweights" : {'GU' : -1.25,
+                                                                        'AU' : 1.25,
+                                                                        'GC' : 3.25,},
+                                                          "suboptmax" : suboptmax,
+                                                          "suboptmin" : suboptmin,
+                                                          "suboptsteps": suboptsteps,
+                                                          "minlen" : minlen,
+                                                          "minbpscore" : minbpscore,
+                                                          "minfinscorefactor" : minfinscorefactor,
+                                                          "distcoef" : distcoef,
+                                                          "bracketweight" :  -2,
+                                                          "orderpenalty"  : orderpenalty,
+                                                          "loopbonus": 0.125,
+                                                          "maxstemnum" : maxstemnum,
+                                                          })
+
+                                        if def2:
+                                            paramsets.append({"bpweights" : {'GU' : 1,
+                                                                            'AU' :  1,
+                                                                            'GC' :  2,},
+                                                              "suboptmax" : suboptmax,
+                                                              "suboptmin" : suboptmin,
+                                                              "suboptsteps": suboptsteps,
+                                                              "minlen" : minlen,
+                                                              "minbpscore" : 3,
+                                                              "minfinscorefactor" : 0.99,
+                                                              "distcoef" : 0.1,
+                                                              "bracketweight" :  -2,
+                                                              "orderpenalty"  : 1.35,
+                                                              "loopbonus": 0.125,
+                                                              "maxstemnum" : maxstemnum,
+                                                              })
+
+                                        resultsB = []
+                                        resultsC = []
+
+                                        for obj in queue:
+
+                                            name, seq, dbn, rst, react = obj
+
+                                            result = SQRNdbnseq(seq, react, rst, dbn,
+                                                                paramsets, conslim, toplim,
+                                                                threads = threads)
+
+                                            resultsC.append(result[2])
+                                            resultsB.append(result[3])
+
+                                        tpC = sum(x[0] for x in resultsC)
+                                        fpC = sum(x[1] for x in resultsC)
+                                        fnC = sum(x[2] for x in resultsC)
+                                        fsC = [x[3] for x in resultsC]
+                                        prC = [x[4] for x in resultsC]
+                                        rcC = [x[5] for x in resultsC]
+
+                                        print(tpC, fpC, fnC, round(2*tpC / (2*tpC + fpC + fnC), 3), round(np.mean(fsC), 3),
+                                              round(np.mean(prC), 3), round(np.mean(rcC), 3), sep='\t', end='\t')
+
+                                        tpB = sum(x[0] for x in resultsB)
+                                        fpB = sum(x[1] for x in resultsB)
+                                        fnB = sum(x[2] for x in resultsB)
+                                        fsB = [x[3] for x in resultsB]
+                                        print(fsB)
+                                        prB = [x[4] for x in resultsB]
+                                        rcB = [x[5] for x in resultsB]
+                                        rkB = [x[6] for x in resultsB]
+                                                                
+                                        print(tpB, fpB, fnB, round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
+                                              round(np.mean(prB), 3), round(np.mean(rcB), 3), sep = '\t')
+
+                                        outp = open('temp.tsv','a')
+                                        toprint = '\t'.join([str(xx) for xx in [suboptmin, suboptmax, suboptsteps, minlen, minbpscore, minfinscorefactor, distcoef, orderpenalty,
+                                                                                def2,
+                                                                                tpC, fpC, fnC,
+                                                                                round(2*tpC / (2*tpC + fpC + fnC), 3),
+                                                                                round(np.mean(fsC), 3),
+                                                                                round(np.mean(prC), 3),
+                                                                                round(np.mean(rcC), 3),
+                                                                                tpB, fpB, fnB,
+                                                                                round(2*tpB / (2*tpB + fpB + fnB), 3),
+                                                                                round(np.mean(fsB), 3),
+                                                                                round(np.mean(prB), 3),
+                                                                                round(np.mean(rcB), 3)]])
+                                        outp.write(toprint+'\n')
+                                        outp.close()
+
 
