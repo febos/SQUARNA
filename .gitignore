@@ -9,7 +9,7 @@ __pycache__/
 # temporary data
 temp.tsv
 inp.tmp
-outp.tmp
+outp*.tmp
 tmp/*
 *test.py
 nohup.out

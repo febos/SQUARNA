@@ -144,8 +144,8 @@ def PredictRNAfold(seq):
         inp.write('>seq\n')
         inp.write(seq+'\n')
 
-    os.system("RNAfold --noPS < inp.tmp > outp.tmp")
-    with open("outp.tmp") as outp:
+    os.system("RNAfold --noPS < inp.tmp > outp2.tmp")
+    with open("outp2.tmp") as outp:
         dbn = outp.readlines()[2].split()[0]
     return [dbn,]        
 
@@ -156,8 +156,8 @@ def PredictIPknot(seq):
         inp.write('>seq\n')
         inp.write(seq+'\n')
 
-    os.system("~/software/ipknot-master/build/ipknot inp.tmp > outp.tmp")
-    with open("outp.tmp") as outp:
+    os.system("~/software/ipknot-master/build/ipknot inp.tmp > outp2.tmp")
+    with open("outp2.tmp") as outp:
         dbn = outp.readlines()[2].strip()
     return [dbn,] 
 
@@ -168,8 +168,8 @@ def PredictMXfold2(seq):
         inp.write('>seq\n')
         inp.write(seq+'\n')
 
-    os.system("mxfold2 predict inp.tmp > outp.tmp")
-    with open("outp.tmp") as outp:
+    os.system("mxfold2 predict inp.tmp > outp2.tmp")
+    with open("outp2.tmp") as outp:
         dbn = outp.readlines()[2].split()[0]
     return [dbn,] 
 
@@ -206,8 +206,43 @@ def PredictSPOTRNA(seq):
         res.append(BPSEQtoDBN("tmp/{}.bpseq".format(name)))
     return res
 
+def CTtoDBN(ct_file):
 
-def PredictSQUARNA(seq, conf = "def.conf", top = 1):
+    with open(ct_file) as file:
+        lines = file.readlines()
+
+    ln = int(lines[0].split()[0])
+
+    mfe = lines[1:ln+1]
+
+    skpairs = set()
+        
+    for line in mfe:
+        linesplit = line.split()
+        pair = (int(linesplit[0]) - 1,int(linesplit[4]) - 1)
+
+        if pair[-1] == -1 or not pair[0] < pair[1]:
+            continue
+        skpairs.add(pair)
+
+    return CombinePairsToDBN(sorted(skpairs),len(mfe))
+
+
+def PredictShapeKnots(seq):
+
+    SHAPEKNOTS_PATH   = "~/software/RNAstructureSource/RNAstructure/exe/ShapeKnots-smp"
+    SHAPEKNOTS_TABLES = "DATAPATH=~/software/RNAstructureSource/RNAstructure/data_tables"
+
+    with open("inp.tmp","w") as inp:
+        inp.write(">seq"+'\n')
+        inp.write(seq+'\n')
+
+    os.system("{} {} inp.tmp outp2.tmp".format(SHAPEKNOTS_TABLES, SHAPEKNOTS_PATH))
+
+    return [CTtoDBN("outp2.tmp"),]
+
+
+def PredictSQUARNA(seq, conf = "def.conf", top = 1, rb = ''):
 
     with open("inp.tmp","w") as inp:
         inp.write(">seq"+'\n')
@@ -216,13 +251,13 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1):
     if len(seq) > 500:
         conf = "long.conf"
 
-    os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} > outp.tmp".format(conf,top))
+    os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} {} > outp2.tmp".format(conf, top, rb))
 
     cnt = 0
     flag = False
     res = []
 
-    with open("outp.tmp") as outp:
+    with open("outp2.tmp") as outp:
         for line in outp:
 
             if line.startswith("="):
@@ -259,111 +294,127 @@ def PredictSQUARNAlong5(seq):
 def PredictSQUARNAlongN(seq):
     return PredictSQUARNA(seq, conf = "long.conf", top = 10**6)
 
+def PredictSQUARNAshape(seq):
+    return PredictSQUARNA(seq, conf = "shape.conf", rb= "rb=s")
+
+def PredictSQUARNAshape5(seq):
+    return PredictSQUARNA(seq, conf = "shape.conf", top = 5, rb= "rb=s")
+
+def PredictSQUARNAshapeN(seq):
+    return PredictSQUARNA(seq, conf = "shape.conf", top = 10**6, rb= "rb=s")
+
      
 
 if __name__ == "__main__":
 
-    dataset = "SRtrain150"
-    tool    = "SQUARNA"
     NL      =  False
+    
+    dtst  = "S01clean"
+    tl    = "ShapeKnots"
 
-    if NL:
-        dataset += "NL"
+    for dataset, tool in ((dtst, tl),):
 
-    with open('datasets/{}.fas'.format(dataset)) as file:
+        if NL:
+            dataset += "NL"
 
-        outname = "{}_{}".format(dataset,tool)
-        title = '\t'.join("NAME LEN TIME RANK TP FP FN PRC RCL FS SEQ DBN PRED".split())
-        outp1 = open(outname+'.fas','w')
-        outp2 = open(outname+'.tsv','w')
-        outp2.write(title+'\n')
-        lines = file.readlines()
+        with open('datasets/{}.fas'.format(dataset)) as file:
 
-        t0 = time.time()
-        
-        for i in range(0,len(lines)-2,3):
+            outname = "{}_{}".format(dataset,tool)
+            title = '\t'.join("NAME LEN TIME RANK TP FP FN PRC RCL FS SEQ DBN PRED".split())
+            outp1 = open(outname+'.fas','w')
+            outp2 = open(outname+'.tsv','w')
+            outp2.write(title+'\n')
+            lines = file.readlines()
 
-            name = lines[i].strip()
-            print(name,end='')
-            seq = lines[i+1].strip().upper()
-            dbn = lines[i+2].strip()
-
-            structs = {"RNAfold":PredictRNAfold,
-                       "IPknot": PredictIPknot,
-                       "MXfold2":PredictMXfold2,
-                       "SPOT-RNA":PredictSPOTRNA,
-                       "SQUARNA": PredictSQUARNA,
-                       "SQUARNA5": PredictSQUARNA5,
-                       "SQUARNAN": PredictSQUARNAN,
-                       "SQUARNAalt": PredictSQUARNAalt,
-                       "SQUARNAalt5": PredictSQUARNAalt5,
-                       "SQUARNAaltN": PredictSQUARNAaltN,
-                       "SQUARNAlong": PredictSQUARNAlong,
-                       "SQUARNAlong5": PredictSQUARNAlong5,
-                       "SQUARNAlongN": PredictSQUARNAlongN,
-                       }[tool](seq)
-
-            t1 = time.time()-t0
-
-            print("...COMPLETE ({}sec)".format(round(t1,3)))
-
+            t0 = time.time()
             
+            for i in range(0,len(lines)-2,3):
 
-            # Clean <3nt hairpins and non-canonical pairs
-            structs = [CombinePairsToDBN([(v,w) for v,w in GetPairs(_)
-                                          if w-v >= 4 and seq[v]+seq[w] in {'GC','CG',
-                                                                            'GU','UG',
-                                                                            'AU','UA'}],
-                                         len(seq))
-                       for _ in structs]
+                name = lines[i].strip()
+                print(name,end='')
+                seq = lines[i+1].strip().upper()
+                dbn = lines[i+2].strip()
 
-            # Clean lone bps if NL
-            if NL:
-                structs = [NoLone(_) for _ in structs]
+                structs = {"RNAfold":PredictRNAfold,
+                           "IPknot": PredictIPknot,
+                           "MXfold2":PredictMXfold2,
+                           "SPOT-RNA":PredictSPOTRNA,
+                           "SQUARNA": PredictSQUARNA,
+                           "SQUARNA5": PredictSQUARNA5,
+                           "SQUARNAN": PredictSQUARNAN,
+                           "SQUARNAalt": PredictSQUARNAalt,
+                           "SQUARNAalt5": PredictSQUARNAalt5,
+                           "SQUARNAaltN": PredictSQUARNAaltN,
+                           "SQUARNAlong": PredictSQUARNAlong,
+                           "SQUARNAlong5": PredictSQUARNAlong5,
+                           "SQUARNAlongN": PredictSQUARNAlongN,
+                           "SQUARNAshape": PredictSQUARNAshape,
+                           "SQUARNAshape5": PredictSQUARNAshape5,
+                           "SQUARNAshapeN": PredictSQUARNAshapeN,
+                           "ShapeKnots": PredictShapeKnots,
+                           }[tool](seq)
 
-            best_ind    = -1
-            best_fscore = -1
-            BTP, BFP, BFN = -1, -1, -1
+                t1 = time.time()-t0
 
-            pairsr = set(GetPairs(dbn))
+                print("...COMPLETE ({}sec)".format(round(t1,3)))
 
-            for i,pred in enumerate(structs):
-            
-                pairsq = set(GetPairs(pred))
+                
 
-                TP = len(pairsr & pairsq)
-                FP = len(pairsq - pairsr)
-                FN = len(pairsr - pairsq)
-            
-                FS = 2*TP / (2*TP + FN + FP) if (TP + FN + FP) else 1
-                PRC = (TP / (TP + FP)) if (TP+FP) else 1
-                RCL = (TP / (TP + FN)) if (TP+FN) else 1
+                # Clean <3nt hairpins and non-canonical pairs
+                structs = [CombinePairsToDBN([(v,w) for v,w in GetPairs(_)
+                                              if w-v >= 4 and seq[v]+seq[w] in {'GC','CG',
+                                                                                'GU','UG',
+                                                                                'AU','UA'}],
+                                             len(seq))
+                           for _ in structs]
 
-                if FS > best_fscore:
-                    best_ind = i
-                    best_fscore = FS
-                    BTP, BFP, BFN = TP, FP, FN
+                # Clean lone bps if NL
+                if NL:
+                    structs = [NoLone(_) for _ in structs]
 
-            best_prc = (BTP / (BTP + BFP)) if (BTP+BFP) else 1
-            best_rcl = (BTP / (BTP + BFN)) if (BTP+BFN) else 1
+                best_ind    = -1
+                best_fscore = -1
+                BTP, BFP, BFN = -1, -1, -1
 
-            outp1.write(name+'\n')
-            outp1.write(seq+'\n')
-            outp1.write(dbn+'\n')
-            for pred in structs:
-                outp1.write(pred+'\n')
-            outp1.write("LEN={} TIME={}sec RANK={} TP={} FP={} FN={} PRC={} RCL={} FS={}\n"\
-                        .format(len(seq),round(t1,3),best_ind+1,
-                                BTP,BFP,BFN,
-                                round(best_prc,3),
-                                round(best_rcl,3),
-                                round(best_fscore,3)))
-            res = [name[1:], len(seq), round(t1,3), best_ind+1, BTP,BFP,BFN,
-                   round(best_prc,3), round(best_rcl,3), round(best_fscore,3),
-                   seq,dbn,structs[best_ind]]
-            outp2.write('\t'.join([str(g) for g in res])+'\n')
+                pairsr = set(GetPairs(dbn))
 
-    outp1.close()
-    outp2.close()
+                for i,pred in enumerate(structs):
+                
+                    pairsq = set(GetPairs(pred))
+
+                    TP = len(pairsr & pairsq)
+                    FP = len(pairsq - pairsr)
+                    FN = len(pairsr - pairsq)
+                
+                    FS = 2*TP / (2*TP + FN + FP) if (TP + FN + FP) else 1
+                    PRC = (TP / (TP + FP)) if (TP+FP) else 1
+                    RCL = (TP / (TP + FN)) if (TP+FN) else 1
+
+                    if FS > best_fscore:
+                        best_ind = i
+                        best_fscore = FS
+                        BTP, BFP, BFN = TP, FP, FN
+
+                best_prc = (BTP / (BTP + BFP)) if (BTP+BFP) else 1
+                best_rcl = (BTP / (BTP + BFN)) if (BTP+BFN) else 1
+
+                outp1.write(name+'\n')
+                outp1.write(seq+'\n')
+                outp1.write(dbn+'\n')
+                for pred in structs:
+                    outp1.write(pred+'\n')
+                outp1.write("LEN={} TIME={}sec RANK={} TP={} FP={} FN={} PRC={} RCL={} FS={}\n"\
+                            .format(len(seq),round(t1,3),best_ind+1,
+                                    BTP,BFP,BFN,
+                                    round(best_prc,3),
+                                    round(best_rcl,3),
+                                    round(best_fscore,3)))
+                res = [name[1:], len(seq), round(t1,3), best_ind+1, BTP,BFP,BFN,
+                       round(best_prc,3), round(best_rcl,3), round(best_fscore,3),
+                       seq,dbn,structs[best_ind]]
+                outp2.write('\t'.join([str(g) for g in res])+'\n')
+
+        outp1.close()
+        outp2.close()
 
 

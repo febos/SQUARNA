@@ -765,8 +765,8 @@ def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
 
    
 def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
-               paramsets = [], conslim = 5, toplim = 5,
-               hardrest = False, rankbydiff = True,
+               paramsets = [], conslim = 1, toplim = 5,
+               hardrest = False, rankbydiff = False,
                rankby = (0, 2, 1), interchainonly = False,
                threads = 1, mp = True, stemmatrix = None):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
@@ -1136,7 +1136,7 @@ if __name__ == "__main__":
 
     outp = open('temp.tsv','w')
 
-    title = '\t'.join("suboptmin suboptmax suboptsteps minlen minbpscore minfinscorefactor distcoef orderpenalty def2 tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
+    title = '\t'.join("suboptmin suboptmax suboptsteps minlen minbpscore minfinscorefactor distcoef orderpenalty def2 rankbydiff rankby tpc fpc fnc fstotc fsc prc rcc tp5 fp5 fn5 fstot5 fs5 pr5 rc5".split())
     print(title)
     outp.write(title+'\n')
     outp.close()
@@ -1149,102 +1149,108 @@ if __name__ == "__main__":
     toplim  = 5
     maxstemnum = 10**6
 
-    for suboptmin in (0.65, 0.7, 0.75, 0.8, 0.85, 0.9):
+    rbdic = {"rs":(0,2,1),"r":(2,0,1),"s":(1,2,0)}
+
+    for suboptmin in (0.7, 0.75, 0.8, 0.85):
         for suboptmax in (0.9, 0.95, 0.99):
-            for suboptsteps in (1, 2):
-                for minlen in (2, 3):
-                    for minbpscore in (3.25, 4.5, 5.75, 7):
-                        for minfinscorefactor in (0.75, 1.0, 1.25):
-                            for distcoef in (0.09, 0.05, 0.15):
-                                for orderpenalty in (1.0, 0.75, 1.25):
-                                    for def2 in (False, True):
+            for suboptsteps in (2, 3):
+                for minlen in (2, ):
+                    for minbpscore in (5.75, 7, 8.25, 9.5):
+                        for minfinscorefactor in (1.0, 1.25, 1.5):
+                            for distcoef in (0.09, 0.07, 0.11):
+                                for orderpenalty in (1.0, 0.75, 0.5):
+                                    for def2 in (True,):
+                                        for rankbydiff in (False, True):
+                                            for rankby in ("rs","s"):
                                                             
-                                        print(suboptmin, suboptmax, suboptsteps, minlen, minbpscore, minfinscorefactor, distcoef, orderpenalty, def2, sep='\t', end='\t')
+                                                print(suboptmin, suboptmax, suboptsteps, minlen, minbpscore, minfinscorefactor, distcoef, orderpenalty, def2,
+                                                      rankbydiff, rankby, sep='\t', end='\t')
 
-                                        paramsets = []
-                                        paramsets.append({"bpweights" : {'GU' : -1.25,
-                                                                        'AU' : 1.25,
-                                                                        'GC' : 3.25,},
-                                                          "suboptmax" : suboptmax,
-                                                          "suboptmin" : suboptmin,
-                                                          "suboptsteps": suboptsteps,
-                                                          "minlen" : minlen,
-                                                          "minbpscore" : minbpscore,
-                                                          "minfinscorefactor" : minfinscorefactor,
-                                                          "distcoef" : distcoef,
-                                                          "bracketweight" :  -2,
-                                                          "orderpenalty"  : orderpenalty,
-                                                          "loopbonus": 0.125,
-                                                          "maxstemnum" : maxstemnum,
-                                                          })
+                                                paramsets = []
+                                                paramsets.append({"bpweights" : {'GU' : -1.25,
+                                                                                'AU' : 1.25,
+                                                                                'GC' : 3.25,},
+                                                                  "suboptmax" : suboptmax,
+                                                                  "suboptmin" : suboptmin,
+                                                                  "suboptsteps": suboptsteps,
+                                                                  "minlen" : minlen,
+                                                                  "minbpscore" : minbpscore,
+                                                                  "minfinscorefactor" : minfinscorefactor,
+                                                                  "distcoef" : distcoef,
+                                                                  "bracketweight" :  -2,
+                                                                  "orderpenalty"  : orderpenalty,
+                                                                  "loopbonus": 0.125,
+                                                                  "maxstemnum" : maxstemnum,
+                                                                  })
 
-                                        if def2:
-                                            paramsets.append({"bpweights" : {'GU' : 1,
-                                                                            'AU' :  1,
-                                                                            'GC' :  2,},
-                                                              "suboptmax" : suboptmax,
-                                                              "suboptmin" : suboptmin,
-                                                              "suboptsteps": suboptsteps,
-                                                              "minlen" : minlen,
-                                                              "minbpscore" : 3,
-                                                              "minfinscorefactor" : 0.99,
-                                                              "distcoef" : 0.1,
-                                                              "bracketweight" :  -2,
-                                                              "orderpenalty"  : 1.35,
-                                                              "loopbonus": 0.125,
-                                                              "maxstemnum" : maxstemnum,
-                                                              })
+                                                if def2:
+                                                    paramsets.append({"bpweights" : {'GU' : 1,
+                                                                                    'AU' :  1,
+                                                                                    'GC' :  2,},
+                                                                      "suboptmax" : suboptmax,
+                                                                      "suboptmin" : suboptmin,
+                                                                      "suboptsteps": suboptsteps,
+                                                                      "minlen" : minlen,
+                                                                      "minbpscore" : 3,
+                                                                      "minfinscorefactor" : 0.99,
+                                                                      "distcoef" : 0.1,
+                                                                      "bracketweight" :  -2,
+                                                                      "orderpenalty"  : 1.35,
+                                                                      "loopbonus": 0.125,
+                                                                      "maxstemnum" : maxstemnum,
+                                                                      })
 
-                                        resultsB = []
-                                        resultsC = []
+                                                resultsB = []
+                                                resultsC = []
 
-                                        for obj in queue:
+                                                for obj in queue:
 
-                                            name, seq, dbn, rst, react = obj
+                                                    name, seq, dbn, rst, react = obj
 
-                                            result = SQRNdbnseq(seq, react, rst, dbn,
-                                                                paramsets, conslim, toplim,
-                                                                threads = threads)
+                                                    result = SQRNdbnseq(seq, react, rst, dbn,
+                                                                        paramsets, conslim, toplim,
+                                                                        rankbydiff = rankbydiff,
+                                                                        rankby = rbdic[rankby],
+                                                                        threads = threads)
 
-                                            resultsC.append(result[2])
-                                            resultsB.append(result[3])
+                                                    resultsC.append(result[2])
+                                                    resultsB.append(result[3])
 
-                                        tpC = sum(x[0] for x in resultsC)
-                                        fpC = sum(x[1] for x in resultsC)
-                                        fnC = sum(x[2] for x in resultsC)
-                                        fsC = [x[3] for x in resultsC]
-                                        prC = [x[4] for x in resultsC]
-                                        rcC = [x[5] for x in resultsC]
+                                                tpC = sum(x[0] for x in resultsC)
+                                                fpC = sum(x[1] for x in resultsC)
+                                                fnC = sum(x[2] for x in resultsC)
+                                                fsC = [x[3] for x in resultsC]
+                                                prC = [x[4] for x in resultsC]
+                                                rcC = [x[5] for x in resultsC]
 
-                                        print(tpC, fpC, fnC, round(2*tpC / (2*tpC + fpC + fnC), 3), round(np.mean(fsC), 3),
-                                              round(np.mean(prC), 3), round(np.mean(rcC), 3), sep='\t', end='\t')
+                                                print(tpC, fpC, fnC, round(2*tpC / (2*tpC + fpC + fnC), 3), round(np.mean(fsC), 3),
+                                                      round(np.mean(prC), 3), round(np.mean(rcC), 3), sep='\t', end='\t')
 
-                                        tpB = sum(x[0] for x in resultsB)
-                                        fpB = sum(x[1] for x in resultsB)
-                                        fnB = sum(x[2] for x in resultsB)
-                                        fsB = [x[3] for x in resultsB]
-                                        print(fsB)
-                                        prB = [x[4] for x in resultsB]
-                                        rcB = [x[5] for x in resultsB]
-                                        rkB = [x[6] for x in resultsB]
-                                                                
-                                        print(tpB, fpB, fnB, round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
-                                              round(np.mean(prB), 3), round(np.mean(rcB), 3), sep = '\t')
+                                                tpB = sum(x[0] for x in resultsB)
+                                                fpB = sum(x[1] for x in resultsB)
+                                                fnB = sum(x[2] for x in resultsB)
+                                                fsB = [x[3] for x in resultsB]
+                                                prB = [x[4] for x in resultsB]
+                                                rcB = [x[5] for x in resultsB]
+                                                rkB = [x[6] for x in resultsB]
+                                                                        
+                                                print(tpB, fpB, fnB, round(2*tpB / (2*tpB + fpB + fnB), 3), round(np.mean(fsB), 3),
+                                                      round(np.mean(prB), 3), round(np.mean(rcB), 3), fsB, sep = '\t')
 
-                                        outp = open('temp.tsv','a')
-                                        toprint = '\t'.join([str(xx) for xx in [suboptmin, suboptmax, suboptsteps, minlen, minbpscore, minfinscorefactor, distcoef, orderpenalty,
-                                                                                def2,
-                                                                                tpC, fpC, fnC,
-                                                                                round(2*tpC / (2*tpC + fpC + fnC), 3),
-                                                                                round(np.mean(fsC), 3),
-                                                                                round(np.mean(prC), 3),
-                                                                                round(np.mean(rcC), 3),
-                                                                                tpB, fpB, fnB,
-                                                                                round(2*tpB / (2*tpB + fpB + fnB), 3),
-                                                                                round(np.mean(fsB), 3),
-                                                                                round(np.mean(prB), 3),
-                                                                                round(np.mean(rcB), 3)]])
-                                        outp.write(toprint+'\n')
-                                        outp.close()
+                                                outp = open('temp.tsv','a')
+                                                toprint = '\t'.join([str(xx) for xx in [suboptmin, suboptmax, suboptsteps, minlen, minbpscore, minfinscorefactor, distcoef, orderpenalty,
+                                                                                        def2,rankbydiff, rankby,
+                                                                                        tpC, fpC, fnC,
+                                                                                        round(2*tpC / (2*tpC + fpC + fnC), 3),
+                                                                                        round(np.mean(fsC), 3),
+                                                                                        round(np.mean(prC), 3),
+                                                                                        round(np.mean(rcC), 3),
+                                                                                        tpB, fpB, fnB,
+                                                                                        round(2*tpB / (2*tpB + fpB + fnB), 3),
+                                                                                        round(np.mean(fsB), 3),
+                                                                                        round(np.mean(prB), 3),
+                                                                                        round(np.mean(rcB), 3)]])
+                                                outp.write(toprint+'\n')
+                                                outp.close()
 
 

@@ -79,7 +79,8 @@ def YieldStems(seq, reactivities = None, restraints = None,
     # Build the BP matrices based on the unaligned seq and restraints
     bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, rxs,
                                            rlefts, rrights,
-                                           interchainonly)
+                                           interchainonly,
+                                           reacts = shortreacts)
 
     # Annotate stems from the matrices and restraint bps
     # using the maxlen definition for stems (diff = 0)
@@ -92,19 +93,9 @@ def YieldStems(seq, reactivities = None, restraints = None,
     # aligned-unaligned indices dictionary
     radict = ReAlignDict(shortseq, seq)
 
-    # Weight the stem bp-scores with reactivities if needed
-    # reactfactor ranges from 0.5 (worst) to 2.0 (best)
-    if shortreacts:
-        for stem in stems:
-            reactfactor = sum(1 - shortreacts[pos]
-                              for bp in stem[0]
-                              for pos in bp) / len(stem[0])
-            stem[-1] *= reactfactor
-
     # Return the stems with re-aligned indices of their base pairs
-    # Additionaly filter with minbpscore for cases of reactfactor < 1
     return [[[(radict[v], radict[w]) for v, w in stem[0]], stem[-1]]
-            for stem in stems if stem[-1] >= minbpscore]
+            for stem in stems]
 
 
 def mpYieldStems(args):

@@ -3,7 +3,7 @@ from multiprocessing import Pool
 import numpy as np
 import io
 
-from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
+from utils import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
                        BPMatrix, AnnotateStems, RunSQRNdbnseq, GAPS,\
                        EncodedReactivities, SEPS
 
