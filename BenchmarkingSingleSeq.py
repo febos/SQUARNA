@@ -239,7 +239,11 @@ def PredictShapeKnots(seq):
 
     os.system("{} {} inp.tmp outp2.tmp".format(SHAPEKNOTS_TABLES, SHAPEKNOTS_PATH))
 
-    return [CTtoDBN("outp2.tmp"),]
+    try:
+        return [CTtoDBN("outp2.tmp"),]
+    except:
+        print('FAILED')
+        return ['.'*len(seq),]
 
 
 def PredictSQUARNA(seq, conf = "def.conf", top = 1, rb = ''):
@@ -248,7 +252,7 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1, rb = ''):
         inp.write(">seq"+'\n')
         inp.write(seq+'\n')
 
-    if len(seq) > 500:
+    if len(seq) > 1000:
         conf = "long.conf"
 
     os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} {} > outp2.tmp".format(conf, top, rb))
@@ -309,10 +313,19 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "S01clean"
-    tl    = "ShapeKnots"
+    dtst  = "TS1reducedWC"
+    tl    = "SQUARNAshape"
 
-    for dataset, tool in ((dtst, tl),):
+    for dataset, tool in (("S01clean", "RNAfold"),
+                          ("S01clean", "IPknot"),
+                          ("S01clean", "MXfold2"),
+                          ("S01clean", "SPOT-RNA"),
+                          ("S01clean", "SQUARNAalt"),
+                          ("S01clean", "SQUARNAalt5"),
+                          ("S01clean", "SQUARNAaltN"),
+                          ("S01clean", "SQUARNA"),
+                          ("S01clean", "SQUARNA5"),
+                          ("S01clean", "SQUARNAN"),):
 
         if NL:
             dataset += "NL"
