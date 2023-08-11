@@ -252,7 +252,7 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1):
         inp.write(">seq"+'\n')
         inp.write(seq+'\n')
 
-    if len(seq) > 1000:
+    if len(seq) > 500:
         conf = "long.conf"
 
     os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} > outp2.tmp".format(conf, top))

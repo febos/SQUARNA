@@ -3,7 +3,7 @@ AGAGGUUCUAGCUACACCCUCUAUAAAAAACUAA
 (((((...[[[......)))))........]]].
 (((((............)))))............
 ((((((.........))).)))............
-LEN=34 TIME=0.123sec RANK=1 TP=5 FP=0 FN=3 PRC=1.0 RCL=0.625 FS=0.769
+LEN=34 TIME=0.121sec RANK=1 TP=5 FP=0 FN=3 PRC=1.0 RCL=0.625 FS=0.769
 >Telomerase pseudoknot, human
 GGGCUGUUUUUCUCGCUGACUUUCAGCCCAACACAAAAAAAGUCAGC
 [[[[[[........(((((((((]]]]]].........)))))))))
@@ -21,7 +21,7 @@ GCAUUGGAGAUGGCAUUCCUCCAUUAACAAACCGCUGCGCCCGUAGCAGCUGAUGAUGCCUACAGA
 ...(((.....((((((.....((((.......(((((.......)))))))))))))))..))).
 (((((((((.........)))))..........(((((....)))))........)))).......
 ((((((..(((((.......)))))........(((((.......)))))...)))))).......
-LEN=66 TIME=0.416sec RANK=1 TP=10 FP=4 FN=6 PRC=0.714 RCL=0.625 FS=0.667
+LEN=66 TIME=0.418sec RANK=1 TP=10 FP=4 FN=6 PRC=0.714 RCL=0.625 FS=0.667
 >Adenine riboswitch, V. vulnificus
 CGCUUCAUAUAAUCCUAAUGAUAUGGUUUGGGAGUUUCUACCAAGAGCCUUAAACUCUUGAUUAUGAAGUG
 (((((((((...((((((.........))))))........((((((.......))))))..)))))))))
@@ -30,7 +30,7 @@ CGCUUCAUAUAAUCCUAAUGAUAUGGUUUGGGAGUUUCUACCAAGAGCCUUAAACUCUUGAUUAUGAAGUG
 (((((((((..(((.....))).....((((((((((.....(((...))))))))))))).)))))))))
 (((((((((..(((.....)))..((((((((...((((....)))).))))))))......)))))))))
 (((((((((..(((..........((((((((...((((....)))).))))))))...))))))))))))
-LEN=71 TIME=0.571sec RANK=2 TP=21 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
+LEN=71 TIME=0.574sec RANK=2 TP=21 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
 >tRNA(asp), yeast
 GCCGUGAUAGUUUAAUGGUCAGAAUGGGCGCUUGUCGCGUGCCAGAUCGGGGUUCAAUUCCCCGUCGCGGCGCCA
 (((((((..((((........)))).(((((.......)))))....(((((.......))))))))))))....
@@ -39,7 +39,7 @@ GCCGUGAUAGUUUAAUGGUCAGAAUGGGCGCUUGUCGCGUGCCAGAUCGGGGUUCAAUUCCCCGUCGCGGCGCCA
 ((((((((........((((......(((((.......))))).))))((((.......))))))))))))....
 ..........................((((((....(((........(((((.......))))).))))))))).
 (((((.........))))).....(((.....(((((((........(((((.......))))).))))))))))
-LEN=75 TIME=0.742sec RANK=1 TP=17 FP=0 FN=4 PRC=1.0 RCL=0.81 FS=0.895
+LEN=75 TIME=0.748sec RANK=1 TP=17 FP=0 FN=4 PRC=1.0 RCL=0.81 FS=0.895
 >tRNA(phe), E. coli
 GCGGAUUUAGCUCAGUUGGGAGAGCGCCAGACUGAAGAUCUGGAGGUCCUGUGUUCGAUCCACAGAAUUCGCACCA
 (((((((..((((........)))).(((((.......))))).....(((((.......))))))))))))....
@@ -48,7 +48,7 @@ GCGGAUUUAGCUCAGUUGGGAGAGCGCCAGACUGAAGAUCUGGAGGUCCUGUGUUCGAUCCACAGAAUUCGCACCA
 (((.......(((......)))..)))((((.......))))..(((.(((((.......))))).......))).
 (((.......(((........))))))((((.......))))..(((.(((((.......))))).......))).
 ((((((((.((((........)))).(((((.......)))))))))))((((.......))))......))....
-LEN=76 TIME=0.921sec RANK=1 TP=21 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
+LEN=76 TIME=0.933sec RANK=1 TP=21 FP=0 FN=0 PRC=1.0 RCL=1.0 FS=1.0
 >TPP riboswitch, E. coli
 GACUCGGGGUGCCCUUCUGCGUGAAGGCUGAGAAAUACCCGUAUCACCUGAUCUGGAUAAUGCCAGCGUAGGGAAGUUC
 ((((((((.((((.(((.....))))))......)..)))).....(((...((((......))))...)))..)))).
@@ -57,7 +57,7 @@ GACUCGGGGUGCCCUUCUGCGUGAAGGCUGAGAAAUACCCGUAUCACCUGAUCUGGAUAAUGCCAGCGUAGGGAAGUUC
 ....((((....(((((.....)))))..........)))).....((((..((((......))))..)))).......
 ....((((..(((.(((.....)))))).........)))).....((((..((((......))))..)))).......
 ..((((((...)))....((......)).))).....(((..(((....)))((((......))))....)))......
-LEN=79 TIME=1.15sec RANK=4 TP=17 FP=1 FN=5 PRC=0.944 RCL=0.773 FS=0.85
+LEN=79 TIME=1.151sec RANK=4 TP=17 FP=1 FN=5 PRC=0.944 RCL=0.773 FS=0.85
 >SARS corona virus pseudoknot
 UUUAAACGGGUUUGCGGUGUAAGUGCAGCCCGUCUUACACCGUGCGGCACAGGCACUAGUACUGAUGUCGUCUACAGGGCUU
 ............(((((((((((...[[[[[[[)))))))))))((((((((.........))).)))))...]].]]]]].
@@ -66,7 +66,7 @@ UUUAAACGGGUUUGCGGUGUAAGUGCAGCCCGUCUUACACCGUGCGGCACAGGCACUAGUACUGAUGUCGUCUACAGGGC
 .......((((((((((((((((((.....)).)))))))))))((((((((((....)).))).))))).......)))))
 .......((((((((((((((((.((.....)))))))))))))((((((((((....)).))).))))).......)))))
 ............(((((((((((..........)))))))))))((((((((.........))).)))))............
-LEN=82 TIME=1.346sec RANK=5 TP=19 FP=0 FN=7 PRC=1.0 RCL=0.731 FS=0.844
+LEN=82 TIME=1.341sec RANK=5 TP=19 FP=0 FN=7 PRC=1.0 RCL=0.731 FS=0.844
 >cyclic-di-GMP riboswitch, V. cholerae
 GUCACGCACAGGGCAAACCAUUCGAAAGAGUGGGACGCAAAGCCUCCGGCCUAAACCAGAAGACAUGGUAGGUAGCGGGGUUACCGAUGGCAAAAUG
 ((((((......((...((((((....))))))...))..)(((.((((((((..(((.......))))))))..))))))(..)).))))......
@@ -84,7 +84,7 @@ UUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAUCAGCCAUGACCAAGGUG
 ((((((((..((..((((...(((((((.........((....))..)))))...(((((.....)))))..))....))))...))...((((((.....))))))...))))))))
 ((((((((..((..((((..((.(((((.........((....))..)))))...(((((.....)))))..))....))))...))...((((((.....))))))...))))))))
 ((((((((....(((((...(((.....)))......))))).............(((((.....)))))..(((((.((((......))))...........)))))..))))))))
-LEN=118 TIME=1.854sec RANK=1 TP=35 FP=1 FN=4 PRC=0.972 RCL=0.897 FS=0.933
+LEN=118 TIME=1.833sec RANK=1 TP=35 FP=1 FN=4 PRC=0.972 RCL=0.897 FS=0.933
 >5S rRNA, E. coli
 UGCCUGGCGGCCGUAGCGCGGUGGUCCCACCUGACCCCAUGCCGAACUCAGAAGUGAAACGCCGUAGCGCCGAUGGUAGUGUGGGGUCUCCCCAUGCGAGAGUAGGGAACUGCCAGGCAU
 ((((((((((.....((((((((.......((((.............))))........)))))).)).((.((..(.((((((((...)))))))).)..)).))...)))))))))).
@@ -93,7 +93,7 @@ UGCCUGGCGGCCGUAGCGCGGUGGUCCCACCUGACCCCAUGCCGAACUCAGAAGUGAAACGCCGUAGCGCCGAUGGUAGU
 ((((((((((.((...)).((((....)))).((((((((((.....(((....)))..(((....)))((...))..))))))))))((((..(((....))))))).)))))))))).
 ((((((((((.((...)).((((....)))).((((((((((((...(((....)))..(((....))).))......))))))))))((((..(((....))))))).)))))))))).
 ((((((((((.((...)).((((....)))).((((((((((...(((....)))....(((....)))((...))..))))))))))((((............)))).)))))))))).
-LEN=120 TIME=2.294sec RANK=5 TP=10 FP=28 FN=25 PRC=0.263 RCL=0.286 FS=0.274
+LEN=120 TIME=2.259sec RANK=5 TP=10 FP=28 FN=25 PRC=0.263 RCL=0.286 FS=0.274
 >Mbox_riboswitch, B. subtilis
 CUUCGUUAGGUGAGGCUCCUGUAUGGAGAUACGCUGCUGCCCAAAAAUGUCCAAAGACGCCAAUGGGUCAACAGAAAUCAUCGACAUAAGGUGAUUUUUAAUGCAGCUGGAUGCUUGUCCUAUGCCAUACAGUGCUAAAGCUCUACGAUUGAAG
 ((((((..(((..(((..((((((((......(((((((((((....((((....))))....))))....))(((((((((.......)))))))))....))))).((((....))))....)))))))).)))...)))..))....))))
@@ -102,7 +102,7 @@ CUUCGUUAGGUGAGGCUCCUGUAUGGAGAUACGCUGCUGCCCAAAAAUGUCCAAAGACGCCAAUGGGUCAACAGAAAUCA
 ..((((.....(((((..((((((((.........(((((...............(((.((...)))))...((((((((((.......))))))))))...))))).((((....))))....)))))))).)).....))).))))......
 ..((((............((((((((......(((((.(((((....((((....))))....)))))....((((((((((.......))))))))))...))))).((((....))))....)))))))).((....))...))))......
 ..((((.......(((..((((((((......(((((.(((((....((((....))))....)))))....((((((((((.......))))))))))...))))).((((....))))....)))))))).)))........))))......
-LEN=154 TIME=2.797sec RANK=5 TP=39 FP=4 FN=9 PRC=0.907 RCL=0.812 FS=0.857
+LEN=154 TIME=2.744sec RANK=5 TP=39 FP=4 FN=9 PRC=0.907 RCL=0.812 FS=0.857
 >P546 domain, bI3 group I intron
 UGCUGAAAUAUCUUCAUUUGAAUAAUAAAUUACUAUAUUAUUCAAUUAAUUAUUUAUAAUAAUAUAAUUUGAAAUAAAAAUAAUAUAGUUAAAAUAUUUAUUAUAAGAAGAAAAUUAGCAGUAAUUAAUAUAUAUAUAUAUAUAAAAUUAAUUAU
 ((((((..(.(((((......(((((((((.(((((((((((.((((((((((.....))))).))))).........)))))))))))......)))))))))..))))))..))))))(((((((((.(((((....)))))..)))))))))
@@ -111,7 +111,7 @@ UGCUGAAAUAUCUUCAUUUGAAUAAUAAAUUACUAUAUUAUUCAAUUAAUUAUUUAUAAUAAUAUAAUUUGAAAUAAAAA
 ((((((....(((((......(((((((((.(((((((((((.(((((((((((...)))))).))))).........)))))))))))......)))))))))..)))))...)))))).(((((.((((((....))))))..))))).....
 ((((((....(((((......(((((((((.(((((((((((.(((((((((((...)))))).))))).........)))))))))))......)))))))))..)))))...)))))).(((((..((((((....)))))).))))).....
 ((((((....(((((..((((((((((........))))))))))........(((((((((...................................))))))))))))))...))))))(((((((((.(((((....)))))..)))))))))
-LEN=155 TIME=3.198sec RANK=1 TP=55 FP=1 FN=1 PRC=0.982 RCL=0.982 FS=0.982
+LEN=155 TIME=3.15sec RANK=1 TP=55 FP=1 FN=1 PRC=0.982 RCL=0.982 FS=0.982
 >Lysine_riboswitch, T. martima
 GGCCGACGGAGGCGCGCCCGAGAUGAGUAGGCUGUCCCAUCAGGGGAGGAAUCGGGGACGGCUGAAAGGCGAGGGCGCCGAAGGGUGCAGAGUUCCUCCCGCUCUGCAUGCCUGGGGGUAUGGGGAAUACCCAUACCACUGUCACGGAGGUCUCUCCGUGGAGAGCCGUCGGUC
 .((((((((..(.((((((..(.....(.(((((((((..(..[[[[[[....)))))))))).)....)..)))))))..((((((((((((.]]]]]]))))))))).)))((.((((((((.....)))))))).)).((((((((....))))))))....)))))))).
@@ -120,7 +120,7 @@ GGCCGACGGAGGCGCGCCCGAGAUGAGUAGGCUGUCCCAUCAGGGGAGGAAUCGGGGACGGCUGAAAGGCGAGGGCGCCG
 (((((((((....((((((..........(((((((((..[[[[[[[[[[....))))))))).........))))))...((((((((((((]]]]]]]))))))))).)))((((((((.....))))))...)).]]]((((((((....))))))))....)))))))))
 (((((((((((((((((((..........(((((((((.....[[[[[[[....))))))))).........))))))......(((((((((]]]]]]])))))))))))))((((((((.....))))))...))....((((((((....))))))))....)))))))))
 (((((((((((((((((((..........(((((((((.......((....)).))))))))).........))))))......(((((((((.......)))))))))))))((.((((((((.....)))))))).)).((((((((....))))))))....)))))))))
-LEN=174 TIME=3.745sec RANK=1 TP=57 FP=5 FN=6 PRC=0.919 RCL=0.905 FS=0.912
+LEN=174 TIME=3.707sec RANK=1 TP=57 FP=5 FN=6 PRC=0.919 RCL=0.905 FS=0.912
 >Group I intron, Azoarcus sp
 CUCAUAUUUCGAUGUGCCUUGCGCCGGGAAACCACGCAAGGGAUGGUGUCAAAUUCGGCGAAACCUAAGCGCCCGCCCGGGCGUAUGGCAACGCCGAGCCAAGCUUCGGCGCCUGCGCCGAUGAAGGUGUAGAGACUAGACGGCACCCACCUAAGGCAAACGCUAUGGUGAAGGCAUAGUCCAGGGAGUGGCGAAAGUCACACAAACCGGAAUC
 ..(((((....))))).((((((..((....)).))))))....((((((....((((((...((...((((((....))))))..))...))))))(((...(.((((((....)))))).)..)))...[.[[[[[...))))))((((...(((....)))..))))......]]]]]]..((.(((((....))))).....))......
@@ -129,7 +129,7 @@ CUCAUAUUUCGAUGUGCCUUGCGCCGGGAAACCACGCAAGGGAUGGUGUCAAAUUCGGCGAAACCUAAGCGCCCGCCCGG
 ..(((((....)))))(((((((..((....)).)))))))(((((((((......((((.........))))(((((((((((......))))).(((...)))((((((....))))))))..))))(((...)))...))))))..((...)).....((((((.......))))))((.((..(((((....))))).....)))).)))
 .....((((((..((((((((((..((....)).)))))))...((((((...(((((((....(((.((((((....)))))).)))...))))))).......((((((....)))))).....((.(((...))).)))))))))))((..((.....((((((.......))))))))))...(((((....)))))......)))))).
 ..(((((....)))))(((((((..((....)).)))))))(((((((((...(((((((....(((.((((((....)))))).)))...))))))).......((((((....)))))).....((.(((...))).))))))))..((...)).....((((((.......))))))((..((.(((((....))))).....)))).)))
-LEN=214 TIME=7.462sec RANK=5 TP=44 FP=23 FN=19 PRC=0.657 RCL=0.698 FS=0.677
+LEN=214 TIME=7.171sec RANK=5 TP=44 FP=23 FN=19 PRC=0.657 RCL=0.698 FS=0.677
 >Signal recognition particle RNA, human
 GCCGGGCGCGGUGGCGCGUGCCUGUAGUCCCAGCUACUCGGGAGGCUGAGGCUGGAGGAUCGCUUGAGUCCAGGAGUUCUGGGCUGUAGUGCGCUAUGCCGAUCGGGUGUCCGCACUAAGUUCGGCAUCAAUAUGGUGACCUCCCGGGAGCGGGGGACCACCAGGUUGCCUAAGGAGGGGUGAACCGGCCCAGGUCGGAAACGGAGCAGGUCAAAACUCCCGUGCUGAUCAGUAGUGGGAUCGCGCCUGUGAAUAGCCACUGCACUCCAGCCUGUGCAACAUAGCGAGACCCCGUCUCUUU
 ((((((((((......)))))))....((((........))))))).(((((.((....(((((...((.((((....(((((.(((((((.(((((.(....(((((((((.(((((.(.(((((((((((.(((((..((((((....))))))..))))).))))((...)).(((((.....((((.....((....)).....))))...))))).))))))).)..)))))))...))))))).).)))))))))))).))))))))).)).....)))))...)).)))))...
@@ -138,7 +138,7 @@ GCCGGGCGCGGUGGCGCGUGCCUGUAGUCCCAGCUACUCGGGAGGCUGAGGCUGGAGGAUCGCUUGAGUCCAGGAGUUCU
 (((((((((((((((....)))....(((((.(((.(((((((((...[[[[[[[[..........((((((((...)))))))).(((((((..[[[[[[[.........)))))))...]]]]]]]...........))))))))))))..)))))(((((((...))).......))))..(((((....)))))....((((..........))))...................))))))))))...........(((((]]]]]]]]))))).....))(((((...)))))...
 (((((((((((((((....)))....(((((.(((.(((((((((...[[[[[[[[..........((((((((...)))))))).(((((((..[[[[[[[.........)))))))...]]]]]]]...........))))))))))))..)))))((((......(((....)))))))..(((((....)))))..((((...............))))................))))))))))...........(((((]]]]]]]]))))).....))(((((...)))))...
 (((((((((((((((....)))....(((((.(((.(((((((((...[[[[[[[[..........((((((((...)))))))).(((((((..[[[[[[[.........)))))))...]]]]]]]...........))))))))))))..)))))(((((((...))).......))))..(((((....)))))..((((...............))))................))))))))))...........(((((]]]]]]]]))))).....))(((((...)))))...
-LEN=301 TIME=20.037sec RANK=1 TP=0 FP=92 FN=100 PRC=0.0 RCL=0.0 FS=0.0
+LEN=301 TIME=18.715sec RANK=1 TP=0 FP=92 FN=100 PRC=0.0 RCL=0.0 FS=0.0
 >Hepatitis C virus IRES domain
 CCAUGAAUCACUCCCCUGUGAGGAACUACUGUCUUCACGCAGAAAGCGUCUAGCCAUGGCGUUAGUAUGAGUGUCGUGCAGCCUCCAGGACCCCCCCUCCCGGGAGAGCCAUAGUGGUCUGCGGAACCGGUGAGUACACCGGAAUUGCCAGGACGACCGGGUCCUUUCUUGGAUUAACCCGCUCAAUGCCUGGAGAUUUGGGCGUGCCCCCGCGAGACUGCUAGCCGAGUAGUGUUGGGUCGCGAAAGGCCUUGUGGUACUGCCUGAUAGGGUGCUUGCGAGUGCCCCGGGAGGUCUCGUAGACCGUGCAUCAUGAGCACGAAUCCUAAACCUCAA
 ..............((((.((((.....(((((..(((.((.(.(((((((....).))))))..).)).)))..).))))))))))))......(((((((((((.(((((((((((((((((..((((((....))))))((((.(((((..((.((((................)))).))....))))).)))).(((....))))))).)))))))))(((...(.(((......))).)..)))....)))).))((((....))))((.[[[[[[.))))))))))).]]]]]]((.(((((.......)))))..))...........
@@ -147,7 +147,7 @@ CCAUGAAUCACUCCCCUGUGAGGAACUACUGUCUUCACGCAGAAAGCGUCUAGCCAUGGCGUUAGUAUGAGUGUCGUGCA
 (((((..((((......))))...............((((.....)))).....)))))........((((...((..[[[.[[[[[[[......(((((((((...((((...))))........((((((....)))))).....(((((((......))))).....))....((((((((((..]]]]]]]..))))))).(((..(((((.((((((.....))))))......)))))...))).....))).]]](((...)))......((....)))))))))))...)).....(((((.......)))))..........)))).
 (((((...........((((((((.......))))))))......((.....)))))))........((((.(((...[[[.[[[[[[[......(((((((((...((((...))))........((((((....)))))).....(((((((......))))).....))....((((((((((..]]]]]]]..))))))).(((..(((((.((((((.....))))))......)))))...))).....))).]]](((...)))......((....))))))))))).......)))(((((.......)))))..........)))).
 (((((...........((((((((.......))))))))......((.....)))))))..((((((((((.......[[[.[[[[[[[......(((((((((...((((...))))........((((((....)))))).....(((((((......))))).....))....((((((((((..]]]]]]]..))))))).(((..(((((.((((((.....))))))......)))))...))).....))).]]](((...)))......((....))))))))))).))))))...(((((.......)))))....)))).......
-LEN=336 TIME=75.411sec RANK=3 TP=20 FP=69 FN=84 PRC=0.225 RCL=0.192 FS=0.207
+LEN=336 TIME=71.449sec RANK=3 TP=20 FP=69 FN=84 PRC=0.225 RCL=0.192 FS=0.207
 >RNase P, B. subtilis
 GUUCUUAACGUUCGGGUAAUCGCUGCAGAUCUUGAAUCUGUAGAGGAAAGUCCAUGCUCGCACGGUGCUGAGAUGCCCGUAGUGUUCGUGCCUAGCGAAGUCAUAAGCUAGGGCAGUCUUUAGAGGCUGACGGCAGGAAAAAAGCCUACGUCUUCGGAUAUGGCUGAGUAUCCUUGAAAGUGCCACAGUGACGAAGUCUCACUAGAAAUGGUGAGAGUGGAACGCGGUAAACCCCUCGAGCGAGAAACCCAAAUUUUGGUAGGGGAACCUUCUUAACGGAAUUCAACGGAGAGAAGGACAGAAUGCUUUCUGUAGAUAGAUGAUUGCCGCCUGAGUACGAGGUGAUGAGCCGUUUGCAGUACGAUGGAACAAAACAUGGCUUACAGAACGUUAGACCACUU
 ....((.((((((([[[[[[[.((((((((.....))))))))....(((.((((((((((((((.((......)))))).....(((.(((((((..........))))))(((((((....)))))).)((.((((.(..(((((..(((....)))).))))...).)))).....(((((............((((((((....)))))))).........)))..))))).))))))))...(((...........)))...(((((((..((........))..)))))))((((((....))))))........]]]]]]].((...((((..(((.....))).......))))...)).......)))))))).).)))))).)).......
@@ -156,7 +156,7 @@ GUUCUUAACGUUCGGGUAAUCGCUGCAGAUCUUGAAUCUGUAGAGGAAAGUCCAUGCUCGCACGGUGCUGAGAUGCCCGU
 ....(((((((((..((((...((((((((.....))))))))........((((([[[[[...((((((.......((.......))..((((((..........)))))).((((((....))))))(((((((((....((((..((....)).....)))).....)))).....((.((((..........((((((((....)))))))))))).))(((((((.(((((...]]]]]....((((...)))).)))))..(((((((..((........))..)))))))((((((....))))))..........)))))))..................)))))...))))))............))))).)))).))))))))).......
 ....(((((((((.........((((((((.....))))))))....(((.((((([[[[[...((((((.......((.......))..((((((..........)))))).((((((....))))))(((((((((....((((..((....)).....)))).....)))).....((.((((..........((((((((....)))))))))))).))(((((((.(((((...]]]]]....((((...)))).)))))..(((((((..((........))..)))))))((((((....))))))..........)))))))..................)))))...))))))............))))))))...))))))))).......
 ....(((((((((..((((...((((((((.....))))))))........(((((.....((((.((......))))))..(((((...((((((..........)))))).((((((....))))))(((((........((((..((....)).....))))......(((((...((.((((..........((((((((....)))))))))))).))(((((((.(((((............((((...)))).)))))..(((((((..((........))..)))))))((((((....))))))..........))))))).......)))))......))))).............)))))...))))).)))).))))))))).......
-LEN=401 TIME=521.732sec RANK=4 TP=72 FP=38 FN=43 PRC=0.655 RCL=0.626 FS=0.64
+LEN=401 TIME=667.565sec RANK=4 TP=72 FP=38 FN=43 PRC=0.655 RCL=0.626 FS=0.64
 >Group II intron, O. iheyensis
 GUGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGGGUGUCCGUGGCGACAUGGAAUCUGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCCUUUCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGCAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCGCGCCUAAGCUUGAACCGCCGUAUACCGAACGGUACGUACGGUGGUGUGAGAGGAGUUCGCUCUACUCUAU
 .....(((((.(.(((((((((((.(.((((...)..))).)(((((.(.[[[[[[[.).)))))(.(((...(((..((((.((((((....)))))))))).......)))...))).).(((((((((((...........((((((.....(((..((((((((((((..((((........))))...)))).]]]]]]]...))))))))..)))..))))))))))))...)))))...))))))))))).)..)))))((..((((....))))..)).......(((......(((((....)))))....)))....((((((.((((....)))))..))))).(((((((((((((....))))..)))))))))..(((.((((....)))).)))...
@@ -165,7 +165,7 @@ GUGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGG
 .....(((((...(((((((((((............((((.((((((.............))))))(((((............((((((....))))))..(((((((..((.....))...)))))))..(((((........)))))....)))))...((((((.((((..((((........))))...))))..(((((........................)))))))))))..)))).)))))))))))....)))))(((.((((....))))...........(((......(((((....)))))....)))....(((((..((((....))))...))))).(((((((((((((....)))..))))))))))...((((.......)))).)))...
 .....(((((...(((((((((((............((((.((((((.............))))))(((((............((((((....))))))..(((((((..((.....))...)))))))..(((((........)))))....)))))...((((((.((((..((((........))))...))))..(((((........................)))))))))))..)))).)))))))))))....)))))(((.((((....)))).(((................(((((....)))))....)))....(((((..((((....))))...))))).(((((((((((((....)))..))))))))))...((((.......)))).)))...
 .....(((((...(((((((((((............((((.((((((.............))))))(((((............((((((....))))))..(((((((..((.....))...)))))))..(((((........)))))....)))))...((((((.((((..((((........))))...))))..(((((........................)))))))))))..)))).)))))))))))....)))))....((((....))))...........(((......(((((....)))))....)))....(((((..((((....))))...))))).(((((((((((((....)))..))))))))))...(((((((....)))..))))..
-LEN=412 TIME=673.769sec RANK=5 TP=71 FP=40 FN=61 PRC=0.64 RCL=0.538 FS=0.584
+LEN=412 TIME=803.54sec RANK=5 TP=71 FP=40 FN=61 PRC=0.64 RCL=0.538 FS=0.584
 >Group I Intron, T. thermophila
 CUCUCUAAAUAGCAAUAUUUACCUUUGGAGGGAAAAGUUAUCAGGCAUGCACCUGGUAGCUAGUCUUUAAACCAAUAGAUUGCAUCGGUUUAAAAGGCAAGACCGUCAAAUUGCGGGAAAGGGGUCAACAGCCGUUCAGUACCAAGUCUCAGGGGAAACUUUGAGAUGGCCUUGCAAAGGGUAUGGUAAUAAGCUGACGGACAUGGUCCUAACCACGCAGCCAAGUCCUAAGUCAACAGAUCUUCUGUUGAUAUGGAUGCAGUUCCAGACUAAAUGUCGGUCGGGGAAGAUGUAUUCUUCUCAUAAGAUAUAGUCGGACCUCUCCUUAAUGGGAGCUAGCGGAUGAAGUGAUGCAACACUGGAGCCGCUGGGAACUAAUUUGUAUGCGAAAGUAUAUUGAUUAGUUUUGGAGUACUCGUAAGGUA
 (((((((((..............)))))))))...((((((((((......)))))))))).(((((((((((.((.......)).))))))).))))..(((((.((...((((((....(((.......(((.(((((((((.(((((((((....)))))))))..(((.....)))...))))....).)))))))......)))...)).))))((...((((...((((((((.....))))))))..))))...))..[.[[[[[..)).))))).(((((((.....)))))))........]]]]]]((...(((((....)))))(((((((....((((......))))....))))))).((((((((.((((((....)))))).)))))))).........))........

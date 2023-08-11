@@ -6,45 +6,45 @@ from SQRNdbnseq import PairsToDBN, DBNToPairs
 
 def PredictSQUARNAs1(dataset, fam):
 
-    command = "python SQUARNA.py i={} a step3=1 > outp.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
+    command = "python SQUARNA.py i={} a step3=1 > outp3.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
     os.system(command)
-    with open("outp.tmp") as file:
+    with open("outp3.tmp") as file:
         lines = file.readlines()
         return lines[-1].split()[0]
 
 
 def PredictSQUARNAs2(dataset, fam):
 
-    command = "python SQUARNA.py i={} a step3=2 > outp.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
+    command = "python SQUARNA.py i={} a step3=2 > outp3.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
     os.system(command)
-    with open("outp.tmp") as file:
+    with open("outp3.tmp") as file:
         lines = file.readlines()
         return lines[-1].split()[0]
 
 
 def PredictSQUARNAs3i(dataset, fam):
 
-    command = "python SQUARNA.py i={} a step3=i > outp.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
+    command = "python SQUARNA.py i={} a step3=i > outp3.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
     os.system(command)
-    with open("outp.tmp") as file:
+    with open("outp3.tmp") as file:
         lines = file.readlines()
         return lines[-1].split()[0]
 
 
 def PredictSQUARNAs3u(dataset, fam):
 
-    command = "python SQUARNA.py i={} a step3=u > outp.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
+    command = "python SQUARNA.py i={} a step3=u > outp3.tmp".format("datasets/{}/sto/{}.sto".format(dataset,fam))
     os.system(command)
-    with open("outp.tmp") as file:
+    with open("outp3.tmp") as file:
         lines = file.readlines()
         return lines[-1].split()[0]
 
 
 def PredictRNAalifold(dataset, fam):
 
-    command = "RNAalifold --noPS {} > outp.tmp".format("datasets/{}/aln/{}.aln".format(dataset,fam))
+    command = "RNAalifold --noPS {} > outp3.tmp".format("datasets/{}/aln/{}.aln".format(dataset,fam))
     os.system(command)
-    with open("outp.tmp") as file:
+    with open("outp3.tmp") as file:
         lines = file.readlines()
         return lines[-1].split()[0]
 
@@ -52,9 +52,9 @@ def PredictRNAalifold(dataset, fam):
 def PredictCentroidAlifold(dataset, fam):
 
     command = "~/software/centroid-rna-package-master/build/src/centroid_alifold"+\
-              " {} > outp.tmp".format("datasets/{}/aln/{}.aln".format(dataset,fam))
+              " {} > outp3.tmp".format("datasets/{}/aln/{}.aln".format(dataset,fam))
     os.system(command)
-    with open("outp.tmp") as file:
+    with open("outp3.tmp") as file:
         lines = file.readlines()
         return lines[-1].split()[0]
 
@@ -62,9 +62,9 @@ def PredictCentroidAlifold(dataset, fam):
 def PredictIPknot(dataset, fam):
 
     command = "~/software/ipknot-master/build/ipknot"+\
-              " {} > outp.tmp".format("datasets/{}/aln/{}.aln".format(dataset,fam))
+              " {} > outp3.tmp".format("datasets/{}/aln/{}.aln".format(dataset,fam))
     os.system(command)
-    with open("outp.tmp") as file:
+    with open("outp3.tmp") as file:
         lines = file.readlines()
         return lines[-1].strip()
 
@@ -72,9 +72,9 @@ def PredictIPknot(dataset, fam):
 def PredictRscapeNested(dataset, fam):
 
     command = "cd tmp; ~/software/rscape/rscape_v1.6.1/bin/R-scape"+\
-              " --fold --covmin 4 --nofigures --rna {} > outp.tmp".format("../datasets/{}/sto/{}.sto".format(dataset,fam))
+              " --fold --covmin 4 --nofigures --rna {} > outp3.tmp".format("../datasets/{}/sto/{}.sto".format(dataset,fam))
     os.system(command)
-    with open("tmp/outp.tmp") as file:
+    with open("tmp/outp3.tmp") as file:
 
         names = []
         dbns  = {}
@@ -95,9 +95,9 @@ def PredictRscapeNested(dataset, fam):
 def PredictRscapeTotal(dataset, fam):
 
     command = "cd tmp; ~/software/rscape/rscape_v1.6.1/bin/R-scape"+\
-              " --fold --covmin 4 --nofigures --rna {} > outp.tmp".format("../datasets/{}/sto/{}.sto".format(dataset,fam))
+              " --fold --covmin 4 --nofigures --rna {} > outp3.tmp".format("../datasets/{}/sto/{}.sto".format(dataset,fam))
     os.system(command)
-    with open("tmp/outp.tmp") as file:
+    with open("tmp/outp3.tmp") as file:
 
         names = []
         dbns  = {}
@@ -132,8 +132,15 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset, tool in (("Rfam14.9","IPknot"),
-                          ):
+    for dataset, tool in (("S01Ali10","SQUARNAs1"),
+                          ("S01Ali10","SQUARNAs2"),
+                          ("S01Ali10","SQUARNAs3u"),
+                          ("S01Ali10","SQUARNAs3i"),
+                          ("S01Ali10","RNAalifold"),
+                          ("S01Ali10","CentroidAlifold"),
+                          ("S01Ali10","RscapeNested"),
+                          ("S01Ali10","RscapeTotal"),
+                          ("S01Ali10","IPknot"),):
                 
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
@@ -144,6 +151,7 @@ if __name__ == "__main__":
         t0 = time.time()
 
         famfiles = glob.glob("datasets/{}/sto/*".format(dataset))
+        
         fams = []
 
         for famfile in famfiles:
@@ -203,5 +211,4 @@ if __name__ == "__main__":
 
         outp1.close()
         outp2.close()
-
 
