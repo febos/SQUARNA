@@ -1,0 +1,1153 @@
+RID: DC0MHA63013	
+Job Title:d				
+Program: BLASTN 
+Query: d ID: lcl|Query_52711(rna) Length: 66
+Database: nt Nucleotide collection (nt)
+	
+Sequences producing significant alignments:
+                                                                  Scientific      Common                     Max    Total Query   E   Per.   Acc.                        
+Description                                                       Name            Name            Taxid      Score  Score cover Value Ident  Len        Accession        
+Pseudomonas syringae pv. actinidiae strain KKB1531 tRNA-Pro...    Pseudomonas ... NA              103796     115    115   100%  1e-21 98.48  103642     MN346705.1       
+Pseudomonas coronafaciens pv. oryzae str. 1_6 chromosome,...      Pseudomonas ... NA              563797     115    115   100%  1e-21 98.48  5662937    CP046035.1       
+Pseudomonas syringae pv. atrofaciens strain LMG5095 chromosome... Pseudomonas ... NA              192087     115    115   100%  1e-21 98.48  6080544    CP028490.1       
+Pseudomonas syringae strain 31R1 genome assembly, chromosome: I   Pseudomonas ... NA              317        115    115   100%  1e-21 98.48  5874625    LT629769.1       
+Pseudomonas sp. isolate Pseudomonas MM227 assembly genome...      Pseudomonas ... NA              3019968    115    115   100%  1e-21 98.48  4620590    OX352319.1       
+Pseudomonas syringae Cit 7 chromosome, complete genome            Pseudomonas ... NA              629264     115    115   100%  1e-21 98.48  5874519    CP073636.1       
+Pseudomonas species strain PS683                                  Pseudomonas ... NA              294        113    113   98%   3e-21 98.46  398688     LR700646.1       
+Pseudomonas lurida strain MYb11 chromosome, complete genome       Pseudomonas ... NA              244566     113    113   98%   3e-21 98.46  6100532    CP023272.1       
+Pseudomonas trivialis strain BS3111 genome assembly, chromosom... Pseudomonas ... NA              200450     113    113   98%   3e-21 98.46  5634667    LT629760.1       
+Pseudomonas lurida strain CFBP13722 chromosome                    Pseudomonas ... NA              244566     113    113   98%   3e-21 98.46  6143170    CP110885.1       
+Pseudomonas tremae strain PA-1-10F chromosome, complete genome    Pseudomonas ... NA              200454     113    113   98%   3e-21 98.46  5717648    CP066270.1       
+Pseudomonas putida strain 1290 plasmid pPp1290, complete sequence Pseudomonas ... NA              303        112    112   96%   1e-20 98.44  114265     CP039372.1       
+Pseudomonas lurida strain L228 chromosome, complete genome        Pseudomonas ... NA              244566     112    112   96%   1e-20 98.44  6175426    CP015639.1       
+Pseudomonas syringae pv. tomato strain DAPP-PG 215 genome...      Pseudomonas ... NA              323        112    112   96%   1e-20 98.44  6218328    OX458335.1       
+Pseudomonas protegens strain H1F10A chromosome, complete genome   Pseudomonas ... NA              380021     112    112   96%   1e-20 98.44  6817972    CP060289.1       
+Pseudomonas protegens strain H1F5C chromosome, complete genome    Pseudomonas ... NA              380021     112    112   96%   1e-20 98.44  6818519    CP060201.1       
+Pseudomonas sp. LG1E9 chromosome, complete genome                 Pseudomonas ... NA              2219057    109    109   98%   4e-20 96.92  6243355    CP029983.1       
+Pseudomonas syringae pv. syringae strain Pss9097 chromosome,...   Pseudomonas ... NA              321        109    109   98%   4e-20 96.92  5929959    CP026568.1       
+TPA: Pseudomonas fluorescens SBW25 transposon Tn6291, complete... Pseudomonas ... NA              216595     109    109   98%   4e-20 96.92  22336      BK010245.1       
+Pseudomonas poae strain BS2776 genome assembly, chromosome: I     Pseudomonas ... NA              200451     109    109   98%   4e-20 96.92  5950238    LT629706.1       
+Pseudomonas syringae pv. syringae B301D, complete genome          Pseudomonas ... NA              1324931    109    218   98%   4e-20 96.92  6094819    CP005969.1       
+Pseudomonas fluorescens SBW25 genome assembly, chromosome: 1      Pseudomonas ... NA              216595     109    109   98%   4e-20 96.92  6722400    OV986001.1       
+Pseudomonas sp. AO-1 chromosome, complete genome                  Pseudomonas ... NA              2855434    109    288   98%   4e-20 96.92  6715607    CP079947.1       
+Pseudomonas sp. B21-056 chromosome, complete genome               Pseudomonas ... NA              2895495    107    107   96%   1e-19 96.88  6448716    CP087203.1       
+Pseudomonas arsenicoxydans strain CECT 7543 genome assembly,...   Pseudomonas ... NA              702115     104    104   93%   2e-18 96.77  6502978    LT629705.1       
+Pseudomonas atacamensis strain B21-045 chromosome, complete...    Pseudomonas ... NA              2565368    102    102   100%  6e-18 93.94  5992133    CP087171.1       
+Pseudomonas mediterranea strain DSM 16733 genome assembly,...     Pseudomonas ... NA              183795     99.6   99.6  93%   8e-17 95.16  6346235    LT629790.1       
+Pseudomonas tremae strain PA-1-12B chromosome, complete genome    Pseudomonas ... NA              200454     99.6   99.6  93%   8e-17 95.16  5876612    CP066267.1       
+Stenotrophomonas sp. 169 chromosome, complete genome              Stenotrophom... NA              2770322    99.6   99.6  93%   8e-17 95.16  4157065    CP061204.1       
+Pseudomonas sp. LS.1a chromosome, complete genome                 Pseudomonas ... NA              2920387    93.3   93.3  100%  3e-15 90.91  5748595    CP092827.1       
+Pseudomonas sp. B21-036 chromosome, complete genome               Pseudomonas ... NA              2895485    90.6   90.6  93%   4e-14 91.94  5665049    CP087178.1       
+Pseudomonas tolaasii strain 2192T chromosome                      Pseudomonas ... NA              29442      83.3   83.3  93%   6e-12 90.32  6856683    CP020369.1       
+Pseudomonas tolaasii strain Pt11 chromosome, complete genome      Pseudomonas ... NA              29442      83.3   83.3  93%   6e-12 90.32  6475196    CP065824.1       
+Pseudomonas fuscovaginae strain LMG 2158 genome assembly,...      Pseudomonas ... NA              50340      63.5   63.5  92%   5e-06 85.25  6592354    LT629972.1       
+Pseudomonas asplenii strain ATCC 23835 genome assembly,...        Pseudomonas ... NA              53407      63.5   63.5  92%   5e-06 85.25  6529636    LT629777.1       
+Pseudomonas asplenii strain B21-058 chromosome, complete genome   Pseudomonas ... NA              53407      63.5   63.5  92%   5e-06 85.25  6426459    CP087202.1       
+Pseudomonas fuscovaginae UPB0736 chromosome, complete genome      Pseudomonas ... NA              1150862    63.5   63.5  92%   5e-06 85.25  6445564    CP100603.2       
+Pseudomonas vanderleydeniana strain RW8P3 chromosome, complete... Pseudomonas ... NA              2745495    61.7   61.7  92%   2e-05 83.61  7026924    CP077093.1       
+Pseudomonas eucalypticola strain NP-1 chromosome, complete genome Pseudomonas ... NA              2599595    60.8   60.8  92%   2e-05 81.97  6372924    CP056030.1       
+Collimonas pratensis strain Ter291 chromosome, complete genome    Collimonas p... NA              279113     56.3   56.3  93%   8e-04 80.65  5585899    CP013236.1       
+Collimonas pratensis strain Ter91 chromosome, complete genome     Collimonas p... NA              279113     56.3   56.3  93%   8e-04 80.65  5730025    CP013234.1       
+Pseudomonas sp. T1-3-2 chromosome, complete genome                Pseudomonas ... NA              2908006    56.3   56.3  92%   8e-04 80.33  7613303    CP093280.1       
+Achromobacter denitrificans strain FDAARGOS_786 chromosome,...    Achromobacte... NA              32002      54.5   54.5  93%   0.003 78.12  6736870    CP053987.1       
+Achromobacter denitrificans strain FDAARGOS_788 chromosome,...    Achromobacte... NA              32002      54.5   54.5  93%   0.003 78.12  6736877    CP053986.1       
+Achromobacter denitrificans strain PR1, complete genome           Achromobacte... NA              32002      54.5   54.5  93%   0.003 78.12  6929205    CP020917.1       
+Ralstonia insidiosa strain ATCC 49129 chromosome 1, complete...   Ralstonia in... NA              190721     52.7   52.7  90%   0.010 80.00  3921238    CP016022.1       
+Ralstonia insidiosa strain FC1138 chromosome 1, complete sequence Ralstonia in... NA              190721     52.7   52.7  90%   0.010 80.00  3968071    CP012605.1       
+Providencia rettgeri strain KM4 chromosome, complete genome       Providencia ... NA              587        52.7   52.7  92%   0.010 80.95  4378712    CP086257.1       
+Providencia rettgeri strain VCSW10 chromosome, complete genome    Providencia ... NA              587        52.7   52.7  92%   0.010 80.95  4355802    CP082351.1       
+Achromobacter deleyi strain FDAARGOS_1050 chromosome, complete... Achromobacte... NA              1353891    52.7   52.7  92%   0.010 79.37  6987272    CP065997.1       
+Candidatus Nitrotoga sp. KNB genome assembly, chromosome: omosome Candidatus N... NA              2182327    51.8   51.8  92%   0.010 78.69  2609426    LS423452.1       
+Alcaligenes faecalis strain Mc250 chromosome                      Alcaligenes ... NA              511        50.9   50.9  95%   0.034 79.69  4159911    CP031012.1       
+Serratia odorifera strain NCTC11214 genome assembly, chromosom... Serratia odo... NA              618        50.9   50.9  90%   0.034 78.33  5272556    LR134117.1       
+Pseudomonas citronellolis strain SJTE-3, complete genome          Pseudomonas ... NA              53408      50.0   50.0  92%   0.034 80.33  7309421    CP015878.1       
+Pseudomonas citronellolis strain G5.80 chromosome, complete...    Pseudomonas ... NA              53408      50.0   50.0  92%   0.034 80.33  7370743    CP104727.1       
+Pseudomonas citronellolis strain C12 chromosome, complete genome  Pseudomonas ... NA              53408      50.0   50.0  92%   0.034 80.33  7203080    CP101752.1       
+Pseudomonas sp. HS-18 chromosome, complete genome                 Pseudomonas ... NA              2879114    50.0   50.0  92%   0.034 80.33  6493503    CP084413.1       
+Pseudomonas sp. ADPe chromosome, complete genome                  Pseudomonas ... NA              2774873    50.0   50.0  92%   0.034 80.33  7177635    CP062122.1       
+
+Alignments:
+
+>Pseudomonas syringae pv. actinidiae strain KKB1531 tRNA-Pro gene, complete sequence; integrase, TraI, DUF159 protein, hypothetical protein, repair protein UmuD, lesion bypass DNA polymerase V, hypothetical protein, putative membrane protein, hypothetical protein, modification methylase ScrFIA, protein-disulfide isomerase, hypothetical protein, type IV secretory pathway VirB4 component, putative lipoprotein, putative exported protein, hypothetical protein, putative exported protein, hypothetical protein, candidate type III effector Hop protein, hypothetical protein, aconitase B, hypothetical protein, putative DNA helicase, putative membrane protein, type IV secretory pathway VirD4 component, hypothetical protein, soluble lytic murein transglycosylase-related regulatory protein, probable exported protein STY4558, methyl-accepting chemotaxis protein, and hypothetical protein genes, complete cds; insertion sequence ISPsy43 hypothetical protein, transposase Orf2, mobile element protein, and methyl-accepting chemotaxis protein I (serine chemoreceptor protein) genes, complete cds; superfamily II DNA/RNA helicase SNF2 family, plasmid-related protein, hypothetical protein, periplasmic protein TonB, hypothetical protein, DNA topoisomerase III, hypothetical protein, arsenical-resistance protein ACR3, arsenic resistance protein ArsH, arsenate reductase, arsenic efflux pump protein, and arsenical resistance operon repressor genes, complete cds; transposon Tn6212 trunctaed tyrosine recombinase XerC, hypothetical protein, putative lipoprotein, surface antigen, LysR family transcriptional regulator YeiE, C4-dicarboxylate transporter/malic acid transport protein, transposase IstA, inorganic pyrophosphatase, enolase, hypothetical protein, chloride channel protein, and hypothetical protein genes, complete cds; and sensor histidine kinase, Na+/H+ antiporter NhaP, tyrosine recombinase XerC, hypothetical protein, conjugative transfer protein PilM, conjugative transfer pilus-tip adhesin protein PilV, conjugative transfer ATPase PilU, conjugative transfer protein PilS, conjugative transfer protein PilR, conjugative transfer ATPase PilQ, conjugative transfer protein PilP, conjugative transfer protein PilO, conjugative transfer protein PilN, conjugative transfer protein PilL, hypothetical protein, DNA/RNA helicase, hypothetical protein, hypothetical protein, single-stranded DNA-binding protein, integrase regulator R, hypothetical protein, hemin uptake system outer membrane receptor, ferredoxin reductase, hypothetical protein, ParB-like nuclease domain protein, alginate biosynthesis transcriptional activator, hypothetical protein, replicative DNA helicase, hypothetical protein, hypothetical protein, and chromosome partitioning ATPase genes, complete cds
+Sequence ID: MN346705.1 Length: 103642
+Range 1: 71165 to 71230
+
+Score:115 bits(127), Expect:1e-21, 
+Identities:65/66(98%),  Gaps:0/66(0%), Strand: Plus/Minus
+
+Query  1      GCATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCC  60
+              |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||
+Sbjct  71230  GCATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCC  71171
+
+Query  61     TACAGA  66
+              ||||||
+Sbjct  71170  TACAGA  71165
+
+
+
+
+>Pseudomonas coronafaciens pv. oryzae str. 1_6 chromosome, complete genome
+Sequence ID: CP046035.1 Length: 5662937
+Range 1: 4572679 to 4572744
+
+Score:115 bits(127), Expect:1e-21, 
+Identities:65/66(98%),  Gaps:0/66(0%), Strand: Plus/Plus
+
+Query  1        GCATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCC  60
+                |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||
+Sbjct  4572679  GCATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCC  4572738
+
+Query  61       TACAGA  66
+                ||||||
+Sbjct  4572739  TACAGA  4572744
+
+
+
+
+>Pseudomonas syringae pv. atrofaciens strain LMG5095 chromosome, complete genome
+Sequence ID: CP028490.1 Length: 6080544
+Range 1: 3528913 to 3528978
+
+Score:115 bits(127), Expect:1e-21, 
+Identities:65/66(98%),  Gaps:0/66(0%), Strand: Plus/Plus
+
+Query  1        GCATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCC  60
+                |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||
+Sbjct  3528913  GCATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCC  3528972
+
+Query  61       TACAGA  66
+                ||||||
+Sbjct  3528973  TACAGA  3528978
+
+
+
+
+>Pseudomonas syringae strain 31R1 genome assembly, chromosome: I
+Sequence ID: LT629769.1 Length: 5874625
+Range 1: 5432707 to 5432772
+
+Score:115 bits(127), Expect:1e-21, 
+Identities:65/66(98%),  Gaps:0/66(0%), Strand: Plus/Plus
+
+Query  1        GCATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCC  60
+                |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||
+Sbjct  5432707  GCATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCC  5432766
+
+Query  61       TACAGA  66
+                ||||||
+Sbjct  5432767  TACAGA  5432772
+
+
+
+
+>Pseudomonas sp. isolate Pseudomonas MM227 assembly genome assembly, chromosome: MM227
+Sequence ID: OX352319.1 Length: 4620590
+Range 1: 3816292 to 3816357
+
+Score:115 bits(127), Expect:1e-21, 
+Identities:65/66(98%),  Gaps:0/66(0%), Strand: Plus/Minus
+
+Query  1        GCATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCC  60
+                |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||
+Sbjct  3816357  GCATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCC  3816298
+
+Query  61       TACAGA  66
+                ||||||
+Sbjct  3816297  TACAGA  3816292
+
+
+
+
+>Pseudomonas syringae Cit 7 chromosome, complete genome
+Sequence ID: CP073636.1 Length: 5874519
+Range 1: 667566 to 667631
+
+Score:115 bits(127), Expect:1e-21, 
+Identities:65/66(98%),  Gaps:0/66(0%), Strand: Plus/Plus
+
+Query  1       GCATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCC  60
+               |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||
+Sbjct  667566  GCATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCC  667625
+
+Query  61      TACAGA  66
+               ||||||
+Sbjct  667626  TACAGA  667631
+
+
+
+
+>Pseudomonas species strain PS683
+Sequence ID: LR700646.1 Length: 398688
+Range 1: 247057 to 247121
+
+Score:113 bits(125), Expect:3e-21, 
+Identities:64/65(98%),  Gaps:0/65(0%), Strand: Plus/Plus
+
+Query  2       CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+               ||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||
+Sbjct  247057  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  247116
+
+Query  62      ACAGA  66
+               |||||
+Sbjct  247117  ACAGA  247121
+
+
+
+
+>Pseudomonas lurida strain MYb11 chromosome, complete genome
+Sequence ID: CP023272.1 Length: 6100532
+Range 1: 3626111 to 3626175
+
+Score:113 bits(125), Expect:3e-21, 
+Identities:64/65(98%),  Gaps:0/65(0%), Strand: Plus/Minus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||
+Sbjct  3626175  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  3626116
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  3626115  ACAGA  3626111
+
+
+
+
+>Pseudomonas trivialis strain BS3111 genome assembly, chromosome: I
+Sequence ID: LT629760.1 Length: 5634667
+Range 1: 1396937 to 1397001
+
+Score:113 bits(125), Expect:3e-21, 
+Identities:64/65(98%),  Gaps:0/65(0%), Strand: Plus/Plus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||
+Sbjct  1396937  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  1396996
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  1396997  ACAGA  1397001
+
+
+
+
+>Pseudomonas lurida strain CFBP13722 chromosome
+Sequence ID: CP110885.1 Length: 6143170
+Range 1: 5540542 to 5540606
+
+Score:113 bits(125), Expect:3e-21, 
+Identities:64/65(98%),  Gaps:0/65(0%), Strand: Plus/Plus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||
+Sbjct  5540542  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  5540601
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  5540602  ACAGA  5540606
+
+
+
+
+>Pseudomonas tremae strain PA-1-10F chromosome, complete genome
+Sequence ID: CP066270.1 Length: 5717648
+Range 1: 5587872 to 5587936
+
+Score:113 bits(125), Expect:3e-21, 
+Identities:64/65(98%),  Gaps:0/65(0%), Strand: Plus/Plus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||
+Sbjct  5587872  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  5587931
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  5587932  ACAGA  5587936
+
+
+
+
+>Pseudomonas putida strain 1290 plasmid pPp1290, complete sequence
+Sequence ID: CP039372.1 Length: 114265
+Range 1: 83530 to 83593
+
+Score:112 bits(123), Expect:1e-20, 
+Identities:63/64(98%),  Gaps:0/64(0%), Strand: Plus/Plus
+
+Query  3      ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+              |||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||
+Sbjct  83530  ATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  83589
+
+Query  63     CAGA  66
+              ||||
+Sbjct  83590  CAGA  83593
+
+
+
+
+>Pseudomonas lurida strain L228 chromosome, complete genome
+Sequence ID: CP015639.1 Length: 6175426
+Range 1: 3585979 to 3586042
+
+Score:112 bits(123), Expect:1e-20, 
+Identities:63/64(98%),  Gaps:0/64(0%), Strand: Plus/Plus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||
+Sbjct  3585979  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  3586038
+
+Query  62       ACAG  65
+                ||||
+Sbjct  3586039  ACAG  3586042
+
+
+
+
+>Pseudomonas syringae pv. tomato strain DAPP-PG 215 genome assembly, chromosome: 1
+Sequence ID: OX458335.1 Length: 6218328
+Range 1: 255196 to 255259
+
+Score:112 bits(123), Expect:1e-20, 
+Identities:63/64(98%),  Gaps:0/64(0%), Strand: Plus/Plus
+
+Query  3       ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+               |||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||
+Sbjct  255196  ATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  255255
+
+Query  63      CAGA  66
+               ||||
+Sbjct  255256  CAGA  255259
+
+
+
+
+>Pseudomonas protegens strain H1F10A chromosome, complete genome
+Sequence ID: CP060289.1 Length: 6817972
+Range 1: 4831441 to 4831504
+
+Score:112 bits(123), Expect:1e-20, 
+Identities:63/64(98%),  Gaps:0/64(0%), Strand: Plus/Plus
+
+Query  3        ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+                |||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||
+Sbjct  4831441  ATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  4831500
+
+Query  63       CAGA  66
+                ||||
+Sbjct  4831501  CAGA  4831504
+
+
+
+
+>Pseudomonas protegens strain H1F5C chromosome, complete genome
+Sequence ID: CP060201.1 Length: 6818519
+Range 1: 3654123 to 3654186
+
+Score:112 bits(123), Expect:1e-20, 
+Identities:63/64(98%),  Gaps:0/64(0%), Strand: Plus/Plus
+
+Query  3        ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+                |||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||
+Sbjct  3654123  ATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  3654182
+
+Query  63       CAGA  66
+                ||||
+Sbjct  3654183  CAGA  3654186
+
+
+
+
+>Pseudomonas sp. LG1E9 chromosome, complete genome
+Sequence ID: CP029983.1 Length: 6243355
+Range 1: 1970828 to 1970892
+
+Score:109 bits(120), Expect:4e-20, 
+Identities:63/65(97%),  Gaps:0/65(0%), Strand: Plus/Plus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||
+Sbjct  1970828  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCT  1970887
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  1970888  ACAGA  1970892
+
+
+
+
+>Pseudomonas syringae pv. syringae strain Pss9097 chromosome, complete genome
+Sequence ID: CP026568.1 Length: 5929959
+Range 1: 3385186 to 3385250
+
+Score:109 bits(120), Expect:4e-20, 
+Identities:63/65(97%),  Gaps:0/65(0%), Strand: Plus/Minus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||
+Sbjct  3385250  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCT  3385191
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  3385190  ACAGA  3385186
+
+
+
+
+>TPA_exp: Pseudomonas fluorescens SBW25 transposon Tn6291, complete sequence
+Sequence ID: BK010245.1 Length: 22336
+Range 1: 21682 to 21746
+
+Score:109 bits(120), Expect:4e-20, 
+Identities:63/65(97%),  Gaps:0/65(0%), Strand: Plus/Minus
+
+Query  2      CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+              ||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||
+Sbjct  21746  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCT  21687
+
+Query  62     ACAGA  66
+              |||||
+Sbjct  21686  ACAGA  21682
+
+
+
+
+>Pseudomonas poae strain BS2776 genome assembly, chromosome: I
+Sequence ID: LT629706.1 Length: 5950238
+Range 1: 1305128 to 1305192
+
+Score:109 bits(120), Expect:4e-20, 
+Identities:63/65(97%),  Gaps:0/65(0%), Strand: Plus/Minus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||
+Sbjct  1305192  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCT  1305133
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  1305132  ACAGA  1305128
+
+
+
+
+>Pseudomonas syringae pv. syringae B301D, complete genome
+Sequence ID: CP005969.1 Length: 6094819
+Range 1: 3304190 to 3304254
+
+Score:109 bits(120), Expect:4e-20, 
+Identities:63/65(97%),  Gaps:0/65(0%), Strand: Plus/Plus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||
+Sbjct  3304190  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCT  3304249
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  3304250  ACAGA  3304254
+
+
+
+
+Range 2: 3459840 to 3459904
+
+Score:109 bits(120), Expect:4e-20, 
+Identities:63/65(97%),  Gaps:0/65(0%), Strand: Plus/Plus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||
+Sbjct  3459840  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCT  3459899
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  3459900  ACAGA  3459904
+
+
+
+
+>Pseudomonas fluorescens SBW25 genome assembly, chromosome: 1
+Sequence ID: OV986001.1 Length: 6722400
+Range 1: 2081997 to 2082061
+
+Score:109 bits(120), Expect:4e-20, 
+Identities:63/65(97%),  Gaps:0/65(0%), Strand: Plus/Minus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||
+Sbjct  2082061  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCT  2082002
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  2082001  ACAGA  2081997
+
+
+
+
+>Pseudomonas sp. AO-1 chromosome, complete genome
+Sequence ID: CP079947.1 Length: 6715607
+Range 1: 4938938 to 4939002
+
+Score:109 bits(120), Expect:4e-20, 
+Identities:63/65(97%),  Gaps:0/65(0%), Strand: Plus/Plus
+
+Query  2        CATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCT  61
+                ||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||
+Sbjct  4938938  CATTGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCT  4938997
+
+Query  62       ACAGA  66
+                |||||
+Sbjct  4938998  ACAGA  4939002
+
+
+
+
+Range 2: 5989402 to 5989465
+
+Score:107 bits(118), Expect:1e-19, 
+Identities:62/64(97%),  Gaps:0/64(0%), Strand: Plus/Plus
+
+Query  3        ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+                |||||||||||||||||||||||||| ||||||||| |||||||||||||||||||||||
+Sbjct  5989402  ATTGGAGATGGCATTCCTCCATTAACCAACCGCTGCACCCGTAGCAGCTGATGATGCCTA  5989461
+
+Query  63       CAGA  66
+                ||||
+Sbjct  5989462  CAGA  5989465
+
+
+
+
+Range 3: 335826 to 335883
+
+Score:71.6 bits(78), Expect:1e-08, 
+Identities:53/62(85%),  Gaps:4/62(6%), Strand: Plus/Plus
+
+Query  5       TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+               |||||||||||||||||||| |||    ||||||||  |  |||||||||||||||||||
+Sbjct  335826  TGGAGATGGCATTCCTCCATGAAC----CGCTGCGCTTGCCGCAGCTGATGATGCCTACA  335881
+
+Query  65      GA  66
+               ||
+Sbjct  335882  GA  335883
+
+
+
+
+>Pseudomonas sp. B21-056 chromosome, complete genome
+Sequence ID: CP087203.1 Length: 6448716
+Range 1: 5818663 to 5818726
+
+Score:107 bits(118), Expect:1e-19, 
+Identities:62/64(97%),  Gaps:0/64(0%), Strand: Plus/Plus
+
+Query  3        ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+                |||||||||||||||||||||||||| ||||| |||||||||||||||||||||||||||
+Sbjct  5818663  ATTGGAGATGGCATTCCTCCATTAACCAACCGTTGCGCCCGTAGCAGCTGATGATGCCTA  5818722
+
+Query  63       CAGA  66
+                ||||
+Sbjct  5818723  CAGA  5818726
+
+
+
+
+>Pseudomonas arsenicoxydans strain CECT 7543 genome assembly, chromosome: I
+Sequence ID: LT629705.1 Length: 6502978
+Range 1: 3183274 to 3183335
+
+Score:104 bits(114), Expect:2e-18, 
+Identities:60/62(97%),  Gaps:0/62(0%), Strand: Plus/Plus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+                |||||||||||||||||||||||| |||||||| ||||||||||||||||||||||||||
+Sbjct  3183274  TGGAGATGGCATTCCTCCATTAACCAACCGCTGTGCCCGTAGCAGCTGATGATGCCTACA  3183333
+
+Query  65       GA  66
+                ||
+Sbjct  3183334  GA  3183335
+
+
+
+
+>Pseudomonas atacamensis strain B21-045 chromosome, complete genome
+Sequence ID: CP087171.1 Length: 5992133
+Range 1: 1465144 to 1465209
+
+Score:102 bits(112), Expect:6e-18, 
+Identities:62/66(94%),  Gaps:0/66(0%), Strand: Plus/Minus
+
+Query  1        GCATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCC  60
+                ||| ||||||||||||||||||| | || |||||||||||||||||||||||||||||||
+Sbjct  1465209  GCACTGGAGATGGCATTCCTCCACTTACCAACCGCTGCGCCCGTAGCAGCTGATGATGCC  1465150
+
+Query  61       TACAGA  66
+                ||||||
+Sbjct  1465149  TACAGA  1465144
+
+
+
+
+>Pseudomonas mediterranea strain DSM 16733 genome assembly, chromosome: I
+Sequence ID: LT629790.1 Length: 6346235
+Range 1: 664348 to 664409
+
+Score:99.6 bits(109), Expect:8e-17, 
+Identities:59/62(95%),  Gaps:0/62(0%), Strand: Plus/Minus
+
+Query  5       TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+               ||||||||||||||||||| | || |||||||||||||||||||||||||||||||||||
+Sbjct  664409  TGGAGATGGCATTCCTCCACTTACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  664350
+
+Query  65      GA  66
+               ||
+Sbjct  664349  GA  664348
+
+
+
+
+>Pseudomonas tremae strain PA-1-12B chromosome, complete genome
+Sequence ID: CP066267.1 Length: 5876612
+Range 1: 1226818 to 1226879
+
+Score:99.6 bits(109), Expect:8e-17, 
+Identities:59/62(95%),  Gaps:0/62(0%), Strand: Plus/Plus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+                ||||||||||||||||||| | || |||||||||||||||||||||||||||||||||||
+Sbjct  1226818  TGGAGATGGCATTCCTCCACTTACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  1226877
+
+Query  65       GA  66
+                ||
+Sbjct  1226878  GA  1226879
+
+
+
+
+>Stenotrophomonas sp. 169 chromosome, complete genome
+Sequence ID: CP061204.1 Length: 4157065
+Range 1: 3688060 to 3688121
+
+Score:99.6 bits(109), Expect:8e-17, 
+Identities:59/62(95%),  Gaps:0/62(0%), Strand: Plus/Minus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+                ||||||||||||||||||| | || |||||||||||||||||||||||||||||||||||
+Sbjct  3688121  TGGAGATGGCATTCCTCCACTTACCAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  3688062
+
+Query  65       GA  66
+                ||
+Sbjct  3688061  GA  3688060
+
+
+
+
+>Pseudomonas sp. LS.1a chromosome, complete genome
+Sequence ID: CP092827.1 Length: 5748595
+Range 1: 2501212 to 2501277
+
+Score:93.3 bits(102), Expect:3e-15, 
+Identities:60/66(91%),  Gaps:0/66(0%), Strand: Plus/Plus
+
+Query  1        GCATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCC  60
+                ||| |||||||||||||||| || | || ||||||||||||||||||||||| |||||||
+Sbjct  2501212  GCACTGGAGATGGCATTCCTTCACTTACCAACCGCTGCGCCCGTAGCAGCTGGTGATGCC  2501271
+
+Query  61       TACAGA  66
+                ||||||
+Sbjct  2501272  TACAGA  2501277
+
+
+
+
+>Pseudomonas sp. B21-036 chromosome, complete genome
+Sequence ID: CP087178.1 Length: 5665049
+Range 1: 2764501 to 2764562
+
+Score:90.6 bits(99), Expect:4e-14, 
+Identities:57/62(92%),  Gaps:0/62(0%), Strand: Plus/Plus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+                ||||||||||||||||||| | || ||||||||||||  |||||||||||||||||||||
+Sbjct  2764501  TGGAGATGGCATTCCTCCACTTACCAACCGCTGCGCCTATAGCAGCTGATGATGCCTACA  2764560
+
+Query  65       GA  66
+                ||
+Sbjct  2764561  GA  2764562
+
+
+
+
+>Pseudomonas tolaasii strain 2192T chromosome
+Sequence ID: CP020369.1 Length: 6856683
+Range 1: 5894909 to 5894968
+
+Score:83.3 bits(91), Expect:6e-12, 
+Identities:56/62(90%),  Gaps:2/62(3%), Strand: Plus/Minus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+                |||||||||||||||||||| | | |||||||||| |||  |||||||||||||||||||
+Sbjct  5894968  TGGAGATGGCATTCCTCCATGACCCAACCGCTGCGTCCG--GCAGCTGATGATGCCTACA  5894911
+
+Query  65       GA  66
+                ||
+Sbjct  5894910  GA  5894909
+
+
+
+
+>Pseudomonas tolaasii strain Pt11 chromosome, complete genome
+Sequence ID: CP065824.1 Length: 6475196
+Range 1: 2219947 to 2220006
+
+Score:83.3 bits(91), Expect:6e-12, 
+Identities:56/62(90%),  Gaps:2/62(3%), Strand: Plus/Plus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+                |||||||||||||||||||| | | |||||||||| |||  |||||||||||||||||||
+Sbjct  2219947  TGGAGATGGCATTCCTCCATGACCCAACCGCTGCGTCCG--GCAGCTGATGATGCCTACA  2220004
+
+Query  65       GA  66
+                ||
+Sbjct  2220005  GA  2220006
+
+
+
+
+>Pseudomonas fuscovaginae strain LMG 2158 genome assembly, chromosome: I
+Sequence ID: LT629972.1 Length: 6592354
+Range 1: 4894151 to 4894209
+
+Score:63.5 bits(69), Expect:5e-06, 
+Identities:52/61(85%),  Gaps:2/61(3%), Strand: Plus/Plus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||||||| | | | |||||||| ||   | ||||||||||||||||||||
+Sbjct  4894151  GGAGATGGCATTCCTCCGT-ACCCAACCGCTGTGCTACT-GCAGCTGATGATGCCTACAG  4894208
+
+Query  66       A  66
+                |
+Sbjct  4894209  A  4894209
+
+
+
+
+>Pseudomonas asplenii strain ATCC 23835 genome assembly, chromosome: I
+Sequence ID: LT629777.1 Length: 6529636
+Range 1: 4402842 to 4402900
+
+Score:63.5 bits(69), Expect:5e-06, 
+Identities:52/61(85%),  Gaps:2/61(3%), Strand: Plus/Minus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||||||| | | | |||||||| ||   | ||||||||||||||||||||
+Sbjct  4402900  GGAGATGGCATTCCTCCGT-ACCCAACCGCTGTGCTACT-GCAGCTGATGATGCCTACAG  4402843
+
+Query  66       A  66
+                |
+Sbjct  4402842  A  4402842
+
+
+
+
+>Pseudomonas asplenii strain B21-058 chromosome, complete genome
+Sequence ID: CP087202.1 Length: 6426459
+Range 1: 3634545 to 3634603
+
+Score:63.5 bits(69), Expect:5e-06, 
+Identities:52/61(85%),  Gaps:2/61(3%), Strand: Plus/Plus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||||||| | | | |||||||| ||   | ||||||||||||||||||||
+Sbjct  3634545  GGAGATGGCATTCCTCCGT-ACCCAACCGCTGTGCTACT-GCAGCTGATGATGCCTACAG  3634602
+
+Query  66       A  66
+                |
+Sbjct  3634603  A  3634603
+
+
+
+
+>Pseudomonas fuscovaginae UPB0736 chromosome, complete genome
+Sequence ID: CP100603.2 Length: 6445564
+Range 1: 5822119 to 5822177
+
+Score:63.5 bits(69), Expect:5e-06, 
+Identities:52/61(85%),  Gaps:2/61(3%), Strand: Plus/Minus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||||||| | | | |||||||| ||   | ||||||||||||||||||||
+Sbjct  5822177  GGAGATGGCATTCCTCCGT-ACCCAACCGCTGTGCTACT-GCAGCTGATGATGCCTACAG  5822120
+
+Query  66       A  66
+                |
+Sbjct  5822119  A  5822119
+
+
+
+
+>Pseudomonas vanderleydeniana strain RW8P3 chromosome, complete genome
+Sequence ID: CP077093.1 Length: 7026924
+Range 1: 2809454 to 2809509
+
+Score:61.7 bits(67), Expect:2e-05, 
+Identities:51/61(84%),  Gaps:5/61(8%), Strand: Plus/Minus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||||||| | | | |||||||| ||     ||||||||||||||||||||
+Sbjct  2809509  GGAGATGGCATTCCTCCGT-ACCCAACCGCTGTGCT----GCAGCTGATGATGCCTACAG  2809455
+
+Query  66       A  66
+                |
+Sbjct  2809454  A  2809454
+
+
+
+
+>Pseudomonas eucalypticola strain NP-1 chromosome, complete genome
+Sequence ID: CP056030.1 Length: 6372924
+Range 1: 2889140 to 2889196
+
+Score:60.8 bits(66), Expect:2e-05, 
+Identities:50/61(82%),  Gaps:4/61(6%), Strand: Plus/Plus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||||||| | |||    ||| ||||  |  ||||||||||||||||||||
+Sbjct  2889140  GGAGATGGCATTCCTCCTTGAAC----CGCCGCGCTGGCCGCAGCTGATGATGCCTACAG  2889195
+
+Query  66       A  66
+                |
+Sbjct  2889196  A  2889196
+
+
+
+
+>Collimonas pratensis strain Ter291 chromosome, complete genome
+Sequence ID: CP013236.1 Length: 5585899
+Range 1: 5353708 to 5353762
+
+Score:56.3 bits(61), Expect:8e-04, 
+Identities:50/62(81%),  Gaps:7/62(11%), Strand: Plus/Minus
+
+Query  3        ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+                || ||||||||||| |||||     | |||||||||||    ||||||||||||||||||
+Sbjct  5353762  ATGGGAGATGGCATGCCTCCT----CGAACCGCTGCGCA---AGCAGCTGATGATGCCTA  5353710
+
+Query  63       CA  64
+                ||
+Sbjct  5353709  CA  5353708
+
+
+
+
+>Collimonas pratensis strain Ter91 chromosome, complete genome
+Sequence ID: CP013234.1 Length: 5730025
+Range 1: 5420242 to 5420296
+
+Score:56.3 bits(61), Expect:8e-04, 
+Identities:50/62(81%),  Gaps:7/62(11%), Strand: Plus/Minus
+
+Query  3        ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+                || ||||||||||| |||||     | |||||||||||    ||||||||||||||||||
+Sbjct  5420296  ATGGGAGATGGCATGCCTCCT----CGAACCGCTGCGCA---AGCAGCTGATGATGCCTA  5420244
+
+Query  63       CA  64
+                ||
+Sbjct  5420243  CA  5420242
+
+
+
+
+>Pseudomonas sp. T1-3-2 chromosome, complete genome
+Sequence ID: CP093280.1 Length: 7613303
+Range 1: 5512119 to 5512175
+
+Score:56.3 bits(61), Expect:8e-04, 
+Identities:49/61(80%),  Gaps:4/61(6%), Strand: Plus/Minus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||||||| | |||    ||| ||||  |  |||||||||||||||| |||
+Sbjct  5512175  GGAGATGGCATTCCTCCCTGAAC----CGCCGCGCTGGCCGCAGCTGATGATGCCTGCAG  5512120
+
+Query  66       A  66
+                |
+Sbjct  5512119  A  5512119
+
+
+
+
+>Achromobacter denitrificans strain FDAARGOS_786 chromosome, complete genome
+Sequence ID: CP053987.1 Length: 6736870
+Range 1: 2734459 to 2734513
+
+Score:54.5 bits(59), Expect:0.003, 
+Identities:50/64(78%),  Gaps:11/64(17%), Strand: Plus/Minus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCC--CGTAGCAGCTGATGATGCCTA  62
+                ||||||||||||||||||| ||||         ||||  |||| | ||||||||||||||
+Sbjct  2734513  TGGAGATGGCATTCCTCCACTAAC---------CGCCAGCGTATCGGCTGATGATGCCTA  2734463
+
+Query  63       CAGA  66
+                ||||
+Sbjct  2734462  CAGA  2734459
+
+
+
+
+>Achromobacter denitrificans strain FDAARGOS_788 chromosome, complete genome
+Sequence ID: CP053986.1 Length: 6736877
+Range 1: 3118946 to 3119000
+
+Score:54.5 bits(59), Expect:0.003, 
+Identities:50/64(78%),  Gaps:11/64(17%), Strand: Plus/Plus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCC--CGTAGCAGCTGATGATGCCTA  62
+                ||||||||||||||||||| ||||         ||||  |||| | ||||||||||||||
+Sbjct  3118946  TGGAGATGGCATTCCTCCACTAAC---------CGCCAGCGTATCGGCTGATGATGCCTA  3118996
+
+Query  63       CAGA  66
+                ||||
+Sbjct  3118997  CAGA  3119000
+
+
+
+
+>Achromobacter denitrificans strain PR1, complete genome
+Sequence ID: CP020917.1 Length: 6929205
+Range 1: 4236118 to 4236172
+
+Score:54.5 bits(59), Expect:0.003, 
+Identities:50/64(78%),  Gaps:11/64(17%), Strand: Plus/Minus
+
+Query  5        TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCC--CGTAGCAGCTGATGATGCCTA  62
+                ||||||||||||||||||| ||||         ||||  |||| | ||||||||||||||
+Sbjct  4236172  TGGAGATGGCATTCCTCCACTAAC---------CGCCAGCGTATCGGCTGATGATGCCTA  4236122
+
+Query  63       CAGA  66
+                ||||
+Sbjct  4236121  CAGA  4236118
+
+
+
+
+>Ralstonia insidiosa strain ATCC 49129 chromosome 1, complete sequence
+Sequence ID: CP016022.1 Length: 3921238
+Range 1: 625984 to 626041
+
+Score:52.7 bits(57), Expect:0.010, 
+Identities:48/60(80%),  Gaps:2/60(3%), Strand: Plus/Plus
+
+Query  5       TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+               |||||||||||||||||| |||||   | || ||  |  |  ||||||||||||||||||
+Sbjct  625984  TGGAGATGGCATTCCTCCCTTAACCGCCGGCAGCAAC--TGCCAGCTGATGATGCCTACA  626041
+
+
+
+
+>Ralstonia insidiosa strain FC1138 chromosome 1, complete sequence
+Sequence ID: CP012605.1 Length: 3968071
+Range 1: 666899 to 666956
+
+Score:52.7 bits(57), Expect:0.010, 
+Identities:48/60(80%),  Gaps:2/60(3%), Strand: Plus/Plus
+
+Query  5       TGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACA  64
+               |||||||||||||||||| |||||   | || ||  |  |  ||||||||||||||||||
+Sbjct  666899  TGGAGATGGCATTCCTCCCTTAACCGCCGGCAGCAAC--TGCCAGCTGATGATGCCTACA  666956
+
+
+
+
+>Providencia rettgeri strain KM4 chromosome, complete genome
+Sequence ID: CP086257.1 Length: 4378712
+Range 1: 2695079 to 2695137
+
+Score:52.7 bits(57), Expect:0.010, 
+Identities:51/63(81%),  Gaps:6/63(9%), Strand: Plus/Minus
+
+Query  3        ATTGGAGATGGCATTCCTCCA-TTAACAAACCGCTGCGCCCGTAG-CAGCTGATGATGCC  60
+                || |||||||||||||||||| || ||||| |    |||||||||   ||| ||||||||
+Sbjct  2695137  ATGGGAGATGGCATTCCTCCATTTTACAAAAC----CGCCCGTAGAGGGCTAATGATGCC  2695082
+
+Query  61       TAC  63
+                |||
+Sbjct  2695081  TAC  2695079
+
+
+
+
+>Providencia rettgeri strain VCSW10 chromosome, complete genome
+Sequence ID: CP082351.1 Length: 4355802
+Range 1: 2679337 to 2679395
+
+Score:52.7 bits(57), Expect:0.010, 
+Identities:51/63(81%),  Gaps:6/63(9%), Strand: Plus/Minus
+
+Query  3        ATTGGAGATGGCATTCCTCCA-TTAACAAACCGCTGCGCCCGTAG-CAGCTGATGATGCC  60
+                || |||||||||||||||||| || ||||| |    |||||||||   ||| ||||||||
+Sbjct  2679395  ATGGGAGATGGCATTCCTCCATTTTACAAAAC----CGCCCGTAGAGGGCTAATGATGCC  2679340
+
+Query  61       TAC  63
+                |||
+Sbjct  2679339  TAC  2679337
+
+
+
+
+>Achromobacter deleyi strain FDAARGOS_1050 chromosome, complete genome
+Sequence ID: CP065997.1 Length: 6987272
+Range 1: 4994473 to 4994531
+
+Score:52.7 bits(57), Expect:0.010, 
+Identities:50/63(79%),  Gaps:6/63(9%), Strand: Plus/Plus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGC--CCGTAGCAGCTGATGATGCCTAC  63
+                ||||||||||||||||||    | |||||| |||   ||   || |||||||||||||||
+Sbjct  4994473  GGAGATGGCATTCCTCCA----CCAACCGCCGCGTATCCTGCGCGGCTGATGATGCCTAC  4994528
+
+Query  64       AGA  66
+                |||
+Sbjct  4994529  AGA  4994531
+
+
+
+
+>Candidatus Nitrotoga sp. KNB genome assembly, chromosome: omosome
+Sequence ID: LS423452.1 Length: 2609426
+Range 1: 1637131 to 1637187
+
+Score:51.8 bits(56), Expect:0.010, 
+Identities:48/61(79%),  Gaps:4/61(6%), Strand: Plus/Minus
+
+Query  3        ATTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTA  62
+                ||||||||||| |||||||||||    ||||||||| ||     ||||| |||||| |||
+Sbjct  1637187  ATTGGAGATGGTATTCCTCCATT----AACCGCTGCTCCACCGACAGCTAATGATGTCTA  1637132
+
+Query  63       C  63
+                |
+Sbjct  1637131  C  1637131
+
+
+
+
+>Alcaligenes faecalis strain Mc250 chromosome
+Sequence ID: CP031012.1 Length: 4159911
+Range 1: 1146563 to 1146625
+
+Score:50.9 bits(55), Expect:0.034, 
+Identities:51/64(80%),  Gaps:2/64(3%), Strand: Plus/Plus
+
+Query  4        TTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCC-GTAGCAGCTGATGATGCCTA  62
+                ||||||||| | ||||||| |||||   ||||| ||  | | |||||||||||| | |||
+Sbjct  1146563  TTGGAGATGACGTTCCTCCCTTAACCG-CCGCTTCGTTCTGAAGCAGCTGATGACGTCTA  1146621
+
+Query  63       CAGA  66
+                ||||
+Sbjct  1146622  CAGA  1146625
+
+
+
+
+>Serratia odorifera strain NCTC11214 genome assembly, chromosome: 1
+Sequence ID: LR134117.1 Length: 5272556
+Range 1: 227248 to 227297
+
+Score:50.9 bits(55), Expect:0.034, 
+Identities:47/60(78%),  Gaps:10/60(16%), Strand: Plus/Plus
+
+Query  4       TTGGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTAC  63
+               |||||||||||||||||||| ||||         ||||| || | |||||||||||||||
+Sbjct  227248  TTGGAGATGGCATTCCTCCA-TAAC---------CGCCCTTACCGGCTGATGATGCCTAC  227297
+
+
+
+
+>Pseudomonas citronellolis strain SJTE-3, complete genome
+Sequence ID: CP015878.1 Length: 7309421
+Range 1: 4840301 to 4840354
+
+Score:50.0 bits(54), Expect:0.034, 
+Identities:49/61(80%),  Gaps:7/61(11%), Strand: Plus/Plus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||| ||| |||||    |||||   ||||  ||||||||||||||||| |
+Sbjct  4840301  GGAGATGGCATTC-TCCGTTAAC----CGCTGACGCCGT--CAGCTGATGATGCCTACCG  4840353
+
+Query  66       A  66
+                |
+Sbjct  4840354  A  4840354
+
+
+
+
+>Pseudomonas citronellolis strain G5.80 chromosome, complete genome
+Sequence ID: CP104727.1 Length: 7370743
+Range 1: 3160777 to 3160830
+
+Score:50.0 bits(54), Expect:0.034, 
+Identities:49/61(80%),  Gaps:7/61(11%), Strand: Plus/Minus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||| ||| |||||    |||||   ||||  ||||||||||||||||| |
+Sbjct  3160830  GGAGATGGCATTC-TCCGTTAAC----CGCTGACGCCGT--CAGCTGATGATGCCTACCG  3160778
+
+Query  66       A  66
+                |
+Sbjct  3160777  A  3160777
+
+
+
+
+>Pseudomonas citronellolis strain C12 chromosome, complete genome
+Sequence ID: CP101752.1 Length: 7203080
+Range 1: 4194684 to 4194737
+
+Score:50.0 bits(54), Expect:0.034, 
+Identities:49/61(80%),  Gaps:7/61(11%), Strand: Plus/Plus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||| ||| |||||    |||||   ||||  ||||||||||||||||| |
+Sbjct  4194684  GGAGATGGCATTC-TCCGTTAAC----CGCTGACGCCGT--CAGCTGATGATGCCTACCG  4194736
+
+Query  66       A  66
+                |
+Sbjct  4194737  A  4194737
+
+
+
+
+>Pseudomonas sp. HS-18 chromosome, complete genome
+Sequence ID: CP084413.1 Length: 6493503
+Range 1: 2228892 to 2228945
+
+Score:50.0 bits(54), Expect:0.034, 
+Identities:49/61(80%),  Gaps:7/61(11%), Strand: Plus/Minus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||| ||| |||||    |||||   ||||  ||||||||||||||||| |
+Sbjct  2228945  GGAGATGGCATTC-TCCGTTAAC----CGCTGACGCCGT--CAGCTGATGATGCCTACCG  2228893
+
+Query  66       A  66
+                |
+Sbjct  2228892  A  2228892
+
+
+
+
+>Pseudomonas sp. ADPe chromosome, complete genome
+Sequence ID: CP062122.1 Length: 7177635
+Range 1: 7058935 to 7058988
+
+Score:50.0 bits(54), Expect:0.034, 
+Identities:49/61(80%),  Gaps:7/61(11%), Strand: Plus/Plus
+
+Query  6        GGAGATGGCATTCCTCCATTAACAAACCGCTGCGCCCGTAGCAGCTGATGATGCCTACAG  65
+                ||||||||||||| ||| |||||    |||||   ||||  ||||||||||||||||| |
+Sbjct  7058935  GGAGATGGCATTC-TCCGTTAAC----CGCTGACGCCGT--CAGCTGATGATGCCTACCG  7058987
+
+Query  66       A  66
+                |
+Sbjct  7058988  A  7058988
+
+
+
+
+		
+
+

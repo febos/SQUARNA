@@ -346,9 +346,10 @@ def PreStemsFromDiag(diag):
     return prestems
 
 
-def StemsFromPreStemsDiffEdge(prestems, diff = 1):
+def StemsFromPreStemsDiffEdge(prestems, diff = 0):
     """Define stems as maximum sub-sequence of consecutive bps with up to
     <diff> trimmed base pairs from either of the edges"""
+    
     stems = []
     for prestem in prestems:
         for i in range(diff + 1):
@@ -361,14 +362,14 @@ def StemsFromPreStemsDiffEdge(prestems, diff = 1):
     return stems
 
 
-def StemsFromDiag(diag, diff = 1):
+def StemsFromDiag(diag, diff = 0):
     """Annotate stems at the given diagonal"""
     prestems = PreStemsFromDiag(diag)
     return StemsFromPreStemsDiffEdge(prestems, diff)
 
 
 def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
-                  rstems, minlen, minscore, diff = 1):
+                  rstems, minlen, minscore, diff = 0):
 
     # copy the bpboolmatrix
     matrix = bpboolmatrix.copy()
@@ -614,9 +615,9 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
     """Return the top stems"""
 
     # Remove already predicted bps from bp-restraints
-    rbps = set(rbps) - {bp for stem in rstems for bp in stem[0]}
+    restbps = set(rbps) - {bp for stem in rstems for bp in stem[0]}
 
-    allstems = AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
+    allstems = AnnotateStems(bpboolmatrix, bpscorematrix, restbps,
                              rstems, minlen, minbpscore)
 
     allstems = ScoreStems(seq, allstems, rstems, reacts,
@@ -892,8 +893,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                     newcurstemsets = []
 
                     inputs = ((shortseq, stems,
-                               bpboolmatrix.copy(), bpscorematrix,
-                               shortreacts, rbps.copy(), 
+                               bpboolmatrix, bpscorematrix,
+                               shortreacts, rbps, 
                                cursubopt, minlen, minbpscore, 
                                minfinscore, bracketweight,
                                distcoef, orderpenalty,
@@ -938,8 +939,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                 for stems in curstemsets:
 
                     # new optimal stems based on the current stem list
-                    newstems = OptimalStems(shortseq, stems, bpboolmatrix.copy(),
-                                            bpscorematrix, shortreacts, rbps.copy(),
+                    newstems = OptimalStems(shortseq, stems, bpboolmatrix,
+                                            bpscorematrix, shortreacts, rbps,
                                             cursubopt, minlen, minbpscore, 
                                             minfinscore, bracketweight,
                                             distcoef, orderpenalty,

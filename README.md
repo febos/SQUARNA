@@ -182,7 +182,7 @@ a (hopefully) arbitrary version of NumPy library.
         are ignored. inputformat should be a subset of qtrf letters 
         in any order, with q being mandatory.
   
-    rb={rsd} / rankby={rsd} [DEFAULT: rb=rs]
+    rb={rsd} / rankby={rsd} [DEFAULT: rb=s]
     
         How to rank the predicted structures. rankby should be a subset of
         letters r, s, and d in any order (r / s / rs / rd / sd / rsd).

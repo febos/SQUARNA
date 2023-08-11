@@ -246,7 +246,7 @@ def PredictShapeKnots(seq):
         return ['.'*len(seq),]
 
 
-def PredictSQUARNA(seq, conf = "def.conf", top = 1, rb = ''):
+def PredictSQUARNA(seq, conf = "def.conf", top = 1):
 
     with open("inp.tmp","w") as inp:
         inp.write(">seq"+'\n')
@@ -255,7 +255,7 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1, rb = ''):
     if len(seq) > 1000:
         conf = "long.conf"
 
-    os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} {} > outp2.tmp".format(conf, top, rb))
+    os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} > outp2.tmp".format(conf, top))
 
     cnt = 0
     flag = False
@@ -298,14 +298,14 @@ def PredictSQUARNAlong5(seq):
 def PredictSQUARNAlongN(seq):
     return PredictSQUARNA(seq, conf = "long.conf", top = 10**6)
 
-def PredictSQUARNAshape(seq):
-    return PredictSQUARNA(seq, conf = "shape.conf", rb= "rb=s")
+def PredictSQUARNAsk(seq):
+    return PredictSQUARNA(seq, conf = "sk.conf")
 
-def PredictSQUARNAshape5(seq):
-    return PredictSQUARNA(seq, conf = "shape.conf", top = 5, rb= "rb=s")
+def PredictSQUARNAsk5(seq):
+    return PredictSQUARNA(seq, conf = "sk.conf", top = 5)
 
-def PredictSQUARNAshapeN(seq):
-    return PredictSQUARNA(seq, conf = "shape.conf", top = 10**6, rb= "rb=s")
+def PredictSQUARNAskN(seq):
+    return PredictSQUARNA(seq, conf = "sk.conf", top = 10**6)
 
      
 
@@ -313,19 +313,11 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "TS1reducedWC"
-    tl    = "SQUARNAshape"
+    dtst  = "S01clean"
+    tl    = "SQUARNA5"
 
-    for dataset, tool in (("S01clean", "RNAfold"),
-                          ("S01clean", "IPknot"),
-                          ("S01clean", "MXfold2"),
-                          ("S01clean", "SPOT-RNA"),
-                          ("S01clean", "SQUARNAalt"),
-                          ("S01clean", "SQUARNAalt5"),
-                          ("S01clean", "SQUARNAaltN"),
-                          ("S01clean", "SQUARNA"),
-                          ("S01clean", "SQUARNA5"),
-                          ("S01clean", "SQUARNAN"),):
+    for dataset, tool in (("S01clean", "SQUARNA5"),
+                          ("SRtrain", "SQUARNA5"),):
 
         if NL:
             dataset += "NL"
@@ -361,9 +353,9 @@ if __name__ == "__main__":
                            "SQUARNAlong": PredictSQUARNAlong,
                            "SQUARNAlong5": PredictSQUARNAlong5,
                            "SQUARNAlongN": PredictSQUARNAlongN,
-                           "SQUARNAshape": PredictSQUARNAshape,
-                           "SQUARNAshape5": PredictSQUARNAshape5,
-                           "SQUARNAshapeN": PredictSQUARNAshapeN,
+                           "SQUARNAsk": PredictSQUARNAsk,
+                           "SQUARNAsk5": PredictSQUARNAsk5,
+                           "SQUARNAskN": PredictSQUARNAskN,
                            "ShapeKnots": PredictShapeKnots,
                            }[tool](seq)
 

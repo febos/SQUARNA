@@ -1,0 +1,428 @@
+RID: DC5WDUAV01N	
+Job Title:Group II intron, O. iheyensis				
+Program: BLASTN 
+Query: Group II intron, O. iheyensis ID: lcl|Query_50137(rna) Length: 412
+Database: nt Nucleotide collection (nt)
+	
+Sequences producing significant alignments:
+                                                                  Scientific      Common                     Max    Total Query   E   Per.   Acc.                        
+Description                                                       Name            Name            Taxid      Score  Score cover Value Ident  Len        Accession        
+Chain A, Mutant Group IIC Intron                                  Oceanobacill... NA              182710     739    739   100%  0.0   99.76  422        4DS6_A           
+Chain A, Group IIC intron                                         Oceanobacill... NA              182710     700    700   94%   0.0   99.74  398        4FAU_A           
+Chain A, Group IIC intron                                         Oceanobacill... NA              182710     700    700   94%   0.0   99.74  393        4FB0_A           
+Chain A, Group IIC Intron Ribozyme                                Oceanobacill... NA              182710     691    691   94%   0.0   99.23  398        6T3S_A           
+Chain A, Group IIC Intron Ribozyme                                Oceanobacill... NA              221109     691    691   94%   0.0   99.23  390        6T3R_A           
+Chain A, Group IIC Intron Ribozyme                                Oceanobacill... NA              221109     691    691   94%   0.0   99.23  398        6T3N_A           
+Chain A, Group IIC Intron Ribozyme                                Oceanobacill... NA              182710     689    689   94%   0.0   99.23  390        6T3K_A           
+Chain A, group II intron lariat                                   Oceanobacill... NA              182710     663    663   94%   0.0   97.94  418        5J01_A           
+Paenibacillus riograndensis SBR5 genome assembly SBR5(T),...      Paenibacillu... NA              1073571    158    434   95%   1e-33 70.38  7919576    LN831776.1       
+
+Alignments:
+
+>Chain A, Mutant Group IIC Intron
+Sequence ID: 4DS6_A Length: 422
+Range 1: 8 to 419
+
+Score:739 bits(819), Expect:0.0, 
+Identities:411/412(99%),  Gaps:0/412(0%), Strand: Plus/Plus
+
+Query  1    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  8    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  67
+
+Query  61   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  68   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  127
+
+Query  121  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  128  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  187
+
+Query  181  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  188  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  247
+
+Query  241  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAG  300
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  248  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAG  307
+
+Query  301  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGC  360
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |
+Sbjct  308  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCAC  367
+
+Query  361  CGTATACCGAACGGTACGTACGGTGGTGTGAGAGGAGTTCGCTCTACTCTAT  412
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  368  CGTATACCGAACGGTACGTACGGTGGTGTGAGAGGAGTTCGCTCTACTCTAT  419
+
+
+
+
+>Chain A, Group IIC intron
+Sequence ID: 4FAU_A Length: 398
+Range 1: 9 to 398
+
+Score:700 bits(776), Expect:0.0, 
+Identities:389/390(99%),  Gaps:0/390(0%), Strand: Plus/Plus
+
+Query  1    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  9    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  68
+
+Query  61   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  69   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  128
+
+Query  121  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  129  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  188
+
+Query  181  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  189  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  248
+
+Query  241  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAG  300
+            |||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||
+Sbjct  249  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGNAGAAGTCATAG  308
+
+Query  301  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGC  360
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  309  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGC  368
+
+Query  361  CGTATACCGAACGGTACGTACGGTGGTGTG  390
+            ||||||||||||||||||||||||||||||
+Sbjct  369  CGTATACCGAACGGTACGTACGGTGGTGTG  398
+
+
+
+
+>Chain A, Group IIC intron
+Sequence ID: 4FB0_A Length: 393
+Range 1: 4 to 393
+
+Score:700 bits(775), Expect:0.0, 
+Identities:389/390(99%),  Gaps:0/390(0%), Strand: Plus/Plus
+
+Query  1    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  4    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  63
+
+Query  61   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  64   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  123
+
+Query  121  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  124  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  183
+
+Query  181  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  184  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  243
+
+Query  241  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAG  300
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  244  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAG  303
+
+Query  301  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGC  360
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  304  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGC  363
+
+Query  361  CGTATACCGAACGGTACGTACGGTGGTGTG  390
+            |||||||||||||||| |||||||||||||
+Sbjct  364  CGTATACCGAACGGTAGGTACGGTGGTGTG  393
+
+
+
+
+>Chain A, Group IIC Intron Ribozyme
+Sequence ID: 6T3S_A Length: 398
+Range 1: 9 to 398
+
+Score:691 bits(765), Expect:0.0, 
+Identities:387/390(99%),  Gaps:0/390(0%), Strand: Plus/Plus
+
+Query  1    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  9    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  68
+
+Query  61   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  69   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  128
+
+Query  121  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  129  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  188
+
+Query  181  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  189  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  248
+
+Query  241  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAG  300
+            |||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||
+Sbjct  249  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGTAGAAGTCATAG  308
+
+Query  301  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGC  360
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||
+Sbjct  309  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACTGC  368
+
+Query  361  CGTATACCGAACGGTACGTACGGTGGTGTG  390
+            |||||||||||||||||||||||| |||||
+Sbjct  369  CGTATACCGAACGGTACGTACGGTAGTGTG  398
+
+
+
+
+>Chain A, Group IIC Intron Ribozyme
+Sequence ID: 6T3R_A Length: 390
+Range 1: 1 to 390
+
+Score:691 bits(765), Expect:0.0, 
+Identities:387/390(99%),  Gaps:0/390(0%), Strand: Plus/Plus
+
+Query  1    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+
+Query  61   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  61   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+
+Query  121  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  121  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  180
+
+Query  181  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  181  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  240
+
+Query  241  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAG  300
+            |||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||
+Sbjct  241  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGTAGAAGTCATAG  300
+
+Query  301  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGC  360
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||
+Sbjct  301  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACTGC  360
+
+Query  361  CGTATACCGAACGGTACGTACGGTGGTGTG  390
+            |||||||||||||||||||||||| |||||
+Sbjct  361  CGTATACCGAACGGTACGTACGGTAGTGTG  390
+
+
+
+
+>Chain A, Group IIC Intron Ribozyme
+Sequence ID: 6T3N_A Length: 398
+Range 1: 9 to 398
+
+Score:691 bits(765), Expect:0.0, 
+Identities:387/390(99%),  Gaps:0/390(0%), Strand: Plus/Plus
+
+Query  1    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  9    GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  68
+
+Query  61   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  69   ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  128
+
+Query  121  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  129  AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  188
+
+Query  181  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  189  ATAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGA  248
+
+Query  241  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAG  300
+            |||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||
+Sbjct  249  AGGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGGAGAAGTCATAG  308
+
+Query  301  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGC  360
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||
+Sbjct  309  TACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACGGC  368
+
+Query  361  CGTATACCGAACGGTACGTACGGTGGTGTG  390
+            |||||||||||||||||||||||| |||||
+Sbjct  369  CGTATACCGAACGGTACGTACGGTCGTGTG  398
+
+
+
+
+>Chain A, Group IIC Intron Ribozyme
+Sequence ID: 6T3K_A Length: 390
+Range 1: 2 to 390
+
+Score:689 bits(763), Expect:0.0, 
+Identities:386/389(99%),  Gaps:0/389(0%), Strand: Plus/Plus
+
+Query  2    TGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTAA  61
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2    TGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTAA  61
+
+Query  62   CAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCAA  121
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  62   CAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCAA  121
+
+Query  122  ACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGCA  181
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  122  ACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGCA  181
+
+Query  182  TAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGAA  241
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  182  TAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGAA  241
+
+Query  242  GGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAGT  301
+            ||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||
+Sbjct  242  GGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGGAGAAGTCATAGT  301
+
+Query  302  ACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGCC  361
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||
+Sbjct  302  ACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACGGCC  361
+
+Query  362  GTATACCGAACGGTACGTACGGTGGTGTG  390
+            ||||||||||||||||||||||| |||||
+Sbjct  362  GTATACCGAACGGTACGTACGGTCGTGTG  390
+
+
+
+
+>Chain A, group II intron lariat
+Sequence ID: 5J01_A Length: 418
+>Chain A, GROUP II INTRON LARIAT
+Sequence ID: 5J02_A Length: 418 
+Range 1: 2 to 389
+
+Score:663 bits(734), Expect:0.0, 
+Identities:381/389(98%),  Gaps:1/389(0%), Strand: Plus/Plus
+
+Query  2    TGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTAA  61
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2    TGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTAA  61
+
+Query  62   CAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCAA  121
+            |||||||||||||||||  | | ||||||||||||||  |  ||||||||||||||||||
+Sbjct  62   CAGTTAGCCTAACGCAACTGCG-CCGTGGCGACATGGCGTGGGAAGGAAGCGGACGGCAA  120
+
+Query  122  ACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGCA  181
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  121  ACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGCA  180
+
+Query  182  TAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGAA  241
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  181  TAACAAAACAAAGTCCTTTCTGCCAAAGTTGGTACAGAGTAAATGAAGCAGATTGATGAA  240
+
+Query  242  GGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAGT  301
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  241  GGGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAGT  300
+
+Query  302  ACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGCC  361
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  301  ACCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGCTTGAACCGCC  360
+
+Query  362  GTATACCGAACGGTACGTACGGTGGTGTG  390
+            |||||||||||||||||||||||||||||
+Sbjct  361  GTATACCGAACGGTACGTACGGTGGTGTG  389
+
+
+
+
+>Paenibacillus riograndensis SBR5 genome assembly SBR5(T), chromosome : I
+Sequence ID: LN831776.1 Length: 7919576
+Range 1: 5260985 to 5261369
+
+Score:158 bits(174), Expect:1e-33, 
+Identities:278/395(70%),  Gaps:14/395(3%), Strand: Plus/Minus
+
+Query  5        GCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTAACAG  64
+                |||||||||||| |    |||   ||||| |||||   || |    || || || ||| |
+Sbjct  5261369  GCCCGGCATGGGCGATAACTAGGCGGTGAAAGTCCGCTACAGGCTTGGTAGTAGGAACTG  5261310
+
+Query  65       TTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCAAACC  124
+                |||||| |  |||||||||||||  ||||   |||||||||||||||| |  ||||||||
+Sbjct  5261309  TTAGCCAAGGGCAAGGGTGTCCGCCGCGAGGCGGAATCTGAAGGAAGCCGGAGGCAAACC  5261250
+
+Query  125      TTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGCATAA  184
+                 ||||||||| |||||  ||   ||||  |||| | |     | ||| ||| |||||   
+Sbjct  5261249  CTCGGTCTGACGAACAGAAATCACATACAAGGC-ATGCTGGGACGGACGAGCTTGCAATC  5261191
+
+Query  185      CAAAACAAAGTCC-TTTCTGCCAAAGTTGGTACAGA-GTAAATGAAGCAGATTGATGAAG  242
+                |||| ||||||||  | |||||  | |   |   || |||||||  |||||| ||||| |
+Sbjct  5261190  CAAAGCAAAGTCCAATACTGCCCGAAT--CTCAGGATGTAAATGTGGCAGATAGATGAGG  5261133
+
+Query  243      GGAAAGACTGCATTCTTACCCGGGGAGGTCTGGAAACAGAAGTCAGCAGAAGTCATAGTA  302
+                |||| |    |  ||||||||||||||||||    ||||| |||  | | ||  | |  |
+Sbjct  5261132  GGAAGGTTATCGCTCTTACCCGGGGAGGTCT---CACAGACGTC--CGGTAGGAAAAAAA  5261078
+
+Query  303      CCCTGTTCGCAGGGGAAGGACGGAACAAGTATGGCGTTCGCGCCTAAGC--TTGAACCGC  360
+                 || |   |  || | || || || ||| || |    | || | || ||  |||||||||
+Sbjct  5261077  TCC-GAAAGACGGAGGAGTAC-GAGCAATTACGTAAATGGCACTTATGCGGTTGAACCGC  5261020
+
+Query  361      CGTATACCGAACGGTACGTACGGTGGTGTGAGAGG  395
+                |||||||||||||||||||||||||||||||||||
+Sbjct  5261019  CGTATACCGAACGGTACGTACGGTGGTGTGAGAGG  5260985
+
+
+
+
+Range 2: 5267348 to 5267619
+
+Score:118 bits(130), Expect:1e-21, 
+Identities:194/275(71%),  Gaps:5/275(1%), Strand: Plus/Minus
+
+Query  1        GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+                ||| |||||||||||| |    |||   ||||| |||||   || |    ||||| || |
+Sbjct  5267619  GTGCGCCCGGCATGGGCGATAACTAGGCGGTGAAAGTCCGCTACAGGCTTGGCAGTAGGA  5267560
+
+Query  61       ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+                || ||||||| |  ||||||||||||   ||||   ||||||||||||||||    ||||
+Sbjct  5267559  ACTGTTAGCCAAGGGCAAGGGTGTCCACCGCGAGGCGGAATCTGAAGGAAGCCAGAGGCA  5267500
+
+Query  121      AACCTTCGGTCTGAGGAACACGAACTTCATATGAGGCTAGGTATCAATGGATGAGTTTGC  180
+                |||| ||||||||| |||||  ||   ||||  |||| | |     | ||| ||| ||||
+Sbjct  5267499  AACCCTCGGTCTGACGAACAGAAATCACATACAAGGC-ATGCTGGGACGGACGAGCTTGC  5267441
+
+Query  181      ATAACAAAACAAAGTCC-TTTCTGCCAAAGTTGGTACAGA-GTAAATGAAGCAGATTGAT  238
+                |   |||| ||||||||  | |||||  | |   |   || |||||||  |||||| |||
+Sbjct  5267440  AATCCAAAGCAAAGTCCAATACTGCCCGAAT--CTCAGGATGTAAATGTGGCAGATAGAT  5267383
+
+Query  239      GAAGGGAAAGACTGCATTCTTACCCGGGGAGGTCT  273
+                || ||||| |    |  ||||||||||||||||||
+Sbjct  5267382  GAGGGGAAGGTTATCGCTCTTACCCGGGGAGGTCT  5267348
+
+
+
+
+Range 3: 5265759 to 5265802
+
+Score:80.6 bits(88), Expect:3e-10, 
+Identities:44/44(100%),  Gaps:0/44(0%), Strand: Plus/Minus
+
+Query  352      TTGAACCGCCGTATACCGAACGGTACGTACGGTGGTGTGAGAGG  395
+                ||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  5265802  TTGAACCGCCGTATACCGAACGGTACGTACGGTGGTGTGAGAGG  5265759
+
+
+
+
+Range 4: 6862283 to 6862410
+
+Score:77.0 bits(84), Expect:3e-09, 
+Identities:95/129(74%),  Gaps:1/129(0%), Strand: Plus/Plus
+
+Query  1        GTGTGCCCGGCATGGGTGCAGTCTATAGGGTGAGAGTCCCGAACTGTGAAGGCAGAAGTA  60
+                ||| |||||||||||| |    |||   ||||| |||||   || |    ||||| || |
+Sbjct  6862283  GTGCGCCCGGCATGGGCGATAACTAGGCGGTGAAAGTCCGCTACAGGCTTGGCAGTAGGA  6862342
+
+Query  61       ACAGTTAGCCTAACGCAAGGGTGTCCGTGGCGACATGGAATCTGAAGGAAGCGGACGGCA  120
+                || ||||||  || |||||| |||| || ||||  ||||||||||||||||| |  || |
+Sbjct  6862343  ACTGTTAGCTGAAGGCAAGGATGTC-GTCGCGAGGTGGAATCTGAAGGAAGCCGGAGGTA  6862401
+
+Query  121      AACCTTCGG  129
+                |||| ||||
+Sbjct  6862402  AACCCTCGG  6862410
+
+
+
+
+		
+
+

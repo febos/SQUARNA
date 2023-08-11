@@ -1,0 +1,1804 @@
+RID: DC52H6PJ01N	
+Job Title:Group I intron, Azoarcus sp				
+Program: BLASTN 
+Query: Group I intron, Azoarcus sp ID: lcl|Query_440763(rna) Length: 214
+Database: nt Nucleotide collection (nt)
+	
+Sequences producing significant alignments:
+                                                                  Scientific      Common                     Max    Total Query   E   Per.   Acc.                        
+Description                                                       Name            Name            Taxid      Score  Score cover Value Ident  Len        Accession        
+Massilia sp. HC52 chromosome, complete genome                     Massilia sp.... NA              2852099    245    487   100%  5e-60 85.65  6852586    CP086370.1       
+Microvirgula aerodenitrificans strain BE2.4 chromosome, comple... Microvirgula... NA              57480      233    292   94%   3e-56 85.78  4121243    CP028519.1       
+Candidatus Symbiobacter mobilis CR, complete genome               Candidatus S... NA              946483     205    205   96%   4e-48 82.55  2991840    CP004885.1       
+Polynucleobacter paneuropaeus strain AP-Ram-40-B10 chromosome     Polynucleoba... NA              2527775    167    167   94%   1e-36 78.37  1737606    CP049640.1       
+Polynucleobacter paneuropaeus strain AP-RamGG-20A-H1 chromosom... Polynucleoba... NA              2527775    167    167   94%   1e-36 78.37  1755966    CP049638.1       
+Polynucleobacter paneuropaeus strain MG-25-Pas1-D2 chromosome     Polynucleoba... NA              2527775    164    272   94%   1e-35 78.20  1833375    CP030085.1       
+Polynucleobacter sp. AP-Elch-400A-B2 chromosome                   Polynucleoba... NA              2576930    162    162   94%   4e-35 77.88  2094292    CP061317.1       
+Polynucleobacter paneuropaeus strain AP-Vara3-400D-D1...          Polynucleoba... NA              2527775    162    162   94%   4e-35 77.88  1785900    CP049630.1       
+Polynucleobacter sp. AP-Jannik-300A-C4 chromosome, complete...    Polynucleoba... NA              2576928    159    159   94%   2e-34 77.73  1998164    CP061316.1       
+Polynucleobacter sp. es-EL-1 chromosome, complete genome          Polynucleoba... NA              1855652    159    292   94%   2e-34 77.73  1903755    CP061310.1       
+Polynucleobacter sp. MG-Unter2-18 chromosome, complete genome     Polynucleoba... NA              2081052    159    159   94%   2e-34 77.25  2009228    CP061302.1       
+Polynucleobacter paneuropaeus strain JS-Inari2-20-E3 chromosom... Polynucleoba... NA              2527775    159    159   94%   2e-34 77.73  1760404    CP049627.1       
+Polynucleobacter paneuropaeus strain MWH-Valk-A4 chromosome,...   Polynucleoba... NA              2527775    159    384   94%   2e-34 77.73  1790210    CP049617.1       
+Polynucleobacter paneuropaeus strain AP-SiebGG-20-E6 chromosom... Polynucleoba... NA              2527775    155    155   94%   7e-33 77.25  1696888    CP049633.1       
+Limnohabitans sp. 103DPR2 chromosome, complete genome             Limnohabitan... NA              1678129    154    154   100%  7e-33 76.58  2948795    CP011834.1       
+Polynucleobacter sp. JS-JIR-II-50 chromosome                      Polynucleoba... NA              2576919    154    154   94%   7e-33 77.99  2067562    CP061307.1       
+Polynucleobacter paneuropaeus strain AP-Vara3-400C-C6...          Polynucleoba... NA              2527775    154    154   94%   7e-33 76.89  1783146    CP049631.1       
+Polynucleobacter sp. JS-Mosq-20-D10 chromosome                    Polynucleoba... NA              2576922    153    153   94%   2e-32 77.88  2089501    CP061305.1       
+Polynucleobacter tropicus strain MWH-UH21B chromosome, complet... Polynucleoba... NA              1743174    152    282   94%   2e-32 76.92  2040807    CP028942.1       
+Polynucleobacter sp. MWH-S4W17 chromosome, complete genome        Polynucleoba... NA              1855910    150    248   94%   8e-32 76.78  2051571    CP061295.1       
+Polynucleobacter paneuropaeus strain FUKU-SW-23 chromosome,...    Polynucleoba... NA              2527775    150    278   94%   8e-32 76.78  1780280    CP049629.1       
+Limnohabitans sp. 63ED37-2 chromosome, complete genome            Limnohabitan... NA              1678128    150    205   100%  3e-31 76.13  3372992    CP011774.1       
+Polynucleobacter sp. AP-Nino-20-G2 chromosome                     Polynucleoba... NA              2576917    146    469   94%   3e-30 76.30  2013598    CP061313.1       
+Polynucleobacter paneuropaeus strain JS-Vilge-20-A6 chromosome... Polynucleoba... NA              2527775    142    281   94%   4e-29 76.08  1834988    CP049622.1       
+Polynucleobacter paneuropaeus strain JS-Vilge-20-A7 chromosome... Polynucleoba... NA              2527775    142    281   94%   4e-29 76.08  1860892    CP049621.1       
+Polynucleobacter sp. UB-Raua-W9 chromosome                        Polynucleoba... NA              1819736    141    239   94%   4e-29 75.36  1835600    CP061290.1       
+Polynucleobacter paneuropaeus strain AP-SaBe1-20-G4 chromosome... Polynucleoba... NA              2527775    141    141   94%   1e-28 74.65  1703023    CP049636.1       
+Polynucleobacter difficilis strain AM-8B5 chromosome, complete... Polynucleoba... NA              556054     138    138   94%   5e-28 75.60  1995529    CP023276.1       
+Polynucleobacter paneuropaeus strain MWH-PRW10-1 chromosome,...   Polynucleoba... NA              2527775    138    242   94%   5e-28 74.77  1771478    CP049618.1       
+Polynucleobacter sp. Adler-ghost chromosome                       Polynucleoba... NA              2770234    135    201   94%   6e-27 74.65  2101026    CP061320.1       
+Polynucleobacter wuianus strain QLW-P1FAT50C-4 chromosome         Polynucleoba... NA              1743168    133    715   94%   2e-26 75.12  2232205    CP015922.1       
+Polynucleobacter sp. MWH-P3-07-1 chromosome, complete genome      Polynucleoba... NA              1743173    133    133   94%   2e-26 75.12  1711040    CP061296.1       
+Beta proteobacterium CB, complete genome                          beta proteob... NA              543913     132    444   94%   2e-26 76.76  2045720    CP004348.1       
+Polynucleobacter paneuropaeus strain AP-SiebGG-20-E3 chromosom... Polynucleoba... NA              2527775    132    132   94%   7e-26 74.64  1784601    CP049634.1       
+Polynucleobacter antarcticus strain LimPoW16 chromosome,...       Polynucleoba... NA              1743162    129    200   94%   3e-25 73.09  2154412    CP028941.1       
+Polynucleobacter asymbioticus strain MWH-RechtKol4 chromosome,... Polynucleoba... NA              576611     129    129   94%   3e-25 74.64  2382558    CP015017.1       
+Polynucleobacter asymbioticus strain MWH-RechtKolB chromosome,... Polynucleoba... NA              576611     129    129   94%   3e-25 74.64  2355392    CP015016.1       
+Polynucleobacter sp. KF022 DNA, complete genome                   Polynucleoba... NA              2982615    129    216   94%   3e-25 74.30  1868546    AP026972.1       
+Polynucleobacter sp. AP-Sving-400A-A2 chromosome, complete genome Polynucleoba... NA              2081049    129    129   94%   3e-25 74.64  2034533    CP061312.1       
+Polynucleobacter paneuropaeus strain AP-SiebGG-20-E7 chromosom... Polynucleoba... NA              2527775    129    129   94%   3e-25 74.64  1724992    CP049632.1       
+Polynucleobacter sp. UB-Siik-W21 chromosome, complete genome      Polynucleoba... NA              1855646    128    341   94%   9e-25 74.06  2126800    CP061289.1       
+Polynucleobacter sp. AP-Titi-500A-B4 chromosome                   Polynucleoba... NA              2576923    127    127   94%   9e-25 74.16  2082645    CP061311.1       
+Polynucleobacter sp. MWH-Svant-W18 chromosome, complete genome    Polynucleoba... NA              1855909    109    109   94%   2e-19 72.09  1770456    CP061293.1       
+
+Alignments:
+
+>Massilia sp. HC52 chromosome, complete genome
+Sequence ID: CP086370.1 Length: 6852586
+Range 1: 6071589 to 6071802
+
+Score:245 bits(271), Expect:5e-60, 
+Identities:185/216(86%),  Gaps:4/216(1%), Strand: Plus/Minus
+
+Query  1        CTCATATTTCGATGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCG  60
+                ||||||| |  ||||||||||||  |||||||| || ||||||||||||||||||||| |
+Sbjct  6071802  CTCATATGTAAATGTGCCTTGCGATGGGAAACCGCGTAAGGGATGGTGTCAAATTCGGTG  6071743
+
+Query  61       AAACCTAAGCGCCCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGC  118
+                ||||||||||||    |   ||||| ||||| ||||||||||||||| | ||    | ||
+Sbjct  6071742  AAACCTAAGCGCAG--CGATGCGTAAGGCAATGCCGAGCCAAGCTTCAGTGCGAAAGTGC  6071685
+
+Query  119      CGATGAAGGTGTAGAGACTAGACGGCACCCACCTAAGGCAAACGCTATGGTGAAGGCATA  178
+                 | |||||||||||||||||||||||||||||||| |||  | |||||||||||||||||
+Sbjct  6071684  TGTTGAAGGTGTAGAGACTAGACGGCACCCACCTACGGCGCAAGCTATGGTGAAGGCATA  6071625
+
+Query  179      GTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||||||||||||||||||||||| |||||
+Sbjct  6071624  GTCCAGGGAGTGGCGAAAGTCACACAAACCAGAATC  6071589
+
+
+
+
+Range 2: 6058570 to 6058771
+
+Score:242 bits(267), Expect:6e-59, 
+Identities:177/204(87%),  Gaps:4/204(1%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                |||||||| ||   ||||||  || ||||||||||||||||||||||||||||||||| |
+Sbjct  6058771  TGTGCCTTACGTTTGGAAACTGCGTAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCAC  6058712
+
+Query  73       CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGGTGT  130
+                    |   | | ||||||||||||||||||||||||| ||    |||| | |||||||||
+Sbjct  6058711  AG--CAATGTGGATGGCAACGCCGAGCCAAGCTTCGGTGCGAAAGCGCTGTTGAAGGTGT  6058654
+
+Query  131      AGAGACTAGACGGCACCCACCTAAGGCAAACGCTATGGTGAAGGCATAGTCCAGGGAGTG  190
+                |||||||||||||||||||||||||||  |||||||||||||||||||||||||||||||
+Sbjct  6058653  AGAGACTAGACGGCACCCACCTAAGGCGTACGCTATGGTGAAGGCATAGTCCAGGGAGTG  6058594
+
+Query  191      GCGAAAGTCACACAAACCGGAATC  214
+                |||||||||||||||||| |||||
+Sbjct  6058593  GCGAAAGTCACACAAACCAGAATC  6058570
+
+
+
+
+>Microvirgula aerodenitrificans strain BE2.4 chromosome, complete genome
+Sequence ID: CP028519.1 Length: 4121243
+Range 1: 938857 to 939058
+
+Score:233 bits(257), Expect:3e-56, 
+Identities:175/204(86%),  Gaps:4/204(1%), Strand: Plus/Minus
+
+Query  13      TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+               |||||| |||||  ||||||  |||| ||||||||||||||||||| |||||||||||||
+Sbjct  939058  TGTGCCATGCGCGTGGAAACTGCGCATGGGATGGTGTCAAATTCGGTGAAACCTAAGCGC  938999
+
+Query  73      CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGG--CGCCTGCGCCGATGAAGGTGT  130
+                   |   ||||||||||| ||||||||||||||| |  ||   |  | | |||||||||
+Sbjct  938998  AG--CGATGCGTATGGCAATGCCGAGCCAAGCTTCAGGTCGAAAGTCCTGTTGAAGGTGT  938941
+
+Query  131     AGAGACTAGACGGCACCCACCTAAGGCAAACGCTATGGTGAAGGCATAGTCCAGGGAGTG  190
+               ||||||||||||||||||||||||||| || ||||||||||||||||||||| |||||||
+Sbjct  938940  AGAGACTAGACGGCACCCACCTAAGGCGAAAGCTATGGTGAAGGCATAGTCCGGGGAGTG  938881
+
+Query  191     GCGAAAGTCACACAAACCGGAATC  214
+               |||||||||||||||||| |||||
+Sbjct  938880  GCGAAAGTCACACAAACCAGAATC  938857
+
+
+
+
+Range 2: 260813 to 260913
+
+Score:59.0 bits(64), Expect:4e-04, 
+Identities:76/104(73%),  Gaps:11/104(10%), Strand: Plus/Minus
+
+Query  89      CAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGAT------GAAGGTGTAGAGACTAGACG  142
+               ||||||||||||||||  |||  | |   |||||      |||||||||||||  |||||
+Sbjct  260913  CAACGCCGAGCCAAGCCCCGGATCAT---CCGATTCGCGGGAAGGTGTAGAGAGCAGACG  260857
+
+Query  143     GCACCCACCTAAGGC--AAACGCTATGGTGAAGGCATAGTCCAG  184
+               ||   |||||  |||   || |||||||||||||| |  |||||
+Sbjct  260856  GCGGGCACCTGTGGCCGCAAGGCTATGGTGAAGGCGTGCTCCAG  260813
+
+
+
+
+>Candidatus Symbiobacter mobilis CR, complete genome
+Sequence ID: CP004885.1 Length: 2991840
+Range 1: 1180122 to 1180330
+
+Score:205 bits(227), Expect:4e-48, 
+Identities:175/212(83%),  Gaps:8/212(3%), Strand: Plus/Plus
+
+Query  8        TTCGAT--GTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACC  65
+                ||||||  |||||||||||  ||||||  ||||||||||||||||||| |||| ||||||
+Sbjct  1180122  TTCGATTTGTGCCTTGCGCTCGGAAACGGCGCAAGGGATGGTGTCAAAGTCGGTGAAACC  1180181
+
+Query  66       TAAGCGCCCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCG--CCGATG  123
+                |   ||| |      ||| ||||||||||||||||||||  |||  |   ||  |||| |
+Sbjct  1180182  TGTACGCGCATT---GCGCATGGCAACGCCGAGCCAAGCCCCGGAACAACCGTTCCGAGG  1180238
+
+Query  124      AAGGTGTAGAGACTAGACGGCACCCACCTAAGGCAAA-CGCTATGGTGAAGGCATAGTCC  182
+                ||||||||||||||||||||||||||||||  |||   ||| ||||||||||||||||||
+Sbjct  1180239  AAGGTGTAGAGACTAGACGGCACCCACCTACAGCATTGCGCCATGGTGAAGGCATAGTCC  1180298
+
+Query  183      AGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||||||| ||| ||||||||||||
+Sbjct  1180299  AGGGAGTGGCGAAAGCCACGCAAACCGGAATC  1180330
+
+
+
+
+>Polynucleobacter paneuropaeus strain AP-Ram-40-B10 chromosome
+Sequence ID: CP049640.1 Length: 1737606
+Range 1: 643477 to 643682
+
+Score:167 bits(184), Expect:1e-36, 
+Identities:163/208(78%),  Gaps:8/208(3%), Strand: Plus/Plus
+
+Query  13      TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+               ||||||||  ||  ||||||  || ||||||||||||||||||||| |||| |||||  |
+Sbjct  643477  TGTGCCTTATGCGTGGAAACTGCGTAAGGGATGGTGTCAAATTCGGAGAAAGCTAAGTTC  643536
+
+Query  73      CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGGTGT  130
+                   |   |  || |  |||||||||||||||||| |||     | || | |||||||||
+Sbjct  643537  AG--CAATGAATACGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGGTGT  643594
+
+Query  131     AGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGGG  186
+               ||||||||||||||||||| |||||    |||| |  |||| ||||||||||||||||||
+Sbjct  643595  AGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGGG  643654
+
+Query  187     AGTGGCGAAAGTCACACAAACCGGAATC  214
+               ||| | |||||  |||||||||||||||
+Sbjct  643655  AGTTGTGAAAGCAACACAAACCGGAATC  643682
+
+
+
+
+>Polynucleobacter paneuropaeus strain AP-RamGG-20A-H1 chromosome, complete genome
+Sequence ID: CP049638.1 Length: 1755966
+Range 1: 1394436 to 1394641
+
+Score:167 bits(184), Expect:1e-36, 
+Identities:163/208(78%),  Gaps:8/208(3%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  || ||||||||||||||||||||| |||| |||||  |
+Sbjct  1394641  TGTGCCTTATGCGTGGAAACTGCGTAAGGGATGGTGTCAAATTCGGAGAAAGCTAAGTTC  1394582
+
+Query  73       CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGGTGT  130
+                    |   |  || |  |||||||||||||||||| |||     | || | |||||||||
+Sbjct  1394581  AG--CAATGAATACGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGGTGT  1394524
+
+Query  131      AGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGGG  186
+                ||||||||||||||||||| |||||    |||| |  |||| ||||||||||||||||||
+Sbjct  1394523  AGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGGG  1394464
+
+Query  187      AGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||| | |||||  |||||||||||||||
+Sbjct  1394463  AGTTGTGAAAGCAACACAAACCGGAATC  1394436
+
+
+
+
+>Polynucleobacter paneuropaeus strain MG-25-Pas1-D2 chromosome
+Sequence ID: CP030085.1 Length: 1833375
+Range 1: 1417957 to 1418167
+
+Score:164 bits(181), Expect:1e-35, 
+Identities:165/211(78%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1418167  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1418108
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1418107  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1418048
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| || |||| |||||||||||||||
+Sbjct  1418047  TGTAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCA  1417988
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||| | |||||  |||||||||||||||
+Sbjct  1417987  GGGAGTAGTGAAAGCTACACAAACCGGAATC  1417957
+
+
+
+
+Range 2: 1445270 to 1445483
+
+Score:107 bits(118), Expect:9e-19, 
+Identities:155/216(72%),  Gaps:16/216(7%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1445483  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1445424
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1445423  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1445366
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG-GCAAACG----------CTATGGTGAAGGCATA  178
+                |||||||||||||||||||| |||||  || | |           |||| ||||||||||
+Sbjct  1445365  TAGAGACTAGACGGCACCCATCTAAGTTCAGATGTTAAGTTTGAATATGATGAAGGCATA  1445306
+
+Query  179      GTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||| | |||||  |||||||||||||||
+Sbjct  1445305  GTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1445270
+
+
+
+
+>Polynucleobacter sp. AP-Elch-400A-B2 chromosome
+Sequence ID: CP061317.1 Length: 2094292
+Range 1: 1686180 to 1686385
+
+Score:162 bits(179), Expect:4e-35, 
+Identities:162/208(78%),  Gaps:8/208(3%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| |||||  |
+Sbjct  1686385  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAGTTC  1686326
+
+Query  73       CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGGTGT  130
+                    |   |  || |  |||||||||||||||||| |||     | || | |||||||||
+Sbjct  1686325  AG--CAATGAATACGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGGTGT  1686268
+
+Query  131      AGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGGG  186
+                ||||||||||||||||||| |||||    |||| |  |||| ||||||||||||||||||
+Sbjct  1686267  AGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGGG  1686208
+
+Query  187      AGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||| | |||||  |||||||||||||||
+Sbjct  1686207  AGTAGTGAAAGCTACACAAACCGGAATC  1686180
+
+
+
+
+>Polynucleobacter paneuropaeus strain AP-Vara3-400D-D1 chromosome, complete genome
+Sequence ID: CP049630.1 Length: 1785900
+Range 1: 1409887 to 1410092
+
+Score:162 bits(179), Expect:4e-35, 
+Identities:162/208(78%),  Gaps:8/208(3%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| |||||  |
+Sbjct  1410092  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAGTTC  1410033
+
+Query  73       CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGGTGT  130
+                    |   |  || |  |||||||||||||||||| |||     | || | |||||||||
+Sbjct  1410032  AG--CAATGAATACGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGGTGT  1409975
+
+Query  131      AGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGGG  186
+                ||||||||||||||||||| |||||    |||| |  |||| ||||||||||||||||||
+Sbjct  1409974  AGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGGG  1409915
+
+Query  187      AGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||| | |||||  |||||||||||||||
+Sbjct  1409914  AGTAGTGAAAGCTACACAAACCGGAATC  1409887
+
+
+
+
+>Polynucleobacter sp. AP-Jannik-300A-C4 chromosome, complete genome
+Sequence ID: CP061316.1 Length: 1998164
+Range 1: 1566586 to 1566796
+
+Score:159 bits(176), Expect:2e-34, 
+Identities:164/211(78%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1566796  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1566737
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1566736  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1566677
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| || |||| |||||||||||||||
+Sbjct  1566676  TGTAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCA  1566617
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||| | |||||  |||||||||||||||
+Sbjct  1566616  GGGAGTAGTGAAAGCTACACAAACCGGAATC  1566586
+
+
+
+
+>Polynucleobacter sp. es-EL-1 chromosome, complete genome
+Sequence ID: CP061310.1 Length: 1903755
+Range 1: 1524009 to 1524219
+
+Score:159 bits(176), Expect:2e-34, 
+Identities:164/211(78%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1524219  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1524160
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1524159  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1524100
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| || |||| |||||||||||||||
+Sbjct  1524099  TGTAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCA  1524040
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||| | |||||  |||||||||||||||
+Sbjct  1524039  GGGAGTAGTGAAAGCTACACAAACCGGAATC  1524009
+
+
+
+
+Range 2: 1112812 to 1113024
+
+Score:132 bits(146), Expect:2e-26, 
+Identities:162/219(74%),  Gaps:23/219(10%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1113024  TGTGCCTTATGCTTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1112965
+
+Query  73       CCGCCCGGGCGTATG---GC-AACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAG  126
+                       |   |||    || |||||||||||||||||| |||     | || | |||||
+Sbjct  1112964  A------GAAATATCCAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAG  1112911
+
+Query  127      GTGTAGAGACTAGACGGCACCCACCTAAGG-CAAACGCTA----------TGGTGAAGGC  175
+                ||||||||||||||||||||||| |||||  || ||| ||          || |||||||
+Sbjct  1112910  GTGTAGAGACTAGACGGCACCCATCTAAGTTCAGACGTTAAGTTTGAATATGATGAAGGC  1112851
+
+Query  176      ATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||||||| | |||||  |||||||||||||||
+Sbjct  1112850  ATAGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1112812
+
+
+
+
+>Polynucleobacter sp. MG-Unter2-18 chromosome, complete genome
+Sequence ID: CP061302.1 Length: 2009228
+Range 1: 1622302 to 1622512
+
+Score:159 bits(176), Expect:2e-34, 
+Identities:163/211(77%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1622512  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1622453
+
+Query  73       CCGCCCGGGCGT---ATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                   |    ||     | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1622452  AGTCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1622393
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| || |||| |||||||||||||||
+Sbjct  1622392  TGTAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCA  1622333
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||| | |||||  |||||||||||||||
+Sbjct  1622332  GGGAGTAGTGAAAGCTACACAAACCGGAATC  1622302
+
+
+
+
+>Polynucleobacter paneuropaeus strain JS-Inari2-20-E3 chromosome, complete genome
+Sequence ID: CP049627.1 Length: 1760404
+Range 1: 1396504 to 1396714
+
+Score:159 bits(176), Expect:2e-34, 
+Identities:164/211(78%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1396714  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1396655
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1396654  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1396595
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||
+Sbjct  1396594  TGTAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCA  1396535
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||| | |||||  |||||||||||||||
+Sbjct  1396534  GGGAGTTGTGAAAGCAACACAAACCGGAATC  1396504
+
+
+
+
+>Polynucleobacter paneuropaeus strain MWH-Valk-A4 chromosome, complete genome
+Sequence ID: CP049617.1 Length: 1790210
+Range 1: 1393958 to 1394168
+
+Score:159 bits(176), Expect:2e-34, 
+Identities:164/211(78%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1394168  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1394109
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |   |   | || | ||||||
+Sbjct  1394108  AGCCAAAAGTTGCACAAGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGG  1394049
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| || |||| |||||||||||||||
+Sbjct  1394048  TGTAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCA  1393989
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||| | |||||  |||||||||||||||
+Sbjct  1393988  GGGAGTAGTGAAAGCTACACAAACCGGAATC  1393958
+
+
+
+
+Range 2: 1412031 to 1412237
+
+Score:133 bits(147), Expect:2e-26, 
+Identities:157/209(75%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1412237  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1412178
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1412177  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1412120
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| || |||| |||||||||||||||||
+Sbjct  1412119  TAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCAGG  1412060
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1412059  GAGTAGTGAAAGCTACACAAACCGGAATC  1412031
+
+
+
+
+Range 3: 1391024 to 1391113
+
+Score:90.6 bits(99), Expect:2e-13, 
+Identities:74/90(82%),  Gaps:4/90(4%), Strand: Plus/Minus
+
+Query  129      GTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAG  184
+                ||||| || |||||||| ||| |||||    |||| || |||| ||||||||||||| ||
+Sbjct  1391113  GTAGAAACAAGACGGCATCCAGCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCAAG  1391054
+
+Query  185      GGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||| | |||||  |||||||||||||||
+Sbjct  1391053  GGAGTAGTGAAAGCTACACAAACCGGAATC  1391024
+
+
+
+
+>Polynucleobacter paneuropaeus strain AP-SiebGG-20-E6 chromosome, complete genome
+Sequence ID: CP049633.1 Length: 1696888
+Range 1: 1338060 to 1338270
+
+Score:155 bits(171), Expect:7e-33, 
+Identities:163/211(77%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1338270  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1338211
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1338210  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1338151
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    ||||  | |||| |||||||||||||||
+Sbjct  1338150  TGTAGAGACTAGACGGCACCCATCTAAGTCCAGCAATGGATATGATGAAGGCATAGTCCA  1338091
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||| | |||||  |||||||||||||||
+Sbjct  1338090  GGGAGTAGTGAAAGCTACACAAACCGGAATC  1338060
+
+
+
+
+>Limnohabitans sp. 103DPR2 chromosome, complete genome
+Sequence ID: CP011834.1 Length: 2948795
+Range 1: 934047 to 934265
+
+Score:154 bits(170), Expect:7e-33, 
+Identities:170/222(77%),  Gaps:11/222(4%), Strand: Plus/Plus
+
+Query  1       CTCATATTTCG---ATGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCG  57
+               ||||||||||    ||||||||| | |  ||||||   | ||||||||||||||||||||
+Sbjct  934047  CTCATATTTCTCAAATGTGCCTTACACGTGGAAACTGTGTAAGGGATGGTGTCAAATTCG  934106
+
+Query  58      GCGAAACCTAAGCGCCCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCG-GCGCCTGC  116
+                 |||||||||| |   | |    | |||||||| | ||||| |||||| | |||   ||
+Sbjct  934107  ATGAAACCTAAGTGT--GGCAACACATATGGCAATGTCGAGCGAAGCTTAGTGCGAAAGC  934164
+
+Query  117     GCCGATGAAGGTGTAGAGACTAGACGGCACCCACCTAAGGCAAACGCT----ATGGTGAA  172
+                |   |||| ||||||||||| |||||||||||||||||   | || |    ||||||||
+Sbjct  934165  ACTT-TGAACGTGTAGAGACTTGACGGCACCCACCTAAGTACAGCGATGTATATGGTGAA  934223
+
+Query  173     GGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+               |||| ||||||| |||||  |||||||||||||| |||||||
+Sbjct  934224  GGCAAAGTCCAGCGAGTGATGAAAGTCACACAAAGCGGAATC  934265
+
+
+
+
+>Polynucleobacter sp. JS-JIR-II-50 chromosome
+Sequence ID: CP061307.1 Length: 2067562
+Range 1: 1701154 to 1701362
+
+Score:154 bits(170), Expect:7e-33, 
+Identities:163/209(78%),  Gaps:7/209(3%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||   |
+Sbjct  1701362  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATTC  1701303
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |   |   | || | ||||||
+Sbjct  1701302  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGG  1701243
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG-GCAAACGC-TATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||||||||||| ||  | || ||||||||||||||||||||||
+Sbjct  1701242  TGTAGAGACTAGACGGCACCCACCTAAGTGCGCAAGCATATGGTGAAGGCATAGTCCAGG  1701183
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||   |||| | |||||||||||||||
+Sbjct  1701182  GAGTTAGGAAACTAACACAAACCGGAATC  1701154
+
+
+
+
+>Polynucleobacter paneuropaeus strain AP-Vara3-400C-C6 chromosome, complete genome
+Sequence ID: CP049631.1 Length: 1783146
+Range 1: 1406084 to 1406289
+
+Score:154 bits(170), Expect:7e-33, 
+Identities:163/212(77%),  Gaps:16/212(7%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1406289  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1406230
+
+Query  73       CCGCCCGGGCGTATG---GC-AACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAG  126
+                       ||  |||    || |||||||||||||||||| |   |   | || | |||||
+Sbjct  1406229  A------GGAATATCCAAGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAG  1406176
+
+Query  127      GTGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCC  182
+                ||||||||||||||||||||||| |||||    |||| |  |||| ||||||||||||||
+Sbjct  1406175  GTGTAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCC  1406116
+
+Query  183      AGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||| |||||||  |||||||||||||||
+Sbjct  1406115  AGGGAGTAGCGAAAGCTACACAAACCGGAATC  1406084
+
+
+
+
+>Polynucleobacter sp. JS-Mosq-20-D10 chromosome
+Sequence ID: CP061305.1 Length: 2089501
+Range 1: 684049 to 684254
+
+Score:153 bits(169), Expect:2e-32, 
+Identities:162/208(78%),  Gaps:8/208(3%), Strand: Plus/Plus
+
+Query  13      TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+               ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| |||||  |
+Sbjct  684049  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAGT-C  684107
+
+Query  73      CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGGTGT  130
+                 ||    |  || |  |||||||||||||||||| |   |   | || | |||||||||
+Sbjct  684108  TAGCAATAGA-TACGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGGTGT  684166
+
+Query  131     AGAGACTAGACGGCACCCACCTAAGGC---AAACGC-TATGGTGAAGGCATAGTCCAGGG  186
+               |||||||||||||||||||||||||     ||| |  || ||||||||||||||||||||
+Sbjct  684167  AGAGACTAGACGGCACCCACCTAAGTTCAGAAATGAATACGGTGAAGGCATAGTCCAGGG  684226
+
+Query  187     AGTGGCGAAAGTCACACAAACCGGAATC  214
+               ||| | |||||  |||||||||||||||
+Sbjct  684227  AGTAGTGAAAGCTACACAAACCGGAATC  684254
+
+
+
+
+>Polynucleobacter tropicus strain MWH-UH21B chromosome, complete genome
+Sequence ID: CP028942.1 Length: 2040807
+Range 1: 1656484 to 1656685
+
+Score:152 bits(168), Expect:2e-32, 
+Identities:160/208(77%),  Gaps:12/208(5%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  |   ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1656685  TGTGCCTTATGTGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1656626
+
+Query  73       CCGCCCGGGCGTATG---GC-AACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAG  126
+                       |   |||    || |||||||||||||||||| |   |   | || | |||||
+Sbjct  1656625  A------GAAATATCCAAGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAG  1656572
+
+Query  127      GTGTAGAGACTAGACGGCACCCACCTAAGGCAAACGCTATGGTGAAGGCATAGTCCAGGG  186
+                ||||||||||||||||||||||||||||| | || | |||||||||||||||||||||||
+Sbjct  1656571  GTGTAGAGACTAGACGGCACCCACCTAAGTCGAAAGATATGGTGAAGGCATAGTCCAGGG  1656512
+
+Query  187      AGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||   |||| | |||||||||||||||
+Sbjct  1656511  AGTTAGGAAACTAACACAAACCGGAATC  1656484
+
+
+
+
+Range 2: 1661850 to 1661980
+
+Score:130 bits(143), Expect:3e-25, 
+Identities:109/131(83%),  Gaps:6/131(4%), Strand: Plus/Minus
+
+Query  90       AACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGGTGTAGAGACTAGACGGCACC  147
+                |||||||||||||||||| |   |   | || | ||||||||||||||||||||||||||
+Sbjct  1661980  AACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGGTGTAGAGACTAGACGGCACC  1661921
+
+Query  148      CACCTAAGGC---AAACGC-TATGGTGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACAC  203
+                ||||||||     ||| |  |||||||||||||||||||||||||| | |||||  ||||
+Sbjct  1661920  CACCTAAGTTCAGAAATGAATATGGTGAAGGCATAGTCCAGGGAGTTGTGAAAGCAACAC  1661861
+
+Query  204      AAACCGGAATC  214
+                |||||||||||
+Sbjct  1661860  AAACCGGAATC  1661850
+
+
+
+
+>Polynucleobacter sp. MWH-S4W17 chromosome, complete genome
+Sequence ID: CP061295.1 Length: 2051571
+Range 1: 1655818 to 1656028
+
+Score:150 bits(166), Expect:8e-32, 
+Identities:162/211(77%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1656028  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1655969
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1655968  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1655909
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| || |||| |||||||||||||||
+Sbjct  1655908  TGTAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCGATATGATGAAGGCATAGTCCA  1655849
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||   |||| | | |||||||||||||
+Sbjct  1655848  GGGAGTTAGGAAACTAATACAAACCGGAATC  1655818
+
+
+
+
+Range 2: 1631288 to 1631376
+
+Score:97.8 bits(107), Expect:2e-15, 
+Identities:75/89(84%),  Gaps:4/89(4%), Strand: Plus/Minus
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||| ||||||||| |||||    |||| || |||  |||||||||||||||||
+Sbjct  1631376  TAGAGACTAGGCGGCACCCATCTAAGTCGAGCAATCGATATTATGAAGGCATAGTCCAGG  1631317
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1631316  GAGTAGTGAAAGCTACACAAACCGGAATC  1631288
+
+
+
+
+>Polynucleobacter paneuropaeus strain FUKU-SW-23 chromosome, complete genome
+Sequence ID: CP049629.1 Length: 1780280
+Range 1: 1368895 to 1369105
+
+Score:150 bits(166), Expect:8e-32, 
+Identities:162/211(77%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1369105  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1369046
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1369045  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1368986
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||
+Sbjct  1368985  TGTAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCA  1368926
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||   |||| | |||||||||||||||
+Sbjct  1368925  GGGAGTAATGAAAATTACACAAACCGGAATC  1368895
+
+
+
+
+Range 2: 1387862 to 1388070
+
+Score:127 bits(140), Expect:9e-25, 
+Identities:155/209(74%),  Gaps:7/209(3%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1388070  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1388011
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |          |  |||| |||
+Sbjct  1388010  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAAGAAATTACTTTGAACGTG  1387951
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    || | |  |||| |||||||||||||||||
+Sbjct  1387950  TAGAGACTAGACGGCACCCATCTAAGTTGAGCGATCAATATGATGAAGGCATAGTCCAGG  1387891
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1387890  GAGTTGTGAAAGCAACACAAACCGGAATC  1387862
+
+
+
+
+>Limnohabitans sp. 63ED37-2 chromosome, complete genome
+Sequence ID: CP011774.1 Length: 3372992
+Range 1: 404681 to 404899
+
+Score:150 bits(165), Expect:3e-31, 
+Identities:169/222(76%),  Gaps:11/222(4%), Strand: Plus/Plus
+
+Query  1       CTCATATTTCG---ATGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCG  57
+               ||||||||||    ||||||||| | |  ||||||   | ||||||||||||||||||||
+Sbjct  404681  CTCATATTTCTCAAATGTGCCTTACACGTGGAAACTGTGTAAGGGATGGTGTCAAATTCG  404740
+
+Query  58      GCGAAACCTAAGCGCCCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCG-GCGCCTGC  116
+                 |||||||||| |   | |    | || ||||| | ||||| |||||| | |||   ||
+Sbjct  404741  ATGAAACCTAAGTGT--GGCAACACATACGGCAATGTCGAGCGAAGCTTAGTGCGAAAGC  404798
+
+Query  117     GCCGATGAAGGTGTAGAGACTAGACGGCACCCACCTAAGGCAAACGCT----ATGGTGAA  172
+                |   |||| ||||||||||| |||||||||||||||||   | || |    ||||||||
+Sbjct  404799  ACTT-TGAACGTGTAGAGACTTGACGGCACCCACCTAAGTACAGCGATGTATATGGTGAA  404857
+
+Query  173     GGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+               |||| ||||||| |||||  |||||||||||||| |||||||
+Sbjct  404858  GGCAAAGTCCAGCGAGTGATGAAAGTCACACAAAGCGGAATC  404899
+
+
+
+
+Range 2: 599951 to 600089
+
+Score:55.4 bits(60), Expect:0.005, 
+Identities:105/149(70%),  Gaps:17/149(11%), Strand: Plus/Minus
+
+Query  43      ATGGTGTCAAATTCGGCGAAACCTAAGCGCCCGCCCGGGCGTATGGCAACGCCGAGCCAA  102
+               |||| ||||||||||| ||| |||  | | ||    |  |||  ||||||||||||||||
+Sbjct  600089  ATGGGGTCAAATTCGGTGAACCCTCTG-GTCCTAGTGACCGT--GGCAACGCCGAGCCAA  600033
+
+Query  103     GCTTCG-GCG--CCTGCGCCGATGAAGGTGTAGAGACTAGACGGCACCCACCT-AAGGC-  157
+               ||   | |||  | ||       |||||||||||||||||||||| ||  ||| ||||| 
+Sbjct  600032  GCCAAGAGCGATCTTG-------GAAGGTGTAGAGACTAGACGGCCCCTGCCTAAAGGCG  599980
+
+Query  158     --AAACGCTATGGTGAAGGCATAGTCCAG  184
+                   |  | | ||  ||||||||||||||
+Sbjct  599979  CGCCAGCCCAAGGCAAAGGCATAGTCCAG  599951
+
+
+
+
+>Polynucleobacter sp. AP-Nino-20-G2 chromosome
+Sequence ID: CP061313.1 Length: 2013598
+Range 1: 1610565 to 1610775
+
+Score:146 bits(161), Expect:3e-30, 
+Identities:161/211(76%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1610775  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1610716
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |   |   | || | ||||||
+Sbjct  1610715  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGG  1610656
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||
+Sbjct  1610655  TGTAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCA  1610596
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||   |||| | |||||||||||||||
+Sbjct  1610595  GGGAGTTAGGAAACTAACACAAACCGGAATC  1610565
+
+
+
+
+Range 2: 1570977 to 1571194
+
+Score:138 bits(152), Expect:5e-28, 
+Identities:163/218(75%),  Gaps:16/218(7%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1571194  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1571135
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1571134  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1571075
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG-GCAAACG----------CTATGGTGAAGGCA  176
+                |||||||||||||||||||||| |||||  || | |           |||| ||||||||
+Sbjct  1571074  TGTAGAGACTAGACGGCACCCATCTAAGTTCAGATGTTAAGTTTGAATATGATGAAGGCA  1571015
+
+Query  177      TAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||||| | |||||  |||||||||||||||
+Sbjct  1571014  TAGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1570977
+
+
+
+
+Range 3: 1639692 to 1639828
+
+Score:123 bits(135), Expect:4e-23, 
+Identities:110/137(80%),  Gaps:6/137(4%), Strand: Plus/Minus
+
+Query  84       TATGGCAACGCCGAGCCAAGCTTCG--GCGCCTGCGCCGATGAAGGTGTAGAGACTAGAC  141
+                |||||||||||||||| |||||||   |||   |    | |||| |||||||||||||||
+Sbjct  1639828  TATGGCAACGCCGAGCGAAGCTTCAATGCGAAAGTATTGTTGAACGTGTAGAGACTAGAC  1639769
+
+Query  142      GGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGGGAGTGGCGAAAG  197
+                |||||||| |||||    || | |  |||| ||||||||||||||||||||| | |||||
+Sbjct  1639768  GGCACCCATCTAAGTTGAGCGATCAATATGATGAAGGCATAGTCCAGGGAGTAGTGAAAG  1639709
+
+Query  198      TCACACAAACCGGAATC  214
+                  |||||||||||||||
+Sbjct  1639708  CTACACAAACCGGAATC  1639692
+
+
+
+
+Range 4: 1639886 to 1639941
+
+Score:61.7 bits(67), Expect:1e-04, 
+Identities:47/56(84%),  Gaps:0/56(0%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAA  68
+                |||||||| | |  ||||||   | ||||||||||||||||||||| |||||||||
+Sbjct  1639941  TGTGCCTTACACGTGGAAACTGTGTAAGGGATGGTGTCAAATTCGGAGAAACCTAA  1639886
+
+
+
+
+>Polynucleobacter paneuropaeus strain JS-Vilge-20-A6 chromosome, complete genome
+Sequence ID: CP049622.1 Length: 1834988
+Range 1: 1420423 to 1420629
+
+Score:142 bits(157), Expect:4e-29, 
+Identities:159/209(76%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAA--GC  70
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1420629  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1420570
+
+Query  71       -GCCCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                 |||       ||  | |  ||||||||||||||||| |  |       |  ||||||||
+Sbjct  1420569  AGCCAAAAACTGCACAAGCTAACGCCGAGCCAAGCTTAGTAGAAATA--CTTTGAAGGTG  1420512
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||||
+Sbjct  1420511  TAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGG  1420452
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1420451  GAGTTGTGAAAGCAACACAAACCGGAATC  1420423
+
+
+
+
+Range 2: 1462484 to 1462690
+
+Score:138 bits(152), Expect:5e-28, 
+Identities:158/209(76%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1462690  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1462631
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1462630  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1462573
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| || |||| |||||||||||||||||
+Sbjct  1462572  TAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCAGG  1462513
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1462512  GAGTTGTGAAAGCAACACAAACCGGAATC  1462484
+
+
+
+
+>Polynucleobacter paneuropaeus strain JS-Vilge-20-A7 chromosome, complete genome
+Sequence ID: CP049621.1 Length: 1860892
+Range 1: 1466546 to 1466752
+
+Score:142 bits(157), Expect:4e-29, 
+Identities:159/209(76%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAA--GC  70
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1466752  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1466693
+
+Query  71       -GCCCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                 |||       ||  | |  ||||||||||||||||| |  |       |  ||||||||
+Sbjct  1466692  AGCCAAAAACTGCACAAGCTAACGCCGAGCCAAGCTTAGTAGAAATA--CTTTGAAGGTG  1466635
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||||
+Sbjct  1466634  TAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGG  1466575
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1466574  GAGTTGTGAAAGCAACACAAACCGGAATC  1466546
+
+
+
+
+Range 2: 1508607 to 1508813
+
+Score:138 bits(152), Expect:5e-28, 
+Identities:158/209(76%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1508813  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1508754
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1508753  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1508696
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| || |||| |||||||||||||||||
+Sbjct  1508695  TAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCAGG  1508636
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1508635  GAGTTGTGAAAGCAACACAAACCGGAATC  1508607
+
+
+
+
+>Polynucleobacter sp. UB-Raua-W9 chromosome
+Sequence ID: CP061290.1 Length: 1835600
+Range 1: 1439186 to 1439396
+
+Score:141 bits(156), Expect:4e-29, 
+Identities:159/211(75%),  Gaps:9/211(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  |   ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1439396  TGTGCCTTATGTGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1439337
+
+Query  73       CCGCCCGGGCGT---ATGGCAACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGG  127
+                        ||     |||  |||||||||||||||||| |   |   | || | ||||||
+Sbjct  1439336  AGTTAAAAGCTACACATGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGG  1439277
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCA  183
+                |||||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||
+Sbjct  1439276  TGTAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCA  1439217
+
+Query  184      GGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||| | |||||  |||||||||||||||
+Sbjct  1439216  GGGAGTAGTGAAAGCTACACAAACCGGAATC  1439186
+
+
+
+
+Range 2: 1436626 to 1436714
+
+Score:97.8 bits(107), Expect:2e-15, 
+Identities:75/89(84%),  Gaps:4/89(4%), Strand: Plus/Minus
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| || |||| |||||||||||||||||
+Sbjct  1436714  TAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCAGG  1436655
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||   |||| | |||||| ||||||||
+Sbjct  1436654  GAGTTAGGAAACTAACACAAGCCGGAATC  1436626
+
+
+
+
+>Polynucleobacter paneuropaeus strain AP-SaBe1-20-G4 chromosome, complete genome
+Sequence ID: CP049636.1 Length: 1703023
+Range 1: 1323732 to 1323947
+
+Score:141 bits(155), Expect:1e-28, 
+Identities:162/217(75%),  Gaps:16/217(7%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1323947  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1323888
+
+Query  73       CCGCCCGGG---------CGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGA  121
+                  ||              |  | |  |||||||||||||||||| |||     | || | 
+Sbjct  1323887  A-GCTTATTTAATAACTACCCAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGT  1323829
+
+Query  122      TGAAGGTGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCAT  177
+                |||||||||||||||||||||||||||| |||||    |||| || |||| |||||||||
+Sbjct  1323828  TGAAGGTGTAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCAT  1323769
+
+Query  178      AGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||||| | |||||  |||||||||||||||
+Sbjct  1323768  AGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1323732
+
+
+
+
+>Polynucleobacter difficilis strain AM-8B5 chromosome, complete genome
+Sequence ID: CP023276.1 Length: 1995529
+Range 1: 1607277 to 1607483
+
+Score:138 bits(152), Expect:5e-28, 
+Identities:158/209(76%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1607483  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1607424
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1607423  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1607366
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||||
+Sbjct  1607365  TAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGG  1607306
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||||  |||||||||||||||
+Sbjct  1607305  GAGTGGCGAAAGCTACACAAACCGGAATC  1607277
+
+
+
+
+>Polynucleobacter paneuropaeus strain MWH-PRW10-1 chromosome, complete genome
+Sequence ID: CP049618.1 Length: 1771478
+Range 1: 1411884 to 1412101
+
+Score:138 bits(152), Expect:5e-28, 
+Identities:163/218(75%),  Gaps:16/218(7%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1412101  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1412042
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |||     | || | ||||||
+Sbjct  1412041  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGCGTGAAAGTGCTGTTGAAGG  1411982
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAG-GCAAACG----------CTATGGTGAAGGCA  176
+                |||||||||||||||||||||| |||||  || | |           |||| ||||||||
+Sbjct  1411981  TGTAGAGACTAGACGGCACCCATCTAAGTTCAGATGTTAAGTTTGAATATGATGAAGGCA  1411922
+
+Query  177      TAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||||| | |||||  |||||||||||||||
+Sbjct  1411921  TAGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1411884
+
+
+
+
+Range 2: 1335774 to 1335984
+
+Score:104 bits(114), Expect:1e-17, 
+Identities:151/213(71%),  Gaps:13/213(6%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  |   ||||||  |  ||||||||||||||||||||| |||| |||||  |
+Sbjct  1335984  TGTGCCTTATGTTTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAGTTC  1335925
+
+Query  73       CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTGTAG  132
+                      |    || |  |||||||||| |||||| |          |  |||| ||||||
+Sbjct  1335924  AGTAATGAA--TACGCTAACGCCGAGCGAAGCTTAGTAAGAAATTACTTTGAACGTGTAG  1335867
+
+Query  133      AGACTAGACGGCACCCACCTAAG-GCAAACG----------CTATGGTGAAGGCATAGTC  181
+                ||||||||||||||||| |||||  || | |           |||| |||||||||||||
+Sbjct  1335866  AGACTAGACGGCACCCATCTAAGTTCAGATGTTAAGTTTGAATATGATGAAGGCATAGTC  1335807
+
+Query  182      CAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||| | |||||  |||||||||||||||
+Sbjct  1335806  CAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1335774
+
+
+
+
+>Polynucleobacter sp. Adler-ghost chromosome
+Sequence ID: CP061320.1 Length: 2101026
+Range 1: 1704951 to 1705167
+
+Score:135 bits(149), Expect:6e-27, 
+Identities:162/217(75%),  Gaps:15/217(6%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1705167  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1705108
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGG  127
+                  ||    |  ||  | |  |||||||||||||||||| |   |   | || | ||||||
+Sbjct  1705107  AGCCAAAAGCTGCACAAGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGG  1705048
+
+Query  128      TGTAGAGACTAGACGGCACCCACCTAAGGCA------AACGCT----ATGGTGAAGGCAT  177
+                |||||||||||||||||||||| |||||  |      ||  ||    ||| |||||||||
+Sbjct  1705047  TGTAGAGACTAGACGGCACCCATCTAAGTAAGGATGTAAATCTTTATATGATGAAGGCAT  1704988
+
+Query  178      AGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||||| | |||||  |||||||||||||||
+Sbjct  1704987  AGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1704951
+
+
+
+
+Range 2: 1701540 to 1701585
+
+Score:66.2 bits(72), Expect:3e-06, 
+Identities:42/46(91%),  Gaps:0/46(0%), Strand: Plus/Minus
+
+Query  169      TGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||||||||||||| | |||||  |||||||||||||||
+Sbjct  1701585  TGAAGGCATAGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1701540
+
+
+
+
+>Polynucleobacter wuianus strain QLW-P1FAT50C-4 chromosome
+Sequence ID: CP015922.1 Length: 2232205
+Range 1: 1781644 to 1781850
+
+Score:133 bits(147), Expect:2e-26, 
+Identities:157/209(75%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1781850  TGTGCCTTATGCTTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGC  1781791
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1781790  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1781733
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||||
+Sbjct  1781732  TAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGG  1781673
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1781672  GAGTAGTGAAAGCTACACAAACCGGAATC  1781644
+
+
+
+
+Range 2: 1598740 to 1598946
+
+Score:129 bits(142), Expect:3e-25, 
+Identities:156/209(75%),  Gaps:9/209(4%), Strand: Plus/Plus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  | ||||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1598740  TGTGCCTTATGTCGGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1598799
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1598800  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1598857
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| |  |||| ||| |||||||||||||
+Sbjct  1598858  TAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGATGGCATAGTCCAGG  1598917
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1598918  GAGTAGTGAAAGCTACACAAACCGGAATC  1598946
+
+
+
+
+Range 3: 1827976 to 1828179
+
+Score:113 bits(124), Expect:2e-20, 
+Identities:153/210(73%),  Gaps:14/210(6%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1828179  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1828120
+
+Query  73       CCGCCCGGGCGTATG---GC-AACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGT  128
+                       |   |||    || |||||||||| |||||| |          |  |||| ||
+Sbjct  1828119  A------GAAATATCCAAGCTAACGCCGAGCGAAGCTTAGTAAGAAATTACTTTGAACGT  1828066
+
+Query  129      GTAGAGACTAGACGGCACCCACCTAAGGC---AAACGC-TATGGTGAAGGCATAGTCCAG  184
+                |||||||||||||||||||||||||||     ||| |  || ||||||||||||||||||
+Sbjct  1828065  GTAGAGACTAGACGGCACCCACCTAAGTTCAGAAATGAATACGGTGAAGGCATAGTCCAG  1828006
+
+Query  185      GGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||   |||| | |||||||||||||||
+Sbjct  1828005  GGAGTTAGGAAACTAACACAAACCGGAATC  1827976
+
+
+
+
+Range 4: 1677575 to 1677784
+
+Score:102 bits(112), Expect:4e-17, 
+Identities:153/216(71%),  Gaps:20/216(9%), Strand: Plus/Plus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1677575  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1677634
+
+Query  73       CCGCCCGGGCGTATG---GC-AACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGT  128
+                       |   |||    || |||||||||| |||||| |          |  |||| ||
+Sbjct  1677635  A------GAAATATCCAAGCTAACGCCGAGCGAAGCTTAGTAAGAAATTACTTTGAACGT  1677688
+
+Query  129      GTAGAGACTAGACGGCACCCACCTAAG-------GCAAA---CGCTATGGTGAAGGCATA  178
+                |||||||||||||||||||||||||||       | | |      |||||||||||||||
+Sbjct  1677689  GTAGAGACTAGACGGCACCCACCTAAGTAAGGATGTAGATCTTTATATGGTGAAGGCATA  1677748
+
+Query  179      GTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||||   |||| | |||||||||||||||
+Sbjct  1677749  GTCCAGGGAGTAATGAAAATTACACAAACCGGAATC  1677784
+
+
+
+
+Range 5: 1682623 to 1682749
+
+Score:95.1 bits(104), Expect:5e-15, 
+Identities:100/129(78%),  Gaps:6/129(4%), Strand: Plus/Plus
+
+Query  90       AACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTGTAGAGACTAGACGGCACCCA  149
+                |||||||||| |||||| |  |   |   |  |||| |||||||||||||||||||||||
+Sbjct  1682623  AACGCCGAGCGAAGCTTAGTAGA--GATACTTTGAACGTGTAGAGACTAGACGGCACCCA  1682680
+
+Query  150      CCTAAGGC---AAACGC-TATGGTGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACACAA  205
+                 |||||     ||| |  || |||||||| |||||||||||||| | |||||  ||||||
+Sbjct  1682681  TCTAAGTTCAGAAATGAATACGGTGAAGGAATAGTCCAGGGAGTAGTGAAAGCTACACAA  1682740
+
+Query  206      ACCGGAATC  214
+                | |||||||
+Sbjct  1682741  ATCGGAATC  1682749
+
+
+
+
+Range 6: 1684921 to 1685009
+
+Score:75.2 bits(82), Expect:5e-09, 
+Identities:70/89(79%),  Gaps:4/89(4%), Strand: Plus/Plus
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||   |||||||||| | |||    | ||  | |||| ||| |||||||||||||
+Sbjct  1684921  TAGAGACACTACGGCACCCAACAAAGTTCAGGAATGGATATGATGATGGCATAGTCCAGG  1684980
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1684981  GAGTAGTGAAAGCTACACAAACCGGAATC  1685009
+
+
+
+
+Range 7: 1602297 to 1602342
+
+Score:66.2 bits(72), Expect:3e-06, 
+Identities:42/46(91%),  Gaps:0/46(0%), Strand: Plus/Plus
+
+Query  169      TGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||||||||||||| | |||||  |||||||||||||||
+Sbjct  1602297  TGAAGGCATAGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1602342
+
+
+
+
+>Polynucleobacter sp. MWH-P3-07-1 chromosome, complete genome
+Sequence ID: CP061296.1 Length: 1711040
+Range 1: 1335686 to 1335892
+
+Score:133 bits(147), Expect:2e-26, 
+Identities:157/209(75%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1335892  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1335833
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1335832  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1335775
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| || |||| |||||||||||||||||
+Sbjct  1335774  TAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCAGG  1335715
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1335714  GAGTAGTGAAAGCTACACAAACCGGAATC  1335686
+
+
+
+
+>Beta proteobacterium CB, complete genome
+Sequence ID: CP004348.1 Length: 2045720
+Range 1: 1624289 to 1624467
+
+Score:132 bits(146), Expect:2e-26, 
+Identities:142/185(77%),  Gaps:16/185(8%), Strand: Plus/Minus
+
+Query  40       GGGATGGTGTCAAATTCGGCGAAACCTAAGCGCCCGCCCGGGCGTATG---GC-AACGCC  95
+                ||||||||||||||||||| |||| ||||  |        |   |||    || ||||||
+Sbjct  1624467  GGGATGGTGTCAAATTCGGAGAAAGCTAAAGGTA------GAAATATCCAAGCTAACGCC  1624414
+
+Query  96       GAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGGTGTAGAGACTAGACGGCACCCACCTA  153
+                |||||||||||| |   |   | || | |||||||||||||||||||||||||||| |||
+Sbjct  1624413  GAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGGTGTAGAGACTAGACGGCACCCATCTA  1624354
+
+Query  154      AG----GCAAACGCTATGGTGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCG  209
+                ||    |||| || |||| ||||||||||||||||||||| | |||||  || |||||||
+Sbjct  1624353  AGTCGAGCAATCGATATGATGAAGGCATAGTCCAGGGAGTAGTGAAAGCTACGCAAACCG  1624294
+
+Query  210      GAATC  214
+                |||||
+Sbjct  1624293  GAATC  1624289
+
+
+
+
+Range 2: 374627 to 374837
+
+Score:113 bits(125), Expect:2e-20, 
+Identities:154/213(72%),  Gaps:14/213(6%), Strand: Plus/Plus
+
+Query  13      TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+               ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| |||||  |
+Sbjct  374627  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAGTTC  374686
+
+Query  73      CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCT--GCGCCGATGAAGGTGT  130
+                     |    || |  |||| ||||||||||||| | ||    | ||   ||||||| |
+Sbjct  374687  AGAAATGAA--TACGCTAACGTCGAGCCAAGCTTCAGTGCGAAAGTGCTATTGAAGGTAT  374744
+
+Query  131     AGAGACTAGACGGCACCCACCTAAG-------GCAAACGCT---ATGGTGAAGGCATAGT  180
+               ||||||||||||||| ||| |||||       |||||   |   ||| |||| |||||||
+Sbjct  374745  AGAGACTAGACGGCAACCATCTAAGTAAGGATGCAAATCTTTATATGATGAATGCATAGT  374804
+
+Query  181     CCAGGGAGTGGCGAAAGTCACACAAACCGGAAT  213
+               ||| ||||  | ||||| |||||||||||||||
+Sbjct  374805  CCATGGAGGAGTGAAAGCCACACAAACCGGAAT  374837
+
+
+
+
+Range 3: 1563196 to 1563274
+
+Score:70.7 bits(77), Expect:2e-07, 
+Identities:63/79(80%),  Gaps:4/79(5%), Strand: Plus/Minus
+
+Query  140      ACGGCACCCACCTAAGGCAAA----CGCTATGGTGAAGGCATAGTCCAGGGAGTGGCGAA  195
+                |||||||||| ||||| | |     || |||| ||||||||||||||| ||||| | |||
+Sbjct  1563274  ACGGCACCCATCTAAGTCGAGTGATCGATATGATGAAGGCATAGTCCAAGGAGTAGTGAA  1563215
+
+Query  196      AGTCACACAAACCGGAATC  214
+                ||  ||||||||| |||||
+Sbjct  1563214  AGCTACACAAACCAGAATC  1563196
+
+
+
+
+Range 4: 1582558 to 1582631
+
+Score:65.3 bits(71), Expect:9e-06, 
+Identities:61/74(82%),  Gaps:3/74(4%), Strand: Plus/Minus
+
+Query  144      CACC-CACCTAAG-GCAAACGC-TATGGTGAAGGCATAGTCCAGGGAGTGGCGAAAGTCA  200
+                |||| |||||||| ||  | || ||||||||| |||||||||||||||| | |||||  |
+Sbjct  1582631  CACCTCACCTAAGTGCGTAAGCATATGGTGAAAGCATAGTCCAGGGAGTAGTGAAAGCTA  1582572
+
+Query  201      CACAAACCGGAATC  214
+                  ||||||||||||
+Sbjct  1582571  GGCAAACCGGAATC  1582558
+
+
+
+
+Range 5: 1620878 to 1620923
+
+Score:61.7 bits(67), Expect:1e-04, 
+Identities:41/46(89%),  Gaps:0/46(0%), Strand: Plus/Minus
+
+Query  169      TGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||||||||||||| | |||||  || ||||||||||||
+Sbjct  1620923  TGAAGGCATAGTCCAGGGAGTAGTGAAAGCTACGCAAACCGGAATC  1620878
+
+
+
+
+>Polynucleobacter paneuropaeus strain AP-SiebGG-20-E3 chromosome, complete genome
+Sequence ID: CP049634.1 Length: 1784601
+Range 1: 1413780 to 1413988
+
+Score:132 bits(145), Expect:7e-26, 
+Identities:156/209(75%),  Gaps:7/209(3%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1413988  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1413929
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |          |  |||| |||
+Sbjct  1413928  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAAGAAATTACTTTGAACGTG  1413869
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||||
+Sbjct  1413868  TAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGG  1413809
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| |||||||  || ||||||||||||
+Sbjct  1413808  GAGTAGCGAAAGCTACGCAAACCGGAATC  1413780
+
+
+
+
+>Polynucleobacter antarcticus strain LimPoW16 chromosome, complete genome
+Sequence ID: CP028941.1 Length: 2154412
+Range 1: 1777665 to 1777887
+
+Score:129 bits(142), Expect:3e-25, 
+Identities:163/223(73%),  Gaps:21/223(9%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAA----  68
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||    
+Sbjct  1777887  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1777828
+
+Query  69       -GCGCCCG---CCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGAT  122
+                 || |  |   |     |  | | ||||||||||||||||||| ||  |   | || | |
+Sbjct  1777827  AGCTCAAGTATCAACTACCCAAGCCAACGCCGAGCCAAGCTTCAGCATGAAAGTGCTGTT  1777768
+
+Query  123      GAAGGTGTAGAGACTAGACGGCACCCACCTAAG-GCAAACG----------CTATGGTGA  171
+                ||||||||||||||||||||||||||| |||||  || | |           |||| |||
+Sbjct  1777767  GAAGGTGTAGAGACTAGACGGCACCCATCTAAGTTCAGATGTAGAGTTTGAATATGATGA  1777708
+
+Query  172      AGGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||||||||||| | |||||  |||||||||||||||
+Sbjct  1777707  AGGCATAGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1777665
+
+
+
+
+Range 2: 1775302 to 1775352
+
+Score:70.7 bits(77), Expect:2e-07, 
+Identities:46/51(90%),  Gaps:0/51(0%), Strand: Plus/Minus
+
+Query  164      TATGGTGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| ||||||||||||||||||||| | |||||  |||||||||||||||
+Sbjct  1775352  TATGATGAAGGCATAGTCCAGGGAGTTGTGAAAGCAACACAAACCGGAATC  1775302
+
+
+
+
+>Polynucleobacter asymbioticus strain MWH-RechtKol4 chromosome, complete genome
+Sequence ID: CP015017.1 Length: 2382558
+Range 1: 1917452 to 1917658
+
+Score:129 bits(142), Expect:3e-25, 
+Identities:156/209(75%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1917658  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1917599
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1917598  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1917541
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAGGC----AAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| ||||| |    || || |||| |||||||||||||||||
+Sbjct  1917540  TAGAGACTAGACGGCACCCATCTAAGTCGAGTAATCGATATGATGAAGGCATAGTCCAGG  1917481
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1917480  GAGTTGTGAAAGCAACACAAACCGGAATC  1917452
+
+
+
+
+>Polynucleobacter asymbioticus strain MWH-RechtKolB chromosome, complete genome
+Sequence ID: CP015016.1 Length: 2355392
+Range 1: 1891008 to 1891214
+
+Score:129 bits(142), Expect:3e-25, 
+Identities:156/209(75%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1891214  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1891155
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1891154  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1891097
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAGGC----AAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| ||||| |    || || |||| |||||||||||||||||
+Sbjct  1891096  TAGAGACTAGACGGCACCCATCTAAGTCGAGTAATCGATATGATGAAGGCATAGTCCAGG  1891037
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1891036  GAGTTGTGAAAGCAACACAAACCGGAATC  1891008
+
+
+
+
+>Polynucleobacter sp. KF022 DNA, complete genome
+Sequence ID: AP026972.1 Length: 1868546
+Range 1: 1499849 to 1500060
+
+Score:129 bits(142), Expect:3e-25, 
+Identities:159/214(74%),  Gaps:14/214(6%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| |||||  |
+Sbjct  1500060  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAGT-C  1500002
+
+Query  73       CCGCCCGGGCGTATGGCAACGCCGAGCCAAGCTTCGGC--GCCTGCGCCGATGAAGGTGT  130
+                  ||    |  || |  |||||||||||||||||| |   |   | || | |||||||||
+Sbjct  1500001  TAGCAATAGA-TACGCTAACGCCGAGCCAAGCTTCAGTATGAAAGTGCTGTTGAAGGTGT  1499943
+
+Query  131      AGAGACTAGACGGCACCCACCTAAGGCA------AACGCT----ATGGTGAAGGCATAGT  180
+                ||||||||||||||||||| |||||  |      ||  ||    ||| ||||||||||||
+Sbjct  1499942  AGAGACTAGACGGCACCCATCTAAGTAAGGATGTAAATCTTTATATGATGAAGGCATAGT  1499883
+
+Query  181      CCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||   |||| | || ||||||||||||
+Sbjct  1499882  CCAGGGAGTTAGGAAACTAACGCAAACCGGAATC  1499849
+
+
+
+
+Range 2: 1488836 to 1488908
+
+Score:86.9 bits(95), Expect:3e-12, 
+Identities:63/73(86%),  Gaps:4/73(5%), Strand: Plus/Minus
+
+Query  146      CCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGGGAGTGGCGAAAGTCAC  201
+                ||||||||||    |||| || |||||||||||||||||||||||||| | |||||  ||
+Sbjct  1488908  CCCACCTAAGTCGAGCAATCGATATGGTGAAGGCATAGTCCAGGGAGTAGTGAAAGCTAC  1488849
+
+Query  202      ACAAACCGGAATC  214
+                |||||||||||||
+Sbjct  1488848  ACAAACCGGAATC  1488836
+
+
+
+
+>Polynucleobacter sp. AP-Sving-400A-A2 chromosome, complete genome
+Sequence ID: CP061312.1 Length: 2034533
+Range 1: 1656750 to 1656956
+
+Score:129 bits(142), Expect:3e-25, 
+Identities:156/209(75%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1656956  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1656897
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1656896  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1656839
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| || |||| |||||||||||||||||
+Sbjct  1656838  TAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCCAGG  1656779
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||   |||| | |||||||||||||||
+Sbjct  1656778  GAGTAATGAAAATTACACAAACCGGAATC  1656750
+
+
+
+
+>Polynucleobacter paneuropaeus strain AP-SiebGG-20-E7 chromosome, complete genome
+Sequence ID: CP049632.1 Length: 1724992
+Range 1: 1366079 to 1366285
+
+Score:129 bits(142), Expect:3e-25, 
+Identities:156/209(75%),  Gaps:9/209(4%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1366285  TGTGCCTTATGCTTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1366226
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1366225  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1366168
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    |||| |  |||| |||||||||||||||||
+Sbjct  1366167  TAGAGACTAGACGGCACCCATCTAAGTTGAGCAATCAATATGATGAAGGCATAGTCCAGG  1366108
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1366107  GAGTAGTGAAAGCTACACAAACCGGAATC  1366079
+
+
+
+
+>Polynucleobacter sp. UB-Siik-W21 chromosome, complete genome
+Sequence ID: CP061289.1 Length: 2126800
+Range 1: 1693259 to 1693468
+
+Score:128 bits(141), Expect:9e-25, 
+Identities:157/212(74%),  Gaps:12/212(5%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAA--GC  70
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1693468  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGC  1693409
+
+Query  71       GCCCGCCCGG----GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAG  126
+                |   |         ||  | |  |||||||||| |||||| |  |       |  |||| 
+Sbjct  1693408  GGTTGTAATTAACTGCCCAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAAC  1693351
+
+Query  127      GTGTAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCC  182
+                ||||||||||||||||||||||| |||||    |||| || |||| ||||||||||||||
+Sbjct  1693350  GTGTAGAGACTAGACGGCACCCATCTAAGTCGAGCAATCGATATGATGAAGGCATAGTCC  1693291
+
+Query  183      AGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||| | |||||  |||||||||||||||
+Sbjct  1693290  AGGGAGTAGTGAAAGCTACACAAACCGGAATC  1693259
+
+
+
+
+Range 2: 1708388 to 1708598
+
+Score:100 bits(110), Expect:1e-16, 
+Identities:153/217(71%),  Gaps:21/217(9%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1708598  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAAGGT  1708539
+
+Query  73       CCGCCCGGGCGTATG---GC-AACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGT  128
+                       |   |||    || |||||||||| |||||| |          |  |||| ||
+Sbjct  1708538  A------GAGATATCCAAGCTAACGCCGAGCGAAGCTTAGTAAGAAATTACTTTGAACGT  1708485
+
+Query  129      GTAGAGACTAGACGGCACCCACCTAAG-GCAAACG----------CTATGGTGAAGGCAT  177
+                ||||||||||||||||||||| |||||  || | |           |||| |||||||||
+Sbjct  1708484  GTAGAGACTAGACGGCACCCATCTAAGTTCAGATGTTAAGTTTGAATATGATGAAGGCAT  1708425
+
+Query  178      AGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||||| | |||||  |||||||||||||||
+Sbjct  1708424  AGTCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1708388
+
+
+
+
+Range 3: 1704450 to 1704496
+
+Score:59.0 bits(64), Expect:4e-04, 
+Identities:41/47(87%),  Gaps:0/47(0%), Strand: Plus/Minus
+
+Query  168      GTGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                ||||||||||||||||||||||   |||| | |||| ||||||||||
+Sbjct  1704496  GTGAAGGCATAGTCCAGGGAGTAATGAAAATTACACTAACCGGAATC  1704450
+
+
+
+
+Range 4: 1698313 to 1698351
+
+Score:53.6 bits(58), Expect:0.017, 
+Identities:35/39(90%),  Gaps:0/39(0%), Strand: Plus/Minus
+
+Query  169      TGAAGGCATAGTCCAGGGAGTGGCGAAAGTCACACAAAC  207
+                ||||||||||||||||||||| | |||||  ||||||||
+Sbjct  1698351  TGAAGGCATAGTCCAGGGAGTAGTGAAAGCTACACAAAC  1698313
+
+
+
+
+>Polynucleobacter sp. AP-Titi-500A-B4 chromosome
+Sequence ID: CP061311.1 Length: 2082645
+Range 1: 1681436 to 1681644
+
+Score:127 bits(140), Expect:9e-25, 
+Identities:155/209(74%),  Gaps:7/209(3%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  ||
+Sbjct  1681644  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGC  1681585
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |          |  |||| |||
+Sbjct  1681584  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAAGAAATTACTTTGAACGTG  1681525
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG----GCAAACGCTATGGTGAAGGCATAGTCCAGG  185
+                |||||||||||||||||||| |||||    || | |  |||| |||||||||||||||||
+Sbjct  1681524  TAGAGACTAGACGGCACCCATCTAAGTTGAGCGATCAATATGATGAAGGCATAGTCCAGG  1681465
+
+Query  186      GAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||| | |||||  |||||||||||||||
+Sbjct  1681464  GAGTTGTGAAAGCAACACAAACCGGAATC  1681436
+
+
+
+
+>Polynucleobacter sp. MWH-Svant-W18 chromosome, complete genome
+Sequence ID: CP061293.1 Length: 1770456
+Range 1: 1373004 to 1373216
+
+Score:109 bits(120), Expect:2e-19, 
+Identities:155/215(72%),  Gaps:15/215(6%), Strand: Plus/Minus
+
+Query  13       TGTGCCTTGCGCCGGGAAACCACGCAAGGGATGGTGTCAAATTCGGCGAAACCTAAGCGC  72
+                ||||||||  ||  ||||||  |  ||||||||||||||||||||| |||| ||||  | 
+Sbjct  1373216  TGTGCCTTATGCGTGGAAACTGCATAAGGGATGGTGTCAAATTCGGAGAAAGCTAAATGT  1373157
+
+Query  73       --CCGCCCGG-GCGTATGGCAACGCCGAGCCAAGCTTCGGCGCCTGCGCCGATGAAGGTG  129
+                  ||    |  ||  | |  |||||||||| |||||| |  |       |  |||| |||
+Sbjct  1373156  AGCCAAAAGCTGCACAAGCTAACGCCGAGCGAAGCTTAGTAGAAATA--CTTTGAACGTG  1373099
+
+Query  130      TAGAGACTAGACGGCACCCACCTAAG-------GCAAA---CGCTATGGTGAAGGCATAG  179
+                |||||||||||||||||||| |||||       | |||      |||| |||||||||||
+Sbjct  1373098  TAGAGACTAGACGGCACCCATCTAAGTGAGGATGTAAATCTTTATATGATGAAGGCATAG  1373039
+
+Query  180      TCCAGGGAGTGGCGAAAGTCACACAAACCGGAATC  214
+                |||||||||| | |||||  |||||||||||||||
+Sbjct  1373038  TCCAGGGAGTAGTGAAAGCTACACAAACCGGAATC  1373004
+
+
+
+
+		
+
+

@@ -359,7 +359,7 @@ if __name__ == "__main__":
     threads       = os.cpu_count()     # Number of cpus to use
 
     rankbydiff     = False             # Output diverse structures first
-    rankby         = "rs"              # Rank by, r / s / rs / dr / ds / drs, r=reactscore,s=structscore,d=rankbydiff
+    rankby         = "s"               # Rank by, r / s / rs / dr / ds / drs, r=reactscore,s=structscore,d=rankbydiff
     hardrest       = False             # Force bp-restraints into predicted structures 
     interchainonly = False             # Forbid intra-chain base pairs
 
