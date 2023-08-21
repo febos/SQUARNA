@@ -252,9 +252,11 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1):
         inp.write(">seq"+'\n')
         inp.write(seq+'\n')
 
-    if len(seq) > 500:
-        conf = "long.conf"
-
+    if len(seq) >= 500:
+        conf = "500.conf"
+    if len(seq) >= 1000:
+        conf = "1000.conf"
+    print(', '+conf)
     os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} > outp2.tmp".format(conf, top))
 
     cnt = 0
@@ -288,15 +290,6 @@ def PredictSQUARNAalt5(seq):
 
 def PredictSQUARNAaltN(seq):
     return PredictSQUARNA(seq, conf = "alt.conf", top = 10**6)
-
-def PredictSQUARNAlong(seq):
-    return PredictSQUARNA(seq, conf = "long.conf")
-
-def PredictSQUARNAlong5(seq):
-    return PredictSQUARNA(seq, conf = "long.conf", top = 5)
-
-def PredictSQUARNAlongN(seq):
-    return PredictSQUARNA(seq, conf = "long.conf", top = 10**6)
 
 def PredictSQUARNAsk(seq):
     return PredictSQUARNA(seq, conf = "sk.conf")
@@ -350,9 +343,6 @@ if __name__ == "__main__":
                            "SQUARNAalt": PredictSQUARNAalt,
                            "SQUARNAalt5": PredictSQUARNAalt5,
                            "SQUARNAaltN": PredictSQUARNAaltN,
-                           "SQUARNAlong": PredictSQUARNAlong,
-                           "SQUARNAlong5": PredictSQUARNAlong5,
-                           "SQUARNAlongN": PredictSQUARNAlongN,
                            "SQUARNAsk": PredictSQUARNAsk,
                            "SQUARNAsk5": PredictSQUARNAsk5,
                            "SQUARNAskN": PredictSQUARNAskN,
