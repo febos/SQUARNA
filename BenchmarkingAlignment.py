@@ -132,15 +132,15 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset, tool in (("S01Ali10","SQUARNAs1"),
-                          ("S01Ali10","SQUARNAs2"),
-                          ("S01Ali10","SQUARNAs3u"),
-                          ("S01Ali10","SQUARNAs3i"),
-                          ("S01Ali10","RNAalifold"),
-                          ("S01Ali10","CentroidAlifold"),
-                          ("S01Ali10","RscapeNested"),
-                          ("S01Ali10","RscapeTotal"),
-                          ("S01Ali10","IPknot"),):
+    for dataset, tool in (("S01AliUngapclean","SQUARNAs1"),
+                          ("S01AliUngapclean","SQUARNAs2"),
+                          ("S01AliUngapclean","SQUARNAs3u"),
+                          ("S01AliUngapclean","SQUARNAs3i"),
+                          ("S01AliUngapclean","RNAalifold"),
+                          ("S01AliUngapclean","CentroidAlifold"),
+                          ("S01AliUngapclean","RscapeNested"),
+                          ("S01AliUngapclean","RscapeTotal"),
+                          ("S01AliUngapclean","IPknot"),):
                 
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())

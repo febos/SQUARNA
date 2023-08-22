@@ -115,7 +115,7 @@ infiles = sorted(glob.glob("../S01Ali_init/afa_clean/*"),key = lambda x: int(os.
 
 objs = []
 
-with open("../S01raw.fas") as infile:
+with open("../S01.fas") as infile:
     lines = infile.readlines()
     for i in range(0,len(lines)-4,4):
         name = lines[i].strip()[1:]
@@ -168,7 +168,7 @@ for k, obj in enumerate(objs):
             cur += 1
 
     
-    fasta   = 'afa_raw/{}.afa'.format(names[0])
+    fasta   = 'afa/{}.afa'.format(names[0])
     stofile = 'sto/{}.sto'.format(names[0])
     with open(fasta,'w') as outp:
         outp.write(' '.join(newreact)+'\n')

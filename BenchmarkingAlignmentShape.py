@@ -42,7 +42,10 @@ def PredictSQUARNAs3u(dataset, fam):
 
 def PredictRNAalifold(dataset, fam):
 
-    command = "RNAalifold --noPS {} > outp3.tmp".format("datasets/{}/aln/{}.aln".format(dataset,fam))
+    shapefile = "datasets/{}/shape2.0_unaligned/{}.dat".format(dataset,fam)
+
+    command = "RNAalifold --noPS {} --shape={} > outp3.tmp".format("datasets/{}/aln/{}.aln".format(dataset,fam),
+                                                                     shapefile)
     os.system(command)
     with open("outp3.tmp") as file:
         lines = file.readlines()
@@ -132,10 +135,7 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset, tool in (("S01Ali","SQUARNAs1"),
-                          ("S01Ali","SQUARNAs2"),
-                          ("S01Ali","SQUARNAs3u"),
-                          ("S01Ali","SQUARNAs3i"),):
+    for dataset, tool in (("S01AliUngap","RNAalifold"),):
                 
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
