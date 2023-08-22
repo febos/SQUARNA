@@ -4,6 +4,7 @@ from SQUARNA import ReadStockholm
 from SQRNdbnseq import PairsToDBN, DBNToPairs
 
 
+
 def PredictSQUARNAs1(dataset, fam):
 
     command = "python SQUARNA.py i={} a step3=1 > outp3.tmp".format("datasets/{}/afa/{}.afa".format(dataset,fam))
@@ -50,6 +51,31 @@ def PredictRNAalifold(dataset, fam):
     with open("outp3.tmp") as file:
         lines = file.readlines()
         return lines[-1].split()[0]
+
+def PredictShapeSorter(dataset, fam, threshold = float("7e-4")):
+
+    outfile = "datasets/{}/shapesorter/results/{}.out".format(dataset,fam)
+
+    pairs = []
+    seen = set()
+    N = None
+
+    with open(outfile) as inp:
+        for line in inp:
+            if line.strip():
+                linesplit = line.strip().split()
+                pv = float(linesplit[0])
+                dbn = linesplit[-2]
+                N = len(dbn)
+
+                if pv <= threshold:
+                    for v,w in DBNToPairs(dbn):
+                        if v not in seen and w not in seen:
+                            pairs.append((v,w))
+                            seen.add(v)
+                            seen.add(w)
+
+    return PairsToDBN(pairs,N)              
 
 
 def PredictCentroidAlifold(dataset, fam):
@@ -135,7 +161,7 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset, tool in (("S01AliUngap","RNAalifold"),):
+    for dataset, tool in (("S01AliUngap","ShapeSorter"),):
                 
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
@@ -173,6 +199,7 @@ if __name__ == "__main__":
                         "IPknot": PredictIPknot,
                         "RscapeNested": PredictRscapeNested,
                         "RscapeTotal" : PredictRscapeTotal,
+                        "ShapeSorter" : PredictShapeSorter,
                         }[tool](dataset, fam)
 
             t1 = time.time()-t0
