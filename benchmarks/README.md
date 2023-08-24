@@ -6,6 +6,8 @@ Rfam14.9 - benchmarks on the Rfam14.9 dataset (4108 families). IPknot results ar
 
 RfamPDB - benchmarks on the RfamPDB dataset (134 families)
 
+RNAStralignExt - benchmarks on the RNAStralignExt dataset (11 families)
+
 S01 - benchmarks on the S01 dataset (24 sequences) using sequence+shape input
 
 S01Ali - benchmarks on the S01 dataset using alignment+shape input. Reference sequence gap columns are preserved.
