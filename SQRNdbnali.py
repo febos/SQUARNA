@@ -226,6 +226,8 @@ def mpRunSQRNdbnseq(args):
     rankbydiff, rankby, hardrest, interchainonly,\
     toplim, outplim, conslim, reactformat, verbose, smat = args
 
+    evalonly = False
+
     name, seq, reacts, rests, ref = obj
 
     # We use a printing buffer so that the output is ordered
@@ -235,7 +237,7 @@ def mpRunSQRNdbnseq(args):
         cons, dbns, nums1, nums2 = RunSQRNdbnseq(name, seq, reacts, rests, ref, paramsetnames,
                                                  paramsets, threads, rankbydiff, rankby,
                                                  hardrest, interchainonly, toplim, outplim,
-                                                 conslim, reactformat,
+                                                 conslim, reactformat, evalonly,
                                                  mp = False, sink = buffer, stemmatrix = smat)
         return cons, buffer.getvalue()
 

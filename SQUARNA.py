@@ -360,6 +360,7 @@ if __name__ == "__main__":
 
     rankbydiff     = False             # Output diverse structures first
     rankby         = "s"               # Rank by, r / s / rs / dr / ds / drs, r=reactscore,s=structscore,d=rankbydiff
+    evalonly       = False             # Just evaluate the reference and do not predict anything
     hardrest       = False             # Force bp-restraints into predicted structures 
     interchainonly = False             # Forbid intra-chain base pairs
 
@@ -426,6 +427,9 @@ if __name__ == "__main__":
             assert rankby in {"r", "s", "rs", "dr", "ds", "drs"}, \
                    'Inappropriate rankby value (r/s/rs/dr/ds/drs): {}'\
                    .format(arg.split('=', 1)[1])
+        # evalonly
+        elif arg.lower() in {"eo", "evalonly"}:
+            evalonly = True
         # hardrest
         elif arg.lower() in {"hr", "hardrest"}:
             hardrest = True
@@ -539,7 +543,7 @@ if __name__ == "__main__":
             RunSQRNdbnseq(name, seq, reacts, restrs, ref, paramsetnames,
                           paramsets, threads, rankbydiff, rankby,
                           hardrest, interchainonly, toplim, outplim,
-                          conslim, reactformat)
+                          conslim, reactformat, evalonly)
 
     else: # Running alignment-based SQUARNA
 

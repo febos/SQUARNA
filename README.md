@@ -111,24 +111,27 @@ a (hopefully) arbitrary version of NumPy library.
     The output format is a fasta-like format with the "name" lines 
     starting with ">" sign and followed by a number of data sections:
     (a) the input sequence; (b) the input data lines with the 
-    appropriate marks (reactivities/restraints/reference); (c) a 
-    break line of underscores ("_"-line); (d) the predicted consensus
-    structure with the mark top-X_consensus, where X is defined with 
-    conslim parameter, see below. If a reference was specified the 
-    metrics values will be printed in the same line (TP - number of 
-    correctly predicted base pairs; FP - number of wrongly predicted
-    base pairs; FN - number of missed base pairs; FS - F-score; PR - 
-    precision; RC=recall); (e) a break line of equality signs ("="-line);
-    (f) N lines with the predicted structures, where N is defined with
-    outplim parameter, see below. The structures are followed by a 
-    tab-separated list of values: the rank of the structure (starting
-    with "#" sign), total_score, structure_score, reactivity_score,
-    name of the generative parameter set, and (if a reference was 
-    specified) the metrics values will be printed for the best of
-    the top-K structures (the format is the same as for the consensus 
-    structure with the only addition of RK (rank) value), where K is 
-    defined with toplim parameter, see below. The chain separators are 
-    introduced into all the lines as they appear in the sequence.
+    appropriate marks (reactivities/restraints/reference), the scores
+    for the reference structure are printed if the reference is 
+    specified (if non-canonical base pairs are present in the reference
+    structure, they are considered with 0.0 weight); (c) a break line 
+    of underscores ("_"-line); (d) the predicted consensus structure with 
+    the mark top-X_consensus, where X is defined with conslim parameter, 
+    see below. If a reference was specified the metrics values will be 
+    printed in the same line (TP - number of correctly predicted base pairs; 
+    FP - number of wrongly predicted base pairs; FN - number of missed 
+    base pairs; FS - F-score; PR - precision; RC=recall); (e) a break 
+    line of equality signs ("="-line); (f) N lines with the predicted 
+    structures, where N is defined with outplim parameter, see below. 
+    The structures are followed by a tab-separated list of values: 
+    the rank of the structure (starting with "#" sign), total_score, 
+    structure_score, reactivity_score, name of the generative parameter 
+    set, and (if a reference was specified) the metrics values will be 
+    printed for the best of the top-K structures (the format is the same 
+    as for the consensus structure with the only addition of RK (rank) 
+    value), where K is defined with toplim parameter, see below. The chain 
+    separators are introduced into all the lines as they appear 
+    in the sequence.
     
 # Output format (alignment-based mode)
 
@@ -267,6 +270,14 @@ a (hopefully) arbitrary version of NumPy library.
                 ....................
                 0.94 <= "y" <  0.98;
                 0.98 <= "z" <= 1.00.
+
+    eo / evalonly [DEFAULT: FALSE]
+    
+        Ignored in the alignment mode.
+        If specified, no predictions are made and just the reference structure
+        scores are returned provided the reference is specified. 
+        If non-canonical base pairs are present in the reference structure, 
+        they will be considered with 0.0 weight).
 
     hr / hardrest [DEFAULT: FALSE]
     

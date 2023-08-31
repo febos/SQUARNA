@@ -715,7 +715,7 @@ def ScoreStruct(seq, stemset, reacts):
         
         bpsum = 0
         for v,w in stem[0]:
-            bpsum += bpscores[seq[v]+seq[w]]
+            bpsum += (bpscores[seq[v]+seq[w]] if seq[v]+seq[w] in bpscores else 0.0)
             paired.add(v)
             paired.add(w)
             
@@ -785,6 +785,43 @@ def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
                          reverse = True)
     # Remove the appended bps sets and return
     return [x[:-1] for x in finstemsets]  
+
+
+def PairsToStems(sorted_pairs):
+
+    sp = sorted_pairs
+
+    if len(sp) < 2:
+        if not sp:
+            return []
+        else:
+            return [[[sp[0],], 1],]
+
+    stems = [[[sp[0],], 1],]
+
+    for i in range(1, len(sp)):
+
+        if not (sp[i-1][0] + 1 == sp[i][0] and sp[i-1][1] == sp[i][1] + 1):
+            stems.append([[], 0])
+        stems[-1][0].append(sp[i])
+        stems[-1][1] = len(stems[-1][0])
+
+    return stems
+
+
+def ReferenceScores(seq, ref, reacts):
+    """Returns the three scores for the reference structure"""
+
+    # unalign everything
+    if not reacts:
+        reacts = [0.5 for i in range(len(seq))]
+    reacts = [reacts[i] for i in range(len(seq)) if seq[i] not in GAPS]
+    seq, ref = UnAlign(seq, ref)
+
+    pairs   = DBNToPairs(ref)
+    stemset = PairsToStems(sorted(pairs))
+
+    return ScoreStruct(seq, stemset, reacts)
 
    
 def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
@@ -1064,19 +1101,11 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   reference, paramsetnames,
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat, mp = True,
+                  conslim, reactformat, evalonly, mp = True,
                   sink = sys.stdout, stemmatrix = None):
     """Main-like function;
        sink param is standard system output by default,
        we need it to use the buffer in alignment-mode parallelizations"""
-
-    # Run prediction
-    prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
-                            paramsets, conslim, toplim, hardrest,
-                            rankbydiff, rankby, interchainonly, threads, mp, stemmatrix)
-    
-    # Unpack the results
-    consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
 
     print(name, file = sink)
     print(sequence, file = sink)
@@ -1098,10 +1127,23 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                        if sequence[i] not in SEPS
                        else sequence[i]
                        for i in range(len(sequence))]),
-              "reference", sep = '\t', file = sink)
+              "reference",
+              *ReferenceScores(sequence, reference, reactivities),
+              sep = '\t', file = sink)
 
     # Separator line 1
     print('_'*len(sequence), file = sink)
+
+    if evalonly:
+        return None, None, None, None
+
+    # Run prediction
+    prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
+                            paramsets, conslim, toplim, hardrest,
+                            rankbydiff, rankby, interchainonly, threads, mp, stemmatrix)
+    
+    # Unpack the results
+    consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
 
     # Printing consensus
     # along with its metrics if reference is present
