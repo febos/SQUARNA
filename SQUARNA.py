@@ -347,7 +347,7 @@ if __name__ == "__main__":
         exit(0)
 
     # DEFAULTS
-    inputfile     = os.path.join(HOME_DIR, "examples", "seq_input.fas")
+    inputfile     = None
     configfile    = os.path.join(HOME_DIR, "def.conf")
     configfileset = False              # Whether the user defined the config file
 
@@ -378,6 +378,38 @@ if __name__ == "__main__":
     verbose     = False                # Print the intermediate output or not
     step3       = "u"                  # i(intersection)/u(union)/1(step1)/2(step2) - what should be the
                                        # step-3 result dbn (alignment mode)
+
+
+    # Allow standard parameter input
+    formatted_args = []
+    cnt = 0
+    while cnt < len(args):
+        if args[cnt].lower() in {"-i", "--i", "-input", "--input",
+                                 "-c", "--c", "-config", "--config",
+                                 "-if", "--if", "-inputformat", "--inputformat",
+                                 "-rb", "--rb", "-rankby", "--rankby",
+                                 "-fl", "--fl", "-freqlim", "--freqlim",
+                                 "-ll", "--ll", "-levlim", "--levlim",
+                                 "-tl", "--tl", "-toplim", "--toplim",
+                                 "-ol", "--ol", "-outplim", "--outplim",
+                                 "-cl", "--cl", "-conslim", "--conslim",
+                                 "-s3", "--s3", "-step3", "--step3",
+                                 "-msn", "--msn", "-maxstemnum", "--maxstemnum",
+                                 "-rf", "--rf", "-reactformat", "--reactformat",
+                                 "-t", "--t", "-threads", "--threads",}:
+            formatted_args.append(args[cnt].lstrip('-')+'='+args[cnt+1])
+            cnt += 1
+        elif args[cnt].lower() in {"-a", "--a", "-ali", "--ali", "-alignment", "--alignment",
+                                 "-eo", "--eo", "-evalonly", "--evalonly",
+                                 "-hr", "--hr", "-hardrest", "--hardrest",
+                                 "-ico", "--ico", "-interchainonly", "--interchainonly",
+                                 "-v", "--v", "-verbose", "--verbose",}:
+            formatted_args.append(args[cnt].lstrip('-'))
+        else:
+            formatted_args.append(args[cnt])
+        cnt += 1
+
+    args = formatted_args
 
     # Parsing arguments
     for arg in args:
@@ -513,7 +545,12 @@ if __name__ == "__main__":
                 raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
                                  .format(arg.split('=', 1)[1]))
         else:
-            print("Unrecognized option: {}".format(arg))
+            if len(args) == 1:
+                inputfile = arg
+            else:
+                print("Unrecognized option: {}".format(arg))
+
+    assert os.path.exists(str(inputfile)), "Input file does not exist."
 
     # Process rankby
     if "d" in rankby:
