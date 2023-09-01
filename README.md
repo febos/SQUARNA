@@ -167,6 +167,11 @@ a (hopefully) arbitrary version of NumPy library.
         Path to a config file, see files "def.conf" and "alt.conf" 
         for the format details. In the alignment-based mode,
         the default config file is c=./ali.conf.
+        def.conf is the default config.
+        alt.conf is recommended for short pseudoknotted RNAs.
+        500.conf is recommended for RNAs longer 500 nts.
+        1000.conf is recommended for RNAs longer 1000 nts.
+        sk.conf is recommended with SHAPE data input.
 
     a / ali / alignment [DEFAULT: FALSE]
     
