@@ -1,5 +1,5 @@
 >External loop 1
-CCCAAAAGGG;CCCAAAAGGG
+CCCAAAAGGG;CCCAAAAGGG comments are allowed after the sequence but not after reactivities
 >testcase
 CGAAGUCCUUUACGUA
 >testcase with reactivities
@@ -26,12 +26,12 @@ GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
 >7QR4 [69],1.B.G.1.:1.B.U.69. with reference and reactivities
 GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
 ______++++++++++++++++++++++++++++++++++++++++####+++++++++++++++++++
-.....................................................................
-[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))
+..................................................................... 
+[[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....))))))) comments after reference are allowed as well
 >7QR4 [69],1.B.G.1.:1.B.U.69. with restraints
 GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
 
-[[[[[[........................]]]]]].................................
+[[[[[[........................]]]]]]................................. comments after restraints are allowed as well
 >Twister ribozyme with reference
 GAAAUAAUGCUACCAGACUGCACAAAAAGUCUGCCCGUUCCAAGUCGGGAUGAAAGCAGAGGAUUUC
 

@@ -150,6 +150,19 @@ def PredictRNAfold(seq, react, reactfile):
     return [dbn,]        
 
 
+def PredictRNAsubopt5(seq, react, reactfile, top = 5):
+
+    inpf = "inp.tmp"
+    with open(inpf,'w') as inp:
+        inp.write('>seq\n')
+        inp.write(seq+'\n')
+
+    os.system("RNAsubopt --shape={} --sorted < inp.tmp > outp2.tmp".format(reactfile['RNAfold']))
+    with open("outp2.tmp") as outp:
+        dbns = [x.split()[0] for x in outp.readlines()[2:]]
+    return dbns[:top]     
+
+
 def BPSEQtoDBN(bpseqfile):
 
     with open(bpseqfile) as outp:
@@ -167,27 +180,34 @@ def BPSEQtoDBN(bpseqfile):
 
 def CTtoDBN(ct_file):
 
+    res = []
+
     with open(ct_file) as file:
         lines = file.readlines()
 
-    ln = int(lines[0].split()[0])
+    while lines:
 
-    mfe = lines[1:ln+1]
+        ln = int(lines[0].split()[0])
 
-    skpairs = set()
+        mfe = lines[1:ln+1]
+
+        skpairs = set()
         
-    for line in mfe:
-        linesplit = line.split()
-        pair = (int(linesplit[0]) - 1,int(linesplit[4]) - 1)
+        for line in mfe:
+            linesplit = line.split()
+            pair = (int(linesplit[0]) - 1,int(linesplit[4]) - 1)
 
-        if pair[-1] == -1 or not pair[0] < pair[1]:
-            continue
-        skpairs.add(pair)
+            if pair[-1] == -1 or not pair[0] < pair[1]:
+                continue
+            skpairs.add(pair)
 
-    return CombinePairsToDBN(sorted(skpairs),len(mfe))
+        res.append(CombinePairsToDBN(sorted(skpairs),len(mfe)))
+        lines = lines[ln+1:]
+
+    return res
 
 
-def PredictShapeKnots(seq, react, reactfile):
+def PredictShapeKnots(seq, react, reactfile, top = 1):
 
     SHAPEKNOTS_PATH   = "~/software/RNAstructureSource/RNAstructure/exe/ShapeKnots-smp"
     SHAPEKNOTS_TABLES = "DATAPATH=~/software/RNAstructureSource/RNAstructure/data_tables"
@@ -201,10 +221,17 @@ def PredictShapeKnots(seq, react, reactfile):
                                                       reactfile['ShapeKnots']))
 
     try:
-        return [CTtoDBN("outp2.tmp"),]
+        res = CTtoDBN("outp2.tmp")[:top]
+        if not res:
+            return ['.'*len(seq),]
+        return res
     except:
         print('FAILED')
         return ['.'*len(seq),]
+
+
+def PredictShapeKnots5(seq, react, reactfile):
+    return PredictShapeKnots(seq, react, reactfile, top = 5)
 
 
 def PredictSQUARNA(seq, react, reactfile, conf = "def.conf", top = 1):
@@ -269,7 +296,9 @@ if __name__ == "__main__":
     dtst  = "S01"
     tl    = "ShapeKnots"
 
-    for dataset, tool in ((dtst, tl),):
+    for dataset, tool in (("S01", "RNAsubopt5"),
+                          ("S01", "ShapeKnots5"),
+                          ("S01", "ShapeKnots"),):
 
         with open('datasets/{}.fas'.format(dataset)) as file:
 
@@ -284,7 +313,7 @@ if __name__ == "__main__":
                                   key = lambda x: int(os.path.basename(x).split('_')[0]))
             reactfiles15 = sorted(glob.glob("datasets/S01Ali/shape1.5_unaligned/*"),
                                   key = lambda x: int(os.path.basename(x).split('_')[0]))
-            print(reactfiles20)
+            #print(reactfiles20)
 
             t0 = time.time()
             
@@ -301,6 +330,8 @@ if __name__ == "__main__":
 
                 structs = {"RNAfold":PredictRNAfold,
                            "ShapeKnots": PredictShapeKnots,
+                           "ShapeKnots5": PredictShapeKnots5,
+                           "RNAsubopt5": PredictRNAsubopt5,
                            "SQUARNA": PredictSQUARNA,
                            "SQUARNA5": PredictSQUARNA5,
                            "SQUARNAN": PredictSQUARNAN,

@@ -79,10 +79,13 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
         while len(data) < len(inputformat):
             data.append(None)
 
-        sequence     = data[q_ind]
+        # split()[0] to allow space-separated comments
+        # after the input within the line
+        # for sequence, restraints, reference, but not for reactivities
+        sequence     = data[q_ind].split()[0]
         reactivities = data[t_ind] if t_ind > 0 else None
-        restraints   = data[r_ind] if r_ind > 0 else None
-        reference    = data[f_ind] if f_ind > 0 else None
+        restraints   = data[r_ind].split()[0] if r_ind > 0 and data[r_ind] else None
+        reference    = data[f_ind].split()[0] if f_ind > 0 and data[f_ind] else None
 
         N = len(sequence)
 
@@ -131,7 +134,7 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
 
     results = []
     
-    with open(inputfile) as file:
+    with open(inputname) as file:
         for line in file:
             if line.startswith('>'):
                 # If not the first entry - process the previous one

@@ -147,7 +147,23 @@ def PredictRNAfold(seq):
     os.system("RNAfold --noPS < inp.tmp > outp2.tmp")
     with open("outp2.tmp") as outp:
         dbn = outp.readlines()[2].split()[0]
-    return [dbn,]        
+    return [dbn,]
+
+def PredictRNAsubopt5(seq, top = 5):
+
+    inpf = "inp.tmp"
+    with open(inpf,'w') as inp:
+        inp.write('>seq\n')
+        inp.write(seq+'\n')
+
+    if len(seq) > 2000:
+        add = "--deltaEnergy=0.1"
+    else:
+        add = ""
+    os.system("RNAsubopt --sorted {} < inp.tmp > outp2.tmp".format(add))
+    with open("outp2.tmp") as outp:
+        dbns = [x.split()[0] for x in outp.readlines()[2:]]
+    return dbns[:top] 
 
 def PredictIPknot(seq):
 
@@ -208,27 +224,34 @@ def PredictSPOTRNA(seq):
 
 def CTtoDBN(ct_file):
 
+    res = []
+
     with open(ct_file) as file:
         lines = file.readlines()
 
-    ln = int(lines[0].split()[0])
+    while lines:
 
-    mfe = lines[1:ln+1]
+        ln = int(lines[0].split()[0])
 
-    skpairs = set()
+        mfe = lines[1:ln+1]
+
+        skpairs = set()
         
-    for line in mfe:
-        linesplit = line.split()
-        pair = (int(linesplit[0]) - 1,int(linesplit[4]) - 1)
+        for line in mfe:
+            linesplit = line.split()
+            pair = (int(linesplit[0]) - 1,int(linesplit[4]) - 1)
 
-        if pair[-1] == -1 or not pair[0] < pair[1]:
-            continue
-        skpairs.add(pair)
+            if pair[-1] == -1 or not pair[0] < pair[1]:
+                continue
+            skpairs.add(pair)
 
-    return CombinePairsToDBN(sorted(skpairs),len(mfe))
+        res.append(CombinePairsToDBN(sorted(skpairs),len(mfe)))
+        lines = lines[ln+1:]
+
+    return res
 
 
-def PredictShapeKnots(seq):
+def PredictShapeKnots(seq, top = 1):
 
     SHAPEKNOTS_PATH   = "~/software/RNAstructureSource/RNAstructure/exe/ShapeKnots-smp"
     SHAPEKNOTS_TABLES = "DATAPATH=~/software/RNAstructureSource/RNAstructure/data_tables"
@@ -240,10 +263,16 @@ def PredictShapeKnots(seq):
     os.system("{} {} inp.tmp outp2.tmp".format(SHAPEKNOTS_TABLES, SHAPEKNOTS_PATH))
 
     try:
-        return [CTtoDBN("outp2.tmp"),]
+        res = CTtoDBN("outp2.tmp")[:top]
+        if not res:
+            return ['.'*len(seq),]
+        return res
     except:
-        print('FAILED')
         return ['.'*len(seq),]
+
+
+def PredictShapeKnots5(seq):
+    return PredictShapeKnots(seq, top = 5)
 
 
 def PredictSQUARNA(seq, conf = "def.conf", top = 1):
@@ -309,8 +338,9 @@ if __name__ == "__main__":
     dtst  = "S01clean"
     tl    = "SQUARNA5"
 
-    for dataset, tool in (("S01clean", "SQUARNA5"),
-                          ("SRtrain", "SQUARNA5"),):
+    for dataset, tool in (("S01clean", "ShapeKnots"),
+                          ("TS1reducedWC", "ShapeKnots"),
+                          ("SRtrain", "ShapeKnots"),):
 
         if NL:
             dataset += "NL"
@@ -347,6 +377,8 @@ if __name__ == "__main__":
                            "SQUARNAsk5": PredictSQUARNAsk5,
                            "SQUARNAskN": PredictSQUARNAskN,
                            "ShapeKnots": PredictShapeKnots,
+                           "ShapeKnots5": PredictShapeKnots5,
+                           "RNAsubopt5": PredictRNAsubopt5,
                            }[tool](seq)
 
                 t1 = time.time()-t0
@@ -372,7 +404,7 @@ if __name__ == "__main__":
                 BTP, BFP, BFN = -1, -1, -1
 
                 pairsr = set(GetPairs(dbn))
-
+                
                 for i,pred in enumerate(structs):
                 
                     pairsq = set(GetPairs(pred))
@@ -404,6 +436,7 @@ if __name__ == "__main__":
                                     round(best_prc,3),
                                     round(best_rcl,3),
                                     round(best_fscore,3)))
+                
                 res = [name[1:], len(seq), round(t1,3), best_ind+1, BTP,BFP,BFN,
                        round(best_prc,3), round(best_rcl,3), round(best_fscore,3),
                        seq,dbn,structs[best_ind]]
