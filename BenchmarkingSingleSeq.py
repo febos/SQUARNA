@@ -335,12 +335,11 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "S01clean"
+    dtst  = "SRtrain150"
     tl    = "SQUARNA5"
 
-    for dataset, tool in (("S01clean", "ShapeKnots"),
-                          ("TS1reducedWC", "ShapeKnots"),
-                          ("SRtrain", "ShapeKnots"),):
+    for dataset, tool in ((dtst, tl),
+                          ):
 
         if NL:
             dataset += "NL"

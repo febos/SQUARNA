@@ -488,9 +488,9 @@ def ScoreStems(seq, stems, rstems,
         bps = stem[0]
 
         reactfactor =  1 #(sum((1 - (reacts[bp[0]] + reacts[bp[1]]) / 2 ) for bp in bps) / len(bps) * 2) ** 1.5
-
+        """
         descr = "len={},bps={}".format(stem[1], stem[2]) # for debugging only
-
+        """
         levelset = set() # with base pairs of how many pseudoknot levels the stem is in conflict
         dots = 0 # number of confined unpaired bases
         brackets = 0 # number of bases belonging to the pseudoknotted wings (see URS defs)
@@ -574,7 +574,7 @@ def ScoreStems(seq, stems, rstems,
 
         initscore  = stem[2] # initial bp score
         finalscore = initscore * stemdistfactor * orderfactor * loopfactor * reactfactor * tetrafactor
-        
+        """
         descr += ",dt={},br={},sd={},sdf={}".format(dots, brackets,
                                                     round(stemdist,2),
                                                     round(stemdistfactor,2))
@@ -582,7 +582,7 @@ def ScoreStems(seq, stems, rstems,
                                         round(orderfactor,2))
         descr += ",lf={},rf={}".format(round(loopfactor,2),
                                        round(reactfactor,2))
-
+        """
         stem.append(finalscore)
         stem.append(descr)
 
@@ -647,7 +647,7 @@ def OptimalStems(seq, rstems, bpboolmatrix, bpscorematrix,
                           bracketweight, distcoef,
                           orderpenalty, loopbonus,
                           )
-    """ 
+    """
     # TEMPORARY PRINTING
     print('##################################################')
     for stem in sorted(allstems, key = lambda x: x[3], reverse = True):
@@ -718,7 +718,7 @@ def ScoreStruct(seq, stemset, reacts):
             bpsum += (bpscores[seq[v]+seq[w]] if seq[v]+seq[w] in bpscores else 0.0)
             paired.add(v)
             paired.add(w)
-            
+        
         if bpsum > 0:
             thescore += bpsum**power 
 
