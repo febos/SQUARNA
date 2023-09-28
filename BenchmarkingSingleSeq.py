@@ -1,5 +1,17 @@
 import os, time
 
+try:
+    import alina
+    Alina = alina.AliNA()
+except:
+    Alina = None
+
+
+def PredictAlina(seq):
+    dbn = Alina.fold(seq)
+    return [dbn,]
+
+
 def StemmedIsolated(sorted_pairs):
 
     sp = sorted_pairs
@@ -335,11 +347,11 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "SRtrain150"
+    dtst  = "SRtrain"
     tl    = "SQUARNA5"
 
-    for dataset, tool in ((dtst, tl),
-                          ):
+    for dataset, tool in (("TS1reducedWC",tl),
+                          ("SRtrain",tl),):
 
         if NL:
             dataset += "NL"
@@ -363,6 +375,7 @@ if __name__ == "__main__":
                 dbn = lines[i+2].strip()
 
                 structs = {"RNAfold":PredictRNAfold,
+                           "Alina":PredictAlina,
                            "IPknot": PredictIPknot,
                            "MXfold2":PredictMXfold2,
                            "SPOT-RNA":PredictSPOTRNA,

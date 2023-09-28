@@ -828,7 +828,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                paramsets = [], conslim = 1, toplim = 5,
                hardrest = False, rankbydiff = False,
                rankby = (0, 2, 1), interchainonly = False,
-               threads = 1, mp = True, stemmatrix = None):
+               threads = 1, mp = True, stemmatrix = None, poollim = 1000):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     reacts == list of reactivities (values from 0 to 1)
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -933,11 +933,11 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
                 # while list of intermediate stem lists is not empty
                 while curstemsets:
-
                     # Each time we diverge - cursubopt is increased by suboptinc
-                    if len(curstemsets) > cursize and cursubopt < suboptmax:
+                    if len(curstemsets) > cursize:
                         cursize = len(curstemsets)
-                        cursubopt += suboptinc
+                        if cursubopt < suboptmax:
+                            cursubopt += suboptinc
 
                     # filtering by len(stems) == maxstemnum
                     newcurstemsets = []
@@ -965,7 +965,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
                         # append new intermediate stem lists
                         if newstems:
-                            for newstem in newstems:
+                            stopper =  1 if cursize >= poollim else len(newstems)
+                            for newstem in newstems[:stopper]:
                                 newcurstemsets.append(stems + [newstem,])
                         # if no newstems returned - the stem list is considered final
                         else:
@@ -979,9 +980,10 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
             while curstemsets:
 
                 # Each time we diverge - cursubopt is increased by suboptinc
-                if len(curstemsets) > cursize and cursubopt < suboptmax:
+                if len(curstemsets) > cursize:
                     cursize = len(curstemsets)
-                    cursubopt += suboptinc
+                    if cursubopt < suboptmax:
+                        cursubopt += suboptinc
 
                 # filtering by len(stems) == maxstemnum
                 newcurstemsets = []
@@ -1007,7 +1009,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
                     # append new intermediate stem lists
                     if newstems:
-                        for newstem in newstems:
+                        stopper =  1 if cursize >= poollim else len(newstems)
+                        for newstem in newstems[:stopper]:
                             newcurstemsets.append(stems + [newstem,])
                     # if no newstems returned - the stem list is considered final
                     else:
@@ -1101,8 +1104,8 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   reference, paramsetnames,
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat, evalonly, mp = True,
-                  sink = sys.stdout, stemmatrix = None):
+                  conslim, reactformat, evalonly, poollim = 1000,
+                  mp = True, sink = sys.stdout, stemmatrix = None,):
     """Main-like function;
        sink param is standard system output by default,
        we need it to use the buffer in alignment-mode parallelizations"""
@@ -1140,7 +1143,8 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     # Run prediction
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
                             paramsets, conslim, toplim, hardrest,
-                            rankbydiff, rankby, interchainonly, threads, mp, stemmatrix)
+                            rankbydiff, rankby, interchainonly, threads, mp, stemmatrix,
+                            poollim)
     
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction

@@ -371,6 +371,8 @@ if __name__ == "__main__":
     outplimset    = False              # if the user specified the outplim value 
     outplim       = toplim             # Top-N structs used for metrics calculations if reference
     conslim       = 1                  # Top-N structs used for consensus
+    poollim       = 1000               # Maximum number of structures allowed to populate the current
+                                       # structure pool (if exceeded, no bifurcation will occur anymore)
 
     reactformat   = 3                  # 3 / 10 / 26
 
@@ -501,6 +503,15 @@ if __name__ == "__main__":
             except:
                 raise ValueError("Inappropriate conslim value (positive integer): {}"\
                                  .format(arg.split('=', 1)[1]))
+        # poollim
+        elif arg.lower().startswith("pl=") or\
+             arg.lower().startswith("poollim="):
+            try:
+                poollim = int(float(arg.split('=', 1)[1]))
+                assert poollim > 0
+            except:
+                raise ValueError("Inappropriate poollim value (positive integer): {}"\
+                                 .format(arg.split('=', 1)[1]))
         # reactformat
         elif arg.lower().startswith("rf=") or\
              arg.lower().startswith("reactformat="):
@@ -583,7 +594,7 @@ if __name__ == "__main__":
             RunSQRNdbnseq(name, seq, reacts, restrs, ref, paramsetnames,
                           paramsets, threads, rankbydiff, rankby,
                           hardrest, interchainonly, toplim, outplim,
-                          conslim, reactformat, evalonly)
+                          conslim, reactformat, evalonly, poollim)
 
     else: # Running alignment-based SQUARNA
 
@@ -630,7 +641,7 @@ if __name__ == "__main__":
                       levellimit, freqlimit, verbose, step3,
                       paramsetnames, paramsets, threads, rankbydiff, rankby,
                       hardrest, interchainonly, toplim, outplim,
-                      conslim, reactformat)
+                      conslim, reactformat, poollim)
         
 
 

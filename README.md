@@ -235,6 +235,11 @@ a (hopefully) arbitrary version of NumPy library.
     
         How many top-N structures will be used to derive the predicted
         structure consensus.
+        
+    pl=INT / poollim=INT [DEFAULT: pl=1000]
+    
+        Maximum number of structures allowed to populate the current 
+        structure pool (if exceeded, no bifurcation will occur anymore).
 
     s3={i,u,1,2} / step3={i,u,1,2} [DEFAULT: s3=u]
     

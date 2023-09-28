@@ -224,7 +224,7 @@ def mpRunSQRNdbnseq(args):
        over alternative structures within each sequence prediction"""
     obj, paramsetnames, paramsets, threads,\
     rankbydiff, rankby, hardrest, interchainonly,\
-    toplim, outplim, conslim, reactformat, verbose, smat = args
+    toplim, outplim, conslim, reactformat, verbose, smat, poollim = args
 
     evalonly = False
 
@@ -237,7 +237,7 @@ def mpRunSQRNdbnseq(args):
         cons, dbns, nums1, nums2 = RunSQRNdbnseq(name, seq, reacts, rests, ref, paramsetnames,
                                                  paramsets, threads, rankbydiff, rankby,
                                                  hardrest, interchainonly, toplim, outplim,
-                                                 conslim, reactformat, evalonly,
+                                                 conslim, reactformat, evalonly, poollim,
                                                  mp = False, sink = buffer, stemmatrix = smat)
         return cons, buffer.getvalue()
 
@@ -307,7 +307,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                   levellimit, freqlimit, verbose, step3,
                   paramsetnames, paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat):
+                  conslim, reactformat, poollim):
 
     # Alignment length is derived as the length
     # of the first aligned sequence
@@ -356,7 +356,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
             inputs = [(obj, paramsetnames, paramsets, threads,
                        rankbydiff, rankby, hardrest, interchainonly,
                        toplim, outplim, conslim, reactformat,
-                       verbose, smat) for obj in objs]
+                       verbose, smat, poollim) for obj in objs]
             for cons, output in pool.imap(mpRunSQRNdbnseq, inputs):
                 if verbose:
                     print(output, end = '')
