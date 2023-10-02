@@ -1,0 +1,815 @@
+# STOCKHOLM 1.0
+#=GF AU Infernal 1.1.4
+
+24_5domain16S_rRNA_E_coli          GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR 24_5domain16S_rRNA_E_coli  PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054335.1_859387_859917           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054335.1_859387_859917   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054335.1_2232744_2233273         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG.gGAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054335.1_2232744_2233273 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..8655.38********************...**********************..............
+CP054335.1_2492490_2493022         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGGggGAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054335.1_2492490_2493022 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..86552389*******************...**********************..............
+CP054335.1_1686802_1687333         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054335.1_1686802_1687333 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054335.1_2343512_2344040         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..G-GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054335.1_2343512_2344040 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..7.66..69*******************...**********************..............
+CP054335.1_3286171_3286702         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AUCAGCUUGC.UGAU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054335.1_3286171_3286702 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP048107.1_5133612_5134138         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..G-GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP048107.1_5133612_5134138 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..7.66..69*******************...**********************..............
+CP041425.1_465486_466015           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP041425.1_465486_466015   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP047662.1_805113_805644           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP047662.1_805113_805644   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP040919.1_4663871_4664392         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.---U..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..--GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP040919.1_4663871_4664392 PP *****.*******.***.***.**.**.*****************************.*****99996....6..79.******.***************************.**.*******.*******7....99..9********************...**********************..............
+CP040919.1_4960966_4961482         GAUUG.AACGCUG.GCG.GCAaGG.CC.UAACACAUGCAAGUCAGACGGUAACAGAA.-GAAA----C.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUGaGG.AAACUGC.CUGAUGGA..--GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP040919.1_4960966_4961482 PP *****.*******.***.**99**.**.**************************965..5665....5.7778..89.******.***************************999.*******.*******7....99..9********************...**********************..............
+CP038138.1_4718381_4718910         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGAAA..............
+#=GR CP038138.1_4718381_4718910 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP032986.1_1196456_1196985         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAAUGUCGCAA..............
+#=GR CP032986.1_1196456_1196985 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP021193.1_3029947_3030473         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AUCAGCUUGC.UGAU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..G-GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP021193.1_3029947_3030473 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..7.66..69*******************...**********************..............
+CP026845.1_3425146_3425672         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..G-GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP026845.1_3425146_3425672 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..7.66..69*******************...**********************..............
+LT599825.1_5005134_5005663         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR LT599825.1_5005134_5005663 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP014670.1_2423026_2423554         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP014670.1_2423026_2423554 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP116241.1_3113057_3113587         GAUUG.AACGCUG.GCG.GCA.GGcCC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP116241.1_3113057_3113587 PP *****.*******.***.***.**447.9****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP114592.1_4437579_4438111         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAGuagCUAAUACCGCAUAACGUCGCAA..............
+#=GR CP114592.1_4437579_4438111 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..***************98876544489********************..............
+AP026907.1_3915688_3916215         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..G-GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR AP026907.1_3915688_3916215 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..7.66..69*******************...**********************..............
+CP097129.1_1340189_1340719         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP097129.1_1340189_1340719 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP060969.1_4485536_4486065         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAAUGUCGCAA..............
+#=GR CP060969.1_4485536_4486065 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP028764.1_1310821_1311350         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGG.AUCAGCUUGC.UGAU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP028764.1_1310821_1311350 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP028733.1_4509287_4509818         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG.gGAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP028733.1_4509287_4509818 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..8655.38********************...**********************..............
+CP028733.1_3856348_3856878         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP028733.1_3856348_3856878 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP028733.1_4703035_4703530         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGG-..--GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP028733.1_4703035_4703530 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******.....**..*********************...**********************..............
+CP091391.1_66553_67083             GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP091391.1_66553_67083     PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP076645.1_4733395_4733923         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGU-ACAGGA.AUCAGCUUGC.UGAU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP076645.1_4733395_4733923 PP *****.*******.***.***.**.**.**********************.5*****.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP043271.1_2636078_2636607         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CCGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP043271.1_2636078_2636607 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP043271.1_3381085_3381614         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CCGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP043271.1_3381085_3381614 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+AP023286.1_4410073_4410598         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..--GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR AP023286.1_4410073_4410598 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******7....99..9********************...**********************..............
+CP054828.1_397623_398152           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054828.1_397623_398152   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP034738.1_3434399_3434929         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP034738.1_3434399_3434929 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+MH346275.1_20_550                  GAUUG.AACGCUG.GCGgGCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR MH346275.1_20_550          PP *****.*******.**737**.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP010171.1_1941064_1941594         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UUcGCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP010171.1_1941064_1941594 PP *****.*******.***.***.**.**.*****************************.**********.***9..7659*****.***************************.**.*******.********..****..*********************...**********************..............
+CP104472.1_2831371_2831901         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP104472.1_2831371_2831901 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP101983.1_4745473_4746003         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UUcGCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP101983.1_4745473_4746003 PP *****.*******.***.***.**.**.*****************************.**********.****..*999*****.***************************.**.*******.********..****..*********************...**********************..............
+GQ157894.1_8_538                   GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GGgAAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR GQ157894.1_8_538           PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.**************************9.87599*****.********..****..*********************...**********************..............
+FJ982848.1_21_551                  GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGCgUUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR FJ982848.1_21_551          PP *****.*******.***.***.**.**.*****************************.**********9****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+EU778395.1_20_550                  GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR EU778395.1_20_550          PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+EU472784.1_7_537                   GAUUGaGACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR EU472784.1_7_537           PP ****9459*****.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+EU470674.1_20_550                  GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR EU470674.1_20_550          PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054314.1_1898625_1899152         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054314.1_1898625_1899152 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054314.1_2729911_2730437         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.---U..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAGCUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054314.1_2729911_2730437 PP *****.*******.***.***.**.**.*****************************.*****99996....6..79.******.***************************.**.*******.********..****..*********************...**********************..............
+OQ808192.1_1_530                   -AUUG.AACGCUG.GCG.GCA.GG.CCuUAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR OQ808192.1_1_530           PP .****.*******.***.***.**.873699**************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP061241.1_5237805_5238330         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UCUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCA-AACGUCGCAA..............
+#=GR CP061241.1_5237805_5238330 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********8.689*******..............
+KF109934.1_1_530                   -AUUG.AACGCUGuGCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR KF109934.1_1_530           PP .****.******67***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP085517.1_3443832_3444360         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP085517.1_3443832_3444360 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+JQ185813.1_1_530                   -AUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR JQ185813.1_1_530           PP .****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+JF116426.1_1_530                   -AUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR JF116426.1_1_530           PP .****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054319.1_2326850_2327380         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054319.1_2326850_2327380 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054319.1_4906446_4906976         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054319.1_4906446_4906976 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054319.1_1525266_1525795         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054319.1_1525266_1525795 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054319.1_1565426_1565958         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054319.1_1565426_1565958 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP054319.1_704325_704851           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.G-.AAACUGC.CUGAUGGA..--GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP054319.1_704325_704851   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.**************************8.5..78*****.*******7....99..9********************...**********************..............
+CP049609.1_2597390_2597919         GAUUG.AACGCUG.GCG.GCA.GG.CU.UAACACAUGCAAGUCGAACGGUAACAGGA.AUCAGCUUGC.UGAU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP049609.1_2597390_2597919 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP041337.1_2701320_2701849         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP041337.1_2701320_2701849 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP041337.1_3461164_3461693         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP041337.1_3461164_3461693 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP041337.1_1_516                   -----.-------.--G.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP041337.1_1_516           PP ................*.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP042606.1_796661_797191           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGAAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP042606.1_796661_797191   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP042606.1_699349_699879           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP042606.1_699349_699879   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP036245.1_3717988_3718515         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CCGAUGGA..G-GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP036245.1_3717988_3718515 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..7.66..69*******************...**********************..............
+CP019256.1_666172_666699           --UUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP019256.1_666172_666699   PP ..***.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+LR134238.1_2812538_2813064         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AUCAGCUUGC.UGAU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR LR134238.1_2812538_2813064 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+LR134238.1_1749266_1749795         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGACgGAGUGGCGGACGGGUGAGUAAUGUCUG.GG.A-ACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR LR134238.1_1749266_1749795 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******779*************************.**.5.9****.********..****..*********************...**********************..............
+CP010177.1_1806378_1806907         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGCuUGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP010177.1_1806378_1806907 PP *****.*******.***.***.**.**.*****************************.*********846***..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP126292.1_4347329_4347858         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AUCAGCUUGC.UGAU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAAUGUCGCAA..............
+#=GR CP126292.1_4347329_4347858 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP047057.1_4617812_4618341         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.ARCAGCUUGC.UGYU..UY.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CYGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP047057.1_4617812_4618341 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP107284.1_4842712_4843232         GAUUG.AACGCUG.GCA.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..--GG..GAUAACUACUGGAAACGGUAG...CUAAUGCCGCAUAACGUCGCAA..............
+#=GR CP107284.1_4842712_4843232 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******7....99..9********************...**********************..............
+AP026514.1_3325583_3326111         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR AP026514.1_3325583_3326111 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP091387.1_175703_176231           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..G-GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP091387.1_175703_176231   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..7.66..69*******************...**********************..............
+CP092820.1_3499686_3500216         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AUCAGCUUGC.UGAU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP092820.1_3499686_3500216 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP058752.1_3240613_3241140         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAGCGGUAGCACAG.AGAG-CUUG-.CUCU..CG.GGUGAC.GAGCGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP058752.1_3240613_3241140 PP *****.*******.***.***.**.**.**************************988.8765.6666..5678..88.99****.***************************.**.*******.********..****..*********************...**********************..............
+CP058752.1_3771433_3771960         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAGCGGUAGCACAG.AGAG-CUUG-.CUCU..CG.GGUGAC.GAGCGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAAUGUCGCAA..............
+#=GR CP058752.1_3771433_3771960 PP *****.*******.***.***.**.**.**************************988.8765.6666..5678..88.99****.***************************.**.*******.********..****..*********************...**********************..............
+CP028771.1_129083_129612           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CCGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP028771.1_129083_129612   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP028747.1_3918975_3919502         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP028747.1_3918975_3919502 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP051659.1_4484324_4484853         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CCGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP051659.1_4484324_4484853 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP088808.1_273991_274521           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGAA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CCGAUGGA..GGGG.gGAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP088808.1_273991_274521   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..8655.38********************...**********************..............
+CP088779.1_134417_134950           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGAaAGCAGCUUGC.UGCUuuUC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGCcCUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP088779.1_134417_134950   PP *****.*******.***.***.**.**.***************************86279********.**972257.8*****.***************************.**.*****96379******..****..*********************...**********************..............
+CP088740.1_309800_310330           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGUU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP088740.1_309800_310330   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP088564.1_3023890_3024414         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP088564.1_3023890_3024414 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP088356.1_5347270_5347801         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CCGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP088356.1_5347270_5347801 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP086604.1_3054069_3054597         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AUCAGCUUGC.UGAU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..G-GG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAAUGUCGCAA..............
+#=GR CP086604.1_3054069_3054597 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******9..7.66..69*******************...**********************..............
+CP070951.1_4315950_4316480         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP070951.1_4315950_4316480 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP080119.1_1721232_1721762         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP080119.1_1721232_1721762 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP078586.1_2694528_2695057         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAAC-------gunnnnnnnnnnnn
+#=GR CP078586.1_2694528_2695057 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...************997.......88888888888999
+CP078583.1_2694528_2695057         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCNNNN..............
+#=GR CP078583.1_2694528_2695057 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP078583.1_4214746_4215275         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAAUGUCGCAA..............
+#=GR CP078583.1_4214746_4215275 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP078584.1_2863711_2864240         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.NNNAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP078584.1_2863711_2864240 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP078584.1_3514627_3515156         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUN..NN.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP078584.1_3514627_3515156 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP078568.1_2863711_2864240         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.NNNNNNNNNN.NNNU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP078568.1_2863711_2864240 PP *****.*******.***.***.**.**.*****************************.*999999999.999*..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP078568.1_3514627_3515156         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.NNNNNNNNNN.NNNN..NN.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP078568.1_3514627_3515156 PP *****.*******.***.***.**.**.***************************87.6666666666.6666..78.9*****.***************************.**.*******.********..****..*********************...**********************..............
+CP078569.1_3514627_3515156         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AACAGCUUGC.UGUU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP078569.1_3514627_3515156 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+LR890262.1_473064_473593           GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CCGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR LR890262.1_473064_473593   PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP057657.1_3150263_3150792         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AUCAGCUUGC.UGAU..UC.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP057657.1_3150263_3150792 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+CP057026.1_4584300_4584831         GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UGCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGAugGAGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR CP057026.1_4584300_4584831 PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.*******954679*..*********************...**********************..............
+AB604192.1_24_554                  GAUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGMAGCUUGC.UUCU..UU.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR AB604192.1_24_554          PP *****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+MN187904.1_24_552                  -AUUG.AAYGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.AGCAGCUUGC.UKCU..UY.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR MN187904.1_24_552          PP .****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+AB682397.1_1_529                   -AUUG.AACGCUG.GCG.GCA.GG.CC.UAACACAUGCAAGUCGAACGGUAACAGGA.ANNAGCUUGC.UNCU..UN.GCUGAC.GAGUGGCGGACGGGUGAGUAAUGUCUG.GG.AAACUGC.CUGAUGGA..GGGG..GAUAACUACUGGAAACGGUAG...CUAAUACCGCAUAACGUCGCAA..............
+#=GR AB682397.1_1_529           PP .****.*******.***.***.**.**.*****************************.**********.****..**.******.***************************.**.*******.********..****..*********************...**********************..............
+#=GC SS_cons                       {{{{-.{{{{{{,.{{{.{{{.{{.,,.,,,{{{-{{{,,<<<-----<<--<<<<<.<<<<<____>.>>>>..>>.->>>>>.---->>>,,,,,,[[[,,,,,,,((((.((.--((---.(((((((,..,,<<..-----<<<<<<____>>>>>>...------>>,,,,,,,<<<____~~~~~~~~~~~~~~
+#=GC RF                            GauuG.aaCGCuG.GCG.GCa.GG.cc.UAACaCAuGCAAGcCGAAcGGuAACaGga.aGaaGcUUGC.uuCu..uc.GCuGaC.GAGUGgCGGAcGGGuGAGUAAUGuCuG.GG.AAaCUGc.CcGauGGA..GGGG..GAUAACuaCcGGAAACgGuaG...cUAAUACCGcAUAAcGuCGcAA~~~~~~~~~~~~~~
+
+24_5domain16S_rRNA_E_coli          .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR 24_5domain16S_rRNA_E_coli  PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054335.1_859387_859917           .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054335.1_859387_859917   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054335.1_2232744_2233273         .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054335.1_2232744_2233273 PP .....**********.999..8******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054335.1_2492490_2493022         .....GACCAAAGAG.GGGgGACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054335.1_2492490_2493022 PP .....*******998.876379******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054335.1_1686802_1687333         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCCAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054335.1_1686802_1687333 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054335.1_2343512_2344040         .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054335.1_2343512_2344040 PP .....**********.999..8******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054335.1_3286171_3286702         .....GACCAAAGAG.GGGgGACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054335.1_3286171_3286702 PP .....*******998.876379******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP048107.1_5133612_5134138         .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.C-CUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP048107.1_5133612_5134138 PP .....**********.999..8******.................*******************************.********************.*.***...............................*.****.***..********8.6.589********.******************************
+CP041425.1_465486_466015           .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP041425.1_465486_466015   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP047662.1_805113_805644           .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP047662.1_805113_805644   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP040919.1_4663871_4664392         .....GACCAAAGAG.GGG.-ACCUUC-.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.AaAGG...............................C.UCAC.CCA..GGCGACGAU.CCCCAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP040919.1_4663871_4664392 PP .....**********.999..688998..................78*****************************.******************97.52689...............................*.****.***..*********.*************.******************************
+CP040919.1_4960966_4961482         .....GAC---AAAG.AGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCACcCUA..GGCGACGAU.CCC----UGGUCU.GA-AGGAUGACCAACCAC-CUGGAACUGAG
+#=GR CP040919.1_4960966_4961482 PP .....***...69**.***.********.................*******************************.********************.*.***...............................*.***737**..*********.***....69****.98.6**************.***********
+CP038138.1_4718381_4718910         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.UGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP038138.1_4718381_4718910 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP032986.1_1196456_1196985         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP032986.1_1196456_1196985 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP021193.1_3029947_3030473         .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP021193.1_3029947_3030473 PP .....**********.999..8******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP026845.1_3425146_3425672         .....GACCAAAGAG.GGG.GACCUUC-.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP026845.1_3425146_3425672 PP .....**********.***.*****99..................99*****************************.********************.*.***...............................*.****.***..*********.*************.******************************
+LT599825.1_5005134_5005663         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGGUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR LT599825.1_5005134_5005663 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP014670.1_2423026_2423554         .....GACCAAAGAG.GGG.GACCUUC-.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP014670.1_2423026_2423554 PP .....**********.***.*****99..................99*****************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP116241.1_3113057_3113587         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP116241.1_3113057_3113587 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP114592.1_4437579_4438111         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP114592.1_4437579_4438111 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+AP026907.1_3915688_3916215         .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR AP026907.1_3915688_3916215 PP .....**********.999..8******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP097129.1_1340189_1340719         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP097129.1_1340189_1340719 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP060969.1_4485536_4486065         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP060969.1_4485536_4486065 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP028764.1_1310821_1311350         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGGUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP028764.1_1310821_1311350 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP028733.1_4509287_4509818         .....GACCAAAGAG.GGGgGACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP028733.1_4509287_4509818 PP .....*******998.876379******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP028733.1_3856348_3856878         .....GACCAAAGGGgGGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP028733.1_3856348_3856878 PP .....*****996650556.89******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP028733.1_4703035_4703530         .....GACCAAAGAG.A--.--CCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGG-UA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP028733.1_4703035_4703530 PP .....*****99998.6.....******.................*******************************.***************99.89.*.***...............................*.****.***..*********.*************.******************************
+CP091391.1_66553_67083             .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP091391.1_66553_67083     PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP076645.1_4733395_4733923         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCAGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP076645.1_4733395_4733923 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP043271.1_2636078_2636607         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGAGAUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP043271.1_2636078_2636607 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP043271.1_3381085_3381614         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGAGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP043271.1_3381085_3381614 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+AP023286.1_4410073_4410598         .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.C-CUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR AP023286.1_4410073_4410598 PP .....**********.999..8******.................*******************************.********************.*.***...............................*.****.***..********8.6.589********.******************************
+CP054828.1_397623_398152           .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................CgUCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054828.1_397623_398152   PP .....**********.999..8******.................*******************************.********************.*.***...............................*9****.***..*********.*************.******************************
+CP034738.1_3434399_3434929         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP034738.1_3434399_3434929 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+MH346275.1_20_550                  .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR MH346275.1_20_550          PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP010171.1_1941064_1941594         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP010171.1_1941064_1941594 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP104472.1_2831371_2831901         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP104472.1_2831371_2831901 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP101983.1_4745473_4746003         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP101983.1_4745473_4746003 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+GQ157894.1_8_538                   .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR GQ157894.1_8_538           PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+FJ982848.1_21_551                  .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR FJ982848.1_21_551          PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+EU778395.1_20_550                  .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGGgAUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR EU778395.1_20_550          PP .....**********.***.********.................***************************976549*******************.*.***...............................*.****.***..*********.*************.******************************
+EU472784.1_7_537                   .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR EU472784.1_7_537           PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+EU470674.1_20_550                  .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR EU470674.1_20_550          PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054314.1_1898625_1899152         .....GACCAA--A-.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054314.1_1898625_1899152 PP .....***974..4..466.69******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054314.1_2729911_2730437         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUCGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054314.1_2729911_2730437 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+OQ808192.1_1_530                   .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR OQ808192.1_1_530           PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP061241.1_5237805_5238330         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUA---GUUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP061241.1_5237805_5238330 PP .....**********.***.********.................*******************************.******85...55999****.*.***...............................*.****.***..*********.*************.******************************
+KF109934.1_1_530                   .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR KF109934.1_1_530           PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP085517.1_3443832_3444360         .....GACCAAAGAG.GGG.AACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.-UA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGGCCAGCCACACUGGAACUGAG
+#=GR CP085517.1_3443832_3444360 PP .....**********.***.********.................*******************************.********************.*.***...............................*.***5..9*..*********.*************.******************************
+JQ185813.1_1_530                   .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR JQ185813.1_1_530           PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+JF116426.1_1_530                   .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR JF116426.1_1_530           PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054319.1_2326850_2327380         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054319.1_2326850_2327380 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054319.1_4906446_4906976         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054319.1_4906446_4906976 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP054319.1_1525266_1525795         .....GACCAAAGAG.GGG.GACCUUAG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.C-CUAGCUGGUCUgGAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054319.1_1525266_1525795 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..********8.6.589********669****************************
+CP054319.1_1565426_1565958         .....GACCAAAGAG.GGG.GACCUUAG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAUcCCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054319.1_1565426_1565958 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..********945679*********.******************************
+CP054319.1_704325_704851           .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP054319.1_704325_704851   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP049609.1_2597390_2597919         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUUUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP049609.1_2597390_2597919 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP041337.1_2701320_2701849         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP041337.1_2701320_2701849 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP041337.1_3461164_3461693         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP041337.1_3461164_3461693 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP041337.1_1_516                   .....GACCAAAGAG.GGG.GACCUUAG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP041337.1_1_516           PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP042606.1_796661_797191           .....GACCAAAGAG.GGGgGACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP042606.1_796661_797191   PP .....*******998.876379******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP042606.1_699349_699879           .....GACCAAAGAG.GGGgGACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP042606.1_699349_699879   PP .....*******998.876379******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP036245.1_3717988_3718515         .....GACCAAAGAG.GGG.-ACCUUAG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.UGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP036245.1_3717988_3718515 PP .....**********.999..8******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP019256.1_666172_666699           .....GACCAAAGGG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP019256.1_666172_666699   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+LR134238.1_2812538_2813064         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR LR134238.1_2812538_2813064 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+LR134238.1_1749266_1749795         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR LR134238.1_1749266_1749795 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP010177.1_1806378_1806907         .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP010177.1_1806378_1806907 PP .....**********.999..8******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP126292.1_4347329_4347858         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP126292.1_4347329_4347858 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP047057.1_4617812_4618341         .....GACCAAAGAG.GGG.GACCUUAG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP047057.1_4617812_4618341 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP107284.1_4842712_4843232         .....GACCAA-GAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.C-CUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP107284.1_4842712_4843232 PP .....***975.888.877..8******.................*******************************.********************.*.***...............................*.****.***..********8.6.589********.******************************
+AP026514.1_3325583_3326111         .....GACCAAAGAG.GGG.GACCUUAG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR AP026514.1_3325583_3326111 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP091387.1_175703_176231           .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGCGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP091387.1_175703_176231   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP092820.1_3499686_3500216         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP092820.1_3499686_3500216 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP058752.1_3240613_3241140         .....GACCAAAGUG.GGG.GACCUUCG.................GGCCUCAUGCCAUCAGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP058752.1_3240613_3241140 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP058752.1_3771433_3771960         .....GACCAAAGUG.GGG.GACCUUCG.................GGCCUCAUGCCAUCAGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP058752.1_3771433_3771960 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP028771.1_129083_129612           .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.AGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGGCCAGCCACACUGGAACUGAG
+#=GR CP028771.1_129083_129612   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP028747.1_3918975_3919502         .....GACCAAAGAG.GGG.-ACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGG-UA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP028747.1_3918975_3919502 PP .....**********.999..8******.................*******************************.***************99.89.*.***...............................*.****.***..*********.*************.******************************
+CP051659.1_4484324_4484853         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP051659.1_4484324_4484853 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP088808.1_273991_274521           .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP088808.1_273991_274521   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP088779.1_134417_134950           .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP088779.1_134417_134950   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP088740.1_309800_310330           .....GACCAAAGAG.GGGgGACCUUAG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP088740.1_309800_310330   PP .....*******998.876379******.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP088564.1_3023890_3024414         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP088564.1_3023890_3024414 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP088356.1_5347270_5347801         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUAuaGGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP088356.1_5347270_5347801 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.*9888*********.*************.******************************
+CP086604.1_3054069_3054597         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP086604.1_3054069_3054597 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP070951.1_4315950_4316480         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP070951.1_4315950_4316480 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP080119.1_1721232_1721762         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUAaA.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP080119.1_1721232_1721762 PP .....**********.***.********.................*******************************.*****************99626.9**...............................*.****.***..*********.*************.******************************
+CP078586.1_2694528_2695057         nnnnn----------.---.--------nnnnnnnnnggccucuu--------GCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP078586.1_2694528_2695057 PP 99999.......................99999999999999999........***********************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP078583.1_2694528_2695057         .....NNNNNNNGAG.GGG.GACCUUCA.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP078583.1_2694528_2695057 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP078583.1_4214746_4215275         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUN----------------.-.---nnnnnnnnnnnnnnnnnnnnnnnnnnnnggc-.----.---..---GACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP078583.1_4214746_4215275 PP .....**********.***.********.................*******************************.****......................78999***********************987...............799***.*************.******************************
+CP078584.1_2863711_2864240         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP078584.1_2863711_2864240 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP078584.1_3514627_3515156         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP078584.1_3514627_3515156 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP078568.1_2863711_2864240         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP078568.1_2863711_2864240 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP078568.1_3514627_3515156         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP078568.1_3514627_3515156 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP078569.1_3514627_3515156         .....GACCAAAGAG.GGG.GACCCUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.AGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP078569.1_3514627_3515156 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+LR890262.1_473064_473593           .....GACCAAAGAG.GGG.GACCUUAG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUUGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR LR890262.1_473064_473593   PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP057657.1_3150263_3150792         .....GACUAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUGGUUGGUGGGGUA.A.CGG...............................C.UCAC.CAA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP057657.1_3150263_3150792 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+CP057026.1_4584300_4584831         .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR CP057026.1_4584300_4584831 PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+AB604192.1_24_554                  .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR AB604192.1_24_554          PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+MN187904.1_24_552                  .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR MN187904.1_24_552          PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+AB682397.1_1_529                   .....GACCAAAGAG.GGG.GACCUUCG.................GGCCUCUUGCCAUCGGAUGUGCCCAGAUGGG.AUUAGCUAGUAGGUGGGGUA.A.CGG...............................C.UCAC.CUA..GGCGACGAU.CCCUAGCUGGUCU.GAGAGGAUGACCAGCCACACUGGAACUGAG
+#=GR AB682397.1_1_529           PP .....**********.***.********.................*******************************.********************.*.***...............................*.****.***..*********.*************.******************************
+#=GC SS_cons                       ~~~~~>>>,,,,<<<.<<<.--<<____~~~~~~~~~~~~~~~~~>>>>>>>>,)))))))--))-)))))),<<<.----<<<--<<<<<<<<___._.___~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>.>>>>.>>>..>>>------.>>>,,<<<<<<<<.____>>>>--->>>>]]],<<<<<______
+#=GC RF                            ~~~~~GaCcAAAgaG.gGG.GACCUUcG~~~~~~~~~~~~~~~~~GGCCcCucGCCauCgGAUGuGCCCaGaUGGG.AUUAGCcAGuaGGuGgGGUA.A.cGG~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~C.cCaC.Cua..gGCGAcGAU.CCCUAGCuGguCc.GAGAgGacGAcCaGCCaCACuGGaAcUGAG
+
+24_5domain16S_rRNA_E_coli          ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR 24_5domain16S_rRNA_E_coli  PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054335.1_859387_859917           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A.aGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054335.1_859387_859917   PP ********************.****************************************.***********************************.*.******9.76..4.49*****.********.**********.****.***********.***************************************.*
+CP054335.1_2232744_2233273         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054335.1_2232744_2233273 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054335.1_2492490_2493022         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054335.1_2492490_2493022 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054335.1_1686802_1687333         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.CGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..AaaGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054335.1_1686802_1687333 PP ********************.****************************************.***********************************.*.******9.86..544******.********.**********.****.***********.***************************************.*
+CP054335.1_2343512_2344040         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054335.1_2343512_2344040 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054335.1_3286171_3286702         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A.aGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054335.1_3286171_3286702 PP ********************.****************************************.***********************************.*.******9.76..4.49*****.********.**********.****.***********.***************************************.*
+CP048107.1_5133612_5134138         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP048107.1_5133612_5134138 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP041425.1_465486_466015           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCAGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP041425.1_465486_466015   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP047662.1_805113_805644           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGGgGAGGAAGGGA.GUAAaAGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP047662.1_805113_805644   PP ********************.****************************************.***********************************.*.*******.**..*..******.*****987479********.**8527**********.***************************************.*
+CP040919.1_4663871_4664392         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAG-GA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP040919.1_4663871_4664392 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.****985.**.****.***********.***************************************.*
+CP040919.1_4960966_4961482         ACACGGU-CAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGG--CAAACC.UGAUGCAACCAUGCCGCGUGUAUGAAGAAGGCCUUcC.GGGUUGU.AAggA..AUACUU.UCAGCGGG.GAGGGAAAG-.GUAA.AGUUAAUACCU.UUGCUCGUGGCGGCUGCC---AGAAGAAACACCAGCUAG.C
+#=GR CP040919.1_4960966_4961482 PP ******8.6***********.*******************************9..5899**.*********************************8835.89*****.*9556..9*****.********.***999875..9***.***********.*****9999998888886...999***************.*
+CP038138.1_4718381_4718910         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP038138.1_4718381_4718910 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP032986.1_1196456_1196985         ACACGGCCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP032986.1_1196456_1196985 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP021193.1_3029947_3030473         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAG-GA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP021193.1_3029947_3030473 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.****985.**.****.***********.***************************************.*
+CP026845.1_3425146_3425672         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.-AGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP026845.1_3425146_3425672 PP ********************.****************************************.***********************************.*.*******.**..*..******.*******9..89*******.****.***********.***************************************.*
+LT599825.1_5005134_5005663         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR LT599825.1_5005134_5005663 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP014670.1_2423026_2423554         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP014670.1_2423026_2423554 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP116241.1_3113057_3113587         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP116241.1_3113057_3113587 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP114592.1_4437579_4438111         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP114592.1_4437579_4438111 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+AP026907.1_3915688_3916215         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR AP026907.1_3915688_3916215 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP097129.1_1340189_1340719         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGAgGUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP097129.1_1340189_1340719 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.*********945***.***********.***************************************.*
+CP060969.1_4485536_4486065         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP060969.1_4485536_4486065 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP028764.1_1310821_1311350         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP028764.1_1310821_1311350 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP028733.1_4509287_4509818         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP028733.1_4509287_4509818 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP028733.1_3856348_3856878         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP028733.1_3856348_3856878 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP028733.1_4703035_4703530         ACACGGUCCAGA------CU.----CCUACAGUA------------CAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GG----A.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP028733.1_4703035_4703530 PP ***********7......66.....99****887............789************.*******************************9999.9.85....8.9*..*..******.********.**********.****.***********.***************************************.*
+CP091391.1_66553_67083             ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A.aGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP091391.1_66553_67083     PP ********************.****************************************.***********************************.*.******9.76..4.49*****.********.**********.****.***********.***************************************.*
+CP076645.1_4733395_4733923         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGG.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP076645.1_4733395_4733923 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP043271.1_2636078_2636607         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGUAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP043271.1_2636078_2636607 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP043271.1_3381085_3381614         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP043271.1_3381085_3381614 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+AP023286.1_4410073_4410598         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR AP023286.1_4410073_4410598 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054828.1_397623_398152           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGG-GAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.A.GGGUUGU.AA..A.aGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054828.1_397623_398152   PP ********************.************97.689**********************.***********************************.*.******9.76..4.49*****.********.**********.****.***********.***************************************.*
+CP034738.1_3434399_3434929         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A.aGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP034738.1_3434399_3434929 PP ********************.****************************************.***********************************.*.******9.76..4.49*****.********.**********.****.***********.***************************************.*
+MH346275.1_20_550                  ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR MH346275.1_20_550          PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP010171.1_1941064_1941594         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP010171.1_1941064_1941594 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP104472.1_2831371_2831901         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP104472.1_2831371_2831901 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP101983.1_4745473_4746003         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP101983.1_4745473_4746003 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+GQ157894.1_8_538                   ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR GQ157894.1_8_538           PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+FJ982848.1_21_551                  ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR FJ982848.1_21_551          PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+EU778395.1_20_550                  ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR EU778395.1_20_550          PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+EU472784.1_7_537                   ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR EU472784.1_7_537           PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+EU470674.1_20_550                  ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCCcUGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR EU470674.1_20_550          PP ********************.**************************************86269*********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054314.1_1898625_1899152         ACACGGU-CAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..AaaGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054314.1_1898625_1899152 PP ******8.6***********.****************************************.***********************************.*.******9.86..544******.********.**********.****.***********.***************************************.*
+CP054314.1_2729911_2730437         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054314.1_2729911_2730437 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+OQ808192.1_1_530                   ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR OQ808192.1_1_530           PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP061241.1_5237805_5238330         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP061241.1_5237805_5238330 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+KF109934.1_1_530                   ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR KF109934.1_1_530           PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP085517.1_3443832_3444360         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP085517.1_3443832_3444360 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+JQ185813.1_1_530                   ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUUuUCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR JQ185813.1_1_530           PP ********************.****************************************.***********************************.*.*******.**..*..****86269******.**********.****.***********.***************************************.*
+JF116426.1_1_530                   ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR JF116426.1_1_530           PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054319.1_2326850_2327380         ACACGGUCCAGACUCCUACGgGGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGU.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054319.1_2326850_2327380 PP ******************97589**************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054319.1_4906446_4906976         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAAcC
+#=GR CP054319.1_4906446_4906976 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.*************************************9879
+CP054319.1_1525266_1525795         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054319.1_1525266_1525795 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP054319.1_1565426_1565958         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..AaaGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054319.1_1565426_1565958 PP ********************.****************************************.***********************************.*.******9.86..544******.********.**********.****.***********.***************************************.*
+CP054319.1_704325_704851           ACACGGU-CAGACUCCUACGgGGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP054319.1_704325_704851   PP ******8.6*********97589**************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP049609.1_2597390_2597919         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP049609.1_2597390_2597919 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP041337.1_2701320_2701849         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP041337.1_2701320_2701849 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP041337.1_3461164_3461693         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGACGCCAGCA.AGAUGCAGAAAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUAUUU.UUAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP041337.1_3461164_3461693 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP041337.1_1_516                   ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP041337.1_1_516           PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP042606.1_796661_797191           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGUAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP042606.1_796661_797191   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP042606.1_699349_699879           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.AUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP042606.1_699349_699879   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP036245.1_3717988_3718515         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP036245.1_3717988_3718515 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP019256.1_666172_666699           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP019256.1_666172_666699   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+LR134238.1_2812538_2813064         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR LR134238.1_2812538_2813064 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+LR134238.1_1749266_1749795         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR LR134238.1_1749266_1749795 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP010177.1_1806378_1806907         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP010177.1_1806378_1806907 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP126292.1_4347329_4347858         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP126292.1_4347329_4347858 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP047057.1_4617812_4618341         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP047057.1_4617812_4618341 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP107284.1_4842712_4843232         ACACGGU-CAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.CcGGGUUGU.-A..A..GUACUU.UCAGCGGG.GAGGAA--GG.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAACACCGGCUAA.C
+#=GR CP107284.1_4842712_4843232 PP ******8.6***********.****************************************.*********************************98.725666666..6..8..******.********.****98..99.****.***********.***************************************.*
+AP026514.1_3325583_3326111         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAG-GA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR AP026514.1_3325583_3326111 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.****985.**.****.***********.***************************************.*
+CP091387.1_175703_176231           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP091387.1_175703_176231   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP092820.1_3499686_3500216         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A.nGUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP092820.1_3499686_3500216 PP ********************.****************************************.***********************************.*.*******.98..7.6******.********.**********.****.***********.***************************************.*
+CP058752.1_3240613_3241140         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUGUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GCACUU.UCAGCGGG.GAGGAAGGCG.UUAA.GGUUAAUAACC.UUGGCGAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP058752.1_3240613_3241140 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP058752.1_3771433_3771960         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUGUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GCACUU.UCAGCGGG.GAGGAAGGCG.GUGA.GGUUAAUAACC.UCAUCGAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP058752.1_3771433_3771960 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP028771.1_129083_129612           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP028771.1_129083_129612   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP028747.1_3918975_3919502         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP028747.1_3918975_3919502 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP051659.1_4484324_4484853         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP051659.1_4484324_4484853 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP088808.1_273991_274521           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP088808.1_273991_274521   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP088779.1_134417_134950           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP088779.1_134417_134950   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP088740.1_309800_310330           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP088740.1_309800_310330   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP088564.1_3023890_3024414         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP088564.1_3023890_3024414 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP088356.1_5347270_5347801         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP088356.1_5347270_5347801 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP086604.1_3054069_3054597         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUACUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP086604.1_3054069_3054597 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP070951.1_4315950_4316480         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGUgAA..A..GGACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP070951.1_4315950_4316480 PP ********************.****************************************.***********************************.*.*****99466..7..9*****.********.**********.****.***********.***************************************.*
+CP080119.1_1721232_1721762         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP080119.1_1721232_1721762 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP078586.1_2694528_2695057         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP078586.1_2694528_2695057 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP078583.1_2694528_2695057         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP078583.1_2694528_2695057 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP078583.1_4214746_4215275         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP078583.1_4214746_4215275 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP078584.1_2863711_2864240         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP078584.1_2863711_2864240 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP078584.1_3514627_3515156         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP078584.1_3514627_3515156 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP078568.1_2863711_2864240         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP078568.1_2863711_2864240 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP078568.1_3514627_3515156         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP078568.1_3514627_3515156 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP078569.1_3514627_3515156         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP078569.1_3514627_3515156 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+LR890262.1_473064_473593           ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR LR890262.1_473064_473593   PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP057657.1_3150263_3150792         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP057657.1_3150263_3150792 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+CP057026.1_4584300_4584831         ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR CP057026.1_4584300_4584831 PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+AB604192.1_24_554                  ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCUuUUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR AB604192.1_24_554          PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.********996268*************************************.*
+MN187904.1_24_552                  ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR MN187904.1_24_552          PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+AB682397.1_1_529                   ACACGGUCCAGACUCCUACG.GGAGGCAGCAGUGGGGAAUAUUGCACAAUGGGCGCAAGCC.UGAUGCAGCCAUGCCGCGUGUAUGAAGAAGGCCUU.C.GGGUUGU.AA..A..GUACUU.UCAGCGGG.GAGGAAGGGA.GUAA.AGUUAAUACCU.UUGCUCAUUGACGUUACCCGCAGAAGAAGCACCGGCUAA.C
+#=GR AB682397.1_1_529           PP ********************.****************************************.***********************************.*.*******.**..*..******.********.**********.****.***********.***************************************.*
+#=GC SS_cons                       ______>>>>>,<<<<____.>>>>,,,}}}}}},,,,,,,,,<<<---<<<<<____>>>.>>->>>,,}}-}}}}}},,<<<<------<<<<__._._>>>>--.--..-..>>>>,,.,,,<<<<<.--------<<.<<<<.<<_______>>.>>>>>>---------->>>>>,,,,,,,<<<<<------.<
+#=GC RF                            AcAcGGuCCaGACuCCUAcG.GGaGGcAGCaGuGGGGAAUAUUGCacAAcgGGCGcAAGCC.cgAuGCAGCCAuGCCGCGUGuacGAAGAAggCCUU.c.GGGccGU.AA..A..guaCUU.UcAGCGGG.GAGGAAGGGa.Gcaa.aGUUAAUAcCu.uugCuCAUUGAcGUUACCCGCAGAAGAAGCaCCGGcUAA.C
+
+24_5domain16S_rRNA_E_coli          UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR 24_5domain16S_rRNA_E_coli  PP **.*************.**..********.*****.*****.**********
+CP054335.1_859387_859917           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054335.1_859387_859917   PP **.*************.**..********.*****.*****.**********
+CP054335.1_2232744_2233273         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054335.1_2232744_2233273 PP **.*************.**..********.*****.*****.**********
+CP054335.1_2492490_2493022         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054335.1_2492490_2493022 PP **.*************.**..********.*****.*****.**********
+CP054335.1_1686802_1687333         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054335.1_1686802_1687333 PP **.*************.**..********.*****.*****.**********
+CP054335.1_2343512_2344040         UCcCGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054335.1_2343512_2344040 PP *737************.**..********.*****.*****.**********
+CP054335.1_3286171_3286702         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054335.1_3286171_3286702 PP **.*************.**..********.*****.*****.**********
+CP048107.1_5133612_5134138         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP048107.1_5133612_5134138 PP **.*************.**..********.*****.*****.**********
+CP041425.1_465486_466015           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP041425.1_465486_466015   PP **.*************.**..********.*****.*****.**********
+CP047662.1_805113_805644           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP047662.1_805113_805644   PP **.*************.**..********.*****.*****.**********
+CP040919.1_4663871_4664392         UC.CG-GCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP040919.1_4663871_4664392 PP **.**.9*********.**..********.*****.*****.**********
+CP040919.1_4960966_4961482         UC.CGUGCCAGCAGCC.ACuuGUGUGUACaGGAGGaGUGCA.AGCGUUAAUC
+#=GR CP040919.1_4960966_4961482 PP **.***********99.7733333445555899988*****.**********
+CP038138.1_4718381_4718910         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP038138.1_4718381_4718910 PP **.*************.**..********.*****.*****.**********
+CP032986.1_1196456_1196985         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP032986.1_1196456_1196985 PP **.*************.**..********.*****.*****.**********
+CP021193.1_3029947_3030473         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP021193.1_3029947_3030473 PP **.*************.**..********.*****.*****.**********
+CP026845.1_3425146_3425672         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP026845.1_3425146_3425672 PP **.*************.**..********.*****.*****.**********
+LT599825.1_5005134_5005663         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR LT599825.1_5005134_5005663 PP **.*************.**..********.*****.*****.**********
+CP014670.1_2423026_2423554         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUACA.AGCGUUAAUC
+#=GR CP014670.1_2423026_2423554 PP **.*************.**..********.*****.*****.**********
+CP116241.1_3113057_3113587         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP116241.1_3113057_3113587 PP **.*************.**..********.*****.*****.**********
+CP114592.1_4437579_4438111         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP114592.1_4437579_4438111 PP **.*************.**..********.*****.*****.**********
+AP026907.1_3915688_3916215         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR AP026907.1_3915688_3916215 PP **.*************.**..********.*****.*****.**********
+CP097129.1_1340189_1340719         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP097129.1_1340189_1340719 PP **.*************.**..********.*****.*****.**********
+CP060969.1_4485536_4486065         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP060969.1_4485536_4486065 PP **.*************.**..********.*****.*****.**********
+CP028764.1_1310821_1311350         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP028764.1_1310821_1311350 PP **.*************.**..********.*****.*****.**********
+CP028733.1_4509287_4509818         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP028733.1_4509287_4509818 PP **.*************.**..********.*****.*****.**********
+CP028733.1_3856348_3856878         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP028733.1_3856348_3856878 PP **.*************.**..********.*****.*****.**********
+CP028733.1_4703035_4703530         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP028733.1_4703035_4703530 PP **.*************.**..********.*****.*****.**********
+CP091391.1_66553_67083             UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP091391.1_66553_67083     PP **.*************.**..********.*****.*****.**********
+CP076645.1_4733395_4733923         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP076645.1_4733395_4733923 PP **.*************.**..********.*****.*****.**********
+CP043271.1_2636078_2636607         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP043271.1_2636078_2636607 PP **.*************.**..********.*****.*****.**********
+CP043271.1_3381085_3381614         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP043271.1_3381085_3381614 PP **.*************.**..********.*****.*****.**********
+AP023286.1_4410073_4410598         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR AP023286.1_4410073_4410598 PP **.*************.**..********.*****.*****.**********
+CP054828.1_397623_398152           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054828.1_397623_398152   PP **.*************.**..********.*****.*****.**********
+CP034738.1_3434399_3434929         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP034738.1_3434399_3434929 PP **.*************.**..********.*****.*****.**********
+MH346275.1_20_550                  UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR MH346275.1_20_550          PP **.*************.**..********.*****.*****.**********
+CP010171.1_1941064_1941594         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP010171.1_1941064_1941594 PP **.*************.**..********.*****.*****.**********
+CP104472.1_2831371_2831901         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCAaAGCGUUAAUC
+#=GR CP104472.1_2831371_2831901 PP **.*************.**..********.*****.****769*********
+CP101983.1_4745473_4746003         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP101983.1_4745473_4746003 PP **.*************.**..********.*****.*****.**********
+GQ157894.1_8_538                   UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR GQ157894.1_8_538           PP **.*************.**..********.*****.*****.**********
+FJ982848.1_21_551                  UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR FJ982848.1_21_551          PP **.*************.**..********.*****.*****.**********
+EU778395.1_20_550                  UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR EU778395.1_20_550          PP **.*************.**..********.*****.*****.**********
+EU472784.1_7_537                   UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR EU472784.1_7_537           PP **.*************.**..********.*****.*****.**********
+EU470674.1_20_550                  UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR EU470674.1_20_550          PP **.*************.**..********.*****.*****.**********
+CP054314.1_1898625_1899152         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054314.1_1898625_1899152 PP **.*************.**..********.*****.*****.**********
+CP054314.1_2729911_2730437         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054314.1_2729911_2730437 PP **.*************.**..********.*****.*****.**********
+OQ808192.1_1_530                   UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR OQ808192.1_1_530           PP **.*************.**..********.*****.*****.**********
+CP061241.1_5237805_5238330         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP061241.1_5237805_5238330 PP **.*************.**..********.*****.*****.**********
+KF109934.1_1_530                   UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR KF109934.1_1_530           PP **.*************.**..********.*****.*****.**********
+CP085517.1_3443832_3444360         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP085517.1_3443832_3444360 PP **.*************.**..********.*****.*****.**********
+JQ185813.1_1_530                   UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR JQ185813.1_1_530           PP **.*************.**..********.*****.*****.**********
+JF116426.1_1_530                   UC.CGUGCCAGCAGCCcGC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR JF116426.1_1_530           PP **.**********9755**..********.*****.*****.**********
+CP054319.1_2326850_2327380         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054319.1_2326850_2327380 PP **.*************.**..********.*****.*****.**********
+CP054319.1_4906446_4906976         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054319.1_4906446_4906976 PP **.*************.**..********.*****.*****.**********
+CP054319.1_1525266_1525795         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054319.1_1525266_1525795 PP **.*************.**..********.*****.*****.**********
+CP054319.1_1565426_1565958         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054319.1_1565426_1565958 PP **.*************.**..********.*****.*****.**********
+CP054319.1_704325_704851           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP054319.1_704325_704851   PP **.*************.**..********.*****.*****.**********
+CP049609.1_2597390_2597919         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP049609.1_2597390_2597919 PP **.*************.**..********.*****.*****.**********
+CP041337.1_2701320_2701849         UC.CGUGCCAGCUGCG.GC..GGUAAUAC.GGAGG.GGUCA.AGCGUUGAUC
+#=GR CP041337.1_2701320_2701849 PP **.*************.**..********.*****.*****.**********
+CP041337.1_3461164_3461693         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP041337.1_3461164_3461693 PP **.*************.**..********.*****.*****.**********
+CP041337.1_1_516                   UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP041337.1_1_516           PP **.*************.**..********.*****.*****.**********
+CP042606.1_796661_797191           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP042606.1_796661_797191   PP **.*************.**..********.*****.*****.**********
+CP042606.1_699349_699879           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP042606.1_699349_699879   PP **.*************.**..********.*****.*****.**********
+CP036245.1_3717988_3718515         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP036245.1_3717988_3718515 PP **.*************.**..********.*****.*****.**********
+CP019256.1_666172_666699           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP019256.1_666172_666699   PP **.*************.**..********.*****.*****.**********
+LR134238.1_2812538_2813064         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUA---
+#=GR LR134238.1_2812538_2813064 PP **.*************.**..********.*****.*****.*******...
+LR134238.1_1749266_1749795         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR LR134238.1_1749266_1749795 PP **.*************.**..********.*****.*****.**********
+CP010177.1_1806378_1806907         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP010177.1_1806378_1806907 PP **.*************.**..********.*****.*****.**********
+CP126292.1_4347329_4347858         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP126292.1_4347329_4347858 PP **.*************.**..********.*****.*****.**********
+CP047057.1_4617812_4618341         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP047057.1_4617812_4618341 PP **.*************.**..********.*****.*****.**********
+CP107284.1_4842712_4843232         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAG-.GUGCA.AGCGUUAAUC
+#=GR CP107284.1_4842712_4843232 PP **.*************.**..********.***5..8****.**********
+AP026514.1_3325583_3326111         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR AP026514.1_3325583_3326111 PP **.*************.**..********.*****.*****.**********
+CP091387.1_175703_176231           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP091387.1_175703_176231   PP **.*************.**..********.*****.*****.**********
+CP092820.1_3499686_3500216         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP092820.1_3499686_3500216 PP **.*************.**..********.*****.*****.**********
+CP058752.1_3240613_3241140         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP058752.1_3240613_3241140 PP **.*************.**..********.*****.*****.**********
+CP058752.1_3771433_3771960         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP058752.1_3771433_3771960 PP **.*************.**..********.*****.*****.**********
+CP028771.1_129083_129612           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP028771.1_129083_129612   PP **.*************.**..********.*****.*****.**********
+CP028747.1_3918975_3919502         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP028747.1_3918975_3919502 PP **.*************.**..********.*****.*****.**********
+CP051659.1_4484324_4484853         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGCUACUC
+#=GR CP051659.1_4484324_4484853 PP **.*************.**..********.*****.*****.**********
+CP088808.1_273991_274521           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP088808.1_273991_274521   PP **.*************.**..********.*****.*****.**********
+CP088779.1_134417_134950           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP088779.1_134417_134950   PP **.*************.**..********.*****.*****.**********
+CP088740.1_309800_310330           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP088740.1_309800_310330   PP **.*************.**..********.*****.*****.**********
+CP088564.1_3023890_3024414         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.G---U.--CGUUAAUC
+#=GR CP088564.1_3023890_3024414 PP **.*************.**..********.****9.8...5...79******
+CP088356.1_5347270_5347801         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP088356.1_5347270_5347801 PP **.*************.**..********.*****.*****.**********
+CP086604.1_3054069_3054597         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP086604.1_3054069_3054597 PP **.*************.**..********.*****.*****.**********
+CP070951.1_4315950_4316480         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP070951.1_4315950_4316480 PP **.*************.**..********.*****.*****.**********
+CP080119.1_1721232_1721762         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP080119.1_1721232_1721762 PP **.*************.**..********.*****.*****.**********
+CP078586.1_2694528_2695057         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP078586.1_2694528_2695057 PP **.*************.**..********.*****.*****.**********
+CP078583.1_2694528_2695057         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP078583.1_2694528_2695057 PP **.*************.**..********.*****.*****.**********
+CP078583.1_4214746_4215275         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP078583.1_4214746_4215275 PP **.*************.**..********.*****.*****.**********
+CP078584.1_2863711_2864240         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP078584.1_2863711_2864240 PP **.*************.**..********.*****.*****.**********
+CP078584.1_3514627_3515156         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP078584.1_3514627_3515156 PP **.*************.**..********.*****.*****.**********
+CP078568.1_2863711_2864240         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP078568.1_2863711_2864240 PP **.*************.**..********.*****.*****.**********
+CP078568.1_3514627_3515156         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP078568.1_3514627_3515156 PP **.*************.**..********.*****.*****.**********
+CP078569.1_3514627_3515156         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP078569.1_3514627_3515156 PP **.*************.**..********.*****.*****.**********
+LR890262.1_473064_473593           UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR LR890262.1_473064_473593   PP **.*************.**..********.*****.*****.**********
+CP057657.1_3150263_3150792         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP057657.1_3150263_3150792 PP **.*************.**..********.*****.*****.**********
+CP057026.1_4584300_4584831         UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR CP057026.1_4584300_4584831 PP **.*************.**..********.*****.*****.**********
+AB604192.1_24_554                  UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR AB604192.1_24_554          PP **.*************.**..********.*****.*****.**********
+MN187904.1_24_552                  UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR MN187904.1_24_552          PP **.*************.**..********.*****.*****.**********
+AB682397.1_1_529                   UC.CGUGCCAGCAGCC.GC..GGUAAUAC.GGAGG.GUGCA.AGCGUUAAUC
+#=GR AB682397.1_1_529           PP **.*************.**..********.*****.*****.**********
+#=GC SS_cons                       <<.<<-----<<____.>>..------->.>>>>>.>>>>,.}}}}}}}}}}
+#=GC RF                            uC.CGUGccAGCAGcc.GC..GGUAAUAC.GGaGG.GuGCA.aGCGuuaauC
+//

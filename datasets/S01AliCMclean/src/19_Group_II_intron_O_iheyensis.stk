@@ -1,0 +1,66 @@
+# STOCKHOLM 1.0
+#=GF AU Infernal 1.1.4
+
+19_Group_II_intron_O_iheyensis         GUGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGGGUGUCCGUGGCGACAUGGAAUCUGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCC.UU
+#=GR 19_Group_II_intron_O_iheyensis PP *****************************************************************************************************************************************************************************************************.**
+4DS6_8_419                             GUGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGGGUGUCCGUGGCGACAUGGAAUCUGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCC.UU
+#=GR 4DS6_8_419                     PP *****************************************************************************************************************************************************************************************************.**
+4FAU_9_398                             GUGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGGGUGUCCGUGGCGACAUGGAAUCUGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCC.UU
+#=GR 4FAU_9_398                     PP *****************************************************************************************************************************************************************************************************.**
+4FB0_4_393                             GUGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGGGUGUCCGUGGCGACAUGGAAUCUGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCC.UU
+#=GR 4FB0_4_393                     PP *****************************************************************************************************************************************************************************************************.**
+6T3S_9_398                             GUGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGGGUGUCCGUGGCGACAUGGAAUCUGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCC.UU
+#=GR 6T3S_9_398                     PP *****************************************************************************************************************************************************************************************************.**
+6T3N_9_398                             GUGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGGGUGUCCGUGGCGACAUGGAAUCUGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCC.UU
+#=GR 6T3N_9_398                     PP *****************************************************************************************************************************************************************************************************.**
+6T3K_2_390                             -UGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAAGGGUGUCCGUGGCGACAUGGAAUCUGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCC.UU
+#=GR 6T3K_2_390                     PP .****************************************************************************************************************************************************************************************************.**
+5J02_2_389                             -UGUGCCCGGCAUGGGUGCAGUCUAUAGGGUGAGAGUCCCGAACUGUGAAGGCAGAAGUAACAGUUAGCCUAACGCAACUGC-GCCGUGGCGACAUGGCGUGGGAAGGAAGCGGACGGCAAACCUUCGGUCUGAGGAACACGAACUUCAUAUGAGGCUAGGUAUCAAUGGAUGAGUUUGCAUAACAAAACAAAGUCC.UU
+#=GR 5J02_2_389                     PP .*********************************************************************************.9*****************************************************************************************************************.**
+LN831776.1_5260985_5261369             ----GCCCGGCAUGGGCGAUAACUAGGCGGUGAAAGUCCGCUACAGGCUUGGUAGUAGGAACUGUUAGCCAAGGGCAAGGGUGUCCGCCGCGAGGCGGAAUCUGAAGGAAGCCGGAGGCAAACCCUCGGUCUGACGAACAGAAAUCACAUACAAGGCAUGCUGG-GACGGACGAGCUUGCAAUCCAAAGCAAAGUCCaAU
+#=GR LN831776.1_5260985_5261369     PP ....***********************************************************************************************************************************************************98876.668*****************************446
+#=GC SS_cons                           :::::(((((-(-(((((((((((,<-<<<<___>-->>>-><<<<<-<_________>->>>>><-<<<---<<<--<<<<-<<<<<<____>>>>>>>>>>------->>>--->>>->,<<<<<<<<<<<-----------<<<<<<-----<<<--<<<<<<<<<<<<--<<<<________>>>>--->>>>.--
+#=GC RF                                GUGUGCCCGGcaUGgguGCaGuCuAuAGGGuGAGaGUCCCGaaCuGuGaAGGcAGAAGuAaCaGuuAGCCUAACGCAAgGguGuCCguGGcGACacGGaacCcGAAGGAAGCGGAcGGCAaACCuuCgguCuGAGGAAcAcGAACuuCauAUGAGgCuAGGuacCaacGGacGAGuuuGcAUAAcAaaaCAAAguCC.UU
+
+19_Group_II_intron_O_iheyensis         UCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGCAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCG..............CGCCUAAGCUUGAACCGCCGUAUACCGAACGGUACGUACGGUG
+#=GR 19_Group_II_intron_O_iheyensis PP ***********************************************************************************************************************************************..............*******************************************
+4DS6_8_419                             UCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGCAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCG..............CGCCUAAGCUUGAACCACCGUAUACCGAACGGUACGUACGGUG
+#=GR 4DS6_8_419                     PP ***********************************************************************************************************************************************..............*******************************************
+4FAU_9_398                             UCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGNAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCG..............CGCCUAAGCUUGAACCGCCGUAUACCGAACGGUACGUACGGUG
+#=GR 4FAU_9_398                     PP ***********************************************************************************************************************************************..............*******************************************
+4FB0_4_393                             UCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGCAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCG..............CGCCUAAGCUUGAACCGCCGUAUACCGAACGGUAGGUACGGUG
+#=GR 4FB0_4_393                     PP ***********************************************************************************************************************************************..............*******************************************
+6T3S_9_398                             UCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGUAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCG..............CGCCUAAGCUUGAACUGCCGUAUACCGAACGGUACGUACGGUA
+#=GR 6T3S_9_398                     PP ***********************************************************************************************************************************************..............*******************************************
+6T3N_9_398                             UCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGGAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCG..............CGCCUAAGCUUGAACGGCCGUAUACCGAACGGUACGUACGGUC
+#=GR 6T3N_9_398                     PP ***********************************************************************************************************************************************..............*******************************************
+6T3K_2_390                             UCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGGAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCG..............CGCCUAAGCUUGAACGGCCGUAUACCGAACGGUACGUACGGUC
+#=GR 6T3K_2_390                     PP ***********************************************************************************************************************************************..............*******************************************
+5J02_2_389                             UCUGCCAAAGUUGGUACAGAGUAAAUGAAGCAGAUUGAUGAAGGGAAAGACUGCAUUCUUACCCGGGGAGGUCUGGAAACAGAAGUCAGCAGAAGUCAUAGUACCCUGUUCGCAGGGGAAGGACGGAACAAGUAUGGCGUUCG..............CGCCUAAGCUUGAACCGCCGUAUACCGAACGGUACGUACGGUG
+#=GR 5J02_2_389                     PP ***********************************************************************************************************************************************..............*******************************************
+LN831776.1_5260985_5261369             ACUGCCCGAAUC-UCAGGAUGUAAAUGUGGCAGAUAGAUGAGGGGAAGGUUAUCGCUCUUACCCGGGGAGGUCUC---ACAGACGUCCG--GUAGGAAAAAAAUCCGA-AAGACGGAGGAGUACG-AGCAAUUAC--------guaaauggcacuua----UGCGGUUGAACCGCCGUAUACCGAACGGUACGUACGGUG
+#=GR LN831776.1_5260985_5261369     PP 789999999766.678889******************************************************95...569******65..789999*********96.5677*********996.67***9975........55555555555555....66799**********************************
+#=GC SS_cons                           --------->>>>>>>>-->>>-->>>>>>>>>>>>--->>>>>,,,)))))))))))-)--)))))<<--<<<<____>>>>-->>,,,,,,,<<<------<<<<<____>>>>>---->>>,,,,<<<<<<-<<<<____~~~~~~~~~~~~~~>>>>>-->>>>>,<<<<<<<<<<<<<____>>>>-->>>>>>>
+#=GC RF                                UcUGccAAAguuGguaCAGaGcAAauGaaGCaGaccGAUGaaGGGAAaGaCuGCaccCUuAcCCGGGGaGGuCuGGAAACaGaAGuCAGcAGAAGuCAUAGUACCCuGUUcGCaGGGGAAGGaCGGAACaaGcaUGGCGUUcG~~~~~~~~~~~~~~CGCCuAAgCuuGAaCCgCCGuauaCCGAAcGGuacGuaCGGcG
+
+19_Group_II_intron_O_iheyensis         GUGUGAGAGGAGUUCGCUCUACUCUAU
+#=GR 19_Group_II_intron_O_iheyensis PP ***************************
+4DS6_8_419                             GUGUGAGAGGAGUUCGCUCUACUCUAU
+#=GR 4DS6_8_419                     PP ***************************
+4FAU_9_398                             GUGUG----------------------
+#=GR 4FAU_9_398                     PP *****......................
+4FB0_4_393                             GUGUG----------------------
+#=GR 4FB0_4_393                     PP *****......................
+6T3S_9_398                             GUGUG----------------------
+#=GR 6T3S_9_398                     PP *****......................
+6T3N_9_398                             GUGUG----------------------
+#=GR 6T3N_9_398                     PP *****......................
+6T3K_2_390                             GUGUG----------------------
+#=GR 6T3K_2_390                     PP *****......................
+5J02_2_389                             GUGUG----------------------
+#=GR 5J02_2_389                     PP *****......................
+LN831776.1_5260985_5261369             GUGUGAGAGG-----------------
+#=GR LN831776.1_5260985_5261369     PP **********.................
+#=GC SS_cons                           >>,,<<<-<<<<____>>>>->>>:::
+#=GC RF                                GuGUGaGAgGaGUUcGCuCcACuCUAU
+//

@@ -137,6 +137,9 @@ for k, obj in enumerate(objs):
     outfasta = infile.replace("S01Aliclean","S01AliCMclean").replace("/afa/","/src/").replace('.afa','.fas')
     outsto   = infile.replace("S01Aliclean","S01AliCMclean").replace("/afa/","/src/").replace('.afa','.sto')
 
+    outcm  = outsto.replace(".sto",'.cm')
+    outstk = outsto.replace(".sto",'.stk')
+
     nested = ''.join([x if x in "()" else "." for x in ref])
 
     
@@ -145,14 +148,41 @@ for k, obj in enumerate(objs):
     with open(outfasta,'w') as outp:
         with open(infile) as inp:
             lines = inp.readlines()
-            for line in lines[2:]:
+            for line in lines:
                 if not line.startswith('>'):
                     outp.write(line.replace('-',''))
                 else:
                     outp.write(line)
 
-    #cmbuild 1_PreQ1_riboswitch_B_subtilis.cm 1_PreQ1_riboswitch_B_subtilis.sto
-    #cmalign -o 1_PreQ1_riboswitch_B_subtilis.stk 1_PreQ1_riboswitch_B_subtilis.cm 1_PreQ1_riboswitch_B_subtilis.fas
+    os.system("cmbuild {} {}".format(outcm, outsto))
+    os.system("cmalign -o {} {} {}".format(outstk,outcm,outfasta))
+
+    finalsto   = outsto.replace("/src/","/sto/")
+    finalfasta = outfasta.replace("/src/","/afa/").replace(".fas",".afa")
+   
+
+    headers, seqnames, seqdict, gcnames, gcdict = ReadStockholm(outstk)
+
+    firstseq = seqdict[seqnames[0]]
+
+    gaps = {i for i in range(len(firstseq)) if firstseq[i] in {'-','.','~'}}
+
+    for seqname in seqnames:
+
+        seqdict[seqname] = ''.join([seqdict[seqname][i] for i in range(len(seqdict[seqname])) if i not in gaps])
+
+    gcnames = ['SS_cons',]
+    gcdict['SS_cons'] = ref
+
+    with open(finalfasta,'w') as outp:
+        outp.write(' '.join(react)+'\n')
+        outp.write('\n')
+        outp.write(ref+'\n')
+        for seqname in seqnames:
+            outp.write('>'+seqname+'\n')
+            outp.write(seqdict[seqname]+'\n')
+
+    WriteStockholm(finalsto,[],seqnames,seqdict,gcnames,gcdict)
     
 
     """
