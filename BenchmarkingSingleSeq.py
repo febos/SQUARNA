@@ -175,7 +175,8 @@ def PredictRNAsubopt5(seq, top = 5):
     os.system("RNAsubopt --sorted {} < inp.tmp > outp2.tmp".format(add))
     with open("outp2.tmp") as outp:
         dbns = [x.split()[0] for x in outp.readlines()[2:]]
-    return dbns[:top] 
+    return dbns[:top]
+
 
 def PredictIPknot(seq):
 
@@ -347,11 +348,10 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "SRtrain"
+    dtst  = "SRtrain150"
     tl    = "SQUARNA5"
 
-    for dataset, tool in (("TS1reducedWC",tl),
-                          ("SRtrain",tl),):
+    for dataset, tool in ((dtst,tl),):
 
         if NL:
             dataset += "NL"
@@ -390,6 +390,8 @@ if __name__ == "__main__":
                            "SQUARNAskN": PredictSQUARNAskN,
                            "ShapeKnots": PredictShapeKnots,
                            "ShapeKnots5": PredictShapeKnots5,
+                           "HotKnots": PredictHotKnots,
+                           "HotKnots5": PredictHotKnots5,
                            "RNAsubopt5": PredictRNAsubopt5,
                            }[tool](seq)
 
