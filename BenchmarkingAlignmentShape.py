@@ -56,7 +56,7 @@ def PredictShapeSorter(dataset, fam, threshold = float("7e-4")):
 
     outfile = "datasets/{}/shapesorter/results/{}.out".format(dataset,fam)
 
-    pairs = []
+    bps = []
     seen = set()
     N = None
 
@@ -65,17 +65,18 @@ def PredictShapeSorter(dataset, fam, threshold = float("7e-4")):
             if line.strip():
                 linesplit = line.strip().split()
                 pv = float(linesplit[0])
-                dbn = linesplit[-2]
-                N = len(dbn)
+                pairs = linesplit[-1].split(',')
+                N = int(linesplit[12])
 
                 if pv <= threshold:
-                    for v,w in DBNToPairs(dbn):
+                    for pair in pairs:
+                        v,w = list(map(int,pair.split(':')))
                         if v not in seen and w not in seen:
-                            pairs.append((v,w))
+                            bps.append((v,w))
                             seen.add(v)
                             seen.add(w)
 
-    return PairsToDBN(pairs,N)              
+    return PairsToDBN(bps, N)              
 
 
 def PredictCentroidAlifold(dataset, fam):
@@ -161,7 +162,7 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset, tool in (("S01AliUngap","ShapeSorter"),):
+    for dataset, tool in (("S01AliCM","ShapeSorter"),):
                 
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
