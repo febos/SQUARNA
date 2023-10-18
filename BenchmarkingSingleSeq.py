@@ -348,10 +348,25 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "SRtrain150"
+    dtst  = "Ribonanzaclean"
     tl    = "SQUARNA5"
 
-    for dataset, tool in ((dtst,tl),):
+    for dataset, tool in ((dtst,"RNAfold"),
+                          (dtst,"IPknot"),
+                          (dtst,"MXfold2"),
+                          (dtst,"SPOT-RNA"),
+                          (dtst,"SQUARNA"),
+                          (dtst,"SQUARNA5"),
+                          (dtst,"SQUARNAN"),
+                          (dtst,"SQUARNAalt"),
+                          (dtst,"SQUARNAalt5"),
+                          (dtst,"SQUARNAaltN"),
+                          (dtst,"SQUARNAsk"),
+                          (dtst,"SQUARNAsk5"),
+                          (dtst,"SQUARNAskN"),
+                          (dtst,"ShapeKnots"),
+                          (dtst,"ShapeKnots5"),
+                          (dtst,"RNAsubopt5"),):
 
         if NL:
             dataset += "NL"
@@ -390,8 +405,6 @@ if __name__ == "__main__":
                            "SQUARNAskN": PredictSQUARNAskN,
                            "ShapeKnots": PredictShapeKnots,
                            "ShapeKnots5": PredictShapeKnots5,
-                           "HotKnots": PredictHotKnots,
-                           "HotKnots5": PredictHotKnots5,
                            "RNAsubopt5": PredictRNAsubopt5,
                            }[tool](seq)
 

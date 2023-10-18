@@ -296,9 +296,33 @@ if __name__ == "__main__":
     dtst  = "S01"
     tl    = "ShapeKnots"
 
-    for dataset, tool in (("S01", "RNAsubopt5"),
-                          ("S01", "ShapeKnots5"),
-                          ("S01", "ShapeKnots"),):
+    for dataset, tool in (("RibonanzaDMS", "RNAfold"),
+                          ("RibonanzaDMS", "RNAsubopt5"),
+                          ("RibonanzaDMS", "SQUARNA"),
+                          ("RibonanzaDMS", "SQUARNA5"),
+                          ("RibonanzaDMS", "SQUARNAN"),
+                          ("RibonanzaDMS", "SQUARNAalt"),
+                          ("RibonanzaDMS", "SQUARNAalt5"),
+                          ("RibonanzaDMS", "SQUARNAaltN"),
+                          ("RibonanzaDMS", "SQUARNAsk"),
+                          ("RibonanzaDMS", "SQUARNAsk5"),
+                          ("RibonanzaDMS", "SQUARNAskN"),
+                          ("RibonanzaDMS", "ShapeKnots"),
+                          ("RibonanzaDMS", "ShapeKnots5"),
+                          ("Ribonanza2A3", "RNAfold"),
+                          ("Ribonanza2A3", "RNAsubopt5"),
+                          ("Ribonanza2A3", "SQUARNA"),
+                          ("Ribonanza2A3", "SQUARNA5"),
+                          ("Ribonanza2A3", "SQUARNAN"),
+                          ("Ribonanza2A3", "SQUARNAalt"),
+                          ("Ribonanza2A3", "SQUARNAalt5"),
+                          ("Ribonanza2A3", "SQUARNAaltN"),
+                          ("Ribonanza2A3", "SQUARNAsk"),
+                          ("Ribonanza2A3", "SQUARNAsk5"),
+                          ("Ribonanza2A3", "SQUARNAskN"),
+                          ("Ribonanza2A3", "ShapeKnots"),
+                          ("Ribonanza2A3", "ShapeKnots5"),
+                          ):
 
         with open('datasets/{}.fas'.format(dataset)) as file:
 
@@ -325,8 +349,15 @@ if __name__ == "__main__":
                 dbn = lines[i+2].strip()
                 react = lines[i+3].strip()
 
-                reactfile = {"RNAfold":reactfiles20[i//4],
-                             "ShapeKnots":reactfiles15[i//4],}
+
+                if dataset.startswith("S01"):
+                    reactfile = {"RNAfold":reactfiles20[i//4],
+                                 "ShapeKnots":reactfiles15[i//4],}
+                elif dataset.startswith("Ribonanza"):
+                    reactpath = "datasets/{}Ali/{}_1.0/{}.dat".format(dataset,dataset[-3:],name[1:5])
+                    #print(reactpath)
+                    reactfile = {"RNAfold":reactpath.replace("_1.0","_2.0"),
+                                 "ShapeKnots":reactpath.replace("_1.0","_1.5")}                    
 
                 structs = {"RNAfold":PredictRNAfold,
                            "ShapeKnots": PredictShapeKnots,
