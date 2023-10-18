@@ -1,0 +1,105 @@
+RID: JZR7AVSN013	
+Job Title:3VRS [52],1.A.G.1.:1.A.G.52.				
+Program: BLASTN 
+Query: 3VRS [52],1.A.G.1.:1.A.G.52. ID: lcl|Query_94979(rna) Length: 52
+Database: nt Nucleotide collection (nt)
+	
+Sequences producing significant alignments:
+                                                                  Scientific      Common                     Max    Total Query   E   Per.   Acc.                        
+Description                                                       Name            Name            Taxid      Score  Score cover Value Ident  Len        Accession        
+Thermotoga sp. RQ7, complete genome                               Thermotoga s... NA              126738     95.6   95.6  100%  6e-16 98.08  1851618    CP007633.1       
+Thermotoga sp. Cell2, complete genome                             Thermotoga s... NA              1157947    95.6   95.6  100%  6e-16 98.08  1749904    CP003409.1       
+Thermotoga naphthophila RKU-10, complete genome                   Thermotoga p... NA              590168     95.6   95.6  100%  6e-16 98.08  1809823    CP001839.1       
+Thermotoga sp. RQ2, complete genome                               Thermotoga s... NA              126740     95.6   95.6  100%  6e-16 98.08  1877693    CP000969.1       
+Thermotoga petrophila RKU-1, complete genome                      Thermotoga p... NA              390874     95.6   95.6  100%  6e-16 98.08  1823511    CP000702.1       
+Thermotoga sp. RQ2 oep gene (partial), mutS-3.1 gene, mutS-3.2... Thermotoga s... NA              126740     95.6   95.6  100%  6e-16 98.08  5317       AJ544859.1       
+
+Alignments:
+
+>Thermotoga sp. RQ7, complete genome
+Sequence ID: CP007633.1 Length: 1851618
+Range 1: 1827710 to 1827761
+
+Score:95.6 bits(48), Expect:6e-16, 
+Identities:51/52(98%),  Gaps:0/52(0%), Strand: Plus/Plus
+
+Query  1        GGGCGATGAGGCCCGCCCAAACTGCCCTGAAAAGGGCTGATGGCCTCTACTG  52
+                ||||||||||||||||||||||||||||||| ||||||||||||||||||||
+Sbjct  1827710  GGGCGATGAGGCCCGCCCAAACTGCCCTGAAGAGGGCTGATGGCCTCTACTG  1827761
+
+
+
+
+>Thermotoga sp. Cell2, complete genome
+Sequence ID: CP003409.1 Length: 1749904
+Range 1: 1720176 to 1720227
+
+Score:95.6 bits(48), Expect:6e-16, 
+Identities:51/52(98%),  Gaps:0/52(0%), Strand: Plus/Plus
+
+Query  1        GGGCGATGAGGCCCGCCCAAACTGCCCTGAAAAGGGCTGATGGCCTCTACTG  52
+                ||||||||||||||||||||||||||||||| ||||||||||||||||||||
+Sbjct  1720176  GGGCGATGAGGCCCGCCCAAACTGCCCTGAAGAGGGCTGATGGCCTCTACTG  1720227
+
+
+
+
+>Thermotoga naphthophila RKU-10, complete genome
+Sequence ID: CP001839.1 Length: 1809823
+Range 1: 1780164 to 1780215
+
+Score:95.6 bits(48), Expect:6e-16, 
+Identities:51/52(98%),  Gaps:0/52(0%), Strand: Plus/Plus
+
+Query  1        GGGCGATGAGGCCCGCCCAAACTGCCCTGAAAAGGGCTGATGGCCTCTACTG  52
+                ||||||||||||||||||||||||||||||| ||||||||||||||||||||
+Sbjct  1780164  GGGCGATGAGGCCCGCCCAAACTGCCCTGAAGAGGGCTGATGGCCTCTACTG  1780215
+
+
+
+
+>Thermotoga sp. RQ2, complete genome
+Sequence ID: CP000969.1 Length: 1877693
+Range 1: 1853807 to 1853858
+
+Score:95.6 bits(48), Expect:6e-16, 
+Identities:51/52(98%),  Gaps:0/52(0%), Strand: Plus/Plus
+
+Query  1        GGGCGATGAGGCCCGCCCAAACTGCCCTGAAAAGGGCTGATGGCCTCTACTG  52
+                ||||||||||||||||||||||||||||||| ||||||||||||||||||||
+Sbjct  1853807  GGGCGATGAGGCCCGCCCAAACTGCCCTGAAGAGGGCTGATGGCCTCTACTG  1853858
+
+
+
+
+>Thermotoga petrophila RKU-1, complete genome
+Sequence ID: CP000702.1 Length: 1823511
+Range 1: 1794825 to 1794876
+
+Score:95.6 bits(48), Expect:6e-16, 
+Identities:51/52(98%),  Gaps:0/52(0%), Strand: Plus/Plus
+
+Query  1        GGGCGATGAGGCCCGCCCAAACTGCCCTGAAAAGGGCTGATGGCCTCTACTG  52
+                ||||||||||||||||||||||||||||||| ||||||||||||||||||||
+Sbjct  1794825  GGGCGATGAGGCCCGCCCAAACTGCCCTGAAGAGGGCTGATGGCCTCTACTG  1794876
+
+
+
+
+>Thermotoga sp. RQ2 oep gene (partial), mutS-3.1 gene, mutS-3.2 gene and ORF22 (partial)
+Sequence ID: AJ544859.1 Length: 5317
+Range 1: 1633 to 1684
+
+Score:95.6 bits(48), Expect:6e-16, 
+Identities:51/52(98%),  Gaps:0/52(0%), Strand: Plus/Plus
+
+Query  1     GGGCGATGAGGCCCGCCCAAACTGCCCTGAAAAGGGCTGATGGCCTCTACTG  52
+             ||||||||||||||||||||||||||||||| ||||||||||||||||||||
+Sbjct  1633  GGGCGATGAGGCCCGCCCAAACTGCCCTGAAGAGGGCTGATGGCCTCTACTG  1684
+
+
+
+
+		
+
+

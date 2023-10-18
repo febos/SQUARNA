@@ -354,7 +354,7 @@ if __name__ == "__main__":
                     reactfile = {"RNAfold":reactfiles20[i//4],
                                  "ShapeKnots":reactfiles15[i//4],}
                 elif dataset.startswith("Ribonanza"):
-                    reactpath = "datasets/{}Ali/{}_1.0/{}.dat".format(dataset,dataset[-3:],name[1:5])
+                    reactpath = "datasets/Ribonanza/{}_1.0/{}.dat".format(dataset[-3:],name[1:5])
                     #print(reactpath)
                     reactfile = {"RNAfold":reactpath.replace("_1.0","_2.0"),
                                  "ShapeKnots":reactpath.replace("_1.0","_1.5")}                    

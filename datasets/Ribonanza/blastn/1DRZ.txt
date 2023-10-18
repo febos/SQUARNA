@@ -1,0 +1,88 @@
+RID: JZSBHJF9013	
+Job Title:1DRZ [72],1.B.G.101.:1.B.C.172.				
+Program: BLASTN 
+Query: 1DRZ [72],1.B.G.101.:1.B.C.172. ID: lcl|Query_81801(rna) Length: 72
+Database: nt Nucleotide collection (nt)
+	
+Sequences producing significant alignments:
+                                                                  Scientific      Common                     Max    Total Query   E   Per.   Acc.                        
+Description                                                       Name            Name            Taxid      Score  Score cover Value Ident  Len        Accession        
+Chain B, Hepatitis Delta virus ribozyme                                                           0          135    135   100%  1e-27 98.61  76         4PRF_B           
+Chain R, precursor form of the Hepatitis Delta virus ribozyme     Hepatitis de... NA              12475      135    135   100%  1e-27 98.61  76         1SJ3_R           
+Chain B, HDV ribozyme                                                                             0          135    135   100%  1e-27 98.61  75         2OIH_B           
+
+Alignments:
+
+>Chain B, Hepatitis Delta virus ribozyme
+Sequence ID: 4PRF_B Length: 76
+Range 1: 4 to 75
+
+Score:135 bits(68), Expect:1e-27, 
+Identities:71/72(99%),  Gaps:0/72(0%), Strand: Plus/Plus
+
+Query  1   GGCCGGCATGGTCCCAGCCTCCTCGCTGGCGCCGGCTGGGCAACACCATTGCACTCCGGT  60
+           ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  4   GGCCGGCATGGTCCCAGCCTCCTCGCTGGCGCCGGCTGGGCAACACCATTGCACTCCGGT  63
+
+Query  61  GGCGAATGGGAC  72
+           || |||||||||
+Sbjct  64  GGTGAATGGGAC  75
+
+
+
+
+>Chain R, precursor form of the Hepatitis Delta virus ribozyme
+Sequence ID: 1SJ3_R Length: 76
+>Chain R, precursor form of the Hepatitis Delta virus ribozyme
+Sequence ID: 1SJ4_R Length: 76
+>Chain B, Hepatitis Delta virus ribozyme
+Sequence ID: 1SJF_B Length: 76
+>Chain B, Hepatitis Delta virus ribozyme
+Sequence ID: 1VBX_B Length: 76
+>Chain B, Hepatitis Delta virus ribozyme
+Sequence ID: 1VBY_B Length: 76
+>Chain B, Hepatitis Delta virus ribozyme
+Sequence ID: 1VBZ_B Length: 76
+>Chain B, Hepatitis Delta virus ribozyme
+Sequence ID: 1VC0_B Length: 76
+>Chain B, Hepatitis Delta virus ribozyme
+Sequence ID: 1VC6_B Length: 76 
+Range 1: 4 to 75
+
+Score:135 bits(68), Expect:1e-27, 
+Identities:71/72(99%),  Gaps:0/72(0%), Strand: Plus/Plus
+
+Query  1   GGCCGGCATGGTCCCAGCCTCCTCGCTGGCGCCGGCTGGGCAACACCATTGCACTCCGGT  60
+           ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  4   GGCCGGCATGGTCCCAGCCTCCTCGCTGGCGCCGGCTGGGCAACACCATTGCACTCCGGT  63
+
+Query  61  GGCGAATGGGAC  72
+           || |||||||||
+Sbjct  64  GGTGAATGGGAC  75
+
+
+
+
+>Chain B, HDV ribozyme
+Sequence ID: 2OIH_B Length: 75
+>Chain B, Hdv Ribozyme
+Sequence ID: 2OJ3_B Length: 75 
+Range 1: 4 to 75
+
+Score:135 bits(68), Expect:1e-27, 
+Identities:71/72(99%),  Gaps:0/72(0%), Strand: Plus/Plus
+
+Query  1   GGCCGGCATGGTCCCAGCCTCCTCGCTGGCGCCGGCTGGGCAACACCATTGCACTCCGGT  60
+           ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  4   GGCCGGCATGGTCCCAGCCTCCTCGCTGGCGCCGGCTGGGCAACACCATTGCACTCCGGT  63
+
+Query  61  GGCGAATGGGAC  72
+           || |||||||||
+Sbjct  64  GGTGAATGGGAC  75
+
+
+
+
+		
+
+
