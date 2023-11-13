@@ -187,15 +187,15 @@ a (hopefully) arbitrary version of NumPy library.
         parameters for step-1 will be derived from the first 
         parameter set in the config file.
 
-    if={qtrf} / inputformat={qtrf} [DEFAULT: if=qtrf]
+    if={qtrfx} / inputformat={qtrfx} [DEFAULT: if=qtrf]
     
         The order of the lines in the input file. By default, SQUARNA 
         reads the first line of the entry (among the lines after 
         the ">" line) as the seQuence (q), the second line as the 
         reacTivities (t), the third line as the Restraints (r), 
         the fourth line as the reFerence (f), and all the further lines 
-        are ignored. inputformat should be a subset of qtrf letters 
-        in any order, with q being mandatory.
+        are ignored. inputformat should be a subset of qtrfx letters 
+        in any order, with q being mandatory. All "x" lines will be ignored.
   
     rb={rsd} / rankby={rsd} [DEFAULT: rb=s]
     

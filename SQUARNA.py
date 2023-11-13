@@ -450,9 +450,9 @@ if __name__ == "__main__":
         elif arg.lower().startswith("if=") or\
              arg.lower().startswith("inputformat="):
             inputformat = arg.split('=', 1)[1].lower()
-            assert ''.join(sorted(inputformat)) in {"q","fq","qr","qt", "qrt",
-                                                    "fqr", "fqt", "fqrt"}, \
-                   'Inappropriate inputformat value (subset of "fqrt" with "q" being mandatory): {}'\
+            assert ''.join(sorted(inputformat.replace('x',''))) in {"q","fq","qr","qt", "qrt",
+                                                                 "fqr", "fqt", "fqrt"}, \
+                   'Inappropriate inputformat value (subset of "fqrtx" with "q" being mandatory): {}'\
                    .format(arg.split('=', 1)[1])
         # maxstemnum
         elif arg.lower().startswith("msn=") or\
