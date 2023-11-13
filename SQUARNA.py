@@ -2,7 +2,7 @@ import os
 import sys
 
 
-from SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS
+from SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS, GAPS
 from SQRNdbnali import RunSQRNdbnali
 
 
@@ -301,8 +301,18 @@ def ParseClustal(inp, returndefaults = False):
     return [('>'+name, objs[name], None, None, None) for name in names]
 
 
-def ParseInput(inputname, inputformat, returndefaults = False, fmt = "unknown"):
+def ParseSeq(inputseq, returndefaults):
+
+    if returndefaults:
+        return None, None, None
+    return [('>inputseq',inputseq,None,None,None),]
+
+
+def ParseInput(inputseq, inputname, inputformat, returndefaults = False, fmt = "unknown"):
     """Parser selector"""
+
+    if inputseq:
+        return ParseSeq(inputseq, returndefaults), fmt
     
     if fmt == "unknown":
         fmt = GuessFormat(inputname)
@@ -351,6 +361,7 @@ if __name__ == "__main__":
 
     # DEFAULTS
     inputfile     = None
+    inputseq      = None
     configfile    = os.path.join(HOME_DIR, "def.conf")
     configfileset = False              # Whether the user defined the config file
 
@@ -402,6 +413,7 @@ if __name__ == "__main__":
                                  "-s3", "--s3", "-step3", "--step3",
                                  "-msn", "--msn", "-maxstemnum", "--maxstemnum",
                                  "-rf", "--rf", "-reactformat", "--reactformat",
+                                 "-s", "--s", "-seq", "--seq","-sequence", "--sequence",
                                  "-t", "--t", "-threads", "--threads",}:
             formatted_args.append(args[cnt].lstrip('-')+'='+args[cnt+1])
             cnt += 1
@@ -416,11 +428,15 @@ if __name__ == "__main__":
         cnt += 1
 
     args = formatted_args
-
     # Parsing arguments
     for arg in args:
+        # inputseq
+        if arg.lower().startswith("s=") or\
+           arg.lower().startswith("seq=") or\
+           arg.lower().startswith("sequence="):
+            inputseq = arg.split('=', 1)[1]
         # inputfile
-        if arg.lower().startswith("i=") or\
+        elif arg.lower().startswith("i=") or\
            arg.lower().startswith("input="):
             inputfile = arg.split('=', 1)[1]
             assert os.path.exists(inputfile), "Input file does not exist."
@@ -561,11 +577,16 @@ if __name__ == "__main__":
                                  .format(arg.split('=', 1)[1]))
         else:
             if len(args) == 1:
-                inputfile = arg
+                if os.path.exists(arg):
+                    inputfile = arg
+                elif sum(arg.lower().count(x) for x in (GAPS | set("acgut"))) > len(arg) / 2:
+                    inputseq  = arg
+                else:
+                    inputfile = arg
             else:
                 print("Unrecognized option: {}".format(arg))
-
-    assert os.path.exists(str(inputfile)), "Input file does not exist."
+    print(inputseq)
+    assert os.path.exists(str(inputfile)) or inputseq, "Input file does not exist."
 
     # Process rankby
     if "d" in rankby:
@@ -591,7 +612,7 @@ if __name__ == "__main__":
 
     # Running single-sequence SQUARNA
     if not alignment:
-        for name, seq, reacts, restrs, ref in ParseInput(inputfile, inputformat)[0]:
+        for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat)[0]:
             RunSQRNdbnseq(name, seq, reacts, restrs, ref, paramsetnames,
                           paramsets, threads, rankbydiff, rankby,
                           hardrest, interchainonly, toplim, outplim,
@@ -600,10 +621,10 @@ if __name__ == "__main__":
     else: # Running alignment-based SQUARNA
 
         # Get the processed sequences
-        objs, fmt = ParseInput(inputfile, inputformat)
+        objs, fmt = ParseInput(inputseq, inputfile, inputformat)
 
         # Get the default input lines
-        defReactivities, defRestraints, defReference = ParseInput(inputfile, inputformat,
+        defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
                                                                   returndefaults = True,
                                                                   fmt = fmt)[0]
         # Length checks

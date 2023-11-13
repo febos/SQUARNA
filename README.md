@@ -5,6 +5,7 @@
 # Usage
 
 pathto/python3 pathto/SQUARNA.py i=inputfile [OPTIONS]
+pathto/python3 pathto/SQUARNA.py s=ACGUACGUG [OPTIONS]
 
 # Installation & Dependencies
 
@@ -46,7 +47,7 @@ a (hopefully) arbitrary version of NumPy library.
 
 # Input format
 
-    For input SQUARNA uses a fasta-like format with the "name" lines
+    For inputfile SQUARNA uses a fasta-like format with the "name" lines
     starting with ">" symbol and the following lines treated as the data
     lines. The order of lines in which SQUARNA will read the data 
     is defined by the inputformat (if) parameter, see below. By default,
@@ -172,6 +173,10 @@ a (hopefully) arbitrary version of NumPy library.
         500.conf is recommended for RNAs longer 500 nts.
         1000.conf is recommended for RNAs longer 1000 nts.
         sk.conf is recommended with SHAPE data input.
+        
+    s=STRING / seq=STRING / sequence=STRING [DEFAULT: None]
+    
+        Input RNA sequence. If specified, inputfile will be ignored.
 
     a / ali / alignment [DEFAULT: FALSE]
     
