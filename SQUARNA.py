@@ -360,10 +360,12 @@ if __name__ == "__main__":
         exit(0)
 
     # DEFAULTS
-    inputfile     = None
-    inputseq      = None
-    configfile    = os.path.join(HOME_DIR, "def.conf")
-    configfileset = False              # Whether the user defined the config file
+    inputfile      = None
+    inputseq       = None
+    configfile     = os.path.join(HOME_DIR, "def.conf")
+    configfile500  = os.path.join(HOME_DIR, "500.conf")
+    configfile1000 = os.path.join(HOME_DIR, "1000.conf")
+    configfileset  = False             # Whether the user defined the config file
 
     inputformat = "qtrf"               # Input line order, q=seQuence,t=reacTivities,r=Restraints,f=reFerence
 
@@ -585,7 +587,7 @@ if __name__ == "__main__":
                     inputfile = arg
             else:
                 print("Unrecognized option: {}".format(arg))
-    print(inputseq)
+
     assert os.path.exists(str(inputfile)) or inputseq, "Input file does not exist."
 
     # Process rankby
@@ -605,16 +607,38 @@ if __name__ == "__main__":
     # Parse config
     paramsetnames, paramsets = ParseConfig(configfile)
 
+    # prepare 500.conf & 1000.conf for autoconfig
+    if not configfileset:
+        paramsetnames500,  paramsets500  = ParseConfig(configfile500)
+        paramsetnames1000, paramsets1000 = ParseConfig(configfile1000)
+
     # Overwrite maxstemnum
     if maxstemnumset:
         for i in range(len(paramsets)):
             paramsets[i]['maxstemnum'] = maxstemnum
+        if not configfileset:
+            for i in range(len(paramsets500)):
+                paramsets500[i]['maxstemnum'] = maxstemnum
+            for i in range(len(paramsets1000)):
+                paramsets1000[i]['maxstemnum'] = maxstemnum
 
     # Running single-sequence SQUARNA
     if not alignment:
         for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat)[0]:
-            RunSQRNdbnseq(name, seq, reacts, restrs, ref, paramsetnames,
-                          paramsets, threads, rankbydiff, rankby,
+
+            # no autoconfig    
+            if configfileset:
+                theparamsetnames, theparamsets = paramsetnames, paramsets
+            # apply autoconfig
+            else:
+                theparamsetnames, theparamsets = paramsetnames, paramsets
+                if len(seq) >= 500:
+                    theparamsetnames, theparamsets = paramsetnames500, paramsets500
+                if len(seq) >= 1000:
+                    theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
+            
+            RunSQRNdbnseq(name, seq, reacts, restrs, ref, theparamsetnames,
+                          theparamsets, threads, rankbydiff, rankby,
                           hardrest, interchainonly, toplim, outplim,
                           conslim, reactformat, evalonly, poollim)
 
