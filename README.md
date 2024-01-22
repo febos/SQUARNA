@@ -5,6 +5,7 @@
 # Usage
 
 pathto/python3 pathto/SQUARNA.py i=inputfile [OPTIONS]
+
 pathto/python3 pathto/SQUARNA.py s=ACGUACGUG [OPTIONS]
 
 # Installation & Dependencies
