@@ -10,13 +10,9 @@ pathto/python3 pathto/SQUARNA.py s=ACGUACGUG [OPTIONS]
 
 # Installation & Dependencies
 
-1) Clone the GitHub repository by typing:
+Clone the GitHub repository by typing:
 
 	git clone https://github.com/febos/SQUARNA
-	
-2) For C++ version compile the code by typing:
-
-	TODO
 	
 SQUARNA requires Python3 of at least 3.8 version along with
 a (hopefully) arbitrary version of NumPy library. 
