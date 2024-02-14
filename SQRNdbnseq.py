@@ -82,7 +82,7 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False, levellimit = -1):
               'Фф','Цц','Чч','Шш','Щщ','Ьь','Ыы','Ъъ','Ээ','Юю','Яя']
 
     # groups of non-conflicting base pairs
-    groups = [[],]
+    groups = [set(),]
 
     # normalize the pairs (i.e. ensure v < w)
     pairs = set((min(v, w), max(v, w)) for v, w in newpairs)
@@ -97,12 +97,12 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False, levellimit = -1):
                   pair[0]<=v[0]<=pair[1]<=v[1] for v in groups[level]):
             level += 1
             if level == len(groups):
-                groups.append([])
+                groups.append(set())
             if level == len(levels):
                 levels.append('..')
 
         # add the pair to the determined level
-        groups[level].append(pair)
+        groups[level].add(pair)
 
     # kind of a bubble sort of the base pairs among the levels
     # to maximize the number of base pairs of the lowest levels
@@ -110,17 +110,46 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False, levellimit = -1):
     for times in range(len(groups)-1):
         for i in range(len(groups)-1):
 
-            # take the base pairs of the current level that are in conflict with
-            # the next level
-            conflicting = [v for v in groups[i] if any(v[0]<=w[0]<=v[1]<=w[1] or
+            rest = {v for v in groups[i+1] if any(v[0]<=w[0]<=v[1]<=w[1] or
                                                        w[0]<=v[0]<=w[1]<=v[1]
-                                                       for w in groups[i+1])]
-            # if the next level group is smaller than 
-            # the conflicting group -> we switch them 
-            if len(conflicting) < len(groups[i+1]):
-                groups[i]   = [p for p in groups[i]
-                               if p not in conflicting] + groups[i+1]
-                groups[i+1] = conflicting
+                                                       for w in groups[i])}
+            clean = groups[i+1] - rest
+
+            while rest:
+
+                confjprev = set()
+                confiprev = set()
+
+                confj = rest.pop()
+                rest.add(confj)
+                confj = {confj,}
+                confi = {v for v in groups[i] if any(v[0]<=w[0]<=v[1]<=w[1] or
+                                                     w[0]<=v[0]<=w[1]<=v[1]
+                                                     for w in confj)}
+
+                while confjprev != confj or confiprev != confi:
+
+                    confjprev = confj
+                    confiprev = confi
+
+                    confj = {v for v in rest if any(v[0]<=w[0]<=v[1]<=w[1] or
+                                                    w[0]<=v[0]<=w[1]<=v[1]
+                                                    for w in confi)}
+                    confi = {v for v in groups[i] if any(v[0]<=w[0]<=v[1]<=w[1] or
+                                                     w[0]<=v[0]<=w[1]<=v[1]
+                                                     for w in confj)}
+
+                if len(confi) < len(confj):
+
+                    groups[i]   = confj | (groups[i] - confi)
+                    groups[i+1] = confi | (groups[i+1] - confj)
+
+                rest = rest - confj
+
+            if clean:
+
+                groups[i] |= clean
+                groups[i+1] -= clean
 
     if returnlevels:
         levels = {}

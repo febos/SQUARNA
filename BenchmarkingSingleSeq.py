@@ -6,6 +6,7 @@ try:
 except:
     Alina = None
 
+from SQRNdbnseq import PairsToDBN as CombinePairsToDBN
 
 def PredictAlina(seq):
     dbn = Alina.fold(seq)
@@ -49,79 +50,6 @@ def StemmedIsolated(sorted_pairs):
                 isolated.append(sp[i][1])
 
     return stemmed, isolated  
-
-def CombinePairsToDBN(newpairs, length, initpairs=()):
-    """order of keeping pairs:
-        1) stemmed mapped pairs
-        2) all predicted pairs removing base triples
-        3) isolated mapped pairs removing base triples"""
-
-    #print(newpairs)
-    #print(length)
-
-    dbn = ['.']*length
-
-    levels = ['()','[]','{}','<>','Aa','Bb','Cc','Dd','Ee','Ff','Gg','Hh','Ii','Jj','Kk','Ll','Mm','Nn']
-
-    groups = [[],]
-
-    stemmed  = set(StemmedIsolated(sorted(initpairs))[0])
-    isolated = set(initpairs) - stemmed
-
-    seen = set()
-    pairs = set()
-
-    for p in stemmed:
-
-        pairs.add(p)
-        seen.add(p[0])
-        seen.add(p[1])
-
-    for p in newpairs:
-
-        if p[0] not in seen and p[1] not in seen:
-            pairs.add(p)
-            seen.add(p[0])
-            seen.add(p[1])
-
-    for p in isolated:
-
-        if p[0] not in seen and p[1] not in seen:
-            pairs.add(p)
-            seen.add(p[0])
-            seen.add(p[1])
-    
-    for pair in sorted(pairs):
-
-        level = 0
-
-        while any(v[0]<=pair[0]<=v[1]<=pair[1] or pair[0]<=v[0]<=pair[1]<=v[1] for v in groups[level]):
-            level += 1
-            if level == len(groups):
-                groups.append([])
-
-        groups[level].append(pair)
-
-    for times in range(len(groups)-1):
-    
-        for i in range(len(groups)-1):
-
-            test = [v for v in groups[i] if any(v[0]<=w[0]<=v[1]<=w[1] or w[0]<=v[0]<=w[1]<=v[1] for w in groups[i+1])]
-
-            if len(test) < len(groups[i+1]):
-
-                groups[i]   = [p for p in groups[i] if p not in test] + groups[i+1]
-                groups[i+1] = test
-
-    for i,g in enumerate(groups):
-
-        for p in g:
-
-            dbn[p[0]] = levels[i][0]
-            dbn[p[1]] = levels[i][1]
-            
-    return ''.join(dbn)
-
 
 def GetPairs(dbn):
 
@@ -348,25 +276,10 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "Ribonanzaclean"
-    tl    = "SQUARNA5"
+    dtst  = "SRtrain150"
+    tl    = "SQUARNA"
 
-    for dataset, tool in ((dtst,"RNAfold"),
-                          (dtst,"IPknot"),
-                          (dtst,"MXfold2"),
-                          (dtst,"SPOT-RNA"),
-                          (dtst,"SQUARNA"),
-                          (dtst,"SQUARNA5"),
-                          (dtst,"SQUARNAN"),
-                          (dtst,"SQUARNAalt"),
-                          (dtst,"SQUARNAalt5"),
-                          (dtst,"SQUARNAaltN"),
-                          (dtst,"SQUARNAsk"),
-                          (dtst,"SQUARNAsk5"),
-                          (dtst,"SQUARNAskN"),
-                          (dtst,"ShapeKnots"),
-                          (dtst,"ShapeKnots5"),
-                          (dtst,"RNAsubopt5"),):
+    for dataset, tool in ((dtst,"SQUARNA"),):
 
         if NL:
             dataset += "NL"
