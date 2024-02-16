@@ -276,10 +276,25 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "SRtrain150"
+    dtst  = "SRtest"
     tl    = "SQUARNA"
 
-    for dataset, tool in ((dtst,"SQUARNA"),):
+    for dataset, tool in ((dtst,"RNAfold"),
+                          (dtst,"SQUARNA"),
+                          (dtst,"IPknot"),
+                          (dtst,"MXfold2"),
+                          (dtst,"RNAsubopt5"),
+                          (dtst,"ShapeKnots"),
+                          (dtst,"ShapeKnots5"),
+                          (dtst,"SPOT-RNA"),
+                          (dtst,"SQUARNA5"),
+                          (dtst,"SQUARNAalt"),
+                          (dtst,"SQUARNAalt5"),
+                          (dtst,"SQUARNAaltN"),
+                          (dtst,"SQUARNAN"),
+                          (dtst,"SQUARNAsk"),
+                          (dtst,"SQUARNAsk5"),
+                          (dtst,"SQUARNAskN"),):
 
         if NL:
             dataset += "NL"
