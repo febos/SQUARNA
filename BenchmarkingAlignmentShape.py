@@ -162,7 +162,18 @@ if __name__ == "__main__":
     #dataset = "SubAli" # RNAStralignExt / Rfam14.9 / RfamPDB / SubAli / SeqSim
     #tool    = "IPknot"
 
-    for dataset, tool in (("S01AliCM","ShapeSorter"),):
+    for dataset, tool in (("S01AliCM","SQUARNAs1"),
+                          ("S01AliCM","SQUARNAs2"),
+                          ("S01AliCM","SQUARNAs3i"),
+                          ("S01AliCM","SQUARNAs3u"),
+                          ("S01Ali","SQUARNAs1"),
+                          ("S01Ali","SQUARNAs2"),
+                          ("S01Ali","SQUARNAs3i"),
+                          ("S01Ali","SQUARNAs3u"),
+                          ("S01AliUngap","SQUARNAs1"),
+                          ("S01AliUngap","SQUARNAs2"),
+                          ("S01AliUngap","SQUARNAs3i"),
+                          ("S01AliUngap","SQUARNAs3u"),):
                 
         outname = "{}_{}".format(dataset,tool)
         title = '\t'.join("NAME LEN DEPTH TIME TP FP FN PRC RCL FS DBN PRED".split())
