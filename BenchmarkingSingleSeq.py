@@ -276,7 +276,7 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "SRtest"
+    dtst  = "pseudobasepp2"
     tl    = "SQUARNA"
 
     for dataset, tool in ((dtst,"RNAfold"),
