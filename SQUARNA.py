@@ -588,6 +588,7 @@ if __name__ == "__main__":
             else:
                 print("Unrecognized option: {}".format(arg))
 
+    print(inputfile)
     assert os.path.exists(str(inputfile)) or inputseq, "Input file does not exist."
 
     # Process rankby
