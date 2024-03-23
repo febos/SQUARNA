@@ -1,0 +1,3 @@
+
+version 1.0c [23.03.2024] - added a benchmark in terms of covarying base pairs
+
