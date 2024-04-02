@@ -1,4 +1,4 @@
-# SQUARNA, version 1.0c [23.03.2024]
+# SQUARNA, version 1.01 [02.04.2024]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
@@ -39,8 +39,13 @@ a (hopefully) arbitrary version of NumPy library.
     
     5) python3 SQUARNA.py i=examples/ali_input.afa if=q a v
     
-    An example of running alignment-based predictions in the
-    verbose mode.
+    An example of running alignment-based predictions 
+    in the verbose mode.
+    
+    6) python3 SQUARNA.py i=huge.fasta byseq pl=1 c=fastest.conf
+    
+    An example of running single-sequence predictions 
+    in the fast mode. Recommended for very large inputs.
 
 # Input format
 
@@ -310,10 +315,19 @@ a (hopefully) arbitrary version of NumPy library.
     
         Number of CPUs to use. 
         
+    bs / byseq [DEFAULT: FALSE]
+    
+        Parallelize the execution over the input sequences
+        in the single-sequence mode. 
+        By default, the execution in the single-sequence mode
+        is parallelized over the structure pool within each sequence.
+        Parallelizing over input sequences is recommended for 
+        large input files along with fast configs.
+        
     v / verbose [DEFAULT: FALSE]
     
-        Ignored in the single-sequence mode.
-        Run SQUARNA in the verbose mode. 
+        Run SQUARNA in the verbose mode.
+        Ignored in the single-sequence mode. 
 
 
 # Contacts

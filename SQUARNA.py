@@ -1,6 +1,7 @@
 import os
 import sys
-
+import io
+from multiprocessing import Pool
 
 from SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS, GAPS
 from SQRNdbnali import RunSQRNdbnali
@@ -336,6 +337,26 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False, fmt = "
     elif fmt == "clustal":
         return ParseClustal(inputname, returndefaults), fmt
 
+def byseqRunSQRNdbnseq(args):
+    """multiprocessing (single-parameter) version of RunSQRNdbnseq;
+       here we parallelize over the sequences instead of parallelizing
+       over alternative structures within each sequence prediction"""
+    name, seq, reacts, restrs, ref, theparamsetnames,\
+    theparamsets, threads, rankbydiff, rankby,\
+    hardrest, interchainonly, toplim, outplim,\
+    conslim, reactformat, evalonly, poollim = args
+
+    # We use a printing buffer so that the output is ordered
+    # instead of being mixed up due to parallelization
+    with io.StringIO() as buffer:
+    
+        RunSQRNdbnseq(name, seq, reacts, restrs, ref, theparamsetnames,
+                      theparamsets, threads, rankbydiff, rankby,
+                      hardrest, interchainonly, toplim, outplim,
+                      conslim, reactformat, evalonly, poollim,
+                      mp = False, sink = buffer)
+        return buffer.getvalue()
+
 
 if __name__ == "__main__":
 
@@ -381,6 +402,7 @@ if __name__ == "__main__":
     maxstemnum    = 10**6              # maximum number of stems for each structure
 
     threads       = os.cpu_count()     # Number of cpus to use
+    byseq         = False              # Parallelize by input sequences, not by structure pool
 
     rankbydiff     = False             # Output diverse structures first
     rankby         = "s"               # Rank by, r / s / rs / dr / ds / drs, r=reactscore,s=structscore,d=rankbydiff
@@ -428,10 +450,11 @@ if __name__ == "__main__":
             formatted_args.append(args[cnt].lstrip('-')+'='+args[cnt+1])
             cnt += 1
         elif args[cnt].lower() in {"-a", "--a", "-ali", "--ali", "-alignment", "--alignment",
-                                 "-eo", "--eo", "-evalonly", "--evalonly",
-                                 "-hr", "--hr", "-hardrest", "--hardrest",
-                                 "-ico", "--ico", "-interchainonly", "--interchainonly",
-                                 "-v", "--v", "-verbose", "--verbose",}:
+                                   "-bs", "--bs", "-byseq", "--byseq",
+                                   "-eo", "--eo", "-evalonly", "--evalonly",
+                                   "-hr", "--hr", "-hardrest", "--hardrest",
+                                   "-ico", "--ico", "-interchainonly", "--interchainonly",
+                                   "-v", "--v", "-verbose", "--verbose",}:
             formatted_args.append(args[cnt].lstrip('-'))
         else:
             formatted_args.append(args[cnt])
@@ -484,6 +507,9 @@ if __name__ == "__main__":
             except:
                 raise ValueError("Inappropriate threads value (integer): {}"\
                                  .format(arg.split('=', 1)[1]))
+        # byseq
+        elif arg.lower() in {"bs", "byseq"}:
+            byseq = True
         # rankby
         elif arg.lower().startswith("rb=") or\
              arg.lower().startswith("rankby="):
@@ -633,23 +659,55 @@ if __name__ == "__main__":
 
     # Running single-sequence SQUARNA
     if not alignment:
-        for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat)[0]:
-
-            # no autoconfig    
-            if configfileset:
-                theparamsetnames, theparamsets = paramsetnames, paramsets
-            # apply autoconfig
-            else:
-                theparamsetnames, theparamsets = paramsetnames, paramsets
-                if len(seq) >= 500:
-                    theparamsetnames, theparamsets = paramsetnames500, paramsets500
-                if len(seq) >= 1000:
-                    theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
-            
-            RunSQRNdbnseq(name, seq, reacts, restrs, ref, theparamsetnames,
-                          theparamsets, threads, rankbydiff, rankby,
-                          hardrest, interchainonly, toplim, outplim,
-                          conslim, reactformat, evalonly, poollim)
+        # Parallelizing over a structure pool for each sequence
+        if not byseq:
+            for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat)[0]:
+                # no autoconfig    
+                if configfileset:
+                    theparamsetnames, theparamsets = paramsetnames, paramsets
+                # apply autoconfig
+                else:
+                    theparamsetnames, theparamsets = paramsetnames, paramsets
+                    if len(seq) >= 500:
+                        theparamsetnames, theparamsets = paramsetnames500, paramsets500
+                    if len(seq) >= 1000:
+                        theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
+                
+                RunSQRNdbnseq(name, seq, reacts, restrs, ref, theparamsetnames,
+                              theparamsets, threads, rankbydiff, rankby,
+                              hardrest, interchainonly, toplim, outplim,
+                              conslim, reactformat, evalonly, poollim)
+        # Parallelizing over input sequences
+        else:
+            batchsize = threads*10
+            with Pool(threads) as pool:
+                inputs_batch = []
+                for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat)[0]:
+                    # no autoconfig    
+                    if configfileset:
+                        theparamsetnames, theparamsets = paramsetnames, paramsets
+                    # apply autoconfig
+                    else:
+                        theparamsetnames, theparamsets = paramsetnames, paramsets
+                        if len(seq) >= 500:
+                            theparamsetnames, theparamsets = paramsetnames500, paramsets500
+                        if len(seq) >= 1000:
+                            theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
+                    # Collecting inputs
+                    inputs_batch.append((name, seq, reacts, restrs, ref, theparamsetnames,
+                                  theparamsets, threads, rankbydiff, rankby,
+                                  hardrest, interchainonly, toplim, outplim,
+                                  conslim, reactformat, evalonly, poollim))
+                    # Process a batch once we have batchsize sequences
+                    if len(inputs_batch) >= batchsize:
+                        for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
+                            print(output, end = '')
+                        inputs_batch = []
+                # last batch (if anything left)
+                if inputs_batch:
+                    for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
+                        print(output, end = '')
+                        
 
     else: # Running alignment-based SQUARNA
 
