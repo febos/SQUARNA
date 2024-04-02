@@ -131,15 +131,13 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
     t_ind = inputformat.find('t')
     r_ind = inputformat.find('r')
     f_ind = inputformat.find('f')
-
-    results = []
     
     with open(inputname) as file:
         for line in file:
             if line.startswith('>'):
                 # If not the first entry - process the previous one
                 if name:
-                    results.append((name, *ProcessIndividual(data)))
+                    yield (name, *ProcessIndividual(data))
                 else:
                     # Default TRF lines
                     defdata = data
@@ -151,7 +149,8 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
                     defF = defdata[f_ind] if f_ind > 0 else None
 
                     if returndefaults:
-                        return (defT, defR, defF)
+                        yield (defT, defR, defF)
+                        return None
                         
                 name = line.strip()
                 data = []
@@ -159,32 +158,35 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
                 data.append(line.strip())
 
     if name:
-        results.append((name, *ProcessIndividual(data)))
-
-    return results
+        yield (name, *ProcessIndividual(data))
 
 
 def GuessFormat(inp):
     """Identify the input file format: default / fasta / stockholm / clustal"""
     with open(inp) as file:
-        lines = file.readlines()
-
-        if lines[0].startswith('#') and "STOCKHOLM" in lines[0]:
-            return "stockholm"
-        
-        if lines[0].startswith("CLUSTAL"):
-            return "clustal"
+        line1 = file.readline()
 
         entry_lines = 0
         seq_lines   = 0
 
-        for line in lines:
+        if line1.startswith('#') and "STOCKHOLM" in lines[0]:
+            return "stockholm"
+        
+        if line1.startswith("CLUSTAL"):
+            return "clustal"
+
+        if line1.startswith(">"):
+            entry_lines += 1
+
+        for line in file:
             if line.startswith(">"):
                 entry_lines += 1
             else:
                 acgut = sum(1 for ch in line.upper() if ch in {'A','C','G','U','T'})
                 if acgut > len(line) / 2:
                     seq_lines += 1
+                if seq_lines > 1000:
+                    break
 
         if seq_lines > entry_lines and entry_lines > 0:
             return "fasta"
@@ -195,19 +197,21 @@ def GuessFormat(inp):
 def ParseFasta(inp, returndefaults = False):
 
     if returndefaults:
-        return None, None, None
+        yield (None, None, None)
+        return None
 
-    names, seqs = [], []
+    name, seq = None, ''
 
     with open(inp) as file:
         for line in file:
             if line.startswith('>'):
-                names.append(line.strip())
-                seqs.append('')
+                if name:
+                    yield (name, seq, None, None, None)
+                name = line.strip()
+                seq  = ''
             elif line.strip():
-                seqs[-1] += line.strip()
-
-    return [(names[i], seqs[i], None, None, None) for i in range(len(names))]
+                seq += line.strip()
+    yield (name, seq, None, None, None)
 
 
 def ReadStockholm(stkfile):
@@ -320,8 +324,12 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False, fmt = "
             print("Non-default input file format is recognized: {}".format(fmt.upper()))
 
     if fmt == "default":
+        if returndefaults:
+            return next(ParseDefaultInput(inputname, inputformat, returndefaults)), fmt
         return ParseDefaultInput(inputname, inputformat, returndefaults), fmt
     elif fmt == "fasta":
+        if returndefaults:
+            return next(ParseFasta(inputname, returndefaults)), fmt
         return ParseFasta(inputname, returndefaults), fmt
     elif fmt == "stockholm":
         return ParseStockholm(inputname, returndefaults), fmt
@@ -652,6 +660,9 @@ if __name__ == "__main__":
         defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
                                                                   returndefaults = True,
                                                                   fmt = fmt)[0]
+
+        objs = [obj for obj in objs] # Unpack generator (in case of fasta/default format)
+
         # Length checks
         N = len(objs[0][1])
         assert all(len(obj[1]) == N for obj in objs),\

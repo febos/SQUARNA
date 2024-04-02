@@ -1,17 +1,6 @@
 import os, time
 
-try:
-    import alina
-    Alina = alina.AliNA()
-except:
-    Alina = None
-
 from SQRNdbnseq import PairsToDBN as CombinePairsToDBN
-
-def PredictAlina(seq):
-    dbn = Alina.fold(seq)
-    return [dbn,]
-
 
 def StemmedIsolated(sorted_pairs):
 
@@ -227,6 +216,7 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1):
     if len(seq) >= 1000:
         conf = "1000.conf"
     print(', '+conf)
+    
     os.system("python3 SQUARNA.py i=inp.tmp c={} toplim={} > outp2.tmp".format(conf, top))
 
     cnt = 0
@@ -276,25 +266,11 @@ if __name__ == "__main__":
 
     NL      =  False
     
-    dtst  = "pseudobasepp2"
+    dtst  = "SRtrain150"
     tl    = "SQUARNA"
 
-    for dataset, tool in ((dtst,"RNAfold"),
-                          (dtst,"SQUARNA"),
-                          (dtst,"IPknot"),
-                          (dtst,"MXfold2"),
-                          (dtst,"RNAsubopt5"),
-                          (dtst,"ShapeKnots"),
-                          (dtst,"ShapeKnots5"),
-                          (dtst,"SPOT-RNA"),
-                          (dtst,"SQUARNA5"),
-                          (dtst,"SQUARNAalt"),
-                          (dtst,"SQUARNAalt5"),
-                          (dtst,"SQUARNAaltN"),
-                          (dtst,"SQUARNAN"),
-                          (dtst,"SQUARNAsk"),
-                          (dtst,"SQUARNAsk5"),
-                          (dtst,"SQUARNAskN"),):
+    for dataset, tool in ((dtst, tl),
+                          ):
 
         if NL:
             dataset += "NL"
@@ -318,7 +294,6 @@ if __name__ == "__main__":
                 dbn = lines[i+2].strip()
 
                 structs = {"RNAfold":PredictRNAfold,
-                           "Alina":PredictAlina,
                            "IPknot": PredictIPknot,
                            "MXfold2":PredictMXfold2,
                            "SPOT-RNA":PredictSPOTRNA,
