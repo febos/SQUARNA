@@ -74,8 +74,14 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
        or the list [default-reactivities, default-restraints, default reference] if
        returndefaults param is True"""
 
+    warningsT = False
+    warningsR = False
+    warningsF = False
+
     def ProcessIndividual(data):
         """Returns a single [seq,reacts,rests,ref] list"""
+
+        nonlocal warningsT, warningsR, warningsF
 
         while len(data) < len(inputformat):
             data.append(None)
@@ -91,12 +97,24 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
         N = len(sequence)
 
         # Fill features with default values if applicable
-        if not reactivities and defT and (len(defT) == N or len(defT.split()) == N):
-            reactivities = defT
-        if not restraints and defR and len(defR) == N:
-            restraints   = defR
-        if not reference and defF and len(defF) == N:
-            reference    = defF
+        if not reactivities and defT:
+            if (len(defT) == N or len(defT.split()) == N):
+                reactivities = defT
+            elif not warningsT:
+                warningsT = True
+                print("WARNING: some sequences differ in length from the default reactivities line") 
+        if not restraints and defR:
+            if len(defR) == N:
+                restraints   = defR
+            elif not warningsR:
+                warningsR = True
+                print("WARNING: some sequences differ in length from the default restraints line")
+        if not reference and defF:
+            if len(defF) == N:
+                reference    = defF
+            elif not warningsF:
+                warningsF = True
+                print("WARNING: some sequences differ in length from the default reference line")
 
         # Check reactivities for consistency and resolve them if needed
         try:
