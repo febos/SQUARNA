@@ -1,4 +1,4 @@
-# SQUARNA, version 1.01 [02.04.2024]
+# SQUARNA, version 1.02 [27.04.2024]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
@@ -164,6 +164,14 @@ a (hopefully) arbitrary version of NumPy library.
     
         Path to an input file in fasta-like format, see "Input format" 
         section for details.
+        
+    ff=STRING / fileformat=STRING [DEFAULT: unknown]
+    
+        "unknown"   - the format will be identified automatically.
+        "default"   - default fasta-like format.
+        "fasta"     - FASTA format.
+        "stockholm" - STOCKHOLM format.
+        "clustal"   - CLUSTAL format.
 
     c=FILENAME / config=FILENAME [DEFAULT: see description]
     

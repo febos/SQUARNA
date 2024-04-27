@@ -1,4 +1,6 @@
 
+version 1.02 [27.04.2024] - added "fileformat" parameter, see README.
+
 version 1.01 [02.04.2024] - adjusted for very large inputs in the single-sequence mode: 
 						    handle fasta/default input formats on the fly, not storing them; 
 						    added byseq parameter for parallelizing over input sequences; 

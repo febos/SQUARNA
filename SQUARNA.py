@@ -408,6 +408,7 @@ if __name__ == "__main__":
 
     # DEFAULTS
     inputfile      = None
+    fileformat     = "unknown"
     inputseq       = None
     configfile     = os.path.join(HOME_DIR, "def.conf")
     configfile500  = os.path.join(HOME_DIR, "500.conf")
@@ -454,6 +455,7 @@ if __name__ == "__main__":
                                  "-c", "--c", "-config", "--config",
                                  "-if", "--if", "-inputformat", "--inputformat",
                                  "-rb", "--rb", "-rankby", "--rankby",
+                                 "-ff", "--ff", "-fileformat", "--fileformat",
                                  "-fl", "--fl", "-freqlim", "--freqlim",
                                  "-ll", "--ll", "-levlim", "--levlim",
                                  "-tl", "--tl", "-toplim", "--toplim",
@@ -491,6 +493,12 @@ if __name__ == "__main__":
            arg.lower().startswith("input="):
             inputfile = arg.split('=', 1)[1]
             assert os.path.exists(inputfile), "Input file does not exist."
+        # fileformat
+        elif arg.lower().startswith("ff=") or\
+           arg.lower().startswith("fileformat="):
+            fileformat = arg.split('=', 1)[1].lower()
+            assert fileformat in {'unknown','fasta','default','stockholm','clustal'},\
+            "Wrong fileformat, choose one of these: default,fasta,stockholm,clustal"
         # configfile
         elif arg.lower().startswith("c=") or\
            arg.lower().startswith("config="):
@@ -679,7 +687,7 @@ if __name__ == "__main__":
     if not alignment:
         # Parallelizing over a structure pool for each sequence
         if not byseq:
-            for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat)[0]:
+            for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat, fmt = fileformat)[0]:
                 # no autoconfig    
                 if configfileset:
                     theparamsetnames, theparamsets = paramsetnames, paramsets
@@ -700,7 +708,7 @@ if __name__ == "__main__":
             batchsize = threads*10
             with Pool(threads) as pool:
                 inputs_batch = []
-                for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat)[0]:
+                for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat, fmt = fileformat)[0]:
                     # no autoconfig    
                     if configfileset:
                         theparamsetnames, theparamsets = paramsetnames, paramsets
@@ -730,7 +738,7 @@ if __name__ == "__main__":
     else: # Running alignment-based SQUARNA
 
         # Get the processed sequences
-        objs, fmt = ParseInput(inputseq, inputfile, inputformat)
+        objs, fmt = ParseInput(inputseq, inputfile, inputformat, fmt = fileformat)
 
         # Get the default input lines
         defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
