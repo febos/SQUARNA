@@ -1,4 +1,6 @@
 
+version 1.03 [06.05.2024] - added "ignore" parameter to ignore warnings.
+
 version 1.02 [27.04.2024] - added "fileformat" parameter, see README.
 
 version 1.01 [02.04.2024] - adjusted for very large inputs in the single-sequence mode: 

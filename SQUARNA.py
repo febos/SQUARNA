@@ -69,7 +69,7 @@ def ParseConfig(configfile):
     return names, paramsets
 
 
-def ParseDefaultInput(inputname, inputformat, returndefaults = False):
+def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = False):
     """Returns object lists of format [name,sequence,reactivities,restraints,reference]
        or the list [default-reactivities, default-restraints, default reference] if
        returndefaults param is True"""
@@ -102,19 +102,34 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False):
                 reactivities = defT
             elif not warningsT:
                 warningsT = True
-                print("WARNING: some sequences differ in length from the default reactivities line") 
+                if ignore:
+                    print("WARNING: some sequences differ in length from the default reactivities line",
+                          file=sys.stderr)
+                else:
+                    raise ValueError("WARNING: some sequences differ in length from the default reactivities line "+\
+                                     "[Switch on the iw/ignore parameter to proceed anyway]")
         if not restraints and defR:
             if len(defR) == N:
                 restraints   = defR
             elif not warningsR:
                 warningsR = True
-                print("WARNING: some sequences differ in length from the default restraints line")
+                if ignore:
+                    print("WARNING: some sequences differ in length from the default restraints line",
+                          file=sys.stderr)
+                else:
+                    raise ValueError("WARNING: some sequences differ in length from the default restraints line "+\
+                                     "[Switch on the iw/ignore parameter to proceed anyway]")
         if not reference and defF:
             if len(defF) == N:
                 reference    = defF
             elif not warningsF:
                 warningsF = True
-                print("WARNING: some sequences differ in length from the default reference line")
+                if ignore:
+                    print("WARNING: some sequences differ in length from the default reference line",
+                          file=sys.stderr)
+                else:
+                    raise ValueError("WARNING: some sequences differ in length from the default reference line "+\
+                                     "[Switch on the iw/ignore parameter to proceed anyway]")
 
         # Check reactivities for consistency and resolve them if needed
         try:
@@ -188,7 +203,7 @@ def GuessFormat(inp):
         entry_lines = 0
         seq_lines   = 0
 
-        if line1.startswith('#') and "STOCKHOLM" in lines[0]:
+        if line1.startswith('#') and "STOCKHOLM" in line1:
             return "stockholm"
         
         if line1.startswith("CLUSTAL"):
@@ -331,7 +346,8 @@ def ParseSeq(inputseq, returndefaults):
     return [('>inputseq',inputseq,None,None,None),]
 
 
-def ParseInput(inputseq, inputname, inputformat, returndefaults = False, fmt = "unknown"):
+def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
+               fmt = "unknown", ignore = False):
     """Parser selector"""
 
     if inputseq:
@@ -345,7 +361,8 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False, fmt = "
     if fmt == "default":
         if returndefaults:
             return next(ParseDefaultInput(inputname, inputformat, returndefaults)), fmt
-        return ParseDefaultInput(inputname, inputformat, returndefaults), fmt
+        return ParseDefaultInput(inputname, inputformat,
+                                 returndefaults, ignore = ignore), fmt
     elif fmt == "fasta":
         if returndefaults:
             return next(ParseFasta(inputname, returndefaults)), fmt
@@ -446,6 +463,8 @@ if __name__ == "__main__":
     step3       = "u"                  # i(intersection)/u(union)/1(step1)/2(step2) - what should be the
                                        # step-3 result dbn (alignment mode)
 
+    ignorewarn  = False                # Ignore warnings
+
 
     # Allow standard parameter input
     formatted_args = []
@@ -473,6 +492,7 @@ if __name__ == "__main__":
                                    "-bs", "--bs", "-byseq", "--byseq",
                                    "-eo", "--eo", "-evalonly", "--evalonly",
                                    "-hr", "--hr", "-hardrest", "--hardrest",
+                                   "-iw", "--iw", "-ignore", "--ignore",
                                    "-ico", "--ico", "-interchainonly", "--interchainonly",
                                    "-v", "--v", "-verbose", "--verbose",}:
             formatted_args.append(args[cnt].lstrip('-'))
@@ -628,6 +648,9 @@ if __name__ == "__main__":
         # verbose
         elif arg.lower() in {"v", "verbose"}:
             verbose = True
+        # ignore
+        elif arg.lower() in {"iw", "ignore"}:
+            ignorewarn = True
         # step3
         elif arg.lower().startswith("s3=") or\
              arg.lower().startswith("step3="):
@@ -687,7 +710,8 @@ if __name__ == "__main__":
     if not alignment:
         # Parallelizing over a structure pool for each sequence
         if not byseq:
-            for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat, fmt = fileformat)[0]:
+            for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat,
+                                                             fmt = fileformat, ignore = ignorewarn)[0]:
                 # no autoconfig    
                 if configfileset:
                     theparamsetnames, theparamsets = paramsetnames, paramsets
@@ -708,7 +732,8 @@ if __name__ == "__main__":
             batchsize = threads*10
             with Pool(threads) as pool:
                 inputs_batch = []
-                for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat, fmt = fileformat)[0]:
+                for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat,
+                                                                 fmt = fileformat, ignore = ignorewarn)[0]:
                     # no autoconfig    
                     if configfileset:
                         theparamsetnames, theparamsets = paramsetnames, paramsets
@@ -738,12 +763,14 @@ if __name__ == "__main__":
     else: # Running alignment-based SQUARNA
 
         # Get the processed sequences
-        objs, fmt = ParseInput(inputseq, inputfile, inputformat, fmt = fileformat)
+        objs, fmt = ParseInput(inputseq, inputfile, inputformat,
+                               fmt = fileformat, ignore = ignorewarn)
 
         # Get the default input lines
         defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
                                                                   returndefaults = True,
-                                                                  fmt = fmt)[0]
+                                                                  fmt = fmt,
+                                                                  ignore = ignorewarn)[0]
 
         objs = [obj for obj in objs] # Unpack generator (in case of fasta/default format)
 
