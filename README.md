@@ -175,17 +175,19 @@ a (hopefully) arbitrary version of NumPy library.
 
     c=FILENAME / config=FILENAME [DEFAULT: see description]
     
-        Path to a config file, see file "def.conf" for the format 
-        details. In the alignment-based mode, the default config 
+        Path to a config file or a name of a built-in config, 
+        see file "def.conf" for the format details. 
+        In the alignment-based mode, the default config 
         file is ali.conf. In the single-sequence mode the default
         config for sequences under 500nts is def.conf, for sequences
         between 500 and 1000nts - 500.conf, and for sequences over
         1000nts in length - 1000.conf.
-        def.conf is recommended by default for RNAs under 500nts.
-        alt.conf is recommended for short pseudoknotted RNAs.
-        500.conf is recommended for RNAs longer 500 nts.
-        1000.conf is recommended for RNAs longer 1000 nts.
-        sk.conf is recommended with SHAPE data input.
+        Built-in configs:
+        c=def (def.conf) is recommended by default for RNAs under 500nts.
+        c=alt (alt.conf) is recommended for short pseudoknotted RNAs.
+        c=500 (500.conf) is recommended for RNAs longer 500 nts.
+        c=1000 (1000.conf) is recommended for RNAs longer 1000 nts.
+        c=sk (sk.conf) is recommended with SHAPE data input.
         
     s=STRING / seq=STRING / sequence=STRING [DEFAULT: None]
     

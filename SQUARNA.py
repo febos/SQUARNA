@@ -524,6 +524,8 @@ if __name__ == "__main__":
            arg.lower().startswith("config="):
             configfile = arg.split('=', 1)[1]
             configfileset = True
+            if not os.path.exists(configfile) and os.path.exists(os.path.join(HOME_DIR, configfile+".conf")):
+                configfile = os.path.join(HOME_DIR, configfile+".conf")
             assert os.path.exists(configfile), "Config file does not exist."
         # inputformat
         elif arg.lower().startswith("if=") or\
