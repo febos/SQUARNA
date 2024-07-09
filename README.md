@@ -8,6 +8,8 @@ pathto/python3 pathto/SQUARNA.py i=inputfile [OPTIONS]
 
 pathto/python3 pathto/SQUARNA.py s=ACGUACGUG [OPTIONS]
 
+As a Python function: see demo.ipynb
+
 # Installation & Dependencies
 
 Clone the GitHub repository by typing:
