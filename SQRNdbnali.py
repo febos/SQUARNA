@@ -2,10 +2,16 @@
 from multiprocessing import Pool
 import numpy as np
 import io
+import sys
 
-from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
-                       BPMatrix, AnnotateStems, RunSQRNdbnseq, GAPS,\
-                       EncodedReactivities, SEPS
+try:
+    from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
+                           BPMatrix, AnnotateStems, RunSQRNdbnseq, GAPS,\
+                           EncodedReactivities, SEPS
+except:
+    from .SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
+                            BPMatrix, AnnotateStems, RunSQRNdbnseq, GAPS,\
+                            EncodedReactivities, SEPS
 
 
 def ReAlignDict(shortseq, longseq):
@@ -108,7 +114,7 @@ def mpYieldStems(args):
                       minlen, minbpscore)
 
 
-def MatrixToDBNs(mat, score, depth, verbose = False):
+def MatrixToDBNs(mat, score, depth, verbose = False, sink = sys.stdout):
     """Build dbn structures from the stem-scored matrix
        in a greedy manner"""
     N = mat.shape[0]
@@ -124,7 +130,7 @@ def MatrixToDBNs(mat, score, depth, verbose = False):
     res = [[[],set()],]
 
     if verbose:
-        print(">Conserved base pairs (one by one)")
+        print(">Conserved base pairs (one by one)", file = sink)
 
     for cell in cells:
         # Obtain the 2-index base pair from the 1-index
@@ -156,15 +162,15 @@ def MatrixToDBNs(mat, score, depth, verbose = False):
             res.append([[bp,], set(bp)])
 
         if verbose:
-            print(PairsToDBN([bp,], N), round(cell[1], 3), sep='\t')
+            print(PairsToDBN([bp,], N), round(cell[1], 3), sep='\t', file = sink)
 
     # Convert bp-lists to dbns
     dbns = [PairsToDBN(struct[0], N) for struct in res]
 
     if verbose:
-        print(">Conserved base pairs (assembled)")
+        print(">Conserved base pairs (assembled)", file = sink)
         for dbn in dbns:
-            print(dbn)
+            print(dbn, file = sink)
     # Return dbns
     return dbns
 
@@ -188,7 +194,8 @@ def Metrics(ref, pred):
 def SQRNdbnali(objs, defrests = None, defreacts = None, defref = None,
                bpweights = {}, interchainonly = False,
                minlen = 2, minbpscore = 0,
-               threads = 1, verbose = False):
+               threads = 1, verbose = False,
+               sink = sys.stdout):
     """Returns a predicted dbn for a set of aligned sequences"""
 
     # Placeholder LENxLEN matrix of zeros 
@@ -213,7 +220,7 @@ def SQRNdbnali(objs, defrests = None, defreacts = None, defref = None,
                     stemmatrix[w, v] += stem[-1]
 
     # Build the dbns from the assembled stem-scored matrix
-    pred_dbns = MatrixToDBNs(stemmatrix, minbpscore, len(objs), verbose)
+    pred_dbns = MatrixToDBNs(stemmatrix, minbpscore, len(objs), verbose, sink = sink)
     # Return the first dbn and the stemmatrix
     return pred_dbns[0], stemmatrix
 
@@ -242,7 +249,7 @@ def mpRunSQRNdbnseq(args):
         return cons, buffer.getvalue()
 
 
-def Consensus(structs, freqlimit = 0.0, verbose = False):
+def Consensus(structs, freqlimit = 0.0, verbose = False, sink = sys.stdout):
     """Builds a Consensus dbn from a list of dbns"""
     bps = {}
 
@@ -263,12 +270,12 @@ def Consensus(structs, freqlimit = 0.0, verbose = False):
     seen = set()
 
     if verbose:
-        print(">Step 2, Populated base pairs")
+        print(">Step 2, Populated base pairs", file = sink)
 
     # Greedily assemble the set of the most frequent non-conflicting bps
     for bp in sorted(bps.keys(), key = lambda x: bps[x], reverse = True):
         if verbose:
-            print(PairsToDBN([bp,], len(structs[0])), bps[bp])
+            print(PairsToDBN([bp,], len(structs[0])), bps[bp], file = sink)
         if bps[bp] >= freqlimit and bp[0] not in seen and bp[1] not in seen:
             seen.add(bp[0])
             seen.add(bp[1])
@@ -307,7 +314,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                   levellimit, freqlimit, verbose, step3,
                   paramsetnames, paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat, poollim):
+                  conslim, reactformat, poollim, sink = sys.stdout):
 
     # Alignment length is derived as the length
     # of the first aligned sequence
@@ -318,23 +325,23 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
     minbpscore = paramsets[0]['minbpscore']
 
     if verbose:
-        print(">Step 1, Iteration 1")
+        print(">Step 1, Iteration 1", file = sink)
 
     # Iteration 1    
     pred_dbn, smat = SQRNdbnali(objs, defrests, defreacts, defref, 
                                 bpweights, interchainonly,
                                 minlen, minbpscore,
-                                threads, verbose)
+                                threads, verbose, sink = sink)
 
     if verbose:
-        print(">Step 1, Iteration 2")
+        print(">Step 1, Iteration 2", file = sink)
 
     # Iteration 2 - here we use the pred_dbn from the
     # previous iteration instead of defrests
     pred_dbn = SQRNdbnali(objs, pred_dbn, defreacts, defref, 
                           bpweights, interchainonly,
                           minlen, minbpscore,
-                          threads, verbose)[0]
+                          threads, verbose, sink = sink)[0]
 
     # Truncate pseudoknotted bps of order higher than levellimit for the step1 structure
     step1dbn = PairsToDBN(DBNToPairs(pred_dbn), N,
@@ -344,13 +351,13 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
     smat = smat / np.max(smat) * 5
 
     if verbose:
-        print(">Step 1, Result")
-        print(step1dbn)
+        print(">Step 1, Result", file = sink)
+        print(step1dbn, file = sink)
 
     structs = []
     if step3 != '1':
         if verbose:
-            print(">Step 2, Individuals")
+            print(">Step 2, Individuals", file = sink)
         # Run stemmatrix-weighted single-sequence predictions
         with Pool(threads) as pool:
             inputs = [(obj, paramsetnames, paramsets, threads,
@@ -359,14 +366,14 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                        verbose, smat, poollim) for obj in objs]
             for cons, output in pool.imap(mpRunSQRNdbnseq, inputs):
                 if verbose:
-                    print(output, end = '')
+                    print(output, end = '', file = sink)
                 structs.append(cons) # Collect the derived consensus predictions
         # Build the overall consensus from all the single-seq consensus dbns
-        step2dbn = Consensus(structs, freqlimit, verbose)
+        step2dbn = Consensus(structs, freqlimit, verbose, sink = sink)
         if verbose:
-            print(">Step 2, Consensus")
+            print(">Step 2, Consensus", file = sink)
             for lim in range(0, 101, 5):
-                print(Consensus(structs, lim / 100), str(lim)+'%', sep='\t')
+                print(Consensus(structs, lim / 100), str(lim)+'%', sep='\t', file = sink)
     else:
         step2dbn = '.' * N
 
@@ -375,39 +382,39 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                           levellimit = levellimit)
 
     if verbose:
-        print("=" * N) # Separator line 1 if verbose 
+        print("=" * N, file = sink) # Separator line 1 if verbose 
 
     # Print default input lines if any
     if defreacts:
         print(EncodedReactivities(objs[0][1],
                                   defreacts,
                                   reactformat),
-              "reactivities", sep='\t')
+              "reactivities", sep='\t', file = sink)
     if defrests:
         print(''.join([defrests[i]
                        if   objs[0][1][i] not in SEPS
                        else objs[0][1][i]
-                       for i in range(N)]), "restraints", sep='\t')
+                       for i in range(N)]), "restraints", sep='\t', file = sink)
     if defref:
         print(''.join([defref[i]
                        if   objs[0][1][i] not in SEPS
                        else objs[0][1][i]
-                       for i in range(N)]), "reference", sep='\t')
+                       for i in range(N)]), "reference", sep='\t', file = sink)
 
     if defreacts or defref or defrests:
-        print("_" * N) # Separator line 2 if default input lines
+        print("_" * N, file = sink) # Separator line 2 if default input lines
 
         
     print(step1dbn,
           "Step-1" + ('\t'+str(round(ReactScore(defreacts, objs[0][1], step1dbn), 2))) * bool(defreacts),
           "TP={},FP={},FN={},FS={},PR={},RC={}".format(*Metrics(defref, step1dbn)) * bool(defref),
-          sep = '\t')
+          sep = '\t', file = sink)
 
     print(step2dbn,
           "Step-2" + "(skipped)" * (step3 == '1') +\
            ('\t'+str(round(ReactScore(defreacts, objs[0][1], step2dbn), 2))) * bool(defreacts) * (step3 != '1'),
           "TP={},FP={},FN={},FS={},PR={},RC={}".format(*Metrics(defref, step2dbn))*bool(defref) * (step3 != '1'),
-          sep = '\t')
+          sep = '\t', file = sink)
 
     # Derive the step3dbn based on the step3 param
     if step3 == '1':
@@ -428,7 +435,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
           "Step-3({})".format(step3) +\
            ('\t'+str(round(ReactScore(defreacts, objs[0][1], step3dbn), 2))) * bool(defreacts),
           "TP={},FP={},FN={},FS={},PR={},RC={}".format(*Metrics(defref, step3dbn))*bool(defref),
-          sep = '\t')
+          sep = '\t', file = sink)
 
 
     

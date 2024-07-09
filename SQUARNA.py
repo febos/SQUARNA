@@ -3,8 +3,12 @@ import sys
 import io
 from multiprocessing import Pool
 
-from SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS, GAPS
-from SQRNdbnali import RunSQRNdbnali
+try:
+    from SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS, GAPS
+    from SQRNdbnali import RunSQRNdbnali
+except:
+    from .SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS, GAPS
+    from .SQRNdbnali import RunSQRNdbnali
 
 
 def ParseConfig(configfile):
@@ -393,6 +397,414 @@ def byseqRunSQRNdbnseq(args):
         return buffer.getvalue()
 
 
+def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
+            configfile = None, inputformat = "qtrf", maxstemnum = None,
+            threads = os.cpu_count(), byseq = False, 
+            rankby = "s", evalonly = False, hardrest = False,
+            interchainonly = False, toplim = 5, outplim = None, conslim = 1,
+            poollim = 1000, reactformat = 3, alignment = False, levellimit = None,
+            freqlimit = 0.35, verbose = False, step3 = "u", ignorewarn = False,
+            HOME_DIR = None, write_to = None,
+            ):
+    """
+        -----------------------------------------------------------------------
+        Prints SQUARNA RNA secondary structure predictions from the given input
+
+        Parameters:
+            inputfile : string
+                Path to the input file.
+            fileformat : unknown/fasta/default/stockholm/clustal
+                Input file format. For the details of the default SQUARNA input
+                format see https://github.com/febos/SQUARNA/blob/main/examples/seq_input.fas.
+                "unknown"   - the format will be identified automatically.
+                "default"   - default fasta-like format.
+                "fasta"     - FASTA format.
+                "stockholm" - STOCKHOLM format.
+                "clustal"   - CLUSTAL format.
+            inputseq : string
+                RNA sequence input, alternative to inputfile (higher priority).
+            configfile : string
+                Path to a config file or a name of a built-in config, 
+                see https://github.com/febos/SQUARNA/blob/main/def.conf
+                for the format details. 
+                In the alignment-based mode, the default config 
+                file is ali.conf. In the single-sequence mode the default
+                config for sequences under 500nts is def.conf, for sequences
+                between 500 and 1000nts - 500.conf, and for sequences over
+                1000nts in length - 1000.conf.
+                Built-in configs:
+                def (def.conf) is recommended by default for RNAs under 500nts.
+                alt (alt.conf) is recommended for short pseudoknotted RNAs.
+                500 (500.conf) is recommended for RNAs longer 500 nts.
+                1000 (1000.conf) is recommended for RNAs longer 1000 nts.
+                sk (sk.conf) is recommended with SHAPE data input.
+            inputformat : string
+                The order of the lines in the input file. By default, SQUARNA 
+                reads the first line of the entry (among the lines after 
+                the ">" line) as the seQuence (q), the second line as the 
+                reacTivities (t), the third line as the Restraints (r), 
+                the fourth line as the reFerence (f), and all the further lines 
+                are ignored. inputformat should be a subset of qtrfx letters 
+                in any order, with q being mandatory. All "x" lines will be ignored.
+            maxstemnum : int
+                Maximum number of stems to predict in each structure. By default,
+                maxstemnum is defined in a config file for each parameter set. 
+                If specified explicitly it will overwrite the maxstemnum 
+                values for all the parameter sets.
+            threads : int
+                Number of CPUs to use.
+            byseq : bool
+                Parallelize the execution over the input sequences
+                in the single-sequence mode. 
+                By default, the execution in the single-sequence mode
+                is parallelized over the structure pool within each sequence.
+                Parallelizing over input sequences is recommended for 
+                large input files along with fast configs.
+            rankby : string
+                How to rank the predicted structures. rankby should be a subset of
+                letters r, s, and d in any order (r / s / rs / rd / sd / rsd).
+                If both r and s are present, the structures will be ranked according
+                to the total_score = structure_score * reactivity_score. If only 
+                r is present, the structures will be ranked by the reactivity_score,
+                and if only s is present, the structures will be ranked by the 
+                structure_score. Independently, if d is present, the mutually 
+                divergent structures will be put first.
+            evalonly : bool
+                Ignored in the alignment mode.
+                If specified, no predictions are made and just the reference structure
+                scores are returned provided the reference is specified. 
+                If non-canonical base pairs are present in the reference structure, 
+                they will be considered with 0.0 weight).
+            hardrest : bool
+                If specified, all the base pairs from the restraints line will be
+                forced to be present in the predicted structures. However, it will
+                not affect the structure scores, as the forced base pairs won't
+                contribute to the structure score unless they were predicted without
+                forcing as well.
+            interchainonly : bool
+                Allow only inter-chain base pairs to be predicted.
+            toplim : int
+                How many top-N structures will be subject to comparison with the reference.
+            outplim : int
+                How many top-N structures will be printed into the stdout.
+                By default, outplim = toplim.
+            conslim : int
+                How many top-N structures will be used to derive the predicted structure consensus.
+            poollim : int
+                Maximum number of structures allowed to populate the current structure pool (if exceeded, no bifurcation will occur anymore).
+            reactformat : 3/10/26
+                Encoding used to output the reactivities line.
+                rf=3:   0.0  <= "_" <   1/3; 
+                        1/3  <= "+" <   2/3;
+                        2/3  <= "#" <=  1.0;
+                rf=10:  0.0  <= "0" <   0.1;
+                        ....................
+                        0.5  <= "5" <   0.6;
+                        ....................
+                        0.9  <= "9" <=  1.0;
+                rf=26:  0.00 <= "a" <  0.02;
+                        0.02 <= "b" <  0.06;
+                        ....................
+                        0.50 <= "n" <  0.54;
+                        ....................
+                        0.94 <= "y" <  0.98;
+                        0.98 <= "z" <= 1.00.
+            alignment : bool
+                Run SQUARNA in the alignment-based mode. If specified,
+                ali.conf will be used as the config file by default, 
+                unless another config file is explicitly specified 
+                by the user. The bpweights, minlen, and minbpscore 
+                parameters for step-1 will be derived from the first 
+                parameter set in the config file.
+            levellimit : int
+                Ignored in the single-sequence mode.
+                The allowed number of pseudoknot levels. All the base pairs
+                of the higher levels will be removed from the structure predicted
+                at step-1 and from the structure predicted at step-2. By default, 
+                levellimit=3 for short alignments of no more than 500 columns, 
+                and levellimit=2 for longer alignments.
+            freqlimit : 0.0 <= float <= 1.0
+                Ignored in the single-sequence mode.
+                The percentage of sequences required to contain a base pair,
+                in order for it to be added to the predicted consensus structure
+                at step-2. The consensus will include all the base pairs present
+                in at least "fl" share of the sequences given that the base pair
+                is not in conflict (does not share a position) with a more 
+                populated base pair.
+            verbose : bool
+                Run SQUARNA in the verbose mode.
+                Ignored in the single-sequence mode.
+            step3 : "i"/"u"/"1"/"2"
+                Ignored in the single-sequence mode.
+                Defines the structure that will be printed at step-3. If step3=1,
+                the structure from step-1 will be printed, and the step-2 will
+                be skipped completely, meaning the prediction will be super fast.
+                If step3=2, the structure from step-2 will be printed. If step3=u,
+                the union of base pairs of the two structures will be printed. 
+                If step3=i, the intersection of base pairs of the two structures 
+                will be printed.
+            ignorewarn : bool
+                Ignore warnings.
+            HOME_DIR : string
+                Path to the folder with built-in configs.
+            write_to : IO_object
+                Where to write the output. By default, write_to = sys.stdout.                
+    """
+
+    if HOME_DIR is None:
+        HOME_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    if write_to is None:
+        write_to = sys.stdout
+    
+    # Verifying arguments
+    assert os.path.exists(str(inputfile)) or inputseq, "Input file does not exist."
+
+    assert fileformat in {'unknown','fasta','default','stockholm','clustal'},\
+           "Wrong fileformat, choose one of these: default,fasta,stockholm,clustal"
+
+    if configfile is None:
+        configfileset  = False
+        configfile     = os.path.join(HOME_DIR, "def.conf")
+        configfile500  = os.path.join(HOME_DIR, "500.conf")
+        configfile1000 = os.path.join(HOME_DIR, "1000.conf")
+    else:
+        configfileset = True
+        if not os.path.exists(configfile) and os.path.exists(os.path.join(HOME_DIR, configfile+".conf")):
+            configfile = os.path.join(HOME_DIR, configfile+".conf")
+        assert os.path.exists(configfile), "Config file does not exist."
+
+    assert ''.join(sorted(inputformat.replace('x',''))) in {"q","fq","qr","qt", "qrt",
+                                                                 "fqr", "fqt", "fqrt"}, \
+                   'Inappropriate inputformat value (subset of "fqrtx" with "q" being mandatory): {}'\
+                   .format(inputformat)
+
+    if maxstemnum is None:
+        maxstemnum = 10**6
+        maxstemnumset = False
+    else:
+        maxstemnumset = True
+        try:
+            maxstemnum = int(float(maxstemnum))
+            assert maxstemnum >= 0
+        except:
+            raise ValueError("Inappropriate maxstemnum value (non-negative integer): {}"\
+                             .format(maxstemnum))
+    try:
+        threads = int(float(threads))
+        threads = max(1, threads)
+        threads = min(threads, os.cpu_count())
+    except:
+        raise ValueError("Inappropriate threads value (integer): {}"\
+                         .format(threads))
+
+    assert rankby in {"r", "s", "rs", "dr", "ds", "drs"}, \
+           'Inappropriate rankby value (r/s/rs/dr/ds/drs): {}'\
+           .format(rankby)
+
+    if outplim is None:
+        outplim = toplim
+        outplimset = False
+    else:
+        outplimset = True
+        try:
+            outplim = int(float(outplim))
+            assert outplim > 0
+            outplimset = True
+        except:
+            raise ValueError("Inappropriate outplim value (positive integer): {}"\
+                             .format(outplim))
+
+    try:
+        toplim = int(float(toplim))
+        assert toplim > 0
+        if not outplimset:
+            outplim = toplim
+    except:
+        raise ValueError("Inappropriate toplim value (positive integer): {}"\
+                         .format(toplim))
+
+    try:
+        conslim = int(float(conslim))
+        assert conslim > 0
+    except:
+        raise ValueError("Inappropriate conslim value (positive integer): {}"\
+                         .format(conslim))
+    try:
+        poollim = int(float(poollim))
+        assert poollim > 0
+    except:
+        raise ValueError("Inappropriate poollim value (positive integer): {}"\
+                         .format(poollim))
+
+    assert int(float(reactformat)) in {3, 10, 26},\
+           "Inappropriate reactformat value (3/10/26): {}"\
+           .format(reactformat)
+    reactformat = int(float(reactformat))
+
+    if not (levellimit is None):
+        try:
+            levellimit = int(float(levellimit))
+        except:
+            raise ValueError("Inappropriate levellimit value (integer): {}"\
+                             .format(levellimit))
+
+    try:
+        freqlimit = float(freqlimit)
+        assert 0 <= freqlimit <= 1
+    except:
+        raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
+                         .format(freqlimit))
+
+    try:
+        step3 = step3.lower()
+        assert step3 in {'u', 'i', '1', '2'}
+    except:
+        raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
+                         .format(step3))
+
+    # Process rankby
+    if "d" in rankby:
+        rankbydiff = True # Output diverse structures first
+    else:
+        rankbydiff = False
+    if "r" in rankby and "s" in rankby:
+        rankby = (0, 2, 1)
+    elif "r" in rankby:
+        rankby = (2, 0, 1)
+    elif "s"  in rankby:
+        rankby = (1, 2, 0)
+
+    # If alignment mode - use ali.conf by default
+    if alignment and not configfileset:
+        configfile = os.path.join(HOME_DIR, "ali.conf")
+
+    # Parse config
+    paramsetnames, paramsets = ParseConfig(configfile)
+
+    # prepare 500.conf & 1000.conf for autoconfig
+    if not configfileset:
+        paramsetnames500,  paramsets500  = ParseConfig(configfile500)
+        paramsetnames1000, paramsets1000 = ParseConfig(configfile1000)
+
+    # Overwrite maxstemnum
+    if maxstemnumset:
+        for i in range(len(paramsets)):
+            paramsets[i]['maxstemnum'] = maxstemnum
+        if not configfileset:
+            for i in range(len(paramsets500)):
+                paramsets500[i]['maxstemnum'] = maxstemnum
+            for i in range(len(paramsets1000)):
+                paramsets1000[i]['maxstemnum'] = maxstemnum
+
+    # Running single-sequence SQUARNA
+    if not alignment:
+        # Parallelizing over a structure pool for each sequence
+        if not byseq:
+            for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat,
+                                                             fmt = fileformat, ignore = ignorewarn)[0]:
+                # no autoconfig    
+                if configfileset:
+                    theparamsetnames, theparamsets = paramsetnames, paramsets
+                # apply autoconfig
+                else:
+                    theparamsetnames, theparamsets = paramsetnames, paramsets
+                    if len(seq) >= 500:
+                        theparamsetnames, theparamsets = paramsetnames500, paramsets500
+                    if len(seq) >= 1000:
+                        theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
+                
+                RunSQRNdbnseq(name, seq, reacts, restrs, ref, theparamsetnames,
+                              theparamsets, threads, rankbydiff, rankby,
+                              hardrest, interchainonly, toplim, outplim,
+                              conslim, reactformat, evalonly, poollim,
+                              sink = write_to)
+        # Parallelizing over input sequences
+        else:
+            batchsize = threads*10
+            with Pool(threads) as pool:
+                inputs_batch = []
+                for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat,
+                                                                 fmt = fileformat, ignore = ignorewarn)[0]:
+                    # no autoconfig    
+                    if configfileset:
+                        theparamsetnames, theparamsets = paramsetnames, paramsets
+                    # apply autoconfig
+                    else:
+                        theparamsetnames, theparamsets = paramsetnames, paramsets
+                        if len(seq) >= 500:
+                            theparamsetnames, theparamsets = paramsetnames500, paramsets500
+                        if len(seq) >= 1000:
+                            theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
+                    # Collecting inputs
+                    inputs_batch.append((name, seq, reacts, restrs, ref, theparamsetnames,
+                                  theparamsets, threads, rankbydiff, rankby,
+                                  hardrest, interchainonly, toplim, outplim,
+                                  conslim, reactformat, evalonly, poollim))
+                    # Process a batch once we have batchsize sequences
+                    if len(inputs_batch) >= batchsize:
+                        for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
+                            print(output, end = '', file = write_to)
+                        inputs_batch = []
+                # last batch (if anything left)
+                if inputs_batch:
+                    for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
+                        print(output, end = '', file = write_to)
+                        
+
+    else: # Running alignment-based SQUARNA
+
+        # Get the processed sequences
+        objs, fmt = ParseInput(inputseq, inputfile, inputformat,
+                               fmt = fileformat, ignore = ignorewarn)
+
+        # Get the default input lines
+        defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
+                                                                  returndefaults = True,
+                                                                  fmt = fmt,
+                                                                  ignore = ignorewarn)[0]
+
+        objs = [obj for obj in objs] # Unpack generator (in case of fasta/default format)
+
+        # Length checks
+        N = len(objs[0][1])
+        assert all(len(obj[1]) == N for obj in objs),\
+               'The sequences are not aligned'
+
+        # Check reactivities for consistency and resolve them if needed
+        try:
+            if defReactivities:
+                if len(defReactivities) != N:
+                    defReactivities = list(map(float, defReactivities.split()))
+                else:
+                    defReactivities = [ReactDict[char] for char in defReactivities]
+
+            assert not defReactivities or len(defReactivities) == N
+        except:
+            raise ValueError('Inappropriate default reactivities line:\n {}'\
+                             .format(defReactivities))
+
+        # Assert restraints and reference are of the consistent length
+        # or empty line / None
+        assert not defRestraints or len(defRestraints) == N,\
+               'Inappropriate default restraints line:\n {}'\
+               .format(defRestraints)
+        assert not defReference or len(defReference) == N,\
+               'Inappropriate default reference line:\n {}'\
+               .format(defReference)
+
+        # default levellimit
+        if levellimit is None:
+            levellimit = 3 - int(N > 500)
+
+        # Run the alignment-based predictions
+        RunSQRNdbnali(objs, defReactivities, defRestraints, defReference,
+                      levellimit, freqlimit, verbose, step3,
+                      paramsetnames, paramsets, threads, rankbydiff, rankby,
+                      hardrest, interchainonly, toplim, outplim,
+                      conslim, reactformat, poollim, sink = write_to)
+
+
 if __name__ == "__main__":
 
     def PrintUsage():
@@ -427,28 +839,22 @@ if __name__ == "__main__":
     inputfile      = None
     fileformat     = "unknown"
     inputseq       = None
-    configfile     = os.path.join(HOME_DIR, "def.conf")
-    configfile500  = os.path.join(HOME_DIR, "500.conf")
-    configfile1000 = os.path.join(HOME_DIR, "1000.conf")
-    configfileset  = False             # Whether the user defined the config file
+    configfile     = None
 
     inputformat = "qtrf"               # Input line order, q=seQuence,t=reacTivities,r=Restraints,f=reFerence
 
-    maxstemnumset = False              # do we overwrite the maxstemnum from configfile
-    maxstemnum    = 10**6              # maximum number of stems for each structure
+    maxstemnum    = None               # maximum number of stems for each structure
 
     threads       = os.cpu_count()     # Number of cpus to use
     byseq         = False              # Parallelize by input sequences, not by structure pool
 
-    rankbydiff     = False             # Output diverse structures first
     rankby         = "s"               # Rank by, r / s / rs / dr / ds / drs, r=reactscore,s=structscore,d=rankbydiff
     evalonly       = False             # Just evaluate the reference and do not predict anything
     hardrest       = False             # Force bp-restraints into predicted structures 
     interchainonly = False             # Forbid intra-chain base pairs
 
     toplim        = 5                  # Top-N to print
-    outplimset    = False              # if the user specified the outplim value 
-    outplim       = toplim             # Top-N structs used for metrics calculations if reference
+    outplim       = None               # Top-N structs used for metrics calculations if reference
     conslim       = 1                  # Top-N structs used for consensus
     poollim       = 1000               # Maximum number of structures allowed to populate the current
                                        # structure pool (if exceeded, no bifurcation will occur anymore)
@@ -517,44 +923,22 @@ if __name__ == "__main__":
         elif arg.lower().startswith("ff=") or\
            arg.lower().startswith("fileformat="):
             fileformat = arg.split('=', 1)[1].lower()
-            assert fileformat in {'unknown','fasta','default','stockholm','clustal'},\
-            "Wrong fileformat, choose one of these: default,fasta,stockholm,clustal"
         # configfile
         elif arg.lower().startswith("c=") or\
            arg.lower().startswith("config="):
             configfile = arg.split('=', 1)[1]
-            configfileset = True
-            if not os.path.exists(configfile) and os.path.exists(os.path.join(HOME_DIR, configfile+".conf")):
-                configfile = os.path.join(HOME_DIR, configfile+".conf")
-            assert os.path.exists(configfile), "Config file does not exist."
         # inputformat
         elif arg.lower().startswith("if=") or\
              arg.lower().startswith("inputformat="):
             inputformat = arg.split('=', 1)[1].lower()
-            assert ''.join(sorted(inputformat.replace('x',''))) in {"q","fq","qr","qt", "qrt",
-                                                                 "fqr", "fqt", "fqrt"}, \
-                   'Inappropriate inputformat value (subset of "fqrtx" with "q" being mandatory): {}'\
-                   .format(arg.split('=', 1)[1])
         # maxstemnum
         elif arg.lower().startswith("msn=") or\
              arg.lower().startswith("maxstemnum="):
-            try:
-                maxstemnum = int(float(arg.split('=', 1)[1]))
-                assert maxstemnum >= 0
-                maxstemnumset = True
-            except:
-                raise ValueError("Inappropriate maxstemnum value (non-negative integer): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            maxstemnum = arg.split('=', 1)[1]
         # threads
         elif arg.lower().startswith("t=") or\
              arg.lower().startswith("threads="):
-            try:
-                threads = int(float(arg.split('=', 1)[1]))
-                threads = max(1, threads)
-                threads = min(threads, os.cpu_count())
-            except:
-                raise ValueError("Inappropriate threads value (integer): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            threads = arg.split('=', 1)[1]
         # byseq
         elif arg.lower() in {"bs", "byseq"}:
             byseq = True
@@ -562,9 +946,6 @@ if __name__ == "__main__":
         elif arg.lower().startswith("rb=") or\
              arg.lower().startswith("rankby="):
             rankby = ''.join(sorted(arg.split('=', 1)[1].lower()))
-            assert rankby in {"r", "s", "rs", "dr", "ds", "drs"}, \
-                   'Inappropriate rankby value (r/s/rs/dr/ds/drs): {}'\
-                   .format(arg.split('=', 1)[1])
         # evalonly
         elif arg.lower() in {"eo", "evalonly"}:
             evalonly = True
@@ -577,50 +958,23 @@ if __name__ == "__main__":
         # toplim
         elif arg.lower().startswith("tl=") or\
              arg.lower().startswith("toplim="):
-            try:
-                toplim = int(float(arg.split('=', 1)[1]))
-                assert toplim > 0
-                if not outplimset:
-                    outplim = toplim
-            except:
-                raise ValueError("Inappropriate toplim value (positive integer): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            toplim = arg.split('=', 1)[1]
         # outplim
         elif arg.lower().startswith("ol=") or\
              arg.lower().startswith("outplim="):
-            try:
-                outplim = int(float(arg.split('=', 1)[1]))
-                assert outplim > 0
-                outplimset = True
-            except:
-                raise ValueError("Inappropriate outplim value (positive integer): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            outplim = arg.split('=', 1)[1]
         # conslim
         elif arg.lower().startswith("cl=") or\
              arg.lower().startswith("conslim="):
-            try:
-                conslim = int(float(arg.split('=', 1)[1]))
-                assert conslim > 0
-            except:
-                raise ValueError("Inappropriate conslim value (positive integer): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            conslim = arg.split('=', 1)[1]
         # poollim
         elif arg.lower().startswith("pl=") or\
              arg.lower().startswith("poollim="):
-            try:
-                poollim = int(float(arg.split('=', 1)[1]))
-                assert poollim > 0
-            except:
-                raise ValueError("Inappropriate poollim value (positive integer): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            poollim = arg.split('=', 1)[1]
         # reactformat
         elif arg.lower().startswith("rf=") or\
              arg.lower().startswith("reactformat="):
             reactformat = arg.split('=', 1)[1]
-            assert reactformat in {"3", "10", "26"},\
-                   "Inappropriate reactformat value (3/10/26): {}"\
-                   .format(arg.split('=', 1)[1])
-            reactformat = int(float(reactformat))
         # alignment
         elif arg.lower() in {"a", "ali", "alignment"}:
             alignment = True
@@ -630,23 +984,14 @@ if __name__ == "__main__":
              arg.lower().startswith("levellim=") or\
              arg.lower().startswith("levlimit=") or\
              arg.lower().startswith("levellimit="):
-            try:
-                levellimit = int(float(arg.split('=', 1)[1]))
-            except:
-                raise ValueError("Inappropriate levellimit value (integer): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            levellimit = arg.split('=', 1)[1]
         # freqlimit
         elif arg.lower().startswith("fl=") or\
              arg.lower().startswith("freqlim=") or\
              arg.lower().startswith("freqlimit=") or\
              arg.lower().startswith("frequencylim=") or\
              arg.lower().startswith("frequencylimit="):
-            try:
-                freqlimit = float(arg.split('=', 1)[1])
-                assert 0 <= freqlimit <= 1
-            except:
-                raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            freqlimit = arg.split('=', 1)[1]
         # verbose
         elif arg.lower() in {"v", "verbose"}:
             verbose = True
@@ -656,12 +1001,7 @@ if __name__ == "__main__":
         # step3
         elif arg.lower().startswith("s3=") or\
              arg.lower().startswith("step3="):
-            try:
-                step3 = arg.split('=', 1)[1].lower()
-                assert step3 in {'u', 'i', '1', '2'}
-            except:
-                raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
-                                 .format(arg.split('=', 1)[1]))
+            step3 = arg.split('=', 1)[1]
         else:
             if len(args) == 1:
                 if os.path.exists(arg):
@@ -674,145 +1014,14 @@ if __name__ == "__main__":
                 print("Unrecognized option: {}".format(arg))
 
     print(inputfile)
-    assert os.path.exists(str(inputfile)) or inputseq, "Input file does not exist."
 
-    # Process rankby
-    if "d" in rankby:
-        rankbydiff = True
-    if "r" in rankby and "s" in rankby:
-        rankby = (0, 2, 1)
-    elif "r" in rankby:
-        rankby = (2, 0, 1)
-    elif "s"  in rankby:
-        rankby = (1, 2, 0)
-
-    # If alignment mode - use ali.conf by default
-    if alignment and not configfileset:
-        configfile = os.path.join(HOME_DIR, "ali.conf")
-
-    # Parse config
-    paramsetnames, paramsets = ParseConfig(configfile)
-
-    # prepare 500.conf & 1000.conf for autoconfig
-    if not configfileset:
-        paramsetnames500,  paramsets500  = ParseConfig(configfile500)
-        paramsetnames1000, paramsets1000 = ParseConfig(configfile1000)
-
-    # Overwrite maxstemnum
-    if maxstemnumset:
-        for i in range(len(paramsets)):
-            paramsets[i]['maxstemnum'] = maxstemnum
-        if not configfileset:
-            for i in range(len(paramsets500)):
-                paramsets500[i]['maxstemnum'] = maxstemnum
-            for i in range(len(paramsets1000)):
-                paramsets1000[i]['maxstemnum'] = maxstemnum
-
-    # Running single-sequence SQUARNA
-    if not alignment:
-        # Parallelizing over a structure pool for each sequence
-        if not byseq:
-            for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat,
-                                                             fmt = fileformat, ignore = ignorewarn)[0]:
-                # no autoconfig    
-                if configfileset:
-                    theparamsetnames, theparamsets = paramsetnames, paramsets
-                # apply autoconfig
-                else:
-                    theparamsetnames, theparamsets = paramsetnames, paramsets
-                    if len(seq) >= 500:
-                        theparamsetnames, theparamsets = paramsetnames500, paramsets500
-                    if len(seq) >= 1000:
-                        theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
-                
-                RunSQRNdbnseq(name, seq, reacts, restrs, ref, theparamsetnames,
-                              theparamsets, threads, rankbydiff, rankby,
-                              hardrest, interchainonly, toplim, outplim,
-                              conslim, reactformat, evalonly, poollim)
-        # Parallelizing over input sequences
-        else:
-            batchsize = threads*10
-            with Pool(threads) as pool:
-                inputs_batch = []
-                for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat,
-                                                                 fmt = fileformat, ignore = ignorewarn)[0]:
-                    # no autoconfig    
-                    if configfileset:
-                        theparamsetnames, theparamsets = paramsetnames, paramsets
-                    # apply autoconfig
-                    else:
-                        theparamsetnames, theparamsets = paramsetnames, paramsets
-                        if len(seq) >= 500:
-                            theparamsetnames, theparamsets = paramsetnames500, paramsets500
-                        if len(seq) >= 1000:
-                            theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
-                    # Collecting inputs
-                    inputs_batch.append((name, seq, reacts, restrs, ref, theparamsetnames,
-                                  theparamsets, threads, rankbydiff, rankby,
-                                  hardrest, interchainonly, toplim, outplim,
-                                  conslim, reactformat, evalonly, poollim))
-                    # Process a batch once we have batchsize sequences
-                    if len(inputs_batch) >= batchsize:
-                        for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
-                            print(output, end = '')
-                        inputs_batch = []
-                # last batch (if anything left)
-                if inputs_batch:
-                    for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
-                        print(output, end = '')
-                        
-
-    else: # Running alignment-based SQUARNA
-
-        # Get the processed sequences
-        objs, fmt = ParseInput(inputseq, inputfile, inputformat,
-                               fmt = fileformat, ignore = ignorewarn)
-
-        # Get the default input lines
-        defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
-                                                                  returndefaults = True,
-                                                                  fmt = fmt,
-                                                                  ignore = ignorewarn)[0]
-
-        objs = [obj for obj in objs] # Unpack generator (in case of fasta/default format)
-
-        # Length checks
-        N = len(objs[0][1])
-        assert all(len(obj[1]) == N for obj in objs),\
-               'The sequences are not aligned'
-
-        # Check reactivities for consistency and resolve them if needed
-        try:
-            if defReactivities:
-                if len(defReactivities) != N:
-                    defReactivities = list(map(float, defReactivities.split()))
-                else:
-                    defReactivities = [ReactDict[char] for char in defReactivities]
-
-            assert not defReactivities or len(defReactivities) == N
-        except:
-            raise ValueError('Inappropriate default reactivities line:\n {}'\
-                             .format(defReactivities))
-
-        # Assert restraints and reference are of the consistent length
-        # or empty line / None
-        assert not defRestraints or len(defRestraints) == N,\
-               'Inappropriate default restraints line:\n {}'\
-               .format(defRestraints)
-        assert not defReference or len(defReference) == N,\
-               'Inappropriate default reference line:\n {}'\
-               .format(defReference)
-
-        # default levellimit
-        if levellimit is None:
-            levellimit = 3 - int(N > 500)
-
-        # Run the alignment-based predictions
-        RunSQRNdbnali(objs, defReactivities, defRestraints, defReference,
-                      levellimit, freqlimit, verbose, step3,
-                      paramsetnames, paramsets, threads, rankbydiff, rankby,
-                      hardrest, interchainonly, toplim, outplim,
-                      conslim, reactformat, poollim)
+    Predict(inputfile, fileformat, inputseq,
+            configfile, inputformat, maxstemnum,
+            threads, byseq, 
+            rankby, evalonly, hardrest,
+            interchainonly, toplim, outplim, conslim,
+            poollim, reactformat, alignment, levellimit,
+            freqlimit, verbose, step3, ignorewarn, HOME_DIR)
         
 
 

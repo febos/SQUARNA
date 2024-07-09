@@ -13,6 +13,8 @@ outp*.tmp
 tmp/*
 *test.py
 nohup*.out
+demo.txt
+demo_ali.txt
 
 # Distribution / packaging
 .Python
