@@ -19,6 +19,10 @@ Clone the GitHub repository by typing:
 SQUARNA requires Python3 of at least 3.8 version along with
 a (hopefully) arbitrary version of NumPy library. 
 
+To use as a Python function:
+
+	pip install SQUARNA
+
 # Usage examples
 
     1) python3 SQUARNA.py i=examples/seq_input.fas c=alt.conf
