@@ -2,6 +2,8 @@
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
+## Check out [our other developments](https://github.com/febos/wiki)
+
 # Usage
 
 pathto/python3 pathto/SQUARNA.py i=inputfile [OPTIONS]
