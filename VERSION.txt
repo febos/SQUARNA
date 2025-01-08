@@ -1,16 +1,22 @@
 
-version 1.05 [09.07.2024] - introduced built-in configs
-							implemented SQUARNA as a Python function
-							added demo.ipynb
+version 1.9  [08.01.2025] - implemented new algorithms for single-sequence SQUARNA:
+				Edmonds algorithm [10.6028/jres.069B.013];
+				Hungarian algorithm [10.1002/nav.3800020109];
+				Nussinov algorithm [10.1073/pnas.77.11.6309];
+				see the "config" parameter description in the README.
+
+version 1.05 [09.07.2024] - introduced built-in configs;
+			    implemented SQUARNA as a Python function;
+			    added demo.ipynb.
 
 version 1.03 [06.05.2024] - added "ignore" parameter to ignore warnings.
 
 version 1.02 [27.04.2024] - added "fileformat" parameter, see README.
 
 version 1.01 [02.04.2024] - adjusted for very large inputs in the single-sequence mode: 
-						    handle fasta/default input formats on the fly, not storing them; 
-						    added byseq parameter for parallelizing over input sequences; 
-						    added fastest.conf for fast crude predictions;
-						    see the usage example #6.
+				handle fasta/default input formats on the fly, not storing them; 
+				added byseq parameter for parallelizing over input sequences; 
+				added fastest.conf for fast crude predictions;
+				see the usage example #6.
 version 1.0c [23.03.2024] - added a benchmark in terms of covarying base pairs.
 

@@ -14,7 +14,8 @@ except:
 def ParseConfig(configfile):
     """Parses the config file"""
     # Set of mandatory parameters
-    params = {"bpweights",
+    params = {"algorithms",
+              "bpweights",
               "suboptmax",
               "suboptmin",
               "suboptsteps",
@@ -33,7 +34,7 @@ def ParseConfig(configfile):
 
     with open(configfile) as file:
         for line in file:
-            # Ignore everythin after # symbol
+            # Ignore everything after # symbol
             cleanline = line.split('#', 1)[0].strip()
             # If non-empty line
             if cleanline:
@@ -57,6 +58,8 @@ def ParseConfig(configfile):
                         for kv in val.split(','):
                             k, v = kv.strip().split('=')
                             paramset[key][k] = float(v)
+                    elif key == "algorithms":
+                        paramset[key] = set(val.split(','))
                     # all the other params are simply float values
                     else:
                         paramset[key] = float(val)
@@ -383,7 +386,8 @@ def byseqRunSQRNdbnseq(args):
     name, seq, reacts, restrs, ref, theparamsetnames,\
     theparamsets, threads, rankbydiff, rankby,\
     hardrest, interchainonly, toplim, outplim,\
-    conslim, reactformat, evalonly, poollim = args
+    conslim, reactformat, evalonly, poollim, entropy, \
+    algos, levellimit = args
 
     # We use a printing buffer so that the output is ordered
     # instead of being mixed up due to parallelization
@@ -393,14 +397,15 @@ def byseqRunSQRNdbnseq(args):
                       theparamsets, threads, rankbydiff, rankby,
                       hardrest, interchainonly, toplim, outplim,
                       conslim, reactformat, evalonly, poollim,
-                      mp = False, sink = buffer)
+                      mp = False, sink = buffer, entropy = entropy,
+                      algos = algos, levellimit = levellimit)
         return buffer.getvalue()
 
 
 def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             configfile = None, inputformat = "qtrf", maxstemnum = None,
-            threads = os.cpu_count(), byseq = False, 
-            rankby = "s", evalonly = False, hardrest = False,
+            threads = os.cpu_count(), byseq = False, algorithms = '',
+            entropy = False, rankby = "s", evalonly = False, hardrest = False,
             interchainonly = False, toplim = 5, outplim = None, conslim = 1,
             poollim = 1000, reactformat = 3, alignment = False, levellimit = None,
             freqlimit = 0.35, verbose = False, step3 = "u", ignorewarn = False,
@@ -438,6 +443,10 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 500 (500.conf) is recommended for RNAs longer 500 nts.
                 1000 (1000.conf) is recommended for RNAs longer 1000 nts.
                 sk (sk.conf) is recommended with SHAPE data input.
+                c=nussinov (nussinov.conf) - Nussinov algorithm config.
+                c=hungarian (hungarian.conf) - Hungarian algorithm config.
+                c=edmonds (edmonds.conf) - Edmonds algorithm config.
+                c=greedy (greedy.conf) - Greedy algorithm config.
             inputformat : string
                 The order of the lines in the input file. By default, SQUARNA 
                 reads the first line of the entry (among the lines after 
@@ -460,6 +469,16 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 is parallelized over the structure pool within each sequence.
                 Parallelizing over input sequences is recommended for 
                 large input files along with fast configs.
+            algorithms: string
+                The algorithms to be used in single-sequence predictions.
+                By default, the algorithms are derived from the config file.
+                If the algorithms parameter is specified, it will overwrite the
+                algorithms listed in the config file.
+                The choice should be a subset of the four algorithms:
+                e - Edomnds algorithm [10.6028/jres.069B.013]
+                g - Greedy SQUARNA algorithm [10.1101/2023.08.28.555103]
+                h - Hungarian algorithm [10.1002/nav.3800020109]
+                n - Nussinov algorithm [10.1073/pnas.77.11.6309]
             rankby : string
                 How to rank the predicted structures. rankby should be a subset of
                 letters r, s, and d in any order (r / s / rs / rd / sd / rsd).
@@ -598,6 +617,13 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         raise ValueError("Inappropriate threads value (integer): {}"\
                          .format(threads))
 
+    try:
+        algos = set(algorithms.upper())
+        assert algos <= {'E','G','H','N'}
+    except:
+        raise ValueError('Inappropriate algorithm value (should be subset of "eghn"): {}'\
+                         .format(arg.split('=', 1)[1]))
+
     assert rankby in {"r", "s", "rs", "dr", "ds", "drs"}, \
            'Inappropriate rankby value (r/s/rs/dr/ds/drs): {}'\
            .format(rankby)
@@ -717,8 +743,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 RunSQRNdbnseq(name, seq, reacts, restrs, ref, theparamsetnames,
                               theparamsets, threads, rankbydiff, rankby,
                               hardrest, interchainonly, toplim, outplim,
-                              conslim, reactformat, evalonly, poollim,
-                              sink = write_to)
+                              conslim, reactformat, evalonly, poollim, entropy = entropy,
+                              algos = algos, levellimit = levellimit, sink = write_to)
         # Parallelizing over input sequences
         else:
             batchsize = threads*10
@@ -738,9 +764,10 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                             theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
                     # Collecting inputs
                     inputs_batch.append((name, seq, reacts, restrs, ref, theparamsetnames,
-                                  theparamsets, threads, rankbydiff, rankby,
-                                  hardrest, interchainonly, toplim, outplim,
-                                  conslim, reactformat, evalonly, poollim))
+                                         theparamsets, threads, rankbydiff, rankby,
+                                         hardrest, interchainonly, toplim, outplim,
+                                         conslim, reactformat, evalonly, poollim,
+                                         entropy, algos, levellimit))
                     # Process a batch once we have batchsize sequences
                     if len(inputs_batch) >= batchsize:
                         for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
@@ -802,7 +829,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                       levellimit, freqlimit, verbose, step3,
                       paramsetnames, paramsets, threads, rankbydiff, rankby,
                       hardrest, interchainonly, toplim, outplim,
-                      conslim, reactformat, poollim, sink = write_to)
+                      conslim, reactformat, poollim, entropy = entropy,
+                      algos = algos, sink = write_to)
 
 
 if __name__ == "__main__":
@@ -870,13 +898,17 @@ if __name__ == "__main__":
                                        # step-3 result dbn (alignment mode)
 
     ignorewarn  = False                # Ignore warnings
+    entropy     = False                # Calculate stem matrix entropy
+    algorithms  = ""                   # Single-sequence prediction algorithms
 
 
     # Allow standard parameter input
     formatted_args = []
     cnt = 0
     while cnt < len(args):
-        if args[cnt].lower() in {"-i", "--i", "-input", "--input",
+        if args[cnt].lower() in {"-algo", "--algo", "-algorithm", "--algorithm",
+                                 "-algos", "--algos", "-algorithms", "--algorithms",
+                                 "-i", "--i", "-input", "--input",
                                  "-c", "--c", "-config", "--config",
                                  "-if", "--if", "-inputformat", "--inputformat",
                                  "-rb", "--rb", "-rankby", "--rankby",
@@ -896,6 +928,7 @@ if __name__ == "__main__":
             cnt += 1
         elif args[cnt].lower() in {"-a", "--a", "-ali", "--ali", "-alignment", "--alignment",
                                    "-bs", "--bs", "-byseq", "--byseq",
+                                   "-ent", "--ent", "-entropy", "--entropy",
                                    "-eo", "--eo", "-evalonly", "--evalonly",
                                    "-hr", "--hr", "-hardrest", "--hardrest",
                                    "-iw", "--iw", "-ignore", "--ignore",
@@ -909,6 +942,14 @@ if __name__ == "__main__":
     args = formatted_args
     # Parsing arguments
     for arg in args:
+        # algorithms
+        if arg.lower().startswith("algo=") or\
+             arg.lower().startswith("algos=") or\
+             arg.lower().startswith("algorithm=") or\
+             arg.lower().startswith("algorithms="):
+            if not arg.split('=', 1)[1]:
+                continue
+            algorithms = arg.split('=', 1)[1]
         # inputseq
         if arg.lower().startswith("s=") or\
            arg.lower().startswith("seq=") or\
@@ -998,6 +1039,9 @@ if __name__ == "__main__":
         # ignore
         elif arg.lower() in {"iw", "ignore"}:
             ignorewarn = True
+        # entropy
+        elif arg.lower() in {"ent", "entropy"}:
+            entropy = True
         # step3
         elif arg.lower().startswith("s3=") or\
              arg.lower().startswith("step3="):
@@ -1017,7 +1061,7 @@ if __name__ == "__main__":
 
     Predict(inputfile, fileformat, inputseq,
             configfile, inputformat, maxstemnum,
-            threads, byseq, 
+            threads, byseq, algorithms, entropy,
             rankby, evalonly, hardrest,
             interchainonly, toplim, outplim, conslim,
             poollim, reactformat, alignment, levellimit,

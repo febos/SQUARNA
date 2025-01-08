@@ -236,6 +236,75 @@ def PredictSQUARNA(seq, conf = "def.conf", top = 1):
     return res[:top]
 
 
+def PredictSQUARNAE(seq):
+    return PredictSQUARNA(seq, conf="edmonds.conf")
+
+def PredictSQUARNAG(seq):
+    return PredictSQUARNA(seq, conf="greedy.conf")
+
+def PredictSQUARNAE5(seq):
+    return PredictSQUARNA(seq, conf="edmonds.conf", top = 5)
+
+def PredictSQUARNAGE(seq):
+    return PredictSQUARNA(seq, algos="ge")
+
+def PredictSQUARNAGE5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="ge")
+
+def PredictSQUARNAn(seq):
+    return PredictSQUARNA(seq, conf="nussinov.conf")
+
+def PredictSQUARNAn5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="n")
+
+def PredictSQUARNAGn(seq):
+    return PredictSQUARNA(seq, algos="gn")
+
+def PredictSQUARNAGn5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="gn")
+
+def PredictSQUARNAghn(seq):
+    return PredictSQUARNA(seq, algos="ghn")
+
+def PredictSQUARNAghn5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="ghn")
+
+def PredictSQUARNAghe(seq):
+    return PredictSQUARNA(seq, algos="ghe")
+
+def PredictSQUARNAghe5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="ghe")
+
+def PredictSQUARNAgne(seq):
+    return PredictSQUARNA(seq, algos="gne")
+
+def PredictSQUARNAgne5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="gne")
+
+def PredictSQUARNAghne(seq):
+    return PredictSQUARNA(seq, algos="ghne")
+
+def PredictSQUARNAghne5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="ghne")
+
+def PredictSQUARNAhne(seq):
+    return PredictSQUARNA(seq, algos="hne")
+
+def PredictSQUARNAhne5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="hne")
+
+def PredictSQUARNAh(seq):
+    return PredictSQUARNA(seq, conf="hungarian.conf")
+
+def PredictSQUARNAh5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="h")
+
+def PredictSQUARNAGh(seq):
+    return PredictSQUARNA(seq, algos="gh")
+
+def PredictSQUARNAGh5(seq):
+    return PredictSQUARNA(seq, top = 5, algos="gh")
+
 def PredictSQUARNA5(seq):
     return PredictSQUARNA(seq, top = 5)
 
@@ -247,6 +316,12 @@ def PredictSQUARNAalt(seq):
 
 def PredictSQUARNAalt5(seq):
     return PredictSQUARNA(seq, conf = "alt.conf", top = 5)
+
+def PredictSQUARNAnew(seq):
+    return PredictSQUARNA(seq, conf = "newdef.conf")
+
+def PredictSQUARNAnew5(seq):
+    return PredictSQUARNA(seq, conf = "newdef.conf", top = 5)
 
 def PredictSQUARNAaltN(seq):
     return PredictSQUARNA(seq, conf = "alt.conf", top = 10**6)
@@ -299,6 +374,31 @@ if __name__ == "__main__":
                            "SPOT-RNA":PredictSPOTRNA,
                            "SQUARNA": PredictSQUARNA,
                            "SQUARNA5": PredictSQUARNA5,
+                           "SQUARNAnew": PredictSQUARNAnew,
+                           "SQUARNAnew5": PredictSQUARNAnew5,
+                           "SQUARNAE": PredictSQUARNAE,
+                           "SQUARNAG": PredictSQUARNAG,
+                           "SQUARNAE5": PredictSQUARNAE5,
+                           "SQUARNAGE": PredictSQUARNAGE,
+                           "SQUARNAGE5": PredictSQUARNAGE5,
+                           "SQUARNAn": PredictSQUARNAn,
+                           "SQUARNAn5": PredictSQUARNAn5,
+                           "SQUARNAGn": PredictSQUARNAGn,
+                           "SQUARNAGn5": PredictSQUARNAGn5,
+                           "SQUARNAh": PredictSQUARNAh,
+                           "SQUARNAh5": PredictSQUARNAh5,
+                           "SQUARNAGh": PredictSQUARNAGh,
+                           "SQUARNAGh5": PredictSQUARNAGh5,
+                           "SQUARNAghn": PredictSQUARNAghn,
+                           "SQUARNAghn5": PredictSQUARNAghn5,
+                           "SQUARNAghe": PredictSQUARNAghe,
+                           "SQUARNAghe5": PredictSQUARNAghe5,
+                           "SQUARNAgne": PredictSQUARNAgne,
+                           "SQUARNAgne5": PredictSQUARNAgne5,
+                           "SQUARNAghne": PredictSQUARNAghne,
+                           "SQUARNAghne5": PredictSQUARNAghne5,
+                           "SQUARNAhne": PredictSQUARNAhne,
+                           "SQUARNAhne5": PredictSQUARNAhne5,
                            "SQUARNAN": PredictSQUARNAN,
                            "SQUARNAalt": PredictSQUARNAalt,
                            "SQUARNAalt5": PredictSQUARNAalt5,

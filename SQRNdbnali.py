@@ -180,8 +180,8 @@ def Metrics(ref, pred):
     if not ref:
         return [np.nan]*6
 
-    rb = set(DBNToPairs(ref))   # reference base pairs
-    pb  = set(DBNToPairs(pred)) # predicted base pairs
+    rb  = set(DBNToPairs(ref))   # reference base pairs
+    pb  = set(DBNToPairs(pred))  # predicted base pairs
     TP  = len(pb & rb)
     FP  = len(pb - rb)
     FN  = len(rb - pb)
@@ -231,7 +231,8 @@ def mpRunSQRNdbnseq(args):
        over alternative structures within each sequence prediction"""
     obj, paramsetnames, paramsets, threads,\
     rankbydiff, rankby, hardrest, interchainonly,\
-    toplim, outplim, conslim, reactformat, verbose, smat, poollim = args
+    toplim, outplim, conslim, reactformat, verbose, \
+    smat, poollim, entropy, algos = args
 
     evalonly = False
 
@@ -245,7 +246,8 @@ def mpRunSQRNdbnseq(args):
                                                  paramsets, threads, rankbydiff, rankby,
                                                  hardrest, interchainonly, toplim, outplim,
                                                  conslim, reactformat, evalonly, poollim,
-                                                 mp = False, sink = buffer, stemmatrix = smat)
+                                                 mp = False, sink = buffer, stemmatrix = smat,
+                                                 entropy = entropy, algos = algos)
         return cons, buffer.getvalue()
 
 
@@ -314,7 +316,8 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                   levellimit, freqlimit, verbose, step3,
                   paramsetnames, paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
-                  conslim, reactformat, poollim, sink = sys.stdout):
+                  conslim, reactformat, poollim, entropy = False,
+                  algos = {'G',}, sink = sys.stdout):
 
     # Alignment length is derived as the length
     # of the first aligned sequence
@@ -363,7 +366,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
             inputs = [(obj, paramsetnames, paramsets, threads,
                        rankbydiff, rankby, hardrest, interchainonly,
                        toplim, outplim, conslim, reactformat,
-                       verbose, smat, poollim) for obj in objs]
+                       verbose, smat, poollim, entropy, algos) for obj in objs]
             for cons, output in pool.imap(mpRunSQRNdbnseq, inputs):
                 if verbose:
                     print(output, end = '', file = sink)

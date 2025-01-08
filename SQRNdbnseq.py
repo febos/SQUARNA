@@ -3,6 +3,8 @@ import numpy as np
 from multiprocessing import Pool
 import sys
 
+import SQRNalgos
+
 # Gapped values
 GAPS = {'-', '.', '~'}
 # Separator values (~chain breaks)
@@ -468,6 +470,106 @@ def AnnotateStems(bpboolmatrix, bpscorematrix, rbps,
     return stems
 
 
+def PairsToStems(sorted_pairs):
+
+    sp = sorted_pairs
+
+    if len(sp) < 2:
+        if not sp:
+            return []
+        else:
+            return [[[sp[0],], 1],]
+
+    stems = [[[sp[0],], 1],]
+
+    for i in range(1, len(sp)):
+
+        if not (sp[i-1][0] + 1 == sp[i][0] and sp[i-1][1] == sp[i][1] + 1):
+            stems.append([[], 0])
+        stems[-1][0].append(sp[i])
+        stems[-1][1] = len(stems[-1][0])
+
+    return stems
+
+
+def Entropy(bpboolmatrix, bpscorematrix, restbps,
+            rstems, minlen, minscore):
+    """return mean entropy of the stem matrix"""
+    def EntropyRow(row):
+        if row.sum():
+            probs = [p for p in row / row.sum() if p]
+            return sum(-(probs * np.log2(probs)))
+        else:
+            return 0
+
+    stems = AnnotateStems(bpboolmatrix, bpscorematrix, restbps,
+                          rstems, minlen, minscore)
+
+    stemmatrix = np.zeros(bpboolmatrix.shape)
+    N = stemmatrix.shape[0]
+    for stem in stems:
+        score = stem[2]
+        for v,w in stem[0]:
+            stemmatrix[v,w] = score
+            stemmatrix[w,v] = score
+
+    ent = 0
+    for i in range(N):
+        ent += EntropyRow(stemmatrix[i,:])
+    
+    return str(round(ent/N,3))
+
+
+def RunAlgo(bpboolmatrix, bpscorematrix, restbps,
+            rstems, minlen, minscore, algo = "E",
+            levellimit = 3):
+    """Return single-sequence predictions by a specific algorithm"""
+
+    stems = AnnotateStems(bpboolmatrix, bpscorematrix, restbps,
+                          rstems, minlen, minscore)
+
+    stemset = []
+    pairs   = []
+
+    N = bpboolmatrix.shape[0]
+
+    if algo == "E":
+        pairs = SQRNalgos.Edmonds(stems)
+
+    if algo == "N":
+        pairs = SQRNalgos.Nussinov(stems, N)
+
+    if algo == "H":
+        pairs = SQRNalgos.Hungarian(stems, N)
+
+    # Removing partial stems below thresholds
+    stems = PairsToStems(sorted([(min(v,w),max(v,w)) for v,w in pairs]))
+
+    for stem in stems:
+        
+        score = sum(bpscorematrix[v,w] for v,w in stem[0])
+        if score >= minscore and stem[1] >= minlen:
+            stemset.append(stem + [score, score, '']) # for consistency with G-algo finstemsets
+
+    # Removing pseudoknots of the order higher than the levellimit
+    pairs   = [bp for stem in stemset for bp in stem[0]]
+    pairs   = DBNToPairs(PairsToDBN(pairs, N, levellimit = levellimit))
+    levels  = PairsToDBN(pairs, N, returnlevels = True)
+    stemset = []
+    stems = PairsToStems(sorted([(min(v,w),max(v,w)) for v,w in pairs]))
+
+    for index,stem in enumerate(stems):
+       
+        # & Removing short pseudoknotted stems
+        if levels[stem[0][0]] > 1 and stem[1] < 4: # remove short pseudoknotted stems
+            continue
+        score = sum(bpscorematrix[v,w] for v,w in stem[0])
+        if score >= minscore and stem[1] >= minlen:
+            stemset.append(stem + [score, score, '']) # for consistency with G-algo finstemsets
+            
+    return stemset
+
+
 def IsGNRA(seq):
     """Whether the input sequence is of GNRA pattern"""
     if len(seq) != 4:
@@ -612,6 +714,11 @@ def ScoreStems(seq, stems, rstems,
         descr += ",lf={},rf={}".format(round(loopfactor,2),
                                        round(reactfactor,2))
         """
+
+        # Forbid lone stems of two bps
+        if not goodloop and not goodloopout and len(bps) < 3:
+            finalscore = -1
+        
         stem.append(finalscore)
         stem.append(descr)
 
@@ -728,7 +835,7 @@ def ConsensusStemSet(stemsets):
 
 def ScoreStruct(seq, stemset, reacts):
     """ Return the overall structure score based on the stemset"""
-    bpscores = {"GU": -1.0,
+    bpscores = {"GU": -0.5,
                 "AU":  1.5,
                 "GC":  4.0,
                }
@@ -816,28 +923,6 @@ def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
     return [x[:-1] for x in finstemsets]  
 
 
-def PairsToStems(sorted_pairs):
-
-    sp = sorted_pairs
-
-    if len(sp) < 2:
-        if not sp:
-            return []
-        else:
-            return [[[sp[0],], 1],]
-
-    stems = [[[sp[0],], 1],]
-
-    for i in range(1, len(sp)):
-
-        if not (sp[i-1][0] + 1 == sp[i][0] and sp[i-1][1] == sp[i][1] + 1):
-            stems.append([[], 0])
-        stems[-1][0].append(sp[i])
-        stems[-1][1] = len(stems[-1][0])
-
-    return stems
-
-
 def ReferenceScores(seq, ref, reacts):
     """Returns the three scores for the reference structure"""
 
@@ -857,7 +942,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                paramsets = [], conslim = 1, toplim = 5,
                hardrest = False, rankbydiff = False,
                rankby = (0, 2, 1), interchainonly = False,
-               threads = 1, mp = True, stemmatrix = None, poollim = 1000):
+               threads = 1, mp = True, stemmatrix = None, poollim = 1000,
+               entropy = False, algos = set(), levellimit = None):
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     reacts == list of reactivities (values from 0 to 1)
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -872,6 +958,10 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     mp == whether to use multiprocessing at all
     stemmatrix == if specified the bpscorematrix will be weighted with the stemmatrix
                   that was derived from the sequence alignment
+    poollim == limit for bifurcations - stop keeping sub-optimal stems if we have more than poollim structures
+    entropy == return mean entropy of the stem matrix under the first paramset instead of predictions
+    algos   == single-sequence prediction algorithms to use
+    levellimit == pseudoknot order limit (non-pseudoknotted structure is level = 1)
     SQRNdbnseq returns a list of alternative predicted secondary structures in dbn format"""
 
     assert set(rankby) == {0, 1, 2} and len(rankby) == 3, "Invalid ranking indices"
@@ -916,6 +1006,11 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     finfinstemsets = []
     seen_structures = set() # set of bp-sets (to avoid repeats in finfinstemsets)
 
+    if levellimit is None:
+        levellimit = 3 - int(len(shortseq) > 500)
+
+    defalgos = {a for a in algos}
+
     for psi, paramset in enumerate(paramsets):
 
         bpweights         = paramset["bpweights"]
@@ -930,6 +1025,10 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         orderpenalty      = paramset["orderpenalty"]
         maxstemnum        = paramset["maxstemnum"]
         loopbonus         = paramset["loopbonus"]
+
+        # use the algorithms from the config file if not specified by the user
+        if not defalgos:
+            algos = paramset['algorithms']
 
         # starting subopt value
         cursubopt = suboptmin
@@ -948,20 +1047,80 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         if stemmatrix is not None:
             bpscorematrix = bpscorematrix * shortsmat
 
-        # List of lists of stems (each stem list is a currently predicted secondary structure
-        curstemsets = [[],]
+        if entropy:
+            return Entropy(bpboolmatrix, bpscorematrix, rbps,
+                           [], minlen, minbpscore)
 
         # List of finalized stem lists
         finstemsets = []
 
-        # Starting with a single empty structure
-        cursize = len(curstemsets)
+        for algo in algos: # Run Nissinov/Hungarian/Edmonds
+            if algo == "G": # The Greedy algorithm is performed below
+                continue
+            stemset = RunAlgo(bpboolmatrix, bpscorematrix, rbps,
+                              [], minlen, minbpscore, algo = algo,
+                              levellimit = levellimit)
+            finstemsets.append(stemset)
 
-        if mp: # multiprocessing version
-            with Pool(threads) as pool:
+        if "G" in algos:
 
+            # List of lists of stems (each stem list is a currently predicted secondary structure
+            curstemsets = [[],]
+
+            # Starting with a single empty structure
+            cursize = len(curstemsets)
+
+            if mp: # multiprocessing version
+                with Pool(threads) as pool:
+
+                    # while list of intermediate stem lists is not empty
+                    while curstemsets:
+                        # Each time we diverge - cursubopt is increased by suboptinc
+                        if len(curstemsets) > cursize:
+                            cursize = len(curstemsets)
+                            if cursubopt < suboptmax:
+                                cursubopt += suboptinc
+
+                        # filtering by len(stems) == maxstemnum
+                        newcurstemsets = []
+                        for stems in curstemsets:
+                            if len(stems) == maxstemnum:
+                                finstemsets.append(stems)
+                            else:
+                                newcurstemsets.append(stems)
+                        curstemsets = newcurstemsets
+
+                        # new iteration
+                        newcurstemsets = []
+
+                        inputs = ((shortseq, stems,
+                                   bpboolmatrix, bpscorematrix,
+                                   shortreacts, rbps, 
+                                   cursubopt, minlen, minbpscore, 
+                                   minfinscore, bracketweight,
+                                   distcoef, orderpenalty,
+                                   loopbonus,
+                                   ) for stems in curstemsets)
+
+                        # new optimal stems based on the current stem list 
+                        for newstems, stems in pool.imap(mpOptimalStems, inputs):
+
+                            # append new intermediate stem lists
+                            if newstems:
+                                stopper =  1 if cursize >= poollim else len(newstems)
+                                for newstem in newstems[:stopper]:
+                                    newcurstemsets.append(stems + [newstem,])
+                            # if no newstems returned - the stem list is considered final
+                            else:
+                                finstemsets.append(stems)
+
+                        # update the current stem lists
+                        curstemsets = newcurstemsets
+
+            else: # non-multiprocessing version
                 # while list of intermediate stem lists is not empty
                 while curstemsets:
+
                     # Each time we diverge - cursubopt is increased by suboptinc
                     if len(curstemsets) > cursize:
                         cursize = len(curstemsets)
@@ -980,17 +1139,15 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                     # new iteration
                     newcurstemsets = []
 
-                    inputs = ((shortseq, stems,
-                               bpboolmatrix, bpscorematrix,
-                               shortreacts, rbps, 
-                               cursubopt, minlen, minbpscore, 
-                               minfinscore, bracketweight,
-                               distcoef, orderpenalty,
-                               loopbonus,
-                               ) for stems in curstemsets)
+                    for stems in curstemsets:
 
-                    # new optimal stems based on the current stem list 
-                    for newstems, stems in pool.imap(mpOptimalStems, inputs):
+                        # new optimal stems based on the current stem list
+                        newstems = OptimalStems(shortseq, stems, bpboolmatrix,
+                                                bpscorematrix, shortreacts, rbps,
+                                                cursubopt, minlen, minbpscore, 
+                                                minfinscore, bracketweight,
+                                                distcoef, orderpenalty,
+                                                loopbonus)
 
                         # append new intermediate stem lists
                         if newstems:
@@ -1003,50 +1160,6 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
                     # update the current stem lists
                     curstemsets = newcurstemsets
-
-        else: # non-multiprocessing version
-            # while list of intermediate stem lists is not empty
-            while curstemsets:
-
-                # Each time we diverge - cursubopt is increased by suboptinc
-                if len(curstemsets) > cursize:
-                    cursize = len(curstemsets)
-                    if cursubopt < suboptmax:
-                        cursubopt += suboptinc
-
-                # filtering by len(stems) == maxstemnum
-                newcurstemsets = []
-                for stems in curstemsets:
-                    if len(stems) == maxstemnum:
-                        finstemsets.append(stems)
-                    else:
-                        newcurstemsets.append(stems)
-                curstemsets = newcurstemsets
-
-                # new iteration
-                newcurstemsets = []
-
-                for stems in curstemsets:
-
-                    # new optimal stems based on the current stem list
-                    newstems = OptimalStems(shortseq, stems, bpboolmatrix,
-                                            bpscorematrix, shortreacts, rbps,
-                                            cursubopt, minlen, minbpscore, 
-                                            minfinscore, bracketweight,
-                                            distcoef, orderpenalty,
-                                            loopbonus)
-
-                    # append new intermediate stem lists
-                    if newstems:
-                        stopper =  1 if cursize >= poollim else len(newstems)
-                        for newstem in newstems[:stopper]:
-                            newcurstemsets.append(stems + [newstem,])
-                    # if no newstems returned - the stem list is considered final
-                    else:
-                        finstemsets.append(stems)
-
-                # update the current stem lists
-                curstemsets = newcurstemsets
 
         for finstemset in finstemsets:
 
@@ -1134,13 +1247,22 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
                   conslim, reactformat, evalonly, poollim = 1000,
-                  mp = True, sink = sys.stdout, stemmatrix = None,):
+                  mp = True, sink = sys.stdout, stemmatrix = None,
+                  entropy = False, algos = {'G',}, levellimit = None):
     """Main-like function;
        sink param is standard system output by default,
        we need it to use the buffer in alignment-mode parallelizations"""
 
     print(name, file = sink)
-    print(sequence, file = sink)
+
+    if entropy:
+        entropy_val = SQRNdbnseq(sequence, reactivities, restraints, reference,
+                                 paramsets, conslim, toplim, hardrest,
+                                 rankbydiff, rankby, interchainonly, threads, mp, stemmatrix,
+                                 poollim, entropy = True, algos = algos)
+        print('\t'.join([sequence,"entropy:",entropy_val]), file = sink)
+    else:
+        print(sequence, file = sink)
 
     # Printing everything observed in the input
     if reactivities:
@@ -1173,7 +1295,7 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
                             paramsets, conslim, toplim, hardrest,
                             rankbydiff, rankby, interchainonly, threads, mp, stemmatrix,
-                            poollim)
+                            poollim, algos = algos, levellimit = levellimit)
     
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction

@@ -1,4 +1,4 @@
-# SQUARNA, version 1.05 [09.07.2024]
+# SQUARNA, version 1.9 [08.01.2025]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
@@ -10,7 +10,7 @@ pathto/python3 pathto/SQUARNA.py i=inputfile [OPTIONS]
 
 pathto/python3 pathto/SQUARNA.py s=ACGUACGUG [OPTIONS]
 
-As a Python function: see demo.ipynb
+As a Python function: see [demo.ipynb](https://github.com/febos/SQUARNA/blob/main/demo.ipynb)
 
 # Installation & Dependencies
 
@@ -18,8 +18,14 @@ Clone the GitHub repository by typing:
 
 	git clone https://github.com/febos/SQUARNA
 	
+Install the dependencies:
+
+	pip install -r requirements.txt
+	
 SQUARNA requires Python3 of at least 3.8 version along with
-a (hopefully) arbitrary version of NumPy library. 
+(hopefully) arbitrary versions of NumPy, SciPy, and NetworkX libraries.
+SciPy is required only for the Hungarian algorithm.
+NetworkX is required only for the Edmonds algorithm.
 
 To use as a Python function:
 
@@ -50,7 +56,7 @@ To use as a Python function:
     An example of running alignment-based predictions 
     in the verbose mode.
     
-    6) python3 SQUARNA.py i=huge.fasta byseq pl=1 c=fastest.conf
+    6) python3 SQUARNA.py i=examples/ali_input.afa byseq pl=1 c=fastest.conf
     
     An example of running single-sequence predictions 
     in the fast mode. Recommended for very large inputs.
@@ -196,6 +202,10 @@ To use as a Python function:
         c=500 (500.conf) is recommended for RNAs longer 500 nts.
         c=1000 (1000.conf) is recommended for RNAs longer 1000 nts.
         c=sk (sk.conf) is recommended with SHAPE data input.
+        c=nussinov (nussinov.conf) - Nussinov algorithm config.
+        c=hungarian (hungarian.conf) - Hungarian algorithm config.
+        c=edmonds (edmonds.conf) - Edmonds algorithm config.
+        c=greedy (greedy.conf) - Greedy algorithm config.
         
     s=STRING / seq=STRING / sequence=STRING [DEFAULT: None]
     
@@ -209,6 +219,18 @@ To use as a Python function:
         by the user. The bpweights, minlen, and minbpscore 
         parameters for step-1 will be derived from the first 
         parameter set in the config file.
+
+    algo={eghn} / algorithm={eghn} [DEFAULT: algo=None]
+    
+        The algorithms to be used in single-sequence predictions.
+        By default, the algorithms are derived from the config file.
+        If the algo parameter is specified, it will overwrite the
+        algorithms listed in the config file.
+        The choice should be a subset of the four algorithms:
+        e - Edmonds algorithm [10.6028/jres.069B.013]
+        g - Greedy SQUARNA algorithm [10.1101/2023.08.28.555103]
+        h - Hungarian algorithm [10.1002/nav.3800020109]
+        n - Nussinov algorithm [10.1073/pnas.77.11.6309]
 
     if={qtrfx} / inputformat={qtrfx} [DEFAULT: if=qtrf]
     
@@ -243,12 +265,14 @@ To use as a Python function:
 
     ll=INT / levlim=INT [DEFAULT: ll=(3 - len(seq)>500)]
     
-        Ignored in the single-sequence mode.
-        The allowed number of pseudoknot levels. All the base pairs
-        of the higher levels will be removed from the structure predicted
-        at step-1 and from the structure predicted at step-2. By default, 
-        ll=3 for short alignments of no more than 500 columns, 
-        and ll=2 for longer alignments.
+        The allowed number of pseudoknot levels.
+        In the single-sequence mode it's applied to the predictions
+        of the Hungarian and Edmonds algorithms. 
+        In the alignment mode, all the base pairs of the higher levels 
+        will be removed from the structure predicted at step-1 and 
+        from the structure predicted at step-2. By default, 
+        ll=3 for short alignments (sequences) of no more 
+        than 500 columns (residues), and ll=2 for longer ones.
                 
     tl=INT / toplim=INT [DEFAULT: tl=5]
     
@@ -354,4 +378,4 @@ To use as a Python function:
 
 # Contacts
 
-Eugene F. Baulin, *e-mail: ebaulin@iimcb.gov.pl, efbaulin@gmail.com* 
+Eugene F. Baulin, *e-mail: efbaulin[at]gmail.com, e.baulin[at]imol.institute* 
