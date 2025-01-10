@@ -1,4 +1,7 @@
 
+version 1.91 [10.01.2025] - report all config names that produce the given structure
+			    (previously only the first producing config was shown).
+
 version 1.9  [08.01.2025] - implemented new algorithms for single-sequence SQUARNA:
 				Edmonds algorithm [10.6028/jres.069B.013];
 				Hungarian algorithm [10.1002/nav.3800020109];

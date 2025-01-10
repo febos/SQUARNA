@@ -1003,8 +1003,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     rbps, rxs, rlefts, rrights = ParseRestraints(shortrest)
 
     # final stem sets among all the parameter sets
-    finfinstemsets = []
-    seen_structures = set() # set of bp-sets (to avoid repeats in finfinstemsets)
+    finfinstemsets  = []
+    seen_structures = {} # dict of bp-sets (to avoid repeats in finfinstemsets) bps:{psi1,psi2,...}
 
     if levellimit is None:
         levellimit = 3 - int(len(shortseq) > 500)
@@ -1170,10 +1170,17 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                 finfinstemsets.append([finstemset,
                                        ScoreStruct(shortseq, finstemset, shortreacts),
                                        psi])
-                seen_structures.add(bpsset)
+                seen_structures[bpsset] = {psi, }
+            else:
+                seen_structures[bpsset].add(psi)
 
     # list of dbn strings
     dbns = []
+
+    #Change the first paramset-id to a full set of paramset-ids
+    for i in range(len(finfinstemsets)):
+        bpsset = tuple(sorted([bp for stem in finfinstemsets[i][0] for bp in stem[0]]))
+        finfinstemsets[i][2] = sorted(seen_structures[bpsset])
 
     # sort the final stem lists in descreasing order of their total bp-score by default
     # and if rankbydiff - prioritize the most diverged structures
@@ -1319,19 +1326,22 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     # metrics of the best one if reference is present
     for i, pred in enumerate(predicted_structures[:outplim]):
         
-        struct, scores, paramsetind = pred
+        struct, scores, paramsetinds = pred
         totalscore, structscore, reactscore = scores
 
         if reference and i + 1 == topN_metrics[-1]:
             print(struct, "#{}".format(i+1), totalscore,
                   structscore, reactscore,
-                  paramsetnames[paramsetind],
+                  ','.join([paramsetnames[paramsetind]
+                            for paramsetind in paramsetinds]),
                   "TP={},FP={},FN={},FS={},PR={},RC={},RK={}".format(*topN_metrics),
                   sep='\t', file = sink)
         else:
             print(struct, "#{}".format(i+1), totalscore,
                   structscore, reactscore,
-                  paramsetnames[paramsetind], sep='\t', file = sink)
+                  ','.join([paramsetnames[paramsetind]
+                            for paramsetind in paramsetinds]),
+                  sep='\t', file = sink)
 
     return consensus, predicted_structures, consensus_metrics, topN_metrics
 
