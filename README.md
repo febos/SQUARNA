@@ -4,6 +4,8 @@
 
 ## Check out [our other developments](https://github.com/febos/wiki)
 
+## The benchmark data are available [here](https://github.com/febos/SQUARNA-data)
+
 # Usage
 
 pathto/python3 pathto/SQUARNA.py i=inputfile [OPTIONS]
