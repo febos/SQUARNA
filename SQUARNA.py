@@ -589,8 +589,11 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         configfile1000 = os.path.join(HOME_DIR, "1000.conf")
     else:
         configfileset = True
-        if not os.path.exists(configfile) and os.path.exists(os.path.join(HOME_DIR, configfile+".conf")):
-            configfile = os.path.join(HOME_DIR, configfile+".conf")
+        if not os.path.exists(configfile):
+            if os.path.exists(os.path.join(HOME_DIR, configfile+".conf")):
+                configfile = os.path.join(HOME_DIR, configfile+".conf")
+            elif os.path.exists(os.path.join(HOME_DIR, configfile)):
+                configfile = os.path.join(HOME_DIR, configfile)
         assert os.path.exists(configfile), "Config file does not exist."
 
     assert ''.join(sorted(inputformat.replace('x',''))) in {"q","fq","qr","qt", "qrt",
