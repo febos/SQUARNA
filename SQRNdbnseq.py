@@ -3,7 +3,10 @@ import numpy as np
 from multiprocessing import Pool
 import sys
 
-import SQRNalgos
+try:
+    import SQRNalgos
+except:
+    from SQUARNA import SQRNalgos
 
 # Gapped values
 GAPS = {'-', '.', '~'}
@@ -266,7 +269,9 @@ def UnAlign(seq, dbn):
     return newseq, newdbn
 
 
-def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False, reacts = None):
+def BPMatrix(seq, weights, rxs, rlefts, rrights,
+             interchainonly = False, reacts = None,
+             bpp_power = 0):
     """Return a matrix with bp-weights in cells"""
 
     # list of ordinal numbers of chains
@@ -338,6 +343,15 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights, interchainonly = False, reacts 
                 reactfactor = 1 / max(reactfactor, 0.01)
 
             scoremat[i, j] = bps[seq[i] + seq[j]] * boolmat[i, j] * reactfactor
+
+    ################
+    if bpp_power:
+        import RNA
+        fc = RNA.fold_compound(seq)
+        fc.pf()
+        bppm = np.array(fc.bpp())[1:,1:]
+        scoremat *= (bppm/np.max(bppm))**bpp_power
+    ################
 
     return boolmat, scoremat
 
@@ -1014,6 +1028,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
     for psi, paramset in enumerate(paramsets):
 
         bpweights         = paramset["bpweights"]
+        bpp               = paramset["bpp"]
         suboptmax         = paramset["suboptmax"]
         suboptmin         = paramset["suboptmin"]
         suboptsteps       = paramset["suboptsteps"]
@@ -1041,7 +1056,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, rxs,
                                                rlefts, rrights,
                                                interchainonly,
-                                               reacts = shortreacts)
+                                               reacts = shortreacts,
+                                               bpp_power = bpp)
 
         #Weight the bpscorematrix with the alignment-derived scores
         if stemmatrix is not None:
