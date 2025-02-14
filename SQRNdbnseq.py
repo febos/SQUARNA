@@ -350,7 +350,10 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
         fc = RNA.fold_compound(seq)
         fc.pf()
         bppm = np.array(fc.bpp())[1:,1:]
-        scoremat *= (bppm/np.max(bppm))**bpp_power
+        if bpp_power < 0:
+            scoremat += (bppm/np.max(bppm))**(-bpp_power)
+        else:
+            scoremat *= (bppm/np.max(bppm))**bpp_power
     ################
 
     return boolmat, scoremat
