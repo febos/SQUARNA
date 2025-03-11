@@ -1,4 +1,7 @@
 
+version 1.95 [11.03.2025] - added "bpp" parameter to incorporate ViennaRNA-derived BPPs
+			    in the calculations. Updated built-in configs.
+
 version 1.91 [10.01.2025] - report all config names that produce the given structure
 			    (previously only the first producing config was shown).
 

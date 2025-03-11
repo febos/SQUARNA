@@ -387,7 +387,7 @@ def byseqRunSQRNdbnseq(args):
     theparamsets, threads, rankbydiff, rankby,\
     hardrest, interchainonly, toplim, outplim,\
     conslim, reactformat, evalonly, poollim, entropy, \
-    algos, levellimit = args
+    algos, levellimit, priority = args
 
     # We use a printing buffer so that the output is ordered
     # instead of being mixed up due to parallelization
@@ -398,7 +398,8 @@ def byseqRunSQRNdbnseq(args):
                       hardrest, interchainonly, toplim, outplim,
                       conslim, reactformat, evalonly, poollim,
                       mp = False, sink = buffer, entropy = entropy,
-                      algos = algos, levellimit = levellimit)
+                      algos = algos, levellimit = levellimit,
+                      priority = priority)
         return buffer.getvalue()
 
 
@@ -409,7 +410,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             interchainonly = False, toplim = 5, outplim = None, conslim = 1,
             poollim = 1000, reactformat = 3, alignment = False, levellimit = None,
             freqlimit = 0.35, verbose = False, step3 = "u", ignorewarn = False,
-            HOME_DIR = None, write_to = None,
+            HOME_DIR = None, write_to = None, priority = None,
             ):
     """
         -----------------------------------------------------------------------
@@ -567,7 +568,9 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             HOME_DIR : string
                 Path to the folder with built-in configs.
             write_to : IO_object
-                Where to write the output. By default, write_to = sys.stdout.                
+                Where to write the output. By default, write_to = sys.stdout.
+            priority : string
+                Comma-separated list of prioritized paramset names. Default: bppN,bppH1,bppH2. 
     """
 
     if HOME_DIR is None:
@@ -587,6 +590,10 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         configfile     = os.path.join(HOME_DIR, "def.conf")
         configfile500  = os.path.join(HOME_DIR, "500.conf")
         configfile1000 = os.path.join(HOME_DIR, "1000.conf")
+        if priority is None:
+            priority = set('bppN,bppH1,bppH2'.split(','))
+        else:
+            priority = set([x for x in priority.split(',') if x])
     else:
         configfileset = True
         if not os.path.exists(configfile):
@@ -595,6 +602,10 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             elif os.path.exists(os.path.join(HOME_DIR, configfile)):
                 configfile = os.path.join(HOME_DIR, configfile)
         assert os.path.exists(configfile), "Config file does not exist."
+        if priority is None:
+            priority = set()
+        else:
+            priority = set([x for x in priority.split(',') if x])
 
     assert ''.join(sorted(inputformat.replace('x',''))) in {"q","fq","qr","qt", "qrt",
                                                                  "fqr", "fqt", "fqrt"}, \
@@ -747,7 +758,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                               theparamsets, threads, rankbydiff, rankby,
                               hardrest, interchainonly, toplim, outplim,
                               conslim, reactformat, evalonly, poollim, entropy = entropy,
-                              algos = algos, levellimit = levellimit, sink = write_to)
+                              algos = algos, levellimit = levellimit, sink = write_to,
+                              priority = priority)
         # Parallelizing over input sequences
         else:
             batchsize = threads*10
@@ -770,7 +782,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                                          theparamsets, threads, rankbydiff, rankby,
                                          hardrest, interchainonly, toplim, outplim,
                                          conslim, reactformat, evalonly, poollim,
-                                         entropy, algos, levellimit))
+                                         entropy, algos, levellimit, priority))
                     # Process a batch once we have batchsize sequences
                     if len(inputs_batch) >= batchsize:
                         for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
@@ -887,7 +899,7 @@ if __name__ == "__main__":
     toplim        = 5                  # Top-N to print
     outplim       = None               # Top-N structs used for metrics calculations if reference
     conslim       = 1                  # Top-N structs used for consensus
-    poollim       = 1000               # Maximum number of structures allowed to populate the current
+    poollim       = 100                # Maximum number of structures allowed to populate the current
                                        # structure pool (if exceeded, no bifurcation will occur anymore)
 
     reactformat   = 3                  # 3 / 10 / 26
@@ -904,6 +916,7 @@ if __name__ == "__main__":
     entropy     = False                # Calculate stem matrix entropy
     algorithms  = ""                   # Single-sequence prediction algorithms
 
+    priority    = None                 #Comma-separated list of prioritized paramset names 
 
     # Allow standard parameter input
     formatted_args = []
@@ -922,6 +935,7 @@ if __name__ == "__main__":
                                  "-ol", "--ol", "-outplim", "--outplim",
                                  "-cl", "--cl", "-conslim", "--conslim",
                                  "-pl", "--pl", "-poollim", "--poollim",
+                                 "-pr", "--pr", "-priority", "--priority",
                                  "-s3", "--s3", "-step3", "--step3",
                                  "-msn", "--msn", "-maxstemnum", "--maxstemnum",
                                  "-rf", "--rf", "-reactformat", "--reactformat",
@@ -1015,6 +1029,10 @@ if __name__ == "__main__":
         elif arg.lower().startswith("pl=") or\
              arg.lower().startswith("poollim="):
             poollim = arg.split('=', 1)[1]
+        # priority
+        elif arg.lower().startswith("pr=") or\
+             arg.lower().startswith("priority="):
+            priority = arg.split('=', 1)[1]
         # reactformat
         elif arg.lower().startswith("rf=") or\
              arg.lower().startswith("reactformat="):
@@ -1068,7 +1086,8 @@ if __name__ == "__main__":
             rankby, evalonly, hardrest,
             interchainonly, toplim, outplim, conslim,
             poollim, reactformat, alignment, levellimit,
-            freqlimit, verbose, step3, ignorewarn, HOME_DIR)
+            freqlimit, verbose, step3, ignorewarn, HOME_DIR,
+            None, priority)
         
 
 

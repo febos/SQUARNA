@@ -94,7 +94,6 @@ def Hungarian(stems, N, minloop = 3, power = 1.7):
     from scipy.optimize import linear_sum_assignment
 
     mat = np.zeros((N,N))
-
     for stem in stems:
         for v,w in stem[0]:
             mat[v,w] = -(stem[2]**power)
@@ -102,9 +101,9 @@ def Hungarian(stems, N, minloop = 3, power = 1.7):
 
     row_ind, col_ind = linear_sum_assignment(mat)
     sol = {i:j for i,j in zip(row_ind,col_ind)}
-    
+
     pairs = [(k,sol[k]) for k in sol
-             if k < sol[k]-minloop and sol[k] in sol and sol[sol[k]] == k]
+             if k < sol[k]-minloop and sol[k] in sol and sol[sol[k]] == k and mat[k,sol[k]] != 0]
 
     return pairs
     

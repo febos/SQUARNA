@@ -1,4 +1,4 @@
-# SQUARNA, version 1.91 [10.01.2025]
+# SQUARNA, version 1.95 [11.03.2025]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
@@ -25,9 +25,11 @@ Install the dependencies:
 	pip install -r requirements.txt
 	
 SQUARNA requires Python3 of at least 3.8 version along with
-(hopefully) arbitrary versions of NumPy, SciPy, and NetworkX libraries.
+(hopefully) arbitrary versions of NumPy, SciPy, NetworkX,
+and ViennaRNA libraries. 
 SciPy is required only for the Hungarian algorithm.
 NetworkX is required only for the Edmonds algorithm.
+ViennaRNA is required only when bpp != 0.
 
 To use as a Python function:
 
@@ -200,10 +202,8 @@ To use as a Python function:
         1000nts in length - 1000.conf.
         Built-in configs:
         c=def (def.conf) is recommended by default for RNAs under 500nts.
-        c=alt (alt.conf) is recommended for short pseudoknotted RNAs.
         c=500 (500.conf) is recommended for RNAs longer 500 nts.
         c=1000 (1000.conf) is recommended for RNAs longer 1000 nts.
-        c=sk (sk.conf) is recommended with SHAPE data input.
         c=nussinov (nussinov.conf) - Nussinov algorithm config.
         c=hungarian (hungarian.conf) - Hungarian algorithm config.
         c=edmonds (edmonds.conf) - Edmonds algorithm config.
@@ -290,10 +290,17 @@ To use as a Python function:
         How many top-N structures will be used to derive the predicted
         structure consensus.
         
-    pl=INT / poollim=INT [DEFAULT: pl=1000]
+    pl=INT / poollim=INT [DEFAULT: pl=100]
     
         Maximum number of structures allowed to populate the current 
         structure pool (if exceeded, no bifurcation will occur anymore).
+        
+    pr=STRING / priority=STRING [DEFAULT: pr=bppN,bppH1,bppH2]
+    
+        Comma-separated list of prioritized paramset names. The structures
+        predicted but these paramsets will be ranked higher in the output.
+        By default, pr=bppN,bppH1,bppH2 when the default configs are used, 
+        and pr is empty in case of a user-specified config.
 
     s3={i,u,1,2} / step3={i,u,1,2} [DEFAULT: s3=u]
     

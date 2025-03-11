@@ -350,10 +350,11 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
         fc = RNA.fold_compound(seq)
         fc.pf()
         bppm = np.array(fc.bpp())[1:,1:]
-        if bpp_power < 0:
-            scoremat += (bppm/np.max(bppm))**(-bpp_power)
-        else:
-            scoremat *= (bppm/np.max(bppm))**bpp_power
+        if np.max(bppm) > 0:
+            if bpp_power < 0:
+                scoremat += (bppm/np.max(bppm))**(-bpp_power)
+            else:
+                scoremat *= (bppm/np.max(bppm))**bpp_power
     ################
 
     return boolmat, scoremat
@@ -891,13 +892,19 @@ def ScoreStruct(seq, stemset, reacts):
     return round(thescore * reactscore, 3), round(thescore, 3), round(reactscore, 3)
 
 
-def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
+def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1),
+                priority = set()):##############################
     """Rank the predicted structures"""
 
     # First sort according to the rankby order of scores
     finstemsets = sorted(stemsets,
                          key = lambda x: [x[1][rb] for rb in rankby],
                          reverse = True)
+
+    ########################
+    finstemsets = [stemset for stemset in finstemsets if priority & set(stemset[2])] +\
+                  [stemset for stemset in finstemsets if not (priority & set(stemset[2]))]
+    ########################
 
     # if not rankbydiff - that is all
     if not rankbydiff or len(finstemsets) < 3:
@@ -936,6 +943,7 @@ def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1)):
                   sorted(finstemsets[curind:],
                          key = lambda x: [x[1][rb] for rb in rankby],
                          reverse = True)
+    
     # Remove the appended bps sets and return
     return [x[:-1] for x in finstemsets]  
 
@@ -960,7 +968,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                hardrest = False, rankbydiff = False,
                rankby = (0, 2, 1), interchainonly = False,
                threads = 1, mp = True, stemmatrix = None, poollim = 1000,
-               entropy = False, algos = set(), levellimit = None):
+               entropy = False, algos = set(), levellimit = None,
+               priority = set()):##############
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     reacts == list of reactivities (values from 0 to 1)
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -1203,7 +1212,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
     # sort the final stem lists in descreasing order of their total bp-score by default
     # and if rankbydiff - prioritize the most diverged structures
-    finstemsets = RankStructs(finfinstemsets, rankbydiff, rankby)
+    finstemsets = RankStructs(finfinstemsets, rankbydiff, rankby, priority = priority)#############################
 
     forcedbps = {(v,w) for v,w in rbps
                  if shortseq[v]+shortseq[w] in bpweights or
@@ -1274,12 +1283,20 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   hardrest, interchainonly, toplim, outplim,
                   conslim, reactformat, evalonly, poollim = 1000,
                   mp = True, sink = sys.stdout, stemmatrix = None,
-                  entropy = False, algos = {'G',}, levellimit = None):
+                  entropy = False, algos = {'G',}, levellimit = None,
+                  priority = None,):
     """Main-like function;
        sink param is standard system output by default,
        we need it to use the buffer in alignment-mode parallelizations"""
 
     print(name, file = sink)
+
+    ###########
+    if priority:
+        priority = {i for i in range(len(paramsetnames)) if paramsetnames[i] in priority}
+    else:
+        priority = set()
+    ###########
 
     if entropy:
         entropy_val = SQRNdbnseq(sequence, reactivities, restraints, reference,
@@ -1321,7 +1338,7 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
                             paramsets, conslim, toplim, hardrest,
                             rankbydiff, rankby, interchainonly, threads, mp, stemmatrix,
-                            poollim, algos = algos, levellimit = levellimit)
+                            poollim, algos = algos, levellimit = levellimit, priority = priority)###########
     
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
