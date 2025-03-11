@@ -298,7 +298,7 @@ To use as a Python function:
     pr=STRING / priority=STRING [DEFAULT: pr=bppN,bppH1,bppH2]
     
         Comma-separated list of prioritized paramset names. The structures
-        predicted but these paramsets will be ranked higher in the output.
+        predicted with these paramsets will be ranked higher in the output.
         By default, pr=bppN,bppH1,bppH2 when the default configs are used, 
         and pr is empty in case of a user-specified config.
 
