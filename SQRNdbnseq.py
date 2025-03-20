@@ -4,9 +4,9 @@ from multiprocessing import Pool
 import sys
 
 try:
-    import SQRNalgos
+    from SQRNalgos import Edmonds, Hungarian, Nussinov
 except:
-    from SQUARNA import SQRNalgos
+    from .SQRNalgos import Edmonds, Hungarian, Nussinov
 
 # Gapped values
 GAPS = {'-', '.', '~'}
@@ -347,7 +347,7 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
     ################
     if bpp_power:
         import RNA
-        fc = RNA.fold_compound(seq)
+        fc = RNA.fold_compound(''.join([ch if ch not in SEPS else 'N' for ch in seq]))
         fc.pf()
         bppm = np.array(fc.bpp())[1:,1:]
         if np.max(bppm) > 0:
@@ -552,13 +552,13 @@ def RunAlgo(bpboolmatrix, bpscorematrix, restbps,
     N = bpboolmatrix.shape[0]
 
     if algo == "E":
-        pairs = SQRNalgos.Edmonds(stems)
+        pairs = Edmonds(stems)
 
     if algo == "N":
-        pairs = SQRNalgos.Nussinov(stems, N)
+        pairs = Nussinov(stems, N)
 
     if algo == "H":
-        pairs = SQRNalgos.Hungarian(stems, N)
+        pairs = Hungarian(stems, N)
 
     # Removing partial stems below thresholds
     stems = PairsToStems(sorted([(min(v,w),max(v,w)) for v,w in pairs]))

@@ -8,10 +8,13 @@ try:
     from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
                            BPMatrix, AnnotateStems, RunSQRNdbnseq, GAPS,\
                            EncodedReactivities, SEPS
+    from SQRNalgos import Nussinov, Edmonds, Hungarian
+    
 except:
     from .SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
                             BPMatrix, AnnotateStems, RunSQRNdbnseq, GAPS,\
                             EncodedReactivities, SEPS
+    from .SQRNalgos import Nussinov, Edmonds, Hungarian
 
 
 def ReAlignDict(shortseq, longseq):
@@ -121,48 +124,61 @@ def MatrixToDBNs(mat, score, depth, verbose = False, sink = sys.stdout):
 
     # the bp score threshold
     thr = score*depth
-    
-    dct   = dict(enumerate(mat.flatten())) # 1-index key: score value
-    # Cells sorted in the decreasing order of their scores
-    cells = sorted(dct.items(), key = lambda x: x[1], reverse = True)
 
-    # List of [list of base pairs, set of paired positions] lists
-    res = [[[],set()],]
+    if True:
 
-    if verbose:
-        print(">Conserved base pairs (one by one)", file = sink)
+        dct   = dict(enumerate(mat.flatten())) # 1-index key: score value
+        # Cells sorted in the decreasing order of their scores
+        cells = sorted(dct.items(), key = lambda x: x[1], reverse = True)
 
-    for cell in cells:
-        # Obtain the 2-index base pair from the 1-index
-        # E.g., for a square 2x2 matrix the scheme looks like this:
-        # 0 -> (0, 0); 1 -> (0, 1); 2 -> (1, 0); 3 -> (1, 1)
-        bp = np.unravel_index(cell[0], mat.shape)
-
-        # Ignore all the bps below the threshold
-        if cell[1] < thr:
-            break
-
-        # Ignore (v, w) bps with v > w as well as
-        # the ones forming too short hairpins of <3nt
-        if not bp[1]-bp[0] >= 4:
-            continue
-
-        # Whether the base pair was added to the existing struct
-        # or is in conflict with everything and requires a new struct
-        added = False
-
-        for struct in res:
-            if bp[0] not in struct[1] and bp[1] not in struct[1]:
-                struct[0].append(bp) # Adding the base pair
-                struct[1].add(bp[0]) # Adding its paired positions
-                struct[1].add(bp[1]) #
-                added = True
-                break
-        if not added:
-            res.append([[bp,], set(bp)])
+        # List of [list of base pairs, set of paired positions] lists
+        res = [[[],set()],]
 
         if verbose:
-            print(PairsToDBN([bp,], N), round(cell[1], 3), sep='\t', file = sink)
+            print(">Conserved base pairs (one by one)", file = sink)
+
+        for cell in cells:
+            # Obtain the 2-index base pair from the 1-index
+            # E.g., for a square 2x2 matrix the scheme looks like this:
+            # 0 -> (0, 0); 1 -> (0, 1); 2 -> (1, 0); 3 -> (1, 1)
+            bp = np.unravel_index(cell[0], mat.shape)
+
+            # Ignore all the bps below the threshold
+            if cell[1] < thr:
+                break
+
+            # Ignore (v, w) bps with v > w as well as
+            # the ones forming too short hairpins of <3nt
+            if not bp[1]-bp[0] >= 4:
+                continue
+
+            # Whether the base pair was added to the existing struct
+            # or is in conflict with everything and requires a new struct
+            added = False
+
+            for struct in res:
+                if bp[0] not in struct[1] and bp[1] not in struct[1]:
+                    struct[0].append(bp) # Adding the base pair
+                    struct[1].add(bp[0]) # Adding its paired positions
+                    struct[1].add(bp[1]) #
+                    added = True
+                    break
+            if not added:
+                res.append([[bp,], set(bp)])
+
+            if verbose:
+                print(PairsToDBN([bp,], N), round(cell[1], 3), sep='\t', file = sink)
+
+    
+    ####################################
+    #pairs = sorted([(min(v,w),max(v,w)) for v,w in Nussinov(None, N,
+    #                                                        matrix = mat*(mat >= thr))])
+    #pairs = sorted([(min(v,w),max(v,w)) for v,w in Edmonds(None, 
+    #                                                       matrix = mat*(mat >= thr))])
+    #pairs = sorted([(min(v,w),max(v,w)) for v,w in Hungarian(None, N, 
+    #                                                       matrix = mat*(mat >= thr))])
+    #res = [[pairs,()],]
+    ####################################
 
     # Convert bp-lists to dbns
     dbns = [PairsToDBN(struct[0], N) for struct in res]

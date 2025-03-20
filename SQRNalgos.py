@@ -36,10 +36,17 @@ def BackTrack(begin, end, K, minloop, partial = False):
     return sorted(basepairs)
 
 
-def Nussinov(stems, N, minloop = 3):
+def Nussinov(stems, N, minloop = 3, matrix = None):
 
     import numpy as np
-    SCORES = {(v,w):-stem[2] for stem in stems for v,w in stem[0]}
+
+    if matrix is None:
+        SCORES = {(v,w):-stem[2] for stem in stems for v,w in stem[0]}
+    else:
+        SCORES = {(v,w):-matrix[v,w]
+                  for v in range(N - 1)
+                  for w in range(v + 1,N)
+                  if matrix[v,w] > 0}
 
     # score matrix
     D = np.zeros((N,N))
@@ -78,26 +85,36 @@ def Nussinov(stems, N, minloop = 3):
     return predictedbps
 
 
-def Edmonds(stems, power = 1.7):
+def Edmonds(stems, power = 1.7, matrix = None):
     
     import networkx as nx
-    edges = [(v,w,stem[2]**power) for stem in stems for v,w in stem[0]]
+
+    if matrix is None:
+        edges = [(v,w,stem[2]**power) for stem in stems for v,w in stem[0]]
+    else:
+        edges = [(v,w,matrix[v,w]**power) for v in range(matrix.shape[0] - 1)
+                                   for w in range(v + 1, matrix.shape[0])
+                                   if matrix[v,w] > 0]
+
     G = nx.Graph()
     G.add_weighted_edges_from(edges)
     pairs = sorted(nx.max_weight_matching(G))
     return pairs
 
 
-def Hungarian(stems, N, minloop = 3, power = 1.7):
+def Hungarian(stems, N, minloop = 3, power = 1.7, matrix = None):
 
     import numpy as np
     from scipy.optimize import linear_sum_assignment
 
-    mat = np.zeros((N,N))
-    for stem in stems:
-        for v,w in stem[0]:
-            mat[v,w] = -(stem[2]**power)
-            mat[w,v] = -(stem[2]**power)
+    if matrix is None:
+        mat = np.zeros((N,N))
+        for stem in stems:
+            for v,w in stem[0]:
+                mat[v,w] = -(stem[2]**power)
+                mat[w,v] = -(stem[2]**power)
+    else:
+        mat = -(matrix**power)
 
     row_ind, col_ind = linear_sum_assignment(mat)
     sol = {i:j for i,j in zip(row_ind,col_ind)}

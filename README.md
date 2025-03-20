@@ -1,4 +1,4 @@
-# SQUARNA, version 1.95 [11.03.2025]
+# SQUARNA, version 2.0 [20.03.2025]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
@@ -300,7 +300,7 @@ To use as a Python function:
         Comma-separated list of prioritized paramset names. The structures
         predicted with these paramsets will be ranked higher in the output.
         By default, pr=bppN,bppH1,bppH2 when the default configs are used, 
-        and pr is empty in case of a user-specified config.
+        and pr is empty in the case of a user-specified config.
 
     s3={i,u,1,2} / step3={i,u,1,2} [DEFAULT: s3=u]
     
