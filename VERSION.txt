@@ -1,5 +1,6 @@
 
-version 2.0 [20.03.2025]  - Major Version 2.0 release. Updated built-in configs.
+version 2.0 [12.04.2025]  - Major Version 2.0 release. Updated built-in configs.
+			    Merged GitHub and PyPi versions. SQUARNA CLI command.
 
 version 1.95 [11.03.2025] - added "bpp" parameter to incorporate ViennaRNA-derived BPPs
 			    in the calculations. Updated built-in configs.

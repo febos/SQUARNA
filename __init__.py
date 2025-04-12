@@ -1,1 +1,0 @@
-from .SQUARNA import Predict

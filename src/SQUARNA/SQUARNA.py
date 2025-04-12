@@ -411,15 +411,20 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             poollim = 1000, reactformat = 3, alignment = False, levellimit = None,
             freqlimit = 0.35, verbose = False, step3 = "u", ignorewarn = False,
             HOME_DIR = None, write_to = None, priority = None,
-            ):
+            i = None, ff = None, c = None, config = None, s = None, seq = None,
+            a = None, ali = None, algo = None, algorithm = None, rb = None,
+            fl = None, freqlim = None, ll = None, levlim = None, tl = None,
+            ol = None, cl = None, pl = None, pr = None, s3 = None, msn = None,
+            rf = None, eo = None, hr = None, ico = None, iw = None, ignore = None,
+            t = None, bs = None, v = None):
     """
         -----------------------------------------------------------------------
         Prints SQUARNA RNA secondary structure predictions from the given input
 
         Parameters:
-            inputfile : string
+            i / inputfile : string
                 Path to the input file.
-            fileformat : unknown/fasta/default/stockholm/clustal
+            ff / fileformat : unknown/fasta/default/stockholm/clustal
                 Input file format. For the details of the default SQUARNA input
                 format see https://github.com/febos/SQUARNA/blob/main/examples/seq_input.fas.
                 "unknown"   - the format will be identified automatically.
@@ -427,9 +432,9 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 "fasta"     - FASTA format.
                 "stockholm" - STOCKHOLM format.
                 "clustal"   - CLUSTAL format.
-            inputseq : string
+            s / seq / inputseq : string
                 RNA sequence input, alternative to inputfile (higher priority).
-            configfile : string
+            c / config / configfile : string
                 Path to a config file or a name of a built-in config, 
                 see https://github.com/febos/SQUARNA/blob/main/def.conf
                 for the format details. 
@@ -456,21 +461,21 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 the fourth line as the reFerence (f), and all the further lines 
                 are ignored. inputformat should be a subset of qtrfx letters 
                 in any order, with q being mandatory. All "x" lines will be ignored.
-            maxstemnum : int
+            msn / maxstemnum : int
                 Maximum number of stems to predict in each structure. By default,
                 maxstemnum is defined in a config file for each parameter set. 
                 If specified explicitly it will overwrite the maxstemnum 
                 values for all the parameter sets.
-            threads : int
+            t / threads : int
                 Number of CPUs to use.
-            byseq : bool
+            bs / byseq : bool
                 Parallelize the execution over the input sequences
                 in the single-sequence mode. 
                 By default, the execution in the single-sequence mode
                 is parallelized over the structure pool within each sequence.
                 Parallelizing over input sequences is recommended for 
                 large input files along with fast configs.
-            algorithms: string
+            algo / algorithm / algorithms: string
                 The algorithms to be used in single-sequence predictions.
                 By default, the algorithms are derived from the config file.
                 If the algorithms parameter is specified, it will overwrite the
@@ -480,7 +485,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 g - Greedy SQUARNA algorithm [10.1101/2023.08.28.555103]
                 h - Hungarian algorithm [10.1002/nav.3800020109]
                 n - Nussinov algorithm [10.1073/pnas.77.11.6309]
-            rankby : string
+            rb / rankby : string
                 How to rank the predicted structures. rankby should be a subset of
                 letters r, s, and d in any order (r / s / rs / rd / sd / rsd).
                 If both r and s are present, the structures will be ranked according
@@ -489,30 +494,30 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 and if only s is present, the structures will be ranked by the 
                 structure_score. Independently, if d is present, the mutually 
                 divergent structures will be put first.
-            evalonly : bool
+            eo / evalonly : bool
                 Ignored in the alignment mode.
                 If specified, no predictions are made and just the reference structure
                 scores are returned provided the reference is specified. 
                 If non-canonical base pairs are present in the reference structure, 
                 they will be considered with 0.0 weight).
-            hardrest : bool
+            hr / hardrest : bool
                 If specified, all the base pairs from the restraints line will be
                 forced to be present in the predicted structures. However, it will
                 not affect the structure scores, as the forced base pairs won't
                 contribute to the structure score unless they were predicted without
                 forcing as well.
-            interchainonly : bool
+            ico / interchainonly : bool
                 Allow only inter-chain base pairs to be predicted.
-            toplim : int
+            tl / toplim : int
                 How many top-N structures will be subject to comparison with the reference.
-            outplim : int
+            ol / outplim : int
                 How many top-N structures will be printed into the stdout.
                 By default, outplim = toplim.
-            conslim : int
+            cl / conslim : int
                 How many top-N structures will be used to derive the predicted structure consensus.
-            poollim : int
+            pl / poollim : int
                 Maximum number of structures allowed to populate the current structure pool (if exceeded, no bifurcation will occur anymore).
-            reactformat : 3/10/26
+            rf / reactformat : 3/10/26
                 Encoding used to output the reactivities line.
                 rf=3:   0.0  <= "_" <   1/3; 
                         1/3  <= "+" <   2/3;
@@ -529,21 +534,21 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                         ....................
                         0.94 <= "y" <  0.98;
                         0.98 <= "z" <= 1.00.
-            alignment : bool
+            a / ali/ alignment : bool
                 Run SQUARNA in the alignment-based mode. If specified,
                 ali.conf will be used as the config file by default, 
                 unless another config file is explicitly specified 
                 by the user. The bpweights, minlen, and minbpscore 
                 parameters for step-1 will be derived from the first 
                 parameter set in the config file.
-            levellimit : int
+            ll / levlim / levellimit : int
                 Ignored in the single-sequence mode.
                 The allowed number of pseudoknot levels. All the base pairs
                 of the higher levels will be removed from the structure predicted
                 at step-1 and from the structure predicted at step-2. By default, 
                 levellimit=3 for short alignments of no more than 500 columns, 
                 and levellimit=2 for longer alignments.
-            freqlimit : 0.0 <= float <= 1.0
+            fl / freqlim / freqlimit : 0.0 <= float <= 1.0
                 Ignored in the single-sequence mode.
                 The percentage of sequences required to contain a base pair,
                 in order for it to be added to the predicted consensus structure
@@ -551,10 +556,10 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 in at least "fl" share of the sequences given that the base pair
                 is not in conflict (does not share a position) with a more 
                 populated base pair.
-            verbose : bool
+            v / verbose : bool
                 Run SQUARNA in the verbose mode.
                 Ignored in the single-sequence mode.
-            step3 : "i"/"u"/"1"/"2"
+            s3 / step3 : "i"/"u"/"1"/"2"
                 Ignored in the single-sequence mode.
                 Defines the structure that will be printed at step-3. If step3=1,
                 the structure from step-1 will be printed, and the step-2 will
@@ -563,21 +568,90 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 the union of base pairs of the two structures will be printed. 
                 If step3=i, the intersection of base pairs of the two structures 
                 will be printed.
-            ignorewarn : bool
+            iw / ignore / ignorewarn : bool
                 Ignore warnings.
             HOME_DIR : string
                 Path to the folder with built-in configs.
             write_to : IO_object
                 Where to write the output. By default, write_to = sys.stdout.
-            priority : string
+            pr / priority : string
                 Comma-separated list of prioritized paramset names. Default: bppN,bppH1,bppH2. 
     """
+
+    # resolve synonyms
+    if i != None:
+        inputfile = i
+    if ff != None:
+        fileformat = ff
+    if config != None:
+        configfile = config
+    if c != None:
+        configfile = c
+    if seq != None:
+        inputseq = seq
+    if s != None:
+        inputseq = s
+    if ali != None:
+        alignment = ali
+    if a != None:
+        alignment = a
+    if algorithm != None:
+        algorithms = algorithm
+    if algo != None:
+        algorithms = algo
+    if rb != None:
+        rankby = rb
+    if freqlim != None:
+        freqlimit = freqlim
+    if fl != None:
+        freqlimit = fl
+    if levlim != None:
+        levellimit = levlim
+    if ll != None:
+        levellimit = ll
+    if tl != None:
+        toplim = tl
+    if ol != None:
+        outplim = ol
+    if cl != None:
+        conslim = cl
+    if pl != None:
+        poollim = pl
+    if pr != None:
+        priority = pr
+    if s3 != None:
+        step3 = s3
+    if msn != None:
+        maxstemnum = msn
+    if rf != None:
+        reactformat = rf
+    if eo != None:
+        evalonly = eo
+    if hr != None:
+        hardrest = hr
+    if ico != None:
+        interchainonly = ico
+    if ignore != None:
+        ignorewarn = ignore
+    if iw != None:
+        ignorewarn = iw
+    if t != None:
+        threads = t
+    if bs != None:
+        byseq = bs
+    if v != None:
+        verbose = v
+    ##################
 
     if HOME_DIR is None:
         HOME_DIR = os.path.dirname(os.path.abspath(__file__))
 
     if write_to is None:
         write_to = sys.stdout
+
+    if inputfile != None and not os.path.exists(inputfile) and\
+       os.path.exists(os.path.join(HOME_DIR, inputfile)):
+        inputfile = os.path.join(HOME_DIR, inputfile)
     
     # Verifying arguments
     assert os.path.exists(str(inputfile)) or inputseq, "Input file does not exist."
@@ -848,7 +922,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                       algos = algos, sink = write_to)
 
 
-if __name__ == "__main__":
+def Main():
 
     def PrintUsage():
         print()
@@ -976,7 +1050,6 @@ if __name__ == "__main__":
         elif arg.lower().startswith("i=") or\
            arg.lower().startswith("input="):
             inputfile = arg.split('=', 1)[1]
-            assert os.path.exists(inputfile), "Input file does not exist."
         # fileformat
         elif arg.lower().startswith("ff=") or\
            arg.lower().startswith("fileformat="):
@@ -1091,7 +1164,9 @@ if __name__ == "__main__":
         
 
 
+if __name__ == "__main__":
 
+    Main()
 
 
 
