@@ -1,4 +1,9 @@
 
+version 2.3 [15.05.2025]  - Reorganized handling of reactivities (soft restraints).
+			    Now all values of -10 and lower are treated as missing
+			    values, and all other values are clipped to 0.0-1.0 range
+			    by min(max(x,0),1).
+
 version 2.0 [12.04.2025]  - Major Version 2.0 release. Updated built-in configs.
 			    Merged GitHub and PyPi versions. SQUARNA CLI command.
 

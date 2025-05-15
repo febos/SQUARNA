@@ -1,4 +1,4 @@
-# SQUARNA, version 2.0 [12.04.2025]
+# SQUARNA, version 2.3 [15.05.2025]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
@@ -96,7 +96,11 @@ ViennaRNA is required only when bpp != 0.
     to the sequence length, including the separator positions whose 
     values will be ignored), or as an encoded line of sequence length, 
     see the description of reactformat (rf) parameter below (the mix 
-    of the encoded values is allowed), or be an empty line. 
+    of the encoded values is allowed), or be an empty line. Values of -10
+    and lower (in the list of float values) and "?" characters 
+    (in the encoded line) will be treated as missing values. Other float
+    values will be clipped to the 0.0-1.0 range by min(max(x,0),1).
+    All missing values will be converted to the neutral reactivity values.
     
     Restraints line should be either a sequence length line or an empty
     line. All pairs of brackets ((),[],{},<>) and pairs of latin letters 
@@ -240,16 +244,16 @@ ViennaRNA is required only when bpp != 0.
         are ignored. inputformat should be a subset of qtrfx letters 
         in any order, with q being mandatory. All "x" lines will be ignored.
   
-    rb={rsd} / rankby={rsd} [DEFAULT: rb=s]
+    rb={rsd} / rankby={rsd} [DEFAULT: rb=r]
     
         How to rank the predicted structures. rankby should be a subset of
         letters r, s, and d in any order (r / s / rs / rd / sd / rsd).
         If both r and s are present, the structures will be ranked according
         to the total_score = structure_score * reactivity_score. If only 
-        r is present, the structures will be ranked by the reactivity_score,
-        and if only s is present, the structures will be ranked by the 
-        structure_score. Independently, if d is present, the mutually 
-        divergent structures will be put first.  
+        r is present, the structures will be ranked by the reactivity_score
+        first, and if only s is present, the structures will be ranked 
+        by the structure_score first. Independently, if d is present, 
+        the mutually divergent structures will be put first.  
         
     fl=INT / freqlim=INT [DEFAULT: fl=0.35]
     

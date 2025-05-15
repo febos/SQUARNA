@@ -4,12 +4,11 @@ import io
 from multiprocessing import Pool
 
 try:
-    from SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS, GAPS
+    from SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
     from SQRNdbnali import RunSQRNdbnali
 except:
-    from .SQRNdbnseq import RunSQRNdbnseq, ReactDict, SEPS, GAPS
+    from .SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
     from .SQRNdbnali import RunSQRNdbnali
-
 
 def ParseConfig(configfile):
     """Parses the config file"""
@@ -142,9 +141,9 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = F
         try:
             if reactivities:
                 if len(reactivities) != len(sequence):
-                    reactivities = list(map(float, reactivities.split()))
+                    reactivities = ProcessReacts(list(map(float, reactivities.split())))
                 else:
-                    reactivities = [ReactDict[char] for char in reactivities]
+                    reactivities = ProcessReacts([ReactDict[char] for char in reactivities])
 
             assert not reactivities or len(reactivities) == len(sequence)
         except:
@@ -891,9 +890,9 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         try:
             if defReactivities:
                 if len(defReactivities) != N:
-                    defReactivities = list(map(float, defReactivities.split()))
+                    defReactivities = ProcessReacts(list(map(float, defReactivities.split())))
                 else:
-                    defReactivities = [ReactDict[char] for char in defReactivities]
+                    defReactivities = ProcessReacts([ReactDict[char] for char in defReactivities])
 
             assert not defReactivities or len(defReactivities) == N
         except:
@@ -967,7 +966,7 @@ def Main():
     threads       = os.cpu_count()     # Number of cpus to use
     byseq         = False              # Parallelize by input sequences, not by structure pool
 
-    rankby         = "s"               # Rank by, r / s / rs / dr / ds / drs, r=reactscore,s=structscore,d=rankbydiff
+    rankby         = "r"               # Rank by, r / s / rs / dr / ds / drs, r=reactscore,s=structscore,d=rankbydiff
     evalonly       = False             # Just evaluate the reference and do not predict anything
     hardrest       = False             # Force bp-restraints into predicted structures 
     interchainonly = False             # Forbid intra-chain base pairs

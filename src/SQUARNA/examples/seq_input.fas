@@ -4,12 +4,12 @@ CCCAAAAGGG;CCCAAAAGGG comments are allowed after the sequence but not after reac
 CGAAGUCCUUUACGUA
 >testcase with reactivities
 CGAAGUCCUUUACGUA
-1.0 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+1.0 1.0 -999 -999 -999 -999 -999 -999 -999 -999 -999 -999 1.0 1.0 -999 -999
 >multiple chains (separated by ; or &)
 GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
 >multiple chains with reactivities (with separators included but ignored)
 GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
-#####++++#####+++++++++++++++++++++
+#####????#####?????????????????????
 >multiple chains with bp-to-the-right restraints
 GGGGGAAAACCCCCAAA;AAAGGGGGAAAACCCCC
 
@@ -25,7 +25,7 @@ GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
 [[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....)))))))
 >7QR4 [69],1.B.G.1.:1.B.U.69. with reference and reactivities
 GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU
-______++++++++++++++++++++++++++++++++++++++++####+++++++++++++++++++
+______????????????????????????????????????????####???????????????????
 ..................................................................... 
 [[[[[[...((((((((((.......))).]]]]]]..(((((..........)))))....))))))) comments after reference are allowed as well
 >7QR4 [69],1.B.G.1.:1.B.U.69. with restraints
@@ -56,7 +56,7 @@ GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUG
 (((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..)))))))))).
 >SAM riboswitch with reference and reactivities
 GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAACA
-555555555555555555555222911112225555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+?????????????????????22291111222????????????????????????????????????????????????????????????????????????????????????????
 
 (((((((((....(((((...(((.[[[[)))......)))))(((..(((((...(((((....))))).)))..)).)))...(]]]](((((.......)))))..)))))))))).
 

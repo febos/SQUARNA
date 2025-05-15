@@ -27,7 +27,41 @@ ReactDict = {"_" : 0.00,  "+" : 0.50,  "#" : 1.00,
              "r" : 0.68,  "s" : 0.72,  "t" : 0.76,
              "u" : 0.80,  "v" : 0.84,  "w" : 0.88,
              "x" : 0.92,  "y" : 0.96,  "z" : 1.00,
-             }
+             "?" : -999,}
+
+M = 1.7
+B = -0.5
+
+NEUTRAL = np.exp(-B/M) - 1 #Solution for [M * ln(SHAPE + 1) + B] = 0
+
+
+def ProcessReacts(reacts, neutral = NEUTRAL,
+                  missing_threshold = -10, middle = 0.5,
+                  reverse = False):
+
+    def NormalizeReactVal(x, neutral, missing_threshold):
+
+        if x <= missing_threshold:
+            return neutral
+
+        return min(max(0,x),1)
+
+    def ScaleReactVal(x, neutral, middle):
+
+        if x <= neutral:
+            return (middle / neutral) * x
+        else:
+            return middle + ((x - neutral) / (1 - neutral)) * (1 - middle)
+
+    if reverse:
+        neutral, middle = middle, neutral
+
+    if not reacts:
+        return []
+
+    return [ScaleReactVal(NormalizeReactVal(val,neutral,
+                                            missing_threshold),
+                          neutral, middle) for val in reacts] 
 
 
 def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
@@ -63,7 +97,7 @@ def EncodedReactivities(seq, reacts, reactformat):
         reactline = ''.join(['01234567899'[int(x * 10)]
                              for x in reacts])
     else:
-        reactline = ''.join(['abcdefghijklmnopqrstuvwxyz'[int(x * 25) + 0.5]
+        reactline = ''.join(['abcdefghijklmnopqrstuvwxyz'[int(x * 25 + 0.5)]
                              for x in reacts])
 
     # Introduce the chain separators
@@ -284,6 +318,8 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
             else:
                 chains[i] = curr
 
+    defaultreacts = reacts is None or set(reacts) == {0.5,}
+
     # Set of different symbols in seq
     bases = set(seq)
 
@@ -338,7 +374,12 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
         for j in range(i + inc4, len(seq)):
 
             # Weight with reactivities if any
-            reactfactor = 1 if reacts is None else (1 - (reacts[i] + reacts[j]) / 2 ) * 2
+            if defaultreacts:
+                reactfactor = 1
+            else:
+                #reactfactor = 2 * np.log((1 - (reacts[i] + reacts[j]) / 2 ) + 1) / np.log(2)
+                reactfactor = ((1 - (reacts[i] + reacts[j]) / 2 ) * 2)**0.5
+
             if bps[seq[i] + seq[j]] <= 0:
                 reactfactor = 1 / max(reactfactor, 0.01)
 
@@ -348,6 +389,9 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
     if bpp_power:
         import RNA
         fc = RNA.fold_compound(''.join([ch if ch not in SEPS else 'N' for ch in seq]))
+        if not defaultreacts:
+            fc.sc_add_SHAPE_deigan(ProcessReacts(reacts, reverse = True),
+                                   m = M, b = B)
         fc.pf()
         bppm = np.array(fc.bpp())[1:,1:]
         if np.max(bppm) > 0:
@@ -1009,7 +1053,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
 
     # if we need to decode the reactivities from a string
     if type(reacts) == str:
-        reacts = [ReactDict[ch] for ch in reacts]
+        reacts = ProcessReacts([ReactDict[ch] for ch in reacts])
     
     # Unalign seq, dbn, reacts, and restraints strings
     shortseq, shortrest   = UnAlign(seq, restraints)
