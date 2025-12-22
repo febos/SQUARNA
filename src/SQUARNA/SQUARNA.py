@@ -6,9 +6,11 @@ from multiprocessing import Pool
 try:
     from SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
     from SQRNdbnali import RunSQRNdbnali
+    from SQRNrfam   import SearchRfam
 except:
     from .SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
     from .SQRNdbnali import RunSQRNdbnali
+    from .SQRNrfam   import SearchRfam
 
 def ParseConfig(configfile):
     """Parses the config file"""
@@ -210,10 +212,10 @@ def GuessFormat(inp):
         seq_lines   = 0
 
         if line1.startswith('#') and "STOCKHOLM" in line1:
-            return "stockholm"
+            return "stockholm", 0
         
         if line1.startswith("CLUSTAL"):
-            return "clustal"
+            return "clustal", 0
 
         if line1.startswith(">"):
             entry_lines += 1
@@ -229,9 +231,9 @@ def GuessFormat(inp):
                     break
 
         if seq_lines > entry_lines and entry_lines > 0:
-            return "fasta"
+            return "fasta", (entry_lines == 1)
 
-    return "default"
+    return "default", (entry_lines == 1)
 
 
 def ParseFasta(inp, returndefaults = False):
@@ -322,7 +324,7 @@ def ParseStockholm(inp, returndefaults = False):
 
     return [('>'+seqname, seqdict[seqname], None, None,
              gcdict["SS_cons"] if "SS_cons" in gcnames else None)
-            for seqname in seqnames]
+            for seqname in seqnames], len(seqnames) == 1
 
 
 def ParseClustal(inp, returndefaults = False):
@@ -342,7 +344,7 @@ def ParseClustal(inp, returndefaults = False):
                     objs[name] = ''
                 objs[name] += seq
 
-    return [('>'+name, objs[name], None, None, None) for name in names]
+    return [('>'+name, objs[name], None, None, None) for name in names], len(names) == 1
 
 
 def ParseSeq(inputseq, returndefaults):
@@ -357,10 +359,10 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
     """Parser selector"""
 
     if inputseq:
-        return ParseSeq(inputseq, returndefaults), fmt
+        return ParseSeq(inputseq, returndefaults), fmt, True
     
     if fmt == "unknown":
-        fmt = GuessFormat(inputname)
+        fmt, single_input = GuessFormat(inputname)
         if fmt != "default":
             print("Non-default input file format is recognized: {}".format(fmt.upper()))
 
@@ -368,15 +370,17 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
         if returndefaults:
             return next(ParseDefaultInput(inputname, inputformat, returndefaults)), fmt
         return ParseDefaultInput(inputname, inputformat,
-                                 returndefaults, ignore = ignore), fmt
+                                 returndefaults, ignore = ignore), fmt, single_input
     elif fmt == "fasta":
         if returndefaults:
             return next(ParseFasta(inputname, returndefaults)), fmt
-        return ParseFasta(inputname, returndefaults), fmt
+        return ParseFasta(inputname, returndefaults), fmt, single_input
     elif fmt == "stockholm":
-        return ParseStockholm(inputname, returndefaults), fmt
+        parsed, single_input = ParseStockholm(inputname, returndefaults)
+        return parsed, fmt, single_input
     elif fmt == "clustal":
-        return ParseClustal(inputname, returndefaults), fmt
+        parsed, single_input = ParseClustal(inputname, returndefaults)
+        return parsed, fmt, single_input
 
 def byseqRunSQRNdbnseq(args):
     """multiprocessing (single-parameter) version of RunSQRNdbnseq;
@@ -386,7 +390,7 @@ def byseqRunSQRNdbnseq(args):
     theparamsets, threads, rankbydiff, rankby,\
     hardrest, interchainonly, toplim, outplim,\
     conslim, reactformat, evalonly, poollim, entropy, \
-    algos, levellimit, priority = args
+    algos, levellimit, priority, rfam = args
 
     # We use a printing buffer so that the output is ordered
     # instead of being mixed up due to parallelization
@@ -398,18 +402,18 @@ def byseqRunSQRNdbnseq(args):
                       conslim, reactformat, evalonly, poollim,
                       mp = False, sink = buffer, entropy = entropy,
                       algos = algos, levellimit = levellimit,
-                      priority = priority)
+                      priority = priority, rfam = rfam)
         return buffer.getvalue()
 
 
 def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             configfile = None, inputformat = "qtrf", maxstemnum = None,
             threads = os.cpu_count(), byseq = False, algorithms = '',
-            entropy = False, rankby = "s", evalonly = False, hardrest = False,
+            entropy = False, rankby = "r", evalonly = False, hardrest = False,
             interchainonly = False, toplim = 5, outplim = None, conslim = 1,
             poollim = 1000, reactformat = 3, alignment = False, levellimit = None,
             freqlimit = 0.35, verbose = False, step3 = "u", ignorewarn = False,
-            HOME_DIR = None, write_to = None, priority = None,
+            HOME_DIR = None, write_to = None, priority = None, rfam = False,
             i = None, ff = None, c = None, config = None, s = None, seq = None,
             a = None, ali = None, algo = None, algorithm = None, rb = None,
             fl = None, freqlim = None, ll = None, levlim = None, tl = None,
@@ -569,6 +573,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 will be printed.
             iw / ignore / ignorewarn : bool
                 Ignore warnings.
+            rfam : bool
+                Enable rfam search in case of a single input sequence
             HOME_DIR : string
                 Path to the folder with built-in configs.
             write_to : IO_object
@@ -814,8 +820,21 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
     if not alignment:
         # Parallelizing over a structure pool for each sequence
         if not byseq:
-            for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat,
-                                                             fmt = fileformat, ignore = ignorewarn)[0]:
+
+            inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
+                                                   fmt = fileformat, ignore = ignorewarn)
+
+            if rfam:
+                if not single_input:
+                    print("WARNING: Found more than one sequence, rfam search disabled.",
+                          file=sys.stderr)
+                    rfam = False
+                else:
+                    inputs = list(inputs)
+                    inputs[0] = list(inputs[0])
+                    inputs[0][3], rfam = SearchRfam(inputs[0][1], HOME_DIR)
+            
+            for name, seq, reacts, restrs, ref in inputs:
                 # no autoconfig    
                 if configfileset:
                     theparamsetnames, theparamsets = paramsetnames, paramsets
@@ -832,14 +851,26 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                               hardrest, interchainonly, toplim, outplim,
                               conslim, reactformat, evalonly, poollim, entropy = entropy,
                               algos = algos, levellimit = levellimit, sink = write_to,
-                              priority = priority)
+                              priority = priority, rfam = rfam)
         # Parallelizing over input sequences
         else:
             batchsize = threads*10
             with Pool(threads) as pool:
                 inputs_batch = []
-                for name, seq, reacts, restrs, ref in ParseInput(inputseq, inputfile, inputformat,
-                                                                 fmt = fileformat, ignore = ignorewarn)[0]:
+
+                inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
+                                                       fmt = fileformat, ignore = ignorewarn)
+                if rfam:
+                    if not single_input:
+                        print("WARNING: Found more than one sequence, rfam search disabled.",
+                              file=sys.stderr)
+                        rfam = False
+                    else:
+                        inputs = list(inputs)
+                        inputs[0] = list(inputs[0])
+                        inputs[0][3], rfam = SearchRfam(inputs[0][1], HOME_DIR)
+                
+                for name, seq, reacts, restrs, ref in inputs:
                     # no autoconfig    
                     if configfileset:
                         theparamsetnames, theparamsets = paramsetnames, paramsets
@@ -855,7 +886,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                                          theparamsets, threads, rankbydiff, rankby,
                                          hardrest, interchainonly, toplim, outplim,
                                          conslim, reactformat, evalonly, poollim,
-                                         entropy, algos, levellimit, priority))
+                                         entropy, algos, levellimit, priority, rfam))
                     # Process a batch once we have batchsize sequences
                     if len(inputs_batch) >= batchsize:
                         for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
@@ -991,7 +1022,9 @@ def Main():
     entropy     = False                # Calculate stem matrix entropy
     algorithms  = ""                   # Single-sequence prediction algorithms
 
-    priority    = None                 #Comma-separated list of prioritized paramset names 
+    priority    = None                 #Comma-separated list of prioritized paramset names
+
+    rfam        = False                # Rfam template search for structural restraints
 
     # Allow standard parameter input
     formatted_args = []
@@ -1025,7 +1058,7 @@ def Main():
                                    "-hr", "--hr", "-hardrest", "--hardrest",
                                    "-iw", "--iw", "-ignore", "--ignore",
                                    "-ico", "--ico", "-interchainonly", "--interchainonly",
-                                   "-v", "--v", "-verbose", "--verbose",}:
+                                   "-rfam", "--rfam", "-v", "--v", "-verbose", "--verbose",}:
             formatted_args.append(args[cnt].lstrip('-'))
         else:
             formatted_args.append(args[cnt])
@@ -1137,6 +1170,9 @@ def Main():
         # entropy
         elif arg.lower() in {"ent", "entropy"}:
             entropy = True
+        # rfam
+        elif arg.lower() == 'rfam':
+            rfam = True
         # step3
         elif arg.lower().startswith("s3=") or\
              arg.lower().startswith("step3="):
@@ -1161,7 +1197,7 @@ def Main():
             interchainonly, toplim, outplim, conslim,
             poollim, reactformat, alignment, levellimit,
             freqlimit, verbose, step3, ignorewarn, HOME_DIR,
-            None, priority)
+            None, priority, rfam)
         
 
 

@@ -1328,7 +1328,7 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   conslim, reactformat, evalonly, poollim = 1000,
                   mp = True, sink = sys.stdout, stemmatrix = None,
                   entropy = False, algos = {'G',}, levellimit = None,
-                  priority = None,):
+                  priority = None, rfam = None):
     """Main-like function;
        sink param is standard system output by default,
        we need it to use the buffer in alignment-mode parallelizations"""
@@ -1336,6 +1336,9 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     print(name, file = sink)
 
     ###########
+    if rfam and priority == {'bppN','bppH1','bppH2'}:
+        priority = None
+    
     if priority:
         priority = {i for i in range(len(paramsetnames)) if paramsetnames[i] in priority}
     else:
@@ -1362,7 +1365,8 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                        if sequence[i] not in SEPS
                        else sequence[i]
                        for i in range(len(sequence))]),
-              "restraints", sep = '\t', file = sink)
+              "restraints"+("("+rfam+")" if rfam else ""),
+              sep = '\t', file = sink)
     if reference:
         print(''.join([reference[i]
                        if sequence[i] not in SEPS

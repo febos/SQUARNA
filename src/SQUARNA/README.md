@@ -24,39 +24,50 @@ Installation:
 
 	pip install SQUARNA
 	
+	SQUARNA-build-rfam
+	
 SQUARNA requires Python3 of at least 3.8 version along with
 (hopefully) arbitrary versions of NumPy, SciPy, NetworkX,
-and ViennaRNA libraries. 
+and ViennaRNA libraries.
 SciPy is required only for the Hungarian algorithm.
 NetworkX is required only for the Edmonds algorithm.
 ViennaRNA is required only when bpp != 0.
+Infernal(cmscan) is required to enable Rfam search.
 
 # Usage examples
 
     1) SQUARNA i=examples/seq_input.fas 
     
     Demonstration example.
+
+    2) SQUARNA s=ACGUACGUACUCGACG 
     
-    2) SQUARNA i=datasets/SRtest150.fas if=qf 
+    Single input sequence case.
+
+    3) SQUARNA s=ACGUACGUACUCGACG rfam
+    
+    Single input sequence case with rfam search enabled.
+    
+    4) SQUARNA i=datasets/SRtest150.fas if=qf 
     
     An example reproducing the benchmarks.
     
-    3) SQUARNA i=examples/ali_input.afa if=q
+    5) SQUARNA i=examples/ali_input.afa if=q
     
     An example of running single-sequence predictions for a set
     of aligned sequences. "if=q" tells SQUARNA to ignore all the
     default input lines and read only the sequences.
     
-    4) SQUARNA i=examples/ali_input.afa a
+    6) SQUARNA i=examples/ali_input.afa a
     
     An example of running alignment-based predictions.
     
-    5) SQUARNA i=examples/ali_input.afa if=q a v
+    7) SQUARNA i=examples/ali_input.afa if=q a v
     
     An example of running alignment-based predictions 
     in the verbose mode.
     
-    6) SQUARNA i=examples/ali_input.afa byseq pl=1 c=fastest.conf
+    8) SQUARNA i=examples/ali_input.afa byseq pl=1 c=fastest.conf
     
     An example of running single-sequence predictions 
     in the fast mode. Recommended for very large inputs.
@@ -301,6 +312,12 @@ ViennaRNA is required only when bpp != 0.
         predicted with these paramsets will be ranked higher in the output.
         By default, pr=bppN,bppH1,bppH2 when the default configs are used, 
         and pr is empty in the case of a user-specified config.
+
+    rfam [DEFAULT: FALSE]
+    
+        Works only in single-sequence mode with a single input sequence.
+        If specified, rfam family search using Infernal(cmscan) will
+        be used to retrieve structural restraints, to guide prediction.
 
     s3={i,u,1,2} / step3={i,u,1,2} [DEFAULT: s3=u]
     

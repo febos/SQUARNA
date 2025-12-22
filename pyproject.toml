@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "SQUARNA"
-version = "2.3"
+version = "2.31"
 dependencies = [
   "numpy",
   "scipy",
@@ -34,3 +34,10 @@ Issues = "https://github.com/febos/SQUARNA/issues"
 SQUARNA = "SQUARNA:Main"
 Squarna = "SQUARNA:Main"
 squarna = "SQUARNA:Main"
+SQUARNA-build-rfam = "SQUARNA:BuildRfam"
+squarna-build-rfam = "SQUARNA:BuildRfam"
+Squarna-build-rfam = "SQUARNA:BuildRfam"
+SQUARNA-build-Rfam = "SQUARNA:BuildRfam"
+squarna-build-Rfam = "SQUARNA:BuildRfam"
+Squarna-build-Rfam = "SQUARNA:BuildRfam"
+
