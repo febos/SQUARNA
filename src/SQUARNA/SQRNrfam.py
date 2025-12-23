@@ -59,9 +59,12 @@ def CMScan(seq, homedir):
     infile = "squarna_cmscan.fas"
     outfile = "squarna_cmscan.out"
 
+    illegal = {'e','f','j','l','o','p','q','z'}
+
     with open(infile,'w') as inp:
         inp.write(">seq\n")
-        inp.write(shortseq+'\n')
+        inp.write(''.join(['N' if (ch.lower() in illegal or ord(ch) > 127) else ch
+                           for ch in shortseq]) + '\n') 
     
     os.system("cmscan --notextw -E 1e-4 -o {} --rfam {} {}".format(outfile, rfamcm, infile))
 
