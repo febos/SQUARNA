@@ -133,10 +133,10 @@ def SearchRfam(seq, homedir):
             dbn, fams = CMScan(seq, homedir)
             if fams:
                 print(': '+fams)
+                return dbn, fams
             else:
                 print(': no hits.')
-            return dbn, fams
-
+                return None, False
 
 def BuildRfam():
 
