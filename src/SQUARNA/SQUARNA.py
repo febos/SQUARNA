@@ -832,7 +832,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 else:
                     inputs = list(inputs)
                     inputs[0] = list(inputs[0])
-                    inputs[0][3], rfam = SearchRfam(inputs[0][1], HOME_DIR)
+                    inputs[0][3], rfam = SearchRfam(inputs[0][1], HOME_DIR, write_to)
             
             for name, seq, reacts, restrs, ref in inputs:
                 # no autoconfig    
@@ -868,7 +868,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                     else:
                         inputs = list(inputs)
                         inputs[0] = list(inputs[0])
-                        inputs[0][3], rfam = SearchRfam(inputs[0][1], HOME_DIR)
+                        inputs[0][3], rfam = SearchRfam(inputs[0][1], HOME_DIR, write_to)
                 
                 for name, seq, reacts, restrs, ref in inputs:
                     # no autoconfig    

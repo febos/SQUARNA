@@ -114,28 +114,30 @@ def CMScan(seq, homedir):
     return dbn, ','.join(fams)
 
 
-def SearchRfam(seq, homedir):
+def SearchRfam(seq, homedir, write_to):
     """ return restraints,rfam-families """
 
     path = shutil.which("cmscan")
 
     if path is None:
-        print("ERROR: could not find cmscan, rfam search disabled; to fix this, install Infernal: eddylab.org/infernal/")
+        print("ERROR: could not find cmscan, rfam search disabled; to fix this, install Infernal: eddylab.org/infernal/",
+              file = write_to)
         return None, False
 
     else:
         if not os.path.exists(os.path.join(homedir,"Rfam.cm")) and\
            not os.path.exists(os.path.join(homedir,"Rfam.cm.i1f")):
-            print("ERROR: could not find Rfam.cm, rfam search disabled; to fix this, run SQUARNA-build-rfam")
+            print("ERROR: could not find Rfam.cm, rfam search disabled; to fix this, run SQUARNA-build-rfam",
+                  file = write_to)
             return None, False
         else:
-            print("Running Rfam search...",end = '')
+            print("Running Rfam search...", end = '', file = write_to)
             dbn, fams = CMScan(seq, homedir)
             if fams:
-                print(': '+fams)
+                print(': '+fams, file = write_to)
                 return dbn, fams
             else:
-                print(': no hits.')
+                print(': no hits.', file = write_to)
                 return None, False
 
 def BuildRfam():
