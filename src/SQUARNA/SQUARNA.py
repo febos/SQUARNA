@@ -347,19 +347,19 @@ def ParseClustal(inp, returndefaults = False):
     return [('>'+name, objs[name], None, None, None) for name in names], len(names) == 1
 
 
-def ParseSeq(inputseq, returndefaults):
+def ParseSeq(inputseq, returndefaults, inputrestr):
 
     if returndefaults:
         return None, None, None
-    return [('>inputseq',inputseq,None,None,None),]
+    return [('>inputseq',inputseq,None,inputrestr,None),]
 
 
 def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
-               fmt = "unknown", ignore = False):
+               fmt = "unknown", ignore = False, inputrestr = None):
     """Parser selector"""
 
     if inputseq:
-        return ParseSeq(inputseq, returndefaults), fmt, True
+        return ParseSeq(inputseq, returndefaults, inputrestr), fmt, True
     
     if fmt == "unknown":
         fmt, single_input = GuessFormat(inputname)
@@ -419,7 +419,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             fl = None, freqlim = None, ll = None, levlim = None, tl = None,
             ol = None, cl = None, pl = None, pr = None, s3 = None, msn = None,
             rf = None, eo = None, hr = None, ico = None, iw = None, ignore = None,
-            t = None, bs = None, v = None):
+            t = None, bs = None, v = None, inputrestr = None):
     """
         -----------------------------------------------------------------------
         Prints SQUARNA RNA secondary structure predictions from the given input
@@ -822,7 +822,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         if not byseq:
 
             inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
-                                                   fmt = fileformat, ignore = ignorewarn)
+                                                   fmt = fileformat, ignore = ignorewarn,
+                                                   inputrestr = inputrestr)
 
             if rfam:
                 if not single_input:
@@ -859,7 +860,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 inputs_batch = []
 
                 inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
-                                                       fmt = fileformat, ignore = ignorewarn)
+                                                       fmt = fileformat, ignore = ignorewarn,
+                                                       inputrestr = inputrestr)
                 if rfam:
                     if not single_input:
                         print("WARNING: Found more than one sequence, rfam search disabled.",
@@ -902,7 +904,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
 
         # Get the processed sequences
         objs, fmt = ParseInput(inputseq, inputfile, inputformat,
-                               fmt = fileformat, ignore = ignorewarn)
+                               fmt = fileformat, ignore = ignorewarn,
+                               inputrestr = inputrestr)
 
         # Get the default input lines
         defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
