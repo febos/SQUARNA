@@ -53,7 +53,7 @@ def ProcessSeqLineDBNLine(start, end, origseqlen, seq, dbn):
 
 def CMScan(seq, homedir):
 
-    shortseq = ''.join([x for x in seq if x not in GAPS])
+    shortseq = ''.join([x if x not in SEPS else "N" for x in seq if x not in GAPS])
     
     rfamcm = os.path.join(homedir,'Rfam.cm')
     infile = "squarna_cmscan.fas"
