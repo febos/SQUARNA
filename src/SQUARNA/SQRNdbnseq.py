@@ -583,7 +583,7 @@ def Entropy(bpboolmatrix, bpscorematrix, restbps,
     return str(round(ent/N,3))
 
 
-def RunAlgo(bpboolmatrix, bpscorematrix, restbps,
+def RunAlgo(seq, bpboolmatrix, bpscorematrix, restbps,
             rstems, minlen, minscore, algo = "E",
             levellimit = 3):
     """Return single-sequence predictions by a specific algorithm"""
@@ -600,10 +600,10 @@ def RunAlgo(bpboolmatrix, bpscorematrix, restbps,
         pairs = Edmonds(stems)
 
     if algo == "N":
-        pairs = Nussinov(stems, N)
+        pairs = Nussinov(seq, stems, N, SEPS)
 
     if algo == "H":
-        pairs = Hungarian(stems, N)
+        pairs = Hungarian(seq, stems, N, SEPS)
 
     # Removing partial stems below thresholds
     stems = PairsToStems(sorted([(min(v,w),max(v,w)) for v,w in pairs]))
@@ -1130,7 +1130,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         for algo in algos: # Run Nissinov/Hungarian/Edmonds
             if algo == "G": # The Greedy algorithm is performed below
                 continue
-            stemset = RunAlgo(bpboolmatrix, bpscorematrix, rbps,
+            stemset = RunAlgo(shortseq, bpboolmatrix, bpscorematrix, rbps,
                               [], minlen, minbpscore, algo = algo,
                               levellimit = levellimit)
             finstemsets.append(stemset)

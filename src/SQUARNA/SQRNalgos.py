@@ -3,7 +3,7 @@
 
 
     
-def BackTrack(begin, end, K, minloop, partial = False):
+def BackTrack(begin, end, K, minloop, seq, seps, partial = False):
 
     queue = {(begin, end), } # start from the last cell
     basepairs = []
@@ -18,17 +18,22 @@ def BackTrack(begin, end, K, minloop, partial = False):
             if (i,j) in K:
                 k = K[(i,j)]
                 # if we may have more base pairs before k  
-                if (k - 1) - i > minloop and not partial:
+                if ((k - 1) - i > minloop or (k-1)-i > 0 and any(ch in seps
+                                                                 for ch in seq[i+1:k-1])) \
+                   and not partial:
                     newq.add((i, k - 1))
                 # if we may have more base pairs inside [k, j]
-                if (j - 1) - (k + 1) > minloop:
+                if (j - 1) - (k + 1) > minloop or (j-1)-(k+1) > 0 and any(ch in seps
+                                                                          for ch in seq[k+2:j-1]):
                     newq.add((k + 1, j - 1))
                 # add (k, j) bp
                 basepairs.append((k,j))
             # if j is unpaired
             else:
                 # if we may have more base pairs inside [i, j - 1]
-                if (j - 1) - i > minloop and not partial:
+                if ((j - 1) - i > minloop or (j-1)-i > 0 and any(ch in seps
+                                                                 for ch in seq[i+1:j-1])) \
+                   and not partial:
                     newq.add((i, j - 1))
         # update queue
         queue = newq
@@ -36,7 +41,7 @@ def BackTrack(begin, end, K, minloop, partial = False):
     return sorted(basepairs)
 
 
-def Nussinov(stems, N, minloop = 3, matrix = None):
+def Nussinov(seq, stems, N, seps, minloop = 3, matrix = None):
 
     import numpy as np
 
@@ -56,7 +61,9 @@ def Nussinov(stems, N, minloop = 3, matrix = None):
     # going diagonale by diagonale,
     # skipping first [minloop] diagonals
     # to avoid too short hairpins
-    for h in range(minloop + 1, N):
+    #for h in range(minloop + 1, N):
+
+    for h in range(1, N):
         # row index
         for i in range(N - h):
             # column index
@@ -64,7 +71,8 @@ def Nussinov(stems, N, minloop = 3, matrix = None):
 
             bestk, bestscorek = -1, 10**9
             # searching for the optimal base pair
-            for k in range(i, j - minloop):
+            #for k in range(i, j - minloop):
+            for k in range(i, j - 1):
 
                 if (k,j) in SCORES:
                     scorek = D[i, k - 1] + D[k + 1, j - 1] + SCORES[(k,j)]
@@ -80,7 +88,7 @@ def Nussinov(stems, N, minloop = 3, matrix = None):
                 D[i, j] = D[i, j - 1]
 
     # traceback
-    predictedbps = BackTrack(0, N - 1, K, minloop)
+    predictedbps = BackTrack(0, N - 1, K, minloop, seq, seps)
     
     return predictedbps
 
@@ -102,7 +110,7 @@ def Edmonds(stems, power = 1.7, matrix = None):
     return pairs
 
 
-def Hungarian(stems, N, minloop = 3, power = 1.7, matrix = None):
+def Hungarian(seq, stems, N, seps, minloop = 3, power = 1.7, matrix = None):
 
     import numpy as np
     from scipy.optimize import linear_sum_assignment
@@ -120,7 +128,9 @@ def Hungarian(stems, N, minloop = 3, power = 1.7, matrix = None):
     sol = {i:j for i,j in zip(row_ind,col_ind)}
 
     pairs = [(k,sol[k]) for k in sol
-             if k < sol[k]-minloop and sol[k] in sol and sol[sol[k]] == k and mat[k,sol[k]] != 0]
+             if (k < sol[k]-minloop or k < sol[k] and any(ch in seps
+                                                          for ch in seq[k+1:sol[k]])) \
+                and sol[k] in sol and sol[sol[k]] == k and mat[k,sol[k]] != 0]
 
     return pairs
     
