@@ -903,9 +903,9 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
     else: # Running alignment-based SQUARNA
 
         # Get the processed sequences
-        inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
-                                               fmt = fileformat, ignore = ignorewarn,
-                                               inputrestr = inputrestr)
+        objs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
+                                             fmt = fileformat, ignore = ignorewarn,
+                                             inputrestr = inputrestr)
 
         # Get the default input lines
         defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
