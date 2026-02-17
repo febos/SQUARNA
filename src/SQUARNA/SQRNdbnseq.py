@@ -408,7 +408,7 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
 def ParseRestraints(restraints):
     """ Convert a dbn string into base pairs and unpaired bases"""
     rbps = DBNToPairs(restraints) # Base pairs
-    rxs     = {i for i in range(len(restraints)) if restraints[i]=='_'} # Unpaired bases
+    rxs     = {i for i in range(len(restraints)) if restraints[i] in {'_','+'}} # Unpaired bases
     rlefts  = {i for i in range(len(restraints)) if restraints[i]=='/'}  # 5'-ends of bps
     rrights = {i for i in range(len(restraints)) if restraints[i]=='\\'} # 3'-ends of bps
     return rbps, rxs, rlefts, rrights
@@ -1392,6 +1392,12 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
 
+    #Propagating G4 symbols
+    if rfam and restraints and '+' in restraints:
+        consensus = ''.join([ch if restraints[i] != '+' else '+'
+                     for i,ch in enumerate(consensus)])
+        
+
     # Printing consensus
     # along with its metrics if reference is present
     if reference:
@@ -1412,6 +1418,12 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     for i, pred in enumerate(predicted_structures[:outplim]):
         
         struct, scores, paramsetinds = pred
+
+        #Propagating G4 symbols
+        if rfam and restraints and '+' in restraints:
+            struct = ''.join([ch if restraints[i] != '+' else '+'
+                      for i,ch in enumerate(struct)])
+
         totalscore, structscore, reactscore = scores
 
         if reference and i + 1 == topN_metrics[-1]:

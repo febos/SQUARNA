@@ -6,11 +6,11 @@ from multiprocessing import Pool
 try:
     from SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
     from SQRNdbnali import RunSQRNdbnali
-    from SQRNrfam   import SearchRfam
+    from SQRNrfam   import SearchRfamG4
 except:
     from .SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
     from .SQRNdbnali import RunSQRNdbnali
-    from .SQRNrfam   import SearchRfam
+    from .SQRNrfam   import SearchRfamG4
 
 def ParseConfig(configfile):
     """Parses the config file"""
@@ -413,7 +413,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             interchainonly = False, toplim = 5, outplim = None, conslim = 1,
             poollim = 1000, reactformat = 3, alignment = False, levellimit = None,
             freqlimit = 0.35, verbose = False, step3 = "u", ignorewarn = False,
-            HOME_DIR = None, write_to = None, priority = None, rfam = False,
+            HOME_DIR = None, write_to = None, priority = None,
+            rfam = False, g4 = False,
             i = None, ff = None, c = None, config = None, s = None, seq = None,
             a = None, ali = None, algo = None, algorithm = None, rb = None,
             fl = None, freqlim = None, ll = None, levlim = None, tl = None,
@@ -575,6 +576,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 Ignore warnings.
             rfam : bool
                 Enable rfam search in case of a single input sequence
+            g4 : bool
+                Enable G-quadruplex search in case of a single input sequence
             HOME_DIR : string
                 Path to the folder with built-in configs.
             write_to : IO_object
@@ -825,15 +828,16 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                                                    fmt = fileformat, ignore = ignorewarn,
                                                    inputrestr = inputrestr)
 
-            if rfam:
+            if rfam or g4:
                 if not single_input:
-                    print("WARNING: Found more than one sequence, rfam search disabled.",
+                    print("WARNING: Found more than one sequence, rfam/G4 search disabled.",
                           file=sys.stderr)
                     rfam = False
+                    g4 = False
                 else:
                     inputs = list(inputs)
                     inputs[0] = list(inputs[0])
-                    inputs[0][3], rfam = SearchRfam(inputs[0][1], HOME_DIR, write_to)
+                    inputs[0][3], rfam = SearchRfamG4(inputs[0][1], HOME_DIR, write_to, rfam, g4)
             
             for name, seq, reacts, restrs, ref in inputs:
                 # no autoconfig    
@@ -862,15 +866,16 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
                                                        fmt = fileformat, ignore = ignorewarn,
                                                        inputrestr = inputrestr)
-                if rfam:
+                if rfam or g4:
                     if not single_input:
-                        print("WARNING: Found more than one sequence, rfam search disabled.",
+                        print("WARNING: Found more than one sequence, rfam/G4 search disabled.",
                               file=sys.stderr)
                         rfam = False
+                        g4 = False
                     else:
                         inputs = list(inputs)
                         inputs[0] = list(inputs[0])
-                        inputs[0][3], rfam = SearchRfam(inputs[0][1], HOME_DIR, write_to)
+                        inputs[0][3], rfam = SearchRfamG4(inputs[0][1], HOME_DIR, write_to, rfam, g4)
                 
                 for name, seq, reacts, restrs, ref in inputs:
                     # no autoconfig    
@@ -1028,6 +1033,7 @@ def Main():
     priority    = None                 #Comma-separated list of prioritized paramset names
 
     rfam        = False                # Rfam template search for structural restraints
+    g4          = False                # G-quadruplex pattern recognition for structural restraints
 
     # Allow standard parameter input
     formatted_args = []
@@ -1058,6 +1064,7 @@ def Main():
                                    "-bs", "--bs", "-byseq", "--byseq",
                                    "-ent", "--ent", "-entropy", "--entropy",
                                    "-eo", "--eo", "-evalonly", "--evalonly",
+                                   "-g4", "--g4",
                                    "-hr", "--hr", "-hardrest", "--hardrest",
                                    "-iw", "--iw", "-ignore", "--ignore",
                                    "-ico", "--ico", "-interchainonly", "--interchainonly",
@@ -1176,6 +1183,9 @@ def Main():
         # rfam
         elif arg.lower() == 'rfam':
             rfam = True
+        # rfam
+        elif arg.lower() == 'g4':
+            g4 = True
         # step3
         elif arg.lower().startswith("s3=") or\
              arg.lower().startswith("step3="):
@@ -1200,7 +1210,7 @@ def Main():
             interchainonly, toplim, outplim, conslim,
             poollim, reactformat, alignment, levellimit,
             freqlimit, verbose, step3, ignorewarn, HOME_DIR,
-            None, priority, rfam)
+            None, priority, rfam, g4)
         
 
 

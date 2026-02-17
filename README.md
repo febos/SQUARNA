@@ -1,4 +1,4 @@
-# SQUARNA, version 2.3 [15.05.2025]
+# SQUARNA, version 3.0 [17.02.2026]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
@@ -48,26 +48,30 @@ Infernal(cmscan) is required to enable Rfam search.
     
     Single input sequence case with rfam search enabled.
     
-    4) SQUARNA i=datasets/SRtest150.fas if=qf 
+    4) SQUARNA s=GGGAAGGGAAGGGAAGGG G4
+    
+    Single input sequence case with G-quadruplex search enabled.
+    
+    5) SQUARNA i=datasets/SRtest150.fas if=qf 
     
     An example reproducing the benchmarks.
     
-    5) SQUARNA i=examples/ali_input.afa if=q
+    6) SQUARNA i=examples/ali_input.afa if=q
     
     An example of running single-sequence predictions for a set
     of aligned sequences. "if=q" tells SQUARNA to ignore all the
     default input lines and read only the sequences.
     
-    6) SQUARNA i=examples/ali_input.afa a
+    7) SQUARNA i=examples/ali_input.afa a
     
     An example of running alignment-based predictions.
     
-    7) SQUARNA i=examples/ali_input.afa if=q a v
+    8) SQUARNA i=examples/ali_input.afa if=q a v
     
     An example of running alignment-based predictions 
     in the verbose mode.
     
-    8) SQUARNA i=examples/ali_input.afa byseq pl=1 c=fastest.conf
+    9) SQUARNA i=examples/ali_input.afa byseq pl=1 c=fastest.conf
     
     An example of running single-sequence predictions 
     in the fast mode. Recommended for very large inputs.
@@ -318,6 +322,12 @@ Infernal(cmscan) is required to enable Rfam search.
         Works only in single-sequence mode with a single input sequence.
         If specified, rfam family search using Infernal(cmscan) will
         be used to retrieve structural restraints, to guide prediction.
+        
+    G4 [DEFAULT: FALSE]
+    
+        Works only in single-sequence mode with a single input sequence.
+        If specified, G-quadruplex pattern recognition will be used 
+        to retrieve structural restraints, to guide prediction.
 
     s3={i,u,1,2} / step3={i,u,1,2} [DEFAULT: s3=u]
     
