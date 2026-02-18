@@ -837,7 +837,9 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 else:
                     inputs = list(inputs)
                     inputs[0] = list(inputs[0])
-                    inputs[0][3], rfam = SearchRfamG4(inputs[0][1], HOME_DIR, write_to, rfam, g4)
+                    foundpatterns, rfam = SearchRfamG4(inputs[0][1], HOME_DIR, write_to, rfam, g4)
+                    if foundpatterns:
+                        inputs[0][3] = foundpatterns
             
             for name, seq, reacts, restrs, ref in inputs:
                 # no autoconfig    
@@ -875,7 +877,9 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                     else:
                         inputs = list(inputs)
                         inputs[0] = list(inputs[0])
-                        inputs[0][3], rfam = SearchRfamG4(inputs[0][1], HOME_DIR, write_to, rfam, g4)
+                        foundpatterns, rfam = SearchRfamG4(inputs[0][1], HOME_DIR, write_to, rfam, g4)
+                        if foundpatterns:
+                            inputs[0][3] = foundpatterns
                 
                 for name, seq, reacts, restrs, ref in inputs:
                     # no autoconfig    
