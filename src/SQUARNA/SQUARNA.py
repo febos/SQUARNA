@@ -376,9 +376,13 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
             return next(ParseFasta(inputname, returndefaults)), fmt
         return ParseFasta(inputname, returndefaults), fmt, single_input
     elif fmt == "stockholm":
+        if returndefaults:
+            return ParseStockholm(inputname, returndefaults), fmt
         parsed, single_input = ParseStockholm(inputname, returndefaults)
         return parsed, fmt, single_input
     elif fmt == "clustal":
+        if returndefaults:
+            return ParseClustal(inputname, returndefaults), fmt
         parsed, single_input = ParseClustal(inputname, returndefaults)
         return parsed, fmt, single_input
 

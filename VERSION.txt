@@ -1,4 +1,6 @@
 
+version 3.01 [07.04.2026] - Fixed the bug with parsing CLUSTAL/STOCKHOLM.
+
 version 3.0 [17.02.2026]  - Implemented Rfam template search (rfam option) 
 			    and G-quadruplex pattern recognition (g4 option),
 			    see README and demo.ipynb.
