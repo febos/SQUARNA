@@ -77,7 +77,8 @@ def ParseConfig(configfile):
     return names, paramsets
 
 
-def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = False):
+def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = False,
+                      M = 1.8, B = -0.6):
     """Returns object lists of format [name,sequence,reactivities,restraints,reference]
        or the list [default-reactivities, default-restraints, default reference] if
        returndefaults param is True"""
@@ -86,7 +87,7 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = F
     warningsR = False
     warningsF = False
 
-    def ProcessIndividual(data):
+    def ProcessIndividual(data, M, B):
         """Returns a single [seq,reacts,rests,ref] list"""
 
         nonlocal warningsT, warningsR, warningsF
@@ -143,10 +144,9 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = F
         try:
             if reactivities:
                 if len(reactivities) != len(sequence):
-                    reactivities = ProcessReacts(list(map(float, reactivities.split())))
+                    reactivities = ProcessReacts(list(map(float, reactivities.split())), M = M, B = B)
                 else:
-                    reactivities = ProcessReacts([ReactDict[char] for char in reactivities])
-
+                    reactivities = ProcessReacts([ReactDict[char] for char in reactivities], M = M, B = B)
             assert not reactivities or len(reactivities) == len(sequence)
         except:
             raise ValueError('Inappropriate reactivities line for entry "{}":\n {}'\
@@ -179,7 +179,7 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = F
             if line.startswith('>'):
                 # If not the first entry - process the previous one
                 if name:
-                    yield (name, *ProcessIndividual(data))
+                    yield (name, *ProcessIndividual(data, M, B))
                 else:
                     # Default TRF lines
                     defdata = data
@@ -200,7 +200,7 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = F
                 data.append(line.strip())
 
     if name:
-        yield (name, *ProcessIndividual(data))
+        yield (name, *ProcessIndividual(data, M, B))
 
 
 def GuessFormat(inp):
@@ -355,7 +355,8 @@ def ParseSeq(inputseq, returndefaults, inputrestr):
 
 
 def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
-               fmt = "unknown", ignore = False, inputrestr = None):
+               fmt = "unknown", ignore = False, inputrestr = None,
+               M = 1.8, B = -0.6):
     """Parser selector"""
 
     if inputseq:
@@ -368,9 +369,11 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
 
     if fmt == "default":
         if returndefaults:
-            return next(ParseDefaultInput(inputname, inputformat, returndefaults)), fmt
+            return next(ParseDefaultInput(inputname, inputformat, returndefaults,
+                                          M = M, B = B)), fmt
         return ParseDefaultInput(inputname, inputformat,
-                                 returndefaults, ignore = ignore), fmt, single_input
+                                 returndefaults, ignore = ignore,
+                                 M = M, B = B), fmt, single_input
     elif fmt == "fasta":
         if returndefaults:
             return next(ParseFasta(inputname, returndefaults)), fmt
@@ -394,7 +397,7 @@ def byseqRunSQRNdbnseq(args):
     theparamsets, threads, rankbydiff, rankby,\
     hardrest, interchainonly, toplim, outplim,\
     conslim, reactformat, evalonly, poollim, entropy, \
-    algos, levellimit, priority, rfam = args
+    algos, levellimit, priority, rfam, M, B = args
 
     # We use a printing buffer so that the output is ordered
     # instead of being mixed up due to parallelization
@@ -406,7 +409,7 @@ def byseqRunSQRNdbnseq(args):
                       conslim, reactformat, evalonly, poollim,
                       mp = False, sink = buffer, entropy = entropy,
                       algos = algos, levellimit = levellimit,
-                      priority = priority, rfam = rfam)
+                      priority = priority, rfam = rfam, M = M, B = B)
         return buffer.getvalue()
 
 
@@ -418,7 +421,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             poollim = 1000, reactformat = 3, alignment = False, levellimit = None,
             freqlimit = 0.35, verbose = False, step3 = "u", ignorewarn = False,
             HOME_DIR = None, write_to = None, priority = None,
-            rfam = False, g4 = False,
+            rfam = False, g4 = False, M = 1.8, B = -0.6,
             i = None, ff = None, c = None, config = None, s = None, seq = None,
             a = None, ali = None, algo = None, algorithm = None, rb = None,
             fl = None, freqlim = None, ll = None, levlim = None, tl = None,
@@ -582,6 +585,10 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 Enable rfam search in case of a single input sequence
             g4 : bool
                 Enable G-quadruplex search in case of a single input sequence
+            M  : float
+                Slope parameter for chemical probing reactivities
+            B  : float
+                Intercept parameter for chemical probing reactivities
             HOME_DIR : string
                 Path to the folder with built-in configs.
             write_to : IO_object
@@ -716,7 +723,16 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
     except:
         raise ValueError("Inappropriate threads value (integer): {}"\
                          .format(threads))
-
+    try:
+        M = float(M)
+    except:
+        raise ValueError("Inappropriate M value (float): {}"\
+                         .format(M))
+    try:
+        B = float(B)
+    except:
+        raise ValueError("Inappropriate B value (float): {}"\
+                         .format(B))
     try:
         algos = set(algorithms.upper())
         assert algos <= {'E','G','H','N'}
@@ -830,7 +846,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
 
             inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
                                                    fmt = fileformat, ignore = ignorewarn,
-                                                   inputrestr = inputrestr)
+                                                   inputrestr = inputrestr,
+                                                   M = M, B = B)
 
             if rfam or g4:
                 if not single_input:
@@ -862,7 +879,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                               hardrest, interchainonly, toplim, outplim,
                               conslim, reactformat, evalonly, poollim, entropy = entropy,
                               algos = algos, levellimit = levellimit, sink = write_to,
-                              priority = priority, rfam = rfam)
+                              priority = priority, rfam = rfam, M = M, B = B)
         # Parallelizing over input sequences
         else:
             batchsize = threads*10
@@ -871,7 +888,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
 
                 inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
                                                        fmt = fileformat, ignore = ignorewarn,
-                                                       inputrestr = inputrestr)
+                                                       inputrestr = inputrestr,
+                                                       M = M, B = B)
                 if rfam or g4:
                     if not single_input:
                         print("WARNING: Found more than one sequence, rfam/G4 search disabled.",
@@ -901,7 +919,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                                          theparamsets, threads, rankbydiff, rankby,
                                          hardrest, interchainonly, toplim, outplim,
                                          conslim, reactformat, evalonly, poollim,
-                                         entropy, algos, levellimit, priority, rfam))
+                                         entropy, algos, levellimit, priority, rfam, M, B))
                     # Process a batch once we have batchsize sequences
                     if len(inputs_batch) >= batchsize:
                         for output in pool.imap(byseqRunSQRNdbnseq, inputs_batch):
@@ -918,13 +936,14 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         # Get the processed sequences
         objs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
                                              fmt = fileformat, ignore = ignorewarn,
-                                             inputrestr = inputrestr)
+                                             inputrestr = inputrestr, M = M, B = B)
 
         # Get the default input lines
         defReactivities, defRestraints, defReference = ParseInput(inputseq, inputfile, inputformat,
                                                                   returndefaults = True,
                                                                   fmt = fmt,
-                                                                  ignore = ignorewarn)[0]
+                                                                  ignore = ignorewarn,
+                                                                  M = M, B = B)[0]
 
         objs = [obj for obj in objs] # Unpack generator (in case of fasta/default format)
 
@@ -937,9 +956,9 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         try:
             if defReactivities:
                 if len(defReactivities) != N:
-                    defReactivities = ProcessReacts(list(map(float, defReactivities.split())))
+                    defReactivities = ProcessReacts(list(map(float, defReactivities.split())), M = M, B = B)
                 else:
-                    defReactivities = ProcessReacts([ReactDict[char] for char in defReactivities])
+                    defReactivities = ProcessReacts([ReactDict[char] for char in defReactivities], M = M, B = B)
 
             assert not defReactivities or len(defReactivities) == N
         except:
@@ -965,7 +984,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                       paramsetnames, paramsets, threads, rankbydiff, rankby,
                       hardrest, interchainonly, toplim, outplim,
                       conslim, reactformat, poollim, entropy = entropy,
-                      algos = algos, sink = write_to)
+                      algos = algos, sink = write_to, M = M, B = B)
 
 
 def Main():
@@ -1043,14 +1062,17 @@ def Main():
     rfam        = False                # Rfam template search for structural restraints
     g4          = False                # G-quadruplex pattern recognition for structural restraints
 
+    M = 1.8                            # Slope for chemical probing reactivities 
+    B = -0.6                           # Intercept for chemical probing reactivities 
+
     # Allow standard parameter input
     formatted_args = []
     cnt = 0
     while cnt < len(args):
         if args[cnt].lower() in {"-algo", "--algo", "-algorithm", "--algorithm",
                                  "-algos", "--algos", "-algorithms", "--algorithms",
-                                 "-i", "--i", "-input", "--input",
-                                 "-c", "--c", "-config", "--config",
+                                 "-b", "--b", "-c", "--c", "-config", "--config",
+                                 "-i", "--i", "-input", "--input", 
                                  "-if", "--if", "-inputformat", "--inputformat",
                                  "-rb", "--rb", "-rankby", "--rankby",
                                  "-ff", "--ff", "-fileformat", "--fileformat",
@@ -1061,7 +1083,7 @@ def Main():
                                  "-cl", "--cl", "-conslim", "--conslim",
                                  "-pl", "--pl", "-poollim", "--poollim",
                                  "-pr", "--pr", "-priority", "--priority",
-                                 "-s3", "--s3", "-step3", "--step3",
+                                 "-s3", "--s3", "-step3", "--step3", "-m", "--m",
                                  "-msn", "--msn", "-maxstemnum", "--maxstemnum",
                                  "-rf", "--rf", "-reactformat", "--reactformat",
                                  "-s", "--s", "-seq", "--seq","-sequence", "--sequence",
@@ -1074,8 +1096,8 @@ def Main():
                                    "-eo", "--eo", "-evalonly", "--evalonly",
                                    "-g4", "--g4",
                                    "-hr", "--hr", "-hardrest", "--hardrest",
-                                   "-iw", "--iw", "-ignore", "--ignore",
-                                   "-ico", "--ico", "-interchainonly", "--interchainonly",
+                                   "-iw", "--iw", "-ignore", "--ignore", "-ico", "--ico",
+                                   "-interchainonly", "--interchainonly", 
                                    "-rfam", "--rfam", "-v", "--v", "-verbose", "--verbose",}:
             formatted_args.append(args[cnt].lstrip('-'))
         else:
@@ -1094,7 +1116,7 @@ def Main():
                 continue
             algorithms = arg.split('=', 1)[1]
         # inputseq
-        if arg.lower().startswith("s=") or\
+        elif arg.lower().startswith("s=") or\
            arg.lower().startswith("seq=") or\
            arg.lower().startswith("sequence="):
             inputseq = arg.split('=', 1)[1]
@@ -1198,6 +1220,12 @@ def Main():
         elif arg.lower().startswith("s3=") or\
              arg.lower().startswith("step3="):
             step3 = arg.split('=', 1)[1]
+        # M
+        elif arg.lower().startswith("m="):
+            M = arg.split('=', 1)[1]
+        # B
+        elif arg.lower().startswith("b="):
+            B = arg.split('=', 1)[1]
         else:
             if len(args) == 1:
                 if os.path.exists(arg):
@@ -1218,7 +1246,7 @@ def Main():
             interchainonly, toplim, outplim, conslim,
             poollim, reactformat, alignment, levellimit,
             freqlimit, verbose, step3, ignorewarn, HOME_DIR,
-            None, priority, rfam, g4)
+            None, priority, rfam, g4, M, B)
         
 
 

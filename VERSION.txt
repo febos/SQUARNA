@@ -1,4 +1,8 @@
 
+version 3.05 [07.04.2026] - Added M (slope) and B (intercept) parameters
+			    to tune the effect of residue reactivities;
+			    fixed handling NaN reactivity values.
+
 version 3.01 [07.04.2026] - Fixed the bug with parsing CLUSTAL/STOCKHOLM.
 
 version 3.0 [17.02.2026]  - Implemented Rfam template search (rfam option) 

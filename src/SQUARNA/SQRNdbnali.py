@@ -59,7 +59,7 @@ def PrintMatrix(seq, matrix, dbn1='', dbn2=''):
 
 def YieldStems(seq, reactivities = None, restraints = None, 
                bpweights = {}, interchainonly = False,
-               minlen = 2, minbpscore = 0):
+               minlen = 2, minbpscore = 0, M = 1.8, B = -0.6):
     """Returns a list of stems based on a (possibly aligned) sequence"""
 
     # turn seq into UPPERCASE & replace T with U
@@ -89,7 +89,8 @@ def YieldStems(seq, reactivities = None, restraints = None,
     bpboolmatrix, bpscorematrix = BPMatrix(shortseq, bpweights, rxs,
                                            rlefts, rrights,
                                            interchainonly,
-                                           reacts = shortreacts)
+                                           reacts = shortreacts,
+                                           M = M, B = B)
 
     # Annotate stems from the matrices and restraint bps
     # using the maxlen definition for stems (diff = 0)
@@ -110,11 +111,11 @@ def YieldStems(seq, reactivities = None, restraints = None,
 def mpYieldStems(args):
     """multiprocessing (single-parameter) version of YieldStems"""
     #Unpack args
-    seq, reacts, rests, bpweights, interchainonly, minlen, minbpscore = args
+    seq, reacts, rests, bpweights, interchainonly, minlen, minbpscore, M, B = args
     #Call YieldStems
     return YieldStems(seq, reacts, rests,
                       bpweights, interchainonly,
-                      minlen, minbpscore)
+                      minlen, minbpscore, M, B)
 
 
 def MatrixToDBNs(mat, score, depth, verbose = False, sink = sys.stdout):
@@ -211,7 +212,7 @@ def SQRNdbnali(objs, defrests = None, defreacts = None, defref = None,
                bpweights = {}, interchainonly = False,
                minlen = 2, minbpscore = 0,
                threads = 1, verbose = False,
-               sink = sys.stdout):
+               sink = sys.stdout, M = 1.8, B = -0.6):
     """Returns a predicted dbn for a set of aligned sequences"""
 
     # Placeholder LENxLEN matrix of zeros 
@@ -226,7 +227,7 @@ def SQRNdbnali(objs, defrests = None, defreacts = None, defref = None,
                    bpweights,
                    interchainonly,
                    minlen,
-                   minbpscore) for obj in objs]
+                   minbpscore, M, B) for obj in objs]
 
         # Sum up the stem scores over all sequences
         for stems in pool.imap(mpYieldStems, inputs):
@@ -248,7 +249,7 @@ def mpRunSQRNdbnseq(args):
     obj, paramsetnames, paramsets, threads,\
     rankbydiff, rankby, hardrest, interchainonly,\
     toplim, outplim, conslim, reactformat, verbose, \
-    smat, poollim, entropy, algos = args
+    smat, poollim, entropy, algos, M, B = args
 
     evalonly = False
 
@@ -263,7 +264,7 @@ def mpRunSQRNdbnseq(args):
                                                  hardrest, interchainonly, toplim, outplim,
                                                  conslim, reactformat, evalonly, poollim,
                                                  mp = False, sink = buffer, stemmatrix = smat,
-                                                 entropy = entropy, algos = algos)
+                                                 entropy = entropy, algos = algos, M = M, B = B)
         return cons, buffer.getvalue()
 
 
@@ -333,7 +334,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                   paramsetnames, paramsets, threads, rankbydiff, rankby,
                   hardrest, interchainonly, toplim, outplim,
                   conslim, reactformat, poollim, entropy = False,
-                  algos = {'G',}, sink = sys.stdout):
+                  algos = {'G',}, sink = sys.stdout, M = 1.8, B = -0.6):
 
     # Alignment length is derived as the length
     # of the first aligned sequence
@@ -350,7 +351,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
     pred_dbn, smat = SQRNdbnali(objs, defrests, defreacts, defref, 
                                 bpweights, interchainonly,
                                 minlen, minbpscore,
-                                threads, verbose, sink = sink)
+                                threads, verbose, sink = sink, M = M, B = B)
 
     if verbose:
         print(">Step 1, Iteration 2", file = sink)
@@ -360,7 +361,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
     pred_dbn = SQRNdbnali(objs, pred_dbn, defreacts, defref, 
                           bpweights, interchainonly,
                           minlen, minbpscore,
-                          threads, verbose, sink = sink)[0]
+                          threads, verbose, sink = sink, M = M, B = B)[0]
 
     # Truncate pseudoknotted bps of order higher than levellimit for the step1 structure
     step1dbn = PairsToDBN(DBNToPairs(pred_dbn), N,
@@ -382,7 +383,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
             inputs = [(obj, paramsetnames, paramsets, threads,
                        rankbydiff, rankby, hardrest, interchainonly,
                        toplim, outplim, conslim, reactformat,
-                       verbose, smat, poollim, entropy, algos) for obj in objs]
+                       verbose, smat, poollim, entropy, algos, M, B) for obj in objs]
             for cons, output in pool.imap(mpRunSQRNdbnseq, inputs):
                 if verbose:
                     print(output, end = '', file = sink)

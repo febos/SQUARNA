@@ -29,22 +29,17 @@ ReactDict = {"_" : 0.00,  "+" : 0.50,  "#" : 1.00,
              "x" : 0.92,  "y" : 0.96,  "z" : 1.00,
              "?" : -999,}
 
-M = 1.7
-B = -0.5
+def ProcessReacts(reacts, missing_threshold = -10, middle = 0.5,
+                  reverse = False, M = 1.8, B = 1.6):
 
-NEUTRAL = np.exp(-B/M) - 1 #Solution for [M * ln(SHAPE + 1) + B] = 0
-
-
-def ProcessReacts(reacts, neutral = NEUTRAL,
-                  missing_threshold = -10, middle = 0.5,
-                  reverse = False):
+    neutral = np.exp(-B/M) - 1 #Solution for [M * ln(SHAPE + 1) + B] = 0
 
     def NormalizeReactVal(x, neutral, missing_threshold):
 
         if x <= missing_threshold:
             return neutral
 
-        return min(max(0,x),1)
+        return min(max(0,x),1) if not np.isnan(x) else neutral
 
     def ScaleReactVal(x, neutral, middle):
 
@@ -305,7 +300,7 @@ def UnAlign(seq, dbn):
 
 def BPMatrix(seq, weights, rxs, rlefts, rrights,
              interchainonly = False, reacts = None,
-             bpp_power = 0):
+             bpp_power = 0, M = 1.8, B = -0.6):
     """Return a matrix with bp-weights in cells"""
 
     # list of ordinal numbers of chains
@@ -391,7 +386,7 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
         fc = RNA.fold_compound(''.join([ch if ch not in SEPS and ord(ch) <= 127 else 'N'
                                         for ch in seq]))
         if not defaultreacts:
-            fc.sc_add_SHAPE_deigan(ProcessReacts(reacts, reverse = True),
+            fc.sc_add_SHAPE_deigan(ProcessReacts(reacts, reverse = True, M = M, B = B),
                                    m = M, b = B)
         fc.pf()
         bppm = np.array(fc.bpp())[1:,1:]
@@ -1014,7 +1009,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                rankby = (0, 2, 1), interchainonly = False,
                threads = 1, mp = True, stemmatrix = None, poollim = 1000,
                entropy = False, algos = set(), levellimit = None,
-               priority = set()):##############
+               priority = set(),
+               M = 1.8, B = -0.6):##############
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     reacts == list of reactivities (values from 0 to 1)
     restraints == string in dbn format; x symbols are forced to be unpaired
@@ -1114,7 +1110,8 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                                                rlefts, rrights,
                                                interchainonly,
                                                reacts = shortreacts,
-                                               bpp_power = bpp)
+                                               bpp_power = bpp,
+                                               M = M, B = B)
 
         #Weight the bpscorematrix with the alignment-derived scores
         if stemmatrix is not None:
@@ -1329,7 +1326,7 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
                   conslim, reactformat, evalonly, poollim = 1000,
                   mp = True, sink = sys.stdout, stemmatrix = None,
                   entropy = False, algos = {'G',}, levellimit = None,
-                  priority = None, rfam = None):
+                  priority = None, rfam = None, M = 1.8, B = -0.6):
     """Main-like function;
        sink param is standard system output by default,
        we need it to use the buffer in alignment-mode parallelizations"""
@@ -1350,7 +1347,7 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
         entropy_val = SQRNdbnseq(sequence, reactivities, restraints, reference,
                                  paramsets, conslim, toplim, hardrest,
                                  rankbydiff, rankby, interchainonly, threads, mp, stemmatrix,
-                                 poollim, entropy = True, algos = algos)
+                                 poollim, entropy = True, algos = algos, M = M, B = B)
         print('\t'.join([sequence,"entropy:",entropy_val]), file = sink)
     else:
         print(sequence, file = sink)
@@ -1387,7 +1384,8 @@ def RunSQRNdbnseq(name, sequence, reactivities, restraints,
     prediction = SQRNdbnseq(sequence, reactivities, restraints, reference,
                             paramsets, conslim, toplim, hardrest,
                             rankbydiff, rankby, interchainonly, threads, mp, stemmatrix,
-                            poollim, algos = algos, levellimit = levellimit, priority = priority)###########
+                            poollim, algos = algos, levellimit = levellimit, priority = priority,
+                            M = M, B = B)###########
     
     # Unpack the results
     consensus, predicted_structures, consensus_metrics, topN_metrics = prediction
