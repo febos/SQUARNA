@@ -318,7 +318,7 @@ def BuildRfam():
 
 
 
-
+'''
 if __name__ == "__main__":
 
     seq = "GGGCCAUUGGGUGGGAUCUGGGGGGG"
