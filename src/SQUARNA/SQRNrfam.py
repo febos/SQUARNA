@@ -200,48 +200,103 @@ def SearchG4(seq, rfamdbn, rfamfound, g4sym = '+'):
     res = PairsToDBN(pairs,len(seq))
     res = ''.join([ch if g4[i] != g4sym else g4sym for i,ch in enumerate(res)])
     return res, "G4(+),"+rfamfound  
-    
 
-def SearchRfamG4(seq, homedir, write_to, rfam, g4):
+
+def FindRBP(seq, emptysym = '.'):
+
+    patterns = (r'(?=(AUUGCAC))',
+                r'(?=(GGAGA))',
+                r'(?=(UGCAUG))',
+                r'(?=(UGUA[ACU]AU[AU]))',
+                r'(?=(ACUAAC))',
+                r'(?=(GAAACAC))',)
+
+    proteins = ("U1A", "LIN28", "RBFOX1/2", "PUM", "SF1/QKI", "Fab",)
+    patterns = (re.compile(p) for p in patterns)
+
+    found = []
+
+    rbp = [emptysym for _ in seq]
+
+    for k, pair in enumerate(zip(patterns,proteins)):
+        pattern, prot = pair
+        for match in pattern.finditer(seq):
+            start = match.start()
+            matched_string = match.group(1)
+            end = start + len(matched_string)
+            found.append(prot+'({}-{})'.format(start+1,end))
+            for i in range(start,end):
+                rbp[i] = "+"
+            if prot == 'Fab':
+                rbp[start] = '('
+                rbp[end-1] = ')'
+
+    return ''.join(rbp), ','.join(found)
+
+
+def SearchRBP(seq, rfamdbn, rfamfound, emptysym = '.'):
+
+    shortseq = ''.join([x if x not in SEPS else "N" for x in seq if x not in GAPS]).upper().replace('T','U')
+
+    #####
+    #shortg4 = ''.join([g4sym if ch=='G' else '.' for ch in shortseq])
+    #g4found = g4sym in shortg4
+    shortrbp, rbpfound = FindRBP(shortseq, emptysym)
+    #####
+
+    if not rbpfound:
+        return rfamdbn, rfamfound
+
+    rbp = ReAlign(shortrbp, seq)
+
+    if not rfamfound:
+        return rbp, rbpfound
+
+    res = ''.join([ch if ch != emptysym else rfamdbn[i] for i,ch in enumerate(rbp)])
+    return res, rbpfound+","+rfamfound
+
+
+def AfterRfamSplit(seq, g4, rbp, rfamdbn, rfamfound):
+
+    if not g4 and not rbp:
+        return rfamdbn, rfamfound
+    elif g4 and not rbp:
+        return SearchG4(seq, rfamdbn, rfamfound)
+    elif rbp and not g4:
+        return SearchRBP(seq, rfamdbn, rfamfound)
+
+    rfamg4dbn, rfamg4found = SearchG4(seq, rfamdbn, rfamfound)
+    return SearchRBP(seq, rfamg4dbn, rfamg4found)
+
+
+def SearchRfamG4RBP(seq, homedir, write_to, rfam, g4, rbp):
     """ return restraints,rfam-families """
 
     if not rfam:
-        return SearchG4(seq, None, False)
+        return AfterRfamSplit(seq, g4, rbp, None, False)
 
     path = shutil.which("cmscan")
 
     if path is None:
         print("ERROR: could not find cmscan, rfam search disabled; to fix this, install Infernal: eddylab.org/infernal/",
               file = write_to)
-        if not g4:
-            return None, False
-        else:
-            return SearchG4(seq, None, False)
+        return AfterRfamSplit(seq, g4, rbp, None, False)
 
     else:
         if not os.path.exists(os.path.join(homedir,"Rfam.cm")) and\
            not os.path.exists(os.path.join(homedir,"Rfam.cm.i1f")):
             print("ERROR: could not find Rfam.cm, rfam search disabled; to fix this, run SQUARNA-build-rfam",
                   file = write_to)
-            if not g4:
-                return None, False
-            else:
-                return SearchG4(seq, None, False)
+            return AfterRfamSplit(seq, g4, rbp, None, False)
         else:
             print("Running Rfam search...", end = '', file = write_to)
             dbn, fams = CMScan(seq, homedir)
             if fams:
                 print(': '+fams, file = write_to)
-                if not g4:
-                    return dbn, fams
-                else:
-                    return SearchG4(seq, dbn, fams)
+                return AfterRfamSplit(seq, g4, rbp, dbn, fams)
             else:
                 print(': no hits.', file = write_to)
-                if not g4:
-                    return None, False
-                else:
-                    return SearchG4(seq, None, False)
+                return AfterRfamSplit(seq, g4, rbp, None, False)
 
 def BuildRfam():
 
@@ -263,16 +318,20 @@ def BuildRfam():
 
 
 
-'''
+
 if __name__ == "__main__":
 
     seq = "GGGCCAUUGGGUGGGAUCUGGGGGGG"
     seq = "GGGCAAGGGAAAGGGCCCGGG"
+    seq = "AUUGCACAAGGAGAAAUGCAUGAAUGUACAUAAAACUAACAAGAAACAC"
     #seq = "GGCUGGUGAUUGGGACCGGGCAGGGCGGGCACGGGCCAGCC"
-    g4, found = FindG4(seq, '+')
+    #g4, found = FindG4(seq, '+')
+
+    rbp, found = FindRBP(seq)
 
     print(seq)
-    print(g4)
-    print(found)
-'''
+    #print(g4)
+    print(rbp)
+    print(found)'''
+
 

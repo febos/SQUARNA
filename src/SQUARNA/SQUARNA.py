@@ -6,11 +6,11 @@ from multiprocessing import Pool
 try:
     from SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
     from SQRNdbnali import RunSQRNdbnali
-    from SQRNrfam   import SearchRfamG4
+    from SQRNrfam   import SearchRfamG4RBP
 except:
     from .SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
     from .SQRNdbnali import RunSQRNdbnali
-    from .SQRNrfam   import SearchRfamG4
+    from .SQRNrfam   import SearchRfamG4RBP
 
 def ParseConfig(configfile):
     """Parses the config file"""
@@ -421,7 +421,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
             poollim = 1000, reactformat = 3, alignment = False, levellimit = None,
             freqlimit = 0.35, verbose = False, step3 = "u", ignorewarn = False,
             HOME_DIR = None, write_to = None, priority = None,
-            rfam = False, g4 = False, M = 1.8, B = -0.6,
+            rfam = False, g4 = False, M = 1.8, B = -0.6, rbp = False,
             i = None, ff = None, c = None, config = None, s = None, seq = None,
             a = None, ali = None, algo = None, algorithm = None, rb = None,
             fl = None, freqlim = None, ll = None, levlim = None, tl = None,
@@ -581,6 +581,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 will be printed.
             iw / ignore / ignorewarn : bool
                 Ignore warnings.
+            rbp : bool
+                Enable protein-binding motif search in case of a single input sequence
             rfam : bool
                 Enable rfam search in case of a single input sequence
             g4 : bool
@@ -849,16 +851,17 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                                                    inputrestr = inputrestr,
                                                    M = M, B = B)
 
-            if rfam or g4:
+            if rfam or g4 or rbp:
                 if not single_input:
-                    print("WARNING: Found more than one sequence, rfam/G4 search disabled.",
+                    print("WARNING: Found more than one sequence, rfam/G4/RBP search disabled.",
                           file=sys.stderr)
                     rfam = False
                     g4 = False
+                    rbp = False
                 else:
                     inputs = list(inputs)
                     inputs[0] = list(inputs[0])
-                    foundpatterns, rfam = SearchRfamG4(inputs[0][1], HOME_DIR, write_to, rfam, g4)
+                    foundpatterns, rfam = SearchRfamG4RBP(inputs[0][1], HOME_DIR, write_to, rfam, g4, rbp)
                     if foundpatterns:
                         inputs[0][3] = foundpatterns
             
@@ -890,16 +893,17 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                                                        fmt = fileformat, ignore = ignorewarn,
                                                        inputrestr = inputrestr,
                                                        M = M, B = B)
-                if rfam or g4:
+                if rfam or g4 or rbp:
                     if not single_input:
-                        print("WARNING: Found more than one sequence, rfam/G4 search disabled.",
+                        print("WARNING: Found more than one sequence, rfam/G4/RBP search disabled.",
                               file=sys.stderr)
                         rfam = False
                         g4 = False
+                        rbp = False
                     else:
                         inputs = list(inputs)
                         inputs[0] = list(inputs[0])
-                        foundpatterns, rfam = SearchRfamG4(inputs[0][1], HOME_DIR, write_to, rfam, g4)
+                        foundpatterns, rfam = SearchRfamG4RBP(inputs[0][1], HOME_DIR, write_to, rfam, g4, rbp)
                         if foundpatterns:
                             inputs[0][3] = foundpatterns
                 
@@ -1061,6 +1065,7 @@ def Main():
 
     rfam        = False                # Rfam template search for structural restraints
     g4          = False                # G-quadruplex pattern recognition for structural restraints
+    rbp         = False                # Protein-binding motif recognition for structural restraints
 
     M = 1.8                            # Slope for chemical probing reactivities 
     B = -0.6                           # Intercept for chemical probing reactivities 
@@ -1097,7 +1102,7 @@ def Main():
                                    "-g4", "--g4",
                                    "-hr", "--hr", "-hardrest", "--hardrest",
                                    "-iw", "--iw", "-ignore", "--ignore", "-ico", "--ico",
-                                   "-interchainonly", "--interchainonly", 
+                                   "-interchainonly", "--interchainonly", "-rbp", "--rbp",
                                    "-rfam", "--rfam", "-v", "--v", "-verbose", "--verbose",}:
             formatted_args.append(args[cnt].lstrip('-'))
         else:
@@ -1210,10 +1215,13 @@ def Main():
         # entropy
         elif arg.lower() in {"ent", "entropy"}:
             entropy = True
+        # rbp
+        elif arg.lower() == 'rbp':
+            rbp = True
         # rfam
         elif arg.lower() == 'rfam':
             rfam = True
-        # rfam
+        # g4
         elif arg.lower() == 'g4':
             g4 = True
         # step3
@@ -1246,7 +1254,7 @@ def Main():
             interchainonly, toplim, outplim, conslim,
             poollim, reactformat, alignment, levellimit,
             freqlimit, verbose, step3, ignorewarn, HOME_DIR,
-            None, priority, rfam, g4, M, B)
+            None, priority, rfam, g4, M, B, rbp)
         
 
 

@@ -1,5 +1,8 @@
 
-version 3.05 [07.04.2026] - Added M (slope) and B (intercept) parameters
+version 3.1 [12.05.2026] - Added "rbp" parameter to search for protein-binding motifs,
+                           see README.
+
+version 3.05 [06.05.2026] - Added M (slope) and B (intercept) parameters
 			    to tune the effect of residue reactivities;
 			    fixed handling NaN reactivity values.
 

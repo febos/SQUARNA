@@ -1,4 +1,4 @@
-# SQUARNA, version 3.05 [06.05.2026]
+# SQUARNA, version 3.1 [12.05.2026]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
@@ -317,6 +317,25 @@ Infernal(cmscan) is required to enable Rfam search.
         By default, pr=bppN,bppH1,bppH2 when the default configs are used, 
         and pr is empty in the case of a user-specified config.
 
+    rbp [DEFAULT: FALSE]
+    
+        Works only in single-sequence mode with a single input sequence.
+        If specified, protein-binding motif recognition will be used 
+        to retrieve structural restraints, to guide prediction.
+        The current list of the protein-binding motifs:
+         
+         AUUGCAC U1A 10.1016/S0969-2126(96)00066-4
+
+         GAAACAC Fab 10.1038/nsmb.1945 
+
+         GGAGA LIN28 10.1016/j.molcel.2012.08.004 
+
+         UGCAUG RBFOX1/2 10.1038/sj.emboj.7600918 
+
+         UGUAHAUW PUM 10.1093/nar/gkx1120 
+
+         ACUAAC SF1/QKI 10.7554/eLife.103167.3 
+    
     rfam [DEFAULT: FALSE]
     
         Works only in single-sequence mode with a single input sequence.
