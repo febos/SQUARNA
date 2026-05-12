@@ -1,5 +1,5 @@
 
-version 3.1 [12.05.2026] - Added "rbp" parameter to search for protein-binding motifs,
+version 3.11 [12.05.2026] - Added "rbp" parameter to search for protein-binding motifs,
                            see README.
 
 version 3.05 [06.05.2026] - Added M (slope) and B (intercept) parameters
