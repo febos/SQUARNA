@@ -1,4 +1,6 @@
 
+version 3.2 [14.05.2026] - Fixed a bug with bpp calculations (ViennaRNA) for long sequences.
+
 version 3.11 [12.05.2026] - Added "rbp" parameter to search for protein-binding motifs,
                            see README.
 

@@ -395,6 +395,16 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
                 scoremat += (bppm/np.max(bppm))**(-bpp_power)
             else:
                 scoremat *= (bppm/np.max(bppm))**bpp_power
+        else:
+            (ss, mfe) = fc.mfe()
+            fc.exp_params_rescale(mfe)
+            fc.pf()
+            bppm = np.array(fc.bpp())[1:,1:]
+            if np.max(bppm) > 0:
+                if bpp_power < 0:
+                    scoremat += (bppm/np.max(bppm))**(-bpp_power)
+                else:
+                    scoremat *= (bppm/np.max(bppm))**bpp_power
     ################
 
     return boolmat, scoremat
