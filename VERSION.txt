@@ -1,4 +1,10 @@
 
+version 3.21 [28.05.2026] - Improved PairsToDBN: replaced bubble-sort level optimization
+                            with crossing-count-based sorting; pairs with fewer
+                            crossings are assigned to lower bracket levels first, then
+                            levels are sorted by size so the largest groups use the
+                            lowest-level brackets.
+
 version 3.2 [14.05.2026] - Fixed a bug with bpp calculations (ViennaRNA) for long sequences.
 
 version 3.11 [12.05.2026] - Added "rbp" parameter to search for protein-binding motifs,

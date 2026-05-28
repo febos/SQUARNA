@@ -104,86 +104,43 @@ def EncodedReactivities(seq, reacts, reactformat):
 def PairsToDBN(newpairs, length = 0, returnlevels = False, levellimit = -1):
     """Convert a list of base pairs into a dbn string of the given length"""
 
-    # Initialize the dbn string
-    dbn = ['.']*length
-
     # Define "brackets" for 30 pseudoknot levels (and 19 more encoded with cyrillic letters)
-    # Higher levels will be simply ignored
-    levels = ['()','[]','{}','<>','Aa','Bb','Cc','Dd','Ee','Ff','Gg',
-              'Hh','Ii','Jj','Kk','Ll','Mm','Nn','Oo','Pp','Qq','Rr',
-              'Ss','Tt','Uu','Vv','Ww','Xx','Yy','Zz',
-              'Бб','Гг','Дд','Ёё','Жж','Йй','Лл','Пп',
-              'Фф','Цц','Чч','Шш','Щщ','Ьь','Ыы','Ъъ','Ээ','Юю','Яя']
+    BRACKETS = ['()','[]','{}','<>','Aa','Bb','Cc','Dd','Ee','Ff','Gg',
+                'Hh','Ii','Jj','Kk','Ll','Mm','Nn','Oo','Pp','Qq','Rr',
+                'Ss','Tt','Uu','Vv','Ww','Xx','Yy','Zz',
+                'Бб','Гг','Дд','Ёё','Жж','Йй','Лл','Пп',
+                'Фф','Цц','Чч','Шш','Щщ','Ьь','Ыы','Ъъ','Ээ','Юю','Яя']
 
-    # groups of non-conflicting base pairs
-    groups = [set(),]
+    def crosses(p, q):
+        i, j = p; k, l = q
+        return (i < k < j < l) or (k < i < l < j)
 
-    # normalize the pairs (i.e. ensure v < w)
-    pairs = set((min(v, w), max(v, w)) for v, w in newpairs)
-    
-    for pair in sorted(pairs):
+    # normalize the pairs (i.e. ensure v < w), deduplicate
+    pairs = sorted(set((min(v, w), max(v, w)) for v, w in newpairs))
 
-        level = 0
+    # Sort by ascending crossing count so pairs involved in fewer crossings
+    # (which form larger conflict-free groups) occupy the lower levels
+    cross_count = {p: sum(1 for q in pairs if p != q and crosses(p, q))
+                   for p in pairs}
+    ordered = sorted(pairs, key=lambda p: (cross_count[p], p[0]))
 
-        # find the minimum level where the pair is not in conflict
-        # with any base pair of that level
-        while any(v[0]<=pair[0]<=v[1]<=pair[1] or
-                  pair[0]<=v[0]<=pair[1]<=v[1] for v in groups[level]):
-            level += 1
-            if level == len(groups):
-                groups.append(set())
-            if level == len(levels):
-                levels.append('..')
+    # Greedy level assignment: for each pair use the lowest level
+    # whose existing pairs do not cross it
+    groups: list[list] = []
+    for pair in ordered:
+        for group in groups:
+            if not any(crosses(pair, q) for q in group):
+                group.append(pair)
+                break
+        else:
+            groups.append([pair])
 
-        # add the pair to the determined level
-        groups[level].add(pair)
+    # Sort so the largest groups use the lowest-level brackets
+    groups.sort(key=len, reverse=True)
 
-    # kind of a bubble sort of the base pairs among the levels
-    # to maximize the number of base pairs of the lowest levels
-    # e.g. to turn (..[[[...)...]]] into [..(((...]...)))
-    for times in range(len(groups)-1):
-        for i in range(len(groups)-1):
-
-            rest = {v for v in groups[i+1] if any(v[0]<=w[0]<=v[1]<=w[1] or
-                                                       w[0]<=v[0]<=w[1]<=v[1]
-                                                       for w in groups[i])}
-            clean = groups[i+1] - rest
-
-            while rest:
-
-                confjprev = set()
-                confiprev = set()
-
-                confj = rest.pop()
-                rest.add(confj)
-                confj = {confj,}
-                confi = {v for v in groups[i] if any(v[0]<=w[0]<=v[1]<=w[1] or
-                                                     w[0]<=v[0]<=w[1]<=v[1]
-                                                     for w in confj)}
-
-                while confjprev != confj or confiprev != confi:
-
-                    confjprev = confj
-                    confiprev = confi
-
-                    confj = {v for v in rest if any(v[0]<=w[0]<=v[1]<=w[1] or
-                                                    w[0]<=v[0]<=w[1]<=v[1]
-                                                    for w in confi)}
-                    confi = {v for v in groups[i] if any(v[0]<=w[0]<=v[1]<=w[1] or
-                                                     w[0]<=v[0]<=w[1]<=v[1]
-                                                     for w in confj)}
-
-                if len(confi) < len(confj):
-
-                    groups[i]   = confj | (groups[i] - confi)
-                    groups[i+1] = confi | (groups[i+1] - confj)
-
-                rest = rest - confj
-
-            if clean:
-
-                groups[i] |= clean
-                groups[i+1] -= clean
+    # Extend BRACKETS list if needed
+    while len(BRACKETS) < len(groups):
+        BRACKETS.append('..')
 
     if returnlevels:
         levels = {}
@@ -196,13 +153,13 @@ def PairsToDBN(newpairs, length = 0, returnlevels = False, levellimit = -1):
     if levellimit >= 0:
         groups = groups[:levellimit]
 
-    # add all the pairs to the dbn string
-    # according to their levels  
+    # add all the pairs to the dbn string according to their levels
+    dbn = ['.'] * length
     for i, group in enumerate(groups):
         for pair in group:
-            dbn[pair[0]] = levels[i][0]
-            dbn[pair[1]] = levels[i][1]
-            
+            dbn[pair[0]] = BRACKETS[i][0]
+            dbn[pair[1]] = BRACKETS[i][1]
+
     return ''.join(dbn)
 
 

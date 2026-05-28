@@ -1,4 +1,4 @@
-# SQUARNA, version 3.2 [14.05.2026]
+# SQUARNA, version 3.21 [28.05.2026]
 
 [D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
 
