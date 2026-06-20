@@ -4,6 +4,8 @@
 
 ## Check out [our other developments](https://github.com/febos/wiki)
 
+## Check out the web version of SQUARNA: [larnal.imol.institute](https://larnal.imol.institute/)
+
 ## The benchmark data are available [here](https://github.com/febos/SQUARNA-data)
 
 # Usage
