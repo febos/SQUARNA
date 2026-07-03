@@ -1,10 +1,10 @@
-# SQUARNA, version 3.21 [28.05.2026]
+# SQUARNA, version 3.22 [03.07.2026]
 
-[D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2024) SQUARNA - an RNA secondary structure prediction method based on a greedy stem formation model. bioRxiv. DOI: 10.1101/2023.08.28.555103](https://doi.org/10.1101/2023.08.28.555103)
+[M.D. Serdakov, D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2026) Revisiting the base pair maximization approach for RNA secondary structure prediction with SQUARNA. bioRxiv. DOI: 10.64898/2026.06.30.735492](https://doi.org/10.64898/2026.06.30.735492)
 
 ## Check out [our other developments](https://github.com/febos/wiki)
 
-## Check out the web version of SQUARNA: [larnal.imol.institute](https://larnal.imol.institute/)
+## Check out the [web version of SQUARNA](https://larnal.imol.institute/)
 
 ## The benchmark data are available [here](https://github.com/febos/SQUARNA-data)
 
