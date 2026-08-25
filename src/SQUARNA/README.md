@@ -1,6 +1,6 @@
 # SQUARNA, version 3.22 [03.07.2026]
 
-[M.D. Serdakov, D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2026) Revisiting the base pair maximization approach for RNA secondary structure prediction with SQUARNA. bioRxiv. DOI: 10.64898/2026.06.30.735492](https://doi.org/10.64898/2026.06.30.735492)
+[M.D. Serdakov, D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2026) SQUARNA: stem maximization for accurate de novo RNA secondary structure prediction. bioRxiv. DOI: 10.64898/2026.06.30.735492](https://doi.org/10.64898/2026.06.30.735492)
 
 ## Check out [our other developments](https://github.com/febos/wiki)
 
