@@ -1247,7 +1247,7 @@ def Main():
             else:
                 print("Unrecognized option: {}".format(arg))
 
-    print(inputfile)
+    #print(inputfile)
 
     Predict(inputfile, fileformat, inputseq,
             configfile, inputformat, maxstemnum,
