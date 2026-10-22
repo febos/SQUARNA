@@ -368,6 +368,7 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
             print("Non-default input file format is recognized: {}".format(fmt.upper()))
 
     if fmt == "default":
+        guessed_fmt, single_input = GuessFormat(inputname)
         if returndefaults:
             return next(ParseDefaultInput(inputname, inputformat, returndefaults,
                                           M = M, B = B)), fmt
@@ -375,6 +376,7 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
                                  returndefaults, ignore = ignore,
                                  M = M, B = B), fmt, single_input
     elif fmt == "fasta":
+        guessed_fmt, single_input = GuessFormat(inputname)
         if returndefaults:
             return next(ParseFasta(inputname, returndefaults)), fmt
         return ParseFasta(inputname, returndefaults), fmt, single_input
