@@ -1,4 +1,4 @@
-# SQUARNA, version 3.22 [03.07.2026]
+# SQUARNA, version 3.25 [22.10.2026]
 
 [M.D. Serdakov, D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2026) SQUARNA: stem maximization for accurate de novo RNA secondary structure prediction. bioRxiv. DOI: 10.64898/2026.06.30.735492](https://doi.org/10.64898/2026.06.30.735492)
 
