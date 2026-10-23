@@ -252,6 +252,10 @@ def SearchRBP(seq, rfamdbn, rfamfound, emptysym = '.'):
     if not rfamfound:
         return rbp, rbpfound
 
+    pairs_to_remove = [(v,w) for v,w in DBNToPairs(rfamdbn) if rbp[v] != emptysym or rbp[w] != emptysym]
+    brackets_to_remove = set([v for bp in pairs_to_remove for v in bp])
+    rfamdbn = ''.join([ch if i not in brackets_to_remove else emptysym for i,ch in enumerate(rfamdbn)])
+
     res = ''.join([ch if ch != emptysym else rfamdbn[i] for i,ch in enumerate(rbp)])
     return res, rbpfound+","+rfamfound
 

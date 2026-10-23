@@ -324,6 +324,8 @@ Infernal(cmscan) is required to enable Rfam search.
         Works only in single-sequence mode with a single input sequence.
         If specified, protein-binding motif recognition will be used 
         to retrieve structural restraints, to guide prediction.
+        In case of identified motifs, manual restraints will be 
+        overwritten. 
         The current list of the protein-binding motifs:
          
          AUUGCAC U1A 10.1016/S0969-2126(96)00066-4
@@ -343,12 +345,16 @@ Infernal(cmscan) is required to enable Rfam search.
         Works only in single-sequence mode with a single input sequence.
         If specified, rfam family search using Infernal(cmscan) will
         be used to retrieve structural restraints, to guide prediction.
+        In case of identified rfam templates, manual restraints
+        will be overwritten.
         
     G4 [DEFAULT: FALSE]
     
         Works only in single-sequence mode with a single input sequence.
         If specified, G-quadruplex pattern recognition will be used 
-        to retrieve structural restraints, to guide prediction.
+        to retrieve structural restraints, to guide prediction. 
+        In case of identified G-quadruplex patterns, manual restraints
+        will be overwritten.
 
     s3={i,u,1,2} / step3={i,u,1,2} [DEFAULT: s3=u]
     
