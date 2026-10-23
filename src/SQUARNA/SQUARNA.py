@@ -1098,6 +1098,8 @@ def Main():
                                  "-rf", "--rf", "-reactformat", "--reactformat",
                                  "-s", "--s", "-seq", "--seq","-sequence", "--sequence",
                                  "-t", "--t", "-threads", "--threads",}:
+            if cnt + 1 >= len(args):
+                raise ValueError("Missing value for the '{}' parameter".format(args[cnt]))
             formatted_args.append(args[cnt].lstrip('-')+'='+args[cnt+1])
             cnt += 1
         elif args[cnt].lower() in {"-a", "--a", "-ali", "--ali", "-alignment", "--alignment",
