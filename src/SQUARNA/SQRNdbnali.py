@@ -348,7 +348,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
         print(">Step 1, Iteration 1", file = sink)
 
     # Iteration 1    
-    pred_dbn, smat = SQRNdbnali(objs, defrests, defreacts, defref, 
+    pred_dbn, smat = SQRNdbnali(objs, None, defreacts, defref, 
                                 bpweights, interchainonly,
                                 minlen, minbpscore,
                                 threads, verbose, sink = sink, M = M, B = B)

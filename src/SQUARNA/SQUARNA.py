@@ -465,7 +465,6 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 alt (alt.conf) is recommended for short pseudoknotted RNAs.
                 500 (500.conf) is recommended for RNAs longer 500 nts.
                 1000 (1000.conf) is recommended for RNAs longer 1000 nts.
-                sk (sk.conf) is recommended with SHAPE data input.
                 c=nussinov (nussinov.conf) - Nussinov algorithm config.
                 c=hungarian (hungarian.conf) - Hungarian algorithm config.
                 c=edmonds (edmonds.conf) - Edmonds algorithm config.
@@ -559,12 +558,13 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 parameters for step-1 will be derived from the first 
                 parameter set in the config file.
             ll / levlim / levellimit : int
-                Ignored in the single-sequence mode.
-                The allowed number of pseudoknot levels. All the base pairs
-                of the higher levels will be removed from the structure predicted
-                at step-1 and from the structure predicted at step-2. By default, 
-                levellimit=3 for short alignments of no more than 500 columns, 
-                and levellimit=2 for longer alignments.
+                The allowed number of pseudoknot levels. In the single-sequence
+                mode it's applied to the predictions of the Hungarian and Edmonds
+                algorithms. In the alignment mode, all the base pairs of the higher
+                levels will be removed from the structure predicted at step-1 and
+                from the structure predicted at step-2. By default, levellimit=3
+                for short alignments of no more than 500 columns, and levellimit=2
+                for longer alignments.
             fl / freqlim / freqlimit : 0.0 <= float <= 1.0
                 Ignored in the single-sequence mode.
                 The percentage of sequences required to contain a base pair,
