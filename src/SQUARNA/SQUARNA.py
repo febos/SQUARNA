@@ -16,6 +16,7 @@ def ParseConfig(configfile):
     """Parses the config file"""
     # Set of mandatory parameters
     params = {"algorithms",
+              "bpp",
               "bpweights",
               "suboptmax",
               "suboptmin",
@@ -73,7 +74,7 @@ def ParseConfig(configfile):
                          " the first parameter set"+\
                          " of the config file: {}"\
                          .format(', '.join([_ for _ in params
-                                            if _ not in paramset])))
+                                            if _ not in paramsets[0]])))
     return names, paramsets
 
 
@@ -874,9 +875,10 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 # apply autoconfig
                 else:
                     theparamsetnames, theparamsets = paramsetnames, paramsets
-                    if len(seq) >= 500:
+                    seqlen = sum(ch not in GAPS and ch not in SEPS for ch in seq)
+                    if seqlen >= 500:
                         theparamsetnames, theparamsets = paramsetnames500, paramsets500
-                    if len(seq) >= 1000:
+                    if seqlen >= 1000:
                         theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
                 
                 RunSQRNdbnseq(name, seq, reacts, restrs, ref, theparamsetnames,
@@ -916,9 +918,10 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                     # apply autoconfig
                     else:
                         theparamsetnames, theparamsets = paramsetnames, paramsets
-                        if len(seq) >= 500:
+                        seqlen = sum(ch not in GAPS and ch not in SEPS for ch in seq)
+                        if seqlen >= 500:
                             theparamsetnames, theparamsets = paramsetnames500, paramsets500
-                        if len(seq) >= 1000:
+                        if seqlen >= 1000:
                             theparamsetnames, theparamsets = paramsetnames1000, paramsets1000
                     # Collecting inputs
                     inputs_batch.append((name, seq, reacts, restrs, ref, theparamsetnames,
