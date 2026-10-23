@@ -30,7 +30,7 @@ ReactDict = {"_" : 0.00,  "+" : 0.50,  "#" : 1.00,
              "?" : -999,}
 
 def ProcessReacts(reacts, missing_threshold = -10, middle = 0.5,
-                  reverse = False, M = 1.8, B = 1.6):
+                  reverse = False, M = 1.8, B = -0.6):
 
     neutral = np.exp(-B/M) - 1 #Solution for [M * ln(SHAPE + 1) + B] = 0
 

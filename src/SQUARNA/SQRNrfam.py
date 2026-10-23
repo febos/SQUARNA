@@ -1,6 +1,8 @@
 
 import os
 import re
+import tempfile
+import shlex
 import urllib.request
 import gzip
 import shutil
@@ -57,28 +59,35 @@ def CMScan(seq, homedir):
     shortseq = ''.join([x if x not in SEPS else "N" for x in seq if x not in GAPS])
     
     rfamcm = os.path.join(homedir,'Rfam.cm')
-    infile = "squarna_cmscan.fas"
-    outfile = "squarna_cmscan.out"
 
     illegal = {'e','f','j','l','o','p','q','z'}
 
-    with open(infile,'w') as inp:
-        inp.write(">seq\n")
-        inp.write(''.join(['N' if (ch.lower() in illegal or ord(ch) > 127) else ch
-                           for ch in shortseq]) + '\n') 
-    
-    os.system("cmscan --notextw -E 1e-4 -o {} --rfam --toponly {} {}".format(outfile, rfamcm, infile))
+    #infile = "squarna_cmscan.fas"
+    #outfile = "squarna_cmscan.out"
 
-    with open(outfile) as file:
-        flag = False
-        lines = []
-        for line in file:
-            if line.startswith("Hit alignments:"):
-                flag = True
-            elif flag:
-                if line.startswith("Internal HMM-only"):
-                    break
-                lines.append(line.strip('\n'))
+    with tempfile.TemporaryDirectory() as tmpdir:
+        infile  = os.path.join(tmpdir, "squarna_cmscan.fas")
+        outfile = os.path.join(tmpdir, "squarna_cmscan.out")
+
+        with open(infile,'w') as inp:
+            inp.write(">seq\n")
+            inp.write(''.join(['N' if (ch.lower() in illegal or ord(ch) > 127) else ch
+                               for ch in shortseq]) + '\n') 
+        
+        os.system("cmscan --notextw -E 1e-4 -o {} --rfam --toponly {} {}".format(shlex.quote(outfile),
+                                                                                 shlex.quote(rfamcm),
+                                                                                 shlex.quote(infile)))
+
+        with open(outfile) as file:
+            flag = False
+            lines = []
+            for line in file:
+                if line.startswith("Hit alignments:"):
+                    flag = True
+                elif flag:
+                    if line.startswith("Internal HMM-only"):
+                        break
+                    lines.append(line.strip('\n'))
 
     fams = []
 
@@ -287,9 +296,9 @@ def SearchRfamG4RBP(seq, homedir, write_to, rfam, g4, rbp):
         return AfterRfamSplit(seq, g4, rbp, None, False)
 
     else:
-        if not os.path.exists(os.path.join(homedir,"Rfam.cm")) and\
+        if not os.path.exists(os.path.join(homedir,"Rfam.cm")) or\
            not os.path.exists(os.path.join(homedir,"Rfam.cm.i1f")):
-            print("ERROR: could not find Rfam.cm, rfam search disabled; to fix this, run SQUARNA-build-rfam",
+            print("ERROR: could not find Rfam.cm or Rfam.cm.i1f, rfam search disabled; to fix this, run SQUARNA-build-rfam",
                   file = write_to)
             return AfterRfamSplit(seq, g4, rbp, None, False)
         else:
@@ -317,7 +326,7 @@ def BuildRfam():
         with open(output_file_path, 'wb') as f_out:
             shutil.copyfileobj(f_in, f_out)
 
-    os.system("cmpress {}".format(output_file_path))
+    os.system("cmpress {}".format(shlex.quote(output_file_path)))
 
 
 

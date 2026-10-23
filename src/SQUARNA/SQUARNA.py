@@ -12,6 +12,8 @@ except:
     from .SQRNdbnali import RunSQRNdbnali
     from .SQRNrfam   import SearchRfamG4RBP
 
+CLUSTAL_HEADERS = ("CLUSTAL", "MUSCLE", "PROBCONS")
+
 def ParseConfig(configfile):
     """Parses the config file"""
     # Set of mandatory parameters
@@ -215,7 +217,7 @@ def GuessFormat(inp):
         if line1.startswith('#') and "STOCKHOLM" in line1:
             return "stockholm", 0
         
-        if line1.startswith("CLUSTAL"):
+        if line1.startswith(CLUSTAL_HEADERS):
             return "clustal", 0
 
         if line1.startswith(">"):
@@ -338,8 +340,8 @@ def ParseClustal(inp, returndefaults = False):
 
     with open(inp) as file:
         for line in file:
-            if line.strip() and not line.startswith("CLUSTAL") and not line.startswith(' '):
-                name, seq = line.strip().split()
+            if line.strip() and not line.startswith(CLUSTAL_HEADERS) and not line.startswith(' '):
+                name, seq = line.strip().split()[:2]
                 if name not in objs:
                     names.append(name)
                     objs[name] = ''
@@ -366,7 +368,8 @@ def ParseInput(inputseq, inputname, inputformat, returndefaults = False,
     if fmt == "unknown":
         fmt, single_input = GuessFormat(inputname)
         if fmt != "default":
-            print("Non-default input file format is recognized: {}".format(fmt.upper()))
+            print("Non-default input file format is recognized: {}".format(fmt.upper()),
+                  file=sys.stderr)
 
     if fmt == "default":
         guessed_fmt, single_input = GuessFormat(inputname)
@@ -745,6 +748,8 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         raise ValueError('Inappropriate algorithm value (should be subset of "eghn"): {}'\
                          .format(algorithms))
 
+    if type(rankby)==str:
+        rankby = ''.join(sorted(rankby))
     assert rankby in {"r", "s", "rs", "dr", "ds", "drs"}, \
            'Inappropriate rankby value (r/s/rs/dr/ds/drs): {}'\
            .format(rankby)
@@ -807,7 +812,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         step3 = step3.lower()
         assert step3 in {'u', 'i', '1', '2'}
     except:
-        raise ValueError("Inappropriate freqlimit value (float between 0.0 and 1.0): {}"\
+        raise ValueError("Inappropriate step3 value (u/i/1/2): {}"\
                          .format(step3))
 
     # Process rankby
@@ -1250,7 +1255,7 @@ def Main():
                 else:
                     inputfile = arg
             else:
-                print("Unrecognized option: {}".format(arg))
+                print("Unrecognized option: {}".format(arg), file=sys.stderr)
 
     #print(inputfile)
 

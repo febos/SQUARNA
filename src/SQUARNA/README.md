@@ -406,11 +406,11 @@ Infernal(cmscan) is required to enable Rfam search.
 
     hr / hardrest [DEFAULT: FALSE]
     
-        If specified, all the base pairs from the restraints line will be
-        forced to be present in the predicted structures. However, it will
-        not affect the structure scores, as the forced base pairs won't
-        contribute to the structure score unless they were predicted without
-        forcing as well.
+        If specified, all the GC/AU/GU base pairs from the restraints line 
+        will be forced to be present in the predicted structures. However, 
+        it will not affect the structure scores, as the forced base pairs 
+        won't contribute to the structure score unless they were predicted 
+        without forcing as well.
         
     ico / interchainonly [DEFAULT: FALSE]
     

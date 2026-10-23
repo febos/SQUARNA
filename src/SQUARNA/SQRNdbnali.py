@@ -368,7 +368,8 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
                           levellimit = levellimit)
 
     # Normalize the stemmatrix obtained from the first iteration
-    smat = smat / np.max(smat) * 5
+    if np.max(smat) > 0:
+        smat = smat / np.max(smat) * 5
 
     if verbose:
         print(">Step 1, Result", file = sink)
