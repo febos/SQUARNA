@@ -742,7 +742,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         assert algos <= {'E','G','H','N'}
     except:
         raise ValueError('Inappropriate algorithm value (should be subset of "eghn"): {}'\
-                         .format(arg.split('=', 1)[1]))
+                         .format(algorithms))
 
     assert rankby in {"r", "s", "rs", "dr", "ds", "drs"}, \
            'Inappropriate rankby value (r/s/rs/dr/ds/drs): {}'\
