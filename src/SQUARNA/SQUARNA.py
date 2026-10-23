@@ -99,9 +99,9 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = F
         # after the input within the line
         # for sequence, restraints, reference, but not for reactivities
         sequence     = data[q_ind].split()[0]
-        reactivities = data[t_ind] if t_ind > 0 else None
-        restraints   = data[r_ind].split()[0] if r_ind > 0 and data[r_ind] else None
-        reference    = data[f_ind].split()[0] if f_ind > 0 and data[f_ind] else None
+        reactivities = data[t_ind] if t_ind >= 0 else None
+        restraints   = data[r_ind].split()[0] if r_ind >= 0 and data[r_ind] else None
+        reference    = data[f_ind].split()[0] if f_ind >= 0 and data[f_ind] else None
 
         N = len(sequence)
 
@@ -186,9 +186,9 @@ def ParseDefaultInput(inputname, inputformat, returndefaults = False, ignore = F
                     while len(defdata) < len(inputformat) - 1:
                         defdata.append(None)
                     defdata.insert(q_ind, None)
-                    defT = defdata[t_ind] if t_ind > 0 else None
-                    defR = defdata[r_ind] if r_ind > 0 else None
-                    defF = defdata[f_ind] if f_ind > 0 else None
+                    defT = defdata[t_ind] if t_ind >= 0 else None
+                    defR = defdata[r_ind] if r_ind >= 0 else None
+                    defF = defdata[f_ind] if f_ind >= 0 else None
 
                     if returndefaults:
                         yield (defT, defR, defF)
