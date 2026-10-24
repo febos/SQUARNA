@@ -269,13 +269,15 @@ def ReadStockholm(stkfile):
     headers  = [] # Headers list
 
     try:
-        file = open(stkfile)
+        with open(stkfile) as file:
+            lines = file.readlines()
     except:
         # Non-standard encoding found in some
         # of the Rfam families
-        file = open(stkfile, encoding="iso8859-15")
+        with open(stkfile, encoding="iso8859-15") as file:
+            lines = file.readlines()
 
-    for line in file:
+    for line in lines:
         if line.startswith('#=GC '): # Structure lines
 
             linesplit = line.strip().split()
@@ -307,8 +309,6 @@ def ReadStockholm(stkfile):
                 seqdict[name] = seq
             else:
                 seqdict[name] += seq
-
-    file.close()
 
     # Put #=GF lines to the end of the headers
     headers1 = [x for x in headers if not x.startswith("#=GF SQ")]

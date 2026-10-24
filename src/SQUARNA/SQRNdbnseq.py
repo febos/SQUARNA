@@ -958,6 +958,9 @@ def RankStructs(stemsets, rankbydiff = False, rankby = (0, 2, 1),
 def ReferenceScores(seq, ref, reacts):
     """Returns the three scores for the reference structure"""
 
+    # turn seq into UPPERCASE & replace T with U
+    seq = seq.upper().replace("T", "U")
+
     # unalign everything
     if not reacts:
         reacts = [0.5 for i in range(len(seq))]
