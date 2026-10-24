@@ -343,7 +343,7 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
         fc = RNA.fold_compound(''.join([ch if ch not in SEPS and ord(ch) <= 127 else 'N'
                                         for ch in seq]))
         if not defaultreacts:
-            fc.sc_add_SHAPE_deigan(ProcessReacts(reacts, reverse = True, M = M, B = B),
+            fc.sc_add_SHAPE_deigan([0.0] + ProcessReacts(reacts, reverse = True, M = M, B = B),
                                    m = M, b = B)
         fc.pf()
         bppm = np.array(fc.bpp())[1:,1:]
