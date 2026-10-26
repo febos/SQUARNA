@@ -2,6 +2,7 @@ import os
 import sys
 import io
 from multiprocessing import Pool
+import numpy as np
 
 try:
     from SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
@@ -443,7 +444,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 Path to the input file.
             ff / fileformat : unknown/fasta/default/stockholm/clustal
                 Input file format. For the details of the default SQUARNA input
-                format see https://github.com/febos/SQUARNA/blob/main/examples/seq_input.fas.
+                format see https://github.com/febos/SQUARNA/blob/main/src/SQUARNA/examples/seq_input.fas.
                 "unknown"   - the format will be identified automatically.
                 "default"   - default fasta-like format.
                 "fasta"     - FASTA format.
@@ -453,7 +454,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 RNA sequence input, alternative to inputfile (higher priority).
             c / config / configfile : string
                 Path to a config file or a name of a built-in config, 
-                see https://github.com/febos/SQUARNA/blob/main/def.conf
+                see https://github.com/febos/SQUARNA/blob/main/src/SQUARNA/def.conf
                 for the format details. 
                 In the alignment-based mode, the default config 
                 file is ali.conf. In the single-sequence mode the default
@@ -497,7 +498,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 If the algorithms parameter is specified, it will overwrite the
                 algorithms listed in the config file.
                 The choice should be a subset of the four algorithms:
-                e - Edomnds algorithm [10.6028/jres.069B.013]
+                e - Edmonds algorithm [10.6028/jres.069B.013]
                 g - Greedy SQUARNA algorithm [10.1101/2023.08.28.555103]
                 h - Hungarian algorithm [10.1002/nav.3800020109]
                 n - Nussinov algorithm [10.1073/pnas.77.11.6309]
@@ -733,14 +734,18 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                          .format(threads))
     try:
         M = float(M)
+        assert M > 0
     except:
-        raise ValueError("Inappropriate M value (float): {}"\
+        raise ValueError("Inappropriate M value (positive float): {}"\
                          .format(M))
     try:
         B = float(B)
+        assert -M * np.log(2) < B < 0
     except:
-        raise ValueError("Inappropriate B value (float): {}"\
+        raise ValueError("Inappropriate B value (float in the (-M*ln2, 0) range "+\
+                         "to keep the neutral reactivity exp(-B/M)-1 within (0, 1)): {}"\
                          .format(B))
+
     try:
         algos = set(algorithms.upper())
         assert algos <= {'E','G','H','N'}
@@ -1015,7 +1020,7 @@ def Main():
         print()
         print('SQUARNA --help')
         print()
-        exit(1)
+        sys.exit(1)
 
     HOME_DIR = os.path.dirname(os.path.abspath(__file__))
     
@@ -1031,7 +1036,7 @@ def Main():
        "--H" in args or "-H" in args or "H" in args:
         with open(os.path.join(HOME_DIR,"README.md")) as helpfile:
             print(helpfile.read())
-        exit(0)
+        sys.exit(0)
 
     # DEFAULTS
     inputfile      = None

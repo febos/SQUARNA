@@ -272,7 +272,7 @@ Infernal(cmscan) is required to enable Rfam search.
         by the structure_score first. Independently, if d is present, 
         the mutually divergent structures will be put first.  
         
-    fl=INT / freqlim=INT [DEFAULT: fl=0.35]
+    fl=FLOAT / freqlim=FLOAT [DEFAULT: fl=0.35]
     
         Ignored in the single-sequence mode.
         The percentage of sequences required to contain a base pair,
@@ -282,7 +282,7 @@ Infernal(cmscan) is required to enable Rfam search.
         is not in conflict (does not share a position) with a more 
         populated base pair.
 
-    ll=INT / levlim=INT [DEFAULT: ll=(3 - len(seq)>500)]
+    ll=INT / levlim=INT [DEFAULT: ll=(3 - (len(seq)>500))]
     
         The allowed number of pseudoknot levels.
         In the single-sequence mode it's applied to the predictions

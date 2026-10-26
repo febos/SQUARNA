@@ -1,6 +1,7 @@
 
 import os
 import re
+import sys
 import tempfile
 import shlex
 import urllib.request
@@ -74,10 +75,12 @@ def CMScan(seq, homedir):
             inp.write(''.join(['N' if (ch.lower() in illegal or ord(ch) > 127) else ch
                                for ch in shortseq]) + '\n') 
         
-        os.system("cmscan --notextw -E 1e-4 -o {} --rfam --toponly {} {}".format(shlex.quote(outfile),
-                                                                                 shlex.quote(rfamcm),
-                                                                                 shlex.quote(infile)))
-
+        rc = os.system("cmscan --notextw -E 1e-4 -o {} --rfam --toponly {} {}".format(shlex.quote(outfile),
+                                                                                      shlex.quote(rfamcm),
+                                                                                      shlex.quote(infile)))
+        if rc != 0 or not os.path.exists(outfile):
+            raise RuntimeError("cmscan failed (exit status {}); try re-running SQUARNA-build-rfam".format(rc))
+        
         with open(outfile) as file:
             flag = False
             lines = []
@@ -292,14 +295,14 @@ def SearchRfamG4RBP(seq, homedir, write_to, rfam, g4, rbp):
 
     if path is None:
         print("ERROR: could not find cmscan, rfam search disabled; to fix this, install Infernal: eddylab.org/infernal/",
-              file = write_to)
+              file = sys.stderr)
         return AfterRfamSplit(seq, g4, rbp, None, False)
 
     else:
         if not os.path.exists(os.path.join(homedir,"Rfam.cm")) or\
            not os.path.exists(os.path.join(homedir,"Rfam.cm.i1f")):
             print("ERROR: could not find Rfam.cm or Rfam.cm.i1f, rfam search disabled; to fix this, run SQUARNA-build-rfam",
-                  file = write_to)
+                  file = sys.stderr)
             return AfterRfamSplit(seq, g4, rbp, None, False)
         else:
             print("Running Rfam search...", end = '', file = write_to)
@@ -312,6 +315,9 @@ def SearchRfamG4RBP(seq, homedir, write_to, rfam, g4, rbp):
                 return AfterRfamSplit(seq, g4, rbp, None, False)
 
 def BuildRfam():
+
+    if shutil.which("cmpress") is None:
+        raise RuntimeError("could not find cmpress; install Infernal: eddylab.org/infernal/")
 
     homedir = os.path.dirname(os.path.abspath(__file__))
     
@@ -326,8 +332,11 @@ def BuildRfam():
         with open(output_file_path, 'wb') as f_out:
             shutil.copyfileobj(f_in, f_out)
 
-    os.system("cmpress {}".format(shlex.quote(output_file_path)))
+    os.remove(gz_file_path)
 
+    rc = os.system("cmpress -F {}".format(shlex.quote(output_file_path)))
+    if rc != 0:
+        raise RuntimeError("cmpress failed (exit status {})".format(rc))
 
 
 

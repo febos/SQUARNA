@@ -983,7 +983,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
                M = 1.8, B = -0.6):##############
     """seq == sequence (possibly with gaps or any other non-ACGU symbols
     reacts == list of reactivities (values from 0 to 1)
-    restraints == string in dbn format; x symbols are forced to be unpaired
+    restraints == string in dbn format; _ and + symbols are forced to be unpaired
     dbn == known secondary structure in dbn format
     conslim == how many alternative structures are used to derive the consensus
     toplim == how many top ranked structures are used to measure the performance
@@ -1094,7 +1094,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
         # List of finalized stem lists
         finstemsets = []
 
-        for algo in algos: # Run Nissinov/Hungarian/Edmonds
+        for algo in algos: # Run Nussinov/Hungarian/Edmonds
             if algo == "G": # The Greedy algorithm is performed below
                 continue
             stemset = RunAlgo(shortseq, bpboolmatrix, bpscorematrix, rbps,
