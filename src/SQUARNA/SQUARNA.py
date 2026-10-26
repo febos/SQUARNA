@@ -814,7 +814,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                          .format(freqlimit))
 
     try:
-        step3 = step3.lower()
+        step3 = str(step3).lower()
         assert step3 in {'u', 'i', '1', '2'}
     except:
         raise ValueError("Inappropriate step3 value (u/i/1/2): {}"\

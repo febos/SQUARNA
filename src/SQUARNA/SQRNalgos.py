@@ -75,7 +75,7 @@ def Nussinov(seq, stems, N, seps, minloop = 3, matrix = None):
             for k in range(i, j - 1):
 
                 if (k,j) in SCORES:
-                    scorek = D[i, k - 1] + D[k + 1, j - 1] + SCORES[(k,j)]
+                    scorek = (D[i, k - 1] if k > i else 0) + D[k + 1, j - 1] + SCORES[(k,j)]
                     if scorek < bestscorek:
                         bestk, bestscorek = k, scorek
             # see if no base pair is not better
