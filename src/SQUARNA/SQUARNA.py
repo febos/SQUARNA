@@ -468,6 +468,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 1000 (1000.conf) is recommended for RNAs longer 1000 nts.
                 c=nussinov (nussinov.conf) - Nussinov algorithm config.
                 c=hungarian (hungarian.conf) - Hungarian algorithm config.
+                c=ilm (ilm.conf) - ILM algorithm config.
                 c=edmonds (edmonds.conf) - Edmonds algorithm config.
                 c=greedy (greedy.conf) - Greedy algorithm config.
             inputformat : string
@@ -501,6 +502,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
                 e - Edmonds algorithm [10.6028/jres.069B.013]
                 g - Greedy SQUARNA algorithm [10.1101/2023.08.28.555103]
                 h - Hungarian algorithm [10.1002/nav.3800020109]
+                i - ILM algorithm variant [10.1093/bioinformatics/btg373]
                 n - Nussinov algorithm [10.1073/pnas.77.11.6309]
             rb / rankby : string
                 How to rank the predicted structures. rankby should be a subset of
@@ -748,9 +750,9 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
 
     try:
         algos = set(algorithms.upper())
-        assert algos <= {'E','G','H','N'}
+        assert algos <= {'E','G','H','N','I'}
     except:
-        raise ValueError('Inappropriate algorithm value (should be subset of "eghn"): {}'\
+        raise ValueError('Inappropriate algorithm value (should be subset of "eghin"): {}'\
                          .format(algorithms))
 
     if type(rankby)==str:

@@ -222,6 +222,7 @@ Infernal(cmscan) is required to enable Rfam search.
         c=500 (500.conf) is recommended for RNAs longer 500 nts.
         c=1000 (1000.conf) is recommended for RNAs longer 1000 nts.
         c=nussinov (nussinov.conf) - Nussinov algorithm config.
+        c=ilm (ilm.conf) - ILM algorithm config.
         c=hungarian (hungarian.conf) - Hungarian algorithm config.
         c=edmonds (edmonds.conf) - Edmonds algorithm config.
         c=greedy (greedy.conf) - Greedy algorithm config.
@@ -239,7 +240,7 @@ Infernal(cmscan) is required to enable Rfam search.
         parameters for step-1 will be derived from the first 
         parameter set in the config file.
 
-    algo={eghn} / algorithm={eghn} [DEFAULT: algo=None]
+    algo={eghin} / algorithm={eghin} [DEFAULT: algo=None]
     
         The algorithms to be used in single-sequence predictions.
         By default, the algorithms are derived from the config file.
@@ -249,6 +250,7 @@ Infernal(cmscan) is required to enable Rfam search.
         e - Edmonds algorithm [10.6028/jres.069B.013]
         g - Greedy SQUARNA algorithm [10.1101/2023.08.28.555103]
         h - Hungarian algorithm [10.1002/nav.3800020109]
+        i - ILM algorithm variant [10.1093/bioinformatics/btg373]
         n - Nussinov algorithm [10.1073/pnas.77.11.6309]
 
     if={qtrfx} / inputformat={qtrfx} [DEFAULT: if=qtrf]

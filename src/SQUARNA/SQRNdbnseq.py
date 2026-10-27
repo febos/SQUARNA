@@ -4,9 +4,9 @@ from multiprocessing import Pool
 import sys
 
 try:
-    from SQRNalgos import Edmonds, Hungarian, Nussinov
+    from SQRNalgos import Edmonds, Hungarian, Nussinov, ILM2
 except:
-    from .SQRNalgos import Edmonds, Hungarian, Nussinov
+    from .SQRNalgos import Edmonds, Hungarian, Nussinov, ILM2
 
 # Gapped values
 GAPS = {'-', '.', '~'}
@@ -564,12 +564,14 @@ def RunAlgo(seq, bpboolmatrix, bpscorematrix, restbps,
     if algo == "N":
         pairs = Nussinov(seq, stems, N, SEPS)
 
+    if algo == "I":
+        pairs = ILM2(seq, stems, N, SEPS)
+
     if algo == "H":
         pairs = Hungarian(seq, stems, N, SEPS)
 
     # Removing partial stems below thresholds
     stems = PairsToStems(sorted([(min(v,w),max(v,w)) for v,w in pairs]))
-
     for stem in stems:
         
         score = sum(bpscorematrix[v,w] for v,w in stem[0])
