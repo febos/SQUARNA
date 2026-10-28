@@ -1,15 +1,14 @@
 import os
 import sys
 import io
-from multiprocessing import Pool
 import numpy as np
 
 try:
-    from SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
+    from SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS, VIENNA_AVAILABLE, MP_CONTEXT
     from SQRNdbnali import RunSQRNdbnali
     from SQRNrfam   import SearchRfamG4RBP
 except:
-    from .SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS
+    from .SQRNdbnseq import RunSQRNdbnseq, ReactDict, ProcessReacts, SEPS, GAPS, VIENNA_AVAILABLE, MP_CONTEXT
     from .SQRNdbnali import RunSQRNdbnali
     from .SQRNrfam   import SearchRfamG4RBP
 
@@ -846,6 +845,15 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         paramsetnames500,  paramsets500  = ParseConfig(configfile500)
         paramsetnames1000, paramsets1000 = ParseConfig(configfile1000)
 
+    # Warn if BPPs are requested but ViennaRNA is not installed
+    if not VIENNA_AVAILABLE:
+        allsets = paramsets if configfileset else paramsets + paramsets500 + paramsets1000
+        if any(ps['bpp'] for ps in allsets):
+            print("WARNING: ViennaRNA (RNA module) not found; "
+                  "bpp will be treated as 0 for all paramsets. "
+                  "Install ViennaRNA (pip install viennarna) or use c=nobpp "
+                  "to suppress this warning.", file=sys.stderr)
+
     # Overwrite maxstemnum
     if maxstemnumset:
         for i in range(len(paramsets)):
@@ -902,7 +910,7 @@ def Predict(inputfile = None, fileformat = "unknown", inputseq = None,
         # Parallelizing over input sequences
         else:
             batchsize = threads*10
-            with Pool(threads) as pool:
+            with MP_CONTEXT.Pool(threads) as pool:
                 inputs_batch = []
 
                 inputs, fmt, single_input = ParseInput(inputseq, inputfile, inputformat,
@@ -1038,6 +1046,12 @@ def Main():
        "--H" in args or "-H" in args or "H" in args:
         with open(os.path.join(HOME_DIR,"README.md")) as helpfile:
             print(helpfile.read())
+        sys.exit(0)
+
+    # If asking for the version 
+    if "--version" in args or "-version" in args or 'version' in args:
+        with open(os.path.join(HOME_DIR,"README.md")) as helpfile:
+            print(helpfile.readline().lstrip('#').strip())
         sys.exit(0)
 
     # DEFAULTS

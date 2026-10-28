@@ -1,5 +1,4 @@
 
-from multiprocessing import Pool
 import numpy as np
 import io
 import sys
@@ -7,13 +6,13 @@ import sys
 try:
     from SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
                            BPMatrix, AnnotateStems, RunSQRNdbnseq, GAPS,\
-                           EncodedReactivities, SEPS
+                           EncodedReactivities, SEPS, MP_CONTEXT
     from SQRNalgos import Nussinov, Edmonds, Hungarian
     
 except:
     from .SQRNdbnseq import DBNToPairs, PairsToDBN, UnAlign, ParseRestraints,\
                             BPMatrix, AnnotateStems, RunSQRNdbnseq, GAPS,\
-                            EncodedReactivities, SEPS
+                            EncodedReactivities, SEPS, MP_CONTEXT
     from .SQRNalgos import Nussinov, Edmonds, Hungarian
 
 
@@ -219,7 +218,7 @@ def SQRNdbnali(objs, defrests = None, defreacts = None, defref = None,
     stemmatrix = np.zeros((len(objs[0][1]),len(objs[0][1])))
 
     # multiprocessing stuff
-    with Pool(threads) as pool:
+    with MP_CONTEXT.Pool(threads) as pool:
 
         inputs = [(obj[1],                           # Sequence
                    obj[2],                           # Reactivities
@@ -380,7 +379,7 @@ def RunSQRNdbnali(objs, defreacts, defrests, defref,
         if verbose:
             print(">Step 2, Individuals", file = sink)
         # Run stemmatrix-weighted single-sequence predictions
-        with Pool(threads) as pool:
+        with MP_CONTEXT.Pool(threads) as pool:
             inputs = [(obj, paramsetnames, paramsets, threads,
                        rankbydiff, rankby, hardrest, interchainonly,
                        toplim, outplim, conslim, reactformat,

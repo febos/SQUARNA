@@ -1,4 +1,4 @@
-# SQUARNA, version 3.25 [22.10.2026]
+# SQUARNA, version 3.3 [28.10.2026]
 
 [M.D. Serdakov, D.R. Bohdan, G.I. Nikolaev, J.M. Bujnicki, E.F. Baulin (2026) SQUARNA: stem maximization for accurate de novo RNA secondary structure prediction. bioRxiv. DOI: 10.64898/2026.06.30.735492](https://doi.org/10.64898/2026.06.30.735492)
 
@@ -19,6 +19,18 @@ As a command-line tool:
 As a Python function: 
 
 	see https://github.com/febos/SQUARNA/blob/main/demo.ipynb
+	
+	In a Python script, call Predict() under the main guard,
+    otherwise the script will hang on macOS and Windows (and on
+    Linux with Python >= 3.14), as SQUARNA uses multiprocessing:
+
+    import SQUARNA
+
+    if __name__ == "__main__":
+        SQUARNA.Predict(inputseq = "GGGAAACCCAGGGAAACCCA")
+              
+    The guard is not needed in Jupyter notebooks or the interactive
+    Python shell, but it is required when running a script.
 
 # Installation & Dependencies
 
@@ -33,8 +45,14 @@ SQUARNA requires Python3 of at least 3.8 version along with
 and ViennaRNA libraries.
 SciPy is required only for the Hungarian algorithm.
 NetworkX is required only for the Edmonds algorithm.
-ViennaRNA is required only when bpp != 0.
+ViennaRNA is required only when bpp != 0 (default).
 Infernal(cmscan) is required to enable Rfam search.
+
+SQUARNA is Apache 2.0, ViennaRNA has its own licence 
+with commercial-use restrictions, and you can avoid it
+by installing SQUARNA as shown here:
+
+    pip install --no-deps SQUARNA && pip install numpy scipy networkx
 
 # Usage examples
 
@@ -449,6 +467,10 @@ Infernal(cmscan) is required to enable Rfam search.
     
         Run SQUARNA in the verbose mode.
         Ignored in the single-sequence mode. 
+        
+    --version / version [DEFAULT: FALSE]
+    
+        Show SQUARNA version. 
 
 
 # Contacts

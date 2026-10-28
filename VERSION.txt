@@ -1,4 +1,6 @@
 
+version 3.3 [28.10.2026] - Multiple bug fixes, added ILM algorithm variant.
+
 version 3.21 [28.05.2026] - Improved PairsToDBN: replaced bubble-sort level optimization
                             with crossing-count-based sorting; pairs with fewer
                             crossings are assigned to lower bracket levels first, then

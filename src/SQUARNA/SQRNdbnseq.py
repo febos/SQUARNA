@@ -1,12 +1,20 @@
 
 import numpy as np
-from multiprocessing import Pool
+import multiprocessing
 import sys
 
 try:
     from SQRNalgos import Edmonds, Hungarian, Nussinov, ILM2
 except:
     from .SQRNalgos import Edmonds, Hungarian, Nussinov, ILM2
+
+try:
+    import RNA
+    VIENNA_AVAILABLE = True
+except ImportError:
+    VIENNA_AVAILABLE = False
+
+MP_CONTEXT = multiprocessing.get_context("spawn" if "idlelib" in sys.modules else None)
 
 # Gapped values
 GAPS = {'-', '.', '~'}
@@ -338,8 +346,7 @@ def BPMatrix(seq, weights, rxs, rlefts, rrights,
             scoremat[i, j] = bps[seq[i] + seq[j]] * boolmat[i, j] * reactfactor
 
     ################
-    if bpp_power:
-        import RNA
+    if bpp_power and VIENNA_AVAILABLE:
         fc = RNA.fold_compound(''.join([ch if ch not in SEPS and ord(ch) <= 127 else 'N'
                                         for ch in seq]))
         if not defaultreacts:
@@ -1113,7 +1120,7 @@ def SQRNdbnseq(seq, reacts = None, restraints = None, dbn = None,
             cursize = len(curstemsets)
 
             if mp: # multiprocessing version
-                with Pool(threads) as pool:
+                with MP_CONTEXT.Pool(threads) as pool:
 
                     # while list of intermediate stem lists is not empty
                     while curstemsets:
